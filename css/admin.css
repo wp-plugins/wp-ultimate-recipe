@@ -1,0 +1,83 @@
+#recipe_meta_box h4 {
+    font-size: 1.2em;
+}
+
+#recipe_meta_box table {
+    width: 100%;
+}
+
+#recipe_meta_box .recipe-general-form-label {
+    width: 20%;
+    vertical-align: top;
+}
+
+#recipe_meta_box .recipe-general-form-field {
+    width: 80%;
+    vertical-align: top;
+}
+
+#recipe_meta_box textarea {
+    resize: vertical;
+    width: 100%;
+}
+
+#recipe_meta_box #recipe_servings, #recipe_meta_box #recipe_prep_time, #recipe_meta_box #recipe_cook_time {
+    width: 50px;
+}
+
+#recipe_meta_box #recipe_servings_type {
+    width: 100px;
+}
+
+#recipe_meta_box .recipe-general-form-notes {
+    font-style: italic;
+}
+
+#recipe_meta_box .recipe-form-notes {
+    font-style: italic;
+    padding-top: 20px;
+}
+
+#recipe_meta_box #recipe_rating_star_selection .star {
+    cursor: pointer;
+}
+
+#recipe_meta_box #recipe-ingredients input {
+    width: 100%;
+}
+
+#recipe_meta_box .sort-handle  {
+    cursor: move;
+}
+
+#recipe_meta_box #recipe-ingredients .ingredients-delete img, #recipe_meta_box #recipe-instructions .instructions-delete img {
+    cursor: pointer;
+}
+
+#recipe_meta_box #recipe-ingredients td:nth-child(1) { width: 5%; text-align: center; }
+#recipe_meta_box #recipe-ingredients td:nth-child(2) { width: 10%; }
+#recipe_meta_box #recipe-ingredients td:nth-child(3) { width: 15%; }
+#recipe_meta_box #recipe-ingredients td:nth-child(4) { width: 25%; }
+#recipe_meta_box #recipe-ingredients td:nth-child(5) { width: 40%; }
+#recipe_meta_box #recipe-ingredients td:nth-child(6) { width: 5%; text-align: center; }
+
+#recipe_meta_box .recipe-ingredients-notes {
+    font-style: italic;
+}
+
+#recipe_meta_box #ingredients-add-box {
+    margin-top: 5px;
+}
+
+#recipe_meta_box #recipe-instructions td:nth-child(1) { width: 5%; text-align: center; }
+#recipe_meta_box #recipe-instructions td:nth-child(2) { width: 60%; }
+#recipe_meta_box #recipe-instructions td:nth-child(3) { width: 30%; vertical-align: top; }
+#recipe_meta_box #recipe-instructions td:nth-child(4) { width: 5%; text-align: center;}
+
+#recipe_meta_box .recipe_instructions_thumbnail {
+    max-height: 50px;
+}
+
+#recipe_meta_box .wpurp-hide {
+    display: none;
+}

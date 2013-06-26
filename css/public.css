@@ -1,0 +1,179 @@
+.wpurp-container {
+    padding: 10px;
+    border: 1px solid #bbbbbb;
+    background: url(../img/bg1.png);
+
+    color: #444;
+}
+
+.wpurp-container .wpurp-clear {
+    clear: both;
+}
+
+.wpurp-container .recipe-header-image {
+    float: left;
+}
+
+.wpurp-container .recipe-header-image img {
+    padding: 5px;
+
+    width: 150px;
+    height: auto;
+
+    background-color: white;
+    border: 1px solid #666666;
+
+    -webkit-border-radius: 0px;
+    -moz-border-radius:    0px;
+    border-radius:         0px;
+
+    -webkit-box-shadow: 2px 2px 2px rgba(50, 50, 50, 0.5);
+    -moz-box-shadow:    2px 2px 2px rgba(50, 50, 50, 0.5);
+    box-shadow:         2px 2px 2px rgba(50, 50, 50, 0.5);
+}
+
+.wpurp-container .recipe-header-information {
+    overflow: hidden;
+}
+
+.wpurp-container .recipe-header-information ul {
+    margin: 0, 0, 23px, 20px !important;
+}
+
+.wpurp-container .recipe-header-information ul li {
+    list-style: none;
+}
+
+.wpurp-container .recipe-information-name {
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+.wpurp-container .recipe-rating {
+    float: right;
+}
+
+.wpurp-container .recipe-rating img {
+    vertical-align: text-top;
+}
+
+.wpurp-container .recipe-tag-name {
+    display: inline-block;
+    width: 100px;
+    font-weight: bold;
+}
+
+.wpurp-container .recipe-header-extra {
+    border-collapse: collapse;
+
+    margin: 0;
+    margin-left: 23px;
+    background: none;
+}
+
+.wpurp-container table, .wpurp-container tbody, .wpurp-container tr, .wpurp-container td {
+    border: 0 !important;
+    -webkit-box-shadow: none;
+    -moz-box-shadow:    none;
+    box-shadow:         none;
+}
+
+.wpurp-container .recipe-header-extra td {
+    border: none;
+    padding: 0;
+    border: 0;
+    background: none;
+}
+
+.wpurp-container .recipe-header-extra thead {
+    font-weight: bold;
+}
+
+.wpurp-container .recipe-header-extra tbody span {
+    margin-left: 5px;
+    font-variant: small-caps;
+    font-size: 0.9em;
+
+    color: #666666;
+}
+
+.wpurp-container h3 {
+    margin-top: 20px;
+}
+
+.wpurp-container ul.recipe-ingredients {
+    margin: 0 23px 20px 23px !important;
+}
+
+.wpurp-container .recipe-ingredients li {
+    list-style: square;
+}
+
+.wpurp-container .recipe-ingredient-quantity-unit {
+    display: inline-block;
+    width: 100px;
+}
+
+.wpurp-container .recipe-ingredient-unit {
+    margin-left: 3px;
+    color: #666666;
+    font-size: 0.9em;
+}
+
+.wpurp-container .recipe-ingredient-name {
+}
+
+.wpurp-container .recipe-ingredient-notes {
+    color: #666666;
+    font-size: 0.9em;
+}
+
+.wpurp-container ol.recipe-instructions {
+    margin: 0 23px !important;
+}
+
+.wpurp-container .recipe-instructions li {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px dashed #999999;
+}
+
+.wpurp-container .recipe-instructions li:last-child {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+.wpurp-container .recipe-instructions img {
+    display: block;
+    border: 1px solid #666666;
+
+    margin: 5px auto;
+
+    -webkit-border-radius: 0px;
+    -moz-border-radius:    0px;
+    border-radius:         0px;
+}
+
+@media screen and (max-width: 550px) {
+    .wpurp-container .recipe-header-image {
+        float: none;
+        text-align: center;
+
+        margin-bottom: 10px;
+    }
+
+    .wpurp-container .recipe-header-information ul {
+        margin: 0 0 20px 0 !important;
+    }
+
+    .wpurp-container .recipe-header-extra {
+        margin: 0;
+    }
+
+    .wpurp-container .recipe-ingredient-quantity-unit {
+        display: inline;
+        width: auto;
+        margin-right: 5px;
+    }
+}
