@@ -7,6 +7,10 @@
     padding: 0;
 }
 
+.wpurp-container .recipe-header-information ul.recipe-header-name {
+    margin-bottom: 20px;
+}
+
 .wpurp-container .recipe-header-information ul li {
     list-style: none;
 }

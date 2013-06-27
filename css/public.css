@@ -1,9 +1,19 @@
 .wpurp-container {
+    max-width: 600px;
+    margin: 0 auto;
     padding: 10px;
     border: 1px solid #bbbbbb;
     background: url(../img/bg1.png);
 
     color: #444;
+}
+
+.wpurp-container img {
+    border: 0;
+}
+
+.wpurp-container li {
+    margin: 0 !important;
 }
 
 .wpurp-container .wpurp-clear {
@@ -36,8 +46,14 @@
     overflow: hidden;
 }
 
+.wpurp-container .recipe-header-information img {
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow:    none !important;
+    box-shadow:         none !important;
+}
+
 .wpurp-container .recipe-header-information ul {
-    margin: 0, 0, 23px, 20px !important;
+    margin: 0 0 23px 20px !important;
 }
 
 .wpurp-container .recipe-header-information ul li {
@@ -98,7 +114,7 @@
 }
 
 .wpurp-container h3 {
-    margin-top: 20px;
+    margin: 20px 0 12px 0 !important;
 }
 
 .wpurp-container ul.recipe-ingredients {
@@ -134,7 +150,7 @@
 
 .wpurp-container .recipe-instructions li {
     padding-bottom: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 10px !important;
     border-bottom: 1px dashed #999999;
 }
 

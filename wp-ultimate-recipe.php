@@ -2,8 +2,8 @@
 /*
 Plugin Name: WP Ultimate Recipe
 Plugin URI: http://www.wpultimaterecipeplugin.com
-Description: Organize and present recipes in a beautiful way.
-Version: 0.0.1
+Description: WP Ultimate Recipe is a user friendly plugin for adding recipes to any of your posts and pages.
+Version: 0.0.2
 Author: Brecht Vandersmissen
 Author URI: http://www.brechtvds.be
 License: GPLv2

@@ -47,10 +47,17 @@ You can find more information at [WPUltimateRecipePlugin.com](http://www.wpultim
 
 == Changelog ==
 
+= 0.0.2 =
+* CSS fixes to ensure compatibility with more themes
+* Fixed image source that pointed to an external source
+
 = 0.0.1 =
 * Very first version of this plugin
 
 == Upgrade notice ==
+
+= 0.0.2 =
+Previous version mistakenly pointed to an external image source.
 
 = 0.0.1 =
 First version, no upgrades needed.

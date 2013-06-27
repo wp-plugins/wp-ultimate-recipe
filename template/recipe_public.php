@@ -20,8 +20,8 @@
                 <li class="recipe-information-name" itemprop="name"><?php echo $recipe_post->post_title; ?>
                     <span class="recipe-rating">
                         <?php
-                        $star_full = '<img src="http://www.debesterecepten.be/wp-content/plugins/wp-ultimate-recipe-plugin/img/star.png" width="15" height="14">';
-                        $star_empty = '<img src="http://www.debesterecepten.be/wp-content/plugins/wp-ultimate-recipe-plugin/img/star_grey.png" width="15" height="14">';
+                        $star_full = '<img src="'.$this->pluginUrl.'/img/star.png" width="15" height="14">';
+                        $star_empty = '<img src="'.$this->pluginUrl.'/img/star_grey.png" width="15" height="14">';
 
 
                         if($recipe['recipe_rating'][0] != 0)
