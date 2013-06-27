@@ -59,6 +59,9 @@ You can find more information at [WPUltimateRecipePlugin.com](http://www.wpultim
 
 == Upgrade notice ==
 
+= 0.0.3 =
+* Possible to enter fractions (or actually just anything) as amounts.
+
 = 0.0.2 =
 Previous version mistakenly pointed to an external image source.
 
