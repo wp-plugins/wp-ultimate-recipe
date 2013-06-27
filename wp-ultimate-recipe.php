@@ -3,7 +3,7 @@
 Plugin Name: WP Ultimate Recipe
 Plugin URI: http://www.wpultimaterecipeplugin.com
 Description: WP Ultimate Recipe is a user friendly plugin for adding recipes to any of your posts and pages.
-Version: 0.0.3
+Version: 0.0.4
 Author: Brecht Vandersmissen
 Author URI: http://www.brechtvds.be
 License: GPLv2
@@ -49,6 +49,7 @@ class WPUltimateRecipe {
         //add_filter( 'template_include', array( $this, 'recipes_template' ), 1 );
         add_filter( 'the_content', array( $this, 'recipes_content' ), 10 );
         add_filter( 'post_class', array( $this, 'recipes_post_class' ) ); // Add post and type-post classes
+        add_filter( 'post_thumbnail_html', array( $this, 'recipes_thumbnail' ), 10 );
 
         // Hooks
         register_activation_hook( __FILE__, array( $this, 'activate_taxonomies' ) );
@@ -367,6 +368,16 @@ class WPUltimateRecipe {
         $out .= '</div>';
 
         echo $out;
+    }
+
+    public function recipes_thumbnail($html)
+    {
+        if ( get_post_type() == 'recipe' )
+        {
+            $html = '';
+        }
+
+        return $html;
     }
 
     /*

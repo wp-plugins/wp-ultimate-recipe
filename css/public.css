@@ -1,4 +1,6 @@
 .wpurp-container {
+    position: relative;
+
     max-width: 600px;
     margin: 0 auto;
     padding: 10px;
@@ -14,6 +16,8 @@
 
 .wpurp-container li {
     margin: 0 !important;
+    padding: 0 !important;
+    background: none !important;
 }
 
 .wpurp-container .wpurp-clear {
@@ -87,11 +91,12 @@
     background: none;
 }
 
-.wpurp-container table, .wpurp-container tbody, .wpurp-container tr, .wpurp-container td {
+.wpurp-container table, .wpurp-container thead, .wpurp-container tbody, .wpurp-container tr, .wpurp-container td {
     border: 0 !important;
     -webkit-box-shadow: none;
     -moz-box-shadow:    none;
     box-shadow:         none;
+    background: none;
 }
 
 .wpurp-container .recipe-header-extra td {
