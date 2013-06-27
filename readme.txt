@@ -15,13 +15,14 @@ WP Ultimate Recipe is a user friendly plugin for adding recipes to any of your p
 WP Ultimate Recipe is a user friendly plugin for adding recipes to any of your posts and pages.
 
 Some features:
-* Use shortcodes or the "Insert Recipe" button to add **multiple recipes to any of your posts and pages**.
-* Ingredients, course types, cuisines and ratings are all **taxonomies** related to your recipe. This means that you can display these in a nice tag cloud widget.
-* Add **photos** to any step of the recipe.
-* Just click the printer icon to **print an image-less version** of the recipe.
-* This plugin is **fully responsive**. That means that your recipes will look good on any device.
-* Uses microdata optimised for **Google Recipe search**.
-* Easily **translatable**, already available in English and Dutch
+
+*   Use shortcodes or the "Insert Recipe" button to add **multiple recipes to any of your posts and pages**.
+*   Ingredients, course types, cuisines and ratings are all **taxonomies** related to your recipe. This means that you can display these in a nice tag cloud widget.
+*   Add **photos** to any step of the recipe.
+*   Just click the printer icon to **print an image-less version** of the recipe.
+*   This plugin is **fully responsive**. That means that your recipes will look good on any device.
+*   Uses microdata optimised for **Google Recipe search**.
+*   Easily **translatable**, already available in English and Dutch
 
 Feel free to contact me if any features are missing.
 You can find more information at [WPUltimateRecipePlugin.com](http://www.wpultimaterecipeplugin.com/)
