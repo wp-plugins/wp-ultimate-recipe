@@ -78,7 +78,7 @@ if( $ingredients != '')
 ?>
     <tr>
         <td class="sort-handle"><img src="<?php echo $this->pluginUrl; ?>/img/arrows.png" width="18" height="16"></td>
-        <td><input type="number" name="recipe_ingredients[<?php echo $i; ?>][amount]"     class="ingredients_amount" id="ingredients_amount_<?php echo $i; ?>" value="<?php echo $ingredient['amount']; ?>" /></td>
+        <td><input type="text" name="recipe_ingredients[<?php echo $i; ?>][amount]"     class="ingredients_amount" id="ingredients_amount_<?php echo $i; ?>" value="<?php echo $ingredient['amount']; ?>" /></td>
         <td><input type="text"   name="recipe_ingredients[<?php echo $i; ?>][unit]"       class="ingredients_unit" id="ingredients_unit_<?php echo $i; ?>" value="<?php echo $ingredient['unit']; ?>" /></td>
         <td><input type="text"   name="recipe_ingredients[<?php echo $i; ?>][ingredient]" class="ingredients_name" id="ingredients_<?php echo $i; ?>" onfocus="autoSuggestTag('ingredients_<?php echo $i; ?>', 'ingredient');"  value="<?php echo $ingredient['ingredient']; ?>" /></td>
         <td><input type="text"   name="recipe_ingredients[<?php echo $i; ?>][notes]"      class="ingredients_notes" id="ingredient_notes_<?php echo $i; ?>" value="<?php echo $ingredient['notes']; ?>" /></td>
@@ -92,7 +92,7 @@ if( $ingredients != '')
 ?>
     <tr>
         <td class="sort-handle"><img src="<?php echo $this->pluginUrl; ?>/img/arrows.png" width="18" height="16"></td>
-        <td><input type="number" name="recipe_ingredients[<?php echo $i; ?>][amount]"   class="ingredients_amount" id="ingredients_amount_<?php echo $i; ?>" placeholder="1" /></td>
+        <td><input type="text" name="recipe_ingredients[<?php echo $i; ?>][amount]"   class="ingredients_amount" id="ingredients_amount_<?php echo $i; ?>" placeholder="1" /></td>
         <td><input type="text" name="recipe_ingredients[<?php echo $i; ?>][unit]"       class="ingredients_unit" id="ingredients_unit_<?php echo $i; ?>" placeholder="<?php $this->t('cup', true); ?>" /></td>
         <td><input type="text" name="recipe_ingredients[<?php echo $i; ?>][ingredient]" class="ingredients_name" id="ingredients_<?php echo $i; ?>" onfocus="autoSuggestTag('ingredients_<?php echo $i; ?>', 'ingredient');" placeholder="<?php $this->t('walnuts', true); ?>" /></td>
         <td><input type="text" name="recipe_ingredients[<?php echo $i; ?>][notes]"      class="ingredients_notes" id="ingredient_notes_<?php echo $i; ?>" placeholder="<?php $this->t('coarsely chopped', true); ?>" /></td>

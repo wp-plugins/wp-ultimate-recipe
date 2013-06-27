@@ -47,6 +47,9 @@ You can find more information at [WPUltimateRecipePlugin.com](http://www.wpultim
 
 == Changelog ==
 
+= 0.0.3 =
+* Possible to enter fractions (or actually just anything) as amounts
+
 = 0.0.2 =
 * CSS fixes to ensure compatibility with more themes
 * Fixed image source that pointed to an external source
