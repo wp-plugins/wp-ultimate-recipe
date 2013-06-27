@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: recipe, ingredients, cuisines, food, courses, cook, kitchen, cooking
 Requires at least: 3.3
 Tested up to: 3.5.2
-Stable tag: 0.0.1
+Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -15,33 +15,41 @@ WP Ultimate Recipe is a user friendly plugin for adding recipes to any of your p
 WP Ultimate Recipe is a user friendly plugin for adding recipes to any of your posts and pages.
 
 Some features:
-* Use shortcodes or the "Insert Recipe" button to add multiple recipes to any of your posts and pages.
-* Ingredients, course types, cuisines and ratings are all taxonomies related to your recipe. This means that you can list all recipes for a certain ingredient!
-* Just click the printer icon to print a image-less version of the recipe.
-* This plugin is fully responsive. That means that your recipes will look good on any device.
+* Use shortcodes or the "Insert Recipe" button to add **multiple recipes to any of your posts and pages**.
+* Ingredients, course types, cuisines and ratings are all **taxonomies** related to your recipe. This means that you can display these in a nice tag cloud widget.
+* Add **photos** to any step of the recipe.
+* Just click the printer icon to **print an image-less version** of the recipe.
+* This plugin is **fully responsive**. That means that your recipes will look good on any device.
+* Uses microdata optimised for **Google Recipe search**.
+* Easily **translatable**, already available in English and Dutch
 
-You can find more information at http://www.wpultimaterecipeplugin.com/
+Feel free to contact me if any features are missing.
+You can find more information at [WPUltimateRecipePlugin.com](http://www.wpultimaterecipeplugin.com/)
 
 == Installation ==
 
-1. Upload `plugin-name.php` to the `/wp-content/plugins/` directory
+1. Upload the `wp-ultimate-recipe` directory (directory included) to the `/wp-content/plugins/` directory
 1. Activate the plugin through the 'Plugins' menu in WordPress
+1. Add recipes using the menu on the left
+1. Display recipes in post and pages using the *Add Recipe* button in the editor
 
 == Frequently asked questions ==
 
 = Where can I find more information =
 
-http://www.wpultimaterecipeplugin.com/
+[WPUltimateRecipePlugin.com](http://www.wpultimaterecipeplugin.com/)
 
 == Screenshots ==
 
-http://www.wpultimaterecipeplugin.com/
+1. Example recipe for Pasta Pesto. Check it out in action at [WPUltimateRecipePlugin.com](http://www.wpultimaterecipeplugin.com/)
+2. Manage everything about your recipes in one place
 
 == Changelog ==
 
-0.0.1 - First Version
-
+= 0.0.1 =
+* Very first version of this plugin
 
 == Upgrade notice ==
 
+= 0.0.1 =
 First version, no upgrades needed.
