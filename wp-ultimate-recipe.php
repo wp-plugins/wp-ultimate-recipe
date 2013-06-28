@@ -41,8 +41,8 @@ class WPUltimateRecipe {
         add_action( 'init', array( $this, 'ratings_init' ));
         add_action( 'admin_init', array( $this, 'recipes_admin_init' ));
         add_action( 'save_post', array( $this, 'recipes_save' ), 10, 2 );
-        add_action( 'admin_menu', array( $this, 'remove_taxonomy_boxes') );
-        add_action( 'admin_init', array( $this, 'recipes_shortcode_button' ) );
+        add_action( 'admin_menu', array( $this, 'admin_menu') );
+        add_action( 'admin_init', array( $this, 'admin_init' ) );
         add_action( 'after_wp_tiny_mce', array( $this, 'recipes_shortcode_form' ) );
 
         // Filters
@@ -100,12 +100,6 @@ class WPUltimateRecipe {
         }
     }
 
-    public function remove_taxonomy_boxes()
-    {
-        remove_meta_box('ingredientdiv', 'recipe', 'side');
-        remove_meta_box('stardiv', 'recipe', 'side');
-    }
-
     public function activate_taxonomies()
     {
         $this->recipes_init();
@@ -123,12 +117,70 @@ class WPUltimateRecipe {
         $wp_rewrite->flush_rules();
     }
 
+    public function admin_menu()
+    {
+        remove_meta_box('ingredientdiv', 'recipe', 'side');
+        remove_meta_box('stardiv', 'recipe', 'side');
+
+        /*if( false == get_option( 'wpurp_settings_options' ) ) {
+            add_option( 'wpurp_settings_options' );
+        }*/
+
+        add_submenu_page( 'edit.php?post_type=recipe', $this->t('Recipe Settings'), $this->t('Settings'), 'manage_options', 'wpurp_settings', array( $this, 'admin_menu_settings' ) );
+    }
+
+    public function admin_init()
+    {
+        if (!current_user_can('edit_posts') && !current_user_can('edit_pages'))
+            return;
+
+        add_filter( 'mce_external_plugins', array( $this, 'recipes_shortcode_button_plugin' ) );
+        add_filter( 'mce_buttons', array( $this, 'recipes_shortcode_button_add' ) );
+
+        add_settings_section( 'wpurp_settings_section', $this->t('General'), array( $this, 'admin_menu_settings_general' ), 'wpurp_settings' );
+
+        add_settings_field(
+            'show_servings_adjust',                      // ID used to identify the field throughout the theme
+            'Allow servings adjustment',                           // The label to the left of the option interface element
+            'admin_menu_settings_general_servings',   // The name of the function responsible for rendering the option interface
+            'wpurp_settings',                          // The page on which this option will be displayed
+            'wpurp_settings_section',         // The name of the section to which this field belongs
+            array(                              // The array of arguments to pass to the callback. In this case, just a description.
+                $this->t('Activate this setting allow users to dynamically adjust the servings of recipes.')
+            )
+        );
+
+        register_setting(
+            'wpurp_settings',
+            'wpurp_settings'
+        );
+    }
+
+    public function admin_menu_settings()
+    {
+        include($this->pluginDir . '/template/recipe_menu.php');
+    }
+
+    public function admin_menu_settings_general()
+    {
+        echo 'YOLO';
+    }
+
+    public function admin_menu_settings_general_servings($args) {
+
+        $html = '<input type="checkbox" id="show_servings_adjust" name="show_servings_adjust" value="1" ' . checked(1, get_option('show_servings_adjust'), false) . '/>';
+        $html .= '<label for="show_servings_adjust"> '  . $args[0] . '</label>';
+
+        echo $html;
+
+    }
+
+
     /*
      * ================================================================================================================
      * @RECIPES
      * ================================================================================================================
      */
-
     public function recipes_init()
     {
         register_post_type( 'recipe',
@@ -270,7 +322,6 @@ class WPUltimateRecipe {
                 $content = $recipe['recipe_description'][0];
             }
 
-
             add_filter('the_content', array( $this, 'recipes_content' ), 10);
         }
 
@@ -313,16 +364,6 @@ class WPUltimateRecipe {
         }
 
         return $output;
-    }
-
-    public function recipes_shortcode_button()
-    {
-        if (!current_user_can('edit_posts') && !current_user_can('edit_pages'))
-            return;
-
-        add_filter( 'mce_external_plugins', array( $this, 'recipes_shortcode_button_plugin' ) );
-        add_filter( 'mce_buttons', array( $this, 'recipes_shortcode_button_add' ) );
-
     }
 
     public function recipes_shortcode_button_plugin($plugins)

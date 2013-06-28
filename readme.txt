@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: recipe, ingredients, cuisines, food, courses, cook, kitchen, cooking
 Requires at least: 3.3
 Tested up to: 3.5.2
-Stable tag: trunk
+Stable tag: 0.0.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -47,6 +47,10 @@ You can find more information at [WPUltimateRecipePlugin.com](http://www.wpultim
 
 == Changelog ==
 
+= 0.0.5 =
+* Fixed css bug
+* Upcoming update will add new features
+
 = 0.0.4 =
 * CSS fixes for better compatibility with more themes
 
@@ -61,6 +65,9 @@ You can find more information at [WPUltimateRecipePlugin.com](http://www.wpultim
 * Very first version of this plugin
 
 == Upgrade notice ==
+
+= 0.0.5 =
+Update to fix css bug.
 
 = 0.0.4 =
 Update if you have styling problems with your theme.

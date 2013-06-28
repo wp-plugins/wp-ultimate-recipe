@@ -100,7 +100,7 @@
         $out = '';
         foreach($ingredients as $ingredient) {
             $out .= '<li itemprop="ingredients">';
-            $out .= '<span class="recipe-ingredient-quantity-unit"><span class="recipe-ingredient-quantity">'.$ingredient['amount'].'</span><span class="recipe-ingredient-unit">'.$ingredient['unit'].'</span></span>';
+            $out .= '<span class="recipe-ingredient-quantity-unit"><span class="recipe-ingredient-quantity" data-original="'.$ingredient['amount'].'">'.$ingredient['amount'].'</span><span class="recipe-ingredient-unit">'.$ingredient['unit'].'</span></span>';
 
 
             $taxonomy = get_term_by('name', $ingredient['ingredient'], 'ingredient');
@@ -128,6 +128,9 @@
         echo $out;
         ?>
     </ul>
+    <?php if($recipe['recipe_servings'][0] != '') { ?>
+    <div class="recipe-ingredients-servings"><?php $this->t('Servings', true); ?>: <input type="number" class="adjust-recipe-servings" data-original="<?php echo $recipe['recipe_servings'][0]; ?>" value="<?php echo $recipe['recipe_servings'][0]; ?>" /> <?php echo $recipe['recipe_servings_type'][0]; ?></div>
+    <?php } ?>
     <?php } ?>
     <?php
     $instructions = unserialize($recipe['recipe_instructions'][0]);
