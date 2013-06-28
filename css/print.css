@@ -1,0 +1,115 @@
+.wpurp-container {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.wpurp-container .recipe-header-information ul {
+    margin: 0;
+    padding: 0;
+}
+
+.wpurp-container .recipe-header-information ul.recipe-header-name {
+    margin-bottom: 20px;
+}
+
+.wpurp-container .recipe-header-information ul li {
+    list-style: none;
+}
+
+.wpurp-container .recipe-information-name {
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+.wpurp-container .recipe-tag-name {
+    display: inline-block;
+    width: 100px;
+    font-weight: bold;
+}
+
+.wpurp-container .recipe-header-extra {
+    border-collapse: collapse;
+
+    margin-top: 20px;
+}
+
+.wpurp-container .recipe-header-extra td {
+    border: none;
+    padding-right: 10px;
+    border: 0;
+}
+
+.wpurp-container .recipe-header-extra thead {
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+.wpurp-container .recipe-header-extra tbody span {
+    margin-left: 5px;
+    font-variant: small-caps;
+    font-size: 0.9em;
+
+    color: #666666;
+}
+
+.wpurp-container h3 {
+    margin-top: 20px;
+}
+
+.wpurp-container ul.recipe-ingredients {
+    margin: 0 23px 20px 23px !important;
+}
+
+.wpurp-container .recipe-ingredients li {
+    list-style: square;
+}
+
+.wpurp-container .recipe-ingredient-quantity-unit {
+    display: inline-block;
+    width: 100px;
+}
+
+.wpurp-container .recipe-ingredient-unit {
+    margin-left: 3px;
+    color: #666666;
+    font-size: 0.9em;
+}
+
+.wpurp-container .recipe-ingredient-name {
+}
+
+.wpurp-container .recipe-ingredient-notes {
+    color: #666666;
+    font-size: 0.9em;
+}
+
+.wpurp-container ol.recipe-instructions {
+    margin: 0 23px !important;
+}
+
+.wpurp-container .recipe-instructions li {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px dashed #999999;
+}
+
+.wpurp-container .recipe-instructions li:last-child {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+.wpurp-container .recipe-instructions img {
+    display: block;
+    border: 1px solid #666666;
+
+    margin: 5px auto;
+
+    -webkit-border-radius: 0px;
+    -moz-border-radius:    0px;
+    border-radius:         0px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}

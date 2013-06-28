@@ -1,0 +1,463 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Ultimate Recipe Plugin\n"
+"POT-Creation-Date: 2013-06-24 17:36+0100\n"
+"PO-Revision-Date: 2013-06-24 17:36+0100\n"
+"Last-Translator: Brecht Vandersmissen <brecht.vandersmissen@gmail.com>\n"
+"Language-Team: BrechtVds.be\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.5\n"
+"X-Poedit-KeywordsList: t\n"
+"X-Poedit-Basepath: /Users/Brecht/Sites/DeBesteRecepten/wp-content/plugins/wp-"
+"ultimate-recipe-plugin/\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: wp-ultimate-recipe-plugin.php:136
+msgid "Recipes"
+msgstr ""
+
+#: wp-ultimate-recipe-plugin.php:137 wp-ultimate-recipe-plugin.php:163
+msgid "Recipe"
+msgstr ""
+
+#: wp-ultimate-recipe-plugin.php:138
+msgid "Add New"
+msgstr ""
+
+#: wp-ultimate-recipe-plugin.php:139
+msgid "Add New Recipe"
+msgstr ""
+
+#: wp-ultimate-recipe-plugin.php:140
+msgid "Edit"
+msgstr ""
+
+#: wp-ultimate-recipe-plugin.php:141
+msgid "Edit Recipe"
+msgstr ""
+
+#: wp-ultimate-recipe-plugin.php:142
+msgid "New Recipe"
+msgstr ""
+
+#: wp-ultimate-recipe-plugin.php:143
+msgid "View"
+msgstr ""
+
+#: wp-ultimate-recipe-plugin.php:144
+msgid "View Recipe"
+msgstr ""
+
+#: wp-ultimate-recipe-plugin.php:145
+msgid "Search Recipes"
+msgstr ""
+
+#: wp-ultimate-recipe-plugin.php:146
+msgid "No Recipes found"
+msgstr ""
+
+#: wp-ultimate-recipe-plugin.php:147
+msgid "No Recipes found in Trash"
+msgstr ""
+
+#: wp-ultimate-recipe-plugin.php:148
+msgid "Parent Recipe"
+msgstr ""
+
+#: wp-ultimate-recipe-plugin.php:351
+msgid "Select the recipe to add to your post:"
+msgstr ""
+
+#: wp-ultimate-recipe-plugin.php:360
+msgid "Insert Recipe"
+msgstr ""
+
+#: wp-ultimate-recipe-plugin.php:364
+msgid ""
+"You have to create a recipe first, check the 'Recipes' menu on the left."
+msgstr ""
+
+#: wp-ultimate-recipe-plugin.php:385 wp-ultimate-recipe-plugin.php:400
+#: template/recipe_admin.php:69 template/recipe_public.php:95
+msgid "Ingredients"
+msgstr ""
+
+#: wp-ultimate-recipe-plugin.php:386
+msgid "Ingredient"
+msgstr ""
+
+#: wp-ultimate-recipe-plugin.php:387
+msgid "Search Ingredients"
+msgstr ""
+
+#: wp-ultimate-recipe-plugin.php:388
+msgid "Popular Ingredients"
+msgstr ""
+
+#: wp-ultimate-recipe-plugin.php:389
+msgid "All Ingredients"
+msgstr ""
+
+#: wp-ultimate-recipe-plugin.php:390
+msgid "Parent Ingredient"
+msgstr ""
+
+#: wp-ultimate-recipe-plugin.php:391
+msgid "Parent Ingredient:"
+msgstr ""
+
+#: wp-ultimate-recipe-plugin.php:392
+msgid "Edit Ingredient"
+msgstr ""
+
+#: wp-ultimate-recipe-plugin.php:393
+msgid "Update Ingredient"
+msgstr ""
+
+#: wp-ultimate-recipe-plugin.php:394
+msgid "Add New Ingredient"
+msgstr ""
+
+#: wp-ultimate-recipe-plugin.php:395
+msgid "New Ingredient Name"
+msgstr ""
+
+#: wp-ultimate-recipe-plugin.php:396
+msgid "Separate ingredients with commas"
+msgstr ""
+
+#: wp-ultimate-recipe-plugin.php:397
+msgid "Add or remove ingredients"
+msgstr ""
+
+#: wp-ultimate-recipe-plugin.php:398
+msgid "Choose from the most used ingredients"
+msgstr ""
+
+#: wp-ultimate-recipe-plugin.php:399
+msgid "No ingredients found."
+msgstr ""
+
+#: wp-ultimate-recipe-plugin.php:424 wp-ultimate-recipe-plugin.php:437
+msgid "Courses"
+msgstr ""
+
+#: wp-ultimate-recipe-plugin.php:425 template/recipe_public.php:51
+msgid "Course"
+msgstr ""
+
+#: wp-ultimate-recipe-plugin.php:426
+msgid "Search Courses"
+msgstr ""
+
+#: wp-ultimate-recipe-plugin.php:427
+msgid "Popular Courses"
+msgstr ""
+
+#: wp-ultimate-recipe-plugin.php:428
+msgid "All Courses"
+msgstr ""
+
+#: wp-ultimate-recipe-plugin.php:429
+msgid "Edit Course"
+msgstr ""
+
+#: wp-ultimate-recipe-plugin.php:430
+msgid "Update Course"
+msgstr ""
+
+#: wp-ultimate-recipe-plugin.php:431
+msgid "Add New Course"
+msgstr ""
+
+#: wp-ultimate-recipe-plugin.php:432
+msgid "New Course Name"
+msgstr ""
+
+#: wp-ultimate-recipe-plugin.php:433
+msgid "Separate courses with commas"
+msgstr ""
+
+#: wp-ultimate-recipe-plugin.php:434
+msgid "Add or remove courses"
+msgstr ""
+
+#: wp-ultimate-recipe-plugin.php:435
+msgid "Choose from the most used courses"
+msgstr ""
+
+#: wp-ultimate-recipe-plugin.php:436
+msgid "No courses found."
+msgstr ""
+
+#: wp-ultimate-recipe-plugin.php:448
+msgid "Breakfast"
+msgstr ""
+
+#: wp-ultimate-recipe-plugin.php:449
+msgid "Appetizer"
+msgstr ""
+
+#: wp-ultimate-recipe-plugin.php:450
+msgid "Soup"
+msgstr ""
+
+#: wp-ultimate-recipe-plugin.php:451
+msgid "Main Course"
+msgstr ""
+
+#: wp-ultimate-recipe-plugin.php:452
+msgid "Side Dish"
+msgstr ""
+
+#: wp-ultimate-recipe-plugin.php:453
+msgid "Salad"
+msgstr ""
+
+#: wp-ultimate-recipe-plugin.php:454
+msgid "Dessert"
+msgstr ""
+
+#: wp-ultimate-recipe-plugin.php:455
+msgid "Snack"
+msgstr ""
+
+#: wp-ultimate-recipe-plugin.php:456
+msgid "Drinks"
+msgstr ""
+
+#: wp-ultimate-recipe-plugin.php:472 wp-ultimate-recipe-plugin.php:485
+msgid "Cuisines"
+msgstr ""
+
+#: wp-ultimate-recipe-plugin.php:473 template/recipe_public.php:64
+msgid "Cuisine"
+msgstr ""
+
+#: wp-ultimate-recipe-plugin.php:474
+msgid "Search Cuisines"
+msgstr ""
+
+#: wp-ultimate-recipe-plugin.php:475
+msgid "Popular Cuisines"
+msgstr ""
+
+#: wp-ultimate-recipe-plugin.php:476
+msgid "All Cuisines"
+msgstr ""
+
+#: wp-ultimate-recipe-plugin.php:477
+msgid "Edit Cuisine"
+msgstr ""
+
+#: wp-ultimate-recipe-plugin.php:478
+msgid "Update Cuisine"
+msgstr ""
+
+#: wp-ultimate-recipe-plugin.php:479
+msgid "Add New Cuisine"
+msgstr ""
+
+#: wp-ultimate-recipe-plugin.php:480
+msgid "New Cuisine Name"
+msgstr ""
+
+#: wp-ultimate-recipe-plugin.php:481
+msgid "Separate cuisines with commas"
+msgstr ""
+
+#: wp-ultimate-recipe-plugin.php:482
+msgid "Add or remove cuisines"
+msgstr ""
+
+#: wp-ultimate-recipe-plugin.php:483
+msgid "Choose from the most used cuisines"
+msgstr ""
+
+#: wp-ultimate-recipe-plugin.php:484
+msgid "No cuisines found."
+msgstr ""
+
+#: wp-ultimate-recipe-plugin.php:496
+msgid "French"
+msgstr ""
+
+#: wp-ultimate-recipe-plugin.php:497
+msgid "Italian"
+msgstr ""
+
+#: wp-ultimate-recipe-plugin.php:498
+msgid "Mediterranean"
+msgstr ""
+
+#: wp-ultimate-recipe-plugin.php:499
+msgid "Indian"
+msgstr ""
+
+#: wp-ultimate-recipe-plugin.php:500
+msgid "Chinese"
+msgstr ""
+
+#: wp-ultimate-recipe-plugin.php:501
+msgid "Japanese"
+msgstr ""
+
+#: wp-ultimate-recipe-plugin.php:502
+msgid "American"
+msgstr ""
+
+#: wp-ultimate-recipe-plugin.php:503
+msgid "Mexican"
+msgstr ""
+
+#: wp-ultimate-recipe-plugin.php:519 wp-ultimate-recipe-plugin.php:532
+msgid "Ratings"
+msgstr ""
+
+#: wp-ultimate-recipe-plugin.php:520 template/recipe_admin.php:26
+msgid "Rating"
+msgstr ""
+
+#: wp-ultimate-recipe-plugin.php:521
+msgid "Search Ratings"
+msgstr ""
+
+#: wp-ultimate-recipe-plugin.php:522
+msgid "Popular Ratings"
+msgstr ""
+
+#: wp-ultimate-recipe-plugin.php:523
+msgid "All Ratings"
+msgstr ""
+
+#: wp-ultimate-recipe-plugin.php:524
+msgid "Edit Rating"
+msgstr ""
+
+#: wp-ultimate-recipe-plugin.php:525
+msgid "Update Rating"
+msgstr ""
+
+#: wp-ultimate-recipe-plugin.php:526
+msgid "Add New Rating"
+msgstr ""
+
+#: wp-ultimate-recipe-plugin.php:527
+msgid "New Rating Name"
+msgstr ""
+
+#: wp-ultimate-recipe-plugin.php:528
+msgid "Separate ratings with commas"
+msgstr ""
+
+#: wp-ultimate-recipe-plugin.php:529
+msgid "Add or remove ratings"
+msgstr ""
+
+#: wp-ultimate-recipe-plugin.php:530
+msgid "Choose from the most used ratings"
+msgstr ""
+
+#: wp-ultimate-recipe-plugin.php:531
+msgid "No ratings found."
+msgstr ""
+
+#: template/recipe_admin.php:17
+msgid "General"
+msgstr ""
+
+#: template/recipe_admin.php:20
+msgid "Description"
+msgstr ""
+
+#: template/recipe_admin.php:33
+msgid "star"
+msgstr ""
+
+#: template/recipe_admin.php:33
+msgid "stars"
+msgstr ""
+
+#: template/recipe_admin.php:40 template/recipe_public.php:74
+msgid "Servings"
+msgstr ""
+
+#: template/recipe_admin.php:44
+msgid "(e.g. 2 people, 3 loafs, ...)"
+msgstr ""
+
+#: template/recipe_admin.php:48
+msgid "Prep time"
+msgstr ""
+
+#: template/recipe_admin.php:51 template/recipe_admin.php:58
+#: template/recipe_public.php:82 template/recipe_public.php:83
+msgid "minutes"
+msgstr ""
+
+#: template/recipe_admin.php:55
+msgid "Cook time"
+msgstr ""
+
+#: template/recipe_admin.php:64
+msgid ""
+"Don't forget that you can tag your recipe with <strong>Courses</strong> and "
+"<strong>Cuisines</strong> by using the boxes on the right. Use the "
+"<strong>featured image</strong> if you want a photo of the finished dish."
+msgstr ""
+
+#: template/recipe_admin.php:96
+msgid "cup"
+msgstr ""
+
+#: template/recipe_admin.php:97
+msgid "walnuts"
+msgstr ""
+
+#: template/recipe_admin.php:98
+msgid "coarsely chopped"
+msgstr ""
+
+#: template/recipe_admin.php:104
+msgid "Add an ingredient"
+msgstr ""
+
+#: template/recipe_admin.php:107
+msgid ""
+"<strong>Use the TAB key</strong> while adding ingredients, it will "
+"automatically create new fields. <strong>Don't worry about empty lines</"
+"strong>, these will be ignored."
+msgstr ""
+
+#: template/recipe_admin.php:110 template/recipe_public.php:135
+msgid "Instructions"
+msgstr ""
+
+#: template/recipe_admin.php:137 template/recipe_admin.php:156
+msgid "Add Image"
+msgstr ""
+
+#: template/recipe_admin.php:138 template/recipe_admin.php:157
+msgid "Remove Image"
+msgstr ""
+
+#: template/recipe_admin.php:166
+msgid "Add an instruction"
+msgstr ""
+
+#: template/recipe_admin.php:169
+msgid ""
+"<strong>Use the TAB key</strong> while adding instructions, it will "
+"automatically create new fields. <strong>Don't worry about empty lines</"
+"strong>, these will be ignored."
+msgstr ""
+
+#: template/recipe_public.php:75
+msgid "Prep Time"
+msgstr ""
+
+#: template/recipe_public.php:76
+msgid "Cook Time"
+msgstr ""

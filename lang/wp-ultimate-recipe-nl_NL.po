@@ -1,0 +1,475 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Ultimate Recipe Plugin\n"
+"POT-Creation-Date: 2013-06-24 17:36+0100\n"
+"PO-Revision-Date: 2013-06-24 17:38+0100\n"
+"Last-Translator: Brecht Vandersmissen <brecht.vandersmissen@gmail.com>\n"
+"Language-Team: BrechtVds.be\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.5\n"
+"X-Poedit-KeywordsList: t\n"
+"X-Poedit-Basepath: /Users/Brecht/Sites/DeBesteRecepten/wp-content/plugins/wp-"
+"ultimate-recipe-plugin/\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: wp-ultimate-recipe-plugin.php:136
+msgid "Recipes"
+msgstr "Recepten"
+
+#: wp-ultimate-recipe-plugin.php:137 wp-ultimate-recipe-plugin.php:163
+msgid "Recipe"
+msgstr "Recept"
+
+#: wp-ultimate-recipe-plugin.php:138
+msgid "Add New"
+msgstr "Toevoegen"
+
+#: wp-ultimate-recipe-plugin.php:139
+msgid "Add New Recipe"
+msgstr "Recept toevoegen"
+
+#: wp-ultimate-recipe-plugin.php:140
+msgid "Edit"
+msgstr "Bewerken"
+
+#: wp-ultimate-recipe-plugin.php:141
+msgid "Edit Recipe"
+msgstr "Recept bewerken"
+
+#: wp-ultimate-recipe-plugin.php:142
+msgid "New Recipe"
+msgstr "Nieuw Recept"
+
+#: wp-ultimate-recipe-plugin.php:143
+msgid "View"
+msgstr "Bekijken"
+
+#: wp-ultimate-recipe-plugin.php:144
+msgid "View Recipe"
+msgstr "Recept bekijken"
+
+#: wp-ultimate-recipe-plugin.php:145
+msgid "Search Recipes"
+msgstr "Recept zoeken"
+
+#: wp-ultimate-recipe-plugin.php:146
+msgid "No Recipes found"
+msgstr "Geen Recepten gevonden"
+
+#: wp-ultimate-recipe-plugin.php:147
+msgid "No Recipes found in Trash"
+msgstr "Geen Recepten in de Vuilbak gevonden"
+
+#: wp-ultimate-recipe-plugin.php:148
+msgid "Parent Recipe"
+msgstr "Hoofd Recept"
+
+#: wp-ultimate-recipe-plugin.php:351
+msgid "Select the recipe to add to your post:"
+msgstr "Selecteer het recept dat je wil toevoegen aan je bericht:"
+
+#: wp-ultimate-recipe-plugin.php:360
+msgid "Insert Recipe"
+msgstr "Recept toevoegen"
+
+#: wp-ultimate-recipe-plugin.php:364
+msgid ""
+"You have to create a recipe first, check the 'Recipes' menu on the left."
+msgstr ""
+"Je moet eerst een recept aanmaken, dat kan via het 'Recepten' menu aan je "
+"linkerkant."
+
+#: wp-ultimate-recipe-plugin.php:385 wp-ultimate-recipe-plugin.php:400
+#: template/recipe_admin.php:69 template/recipe_public.php:95
+msgid "Ingredients"
+msgstr "Ingrediënten"
+
+#: wp-ultimate-recipe-plugin.php:386
+msgid "Ingredient"
+msgstr "Ingrediënt"
+
+#: wp-ultimate-recipe-plugin.php:387
+msgid "Search Ingredients"
+msgstr "Ingrediënten zoeken"
+
+#: wp-ultimate-recipe-plugin.php:388
+msgid "Popular Ingredients"
+msgstr "Populaire Ingrediënten"
+
+#: wp-ultimate-recipe-plugin.php:389
+msgid "All Ingredients"
+msgstr "Alle Ingrediënten"
+
+#: wp-ultimate-recipe-plugin.php:390
+msgid "Parent Ingredient"
+msgstr "Hoofd Ingrediënt"
+
+#: wp-ultimate-recipe-plugin.php:391
+msgid "Parent Ingredient:"
+msgstr "Hoofd Ingrediënt"
+
+#: wp-ultimate-recipe-plugin.php:392
+msgid "Edit Ingredient"
+msgstr "Ingrediënt bewerken"
+
+#: wp-ultimate-recipe-plugin.php:393
+msgid "Update Ingredient"
+msgstr "Ingrediënt aanpassen"
+
+#: wp-ultimate-recipe-plugin.php:394
+msgid "Add New Ingredient"
+msgstr "Ingrediënt toevoegen"
+
+#: wp-ultimate-recipe-plugin.php:395
+msgid "New Ingredient Name"
+msgstr "Nieuw Ingrediënt naam"
+
+#: wp-ultimate-recipe-plugin.php:396
+msgid "Separate ingredients with commas"
+msgstr "Ingrediënten scheiden met komma's"
+
+#: wp-ultimate-recipe-plugin.php:397
+msgid "Add or remove ingredients"
+msgstr "Ingrediënten toevoegen of verwijderen"
+
+#: wp-ultimate-recipe-plugin.php:398
+msgid "Choose from the most used ingredients"
+msgstr "Kies uit de meest gebruikte ingrediënten"
+
+#: wp-ultimate-recipe-plugin.php:399
+msgid "No ingredients found."
+msgstr "Geen ingrediënten gevonden."
+
+#: wp-ultimate-recipe-plugin.php:424 wp-ultimate-recipe-plugin.php:437
+msgid "Courses"
+msgstr "Maaltijden"
+
+#: wp-ultimate-recipe-plugin.php:425 template/recipe_public.php:51
+msgid "Course"
+msgstr "Maaltijd"
+
+#: wp-ultimate-recipe-plugin.php:426
+msgid "Search Courses"
+msgstr "Maaltijden zoeken"
+
+#: wp-ultimate-recipe-plugin.php:427
+msgid "Popular Courses"
+msgstr "Populaire Maaltijden"
+
+#: wp-ultimate-recipe-plugin.php:428
+msgid "All Courses"
+msgstr "Alle Maaltijden"
+
+#: wp-ultimate-recipe-plugin.php:429
+msgid "Edit Course"
+msgstr "Maaltijd bewerken"
+
+#: wp-ultimate-recipe-plugin.php:430
+msgid "Update Course"
+msgstr "Maaltijd aanpassen"
+
+#: wp-ultimate-recipe-plugin.php:431
+msgid "Add New Course"
+msgstr "Maaltijd toevoegen"
+
+#: wp-ultimate-recipe-plugin.php:432
+msgid "New Course Name"
+msgstr "Nieuwe Maaltijd naam"
+
+#: wp-ultimate-recipe-plugin.php:433
+msgid "Separate courses with commas"
+msgstr "Maaltijden scheiden met komma's"
+
+#: wp-ultimate-recipe-plugin.php:434
+msgid "Add or remove courses"
+msgstr "Maaltijden toevoegen of verwijderen"
+
+#: wp-ultimate-recipe-plugin.php:435
+msgid "Choose from the most used courses"
+msgstr "Kies uit de meest gebruikte maaltijden"
+
+#: wp-ultimate-recipe-plugin.php:436
+msgid "No courses found."
+msgstr "Geen maaltijden gevonden."
+
+#: wp-ultimate-recipe-plugin.php:448
+msgid "Breakfast"
+msgstr "Ontbijt"
+
+#: wp-ultimate-recipe-plugin.php:449
+msgid "Appetizer"
+msgstr "Voorgerecht"
+
+#: wp-ultimate-recipe-plugin.php:450
+msgid "Soup"
+msgstr "Soep"
+
+#: wp-ultimate-recipe-plugin.php:451
+msgid "Main Course"
+msgstr "Hoofdgerecht"
+
+#: wp-ultimate-recipe-plugin.php:452
+msgid "Side Dish"
+msgstr "Bijgerecht"
+
+#: wp-ultimate-recipe-plugin.php:453
+msgid "Salad"
+msgstr "Salade"
+
+#: wp-ultimate-recipe-plugin.php:454
+msgid "Dessert"
+msgstr "Nagerecht"
+
+#: wp-ultimate-recipe-plugin.php:455
+msgid "Snack"
+msgstr "Snack"
+
+#: wp-ultimate-recipe-plugin.php:456
+msgid "Drinks"
+msgstr "Drinken"
+
+#: wp-ultimate-recipe-plugin.php:472 wp-ultimate-recipe-plugin.php:485
+msgid "Cuisines"
+msgstr "Keukens"
+
+#: wp-ultimate-recipe-plugin.php:473 template/recipe_public.php:64
+msgid "Cuisine"
+msgstr "Keuken"
+
+#: wp-ultimate-recipe-plugin.php:474
+msgid "Search Cuisines"
+msgstr "Keukens zoeken"
+
+#: wp-ultimate-recipe-plugin.php:475
+msgid "Popular Cuisines"
+msgstr "Populaire Keukens"
+
+#: wp-ultimate-recipe-plugin.php:476
+msgid "All Cuisines"
+msgstr "Alle Keukens"
+
+#: wp-ultimate-recipe-plugin.php:477
+msgid "Edit Cuisine"
+msgstr "Keuken bewerken"
+
+#: wp-ultimate-recipe-plugin.php:478
+msgid "Update Cuisine"
+msgstr "Keuken aanpassen"
+
+#: wp-ultimate-recipe-plugin.php:479
+msgid "Add New Cuisine"
+msgstr "Keuken toevoegen"
+
+#: wp-ultimate-recipe-plugin.php:480
+msgid "New Cuisine Name"
+msgstr "Nieuwe Keuken naam"
+
+#: wp-ultimate-recipe-plugin.php:481
+msgid "Separate cuisines with commas"
+msgstr "Keukens scheiden met komma's"
+
+#: wp-ultimate-recipe-plugin.php:482
+msgid "Add or remove cuisines"
+msgstr "Keuken toevoegen of verwijderen"
+
+#: wp-ultimate-recipe-plugin.php:483
+msgid "Choose from the most used cuisines"
+msgstr "Kies uit de meest gebruikte keukens"
+
+#: wp-ultimate-recipe-plugin.php:484
+msgid "No cuisines found."
+msgstr "Geen keukens gevonden."
+
+#: wp-ultimate-recipe-plugin.php:496
+msgid "French"
+msgstr "Frans"
+
+#: wp-ultimate-recipe-plugin.php:497
+msgid "Italian"
+msgstr "Italiaans"
+
+#: wp-ultimate-recipe-plugin.php:498
+msgid "Mediterranean"
+msgstr "Mediterraans"
+
+#: wp-ultimate-recipe-plugin.php:499
+msgid "Indian"
+msgstr "Indisch"
+
+#: wp-ultimate-recipe-plugin.php:500
+msgid "Chinese"
+msgstr "Chinees"
+
+#: wp-ultimate-recipe-plugin.php:501
+msgid "Japanese"
+msgstr "Japans"
+
+#: wp-ultimate-recipe-plugin.php:502
+msgid "American"
+msgstr "Amerikaans"
+
+#: wp-ultimate-recipe-plugin.php:503
+msgid "Mexican"
+msgstr "Mexicaans"
+
+#: wp-ultimate-recipe-plugin.php:519 wp-ultimate-recipe-plugin.php:532
+msgid "Ratings"
+msgstr "Scores"
+
+#: wp-ultimate-recipe-plugin.php:520 template/recipe_admin.php:26
+msgid "Rating"
+msgstr "Score"
+
+#: wp-ultimate-recipe-plugin.php:521
+msgid "Search Ratings"
+msgstr "Scores zoeken"
+
+#: wp-ultimate-recipe-plugin.php:522
+msgid "Popular Ratings"
+msgstr "Populaire Scores"
+
+#: wp-ultimate-recipe-plugin.php:523
+msgid "All Ratings"
+msgstr "Alle Scores"
+
+#: wp-ultimate-recipe-plugin.php:524
+msgid "Edit Rating"
+msgstr "Score bewerken"
+
+#: wp-ultimate-recipe-plugin.php:525
+msgid "Update Rating"
+msgstr "Score aanpassen"
+
+#: wp-ultimate-recipe-plugin.php:526
+msgid "Add New Rating"
+msgstr "Score toevoegen"
+
+#: wp-ultimate-recipe-plugin.php:527
+msgid "New Rating Name"
+msgstr "Nieuwe Score naam"
+
+#: wp-ultimate-recipe-plugin.php:528
+msgid "Separate ratings with commas"
+msgstr "Scores scheiden met komma's"
+
+#: wp-ultimate-recipe-plugin.php:529
+msgid "Add or remove ratings"
+msgstr "Scores toevoegen of verwijderen"
+
+#: wp-ultimate-recipe-plugin.php:530
+msgid "Choose from the most used ratings"
+msgstr "Kies uit de meest gebruikte scores"
+
+#: wp-ultimate-recipe-plugin.php:531
+msgid "No ratings found."
+msgstr "Geen scores gevonden."
+
+#: template/recipe_admin.php:17
+msgid "General"
+msgstr "Algemeen"
+
+#: template/recipe_admin.php:20
+msgid "Description"
+msgstr "Omschrijving"
+
+#: template/recipe_admin.php:33
+msgid "star"
+msgstr "ster"
+
+#: template/recipe_admin.php:33
+msgid "stars"
+msgstr "sterren"
+
+#: template/recipe_admin.php:40 template/recipe_public.php:74
+msgid "Servings"
+msgstr "Porties"
+
+#: template/recipe_admin.php:44
+msgid "(e.g. 2 people, 3 loafs, ...)"
+msgstr "(bv: 2 personen, 3 broden)"
+
+#: template/recipe_admin.php:48
+msgid "Prep time"
+msgstr "Prep tijd"
+
+#: template/recipe_admin.php:51 template/recipe_admin.php:58
+#: template/recipe_public.php:82 template/recipe_public.php:83
+msgid "minutes"
+msgstr "minuten"
+
+#: template/recipe_admin.php:55
+msgid "Cook time"
+msgstr "Kook tijd"
+
+#: template/recipe_admin.php:64
+msgid ""
+"Don't forget that you can tag your recipe with <strong>Courses</strong> and "
+"<strong>Cuisines</strong> by using the boxes on the right. Use the "
+"<strong>featured image</strong> if you want a photo of the finished dish."
+msgstr ""
+"Vergeet niet dat je je recept kan taggen met <strong>Maaltijden</strong> en "
+"<strong>Keukens</strong> met behulp van de kaders aan de rechterkant. "
+"Gebruik de <strong>uitgelichte afbeelding</strong> om een foto van het "
+"klaargemaakte gerecht te tonen."
+
+#: template/recipe_admin.php:96
+msgid "cup"
+msgstr "gram"
+
+#: template/recipe_admin.php:97
+msgid "walnuts"
+msgstr "walnoten"
+
+#: template/recipe_admin.php:98
+msgid "coarsely chopped"
+msgstr "grof gehakt"
+
+#: template/recipe_admin.php:104
+msgid "Add an ingredient"
+msgstr "Voeg een ingrediënt toe"
+
+#: template/recipe_admin.php:107
+msgid ""
+"<strong>Use the TAB key</strong> while adding ingredients, it will "
+"automatically create new fields. <strong>Don't worry about empty lines</"
+"strong>, these will be ignored."
+msgstr ""
+"<strong>Gebruik de TAB toets</strong> terwijl je ingrediënten toevoegt om "
+"automatisch nieuwe velden aan te maken. <strong>Negeer de lege lijnen</"
+"strong>, deze worden niet meegenomen."
+
+#: template/recipe_admin.php:110 template/recipe_public.php:135
+msgid "Instructions"
+msgstr "Instructies"
+
+#: template/recipe_admin.php:137 template/recipe_admin.php:156
+msgid "Add Image"
+msgstr "Foto Toevoegen"
+
+#: template/recipe_admin.php:138 template/recipe_admin.php:157
+msgid "Remove Image"
+msgstr "Foot Verwijderen"
+
+#: template/recipe_admin.php:166
+msgid "Add an instruction"
+msgstr "Voeg een instructie toe"
+
+#: template/recipe_admin.php:169
+msgid ""
+"<strong>Use the TAB key</strong> while adding instructions, it will "
+"automatically create new fields. <strong>Don't worry about empty lines</"
+"strong>, these will be ignored."
+msgstr ""
+"<strong>Gebruik de TAB toets</strong> terwijl je instructies toevoegt om "
+"automatisch nieuwe velden aan te maken. <strong>Negeer de lege lijnen</"
+"strong>, deze worden niet meegenomen."
+
+#: template/recipe_public.php:75
+msgid "Prep Time"
+msgstr "Prep Tijd"
+
+#: template/recipe_public.php:76
+msgid "Cook Time"
+msgstr "Kook Tijd"
