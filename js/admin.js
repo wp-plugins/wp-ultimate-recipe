@@ -139,8 +139,9 @@ jQuery(document).ready(function() {
 
     function addRecipeInstruction()
     {
-        jQuery('#recipe-instructions tr:last')
-            .clone(true)
+        var new_instruction = jQuery('#recipe-instructions tr:last').clone(true);
+
+        new_instruction
             .insertAfter('#recipe-instructions tr:last')
             .find('textarea').val('')
             .attr('name', function(index, name) {
@@ -150,6 +151,14 @@ jQuery(document).ready(function() {
             })
             .attr('id', function(index, id) {
                 return id.replace(/(\d+)/, function(match, n) {
+                    return Number(n) + 1;
+                });
+            });
+
+        new_instruction
+            .find('.recipe_instructions_image')
+            .attr('name', function(index, name) {
+                return name.replace(/(\d+)/, function(match, n) {
                     return Number(n) + 1;
                 });
             });

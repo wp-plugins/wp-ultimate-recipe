@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: recipe, ingredients, cuisines, food, courses, cook, kitchen, cooking
 Requires at least: 3.3
 Tested up to: 3.5.2
-Stable tag: 0.0.5
+Stable tag: 0.0.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -22,7 +22,8 @@ Some features:
 *   Just click the printer icon to **print an image-less version** of the recipe.
 *   This plugin is **fully responsive**. That means that your recipes will look good on any device.
 *   Uses microdata optimised for **Google Recipe search**.
-*   Easily **translatable**, already available in English and Dutch
+*   Easily **translatable**, already available in English, Dutch and Swedish
+*   Let visitors **adjust the ingredient quantities** for more or less servings
 
 Feel free to contact me if any features are missing.
 You can find more information at [WPUltimateRecipePlugin.com](http://www.wpultimaterecipeplugin.com/)
@@ -47,6 +48,10 @@ You can find more information at [WPUltimateRecipePlugin.com](http://www.wpultim
 
 == Changelog ==
 
+= 0.0.6 =
+* Adjustable recipe servings
+* Fixed bug with instruction photos
+
 = 0.0.5 =
 * Fixed css bug
 * Upcoming update will add new features
@@ -65,6 +70,9 @@ You can find more information at [WPUltimateRecipePlugin.com](http://www.wpultim
 * Very first version of this plugin
 
 == Upgrade notice ==
+
+= 0.0.6 =
+Update to fix bug with instruction photos.
 
 = 0.0.5 =
 Update to fix css bug.

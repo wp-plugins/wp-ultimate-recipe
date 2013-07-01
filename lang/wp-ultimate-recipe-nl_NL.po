@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WP Ultimate Recipe Plugin\n"
-"POT-Creation-Date: 2013-06-24 17:36+0100\n"
-"PO-Revision-Date: 2013-06-24 17:38+0100\n"
+"POT-Creation-Date: 2013-07-01 18:11+0100\n"
+"PO-Revision-Date: 2013-07-01 18:14+0100\n"
 "Last-Translator: Brecht Vandersmissen <brecht.vandersmissen@gmail.com>\n"
 "Language-Team: BrechtVds.be\n"
 "MIME-Version: 1.0\n"
@@ -14,396 +14,415 @@ msgstr ""
 "ultimate-recipe-plugin/\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: wp-ultimate-recipe-plugin.php:136
+#: tags/0.0.5/wp-ultimate-recipe.php:137 trunk/wp-ultimate-recipe.php:214
 msgid "Recipes"
 msgstr "Recepten"
 
-#: wp-ultimate-recipe-plugin.php:137 wp-ultimate-recipe-plugin.php:163
+#: tags/0.0.5/wp-ultimate-recipe.php:138 tags/0.0.5/wp-ultimate-recipe.php:164
+#: trunk/wp-ultimate-recipe.php:215 trunk/wp-ultimate-recipe.php:241
 msgid "Recipe"
 msgstr "Recept"
 
-#: wp-ultimate-recipe-plugin.php:138
+#: tags/0.0.5/wp-ultimate-recipe.php:139 trunk/wp-ultimate-recipe.php:216
 msgid "Add New"
 msgstr "Toevoegen"
 
-#: wp-ultimate-recipe-plugin.php:139
+#: tags/0.0.5/wp-ultimate-recipe.php:140 trunk/wp-ultimate-recipe.php:217
 msgid "Add New Recipe"
 msgstr "Recept toevoegen"
 
-#: wp-ultimate-recipe-plugin.php:140
+#: tags/0.0.5/wp-ultimate-recipe.php:141 trunk/wp-ultimate-recipe.php:218
 msgid "Edit"
 msgstr "Bewerken"
 
-#: wp-ultimate-recipe-plugin.php:141
+#: tags/0.0.5/wp-ultimate-recipe.php:142 trunk/wp-ultimate-recipe.php:219
 msgid "Edit Recipe"
 msgstr "Recept bewerken"
 
-#: wp-ultimate-recipe-plugin.php:142
+#: tags/0.0.5/wp-ultimate-recipe.php:143 trunk/wp-ultimate-recipe.php:220
 msgid "New Recipe"
 msgstr "Nieuw Recept"
 
-#: wp-ultimate-recipe-plugin.php:143
+#: tags/0.0.5/wp-ultimate-recipe.php:144 trunk/wp-ultimate-recipe.php:221
 msgid "View"
 msgstr "Bekijken"
 
-#: wp-ultimate-recipe-plugin.php:144
+#: tags/0.0.5/wp-ultimate-recipe.php:145 trunk/wp-ultimate-recipe.php:222
 msgid "View Recipe"
 msgstr "Recept bekijken"
 
-#: wp-ultimate-recipe-plugin.php:145
+#: tags/0.0.5/wp-ultimate-recipe.php:146 trunk/wp-ultimate-recipe.php:223
 msgid "Search Recipes"
 msgstr "Recept zoeken"
 
-#: wp-ultimate-recipe-plugin.php:146
+#: tags/0.0.5/wp-ultimate-recipe.php:147 trunk/wp-ultimate-recipe.php:224
 msgid "No Recipes found"
 msgstr "Geen Recepten gevonden"
 
-#: wp-ultimate-recipe-plugin.php:147
+#: tags/0.0.5/wp-ultimate-recipe.php:148 trunk/wp-ultimate-recipe.php:225
 msgid "No Recipes found in Trash"
 msgstr "Geen Recepten in de Vuilbak gevonden"
 
-#: wp-ultimate-recipe-plugin.php:148
+#: tags/0.0.5/wp-ultimate-recipe.php:149 trunk/wp-ultimate-recipe.php:226
 msgid "Parent Recipe"
 msgstr "Hoofd Recept"
 
-#: wp-ultimate-recipe-plugin.php:351
+#: tags/0.0.5/wp-ultimate-recipe.php:352 trunk/wp-ultimate-recipe.php:418
 msgid "Select the recipe to add to your post:"
 msgstr "Selecteer het recept dat je wil toevoegen aan je bericht:"
 
-#: wp-ultimate-recipe-plugin.php:360
+#: tags/0.0.5/wp-ultimate-recipe.php:361 trunk/wp-ultimate-recipe.php:427
 msgid "Insert Recipe"
 msgstr "Recept toevoegen"
 
-#: wp-ultimate-recipe-plugin.php:364
+#: tags/0.0.5/wp-ultimate-recipe.php:365 trunk/wp-ultimate-recipe.php:431
 msgid ""
 "You have to create a recipe first, check the 'Recipes' menu on the left."
 msgstr ""
 "Je moet eerst een recept aanmaken, dat kan via het 'Recepten' menu aan je "
 "linkerkant."
 
-#: wp-ultimate-recipe-plugin.php:385 wp-ultimate-recipe-plugin.php:400
-#: template/recipe_admin.php:69 template/recipe_public.php:95
+#: tags/0.0.5/wp-ultimate-recipe.php:396 tags/0.0.5/wp-ultimate-recipe.php:411
+#: tags/0.0.5/template/recipe_admin.php:69
+#: tags/0.0.5/template/recipe_public.php:97 trunk/wp-ultimate-recipe.php:462
+#: trunk/wp-ultimate-recipe.php:477 trunk/template/recipe_admin.php:69
+#: trunk/template/recipe_public.php:97
 msgid "Ingredients"
 msgstr "Ingrediënten"
 
-#: wp-ultimate-recipe-plugin.php:386
+#: tags/0.0.5/wp-ultimate-recipe.php:397 trunk/wp-ultimate-recipe.php:463
 msgid "Ingredient"
 msgstr "Ingrediënt"
 
-#: wp-ultimate-recipe-plugin.php:387
+#: tags/0.0.5/wp-ultimate-recipe.php:398 trunk/wp-ultimate-recipe.php:464
 msgid "Search Ingredients"
 msgstr "Ingrediënten zoeken"
 
-#: wp-ultimate-recipe-plugin.php:388
+#: tags/0.0.5/wp-ultimate-recipe.php:399 trunk/wp-ultimate-recipe.php:465
 msgid "Popular Ingredients"
 msgstr "Populaire Ingrediënten"
 
-#: wp-ultimate-recipe-plugin.php:389
+#: tags/0.0.5/wp-ultimate-recipe.php:400 trunk/wp-ultimate-recipe.php:466
 msgid "All Ingredients"
 msgstr "Alle Ingrediënten"
 
-#: wp-ultimate-recipe-plugin.php:390
+#: tags/0.0.5/wp-ultimate-recipe.php:401 trunk/wp-ultimate-recipe.php:467
 msgid "Parent Ingredient"
 msgstr "Hoofd Ingrediënt"
 
-#: wp-ultimate-recipe-plugin.php:391
+#: tags/0.0.5/wp-ultimate-recipe.php:402 trunk/wp-ultimate-recipe.php:468
 msgid "Parent Ingredient:"
 msgstr "Hoofd Ingrediënt"
 
-#: wp-ultimate-recipe-plugin.php:392
+#: tags/0.0.5/wp-ultimate-recipe.php:403 trunk/wp-ultimate-recipe.php:469
 msgid "Edit Ingredient"
 msgstr "Ingrediënt bewerken"
 
-#: wp-ultimate-recipe-plugin.php:393
+#: tags/0.0.5/wp-ultimate-recipe.php:404 trunk/wp-ultimate-recipe.php:470
 msgid "Update Ingredient"
 msgstr "Ingrediënt aanpassen"
 
-#: wp-ultimate-recipe-plugin.php:394
+#: tags/0.0.5/wp-ultimate-recipe.php:405 trunk/wp-ultimate-recipe.php:471
 msgid "Add New Ingredient"
 msgstr "Ingrediënt toevoegen"
 
-#: wp-ultimate-recipe-plugin.php:395
+#: tags/0.0.5/wp-ultimate-recipe.php:406 trunk/wp-ultimate-recipe.php:472
 msgid "New Ingredient Name"
 msgstr "Nieuw Ingrediënt naam"
 
-#: wp-ultimate-recipe-plugin.php:396
+#: tags/0.0.5/wp-ultimate-recipe.php:407 trunk/wp-ultimate-recipe.php:473
 msgid "Separate ingredients with commas"
 msgstr "Ingrediënten scheiden met komma's"
 
-#: wp-ultimate-recipe-plugin.php:397
+#: tags/0.0.5/wp-ultimate-recipe.php:408 trunk/wp-ultimate-recipe.php:474
 msgid "Add or remove ingredients"
 msgstr "Ingrediënten toevoegen of verwijderen"
 
-#: wp-ultimate-recipe-plugin.php:398
+#: tags/0.0.5/wp-ultimate-recipe.php:409 trunk/wp-ultimate-recipe.php:475
 msgid "Choose from the most used ingredients"
 msgstr "Kies uit de meest gebruikte ingrediënten"
 
-#: wp-ultimate-recipe-plugin.php:399
+#: tags/0.0.5/wp-ultimate-recipe.php:410 trunk/wp-ultimate-recipe.php:476
 msgid "No ingredients found."
 msgstr "Geen ingrediënten gevonden."
 
-#: wp-ultimate-recipe-plugin.php:424 wp-ultimate-recipe-plugin.php:437
+#: tags/0.0.5/wp-ultimate-recipe.php:435 tags/0.0.5/wp-ultimate-recipe.php:448
+#: trunk/wp-ultimate-recipe.php:501 trunk/wp-ultimate-recipe.php:514
 msgid "Courses"
 msgstr "Maaltijden"
 
-#: wp-ultimate-recipe-plugin.php:425 template/recipe_public.php:51
+#: tags/0.0.5/wp-ultimate-recipe.php:436
+#: tags/0.0.5/template/recipe_public.php:53 trunk/wp-ultimate-recipe.php:502
+#: trunk/template/recipe_public.php:53
 msgid "Course"
 msgstr "Maaltijd"
 
-#: wp-ultimate-recipe-plugin.php:426
+#: tags/0.0.5/wp-ultimate-recipe.php:437 trunk/wp-ultimate-recipe.php:503
 msgid "Search Courses"
 msgstr "Maaltijden zoeken"
 
-#: wp-ultimate-recipe-plugin.php:427
+#: tags/0.0.5/wp-ultimate-recipe.php:438 trunk/wp-ultimate-recipe.php:504
 msgid "Popular Courses"
 msgstr "Populaire Maaltijden"
 
-#: wp-ultimate-recipe-plugin.php:428
+#: tags/0.0.5/wp-ultimate-recipe.php:439 trunk/wp-ultimate-recipe.php:505
 msgid "All Courses"
 msgstr "Alle Maaltijden"
 
-#: wp-ultimate-recipe-plugin.php:429
+#: tags/0.0.5/wp-ultimate-recipe.php:440 trunk/wp-ultimate-recipe.php:506
 msgid "Edit Course"
 msgstr "Maaltijd bewerken"
 
-#: wp-ultimate-recipe-plugin.php:430
+#: tags/0.0.5/wp-ultimate-recipe.php:441 trunk/wp-ultimate-recipe.php:507
 msgid "Update Course"
 msgstr "Maaltijd aanpassen"
 
-#: wp-ultimate-recipe-plugin.php:431
+#: tags/0.0.5/wp-ultimate-recipe.php:442 trunk/wp-ultimate-recipe.php:508
 msgid "Add New Course"
 msgstr "Maaltijd toevoegen"
 
-#: wp-ultimate-recipe-plugin.php:432
+#: tags/0.0.5/wp-ultimate-recipe.php:443 trunk/wp-ultimate-recipe.php:509
 msgid "New Course Name"
 msgstr "Nieuwe Maaltijd naam"
 
-#: wp-ultimate-recipe-plugin.php:433
+#: tags/0.0.5/wp-ultimate-recipe.php:444 trunk/wp-ultimate-recipe.php:510
 msgid "Separate courses with commas"
 msgstr "Maaltijden scheiden met komma's"
 
-#: wp-ultimate-recipe-plugin.php:434
+#: tags/0.0.5/wp-ultimate-recipe.php:445 trunk/wp-ultimate-recipe.php:511
 msgid "Add or remove courses"
 msgstr "Maaltijden toevoegen of verwijderen"
 
-#: wp-ultimate-recipe-plugin.php:435
+#: tags/0.0.5/wp-ultimate-recipe.php:446 trunk/wp-ultimate-recipe.php:512
 msgid "Choose from the most used courses"
 msgstr "Kies uit de meest gebruikte maaltijden"
 
-#: wp-ultimate-recipe-plugin.php:436
+#: tags/0.0.5/wp-ultimate-recipe.php:447 trunk/wp-ultimate-recipe.php:513
 msgid "No courses found."
 msgstr "Geen maaltijden gevonden."
 
-#: wp-ultimate-recipe-plugin.php:448
+#: tags/0.0.5/wp-ultimate-recipe.php:459 trunk/wp-ultimate-recipe.php:525
 msgid "Breakfast"
 msgstr "Ontbijt"
 
-#: wp-ultimate-recipe-plugin.php:449
+#: tags/0.0.5/wp-ultimate-recipe.php:460 trunk/wp-ultimate-recipe.php:526
 msgid "Appetizer"
 msgstr "Voorgerecht"
 
-#: wp-ultimate-recipe-plugin.php:450
+#: tags/0.0.5/wp-ultimate-recipe.php:461 trunk/wp-ultimate-recipe.php:527
 msgid "Soup"
 msgstr "Soep"
 
-#: wp-ultimate-recipe-plugin.php:451
+#: tags/0.0.5/wp-ultimate-recipe.php:462 trunk/wp-ultimate-recipe.php:528
 msgid "Main Course"
 msgstr "Hoofdgerecht"
 
-#: wp-ultimate-recipe-plugin.php:452
+#: tags/0.0.5/wp-ultimate-recipe.php:463 trunk/wp-ultimate-recipe.php:529
 msgid "Side Dish"
 msgstr "Bijgerecht"
 
-#: wp-ultimate-recipe-plugin.php:453
+#: tags/0.0.5/wp-ultimate-recipe.php:464 trunk/wp-ultimate-recipe.php:530
 msgid "Salad"
 msgstr "Salade"
 
-#: wp-ultimate-recipe-plugin.php:454
+#: tags/0.0.5/wp-ultimate-recipe.php:465 trunk/wp-ultimate-recipe.php:531
 msgid "Dessert"
 msgstr "Nagerecht"
 
-#: wp-ultimate-recipe-plugin.php:455
+#: tags/0.0.5/wp-ultimate-recipe.php:466 trunk/wp-ultimate-recipe.php:532
 msgid "Snack"
 msgstr "Snack"
 
-#: wp-ultimate-recipe-plugin.php:456
+#: tags/0.0.5/wp-ultimate-recipe.php:467 trunk/wp-ultimate-recipe.php:533
 msgid "Drinks"
 msgstr "Drinken"
 
-#: wp-ultimate-recipe-plugin.php:472 wp-ultimate-recipe-plugin.php:485
+#: tags/0.0.5/wp-ultimate-recipe.php:483 tags/0.0.5/wp-ultimate-recipe.php:496
+#: trunk/wp-ultimate-recipe.php:549 trunk/wp-ultimate-recipe.php:562
 msgid "Cuisines"
 msgstr "Keukens"
 
-#: wp-ultimate-recipe-plugin.php:473 template/recipe_public.php:64
+#: tags/0.0.5/wp-ultimate-recipe.php:484
+#: tags/0.0.5/template/recipe_public.php:66 trunk/wp-ultimate-recipe.php:550
+#: trunk/template/recipe_public.php:66
 msgid "Cuisine"
 msgstr "Keuken"
 
-#: wp-ultimate-recipe-plugin.php:474
+#: tags/0.0.5/wp-ultimate-recipe.php:485 trunk/wp-ultimate-recipe.php:551
 msgid "Search Cuisines"
 msgstr "Keukens zoeken"
 
-#: wp-ultimate-recipe-plugin.php:475
+#: tags/0.0.5/wp-ultimate-recipe.php:486 trunk/wp-ultimate-recipe.php:552
 msgid "Popular Cuisines"
 msgstr "Populaire Keukens"
 
-#: wp-ultimate-recipe-plugin.php:476
+#: tags/0.0.5/wp-ultimate-recipe.php:487 trunk/wp-ultimate-recipe.php:553
 msgid "All Cuisines"
 msgstr "Alle Keukens"
 
-#: wp-ultimate-recipe-plugin.php:477
+#: tags/0.0.5/wp-ultimate-recipe.php:488 trunk/wp-ultimate-recipe.php:554
 msgid "Edit Cuisine"
 msgstr "Keuken bewerken"
 
-#: wp-ultimate-recipe-plugin.php:478
+#: tags/0.0.5/wp-ultimate-recipe.php:489 trunk/wp-ultimate-recipe.php:555
 msgid "Update Cuisine"
 msgstr "Keuken aanpassen"
 
-#: wp-ultimate-recipe-plugin.php:479
+#: tags/0.0.5/wp-ultimate-recipe.php:490 trunk/wp-ultimate-recipe.php:556
 msgid "Add New Cuisine"
 msgstr "Keuken toevoegen"
 
-#: wp-ultimate-recipe-plugin.php:480
+#: tags/0.0.5/wp-ultimate-recipe.php:491 trunk/wp-ultimate-recipe.php:557
 msgid "New Cuisine Name"
 msgstr "Nieuwe Keuken naam"
 
-#: wp-ultimate-recipe-plugin.php:481
+#: tags/0.0.5/wp-ultimate-recipe.php:492 trunk/wp-ultimate-recipe.php:558
 msgid "Separate cuisines with commas"
 msgstr "Keukens scheiden met komma's"
 
-#: wp-ultimate-recipe-plugin.php:482
+#: tags/0.0.5/wp-ultimate-recipe.php:493 trunk/wp-ultimate-recipe.php:559
 msgid "Add or remove cuisines"
 msgstr "Keuken toevoegen of verwijderen"
 
-#: wp-ultimate-recipe-plugin.php:483
+#: tags/0.0.5/wp-ultimate-recipe.php:494 trunk/wp-ultimate-recipe.php:560
 msgid "Choose from the most used cuisines"
 msgstr "Kies uit de meest gebruikte keukens"
 
-#: wp-ultimate-recipe-plugin.php:484
+#: tags/0.0.5/wp-ultimate-recipe.php:495 trunk/wp-ultimate-recipe.php:561
 msgid "No cuisines found."
 msgstr "Geen keukens gevonden."
 
-#: wp-ultimate-recipe-plugin.php:496
+#: tags/0.0.5/wp-ultimate-recipe.php:507 trunk/wp-ultimate-recipe.php:573
 msgid "French"
 msgstr "Frans"
 
-#: wp-ultimate-recipe-plugin.php:497
+#: tags/0.0.5/wp-ultimate-recipe.php:508 trunk/wp-ultimate-recipe.php:574
 msgid "Italian"
 msgstr "Italiaans"
 
-#: wp-ultimate-recipe-plugin.php:498
+#: tags/0.0.5/wp-ultimate-recipe.php:509 trunk/wp-ultimate-recipe.php:575
 msgid "Mediterranean"
 msgstr "Mediterraans"
 
-#: wp-ultimate-recipe-plugin.php:499
+#: tags/0.0.5/wp-ultimate-recipe.php:510 trunk/wp-ultimate-recipe.php:576
 msgid "Indian"
 msgstr "Indisch"
 
-#: wp-ultimate-recipe-plugin.php:500
+#: tags/0.0.5/wp-ultimate-recipe.php:511 trunk/wp-ultimate-recipe.php:577
 msgid "Chinese"
 msgstr "Chinees"
 
-#: wp-ultimate-recipe-plugin.php:501
+#: tags/0.0.5/wp-ultimate-recipe.php:512 trunk/wp-ultimate-recipe.php:578
 msgid "Japanese"
 msgstr "Japans"
 
-#: wp-ultimate-recipe-plugin.php:502
+#: tags/0.0.5/wp-ultimate-recipe.php:513 trunk/wp-ultimate-recipe.php:579
 msgid "American"
 msgstr "Amerikaans"
 
-#: wp-ultimate-recipe-plugin.php:503
+#: tags/0.0.5/wp-ultimate-recipe.php:514 trunk/wp-ultimate-recipe.php:580
 msgid "Mexican"
 msgstr "Mexicaans"
 
-#: wp-ultimate-recipe-plugin.php:519 wp-ultimate-recipe-plugin.php:532
+#: tags/0.0.5/wp-ultimate-recipe.php:530 tags/0.0.5/wp-ultimate-recipe.php:543
+#: trunk/wp-ultimate-recipe.php:596 trunk/wp-ultimate-recipe.php:609
 msgid "Ratings"
 msgstr "Scores"
 
-#: wp-ultimate-recipe-plugin.php:520 template/recipe_admin.php:26
+#: tags/0.0.5/wp-ultimate-recipe.php:531
+#: tags/0.0.5/template/recipe_admin.php:26 trunk/wp-ultimate-recipe.php:597
+#: trunk/template/recipe_admin.php:26
 msgid "Rating"
 msgstr "Score"
 
-#: wp-ultimate-recipe-plugin.php:521
+#: tags/0.0.5/wp-ultimate-recipe.php:532 trunk/wp-ultimate-recipe.php:598
 msgid "Search Ratings"
 msgstr "Scores zoeken"
 
-#: wp-ultimate-recipe-plugin.php:522
+#: tags/0.0.5/wp-ultimate-recipe.php:533 trunk/wp-ultimate-recipe.php:599
 msgid "Popular Ratings"
 msgstr "Populaire Scores"
 
-#: wp-ultimate-recipe-plugin.php:523
+#: tags/0.0.5/wp-ultimate-recipe.php:534 trunk/wp-ultimate-recipe.php:600
 msgid "All Ratings"
 msgstr "Alle Scores"
 
-#: wp-ultimate-recipe-plugin.php:524
+#: tags/0.0.5/wp-ultimate-recipe.php:535 trunk/wp-ultimate-recipe.php:601
 msgid "Edit Rating"
 msgstr "Score bewerken"
 
-#: wp-ultimate-recipe-plugin.php:525
+#: tags/0.0.5/wp-ultimate-recipe.php:536 trunk/wp-ultimate-recipe.php:602
 msgid "Update Rating"
 msgstr "Score aanpassen"
 
-#: wp-ultimate-recipe-plugin.php:526
+#: tags/0.0.5/wp-ultimate-recipe.php:537 trunk/wp-ultimate-recipe.php:603
 msgid "Add New Rating"
 msgstr "Score toevoegen"
 
-#: wp-ultimate-recipe-plugin.php:527
+#: tags/0.0.5/wp-ultimate-recipe.php:538 trunk/wp-ultimate-recipe.php:604
 msgid "New Rating Name"
 msgstr "Nieuwe Score naam"
 
-#: wp-ultimate-recipe-plugin.php:528
+#: tags/0.0.5/wp-ultimate-recipe.php:539 trunk/wp-ultimate-recipe.php:605
 msgid "Separate ratings with commas"
 msgstr "Scores scheiden met komma's"
 
-#: wp-ultimate-recipe-plugin.php:529
+#: tags/0.0.5/wp-ultimate-recipe.php:540 trunk/wp-ultimate-recipe.php:606
 msgid "Add or remove ratings"
 msgstr "Scores toevoegen of verwijderen"
 
-#: wp-ultimate-recipe-plugin.php:530
+#: tags/0.0.5/wp-ultimate-recipe.php:541 trunk/wp-ultimate-recipe.php:607
 msgid "Choose from the most used ratings"
 msgstr "Kies uit de meest gebruikte scores"
 
-#: wp-ultimate-recipe-plugin.php:531
+#: tags/0.0.5/wp-ultimate-recipe.php:542 trunk/wp-ultimate-recipe.php:608
 msgid "No ratings found."
 msgstr "Geen scores gevonden."
 
-#: template/recipe_admin.php:17
+#: tags/0.0.5/template/recipe_admin.php:17 trunk/template/recipe_admin.php:17
 msgid "General"
 msgstr "Algemeen"
 
-#: template/recipe_admin.php:20
+#: tags/0.0.5/template/recipe_admin.php:20 trunk/template/recipe_admin.php:20
 msgid "Description"
 msgstr "Omschrijving"
 
-#: template/recipe_admin.php:33
+#: tags/0.0.5/template/recipe_admin.php:33 trunk/template/recipe_admin.php:33
 msgid "star"
 msgstr "ster"
 
-#: template/recipe_admin.php:33
+#: tags/0.0.5/template/recipe_admin.php:33 trunk/template/recipe_admin.php:33
 msgid "stars"
 msgstr "sterren"
 
-#: template/recipe_admin.php:40 template/recipe_public.php:74
+#: tags/0.0.5/template/recipe_admin.php:40
+#: tags/0.0.5/template/recipe_public.php:76 trunk/template/recipe_admin.php:40
+#: trunk/template/recipe_public.php:76 trunk/template/recipe_public.php:132
 msgid "Servings"
 msgstr "Porties"
 
-#: template/recipe_admin.php:44
+#: tags/0.0.5/template/recipe_admin.php:44 trunk/template/recipe_admin.php:44
 msgid "(e.g. 2 people, 3 loafs, ...)"
 msgstr "(bv: 2 personen, 3 broden)"
 
-#: template/recipe_admin.php:48
+#: tags/0.0.5/template/recipe_admin.php:48 trunk/template/recipe_admin.php:48
 msgid "Prep time"
 msgstr "Prep tijd"
 
-#: template/recipe_admin.php:51 template/recipe_admin.php:58
-#: template/recipe_public.php:82 template/recipe_public.php:83
+#: tags/0.0.5/template/recipe_admin.php:51
+#: tags/0.0.5/template/recipe_admin.php:58
+#: tags/0.0.5/template/recipe_public.php:84
+#: tags/0.0.5/template/recipe_public.php:85 trunk/template/recipe_admin.php:51
+#: trunk/template/recipe_admin.php:58 trunk/template/recipe_public.php:84
+#: trunk/template/recipe_public.php:85
 msgid "minutes"
 msgstr "minuten"
 
-#: template/recipe_admin.php:55
+#: tags/0.0.5/template/recipe_admin.php:55 trunk/template/recipe_admin.php:55
 msgid "Cook time"
 msgstr "Kook tijd"
 
-#: template/recipe_admin.php:64
+#: tags/0.0.5/template/recipe_admin.php:64 trunk/template/recipe_admin.php:64
 msgid ""
 "Don't forget that you can tag your recipe with <strong>Courses</strong> and "
 "<strong>Cuisines</strong> by using the boxes on the right. Use the "
@@ -414,23 +433,25 @@ msgstr ""
 "Gebruik de <strong>uitgelichte afbeelding</strong> om een foto van het "
 "klaargemaakte gerecht te tonen."
 
-#: template/recipe_admin.php:96
+#: tags/0.0.5/template/recipe_admin.php:96 trunk/template/recipe_admin.php:96
 msgid "cup"
 msgstr "gram"
 
-#: template/recipe_admin.php:97
+#: tags/0.0.5/template/recipe_admin.php:97 trunk/template/recipe_admin.php:97
 msgid "walnuts"
 msgstr "walnoten"
 
-#: template/recipe_admin.php:98
+#: tags/0.0.5/template/recipe_admin.php:98 trunk/template/recipe_admin.php:98
 msgid "coarsely chopped"
 msgstr "grof gehakt"
 
-#: template/recipe_admin.php:104
+#: tags/0.0.5/template/recipe_admin.php:104
+#: trunk/template/recipe_admin.php:104
 msgid "Add an ingredient"
 msgstr "Voeg een ingrediënt toe"
 
-#: template/recipe_admin.php:107
+#: tags/0.0.5/template/recipe_admin.php:107
+#: trunk/template/recipe_admin.php:107
 msgid ""
 "<strong>Use the TAB key</strong> while adding ingredients, it will "
 "automatically create new fields. <strong>Don't worry about empty lines</"
@@ -440,23 +461,31 @@ msgstr ""
 "automatisch nieuwe velden aan te maken. <strong>Negeer de lege lijnen</"
 "strong>, deze worden niet meegenomen."
 
-#: template/recipe_admin.php:110 template/recipe_public.php:135
+#: tags/0.0.5/template/recipe_admin.php:110
+#: tags/0.0.5/template/recipe_public.php:137
+#: trunk/template/recipe_admin.php:110 trunk/template/recipe_public.php:140
 msgid "Instructions"
 msgstr "Instructies"
 
-#: template/recipe_admin.php:137 template/recipe_admin.php:156
+#: tags/0.0.5/template/recipe_admin.php:137
+#: tags/0.0.5/template/recipe_admin.php:156
+#: trunk/template/recipe_admin.php:137 trunk/template/recipe_admin.php:156
 msgid "Add Image"
 msgstr "Foto Toevoegen"
 
-#: template/recipe_admin.php:138 template/recipe_admin.php:157
+#: tags/0.0.5/template/recipe_admin.php:138
+#: tags/0.0.5/template/recipe_admin.php:157
+#: trunk/template/recipe_admin.php:138 trunk/template/recipe_admin.php:157
 msgid "Remove Image"
 msgstr "Foot Verwijderen"
 
-#: template/recipe_admin.php:166
+#: tags/0.0.5/template/recipe_admin.php:166
+#: trunk/template/recipe_admin.php:166
 msgid "Add an instruction"
 msgstr "Voeg een instructie toe"
 
-#: template/recipe_admin.php:169
+#: tags/0.0.5/template/recipe_admin.php:169
+#: trunk/template/recipe_admin.php:169
 msgid ""
 "<strong>Use the TAB key</strong> while adding instructions, it will "
 "automatically create new fields. <strong>Don't worry about empty lines</"
@@ -466,10 +495,48 @@ msgstr ""
 "automatisch nieuwe velden aan te maken. <strong>Negeer de lege lijnen</"
 "strong>, deze worden niet meegenomen."
 
-#: template/recipe_public.php:75
+#: tags/0.0.5/template/recipe_public.php:77
+#: trunk/template/recipe_public.php:77
 msgid "Prep Time"
 msgstr "Prep Tijd"
 
-#: template/recipe_public.php:76
+#: tags/0.0.5/template/recipe_public.php:78
+#: trunk/template/recipe_public.php:78
 msgid "Cook Time"
 msgstr "Kook Tijd"
+
+#: trunk/wp-ultimate-recipe.php:129
+msgid "Recipe Settings"
+msgstr "Recept Instellingen"
+
+#: trunk/wp-ultimate-recipe.php:129 trunk/template/recipe_menu.php:4
+msgid "Settings"
+msgstr "Instellingen"
+
+#: trunk/wp-ultimate-recipe.php:140
+msgid "Recipe Box"
+msgstr "Recepten Box"
+
+#: trunk/wp-ultimate-recipe.php:144
+msgid "Adjustable Servings"
+msgstr "Aanpasbare Porties"
+
+#: trunk/wp-ultimate-recipe.php:150
+msgid "Allow users to dynamically adjust the servings of recipes."
+msgstr "Laat gebruikers toe om zelf de porties van de recepten aan te passen."
+
+#: trunk/wp-ultimate-recipe.php:157
+msgid "Link to plugin"
+msgstr "Link naar plugin"
+
+#: trunk/wp-ultimate-recipe.php:163
+msgid "Show a link to the plugin website as a little thank you."
+msgstr "Toon een link naar de plugin website bij wijze van dank."
+
+#: trunk/wp-ultimate-recipe.php:190
+msgid "Settings regarding the recipe box shown to your visitors."
+msgstr "Instellingen over de recepten box die getoond wordt aan de bezoekers."
+
+#: trunk/template/recipe_public.php:160
+msgid "Powered by"
+msgstr "Mogelijk door"

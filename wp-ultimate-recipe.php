@@ -3,7 +3,7 @@
 Plugin Name: WP Ultimate Recipe
 Plugin URI: http://www.wpultimaterecipeplugin.com
 Description: WP Ultimate Recipe is a user friendly plugin for adding recipes to any of your posts and pages.
-Version: 0.0.4
+Version: 0.0.6
 Author: Brecht Vandersmissen
 Author URI: http://www.brechtvds.be
 License: GPLv2
@@ -137,42 +137,67 @@ class WPUltimateRecipe {
         add_filter( 'mce_external_plugins', array( $this, 'recipes_shortcode_button_plugin' ) );
         add_filter( 'mce_buttons', array( $this, 'recipes_shortcode_button_add' ) );
 
-        add_settings_section( 'wpurp_settings_section', $this->t('General'), array( $this, 'admin_menu_settings_general' ), 'wpurp_settings' );
+        add_settings_section( 'wpurp_settings_section', $this->t('Recipe Box'), array( $this, 'admin_menu_settings_general' ), 'wpurp_settings' );
 
         add_settings_field(
-            'show_servings_adjust',                      // ID used to identify the field throughout the theme
-            'Allow servings adjustment',                           // The label to the left of the option interface element
-            'admin_menu_settings_general_servings',   // The name of the function responsible for rendering the option interface
-            'wpurp_settings',                          // The page on which this option will be displayed
-            'wpurp_settings_section',         // The name of the section to which this field belongs
-            array(                              // The array of arguments to pass to the callback. In this case, just a description.
-                $this->t('Activate this setting allow users to dynamically adjust the servings of recipes.')
+            'wpurp_show_servings_adjust',
+            $this->t('Adjustable Servings'),
+            array( $this, 'admin_menu_settings_checkbox' ),
+            'wpurp_settings',
+            'wpurp_settings_section',
+            array(
+                'wpurp_show_servings_adjust',
+                $this->t('Allow users to dynamically adjust the servings of recipes.'),
+                1
+            )
+        );
+
+        add_settings_field(
+            'wpurp_show_linkback',
+            $this->t('Link to plugin'),
+            array( $this, 'admin_menu_settings_checkbox' ),
+            'wpurp_settings',
+            'wpurp_settings_section',
+            array(
+                'wpurp_show_linkback',
+                $this->t('Show a link to the plugin website as a little thank you.'),
+                1
             )
         );
 
         register_setting(
             'wpurp_settings',
-            'wpurp_settings'
+            'wpurp_show_servings_adjust'
+        );
+
+        register_setting(
+            'wpurp_settings',
+            'wpurp_show_linkback'
         );
     }
 
     public function admin_menu_settings()
     {
+        if (!current_user_can('manage_options')) {
+            wp_die('You do not have sufficient permissions to access this page.');
+        }
+
         include($this->pluginDir . '/template/recipe_menu.php');
     }
 
     public function admin_menu_settings_general()
     {
-        echo 'YOLO';
+        $this->t('Settings regarding the recipe box shown to your visitors.', true);
     }
 
-    public function admin_menu_settings_general_servings($args) {
+    public function admin_menu_settings_checkbox($args) {
 
-        $html = '<input type="checkbox" id="show_servings_adjust" name="show_servings_adjust" value="1" ' . checked(1, get_option('show_servings_adjust'), false) . '/>';
-        $html .= '<label for="show_servings_adjust"> '  . $args[0] . '</label>';
+        $default = isset($args[2]) ? $args[2] : 0;
+
+        $html = '<input type="checkbox" id="'.$args[0].'" name="'.$args[0].'" value="1" ' . checked(1, get_option($args[0], $default), false) . '/>';
+        $html .= '<label for="'.$args[0].'"> '  . $args[1] . '</label>';
 
         echo $html;
-
     }
 
 

@@ -80,7 +80,7 @@
                 </thead>
                 <tbody>
                 <tr>
-                    <?php if($recipe['recipe_servings'][0] != '') { ?><td itemprop="recipeYield"><?php echo $recipe['recipe_servings'][0]; ?><span class="recipe-information-servings-type"><?php echo $recipe['recipe_servings_type'][0]; ?></span></td><?php } ?>
+                    <?php if($recipe['recipe_servings'][0] != '') { ?><td itemprop="recipeYield"><span class="recipe-information-servings"><?php echo $recipe['recipe_servings'][0]; ?></span><span class="recipe-information-servings-type"><?php echo $recipe['recipe_servings_type'][0]; ?></span></td><?php } ?>
                     <?php if($recipe['recipe_prep_time'][0] != '') { ?><td><meta itemprop="prepTime" content="PT<?php echo $recipe['recipe_prep_time'][0];?>M"><?php echo $recipe['recipe_prep_time'][0]; ?><span class="recipe-information-time-unit"><?php $this->t('minutes', true); ?></span></td><?php } ?>
                     <?php if($recipe['recipe_cook_time'][0] != '') { ?><td><meta itemprop="cookTime" content="PT<?php echo $recipe['recipe_cook_time'][0];?>M"><?php echo $recipe['recipe_cook_time'][0]; ?><span class="recipe-information-time-unit"><?php $this->t('minutes', true); ?></span></td><?php } ?>
                 </tr>
@@ -128,7 +128,7 @@
         echo $out;
         ?>
     </ul>
-    <?php if($recipe['recipe_servings'][0] != '') { ?>
+    <?php if($recipe['recipe_servings'][0] != '' && get_option('wpurp_show_servings_adjust', 1) == 1) { ?>
     <div class="recipe-ingredients-servings"><?php $this->t('Servings', true); ?>: <input type="number" class="adjust-recipe-servings" data-original="<?php echo $recipe['recipe_servings'][0]; ?>" value="<?php echo $recipe['recipe_servings'][0]; ?>" /> <?php echo $recipe['recipe_servings_type'][0]; ?></div>
     <?php } ?>
     <?php } ?>
@@ -155,5 +155,8 @@
         echo $out;
         ?>
     </ol>
+    <?php } ?>
+    <?php if(get_option('wpurp_show_linkback', 1) == 1) { ?>
+    <div class="wpurp-footer"><?php $this->t('Powered by', true); ?> <a href="http://www.wpultimaterecipeplugin.com" target="_blank">WP Ultimate Recipe</a></div>
     <?php } ?>
 </div>

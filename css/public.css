@@ -188,6 +188,11 @@
     border-radius:         0px;
 }
 
+.wpurp-container .wpurp-footer {
+    text-align: right;
+    font-size: 0.8em;
+}
+
 @media screen and (max-width: 550px) {
     .wpurp-container .recipe-header-image {
         float: none;

@@ -7,6 +7,10 @@ jQuery(document).ready(function() {
 
         recipe.find('img').remove();
 
+        recipe.find('.recipe-information-servings')
+            .replaceWith(
+                recipe.find('input.adjust-recipe-servings').val());
+
         var popup = window.open(pluginUrl + '/template/recipe_print.php');
 
         popup.pluginUrl = pluginUrl;
