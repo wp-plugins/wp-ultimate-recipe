@@ -48,6 +48,9 @@ You can find more information at [WPUltimateRecipePlugin.com](http://www.wpultim
 
 == Changelog ==
 
+= 0.0.7 =
+* Had to change version because of technical SVN problem
+
 = 0.0.6 =
 * Adjustable recipe servings
 * Fixed bug with instruction photos
@@ -70,6 +73,9 @@ You can find more information at [WPUltimateRecipePlugin.com](http://www.wpultim
 * Very first version of this plugin
 
 == Upgrade notice ==
+
+= 0.0.7 =
+Update broken 0.0.6 version
 
 = 0.0.6 =
 Update to fix bug with instruction photos.
