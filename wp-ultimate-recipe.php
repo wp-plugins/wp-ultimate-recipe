@@ -3,7 +3,7 @@
 Plugin Name: WP Ultimate Recipe
 Plugin URI: http://www.wpultimaterecipeplugin.com
 Description: WP Ultimate Recipe is a user friendly plugin for adding recipes to any of your posts and pages.
-Version: 0.0.7
+Version: 0.0.8
 Author: Brecht Vandersmissen
 Author URI: http://www.brechtvds.be
 License: GPLv2
@@ -56,6 +56,7 @@ class WPUltimateRecipe {
 
         // Shortcodes
         add_shortcode("ultimate-recipe", array( $this, 'recipes_shortcode' ));
+        add_shortcode("ultimate-recipe-index", array( $this, 'recipes_index_shortcode' ));
     }
 
     /*
@@ -434,6 +435,57 @@ class WPUltimateRecipe {
         $out .= '</div>';
 
         echo $out;
+    }
+
+    public function recipes_index_shortcode($options) {
+        $options = shortcode_atts(array(
+            'headers' => 'false'
+        ), $options);
+
+        $posts = get_posts(array(
+            'post_type' => 'recipe',
+            'nopaging' => true,
+            'orderby' => 'title',
+            'order' => 'ASC'
+        ));
+
+        $out = '<div class="wpurp-index-container">';
+        if($posts) {
+
+            $letters = array();
+
+            foreach($posts as $post)
+            {
+                $title = $post->post_title;
+
+                if($title != '')
+                {
+                    if ($options['headers'] != 'false')
+                    {
+                        $first_letter = substr($title,0,1);
+
+                        if(!in_array($first_letter, $letters))
+                        {
+                            $letters[] = $first_letter;
+                            $out .= '<h2>';
+                            $out .= $first_letter;
+                            $out .= '</h2>';
+                        }
+                    }
+
+                    $out .= '<a href="'.get_permalink($post->ID).'">';
+                    $out .= $title;
+                    $out .= '</a><br/>';
+                }
+            }
+        }
+        else
+        {
+            $out .= $this->t("You have to create a recipe first, check the 'Recipes' menu on the left.");
+        }
+        $out .= '</div>';
+
+        return $out;
     }
 
     public function recipes_thumbnail($html)

@@ -24,6 +24,7 @@ Some features:
 *   Uses microdata optimised for **Google Recipe search**.
 *   Easily **translatable**, already available in English, Dutch and Swedish
 *   Let visitors **adjust the ingredient quantities** for more or less servings
+*   Add a **recipe index** to any post or page
 
 Feel free to contact me if any features are missing.
 You can find more information at [WPUltimateRecipePlugin.com](http://www.wpultimaterecipeplugin.com/)
@@ -47,6 +48,9 @@ You can find more information at [WPUltimateRecipePlugin.com](http://www.wpultim
 2. Manage everything about your recipes in one place
 
 == Changelog ==
+
+= 0.0.8 =
+* Added ultimate-recipe-index shortcode for showing (wait for it...) a recipe index
 
 = 0.0.7 =
 * Had to change version because of technical SVN problem
@@ -73,6 +77,9 @@ You can find more information at [WPUltimateRecipePlugin.com](http://www.wpultim
 * Very first version of this plugin
 
 == Upgrade notice ==
+
+= 0.0.8 =
+Update if you want to use the index feature
 
 = 0.0.7 =
 Update broken 0.0.6 version
