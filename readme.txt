@@ -49,6 +49,9 @@ You can find more information at [WPUltimateRecipePlugin.com](http://www.wpultim
 
 == Changelog ==
 
+= 0.0.9 =
+* New setting allows you to show the full recipe in the archives instead of the excerpt
+
 = 0.0.8 =
 * Added ultimate-recipe-index shortcode for showing (wait for it...) a recipe index
 
@@ -77,6 +80,9 @@ You can find more information at [WPUltimateRecipePlugin.com](http://www.wpultim
 * Very first version of this plugin
 
 == Upgrade notice ==
+
+= 0.0.9 =
+Update if you want to be able to show the full recipe instead of the excerpt
 
 = 0.0.8 =
 Update if you want to use the index feature

@@ -3,7 +3,7 @@
 Plugin Name: WP Ultimate Recipe
 Plugin URI: http://www.wpultimaterecipeplugin.com
 Description: WP Ultimate Recipe is a user friendly plugin for adding recipes to any of your posts and pages.
-Version: 0.0.8
+Version: 0.0.9
 Author: Brecht Vandersmissen
 Author URI: http://www.brechtvds.be
 License: GPLv2
@@ -123,10 +123,6 @@ class WPUltimateRecipe {
         remove_meta_box('ingredientdiv', 'recipe', 'side');
         remove_meta_box('stardiv', 'recipe', 'side');
 
-        /*if( false == get_option( 'wpurp_settings_options' ) ) {
-            add_option( 'wpurp_settings_options' );
-        }*/
-
         add_submenu_page( 'edit.php?post_type=recipe', $this->t('Recipe Settings'), $this->t('Settings'), 'manage_options', 'wpurp_settings', array( $this, 'admin_menu_settings' ) );
     }
 
@@ -166,6 +162,19 @@ class WPUltimateRecipe {
             )
         );
 
+        add_settings_field(
+            'wpurp_show_full_recipe',
+            $this->t('Show full recipe'),
+            array( $this, 'admin_menu_settings_checkbox' ),
+            'wpurp_settings',
+            'wpurp_settings_section',
+            array(
+                'wpurp_show_full_recipe',
+                $this->t('Show the full recipe instead of the description/excerpt in') . ' <a href="'.site_url('/recipe/').'" target="_blank">'.$this->t('the recipe archive').'</a>.',
+                0
+            )
+        );
+
         register_setting(
             'wpurp_settings',
             'wpurp_show_servings_adjust'
@@ -174,6 +183,11 @@ class WPUltimateRecipe {
         register_setting(
             'wpurp_settings',
             'wpurp_show_linkback'
+        );
+
+        register_setting(
+            'wpurp_settings',
+            'wpurp_show_full_recipe'
         );
     }
 
@@ -336,7 +350,7 @@ class WPUltimateRecipe {
             $recipe_post = get_post();
             $recipe = get_post_custom($recipe_post->ID);
 
-            if (is_single())
+            if (is_single() || get_option('wpurp_show_full_recipe', 0) == 1)
             {
                 ob_start();
                 include($this->pluginDir . '/template/recipe_public.php');
@@ -345,7 +359,11 @@ class WPUltimateRecipe {
             }
             else
             {
-                $content = $recipe['recipe_description'][0];
+                if(!empty($recipe_post->post_excerpt)) {
+                    the_excerpt();
+                } else {
+                    $content = $recipe['recipe_description'][0];
+                }
             }
 
             add_filter('the_content', array( $this, 'recipes_content' ), 10);
