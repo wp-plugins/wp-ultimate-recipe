@@ -1,6 +1,6 @@
 jQuery(document).ready(function() {
 
-    jQuery('.print-recipe').on('click', function(e) {
+    jQuery(document).on('click', '.print-recipe', function(e) {
         e.preventDefault();
 
         var recipe = jQuery(this).parents('.wpurp-container').clone(true);
@@ -17,7 +17,7 @@ jQuery(document).ready(function() {
         popup.wpurp_container_content = recipe.html();
     });
 
-    jQuery('.adjust-recipe-servings').on('change', function(e) {
+    jQuery(document).on('change', '.adjust-recipe-servings', function(e) {
         var servings_input = jQuery(this);
 
         var amounts = servings_input.parents('.wpurp-container').find('.recipe-ingredient-quantity');
