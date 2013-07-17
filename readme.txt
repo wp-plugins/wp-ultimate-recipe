@@ -49,6 +49,9 @@ You can find more information at [WPUltimateRecipePlugin.com](http://www.wpultim
 
 == Changelog ==
 
+= 0.0.11 =
+* Fixed printing for IE
+
 = 0.0.10 =
 * Fixed print button for recipes that are loaded through ajax
 
@@ -83,6 +86,9 @@ You can find more information at [WPUltimateRecipePlugin.com](http://www.wpultim
 * Very first version of this plugin
 
 == Upgrade notice ==
+
+= 0.0.11 =
+Update to fix printing for IE
 
 = 0.0.10 =
 Update if you are using ajax to load your recipes

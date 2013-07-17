@@ -1,3 +1,5 @@
+var parentRecipe = '';
+
 jQuery(document).ready(function() {
 
     jQuery(document).on('click', '.print-recipe', function(e) {
@@ -7,14 +9,16 @@ jQuery(document).ready(function() {
 
         recipe.find('img').remove();
 
-        recipe.find('.recipe-information-servings')
-            .replaceWith(
-                recipe.find('input.adjust-recipe-servings').val());
+        var servings = recipe.find('input.adjust-recipe-servings').val();
 
-        var popup = window.open(pluginUrl + '/template/recipe_print.php');
+        if(servings != '') {
+            recipe.find('.recipe-information-servings')
+                .replaceWith(servings);
+        }
 
-        popup.pluginUrl = pluginUrl;
-        popup.wpurp_container_content = recipe.html();
+        parentRecipe = recipe.html();
+
+        window.open(pluginUrl + '/template/recipe_print.php');
     });
 
     jQuery(document).on('change', '.adjust-recipe-servings', function(e) {
