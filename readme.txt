@@ -3,7 +3,7 @@ Contributors: BrechtVds
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QG7KZMGFU325Y
 Tags: recipe, ingredients, cuisines, food, courses, cook, kitchen, cooking
 Requires at least: 3.3
-Tested up to: 3.5.2
+Tested up to: 3.6.1
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -49,6 +49,9 @@ You can find more information at [WPUltimateRecipePlugin.com](http://www.wpultim
 
 == Changelog ==
 
+= 0.0.12 =
+* New instruction images uploader for anyone with WP 3.5 or higher (highly recommended)
+
 = 0.0.11 =
 * Fixed printing for IE
 
@@ -86,6 +89,9 @@ You can find more information at [WPUltimateRecipePlugin.com](http://www.wpultim
 * Very first version of this plugin
 
 == Upgrade notice ==
+
+= 0.0.12 =
+Update to fix image uploading
 
 = 0.0.11 =
 Update to fix printing for IE
