@@ -1,451 +1,554 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: WP Ultimate Recipe Plugin\n"
-"POT-Creation-Date: 2013-07-05 18:18+0100\n"
-"PO-Revision-Date: 2013-07-05 18:19+0100\n"
+"Project-Id-Version: WP Ultimate Recipe v0.0.12\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-28 17:27+0100\n"
+"PO-Revision-Date: 2013-10-28 17:36+0100\n"
 "Last-Translator: Brecht Vandersmissen <brecht.vandersmissen@gmail.com>\n"
 "Language-Team: BrechtVds.be\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.5\n"
-"X-Poedit-KeywordsList: t\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
+"_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
 "X-Poedit-Basepath: /Users/Brecht/Sites/DeBesteRecepten/wp-content/plugins/wp-"
 "ultimate-recipe-plugin/\n"
+"X-Textdomain-Support: yes\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: trunk/wp-ultimate-recipe.php:126
+# @ wp-ultimate-recipe
+#: trunk/wp-ultimate-recipe.php:118
 msgid "Recipe Settings"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:126 trunk/template/recipe_menu.php:4
+# @ wp-ultimate-recipe
+#: trunk/wp-ultimate-recipe.php:118 trunk/template/recipe_menu.php:4
 msgid "Settings"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:137
+# @ wp-ultimate-recipe
+#: trunk/wp-ultimate-recipe.php:129
 msgid "Recipe Box"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:141
+# @ wp-ultimate-recipe
+#: trunk/wp-ultimate-recipe.php:133
 msgid "Adjustable Servings"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:147
+# @ wp-ultimate-recipe
+#: trunk/wp-ultimate-recipe.php:139
 msgid "Allow users to dynamically adjust the servings of recipes."
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:154
+# @ wp-ultimate-recipe
+#: trunk/wp-ultimate-recipe.php:146
 msgid "Link to plugin"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:160
+# @ wp-ultimate-recipe
+#: trunk/wp-ultimate-recipe.php:152
 msgid "Show a link to the plugin website as a little thank you."
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:167
+# @ wp-ultimate-recipe
+#: trunk/wp-ultimate-recipe.php:159
 msgid "Show full recipe"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:173
+# @ wp-ultimate-recipe
+#: trunk/wp-ultimate-recipe.php:165
 msgid "Show the full recipe instead of the description/excerpt in"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:173
+# @ wp-ultimate-recipe
+#: trunk/wp-ultimate-recipe.php:165
 msgid "the recipe archive"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:205
+# @ wp-ultimate-recipe
+#: trunk/wp-ultimate-recipe.php:197
 msgid "Settings regarding the recipe box shown to your visitors."
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:229
+# @ wp-ultimate-recipe
+#: trunk/wp-ultimate-recipe.php:221
 msgid "Recipes"
 msgstr "Recept"
 
-#: trunk/wp-ultimate-recipe.php:230 trunk/wp-ultimate-recipe.php:256
+# @ wp-ultimate-recipe
+#: trunk/wp-ultimate-recipe.php:222 trunk/wp-ultimate-recipe.php:251
 msgid "Recipe"
 msgstr "Recept"
 
-#: trunk/wp-ultimate-recipe.php:231
+# @ wp-ultimate-recipe
+#: trunk/wp-ultimate-recipe.php:223
 msgid "Add New"
 msgstr "Lägg till"
 
-#: trunk/wp-ultimate-recipe.php:232
+# @ wp-ultimate-recipe
+#: trunk/wp-ultimate-recipe.php:224
 msgid "Add New Recipe"
 msgstr "Lägg till nytt recept"
 
-#: trunk/wp-ultimate-recipe.php:233
+# @ wp-ultimate-recipe
+#: trunk/wp-ultimate-recipe.php:225
 msgid "Edit"
 msgstr "Redigera"
 
-#: trunk/wp-ultimate-recipe.php:234
+# @ wp-ultimate-recipe
+#: trunk/wp-ultimate-recipe.php:226
 msgid "Edit Recipe"
 msgstr "Redigera recept"
 
-#: trunk/wp-ultimate-recipe.php:235
+# @ wp-ultimate-recipe
+#: trunk/wp-ultimate-recipe.php:227
 msgid "New Recipe"
 msgstr "Nytt recept"
 
-#: trunk/wp-ultimate-recipe.php:236
+# @ wp-ultimate-recipe
+#: trunk/wp-ultimate-recipe.php:228
 msgid "View"
 msgstr "Granska"
 
-#: trunk/wp-ultimate-recipe.php:237
+# @ wp-ultimate-recipe
+#: trunk/wp-ultimate-recipe.php:229
 msgid "View Recipe"
 msgstr "Granska recept"
 
-#: trunk/wp-ultimate-recipe.php:238
+# @ wp-ultimate-recipe
+#: trunk/wp-ultimate-recipe.php:230
 msgid "Search Recipes"
 msgstr "Sök recept"
 
-#: trunk/wp-ultimate-recipe.php:239
+# @ wp-ultimate-recipe
+#: trunk/wp-ultimate-recipe.php:231
 msgid "No Recipes found"
 msgstr "Inga recept hittades"
 
-#: trunk/wp-ultimate-recipe.php:240
+# @ wp-ultimate-recipe
+#: trunk/wp-ultimate-recipe.php:232
 msgid "No Recipes found in Trash"
 msgstr "Inga recept hittades i papperskorgen"
 
-#: trunk/wp-ultimate-recipe.php:241
+# @ wp-ultimate-recipe
+#: trunk/wp-ultimate-recipe.php:233
 msgid "Parent Recipe"
 msgstr "Tidiagare recept"
 
-#: trunk/wp-ultimate-recipe.php:437
+#: trunk/wp-ultimate-recipe.php:432
 msgid "Select the recipe to add to your post:"
-msgstr "Välj recept till ditt inlägg"
+msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:446
+# @ wp-ultimate-recipe
+#: trunk/wp-ultimate-recipe.php:441
+#, fuzzy
 msgid "Insert Recipe"
-msgstr "Klistra in recept"
+msgstr "Nytt recept"
 
-#: trunk/wp-ultimate-recipe.php:450 trunk/wp-ultimate-recipe.php:502
+#: trunk/wp-ultimate-recipe.php:445 trunk/wp-ultimate-recipe.php:497
 msgid ""
 "You have to create a recipe first, check the 'Recipes' menu on the left."
 msgstr ""
-"Du måste skapa ett recept först, klicka på \"Recept\" menyn till vänster"
 
-#: trunk/wp-ultimate-recipe.php:532 trunk/wp-ultimate-recipe.php:547
+# @ wp-ultimate-recipe
+#: trunk/wp-ultimate-recipe.php:527 trunk/wp-ultimate-recipe.php:542
 #: trunk/template/recipe_admin.php:69 trunk/template/recipe_public.php:97
 msgid "Ingredients"
 msgstr "Ingredienser"
 
-#: trunk/wp-ultimate-recipe.php:533
+# @ wp-ultimate-recipe
+#: trunk/wp-ultimate-recipe.php:528
 msgid "Ingredient"
 msgstr "Ingrediens"
 
-#: trunk/wp-ultimate-recipe.php:534
+# @ wp-ultimate-recipe
+#: trunk/wp-ultimate-recipe.php:529
 msgid "Search Ingredients"
 msgstr "Sök ingredienser"
 
-#: trunk/wp-ultimate-recipe.php:535
+# @ wp-ultimate-recipe
+#: trunk/wp-ultimate-recipe.php:530
 msgid "Popular Ingredients"
 msgstr "Populära ingredienser"
 
-#: trunk/wp-ultimate-recipe.php:536
+# @ wp-ultimate-recipe
+#: trunk/wp-ultimate-recipe.php:531
 msgid "All Ingredients"
 msgstr "Alla ingredienser"
 
-#: trunk/wp-ultimate-recipe.php:537
+# @ wp-ultimate-recipe
+#: trunk/wp-ultimate-recipe.php:532
 msgid "Parent Ingredient"
 msgstr "Tidigare ingrediens"
 
-#: trunk/wp-ultimate-recipe.php:538
+# @ wp-ultimate-recipe
+#: trunk/wp-ultimate-recipe.php:533
 msgid "Parent Ingredient:"
 msgstr "Tidigare ingrediens:"
 
-#: trunk/wp-ultimate-recipe.php:539
+# @ wp-ultimate-recipe
+#: trunk/wp-ultimate-recipe.php:534
 msgid "Edit Ingredient"
 msgstr "Redigera ingrediens"
 
-#: trunk/wp-ultimate-recipe.php:540
+# @ wp-ultimate-recipe
+#: trunk/wp-ultimate-recipe.php:535
 msgid "Update Ingredient"
 msgstr "Uppdatera ingrediens"
 
-#: trunk/wp-ultimate-recipe.php:541
+# @ wp-ultimate-recipe
+#: trunk/wp-ultimate-recipe.php:536
 msgid "Add New Ingredient"
 msgstr "Lägg till ingrediens"
 
-#: trunk/wp-ultimate-recipe.php:542
+# @ wp-ultimate-recipe
+#: trunk/wp-ultimate-recipe.php:537
 msgid "New Ingredient Name"
 msgstr "Ny ingrediens"
 
-#: trunk/wp-ultimate-recipe.php:543
+# @ wp-ultimate-recipe
+#: trunk/wp-ultimate-recipe.php:538
 msgid "Separate ingredients with commas"
 msgstr "Separera ingredienser med ett kommatecken"
 
-#: trunk/wp-ultimate-recipe.php:544
+# @ wp-ultimate-recipe
+#: trunk/wp-ultimate-recipe.php:539
 msgid "Add or remove ingredients"
 msgstr "Lägg till eller ta bort ingredienser"
 
-#: trunk/wp-ultimate-recipe.php:545
+# @ wp-ultimate-recipe
+#: trunk/wp-ultimate-recipe.php:540
 msgid "Choose from the most used ingredients"
 msgstr "Välj från de mest använda ingredienserna"
 
-#: trunk/wp-ultimate-recipe.php:546
+# @ wp-ultimate-recipe
+#: trunk/wp-ultimate-recipe.php:541
 msgid "No ingredients found."
 msgstr "Inga ingredienser hittades"
 
-#: trunk/wp-ultimate-recipe.php:571 trunk/wp-ultimate-recipe.php:584
+# @ wp-ultimate-recipe
+#: trunk/wp-ultimate-recipe.php:568 trunk/wp-ultimate-recipe.php:581
 msgid "Courses"
 msgstr "Maträtter"
 
-#: trunk/wp-ultimate-recipe.php:572 trunk/template/recipe_public.php:53
+# @ wp-ultimate-recipe
+#: trunk/wp-ultimate-recipe.php:569 trunk/template/recipe_public.php:53
 msgid "Course"
 msgstr "Rätter"
 
-#: trunk/wp-ultimate-recipe.php:573
+# @ wp-ultimate-recipe
+#: trunk/wp-ultimate-recipe.php:570
 msgid "Search Courses"
 msgstr "Sök maträtter"
 
-#: trunk/wp-ultimate-recipe.php:574
+# @ wp-ultimate-recipe
+#: trunk/wp-ultimate-recipe.php:571
 msgid "Popular Courses"
 msgstr "Populära maträtter"
 
-#: trunk/wp-ultimate-recipe.php:575
+# @ wp-ultimate-recipe
+#: trunk/wp-ultimate-recipe.php:572
 msgid "All Courses"
 msgstr "Alla maträtter"
 
-#: trunk/wp-ultimate-recipe.php:576
+# @ wp-ultimate-recipe
+#: trunk/wp-ultimate-recipe.php:573
 msgid "Edit Course"
 msgstr "Redigera maträtt"
 
-#: trunk/wp-ultimate-recipe.php:577
+# @ wp-ultimate-recipe
+#: trunk/wp-ultimate-recipe.php:574
 msgid "Update Course"
 msgstr "Uppdatera maträtt"
 
-#: trunk/wp-ultimate-recipe.php:578
+# @ wp-ultimate-recipe
+#: trunk/wp-ultimate-recipe.php:575
 msgid "Add New Course"
 msgstr "Lägg till ny maträtt"
 
-#: trunk/wp-ultimate-recipe.php:579
+# @ wp-ultimate-recipe
+#: trunk/wp-ultimate-recipe.php:576
 msgid "New Course Name"
 msgstr "Nytt namn på maträtt"
 
-#: trunk/wp-ultimate-recipe.php:580
+# @ wp-ultimate-recipe
+#: trunk/wp-ultimate-recipe.php:577
 msgid "Separate courses with commas"
 msgstr "Separera maträtter med ett kommatecken"
 
-#: trunk/wp-ultimate-recipe.php:581
+# @ wp-ultimate-recipe
+#: trunk/wp-ultimate-recipe.php:578
 msgid "Add or remove courses"
 msgstr "Lägg till eller ta bort maträtter"
 
-#: trunk/wp-ultimate-recipe.php:582
+# @ wp-ultimate-recipe
+#: trunk/wp-ultimate-recipe.php:579
 msgid "Choose from the most used courses"
 msgstr "Välj från de mest använda maträtterna"
 
-#: trunk/wp-ultimate-recipe.php:583
+# @ wp-ultimate-recipe
+#: trunk/wp-ultimate-recipe.php:580
 msgid "No courses found."
 msgstr "Inga maträtter hittades"
 
+# @ wp-ultimate-recipe
 #: trunk/wp-ultimate-recipe.php:595
 msgid "Breakfast"
 msgstr "Frukost"
 
+# @ wp-ultimate-recipe
 #: trunk/wp-ultimate-recipe.php:596
 msgid "Appetizer"
 msgstr "Förrätt"
 
+# @ wp-ultimate-recipe
 #: trunk/wp-ultimate-recipe.php:597
 msgid "Soup"
 msgstr "Soppa"
 
+# @ wp-ultimate-recipe
 #: trunk/wp-ultimate-recipe.php:598
 msgid "Main Course"
 msgstr "Huvudrätt"
 
+# @ wp-ultimate-recipe
 #: trunk/wp-ultimate-recipe.php:599
 msgid "Side Dish"
 msgstr "Tillbehör"
 
+# @ wp-ultimate-recipe
 #: trunk/wp-ultimate-recipe.php:600
 msgid "Salad"
 msgstr "Sallad"
 
+# @ wp-ultimate-recipe
 #: trunk/wp-ultimate-recipe.php:601
 msgid "Dessert"
 msgstr ""
 
+# @ wp-ultimate-recipe
 #: trunk/wp-ultimate-recipe.php:602
 msgid "Snack"
 msgstr "Snacks"
 
+# @ wp-ultimate-recipe
 #: trunk/wp-ultimate-recipe.php:603
 msgid "Drinks"
 msgstr "Dryck"
 
+# @ wp-ultimate-recipe
 #: trunk/wp-ultimate-recipe.php:619 trunk/wp-ultimate-recipe.php:632
 msgid "Cuisines"
 msgstr "Kök"
 
+# @ wp-ultimate-recipe
 #: trunk/wp-ultimate-recipe.php:620 trunk/template/recipe_public.php:66
 msgid "Cuisine"
 msgstr "Kök"
 
+# @ wp-ultimate-recipe
 #: trunk/wp-ultimate-recipe.php:621
 msgid "Search Cuisines"
 msgstr "Sök kök"
 
+# @ wp-ultimate-recipe
 #: trunk/wp-ultimate-recipe.php:622
 msgid "Popular Cuisines"
 msgstr "Populära kök"
 
+# @ wp-ultimate-recipe
 #: trunk/wp-ultimate-recipe.php:623
 msgid "All Cuisines"
 msgstr "Alla kök"
 
+# @ wp-ultimate-recipe
 #: trunk/wp-ultimate-recipe.php:624
 msgid "Edit Cuisine"
 msgstr "Redigera kök"
 
+# @ wp-ultimate-recipe
 #: trunk/wp-ultimate-recipe.php:625
 msgid "Update Cuisine"
 msgstr "Uppdatera kök"
 
+# @ wp-ultimate-recipe
 #: trunk/wp-ultimate-recipe.php:626
 msgid "Add New Cuisine"
 msgstr "Lägg till kök"
 
+# @ wp-ultimate-recipe
 #: trunk/wp-ultimate-recipe.php:627
 msgid "New Cuisine Name"
 msgstr "Nytt kök namn"
 
+# @ wp-ultimate-recipe
 #: trunk/wp-ultimate-recipe.php:628
 msgid "Separate cuisines with commas"
 msgstr "Separera kök med kommatecken"
 
+# @ wp-ultimate-recipe
 #: trunk/wp-ultimate-recipe.php:629
 msgid "Add or remove cuisines"
 msgstr "Lägg till eller ta bort kök"
 
+# @ wp-ultimate-recipe
 #: trunk/wp-ultimate-recipe.php:630
 msgid "Choose from the most used cuisines"
 msgstr "Välj bland de mest använda köken"
 
+# @ wp-ultimate-recipe
 #: trunk/wp-ultimate-recipe.php:631
 msgid "No cuisines found."
 msgstr "Inga kök hittades"
 
-#: trunk/wp-ultimate-recipe.php:643
+# @ wp-ultimate-recipe
+#: trunk/wp-ultimate-recipe.php:646
 msgid "French"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:644
+# @ wp-ultimate-recipe
+#: trunk/wp-ultimate-recipe.php:647
 msgid "Italian"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:645
+# @ wp-ultimate-recipe
+#: trunk/wp-ultimate-recipe.php:648
 msgid "Mediterranean"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:646
+# @ wp-ultimate-recipe
+#: trunk/wp-ultimate-recipe.php:649
 msgid "Indian"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:647
+# @ wp-ultimate-recipe
+#: trunk/wp-ultimate-recipe.php:650
 msgid "Chinese"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:648
+# @ wp-ultimate-recipe
+#: trunk/wp-ultimate-recipe.php:651
 msgid "Japanese"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:649
+# @ wp-ultimate-recipe
+#: trunk/wp-ultimate-recipe.php:652
 msgid "American"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:650
+# @ wp-ultimate-recipe
+#: trunk/wp-ultimate-recipe.php:653
 msgid "Mexican"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:666 trunk/wp-ultimate-recipe.php:679
+# @ wp-ultimate-recipe
+#: trunk/wp-ultimate-recipe.php:669 trunk/wp-ultimate-recipe.php:682
 msgid "Ratings"
 msgstr "Betyg"
 
-#: trunk/wp-ultimate-recipe.php:667 trunk/template/recipe_admin.php:26
+# @ wp-ultimate-recipe
+#: trunk/wp-ultimate-recipe.php:670 trunk/template/recipe_admin.php:26
 msgid "Rating"
 msgstr "Betyg"
 
-#: trunk/wp-ultimate-recipe.php:668
+# @ wp-ultimate-recipe
+#: trunk/wp-ultimate-recipe.php:671
 msgid "Search Ratings"
 msgstr "Sök betyg"
 
-#: trunk/wp-ultimate-recipe.php:669
+# @ wp-ultimate-recipe
+#: trunk/wp-ultimate-recipe.php:672
 msgid "Popular Ratings"
 msgstr "Populära betyg"
 
-#: trunk/wp-ultimate-recipe.php:670
+# @ wp-ultimate-recipe
+#: trunk/wp-ultimate-recipe.php:673
 msgid "All Ratings"
 msgstr "Alla betyg"
 
-#: trunk/wp-ultimate-recipe.php:671
+# @ wp-ultimate-recipe
+#: trunk/wp-ultimate-recipe.php:674
 msgid "Edit Rating"
 msgstr "Redigera betyg"
 
-#: trunk/wp-ultimate-recipe.php:672
+# @ wp-ultimate-recipe
+#: trunk/wp-ultimate-recipe.php:675
 msgid "Update Rating"
 msgstr "Uppdatera betyg"
 
-#: trunk/wp-ultimate-recipe.php:673
+# @ wp-ultimate-recipe
+#: trunk/wp-ultimate-recipe.php:676
 msgid "Add New Rating"
 msgstr "Lägg till betyg"
 
-#: trunk/wp-ultimate-recipe.php:674
+# @ wp-ultimate-recipe
+#: trunk/wp-ultimate-recipe.php:677
 msgid "New Rating Name"
 msgstr "Nytt betyg namn"
 
-#: trunk/wp-ultimate-recipe.php:675
+# @ wp-ultimate-recipe
+#: trunk/wp-ultimate-recipe.php:678
 msgid "Separate ratings with commas"
 msgstr "Separera betyg med kommatecken"
 
-#: trunk/wp-ultimate-recipe.php:676
+# @ wp-ultimate-recipe
+#: trunk/wp-ultimate-recipe.php:679
 msgid "Add or remove ratings"
 msgstr "Lägg till eller ta bort betyg"
 
-#: trunk/wp-ultimate-recipe.php:677
+# @ wp-ultimate-recipe
+#: trunk/wp-ultimate-recipe.php:680
 msgid "Choose from the most used ratings"
 msgstr "Välj bland de mest använda betygen"
 
-#: trunk/wp-ultimate-recipe.php:678
+# @ wp-ultimate-recipe
+#: trunk/wp-ultimate-recipe.php:681
 msgid "No ratings found."
 msgstr "Inga betyg hittades"
 
 #: trunk/template/recipe_admin.php:17
 msgid "General"
-msgstr "Allmänt"
+msgstr ""
 
 #: trunk/template/recipe_admin.php:20
 msgid "Description"
-msgstr "Beskrivning"
+msgstr ""
 
 #: trunk/template/recipe_admin.php:33
 msgid "star"
-msgstr "Stjärna"
+msgstr ""
 
 #: trunk/template/recipe_admin.php:33
 msgid "stars"
-msgstr "Stjärnor"
+msgstr ""
 
+# @ wp-ultimate-recipe
 #: trunk/template/recipe_admin.php:40 trunk/template/recipe_public.php:76
 #: trunk/template/recipe_public.php:132
+#, fuzzy
 msgid "Servings"
-msgstr "Serverar"
+msgstr "Sök betyg"
 
 #: trunk/template/recipe_admin.php:44
 msgid "(e.g. 2 people, 3 loafs, ...)"
-msgstr "(ex. 2 personer, 3 bullar, ...)"
+msgstr ""
 
 #: trunk/template/recipe_admin.php:48
 msgid "Prep time"
-msgstr "Tid för förberedelse"
+msgstr ""
 
 #: trunk/template/recipe_admin.php:51 trunk/template/recipe_admin.php:58
 #: trunk/template/recipe_public.php:84 trunk/template/recipe_public.php:85
 msgid "minutes"
-msgstr "minuter"
+msgstr ""
 
 #: trunk/template/recipe_admin.php:55
 msgid "Cook time"
-msgstr "Tillagningstid"
+msgstr ""
 
 #: trunk/template/recipe_admin.php:64
 msgid ""
@@ -453,24 +556,22 @@ msgid ""
 "<strong>Cuisines</strong> by using the boxes on the right. Use the "
 "<strong>featured image</strong> if you want a photo of the finished dish."
 msgstr ""
-"Glöm inte att du kan tagga dina recept med <strong>Maträtter</strong> och "
-"<strong>Kök</strong> genom att använda boxarna till höger. Använd dig av "
-"<strong>Utvald bild</strong> om du vill lägga till ett eget foto av ditt "
-"recept."
 
 #: trunk/template/recipe_admin.php:96
 msgid "cup"
-msgstr "dl"
+msgstr ""
 
 #: trunk/template/recipe_admin.php:97
 msgid "walnuts"
-msgstr "valnötter"
+msgstr ""
 
 #: trunk/template/recipe_admin.php:98
 msgid "coarsely chopped"
-msgstr "fint hackade"
+msgstr ""
 
+# @ wp-ultimate-recipe
 #: trunk/template/recipe_admin.php:104
+#, fuzzy
 msgid "Add an ingredient"
 msgstr "Lägg till ingrediens"
 
@@ -480,25 +581,24 @@ msgid ""
 "automatically create new fields. <strong>Don't worry about empty lines</"
 "strong>, these will be ignored."
 msgstr ""
-"<strong>Använd TAB tangenten</strong> när du lägger till ingredienser, så "
-"läggs det till nya fält automatiskt. <strong>Bry er inte om tomma fält</"
-"strong>, de kommer att ignoreras,"
 
 #: trunk/template/recipe_admin.php:110 trunk/template/recipe_public.php:140
 msgid "Instructions"
-msgstr "Instruktioner"
+msgstr ""
 
+# @ wp-ultimate-recipe
 #: trunk/template/recipe_admin.php:137 trunk/template/recipe_admin.php:156
+#, fuzzy
 msgid "Add Image"
-msgstr "Lägg till bild"
+msgstr "Lägg till"
 
 #: trunk/template/recipe_admin.php:138 trunk/template/recipe_admin.php:157
 msgid "Remove Image"
-msgstr "Ta bort bild"
+msgstr ""
 
 #: trunk/template/recipe_admin.php:166
 msgid "Add an instruction"
-msgstr "Lägg till instruktion"
+msgstr ""
 
 #: trunk/template/recipe_admin.php:169
 msgid ""
@@ -506,17 +606,18 @@ msgid ""
 "automatically create new fields. <strong>Don't worry about empty lines</"
 "strong>, these will be ignored."
 msgstr ""
-"<strong>Använd TAB tangenten</strong> när du lägger till instruktioner så "
-"läggs det till nya fält automatiskt. <strong>Bry er inte om tomma fält</"
-"strong>, de kommer att ignoreras,"
+
+#: trunk/template/recipe_menu.php:14
+msgid "Problems? Take a look at the"
+msgstr ""
 
 #: trunk/template/recipe_public.php:77
 msgid "Prep Time"
-msgstr "Tid för förberedelse"
+msgstr ""
 
 #: trunk/template/recipe_public.php:78
 msgid "Cook Time"
-msgstr "Tillagningstid"
+msgstr ""
 
 #: trunk/template/recipe_public.php:160
 msgid "Powered by"

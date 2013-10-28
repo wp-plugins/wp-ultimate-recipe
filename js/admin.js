@@ -162,6 +162,22 @@ jQuery(document).ready(function() {
                     return Number(n) + 1;
                 });
             });
+            
+        new_instruction
+            .find('.recipe_instructions_thumbnail')
+            .attr('src', plugin_url + '/img/image_placeholder.png');
+        
+        new_instruction
+            .find('.recipe_instructions_add_image')
+            .removeClass('wpurp-hide');
+            
+        new_instruction
+            .find('.recipe_instructions_remove_image')
+            .addClass('wpurp-hide');
+            
+        new_instruction
+            .find('.recipe_instructions_image')
+            .val('');
 
         addRecipeInstructionOnTab();
 

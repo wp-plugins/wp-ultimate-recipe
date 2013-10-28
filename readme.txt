@@ -3,7 +3,7 @@ Contributors: BrechtVds
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QG7KZMGFU325Y
 Tags: recipe, ingredients, cuisines, food, courses, cook, kitchen, cooking
 Requires at least: 3.3
-Tested up to: 3.6.1
+Tested up to: 3.7
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -25,6 +25,12 @@ Some features:
 *   Easily **translatable**, already available in English, Dutch and Swedish
 *   Let visitors **adjust the ingredient quantities** for more or less servings
 *   Add a **recipe index** to any post or page
+
+We also have a [premium version](http://www.wpultimaterecipeplugin.com/) which offers the following features:
+
+*   Custom **styling** of recipes
+*   Let your **users submit** recipes
+*   User menus with a **shopping list generator**
 
 Feel free to contact me if any features are missing.
 You can find more information at [WPUltimateRecipePlugin.com](http://www.wpultimaterecipeplugin.com/)
@@ -48,6 +54,9 @@ You can find more information at [WPUltimateRecipePlugin.com](http://www.wpultim
 2. Manage everything about your recipes in one place
 
 == Changelog ==
+
+= 0.0.13 =
+* Fixed problems with localization, should work with Codestyling Localization now
 
 = 0.0.12 =
 * New instruction images uploader for anyone with WP 3.5 or higher (highly recommended)
@@ -89,6 +98,9 @@ You can find more information at [WPUltimateRecipePlugin.com](http://www.wpultim
 * Very first version of this plugin
 
 == Upgrade notice ==
+
+= 0.0.13 =
+Update to fix translation issues
 
 = 0.0.12 =
 Update to fix image uploading

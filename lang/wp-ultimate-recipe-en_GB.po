@@ -1,238 +1,238 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WP Ultimate Recipe Plugin\n"
-"POT-Creation-Date: 2013-07-05 18:18+0100\n"
-"PO-Revision-Date: 2013-07-05 18:18+0100\n"
+"POT-Creation-Date: 2013-10-28 17:27+0100\n"
+"PO-Revision-Date: 2013-10-28 17:27+0100\n"
 "Last-Translator: Brecht Vandersmissen <brecht.vandersmissen@gmail.com>\n"
 "Language-Team: BrechtVds.be\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.5\n"
-"X-Poedit-KeywordsList: t\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-KeywordsList: __;_e\n"
 "X-Poedit-Basepath: /Users/Brecht/Sites/WPUltimateRecipePlugin/wp-ultimate-"
 "recipe/\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: trunk/wp-ultimate-recipe.php:126
+#: trunk/wp-ultimate-recipe.php:118
 msgid "Recipe Settings"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:126 trunk/template/recipe_menu.php:4
+#: trunk/wp-ultimate-recipe.php:118 trunk/template/recipe_menu.php:4
 msgid "Settings"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:137
+#: trunk/wp-ultimate-recipe.php:129
 msgid "Recipe Box"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:141
+#: trunk/wp-ultimate-recipe.php:133
 msgid "Adjustable Servings"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:147
+#: trunk/wp-ultimate-recipe.php:139
 msgid "Allow users to dynamically adjust the servings of recipes."
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:154
+#: trunk/wp-ultimate-recipe.php:146
 msgid "Link to plugin"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:160
+#: trunk/wp-ultimate-recipe.php:152
 msgid "Show a link to the plugin website as a little thank you."
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:167
+#: trunk/wp-ultimate-recipe.php:159
 msgid "Show full recipe"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:173
+#: trunk/wp-ultimate-recipe.php:165
 msgid "Show the full recipe instead of the description/excerpt in"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:173
+#: trunk/wp-ultimate-recipe.php:165
 msgid "the recipe archive"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:205
+#: trunk/wp-ultimate-recipe.php:197
 msgid "Settings regarding the recipe box shown to your visitors."
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:229
+#: trunk/wp-ultimate-recipe.php:221
 msgid "Recipes"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:230 trunk/wp-ultimate-recipe.php:256
+#: trunk/wp-ultimate-recipe.php:222 trunk/wp-ultimate-recipe.php:251
 msgid "Recipe"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:231
+#: trunk/wp-ultimate-recipe.php:223
 msgid "Add New"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:232
+#: trunk/wp-ultimate-recipe.php:224
 msgid "Add New Recipe"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:233
+#: trunk/wp-ultimate-recipe.php:225
 msgid "Edit"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:234
+#: trunk/wp-ultimate-recipe.php:226
 msgid "Edit Recipe"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:235
+#: trunk/wp-ultimate-recipe.php:227
 msgid "New Recipe"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:236
+#: trunk/wp-ultimate-recipe.php:228
 msgid "View"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:237
+#: trunk/wp-ultimate-recipe.php:229
 msgid "View Recipe"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:238
+#: trunk/wp-ultimate-recipe.php:230
 msgid "Search Recipes"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:239
+#: trunk/wp-ultimate-recipe.php:231
 msgid "No Recipes found"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:240
+#: trunk/wp-ultimate-recipe.php:232
 msgid "No Recipes found in Trash"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:241
+#: trunk/wp-ultimate-recipe.php:233
 msgid "Parent Recipe"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:437
+#: trunk/wp-ultimate-recipe.php:432
 msgid "Select the recipe to add to your post:"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:446
+#: trunk/wp-ultimate-recipe.php:441
 msgid "Insert Recipe"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:450 trunk/wp-ultimate-recipe.php:502
+#: trunk/wp-ultimate-recipe.php:445 trunk/wp-ultimate-recipe.php:497
 msgid ""
 "You have to create a recipe first, check the 'Recipes' menu on the left."
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:532 trunk/wp-ultimate-recipe.php:547
+#: trunk/wp-ultimate-recipe.php:527 trunk/wp-ultimate-recipe.php:542
 #: trunk/template/recipe_admin.php:69 trunk/template/recipe_public.php:97
 msgid "Ingredients"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:533
+#: trunk/wp-ultimate-recipe.php:528
 msgid "Ingredient"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:534
+#: trunk/wp-ultimate-recipe.php:529
 msgid "Search Ingredients"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:535
+#: trunk/wp-ultimate-recipe.php:530
 msgid "Popular Ingredients"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:536
+#: trunk/wp-ultimate-recipe.php:531
 msgid "All Ingredients"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:537
+#: trunk/wp-ultimate-recipe.php:532
 msgid "Parent Ingredient"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:538
+#: trunk/wp-ultimate-recipe.php:533
 msgid "Parent Ingredient:"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:539
+#: trunk/wp-ultimate-recipe.php:534
 msgid "Edit Ingredient"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:540
+#: trunk/wp-ultimate-recipe.php:535
 msgid "Update Ingredient"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:541
+#: trunk/wp-ultimate-recipe.php:536
 msgid "Add New Ingredient"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:542
+#: trunk/wp-ultimate-recipe.php:537
 msgid "New Ingredient Name"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:543
+#: trunk/wp-ultimate-recipe.php:538
 msgid "Separate ingredients with commas"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:544
+#: trunk/wp-ultimate-recipe.php:539
 msgid "Add or remove ingredients"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:545
+#: trunk/wp-ultimate-recipe.php:540
 msgid "Choose from the most used ingredients"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:546
+#: trunk/wp-ultimate-recipe.php:541
 msgid "No ingredients found."
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:571 trunk/wp-ultimate-recipe.php:584
+#: trunk/wp-ultimate-recipe.php:568 trunk/wp-ultimate-recipe.php:581
 msgid "Courses"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:572 trunk/template/recipe_public.php:53
+#: trunk/wp-ultimate-recipe.php:569 trunk/template/recipe_public.php:53
 msgid "Course"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:573
+#: trunk/wp-ultimate-recipe.php:570
 msgid "Search Courses"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:574
+#: trunk/wp-ultimate-recipe.php:571
 msgid "Popular Courses"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:575
+#: trunk/wp-ultimate-recipe.php:572
 msgid "All Courses"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:576
+#: trunk/wp-ultimate-recipe.php:573
 msgid "Edit Course"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:577
+#: trunk/wp-ultimate-recipe.php:574
 msgid "Update Course"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:578
+#: trunk/wp-ultimate-recipe.php:575
 msgid "Add New Course"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:579
+#: trunk/wp-ultimate-recipe.php:576
 msgid "New Course Name"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:580
+#: trunk/wp-ultimate-recipe.php:577
 msgid "Separate courses with commas"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:581
+#: trunk/wp-ultimate-recipe.php:578
 msgid "Add or remove courses"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:582
+#: trunk/wp-ultimate-recipe.php:579
 msgid "Choose from the most used courses"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:583
+#: trunk/wp-ultimate-recipe.php:580
 msgid "No courses found."
 msgstr ""
 
@@ -324,87 +324,87 @@ msgstr ""
 msgid "No cuisines found."
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:643
+#: trunk/wp-ultimate-recipe.php:646
 msgid "French"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:644
+#: trunk/wp-ultimate-recipe.php:647
 msgid "Italian"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:645
+#: trunk/wp-ultimate-recipe.php:648
 msgid "Mediterranean"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:646
+#: trunk/wp-ultimate-recipe.php:649
 msgid "Indian"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:647
+#: trunk/wp-ultimate-recipe.php:650
 msgid "Chinese"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:648
+#: trunk/wp-ultimate-recipe.php:651
 msgid "Japanese"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:649
+#: trunk/wp-ultimate-recipe.php:652
 msgid "American"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:650
+#: trunk/wp-ultimate-recipe.php:653
 msgid "Mexican"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:666 trunk/wp-ultimate-recipe.php:679
+#: trunk/wp-ultimate-recipe.php:669 trunk/wp-ultimate-recipe.php:682
 msgid "Ratings"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:667 trunk/template/recipe_admin.php:26
+#: trunk/wp-ultimate-recipe.php:670 trunk/template/recipe_admin.php:26
 msgid "Rating"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:668
+#: trunk/wp-ultimate-recipe.php:671
 msgid "Search Ratings"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:669
+#: trunk/wp-ultimate-recipe.php:672
 msgid "Popular Ratings"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:670
+#: trunk/wp-ultimate-recipe.php:673
 msgid "All Ratings"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:671
+#: trunk/wp-ultimate-recipe.php:674
 msgid "Edit Rating"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:672
+#: trunk/wp-ultimate-recipe.php:675
 msgid "Update Rating"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:673
+#: trunk/wp-ultimate-recipe.php:676
 msgid "Add New Rating"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:674
+#: trunk/wp-ultimate-recipe.php:677
 msgid "New Rating Name"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:675
+#: trunk/wp-ultimate-recipe.php:678
 msgid "Separate ratings with commas"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:676
+#: trunk/wp-ultimate-recipe.php:679
 msgid "Add or remove ratings"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:677
+#: trunk/wp-ultimate-recipe.php:680
 msgid "Choose from the most used ratings"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:678
+#: trunk/wp-ultimate-recipe.php:681
 msgid "No ratings found."
 msgstr ""
 
@@ -497,6 +497,10 @@ msgid ""
 "<strong>Use the TAB key</strong> while adding instructions, it will "
 "automatically create new fields. <strong>Don't worry about empty lines</"
 "strong>, these will be ignored."
+msgstr ""
+
+#: trunk/template/recipe_menu.php:14
+msgid "Problems? Take a look at the"
 msgstr ""
 
 #: trunk/template/recipe_public.php:77

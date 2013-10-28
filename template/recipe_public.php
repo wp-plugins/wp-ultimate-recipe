@@ -50,7 +50,7 @@
                 {
                 ?>
                 <li>
-                    <span class="recipe-tag-name"><?php $this->t('Course', true); ?></span>
+                    <span class="recipe-tag-name"><?php _e( 'Course', $this->pluginName ); ?></span>
                     <span class="recipe-tags">
                         <?php echo $courses; ?>
                     </span>
@@ -63,7 +63,7 @@
                 {
                 ?>
                 <li>
-                    <span class="recipe-tag-name"><?php $this->t('Cuisine', true); ?></span>
+                    <span class="recipe-tag-name"><?php _e( 'Cuisine', $this->pluginName ); ?></span>
                     <span class="recipe-tags">
                         <?php echo $cuisines; ?>
                     </span>
@@ -73,16 +73,16 @@
             <table class="recipe-header-extra">
                 <thead>
                 <tr>
-                    <?php if($recipe['recipe_servings'][0] != '') { ?><td><?php $this->t('Servings', true); ?></td><?php } ?>
-                    <?php if($recipe['recipe_prep_time'][0] != '') { ?><td><?php $this->t('Prep Time', true); ?></td><?php } ?>
-                    <?php if($recipe['recipe_cook_time'][0] != '') { ?><td><?php $this->t('Cook Time', true); ?></td><?php } ?>
+                    <?php if($recipe['recipe_servings'][0] != '') { ?><td><?php _e( 'Servings', $this->pluginName ); ?></td><?php } ?>
+                    <?php if($recipe['recipe_prep_time'][0] != '') { ?><td><?php _e( 'Prep Time', $this->pluginName ); ?></td><?php } ?>
+                    <?php if($recipe['recipe_cook_time'][0] != '') { ?><td><?php _e( 'Cook Time', $this->pluginName ); ?></td><?php } ?>
                 </tr>
                 </thead>
                 <tbody>
                 <tr>
                     <?php if($recipe['recipe_servings'][0] != '') { ?><td itemprop="recipeYield"><span class="recipe-information-servings"><?php echo $recipe['recipe_servings'][0]; ?></span><span class="recipe-information-servings-type"><?php echo $recipe['recipe_servings_type'][0]; ?></span></td><?php } ?>
-                    <?php if($recipe['recipe_prep_time'][0] != '') { ?><td><meta itemprop="prepTime" content="PT<?php echo $recipe['recipe_prep_time'][0];?>M"><?php echo $recipe['recipe_prep_time'][0]; ?><span class="recipe-information-time-unit"><?php $this->t('minutes', true); ?></span></td><?php } ?>
-                    <?php if($recipe['recipe_cook_time'][0] != '') { ?><td><meta itemprop="cookTime" content="PT<?php echo $recipe['recipe_cook_time'][0];?>M"><?php echo $recipe['recipe_cook_time'][0]; ?><span class="recipe-information-time-unit"><?php $this->t('minutes', true); ?></span></td><?php } ?>
+                    <?php if($recipe['recipe_prep_time'][0] != '') { ?><td><meta itemprop="prepTime" content="PT<?php echo $recipe['recipe_prep_time'][0];?>M"><?php echo $recipe['recipe_prep_time'][0]; ?><span class="recipe-information-time-unit"><?php _e( 'minutes', $this->pluginName ); ?></span></td><?php } ?>
+                    <?php if($recipe['recipe_cook_time'][0] != '') { ?><td><meta itemprop="cookTime" content="PT<?php echo $recipe['recipe_cook_time'][0];?>M"><?php echo $recipe['recipe_cook_time'][0]; ?><span class="recipe-information-time-unit"><?php _e( 'minutes', $this->pluginName ); ?></span></td><?php } ?>
                 </tr>
                 </tbody>
             </table>
@@ -94,7 +94,7 @@
     if(!empty($ingredients))
     {
     ?>
-    <h3><?php $this->t('Ingredients', true); ?></h3>
+    <h3><?php _e( 'Ingredients', $this->pluginName ); ?></h3>
     <ul class="recipe-ingredients">
         <?php
         $out = '';
@@ -129,7 +129,7 @@
         ?>
     </ul>
     <?php if($recipe['recipe_servings'][0] != '' && get_option('wpurp_show_servings_adjust', 1) == 1) { ?>
-    <div class="recipe-ingredients-servings"><?php $this->t('Servings', true); ?>: <input type="number" class="adjust-recipe-servings" data-original="<?php echo $recipe['recipe_servings'][0]; ?>" value="<?php echo $recipe['recipe_servings'][0]; ?>" /> <?php echo $recipe['recipe_servings_type'][0]; ?></div>
+    <div class="recipe-ingredients-servings"><?php _e( 'Servings', $this->pluginName ); ?>: <input type="number" class="adjust-recipe-servings" data-original="<?php echo $recipe['recipe_servings'][0]; ?>" value="<?php echo $recipe['recipe_servings'][0]; ?>" /> <?php echo $recipe['recipe_servings_type'][0]; ?></div>
     <?php } ?>
     <?php } ?>
     <?php
@@ -137,7 +137,7 @@
     if(!empty($instructions))
     {
         ?>
-    <h3><?php $this->t('Instructions', true); ?></h3>
+    <h3><?php _e( 'Instructions', $this->pluginName ); ?></h3>
     <ol class="recipe-instructions">
         <?php
         $out = '';
@@ -157,6 +157,6 @@
     </ol>
     <?php } ?>
     <?php if(get_option('wpurp_show_linkback', 1) == 1) { ?>
-    <div class="wpurp-footer"><?php $this->t('Powered by', true); ?> <a href="http://www.wpultimaterecipeplugin.com" target="_blank">WP Ultimate Recipe</a></div>
+    <div class="wpurp-footer"><?php _e( 'Powered by', $this->pluginName ); ?> <a href="http://www.wpultimaterecipeplugin.com" target="_blank">WP Ultimate Recipe</a></div>
     <?php } ?>
 </div>
