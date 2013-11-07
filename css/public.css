@@ -193,6 +193,13 @@
     font-size: 0.8em;
 }
 
+.wpurp-error {
+    background-color: #ffebe8;
+    border: 1px solid #c00;
+    margin: 5px 0 15px;
+    padding: 0.6em;
+}
+
 @media screen and (max-width: 550px) {
     .wpurp-container .recipe-header-image {
         float: none;

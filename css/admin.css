@@ -78,6 +78,13 @@
     max-height: 50px;
 }
 
-#recipe_meta_box .wpurp-hide {
-    display: none;
+.wpurp-hide {
+    display: none !important;
+}
+
+.wpurp-error {
+    background-color: #ffebe8;
+    border: 1px solid #c00;
+    margin: 5px 0 15px;
+    padding: 0.6em;
 }

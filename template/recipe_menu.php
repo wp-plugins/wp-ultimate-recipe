@@ -11,6 +11,6 @@
         <?php submit_button(); ?>
     </form>
 
-    <p><?php _e( 'Problems? Take a look at the', $this->pluginName ); ?> <a href="http://www.wpultimaterecipeplugin.com/faq/" target="_blank">WPUltimateRecipePlugin.com FAQ</a>.</p>
+    <p><?php _e( 'Problems? Take a look at the', $this->pluginName ); ?> <a href="http://support.wpultimaterecipeplugin.com" target="_blank">WPUltimateRecipePlugin.com FAQ</a>.</p>
 
 </div>

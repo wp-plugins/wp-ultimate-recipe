@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WP Ultimate Recipe Plugin\n"
-"POT-Creation-Date: 2013-10-28 17:27+0100\n"
-"PO-Revision-Date: 2013-10-28 17:27+0100\n"
+"POT-Creation-Date: 2013-11-07 13:51+0100\n"
+"PO-Revision-Date: 2013-11-07 13:51+0100\n"
 "Last-Translator: Brecht Vandersmissen <brecht.vandersmissen@gmail.com>\n"
 "Language-Team: BrechtVds.be\n"
 "MIME-Version: 1.0\n"
@@ -10,507 +10,531 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.5.7\n"
 "X-Poedit-KeywordsList: __;_e\n"
-"X-Poedit-Basepath: /Users/Brecht/Sites/WPUltimateRecipePlugin/wp-ultimate-"
-"recipe/\n"
+"X-Poedit-Basepath: /Users/Brecht/Sites/WPUltimateRecipePlugin/core/\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: trunk/wp-ultimate-recipe.php:118
-msgid "Recipe Settings"
-msgstr ""
-
-#: trunk/wp-ultimate-recipe.php:118 trunk/template/recipe_menu.php:4
-msgid "Settings"
-msgstr ""
-
-#: trunk/wp-ultimate-recipe.php:129
+#: core-functions.php:113
 msgid "Recipe Box"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:133
+#: core-functions.php:117
 msgid "Adjustable Servings"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:139
+#: core-functions.php:123
 msgid "Allow users to dynamically adjust the servings of recipes."
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:146
+#: core-functions.php:130
 msgid "Link to plugin"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:152
+#: core-functions.php:136
 msgid "Show a link to the plugin website as a little thank you."
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:159
+#: core-functions.php:143
 msgid "Show full recipe"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:165
+#: core-functions.php:149
 msgid "Show the full recipe instead of the description/excerpt in"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:165
+#: core-functions.php:149
 msgid "the recipe archive"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:197
+#: core-functions.php:172
 msgid "Settings regarding the recipe box shown to your visitors."
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:221
+#: core-functions.php:186
 msgid "Recipes"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:222 trunk/wp-ultimate-recipe.php:251
+#: core-functions.php:187 core-functions.php:214
 msgid "Recipe"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:223
+#: core-functions.php:188
 msgid "Add New"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:224
+#: core-functions.php:189
 msgid "Add New Recipe"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:225
+#: core-functions.php:190
 msgid "Edit"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:226
+#: core-functions.php:191
 msgid "Edit Recipe"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:227
+#: core-functions.php:192
 msgid "New Recipe"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:228
+#: core-functions.php:193
 msgid "View"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:229
+#: core-functions.php:194
 msgid "View Recipe"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:230
+#: core-functions.php:195
 msgid "Search Recipes"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:231
+#: core-functions.php:196
 msgid "No Recipes found"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:232
+#: core-functions.php:197
 msgid "No Recipes found in Trash"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:233
+#: core-functions.php:198
 msgid "Parent Recipe"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:432
+#: core-functions.php:385
 msgid "Select the recipe to add to your post:"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:441
+#: core-functions.php:394
 msgid "Insert Recipe"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:445 trunk/wp-ultimate-recipe.php:497
+#: core-functions.php:398 core-functions.php:450
 msgid ""
 "You have to create a recipe first, check the 'Recipes' menu on the left."
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:527 trunk/wp-ultimate-recipe.php:542
-#: trunk/template/recipe_admin.php:69 trunk/template/recipe_public.php:97
+#: core-functions.php:480 core-functions.php:495 template/recipe_admin.php:69
+#: template/recipe_public.php:97
 msgid "Ingredients"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:528
+#: core-functions.php:481
 msgid "Ingredient"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:529
+#: core-functions.php:482
 msgid "Search Ingredients"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:530
+#: core-functions.php:483
 msgid "Popular Ingredients"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:531
+#: core-functions.php:484
 msgid "All Ingredients"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:532
+#: core-functions.php:485
 msgid "Parent Ingredient"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:533
+#: core-functions.php:486
 msgid "Parent Ingredient:"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:534
+#: core-functions.php:487
 msgid "Edit Ingredient"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:535
+#: core-functions.php:488
 msgid "Update Ingredient"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:536
+#: core-functions.php:489
 msgid "Add New Ingredient"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:537
+#: core-functions.php:490
 msgid "New Ingredient Name"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:538
+#: core-functions.php:491
 msgid "Separate ingredients with commas"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:539
+#: core-functions.php:492
 msgid "Add or remove ingredients"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:540
+#: core-functions.php:493
 msgid "Choose from the most used ingredients"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:541
+#: core-functions.php:494
 msgid "No ingredients found."
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:568 trunk/wp-ultimate-recipe.php:581
+#: core-functions.php:519 core-functions.php:532
 msgid "Courses"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:569 trunk/template/recipe_public.php:53
+#: core-functions.php:520 template/recipe_public.php:53
 msgid "Course"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:570
+#: core-functions.php:521
 msgid "Search Courses"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:571
+#: core-functions.php:522
 msgid "Popular Courses"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:572
+#: core-functions.php:523
 msgid "All Courses"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:573
+#: core-functions.php:524
 msgid "Edit Course"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:574
+#: core-functions.php:525
 msgid "Update Course"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:575
+#: core-functions.php:526
 msgid "Add New Course"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:576
+#: core-functions.php:527
 msgid "New Course Name"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:577
+#: core-functions.php:528
 msgid "Separate courses with commas"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:578
+#: core-functions.php:529
 msgid "Add or remove courses"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:579
+#: core-functions.php:530
 msgid "Choose from the most used courses"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:580
+#: core-functions.php:531
 msgid "No courses found."
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:595
+#: core-functions.php:543
 msgid "Breakfast"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:596
+#: core-functions.php:544
 msgid "Appetizer"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:597
+#: core-functions.php:545
 msgid "Soup"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:598
+#: core-functions.php:546
 msgid "Main Course"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:599
+#: core-functions.php:547
 msgid "Side Dish"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:600
+#: core-functions.php:548
 msgid "Salad"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:601
+#: core-functions.php:549
 msgid "Dessert"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:602
+#: core-functions.php:550
 msgid "Snack"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:603
+#: core-functions.php:551
 msgid "Drinks"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:619 trunk/wp-ultimate-recipe.php:632
+#: core-functions.php:567 core-functions.php:580
 msgid "Cuisines"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:620 trunk/template/recipe_public.php:66
+#: core-functions.php:568 template/recipe_public.php:66
 msgid "Cuisine"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:621
+#: core-functions.php:569
 msgid "Search Cuisines"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:622
+#: core-functions.php:570
 msgid "Popular Cuisines"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:623
+#: core-functions.php:571
 msgid "All Cuisines"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:624
+#: core-functions.php:572
 msgid "Edit Cuisine"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:625
+#: core-functions.php:573
 msgid "Update Cuisine"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:626
+#: core-functions.php:574
 msgid "Add New Cuisine"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:627
+#: core-functions.php:575
 msgid "New Cuisine Name"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:628
+#: core-functions.php:576
 msgid "Separate cuisines with commas"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:629
+#: core-functions.php:577
 msgid "Add or remove cuisines"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:630
+#: core-functions.php:578
 msgid "Choose from the most used cuisines"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:631
+#: core-functions.php:579
 msgid "No cuisines found."
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:646
+#: core-functions.php:591
 msgid "French"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:647
+#: core-functions.php:592
 msgid "Italian"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:648
+#: core-functions.php:593
 msgid "Mediterranean"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:649
+#: core-functions.php:594
 msgid "Indian"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:650
+#: core-functions.php:595
 msgid "Chinese"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:651
+#: core-functions.php:596
 msgid "Japanese"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:652
+#: core-functions.php:597
 msgid "American"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:653
+#: core-functions.php:598
 msgid "Mexican"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:669 trunk/wp-ultimate-recipe.php:682
+#: core-functions.php:614 core-functions.php:627
 msgid "Ratings"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:670 trunk/template/recipe_admin.php:26
+#: core-functions.php:615 template/recipe_admin.php:26
 msgid "Rating"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:671
+#: core-functions.php:616
 msgid "Search Ratings"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:672
+#: core-functions.php:617
 msgid "Popular Ratings"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:673
+#: core-functions.php:618
 msgid "All Ratings"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:674
+#: core-functions.php:619
 msgid "Edit Rating"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:675
+#: core-functions.php:620
 msgid "Update Rating"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:676
+#: core-functions.php:621
 msgid "Add New Rating"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:677
+#: core-functions.php:622
 msgid "New Rating Name"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:678
+#: core-functions.php:623
 msgid "Separate ratings with commas"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:679
+#: core-functions.php:624
 msgid "Add or remove ratings"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:680
+#: core-functions.php:625
 msgid "Choose from the most used ratings"
 msgstr ""
 
-#: trunk/wp-ultimate-recipe.php:681
+#: core-functions.php:626
 msgid "No ratings found."
 msgstr ""
 
-#: trunk/template/recipe_admin.php:17
+#: wp-ultimate-recipe.php:57
+msgid "Recipe Settings"
+msgstr ""
+
+#: wp-ultimate-recipe.php:57 template/recipe_menu.php:4
+msgid "Settings"
+msgstr ""
+
+#: wp-ultimate-recipe.php:58
+msgid "WPURP Addons"
+msgstr ""
+
+#: wp-ultimate-recipe.php:58 wp-ultimate-recipe.php:110
+msgid "Addons"
+msgstr ""
+
+#: wp-ultimate-recipe.php:111
+msgid "To install new addons, visit the download link for instructions."
+msgstr ""
+
+#: wp-ultimate-recipe.php:140
+msgid "Installed"
+msgstr ""
+
+#: wp-ultimate-recipe.php:162
+msgid "Download!"
+msgstr ""
+
+#: wp-ultimate-recipe.php:292
+msgid "Upload Image"
+msgstr ""
+
+#: wp-ultimate-recipe.php:293 template/recipe_admin.php:138
+#: template/recipe_admin.php:157
+msgid "Remove Image"
+msgstr ""
+
+#: template/recipe_admin.php:17
 msgid "General"
 msgstr ""
 
-#: trunk/template/recipe_admin.php:20
+#: template/recipe_admin.php:20
 msgid "Description"
 msgstr ""
 
-#: trunk/template/recipe_admin.php:33
+#: template/recipe_admin.php:33
 msgid "star"
 msgstr ""
 
-#: trunk/template/recipe_admin.php:33
+#: template/recipe_admin.php:33
 msgid "stars"
 msgstr ""
 
-#: trunk/template/recipe_admin.php:40 trunk/template/recipe_public.php:76
-#: trunk/template/recipe_public.php:132
+#: template/recipe_admin.php:40 template/recipe_public.php:76
+#: template/recipe_public.php:132
 msgid "Servings"
 msgstr ""
 
-#: trunk/template/recipe_admin.php:44
+#: template/recipe_admin.php:44
 msgid "(e.g. 2 people, 3 loafs, ...)"
 msgstr ""
 
-#: trunk/template/recipe_admin.php:48
+#: template/recipe_admin.php:48
 msgid "Prep time"
 msgstr ""
 
-#: trunk/template/recipe_admin.php:51 trunk/template/recipe_admin.php:58
-#: trunk/template/recipe_public.php:84 trunk/template/recipe_public.php:85
+#: template/recipe_admin.php:51 template/recipe_admin.php:58
+#: template/recipe_public.php:84 template/recipe_public.php:85
 msgid "minutes"
 msgstr ""
 
-#: trunk/template/recipe_admin.php:55
+#: template/recipe_admin.php:55
 msgid "Cook time"
 msgstr ""
 
-#: trunk/template/recipe_admin.php:64
+#: template/recipe_admin.php:64
 msgid ""
 "Don't forget that you can tag your recipe with <strong>Courses</strong> and "
 "<strong>Cuisines</strong> by using the boxes on the right. Use the "
 "<strong>featured image</strong> if you want a photo of the finished dish."
 msgstr ""
 
-#: trunk/template/recipe_admin.php:96
+#: template/recipe_admin.php:96
 msgid "cup"
 msgstr ""
 
-#: trunk/template/recipe_admin.php:97
+#: template/recipe_admin.php:97
 msgid "walnuts"
 msgstr ""
 
-#: trunk/template/recipe_admin.php:98
+#: template/recipe_admin.php:98
 msgid "coarsely chopped"
 msgstr ""
 
-#: trunk/template/recipe_admin.php:104
+#: template/recipe_admin.php:104
 msgid "Add an ingredient"
 msgstr ""
 
-#: trunk/template/recipe_admin.php:107
+#: template/recipe_admin.php:107
 msgid ""
 "<strong>Use the TAB key</strong> while adding ingredients, it will "
 "automatically create new fields. <strong>Don't worry about empty lines</"
 "strong>, these will be ignored."
 msgstr ""
 
-#: trunk/template/recipe_admin.php:110 trunk/template/recipe_public.php:140
+#: template/recipe_admin.php:110 template/recipe_public.php:140
 msgid "Instructions"
 msgstr ""
 
-#: trunk/template/recipe_admin.php:137 trunk/template/recipe_admin.php:156
+#: template/recipe_admin.php:137 template/recipe_admin.php:156
 msgid "Add Image"
 msgstr ""
 
-#: trunk/template/recipe_admin.php:138 trunk/template/recipe_admin.php:157
-msgid "Remove Image"
-msgstr ""
-
-#: trunk/template/recipe_admin.php:166
+#: template/recipe_admin.php:166
 msgid "Add an instruction"
 msgstr ""
 
-#: trunk/template/recipe_admin.php:169
+#: template/recipe_admin.php:169
 msgid ""
 "<strong>Use the TAB key</strong> while adding instructions, it will "
 "automatically create new fields. <strong>Don't worry about empty lines</"
 "strong>, these will be ignored."
 msgstr ""
 
-#: trunk/template/recipe_menu.php:14
+#: template/recipe_menu.php:14
 msgid "Problems? Take a look at the"
 msgstr ""
 
-#: trunk/template/recipe_public.php:77
+#: template/recipe_public.php:77
 msgid "Prep Time"
 msgstr ""
 
-#: trunk/template/recipe_public.php:78
+#: template/recipe_public.php:78
 msgid "Cook Time"
 msgstr ""
 
-#: trunk/template/recipe_public.php:160
+#: template/recipe_public.php:160
 msgid "Powered by"
 msgstr ""

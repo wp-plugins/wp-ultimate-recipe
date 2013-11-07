@@ -1,8 +1,8 @@
-# Translation of WP Ultimate Recipe in Dutch
+# Translation of WP Ultimate Recipe in Bulgarian
 # This file is distributed under the same license as the WP Ultimate Recipe package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2013-11-07 13:59+0100\n"
+"PO-Revision-Date: 2013-11-07 14:00+0100\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -15,99 +15,97 @@ msgstr ""
 
 #: wp-ultimate-recipe.php:58
 msgid "WPURP Addons"
-msgstr "WPURP Addons"
+msgstr ""
 
 #: wp-ultimate-recipe.php:58 wp-ultimate-recipe.php:110
 msgid "Addons"
-msgstr "Addons"
+msgstr ""
 
 #: wp-ultimate-recipe.php:111
 msgid "To install new addons, visit the download link for instructions."
 msgstr ""
-"Klik op de Download link om meer uitleg te krijgen over het installeren van "
-"nieuwe addons."
 
 #: wp-ultimate-recipe.php:140
 msgid "Installed"
-msgstr "Geïnstalleerd"
+msgstr ""
 
 #: wp-ultimate-recipe.php:162
 msgid "Download!"
-msgstr "Download!"
+msgstr ""
 
 #: wp-ultimate-recipe.php:292
 msgid "Upload Image"
-msgstr "Afbeelding Uploaden"
+msgstr ""
 
 #: core-functions.php:619
 msgid "Edit Rating"
-msgstr "Score bewerken"
+msgstr "Редактиране на оценката"
 
 #: core-functions.php:620
 msgid "Update Rating"
-msgstr "Score aanpassen"
+msgstr "Обнови оценката"
 
 #: core-functions.php:621
 msgid "Add New Rating"
-msgstr "Score toevoegen"
+msgstr "Добави нова оценка"
 
 #: core-functions.php:622
 msgid "New Rating Name"
-msgstr "Nieuwe Score naam"
+msgstr "Име на новата оценка"
 
 #: core-functions.php:623
 msgid "Separate ratings with commas"
-msgstr "Scores scheiden met komma's"
+msgstr "Раздели оценките със запетаи "
 
 #: core-functions.php:624
 msgid "Add or remove ratings"
-msgstr "Scores toevoegen of verwijderen"
+msgstr "Добави или премахни оценки"
 
 #: core-functions.php:625
 msgid "Choose from the most used ratings"
-msgstr "Kies uit de meest gebruikte scores"
+msgstr "Избери от най-използваните оценки"
 
 #: core-functions.php:626
 msgid "No ratings found."
-msgstr "Geen scores gevonden."
+msgstr "Няма намерени оценки"
 
 #: template/recipe_admin.php:17
 msgid "General"
-msgstr "Algemeen"
+msgstr "Основен"
 
 #: template/recipe_admin.php:20
 msgid "Description"
-msgstr "Omschrijving"
+msgstr "Описание"
 
 #: template/recipe_admin.php:33
 msgid "star"
-msgstr "ster"
+msgstr "звезда"
 
 #: template/recipe_admin.php:33
 msgid "stars"
-msgstr "sterren"
+msgstr "звезди"
 
 #: template/recipe_admin.php:40 template/recipe_public.php:76
 #: template/recipe_public.php:132
 msgid "Servings"
-msgstr "Porties"
+msgstr "Порции"
 
 #: template/recipe_admin.php:44
 msgid "(e.g. 2 people, 3 loafs, ...)"
-msgstr "(bv: 2 personen, 3 broden)"
+msgstr "(напр. 2 души, 3 питки, ...)"
 
 #: template/recipe_admin.php:48
 msgid "Prep time"
-msgstr "Prep tijd"
+msgstr "Време за подготовка"
 
 #: template/recipe_admin.php:51 template/recipe_admin.php:58
 #: template/recipe_public.php:84 template/recipe_public.php:85
 msgid "minutes"
-msgstr "minuten"
+msgstr "минути"
 
 #: template/recipe_admin.php:55
 msgid "Cook time"
-msgstr "Kook tijd"
+msgstr "Време за готвене"
 
 #: template/recipe_admin.php:64
 msgid ""
@@ -115,26 +113,26 @@ msgid ""
 "<strong>Cuisines</strong> by using the boxes on the right. Use the "
 "<strong>featured image</strong> if you want a photo of the finished dish."
 msgstr ""
-"Niet vergeten dat je je recept kan taggen met <strong>Maaltijden</strong> en "
-"<strong>Keukens</strong> met behulp van de kaders aan de rechterkant. "
-"Gebruik de <strong>uitgelichte afbeelding</strong> om een foto van het "
-"klaargemaakte gerecht te tonen."
+"Не забравяйте, че можете да маркирате вашата рецепта с <strong> Ястия</"
+"strong> и <strong> Кухня </strong> с помощта на кутииките в дясно. "
+"Използвайте <strong> картинка за публикацията  </strong> ако искате снимка "
+"на готовото ястие."
 
 #: template/recipe_admin.php:96
 msgid "cup"
-msgstr "gram"
+msgstr "чаша"
 
 #: template/recipe_admin.php:97
 msgid "walnuts"
-msgstr "walnoten"
+msgstr "орехи"
 
 #: template/recipe_admin.php:98
 msgid "coarsely chopped"
-msgstr "grof gehakt"
+msgstr "грубо нарязан"
 
 #: template/recipe_admin.php:104
 msgid "Add an ingredient"
-msgstr "Voeg een ingrediënt toe"
+msgstr "Добави съставка"
 
 #: template/recipe_admin.php:107
 msgid ""
@@ -142,26 +140,26 @@ msgid ""
 "automatically create new fields. <strong>Don't worry about empty lines</"
 "strong>, these will be ignored."
 msgstr ""
-"<strong>Gebruik de TAB toets</strong> terwijl je ingrediënten toevoegt om "
-"automatisch nieuwe velden aan te maken. <strong>Negeer de lege lijnen</"
-"strong>, deze worden niet meegenomen."
+"<strong> Използвайте клавиша TAB </strong> за добавянето на нови съставки, "
+"автоматично ще бъдат създадени нови полета. <strong> Не се тревожете за "
+"празните редове </strong>, те ще бъдат игнорирани."
 
 #: template/recipe_admin.php:110 template/recipe_public.php:140
 msgid "Instructions"
-msgstr "Instructies"
+msgstr "Инструкции за приготвяне"
 
 #: template/recipe_admin.php:137 template/recipe_admin.php:156
 msgid "Add Image"
-msgstr "Foto toevoegen"
+msgstr "Добави снимка"
 
 #: wp-ultimate-recipe.php:293 template/recipe_admin.php:138
 #: template/recipe_admin.php:157
 msgid "Remove Image"
-msgstr "Foto verwijderen"
+msgstr "Премахни снимката"
 
 #: template/recipe_admin.php:166
 msgid "Add an instruction"
-msgstr "Voeg een instructie toe"
+msgstr "Добави инструкция"
 
 #: template/recipe_admin.php:169
 msgid ""
@@ -169,387 +167,388 @@ msgid ""
 "automatically create new fields. <strong>Don't worry about empty lines</"
 "strong>, these will be ignored."
 msgstr ""
-"<strong>Gebruik de TAB toets</strong> terwijl je instructies toevoegt om "
-"automatisch nieuwe velden aan te maken. <strong>Negeer de lege lijnen</"
-"strong>, deze worden niet meegenomen."
+"<strong>Използвайте клавиша TAB </strong> за добавянето на нови инструкции, "
+"автоматично ще бъдат създадени нови полета. <strong> Не се тревожете за "
+"празните редове </strong>, те ще бъдат премахнати автоматично."
 
 #: template/recipe_menu.php:14
 msgid "Problems? Take a look at the"
-msgstr "Problemen? Neem een kijkje naar de"
+msgstr "Възникнали са проблеми? Обърнете внимание на"
 
 #: template/recipe_public.php:77
 msgid "Prep Time"
-msgstr "Prep tijd"
+msgstr "Време за подготовка"
 
 #: template/recipe_public.php:78
 msgid "Cook Time"
-msgstr "Kook tijd"
+msgstr "Време за готвене"
 
 #: template/recipe_public.php:160
 msgid "Powered by"
-msgstr "Mogelijk door"
+msgstr "Powered by"
 
 #: wp-ultimate-recipe.php:57
 msgid "Recipe Settings"
-msgstr "Recept Instellingen"
+msgstr "Настройки на Рецепта "
 
 #: wp-ultimate-recipe.php:57 template/recipe_menu.php:4
 msgid "Settings"
-msgstr "Instellingen"
+msgstr "Настройки"
 
 #: core-functions.php:113
 msgid "Recipe Box"
-msgstr "Recepten Box"
+msgstr "Сборник с рецепти"
 
 #: core-functions.php:117
 msgid "Adjustable Servings"
-msgstr "Aanpasbare Porties"
+msgstr "Промяна на порции"
 
 #: core-functions.php:123
 msgid "Allow users to dynamically adjust the servings of recipes."
-msgstr "Laat gebruikers toe om zelf de porties van de recepten aan te passen."
+msgstr ""
+"Разрешаване на потребителите динамично да променят порциите в рецептите."
 
 #: core-functions.php:130
 msgid "Link to plugin"
-msgstr "Link naar plugin"
+msgstr "Линк с плъгина"
 
 #: core-functions.php:136
 msgid "Show a link to the plugin website as a little thank you."
-msgstr "Toon een link naar de plugin website bij wijze van dank."
+msgstr ""
+"Покажи линк към сайта на плъгина, като благодарност към създателите му."
 
 #: core-functions.php:143
 msgid "Show full recipe"
-msgstr "Toon volledig recept"
+msgstr "Покажи цялата рецепта"
 
 #: core-functions.php:149
 msgid "Show the full recipe instead of the description/excerpt in"
-msgstr ""
-"Toon het volledige recept in plaats van de omschrijving/samenvatting in"
+msgstr "Покажи цялата рецепта вместо означението/откъс в"
 
 #: core-functions.php:149
 msgid "the recipe archive"
-msgstr "de recept archieven"
+msgstr "архивиране на рецептата"
 
 #: core-functions.php:172
 msgid "Settings regarding the recipe box shown to your visitors."
-msgstr "Instellingen over de recepten box die getoond wordt aan de bezoekers."
+msgstr ""
+"Настройки по отношение показването сборника с рецепти на посетителите на "
+"сайта Ви"
 
 #: core-functions.php:186
 msgid "Recipes"
-msgstr "Recepten"
+msgstr "Рецепти"
 
 #: core-functions.php:187 core-functions.php:214
 msgid "Recipe"
-msgstr "Recept"
+msgstr "Рецепта"
 
 #: core-functions.php:188
 msgid "Add New"
-msgstr "Toevoegen"
+msgstr "Добави ново"
 
 #: core-functions.php:189
 msgid "Add New Recipe"
-msgstr "Recept toevoegen"
+msgstr "Добави нова рецепта"
 
 #: core-functions.php:190
 msgid "Edit"
-msgstr "Bewerken"
+msgstr "Редакция"
 
 #: core-functions.php:191
 msgid "Edit Recipe"
-msgstr "Recept bewerken"
+msgstr "Редактиране на Рецепта"
 
 #: core-functions.php:192
 msgid "New Recipe"
-msgstr "Nieuw Recept"
+msgstr "Нова Рецепта"
 
 #: core-functions.php:193
 msgid "View"
-msgstr "Bekijken"
+msgstr "Преглед"
 
 #: core-functions.php:194
 msgid "View Recipe"
-msgstr "Recept bekijken"
+msgstr "Вижте Рецептата"
 
 #: core-functions.php:195
 msgid "Search Recipes"
-msgstr "Recept zoeken"
+msgstr "Търсене на рецепти"
 
 #: core-functions.php:196
 msgid "No Recipes found"
-msgstr "Geen Recepten gevonden"
+msgstr "Няма намерени Рецепти"
 
 #: core-functions.php:197
 msgid "No Recipes found in Trash"
-msgstr "Geen Recepten in de Vuilbak gevonden"
+msgstr "Няма намерени Рецепти в кошчето"
 
 #: core-functions.php:198
 msgid "Parent Recipe"
-msgstr "Hoofd Recept"
+msgstr "Родителска категория на Рецептата"
 
 #: core-functions.php:385
 msgid "Select the recipe to add to your post:"
-msgstr "Selecteer het recept dat je wil toevoegen aan je bericht:"
+msgstr "Изберете рецепта за добавяне към вашия пост:"
 
 #: core-functions.php:394
 msgid "Insert Recipe"
-msgstr "Recept toevoegen"
+msgstr "Вмъкнете Рецепта"
 
 #: core-functions.php:398 core-functions.php:450
 msgid ""
 "You have to create a recipe first, check the 'Recipes' menu on the left."
-msgstr ""
-"Je moet eerst een recept aanmaken, neem eens een kijkje in het 'Recpeten' "
-"menu aan je linkerkant."
+msgstr "Първо трябва да се създаде рецепта,вижте менюто \"Рецепти\" в ляво."
 
 #: core-functions.php:480 core-functions.php:495 template/recipe_admin.php:69
 #: template/recipe_public.php:97
 msgid "Ingredients"
-msgstr "Ingrediënten"
+msgstr "Съставки"
 
 #: core-functions.php:481
 msgid "Ingredient"
-msgstr "Ingrediënt"
+msgstr "Съставка"
 
 #: core-functions.php:482
 msgid "Search Ingredients"
-msgstr "Ingrediënten zoeken"
+msgstr "Търсене на продукти"
 
 #: core-functions.php:483
 msgid "Popular Ingredients"
-msgstr "Populaire Ingrediënten"
+msgstr "Популярни Продукти"
 
 #: core-functions.php:484
 msgid "All Ingredients"
-msgstr "Alle Ingrediënten"
+msgstr "Всички Продукти"
 
 #: core-functions.php:485
 msgid "Parent Ingredient"
-msgstr "Hoofd Ingrediënt"
+msgstr "Основна категория продукти"
 
 #: core-functions.php:486
 msgid "Parent Ingredient:"
-msgstr "Hoofd Ingrediënt"
+msgstr "Основна категория продукти:"
 
 #: core-functions.php:487
 msgid "Edit Ingredient"
-msgstr "Ingrediënt bewerken"
+msgstr "Редактиране на продукт"
 
 #: core-functions.php:488
 msgid "Update Ingredient"
-msgstr "Ingrediënt aanpassen"
+msgstr "Обновяване на продукт"
 
 #: core-functions.php:489
 msgid "Add New Ingredient"
-msgstr "Ingrediënt toevoegen"
+msgstr "Добавяне на нов продукт"
 
 #: core-functions.php:490
 msgid "New Ingredient Name"
-msgstr "Nieuw Ingrediënt naam"
+msgstr "Име на новия продукт"
 
 #: core-functions.php:491
 msgid "Separate ingredients with commas"
-msgstr "Ingrediënten scheiden met komma's"
+msgstr "Разделете продуктите със запетаи"
 
 #: core-functions.php:492
 msgid "Add or remove ingredients"
-msgstr "Ingrediënten toevoegen of verwijderen"
+msgstr "Добавяне или премахване на продукти"
 
 #: core-functions.php:493
 msgid "Choose from the most used ingredients"
-msgstr "Kies uit de meest gebruikte ingrediënten"
+msgstr "Изберете от най-често използваните продукти"
 
 #: core-functions.php:494
 msgid "No ingredients found."
-msgstr "Geen ingrediënten gevonden."
+msgstr "не са намерени продукти"
 
 #: core-functions.php:519 core-functions.php:532
 msgid "Courses"
-msgstr "Maaltijden"
+msgstr "Ястия"
 
 #: core-functions.php:520 template/recipe_public.php:53
 msgid "Course"
-msgstr "Maaltijd"
+msgstr "Ястие"
 
 #: core-functions.php:521
 msgid "Search Courses"
-msgstr "Maaltijden zoeken"
+msgstr "Търси Ястия"
 
 #: core-functions.php:522
 msgid "Popular Courses"
-msgstr "Populaire Maaltijden"
+msgstr "Популярни Ястия"
 
 #: core-functions.php:523
 msgid "All Courses"
-msgstr "Alle Maaltijden"
+msgstr "Всички Ястия"
 
 #: core-functions.php:524
 msgid "Edit Course"
-msgstr "Maaltijd bewerken"
+msgstr "Редактирай Ястието"
 
 #: core-functions.php:525
 msgid "Update Course"
-msgstr "Maaltijd aanpassen"
+msgstr "Обнови Ястието"
 
 #: core-functions.php:526
 msgid "Add New Course"
-msgstr "Maaltijd toevoegen"
+msgstr "Добави ново Ястие"
 
 #: core-functions.php:527
 msgid "New Course Name"
-msgstr "Nieuwe Maaltijd naam"
+msgstr "Име на новото Ястие"
 
 #: core-functions.php:528
 msgid "Separate courses with commas"
-msgstr "Maaltijden scheiden met komma's"
+msgstr "Разделете ястията със запетаи"
 
 #: core-functions.php:529
 msgid "Add or remove courses"
-msgstr "Maaltijden toevoegen of verwijderen"
+msgstr "Редактирай или премахни Ястия"
 
 #: core-functions.php:530
 msgid "Choose from the most used courses"
-msgstr "Kies uit de meest gebruikte maaltijden"
+msgstr "Изберете от най-често използваните Ястия"
 
 #: core-functions.php:531
 msgid "No courses found."
-msgstr "Geen maaltijden gevonden."
+msgstr "Няма намерени ястия"
 
 #: core-functions.php:543
 msgid "Breakfast"
-msgstr "Ontbijt"
+msgstr "Закуска"
 
 #: core-functions.php:544
 msgid "Appetizer"
-msgstr "Voorgerecht"
+msgstr "Предястие"
 
 #: core-functions.php:545
 msgid "Soup"
-msgstr "Soep"
+msgstr "Супа"
 
 #: core-functions.php:546
 msgid "Main Course"
-msgstr "Hoofdgerecht"
+msgstr "Основно ястие"
 
 #: core-functions.php:547
 msgid "Side Dish"
-msgstr "Bijgerecht"
+msgstr "Гарнитура"
 
 #: core-functions.php:548
 msgid "Salad"
-msgstr "Salade"
+msgstr "Салата"
 
 #: core-functions.php:549
 msgid "Dessert"
-msgstr "Nagerecht"
+msgstr "Десерт"
 
 #: core-functions.php:550
 msgid "Snack"
-msgstr "Snack"
+msgstr "Леки закуски"
 
 #: core-functions.php:551
 msgid "Drinks"
-msgstr "Drinken"
+msgstr "Напитки"
 
 #: core-functions.php:567 core-functions.php:580
 msgid "Cuisines"
-msgstr "Keukens"
+msgstr "Кухни"
 
 #: core-functions.php:568 template/recipe_public.php:66
 msgid "Cuisine"
-msgstr "Keuken"
+msgstr "Кухня"
 
 #: core-functions.php:569
 msgid "Search Cuisines"
-msgstr "Keukens zoeken"
+msgstr "Търси Кухни"
 
 #: core-functions.php:570
 msgid "Popular Cuisines"
-msgstr "Populaire Keukens"
+msgstr "Популярни Кухни"
 
 #: core-functions.php:571
 msgid "All Cuisines"
-msgstr "Alle Keukens"
+msgstr "Всички Кухни"
 
 #: core-functions.php:572
 msgid "Edit Cuisine"
-msgstr "Keuken bewerken"
+msgstr "Редактирай Кухня"
 
 #: core-functions.php:573
 msgid "Update Cuisine"
-msgstr "Keuken aanpassen"
+msgstr "Обнови Кухня"
 
 #: core-functions.php:574
 msgid "Add New Cuisine"
-msgstr "Keuken toevoegen"
+msgstr "Добави нова кухня"
 
 #: core-functions.php:575
 msgid "New Cuisine Name"
-msgstr "Nieuwe Keuken naam"
+msgstr "Име на новата кухня"
 
 #: core-functions.php:576
 msgid "Separate cuisines with commas"
-msgstr "Keukens scheiden met komma's"
+msgstr "Разделете кухните със запетая"
 
 #: core-functions.php:577
 msgid "Add or remove cuisines"
-msgstr "Keuken toevoegen of verwijderen"
+msgstr "Добави или премахни кухня"
 
 #: core-functions.php:578
 msgid "Choose from the most used cuisines"
-msgstr "Kies uit de meest gebruikte keukens"
+msgstr "Изберете от най-често използваните кухни"
 
 #: core-functions.php:579
 msgid "No cuisines found."
-msgstr "Geen keukens gevonden."
+msgstr "Няма намерени кухни"
 
 #: core-functions.php:591
 msgid "French"
-msgstr "Frans"
+msgstr "Френска"
 
 #: core-functions.php:592
 msgid "Italian"
-msgstr "Italiaans"
+msgstr "Италианска"
 
 #: core-functions.php:593
 msgid "Mediterranean"
-msgstr "Mediterraans"
+msgstr "Средиземноморска"
 
 #: core-functions.php:594
 msgid "Indian"
-msgstr "Indisch"
+msgstr "Индийска"
 
 #: core-functions.php:595
 msgid "Chinese"
-msgstr "Chinees"
+msgstr "Китайска"
 
 #: core-functions.php:596
 msgid "Japanese"
-msgstr "Japans"
+msgstr "Японска"
 
 #: core-functions.php:597
 msgid "American"
-msgstr "Amerikaans"
+msgstr "Американска"
 
 #: core-functions.php:598
 msgid "Mexican"
-msgstr "Mexicaans"
+msgstr "Мексиканска"
 
 #: core-functions.php:614 core-functions.php:627
 msgid "Ratings"
-msgstr "Scores"
+msgstr "Оценки"
 
 #: core-functions.php:615 template/recipe_admin.php:26
 msgid "Rating"
-msgstr "Score"
+msgstr "Оценка"
 
 #: core-functions.php:616
 msgid "Search Ratings"
-msgstr "Scores zoeken"
+msgstr "Търси Оценки"
 
 #: core-functions.php:617
 msgid "Popular Ratings"
-msgstr "Populaire Scores"
+msgstr "Популярни Оценки"
 
 #: core-functions.php:618
 msgid "All Ratings"
-msgstr "Alle Scores"
+msgstr "Всички Оценки."

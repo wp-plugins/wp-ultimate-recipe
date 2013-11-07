@@ -74,8 +74,8 @@
                 <thead>
                 <tr>
                     <?php if($recipe['recipe_servings'][0] != '') { ?><td><?php _e( 'Servings', $this->pluginName ); ?></td><?php } ?>
-                    <?php if($recipe['recipe_prep_time'][0] != '') { ?><td><?php _e( 'Prep Time', $this->pluginName ); ?></td><?php } ?>
-                    <?php if($recipe['recipe_cook_time'][0] != '') { ?><td><?php _e( 'Cook Time', $this->pluginName ); ?></td><?php } ?>
+                    <?php if($recipe['recipe_prep_time'][0] != '') { ?><td><?php _e('Prep Time', $this->pluginName ); ?></td><?php } ?>
+                    <?php if($recipe['recipe_cook_time'][0] != '') { ?><td><?php _e('Cook Time', $this->pluginName ); ?></td><?php } ?>
                 </tr>
                 </thead>
                 <tbody>
@@ -94,7 +94,7 @@
     if(!empty($ingredients))
     {
     ?>
-    <h3><?php _e( 'Ingredients', $this->pluginName ); ?></h3>
+    <h3><?php _e('Ingredients', $this->pluginName ); ?></h3>
     <ul class="recipe-ingredients">
         <?php
         $out = '';

@@ -17,7 +17,7 @@ foreach( $fields as $field)
 <h4><?php _e( 'General', $this->pluginName ) ?></h4>
 <table class="recipe-general-form">
     <tr>
-        <td class="recipe-general-form-label"><label for="recipe_description"><?php _e( 'Description', $this->pluginName ) ?></label></td>
+        <td class="recipe-general-form-label"><label for="recipe_description"><?php _e('Description', $this->pluginName ) ?></label></td>
         <td class="recipe-general-form-field">
             <textarea name="recipe_description" id="recipe_description" rows="4"><?php echo $description; ?></textarea>
         </td>
@@ -30,7 +30,7 @@ foreach( $fields as $field)
                 for ( $i = 0; $i <= 5; $i ++ ) {
                 ?>
                 <option value="<?php echo $i; ?>" <?php echo selected( $i, $rating ); ?>>
-                    <?php echo $i == 1 ? $i .' '. __( 'star', $this->pluginName ) : $i .' '. _e( 'stars', $this->pluginName ); ?>
+                    <?php echo $i == 1 ? $i .' '. __( 'star', $this->pluginName ) : $i .' '. __( 'stars', $this->pluginName ); ?>
                 </option>
                 <?php } ?>
             </select>
@@ -153,7 +153,7 @@ $image = $this->pluginUrl . '/img/image_placeholder.png';
             <td><textarea name="recipe_instructions[<?php echo $i; ?>][description]" rows="4" id="ingredient_description_<?php echo $i; ?>"></textarea></td>
             <td>
                 <input name="recipe_instructions[<?php echo $i; ?>][image]" class="recipe_instructions_image" type="hidden" value="" />
-                <input class="recipe_instructions_add_image button" rel="<?php echo $recipe->ID; ?>" type="button" value="<?php _e( 'Add Image', $this->pluginName ) ?>" />
+                <input class="recipe_instructions_add_image button" rel="<?php echo $recipe->ID; ?>" type="button" value="<?php _e('Add Image', $this->pluginName ) ?>" />
                 <input class="recipe_instructions_remove_image button wpurp-hide" type="button" value="<?php _e( 'Remove Image', $this->pluginName ) ?>" />
                 <br /><img src="<?php echo $image; ?>" class="recipe_instructions_thumbnail" />
             </td>

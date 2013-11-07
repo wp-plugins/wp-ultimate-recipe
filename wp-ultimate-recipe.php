@@ -3,9 +3,9 @@
 Plugin Name: WP Ultimate Recipe
 Plugin URI: http://www.wpultimaterecipeplugin.com
 Description: WP Ultimate Recipe is a user friendly plugin for adding recipes to any of your posts and pages.
-Version: 0.0.13
-Author: Brecht Vandersmissen
-Author URI: http://www.brechtvds.be
+Version: 0.0.14
+Author: Bootstrapped Ventures
+Author URI: http://www.bootstrappedventures.com
 License: GPLv2
 */
 /*
@@ -13,10 +13,11 @@ License: GPLv2
  */
 
 class WPUltimateRecipe {
+    
     protected $pluginName;
     protected $pluginDir;
     protected $pluginUrl;
-
+    
     public function __construct()
     {
         $this->pluginName = trim( dirname( plugin_basename( __FILE__ ) ), '/' );
@@ -24,165 +25,161 @@ class WPUltimateRecipe {
         $this->pluginUrl = WP_PLUGIN_URL . '/' . $this->pluginName;
 
         // Version
-        add_option( $this->pluginName . '_version', '0.0.13' );
+        update_option( $this->pluginName . '_version', '0.0.14' );
 
         // Textdomain
         load_plugin_textdomain($this->pluginName, false, basename( dirname( __FILE__ ) ) . '/lang/'  );
-
-        // Actions
-        add_action( 'wp_enqueue_scripts', array( $this, 'public_plugin_styles' ) );
-        add_action( 'wp_enqueue_scripts', array( $this, 'public_plugin_scripts' ) );
-        add_action( 'admin_enqueue_scripts', array( $this, 'admin_plugin_styles' ) );
-        add_action( 'admin_enqueue_scripts', array( $this, 'admin_plugin_scripts' ) );
-        add_action( 'init', array( $this, 'recipes_init' ));
-        add_action( 'init', array( $this, 'ingredients_init' ));
-        add_action( 'init', array( $this, 'courses_init' ));
-        add_action( 'init', array( $this, 'cuisines_init' ));
-        add_action( 'init', array( $this, 'ratings_init' ));
-        add_action( 'admin_init', array( $this, 'recipes_admin_init' ));
-        add_action( 'save_post', array( $this, 'recipes_save' ), 10, 2 );
-        add_action( 'admin_menu', array( $this, 'admin_menu') );
-        add_action( 'admin_init', array( $this, 'admin_init' ) );
-        add_action( 'after_wp_tiny_mce', array( $this, 'recipes_shortcode_form' ) );
-
-        // Filters
-        //add_filter( 'template_include', array( $this, 'recipes_template' ), 1 );
-        add_filter( 'the_content', array( $this, 'recipes_content' ), 10 );
-        add_filter( 'post_class', array( $this, 'recipes_post_class' ) ); // Add post and type-post classes
-        add_filter( 'post_thumbnail_html', array( $this, 'recipes_thumbnail' ), 10 );
-
-        // Hooks
-        register_activation_hook( __FILE__, array( $this, 'activate_taxonomies' ) );
-
-        // Shortcodes
-        add_shortcode("ultimate-recipe", array( $this, 'recipes_shortcode' ));
-        add_shortcode("ultimate-recipe-index", array( $this, 'recipes_index_shortcode' ));
+        
+        //Include core
+        include_once( $this->pluginDir . '/core-functions.php' );
+        $wpurp_core = new WPURP_Core( $this->pluginName, $this->pluginDir, $this->pluginUrl );
+        
+        //Actions
+        add_action( 'init', array( $this, 'get_installed_addons' ) );
+        add_action( 'wp_print_styles', array( $this, 'wpurp_styles' ) );
+        add_action( 'wp_footer', array( $this, 'wpurp_scripts' ) );
+        add_action( 'admin_head', array( $this, 'wpurp_admin_styles' ) );
+        add_action( 'admin_footer', array( $this, 'wpurp_admin_scripts' ) );   
+        add_action( 'admin_menu', array( $this, 'menu_addons' ) );
+        
+    }
+    
+    /*
+     * ================================================================================================================
+     * @FRAMEWORK
+     * ================================================================================================================
+     */
+    
+    /*
+     * Generate settings & addons pages
+     */
+    public function menu_addons() {
+        add_submenu_page( 'edit.php?post_type=recipe', __( 'Recipe Settings', $this->pluginName ), __( 'Settings', $this->pluginName ), 'manage_options', 'wpurp_settings', array( $this, 'admin_menu_settings' ) );
+        add_submenu_page( 'edit.php?post_type=recipe', __( 'WPURP Addons', $this->pluginName  ), __( 'Addons', $this->pluginName ), 'manage_options', 'wpurp_addons', array( $this, 'admin_menu_addons' ) );
     }
 
     /*
-     * ================================================================================================================
-     * @GENERAL
-     * ================================================================================================================
+     * Load all available addons - Just duplicated this because I didn't feel like thinking. Sorry. - Brecht
      */
+    public function get_installed_addons() {
 
-    public function public_plugin_styles()
-    {
-        wp_register_style( $this->pluginName, $this->pluginUrl . '/css/public.css' );
-        wp_enqueue_style( $this->pluginName );
-    }
+        $addons_dir = WP_PLUGIN_DIR . '/' . $this->pluginName . '-premium' . '/addons'; // Such solution. Wow.
 
-    public function public_plugin_scripts()
-    {
-        wp_register_script( $this->pluginName, $this->pluginUrl . '/js/public.js', array('jquery') );
-        wp_enqueue_script( $this->pluginName );
-    }
-
-    public function admin_plugin_styles()
-    {
-        wp_register_style( $this->pluginName, $this->pluginUrl . '/css/admin.css' );
-        wp_enqueue_style( $this->pluginName );
-    }
-
-    public function admin_plugin_scripts( $hook )
-    { 
-        if( 'post-new.php' != $hook && 'post.php' != $hook ) {
-            return;
+        if( !is_dir( $addons_dir ) ) {
+            return; // Should probably spam them into buying right here.
         } else {
-            wp_register_script( $this->pluginName, $this->pluginUrl . '/js/admin.js', array('jquery', 'jquery-ui-sortable', 'suggest') );
-            wp_enqueue_script( $this->pluginName );
+            $dirContent = scandir($addons_dir);
+
+            foreach ($dirContent as $folder) {
+
+                if ($folder != '.' && $folder != '..') {
+                    $this->installed_addons[$folder] = true;
+                }
+            }
+
         }
     }
-
-    public function activate_taxonomies()
-    {
-        $this->recipes_init();
-
-        $this->ingredients_init();
-
-        $this->courses_init();
-        $this->courses_defaults();
-
-        $this->cuisines_init();
-        $this->cuisines_defaults();
-
-        flush_rewrite_rules();
-        global $wp_rewrite;
-        $wp_rewrite->flush_rules();
+    
+    public function admin_menu_addons() { //TODO Find a better solution, this is just to get it working
+        
+        include( 'available-addons.php');
+        
+        $installed = array();
+        $not_installed = array();
+        
+        if( is_array( $this->installed_addons ) ) {
+            foreach( $available_addons as $k => $v ){
+                if( array_key_exists( $k, $this->installed_addons ) ) {
+                    $installed[$k] = $v; 
+                } else {
+                    $not_installed[$k] = $v; 
+                }
+            }
+        } else {
+            $not_installed = $available_addons;
+        }
+        
+        return $this->display_addons_page( $installed, $not_installed );
+        
     }
+    
+    public function display_addons_page( $installed, $not_installed ) {
 
-    public function admin_menu()
-    {
-        remove_meta_box('ingredientdiv', 'recipe', 'side');
-        remove_meta_box('stardiv', 'recipe', 'side');
+        $output =  '<div class="wrap">
+                    <div id="icon-plugins" class="icon32"></div>
+                    <h2>WP Ultimate Recipe ' . __( 'Addons', $this->pluginName ) . '</h2>
+                    <p>' . __( 'To install new addons, visit the download link for instructions.', $this->pluginName ) . '</p>
+                    <table class="wp-list-table widefat plugins" cellspacing="0">
+                        <thead>
+                        <tr>
+                            <th scope="col" id="name" class="manage-column column-name">
+                                Addon
+                            </th>
+                            <th scope="col" id="description" class="manage-column column-description">
+                                Description
+                            </th>
+                            <th></th>
+                        </tr>
+                        </thead>
 
-        add_submenu_page( 'edit.php?post_type=recipe', __( 'Recipe Settings', $this->pluginName ), __( 'Settings', $this->pluginName ), 'manage_options', 'wpurp_settings', array( $this, 'admin_menu_settings' ) );
+                        <tbody id="the-list">';
+        
+        foreach( $installed as $k => $v ) {
+        
+            $output .=          '<tr id="' . $k . '" class="active">
+                                    <td class="plugin-title">
+                                        <strong>' . $v['name'] . '</strong>
+                                        <div class="row-actions-visible">
+                                        <span class="activate">
+                                    </td>
+                                    <td class="column-description desc">
+                                        <div class="plugin-description">
+                                            <p>' . $v['desc'] . '</p>
+                                        </div>
+                                    <td>
+                                       <p>' . __( 'Installed', $this->pluginName  ) . '</p> 
+                                    </td>
+                                </tr>';
+        
+        }
+        
+        foreach( $not_installed as $k => $v ) {
+        
+            $output .=          '<tr id="' . $k . '" class="inactive">
+                                    <td class="plugin-title">
+                                        <strong>' . $v['name'] . '</strong>
+                                        <div class="row-actions-visible">
+                                        <span class="activate">
+                                    </td>
+                                    <td class="column-description desc">
+                                        <div class="plugin-description">
+                                            <p>' . $v['desc'] . '</p>
+                                        </div>
+                                    </td>
+                                    <td>';
+            
+                                    if( $v['available'] ) {
+                                        $output .= '<a href="http://www.wpultimaterecipeplugin.com/#premium" target="_blank">' . __( 'Download!', $this->pluginName ) . '</a>';
+                                    } else {
+                                        $output .= 'Coming soon';
+                                    }
+            
+        $output .=                 '
+                                </tr>';
+        
+        }
+        
+        $output .=      '</tbody>
+                    </table>
+                    </div>';
+        
+        echo $output;
+        
     }
-
-    public function admin_init()
-    {
-        if (!current_user_can('edit_posts') && !current_user_can('edit_pages'))
-            return;
-
-        add_filter( 'mce_external_plugins', array( $this, 'recipes_shortcode_button_plugin' ) );
-        add_filter( 'mce_buttons', array( $this, 'recipes_shortcode_button_add' ) );
-
-        add_settings_section( 'wpurp_settings_section', __( 'Recipe Box', $this->pluginName ), array( $this, 'admin_menu_settings_general' ), 'wpurp_settings' );
-
-        add_settings_field(
-            'wpurp_show_servings_adjust',
-            __( 'Adjustable Servings', $this->pluginName ),
-            array( $this, 'admin_menu_settings_checkbox' ),
-            'wpurp_settings',
-            'wpurp_settings_section',
-            array(
-                'wpurp_show_servings_adjust',
-                __( 'Allow users to dynamically adjust the servings of recipes.', $this->pluginName ),
-                1
-            )
-        );
-
-        add_settings_field(
-            'wpurp_show_linkback',
-            __( 'Link to plugin', $this->pluginName ),
-            array( $this, 'admin_menu_settings_checkbox' ),
-            'wpurp_settings',
-            'wpurp_settings_section',
-            array(
-                'wpurp_show_linkback',
-                __( 'Show a link to the plugin website as a little thank you.', $this->pluginName ),
-                1
-            )
-        );
-
-        add_settings_field(
-            'wpurp_show_full_recipe',
-            __( 'Show full recipe', $this->pluginName ),
-            array( $this, 'admin_menu_settings_checkbox' ),
-            'wpurp_settings',
-            'wpurp_settings_section',
-            array(
-                'wpurp_show_full_recipe',
-                __( 'Show the full recipe instead of the description/excerpt in', $this->pluginName ) . ' <a href="'.site_url('/recipe/').'" target="_blank">' . __( 'the recipe archive', $this->pluginName ) . '</a>.',
-                0
-            )
-        );
-
-        register_setting(
-            'wpurp_settings',
-            'wpurp_show_servings_adjust'
-        );
-
-        register_setting(
-            'wpurp_settings',
-            'wpurp_show_linkback'
-        );
-
-        register_setting(
-            'wpurp_settings',
-            'wpurp_show_full_recipe'
-        );
-    }
-
+    
+    /*
+     * Plugin settings functions
+     */
     public function admin_menu_settings()
     {
         if (!current_user_can('manage_options')) {
@@ -190,11 +187,6 @@ class WPUltimateRecipe {
         }
 
         include($this->pluginDir . '/template/recipe_menu.php');
-    }
-
-    public function admin_menu_settings_general()
-    {
-        _e( 'Settings regarding the recipe box shown to your visitors.', $this->pluginName );
     }
 
     public function admin_menu_settings_checkbox($args) {
@@ -206,58 +198,192 @@ class WPUltimateRecipe {
 
         echo $html;
     }
+    
+    public function admin_menu_settings_select($args) {
 
+        $default = isset($args[2]) ? $args[2] : 0;
+        
+        $html = '<select id="'.$args[0].'" name="'.$args[0].'">';
+        foreach( $args[3] as $key => $opt ) {
+            if( get_option( $args[0] ) && $key == get_option( $args[0] ) ) { 
+                $selected = 'selected="selected"'; 
+            } elseif( !get_option( $args[0] ) && $key == $default ) {
+                $selected = 'selected="selected"'; 
+            } else {
+                $selected = '';
+            }
+            $html .= '<option value="' . $key . '" ' . $selected . '>'.$opt.'</option>';  
+        }
+        $html .= '</select>';
+        $html .= '<label for="'.$args[0].'"> '  . $args[1] . '</label>';
 
-    /*
-     * ================================================================================================================
-     * @RECIPES
-     * ================================================================================================================
-     */
-    public function recipes_init()
-    {
-        register_post_type( 'recipe',
-            array(
-               'labels' => array(
-                   'name' => __( 'Recipes', $this->pluginName ),
-                   'singular_name' => __( 'Recipe', $this->pluginName ),
-                   'add_new' => __( 'Add New', $this->pluginName ),
-                   'add_new_item' => __( 'Add New Recipe', $this->pluginName ),
-                   'edit' => __( 'Edit', $this->pluginName ),
-                   'edit_item' => __( 'Edit Recipe', $this->pluginName ),
-                   'new_item' => __( 'New Recipe', $this->pluginName ),
-                   'view' => __( 'View', $this->pluginName ),
-                   'view_item' => __( 'View Recipe', $this->pluginName ),
-                   'search_items' => __( 'Search Recipes', $this->pluginName ),
-                   'not_found' => __( 'No Recipes found', $this->pluginName ),
-                   'not_found_in_trash' => __( 'No Recipes found in Trash', $this->pluginName ),
-                   'parent' => __( 'Parent Recipe', $this->pluginName )
-               ),
-                'public' => true,
-                'menu_position' => 5,
-                'supports' => array( 'title', 'thumbnail', 'comments', 'excerpt' ),
-                'taxonomies' => array( '' ),
-                'menu_icon' =>  $this->pluginUrl . '/img/icon_16.png',
-                'has_archive' => true,
-                'rewrite' => array (
-                    'slug' => _x( 'recipe', 'Recipe slug', $this->pluginName )
-                ),
-            ));
+        echo $html;
     }
     
-    public function recipes_admin_init()
-    {
-        add_meta_box(
-            'recipe_meta_box',
-            __( 'Recipe', $this->pluginName ),
-            array($this, 'recipes_meta_box'),
-            'recipe',
-            'normal',
-            'high'
-        );
-    }
+    public function admin_menu_settings_preview_select($args) {
 
-    private function recipes_fields()
-    {
+        $default = isset($args[2]) ? $args[2] : 0;
+        
+        if( get_option( $args[0] ) ) {
+            $value = get_option( $args[0] );
+        } else {
+            $value = $default;
+        }
+        
+        if( $args[5] ) {
+            $preview = $args[5] . '-' . $value;
+        } else {
+            $preview = $value;
+        }
+        
+        $img = $this->pluginUrl . '/addons/' . $args[4] . '/img/previews/' . $preview . '.jpg';
+
+        $html = '<select class="wpurp-preview-select" id="'.$args[0].'" name="'.$args[0].'">';
+        foreach( $args[3] as $key => $opt ) {
+            if( $key == $value ) { 
+                $selected = 'selected="selected"'; 
+            } else {
+                $selected = '';
+            }
+            $html .= '<option value="' . $key . '" ' . $selected . '>'.$opt.'</option>';  
+        }
+        $html .= '</select>';
+        $html .= '<label for="'.$args[0].'"> '  . $args[1] . '</label>';
+        $html .= '<div class="wpurp-preview-img preview-' . $args[0] . '"><img src="' . $img . '" alt="' . $preview . '"></div>';
+
+        echo $html;
+    }
+    
+    public function admin_menu_settings_colorpicker($args) {
+
+        $default = isset($args[2]) ? $args[2] : '#ffffff';
+        
+        if( get_option( $args[0] ) ) {
+            $value = get_option( $args[0] );
+        } else {
+            $value = $default;
+        }
+
+        $html = '<input type="text" class="wpurp-colorpicker" id="'.$args[0].'" name="'.$args[0].'" value="' . $value . '"/>';
+        $html .= '<label for="'.$args[0].'"> '  . $args[1] . '</label>';
+
+        echo $html;
+    }
+    
+    //Note - individual addons should enqueue media upload script if using this field
+    public function admin_menu_settings_upload($args) {
+
+        $default = isset($args[2]) ? $args[2] : '';
+        
+        if( get_option( $args[0] ) ) {
+            $value = get_option( $args[0] );
+            $hideadd = ' wpurp-hide';
+            $hideremove = '';
+        } else {
+            $value = $default;
+            $hideadd = '';
+            $hideremove = ' wpurp-hide';
+        }
+        
+        $image = wp_get_attachment_image_src( get_option( 'wpurp_custom_template_background_image' ), 'full-size' );
+        $image = $image[0];
+        
+        $html .= '<input name="' . $args[0] . '" class="' . $args[0] . '_image" type="hidden" value="' . $value . '" />';
+        $html .= '<input class="wpurp-file-upload ' . $args[0] . '_add_image button button' . $hideadd . '" type="button" value="' . __( 'Upload Image', $this->pluginName ).'" />';
+        $html .= '<input class="wpurp-file-remove ' . $args[0] . '_remove_image button' . $hideremove . '" type="button" value="' . __('Remove Image', $this->pluginName ) . '" />';
+        $html.= '<br /><img src="' . $image . '" class="' . $args[0] . '" style="max-width: 150px; height: auto;" />';
+
+        echo $html;
+    }
+    
+    /*
+     * Add inline styles and scripts from addons
+     */
+    
+    public function wpurp_styles() { //front end CSS
+        $styles  = '<style type="text/css" media="screen">';
+        ob_start();
+        do_action( 'wpurp_styles' );
+        $styles .= ob_get_clean();
+        $styles .= '</style>';        
+
+        $output = trim(preg_replace('/\s\s+/', ' ', $styles));
+        echo $output;
+    }
+    
+    public function wpurp_scripts() { //front end JS
+        $scripts  = '<script type="text/javascript">';
+        ob_start();
+        do_action( 'wpurp_scripts' );
+        $scripts .= ob_get_clean();
+        $scripts .= '</script>';
+        
+        $output = trim(preg_replace('/\s\s+/', ' ', $scripts));
+        echo $output;
+    }
+    
+    public function wpurp_admin_styles() { //admin CSS
+        $styles  = '<style type="text/css" media="screen">';
+        ob_start();
+        do_action( 'wpurp_admin_styles' );
+        $styles .= ob_get_clean();
+        $styles .= '</style>';
+        
+        $output = trim(preg_replace('/\s\s+/', ' ', $styles));
+        echo $output;
+    }
+    
+    public function wpurp_admin_scripts() { //admin JS
+        $scripts  = '<script type="text/javascript">';
+        ob_start();
+        do_action( 'wpurp_admin_scripts' );
+        $scripts .= ob_get_clean();
+        $scripts .= '</script>';
+        
+        $output = trim(preg_replace('/\s\s+/', ' ', $scripts));
+        echo $output;
+    }
+      
+    /*
+     * Returns array of all recipes
+     */
+    protected function get_recipes( $orderby = 'date', $order = 'DESC', $taxonomy = '', $term = '' ) {
+        $args = array(
+            'post_type' => 'recipe',
+            'orderby' => $orderby,
+            'order' => $order,
+        );
+        
+        if( $taxonomy && !$term ) {
+            $args['tax_query'] = array(
+                'taxonomy' => $taxonomy,
+            );
+        }
+        
+        if( $taxonomy && $term ) {
+            $args[$taxonomy] = $term;
+        }
+        
+        $query = new WP_Query( $args );
+        
+        
+        if( $query->have_posts()) { //recipes found
+            
+            $recipes = array();
+            
+            while( $query->have_posts()) {
+                $query->the_post();
+                global $post;
+                $recipes[] = $post;
+            }
+        }
+        return $recipes;
+    }
+    
+    /*
+     * Used in various places.
+     */
+    protected function recipes_fields() {
         return array(
             'recipe_description',
             'recipe_rating',
@@ -269,427 +395,77 @@ class WPUltimateRecipe {
             'recipe_instructions'
         );
     }
-
-    public function recipes_meta_box($recipe)
-    {
-        include($this->pluginDir . '/template/recipe_admin.php');
-    }
-
-    public function recipes_save( $recipe_id, $recipe )
-    {
-        if( $recipe->post_type == 'recipe' )
-        {
-            if (!wp_verify_nonce($_POST['recipe_meta_box_nonce'], 'recipe'))
-            {
-                return $recipe_id;
-            }
-            // TODO - Permissions
-
-            $fields = $this->recipes_fields();
-
-            foreach ( $fields as $field )
-            {
-                $old = get_post_meta( $recipe_id, $field, true );
-                $new = $_POST[$field];
-
-                // Field specific adjustments
-                if ($field == 'recipe_ingredients')
-                {
-                    $ingredients = array();
-                    $non_empty_ingredients = array();
-
-                    foreach($new as $ingredient) {
-                        if($ingredient['ingredient'] != '')
-                        {
-                            $ingredients[] = $ingredient['ingredient'];
-                            $non_empty_ingredients[] = $ingredient;
-                        }
-                    }
-
-                    wp_set_object_terms( $recipe_id, $ingredients, 'ingredient' );
-                    $new = $non_empty_ingredients;
-                }
-                elseif ($field == 'recipe_instructions')
-                {
-                    $non_empty_instructions = array();
-
-                    foreach($new as $instruction) {
-                        if($instruction['description'] != '' || $instruction['image'] != '')
-                        {
-                            $non_empty_instructions[] = $instruction;
-                        }
-                    }
-
-                    $new = $non_empty_instructions;
-                }
-
-
-                // Update or delete meta data if changed
-                if (isset($new) && $new != $old)
-                {
-                    update_post_meta( $recipe_id, $field, $new );
-                }
-                elseif ($new == '' && $old)
-                {
-                    delete_post_meta( $recipe_id, $field, $old );
-                }
-            }
-        }
-    }
-
-    public function recipes_content( $content )
-    {
-        if ( get_post_type() == 'recipe') {
-            remove_filter('the_content', array( $this, 'recipes_content' ), 10);
-
-            $recipe_post = get_post();
-            $recipe = get_post_custom($recipe_post->ID);
-
-            if (is_single() || get_option('wpurp_show_full_recipe', 0) == 1)
-            {
-                ob_start();
-                include($this->pluginDir . '/template/recipe_public.php');
-                $content = ob_get_contents();
-                ob_end_clean();
-            }
-            else
-            {
-                if(!empty($recipe_post->post_excerpt)) {
-                    the_excerpt();
-                } else {
-                    $content = $recipe['recipe_description'][0];
-                }
-            }
-
-            add_filter('the_content', array( $this, 'recipes_content' ), 10);
-        }
-
-        return $content;
-    }
-
-    public function recipes_post_class( $classes )
-    {
-        if ( get_post_type() == 'recipe' )
-        {
-            $classes[] = 'post';
-            $classes[] = 'type-post';
-        }
-
-        return $classes;
-    }
-
-    public function recipes_shortcode($options) {
-        $options = shortcode_atts(array(
-            'id' => 'n/a'
-        ), $options);
-
-        $recipe_post = null;
-        if ($options['id'] != 'n/a') {
-            $recipe_post = get_post(intval($options['id']));
-        }
-
-        if(!is_null($recipe_post) && $recipe_post->post_type == 'recipe')
-        {
-            $recipe = get_post_custom($recipe_post->ID);
-
-            ob_start();
-            include($this->pluginDir . '/template/recipe_public.php');
-            $output = ob_get_contents();
-            ob_end_clean();
-        }
-        else
-        {
-            $output = '';
-        }
-
-        return $output;
-    }
-
-    public function recipes_shortcode_button_plugin($plugins)
-    {
-        $plugins['ultimaterecipe_button'] = $this->pluginUrl . '/js/button.js';
-
-        return $plugins;
-    }
-
-    public function recipes_shortcode_button_add($buttons)
-    {
-        $buttons[] = 'ultimaterecipe_button';
-
-        return $buttons;
-    }
-
-    public function recipes_shortcode_form()
-    {
-        $out = '<div id="wpurp-form" style="display: none;">';
-
-        $posts = get_posts(array(
-            'post_type' => 'recipe',
-            'nopaging' => true
-        ));
-
-        if($posts) {
-            $out .= '<label for="wpurp-recipe">' . __( 'Select the recipe to add to your post:', $this->pluginName ) .  '</label><br/><br/>';
-            $out .= '<select id="wpurp-recipe">';
-
-            foreach($posts as $post)
-            {
-                $out .= '<option value="'.$post->ID.'">'.$post->post_title.'</option>';
-            }
-
-            $out .= '</select><br/>';
-            $out .= get_submit_button( __( 'Insert Recipe', $this->pluginName ), 'primary', 'wpurp-insert-recipe', false);
-        }
-        else
-        {
-            $out .= __( "You have to create a recipe first, check the 'Recipes' menu on the left.", $this->pluginName );
-        }
-
-        $out .= '</div>';
-
-        echo $out;
-    }
-
-    public function recipes_index_shortcode($options) {
-        $options = shortcode_atts(array(
-            'headers' => 'false'
-        ), $options);
-
-        $posts = get_posts(array(
-            'post_type' => 'recipe',
-            'nopaging' => true,
-            'orderby' => 'title',
-            'order' => 'ASC'
-        ));
-
-        $out = '<div class="wpurp-index-container">';
-        if($posts) {
-
-            $letters = array();
-
-            foreach($posts as $post)
-            {
-                $title = $post->post_title;
-
-                if($title != '')
-                {
-                    if ($options['headers'] != 'false')
-                    {
-                        $first_letter = substr($title,0,1);
-
-                        if(!in_array($first_letter, $letters))
-                        {
-                            $letters[] = $first_letter;
-                            $out .= '<h2>';
-                            $out .= $first_letter;
-                            $out .= '</h2>';
-                        }
-                    }
-
-                    $out .= '<a href="'.get_permalink($post->ID).'">';
-                    $out .= $title;
-                    $out .= '</a><br/>';
-                }
-            }
-        }
-        else
-        {
-            $out .= __( "You have to create a recipe first, check the 'Recipes' menu on the left.", $this->pluginName );
-        }
-        $out .= '</div>';
-
-        return $out;
-    }
-
-    public function recipes_thumbnail($html)
-    {
-        if ( get_post_type() == 'recipe' )
-        {
-            $html = '';
-        }
-
-        return $html;
-    }
-
+    
     /*
-     * ================================================================================================================
-     * @INGREDIENTS
-     * ================================================================================================================
+     * Check if shortcode is present in current post/page
+     * Only works inside The Loop.
      */
-
-    public function ingredients_init()
-    {
-        register_taxonomy(
-            'ingredient',
-            'recipe',
-            array(
-                'labels' => array(
-                    'name'                       => __( 'Ingredients', $this->pluginName ),
-                    'singular_name'              => __( 'Ingredient', $this->pluginName ),
-                    'search_items'               => __( 'Search Ingredients', $this->pluginName ),
-                    'popular_items'              => __( 'Popular Ingredients', $this->pluginName ),
-                    'all_items'                  => __( 'All Ingredients', $this->pluginName ),
-                    'parent_item'                => __( 'Parent Ingredient', $this->pluginName ),
-                    'parent_item_colon'          => __( 'Parent Ingredient:', $this->pluginName ),
-                    'edit_item'                  => __( 'Edit Ingredient', $this->pluginName ),
-                    'update_item'                => __( 'Update Ingredient', $this->pluginName ),
-                    'add_new_item'               => __( 'Add New Ingredient', $this->pluginName ),
-                    'new_item_name'              => __( 'New Ingredient Name', $this->pluginName ),
-                    'separate_items_with_commas' => __( 'Separate ingredients with commas', $this->pluginName ),
-                    'add_or_remove_items'        => __( 'Add or remove ingredients', $this->pluginName ),
-                    'choose_from_most_used'      => __( 'Choose from the most used ingredients', $this->pluginName ),
-                    'not_found'                  => __( 'No ingredients found.', $this->pluginName ),
-                    'menu_name'                  => __( 'Ingredients', $this->pluginName )
-                ),
-                'show_ui'       => true,
-                'show_tagcloud' => true,
-                'hierarchical'  => true,
-                'rewrite' => array (
-                    'slug' => _x( 'ingredient', 'Ingredient slug', $this->pluginName )
-                ),
-                'query_var'     => true
-            )
-        );
-    }
-
-    /*
-     * ================================================================================================================
-     * @COURSES
-     * ================================================================================================================
-     */
-
-    public function courses_init()
-    {
-        register_taxonomy(
-            'course',
-            'recipe',
-            array(
-                'labels' => array(
-                    'name'                       => __( 'Courses', $this->pluginName ),
-                    'singular_name'              => __( 'Course', $this->pluginName ),
-                    'search_items'               => __( 'Search Courses', $this->pluginName ),
-                    'popular_items'              => __( 'Popular Courses', $this->pluginName ),
-                    'all_items'                  => __( 'All Courses', $this->pluginName ),
-                    'edit_item'                  => __( 'Edit Course', $this->pluginName ),
-                    'update_item'                => __( 'Update Course', $this->pluginName ),
-                    'add_new_item'               => __( 'Add New Course', $this->pluginName ),
-                    'new_item_name'              => __( 'New Course Name', $this->pluginName ),
-                    'separate_items_with_commas' => __( 'Separate courses with commas', $this->pluginName ),
-                    'add_or_remove_items'        => __( 'Add or remove courses', $this->pluginName ),
-                    'choose_from_most_used'      => __( 'Choose from the most used courses', $this->pluginName ),
-                    'not_found'                  => __( 'No courses found.', $this->pluginName ),
-                    'menu_name'                  => __( 'Courses', $this->pluginName )
-                ),
-                'show_ui' => true,
-                'show_tagcloud' => true,
-                'hierarchical' => false,
-                'rewrite' => array (
-                    'slug' => _x( 'course', 'Course slug', $this->pluginName )
-                ),
-            )
-        );
+    public function check_for_shortcode( $shortcode, $post = '' ) {
+        if( $post == '' ) {
+            global $post;
+        }
+        if( function_exists( 'has_shortcode' ) ) {
+            
+            if( isset($post->post_content) AND has_shortcode( $post->post_content, $shortcode )) { 
+                return true;
+            } 
+            return false;
+        }
+        return true; //in older versions of WP we'll just have to enqueue everything :(
     }
     
-    public function courses_defaults()
-    {
-        wp_insert_term( __( 'Breakfast', $this->pluginName ), 'course' );
-        wp_insert_term( __( 'Appetizer', $this->pluginName ), 'course' );
-        wp_insert_term( __( 'Soup', $this->pluginName ), 'course' );
-        wp_insert_term( __( 'Main Course', $this->pluginName ), 'course' );
-        wp_insert_term( __( 'Side Dish', $this->pluginName ), 'course' );
-        wp_insert_term( __( 'Salad', $this->pluginName ), 'course' );
-        wp_insert_term( __( 'Dessert', $this->pluginName ), 'course' );
-        wp_insert_term( __( 'Snack', $this->pluginName ), 'course' );
-        wp_insert_term( __( 'Drinks', $this->pluginName ), 'course' );
-    }
-
-    /*
-     * ================================================================================================================
-     * @CUISINES
-     * ================================================================================================================
+    /* 
+     * Checks whether given taxonomy is in use.
+     * Returns true if more than one term used.
      */
-
-    public function cuisines_init()
-    {
-        register_taxonomy(
-            'cuisine',
-            'recipe',
-            array(
-                'labels' => array(
-                    'name'                       => __( 'Cuisines', $this->pluginName ),
-                    'singular_name'              => __( 'Cuisine', $this->pluginName ),
-                    'search_items'               => __( 'Search Cuisines', $this->pluginName ),
-                    'popular_items'              => __( 'Popular Cuisines', $this->pluginName ),
-                    'all_items'                  => __( 'All Cuisines', $this->pluginName ),
-                    'edit_item'                  => __( 'Edit Cuisine', $this->pluginName ),
-                    'update_item'                => __( 'Update Cuisine', $this->pluginName ),
-                    'add_new_item'               => __( 'Add New Cuisine', $this->pluginName ),
-                    'new_item_name'              => __( 'New Cuisine Name', $this->pluginName ),
-                    'separate_items_with_commas' => __( 'Separate cuisines with commas', $this->pluginName ),
-                    'add_or_remove_items'        => __( 'Add or remove cuisines', $this->pluginName ),
-                    'choose_from_most_used'      => __( 'Choose from the most used cuisines', $this->pluginName ),
-                    'not_found'                  => __( 'No cuisines found.', $this->pluginName ),
-                    'menu_name'                  => __( 'Cuisines', $this->pluginName )
-                ),
-                'show_ui' => true,
-                'show_tagcloud' => true,
-                'hierarchical' => false,
-                'rewrite' => array (
-                    'slug' => _x( 'cuisine', 'Cuisine slug', $this->pluginName )
-                ),
-            )
-        );
+    protected function site_is_using( $taxonomy = '' ) {
+        $terms_used = get_terms( $taxonomy );
+        if( count( $terms_used ) > 1 ) {
+            return true;
+        }
+        return false;
     }
-
-    public function cuisines_defaults()
-    {
-        wp_insert_term( __( 'French', $this->pluginName ), 'cuisine' );
-        wp_insert_term( __( 'Italian', $this->pluginName ), 'cuisine' );
-        wp_insert_term( __( 'Mediterranean', $this->pluginName ), 'cuisine' );
-        wp_insert_term( __( 'Indian', $this->pluginName ), 'cuisine' );
-        wp_insert_term( __( 'Chinese', $this->pluginName ), 'cuisine' );
-        wp_insert_term( __( 'Japanese', $this->pluginName ), 'cuisine' );
-        wp_insert_term( __( 'American', $this->pluginName ), 'cuisine' );
-        wp_insert_term( __( 'Mexican', $this->pluginName ), 'cuisine' );
-    }
-
+    
     /*
-     * ================================================================================================================
-     * @RATINGS
-     * ================================================================================================================
+     * Permission checks for users.
+     * Prevents future changes to permission names from breaking addons.
+     * 
+     * Example usage if capability type in core changed to "recipe":
+     * wpurp_user_can( 'edit_posts' );
+     * Will check for edit_recipes capability.
+     * 
      */
-
-    public function ratings_init()
-    {
-        register_taxonomy(
-            'rating',
-            'recipe',
-            array(
-                'labels' => array(
-                    'name'                       => __( 'Ratings', $this->pluginName ),
-                    'singular_name'              => __( 'Rating', $this->pluginName ),
-                    'search_items'               => __( 'Search Ratings', $this->pluginName ),
-                    'popular_items'              => __( 'Popular Ratings', $this->pluginName ),
-                    'all_items'                  => __( 'All Ratings', $this->pluginName ),
-                    'edit_item'                  => __( 'Edit Rating', $this->pluginName ),
-                    'update_item'                => __( 'Update Rating', $this->pluginName ),
-                    'add_new_item'               => __( 'Add New Rating', $this->pluginName ),
-                    'new_item_name'              => __( 'New Rating Name', $this->pluginName ),
-                    'separate_items_with_commas' => __( 'Separate ratings with commas', $this->pluginName ),
-                    'add_or_remove_items'        => __( 'Add or remove ratings', $this->pluginName ),
-                    'choose_from_most_used'      => __( 'Choose from the most used ratings', $this->pluginName ),
-                    'not_found'                  => __( 'No ratings found.', $this->pluginName ),
-                    'menu_name'                  => __( 'Ratings', $this->pluginName )
-                ),
-                'show_ui' => false,
-                'show_tagcloud' => false,
-                'hierarchical' => false,
-                'rewrite' => array (
-                    'slug' => _x( 'rating', 'Rating slug', $this->pluginName )
-                ),
-            )
-        );
+    protected function wpurp_user_can( $user_id = '', $capability = '' ) {
+        if( '' == $user_id || '' == $capability ) {
+            return false;
+        }
+        
+        if( $GLOBALS['wp_post_types']['recipe']['cap']->$capability ) {
+            $wpurp_cap = $GLOBALS['wp_post_types']['recipe']['cap']->$capability;  
+            return user_can( $user_id, $wpurp_cap );
+        }  
+        
+        return false;
     }
+    
+    protected function wpurp_current_user_can( $capability = '') {
+        if( '' == $capability ) {
+            return false;
+        }
+        //echo '<pre>'.print_r($GLOBALS['wp_post_types']['recipe']->cap->$capability, true).'</pre>';
+        if( isset( $GLOBALS['wp_post_types']['recipe']->cap->$capability ) ) {
+            $wpurp_cap = $GLOBALS['wp_post_types']['recipe']->cap->$capability;  
+
+
+            $args = array_slice( func_get_args(), 1 );
+            $args = array_merge( array( $wpurp_cap ), $args );
+
+            return current_user_can( $wpurp_cap, $args );
+        }  
+        
+        return false;
+    }
+
 }
 
-$wpUltimateRecipe = new WPUltimateRecipe();
+$wpurp = new WPUltimateRecipe();
