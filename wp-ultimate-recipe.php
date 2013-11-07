@@ -352,6 +352,7 @@ class WPUltimateRecipe {
             'post_type' => 'recipe',
             'orderby' => $orderby,
             'order' => $order,
+            'posts_per_page' => -1,
         );
         
         if( $taxonomy && !$term ) {

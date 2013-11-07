@@ -202,7 +202,7 @@ class WPURP_Core extends WPUltimateRecipe {
                 'supports' => array( 'title', 'thumbnail', 'comments', 'excerpt' ),
                 'taxonomies' => array( '' ),
                 'menu_icon' =>  $this->pluginUrl . '/img/icon_16.png',
-                'has_archive' => false,
+                'has_archive' => true,
                 'rewrite' => _x( 'recipe', 'Recipe slug', $this->pluginName ),
             ));
     }
