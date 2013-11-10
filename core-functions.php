@@ -286,12 +286,12 @@ class WPURP_Core extends WPUltimateRecipe {
         }
     }
 
-    public function recipes_content( $content )
+    public function recipes_content( $content, $premium_template = false )
     {
         if ( get_post_type() == 'recipe') {
             remove_filter('the_content', array( $this, 'recipes_content' ), 10);
             
-            if( !$content ) {
+            if( !$premium_template ) {
 
                 $recipe_post = get_post();
                 $recipe = get_post_custom($recipe_post->ID);
@@ -315,6 +315,7 @@ class WPURP_Core extends WPUltimateRecipe {
                 add_filter('the_content', array( $this, 'recipes_content' ), 10);
                 
             }
+
         }
 
         return $content;

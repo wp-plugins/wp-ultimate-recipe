@@ -55,6 +55,9 @@ You can find more information at [WPUltimateRecipePlugin.com](http://www.wpultim
 
 == Changelog ==
 
+= 0.0.15 =
+* Fixes display issue
+
 = 0.0.14 =
 * Getting everything ready for the premium version
 
@@ -101,6 +104,9 @@ You can find more information at [WPUltimateRecipePlugin.com](http://www.wpultim
 * Very first version of this plugin
 
 == Upgrade notice ==
+
+= 0.0.15 =
+Update if you have issues with displaying recipes
 
 = 0.0.14 =
 Update if you want to use the Premium version
