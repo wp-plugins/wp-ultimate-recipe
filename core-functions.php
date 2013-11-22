@@ -10,6 +10,7 @@ class WPURP_Core extends WPUltimateRecipe {
         $this->pluginUrl = $pluginUrl;
         
         // Actions
+        add_action( 'init', array( $this, 'load_installed_addons' ), -10 );
         add_action( 'init', array( $this, 'recipes_init' ));
         add_action( 'init', array( $this, 'ingredients_init' ));
         add_action( 'init', array( $this, 'courses_init' ));
@@ -31,8 +32,6 @@ class WPURP_Core extends WPUltimateRecipe {
         add_filter( 'post_class', array( $this, 'recipes_post_class' ) ); // Add post and type-post classes
         add_filter( 'post_thumbnail_html', array( $this, 'recipes_thumbnail' ), 10 );
 
-        // Hooks
-        register_activation_hook( __FILE__, array( $this, 'activate_taxonomies' ) );
 
         // Shortcodes
         add_shortcode("ultimate-recipe", array( $this, 'recipes_shortcode' ));
@@ -77,7 +76,14 @@ class WPURP_Core extends WPUltimateRecipe {
         }
     }
 
-
+    public function is_addon_active( $addon )
+    {
+        include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+        if($this->installed_addons[$addon] === true && is_plugin_active( 'wp-ultimate-recipe-premium/wp-ultimate-recipe-premium.php' )) {
+            return true;
+        }
+        return false;
+    }
 
     public function activate_taxonomies()
     {
@@ -240,7 +246,7 @@ class WPURP_Core extends WPUltimateRecipe {
             {
                 $old = get_post_meta( $recipe_id, $field, true );
                 $new = $_POST[$field];
-
+//echo '<pre>'.print_r($_POST, true).'</pre>';
                 // Field specific adjustments
                 if ($field == 'recipe_ingredients')
                 {
@@ -339,7 +345,19 @@ class WPURP_Core extends WPUltimateRecipe {
 
         $recipe_post = null;
         if ($options['id'] != 'n/a') {
-            $recipe_post = get_post(intval($options['id']));
+
+            if( $options['id'] == 'random' ) {
+
+                $posts = get_posts(array(
+                    'post_type' => 'recipe',
+                    'nopaging' => true
+                ));
+
+                $recipe_post = $posts[array_rand($posts)];
+
+            } else {
+                $recipe_post = get_post(intval($options['id']));
+            }
         }
 
         if(!is_null($recipe_post) && $recipe_post->post_type == 'recipe')
@@ -385,6 +403,7 @@ class WPURP_Core extends WPUltimateRecipe {
         if($posts) {
             $out .= '<label for="wpurp-recipe">' . __( 'Select the recipe to add to your post:', $this->pluginName ) .  '</label><br/><br/>';
             $out .= '<select id="wpurp-recipe">';
+            $out .= '<option value="random">Show a random recipe to each visitor</option>';
 
             foreach($posts as $post)
             {
@@ -512,31 +531,33 @@ class WPURP_Core extends WPUltimateRecipe {
 
     public function courses_init()
     {
-        register_taxonomy(
-            'course',
-            'recipe',
-            array(
-                'labels' => array(
-                    'name'                       => __( 'Courses', $this->pluginName ),
-                    'singular_name'              => __( 'Course', $this->pluginName ),
-                    'search_items'               => __( 'Search Courses', $this->pluginName ),
-                    'popular_items'              => __( 'Popular Courses', $this->pluginName ),
-                    'all_items'                  => __( 'All Courses', $this->pluginName ),
-                    'edit_item'                  => __( 'Edit Course', $this->pluginName ),
-                    'update_item'                => __( 'Update Course', $this->pluginName ),
-                    'add_new_item'               => __( 'Add New Course', $this->pluginName ),
-                    'new_item_name'              => __( 'New Course Name', $this->pluginName ),
-                    'separate_items_with_commas' => __( 'Separate courses with commas', $this->pluginName ),
-                    'add_or_remove_items'        => __( 'Add or remove courses', $this->pluginName ),
-                    'choose_from_most_used'      => __( 'Choose from the most used courses', $this->pluginName ),
-                    'not_found'                  => __( 'No courses found.', $this->pluginName ),
-                    'menu_name'                  => __( 'Courses', $this->pluginName )
-                ),
-                'show_ui' => true,
-                'show_tagcloud' => true,
-                'hierarchical' => false
-            )
-        );
+        if(!$this->is_addon_active('custom-taxonomies')) {
+            register_taxonomy(
+                'course',
+                'recipe',
+                array(
+                    'labels' => array(
+                        'name'                       => __( 'Courses', $this->pluginName ),
+                        'singular_name'              => __( 'Course', $this->pluginName ),
+                        'search_items'               => __( 'Search Courses', $this->pluginName ),
+                        'popular_items'              => __( 'Popular Courses', $this->pluginName ),
+                        'all_items'                  => __( 'All Courses', $this->pluginName ),
+                        'edit_item'                  => __( 'Edit Course', $this->pluginName ),
+                        'update_item'                => __( 'Update Course', $this->pluginName ),
+                        'add_new_item'               => __( 'Add New Course', $this->pluginName ),
+                        'new_item_name'              => __( 'New Course Name', $this->pluginName ),
+                        'separate_items_with_commas' => __( 'Separate courses with commas', $this->pluginName ),
+                        'add_or_remove_items'        => __( 'Add or remove courses', $this->pluginName ),
+                        'choose_from_most_used'      => __( 'Choose from the most used courses', $this->pluginName ),
+                        'not_found'                  => __( 'No courses found.', $this->pluginName ),
+                        'menu_name'                  => __( 'Courses', $this->pluginName )
+                    ),
+                    'show_ui' => true,
+                    'show_tagcloud' => true,
+                    'hierarchical' => false
+                )
+            );
+        }
     }
     
     public function courses_defaults()
@@ -560,31 +581,33 @@ class WPURP_Core extends WPUltimateRecipe {
 
     public function cuisines_init()
     {
-        register_taxonomy(
-            'cuisine',
-            'recipe',
-            array(
-                'labels' => array(
-                    'name'                       => __( 'Cuisines', $this->pluginName ),
-                    'singular_name'              => __( 'Cuisine', $this->pluginName ),
-                    'search_items'               => __( 'Search Cuisines', $this->pluginName ),
-                    'popular_items'              => __( 'Popular Cuisines', $this->pluginName ),
-                    'all_items'                  => __( 'All Cuisines', $this->pluginName ),
-                    'edit_item'                  => __( 'Edit Cuisine', $this->pluginName ),
-                    'update_item'                => __( 'Update Cuisine', $this->pluginName ),
-                    'add_new_item'               => __( 'Add New Cuisine', $this->pluginName ),
-                    'new_item_name'              => __( 'New Cuisine Name', $this->pluginName ),
-                    'separate_items_with_commas' => __( 'Separate cuisines with commas', $this->pluginName ),
-                    'add_or_remove_items'        => __( 'Add or remove cuisines', $this->pluginName ),
-                    'choose_from_most_used'      => __( 'Choose from the most used cuisines', $this->pluginName ),
-                    'not_found'                  => __( 'No cuisines found.', $this->pluginName ),
-                    'menu_name'                  => __( 'Cuisines', $this->pluginName )
-                ),
-                'show_ui' => true,
-                'show_tagcloud' => true,
-                'hierarchical' => false
-            )
-        );
+        if(!$this->is_addon_active('custom-taxonomies')) {
+            register_taxonomy(
+                'cuisine',
+                'recipe',
+                array(
+                    'labels' => array(
+                        'name'                       => __( 'Cuisines', $this->pluginName ),
+                        'singular_name'              => __( 'Cuisine', $this->pluginName ),
+                        'search_items'               => __( 'Search Cuisines', $this->pluginName ),
+                        'popular_items'              => __( 'Popular Cuisines', $this->pluginName ),
+                        'all_items'                  => __( 'All Cuisines', $this->pluginName ),
+                        'edit_item'                  => __( 'Edit Cuisine', $this->pluginName ),
+                        'update_item'                => __( 'Update Cuisine', $this->pluginName ),
+                        'add_new_item'               => __( 'Add New Cuisine', $this->pluginName ),
+                        'new_item_name'              => __( 'New Cuisine Name', $this->pluginName ),
+                        'separate_items_with_commas' => __( 'Separate cuisines with commas', $this->pluginName ),
+                        'add_or_remove_items'        => __( 'Add or remove cuisines', $this->pluginName ),
+                        'choose_from_most_used'      => __( 'Choose from the most used cuisines', $this->pluginName ),
+                        'not_found'                  => __( 'No cuisines found.', $this->pluginName ),
+                        'menu_name'                  => __( 'Cuisines', $this->pluginName )
+                    ),
+                    'show_ui' => true,
+                    'show_tagcloud' => true,
+                    'hierarchical' => false
+                )
+            );
+        }
     }
 
     public function cuisines_defaults()

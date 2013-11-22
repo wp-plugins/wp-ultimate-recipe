@@ -168,3 +168,8 @@ $image = $this->pluginUrl . '/img/image_placeholder.png';
 <div class="recipe-form-notes">
     <?php _e( "<strong>Use the TAB key</strong> while adding instructions, it will automatically create new fields. <strong>Don't worry about empty lines</strong>, these will be ignored.", $this->pluginName ); ?>
 </div>
+
+<h4><?php _e( 'Recipe notes', $this->pluginName ) ?></h4>
+<textarea id="recipe_notes" name="recipe_notes" rows="5">
+<?php echo $notes; ?>
+</textarea>

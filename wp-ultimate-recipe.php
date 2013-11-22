@@ -3,7 +3,7 @@
 Plugin Name: WP Ultimate Recipe
 Plugin URI: http://www.wpultimaterecipeplugin.com
 Description: WP Ultimate Recipe is a user friendly plugin for adding recipes to any of your posts and pages.
-Version: 0.0.15
+Version: 0.0.16
 Author: Bootstrapped Ventures
 Author URI: http://www.bootstrappedventures.com
 License: GPLv2
@@ -17,6 +17,7 @@ class WPUltimateRecipe {
     protected $pluginName;
     protected $pluginDir;
     protected $pluginUrl;
+    protected $installed_addons;
     
     public function __construct()
     {
@@ -25,7 +26,7 @@ class WPUltimateRecipe {
         $this->pluginUrl = WP_PLUGIN_URL . '/' . $this->pluginName;
 
         // Version
-        update_option( $this->pluginName . '_version', '0.0.15' );
+        update_option( $this->pluginName . '_version', '0.0.16' );
 
         // Textdomain
         load_plugin_textdomain($this->pluginName, false, basename( dirname( __FILE__ ) ) . '/lang/'  );
@@ -33,9 +34,12 @@ class WPUltimateRecipe {
         //Include core
         include_once( $this->pluginDir . '/core-functions.php' );
         $wpurp_core = new WPURP_Core( $this->pluginName, $this->pluginDir, $this->pluginUrl );
-        
+
+        // Hooks
+        register_activation_hook( __FILE__, array( $wpurp_core, 'activate_taxonomies' ) );
+
         //Actions
-        add_action( 'init', array( $this, 'get_installed_addons' ) );
+        //add_action( 'init', array( $this, 'load_installed_addons' ), -10 ); // Put this in core-functions
         add_action( 'wp_print_styles', array( $this, 'wpurp_styles' ) );
         add_action( 'wp_footer', array( $this, 'wpurp_scripts' ) );
         add_action( 'admin_head', array( $this, 'wpurp_admin_styles' ) );
@@ -61,7 +65,7 @@ class WPUltimateRecipe {
     /*
      * Load all available addons - Just duplicated this because I didn't feel like thinking. Sorry. - Brecht
      */
-    public function get_installed_addons() {
+    public function load_installed_addons() {
 
         $addons_dir = WP_PLUGIN_DIR . '/' . $this->pluginName . '-premium' . '/addons'; // Such solution. Wow.
 
@@ -187,6 +191,14 @@ class WPUltimateRecipe {
         }
 
         include($this->pluginDir . '/template/recipe_menu.php');
+    }
+
+    public function admin_menu_settings_text($args) {
+
+        $html = '<input type="text" id="'.$args[0].'" name="'.$args[0].'" value="'.$args[2].'" />';
+        $html .= '<label for="'.$args[0].'"> '  . $args[1] . '</label>';
+
+        echo $html;
     }
 
     public function admin_menu_settings_checkbox($args) {
@@ -393,7 +405,8 @@ class WPUltimateRecipe {
             'recipe_prep_time',
             'recipe_cook_time',
             'recipe_ingredients',
-            'recipe_instructions'
+            'recipe_instructions',
+            'recipe_notes',
         );
     }
     

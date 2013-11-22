@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WP Ultimate Recipe package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2013-11-07 14:00+0100\n"
+"PO-Revision-Date: 2013-11-21 09:29+0100\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -15,27 +15,29 @@ msgstr ""
 
 #: wp-ultimate-recipe.php:58
 msgid "WPURP Addons"
-msgstr ""
+msgstr "WPURP Eklentileri"
 
 #: wp-ultimate-recipe.php:58 wp-ultimate-recipe.php:110
 msgid "Addons"
-msgstr ""
+msgstr "Eklentiler"
 
 #: wp-ultimate-recipe.php:111
 msgid "To install new addons, visit the download link for instructions."
 msgstr ""
+"Yeni eklentiler yüklemek için, indirme linkini tıklayarak yönergeleri "
+"izleyin."
 
 #: wp-ultimate-recipe.php:140
 msgid "Installed"
-msgstr ""
+msgstr "Yüklendi"
 
 #: wp-ultimate-recipe.php:162
 msgid "Download!"
-msgstr ""
+msgstr "İndir!"
 
 #: wp-ultimate-recipe.php:292
 msgid "Upload Image"
-msgstr ""
+msgstr "Resim Yükle"
 
 #: core-functions.php:619
 msgid "Edit Rating"
@@ -359,192 +361,192 @@ msgstr "Malzeme bulunamadı."
 
 #: core-functions.php:519 core-functions.php:532
 msgid "Courses"
-msgstr "Servis Tipleri"
+msgstr "Servisler"
 
 #: core-functions.php:520 template/recipe_public.php:53
 msgid "Course"
-msgstr "Servis Tipi"
+msgstr "Servis"
 
 #: core-functions.php:521
 msgid "Search Courses"
-msgstr "Servis Tipi Ara"
+msgstr "Servis Ara"
 
 #: core-functions.php:522
 msgid "Popular Courses"
-msgstr "Popüler Servis Tipleri"
+msgstr "Popüler Servisler"
 
 #: core-functions.php:523
 msgid "All Courses"
-msgstr ""
+msgstr "Tüm Servisler"
 
 #: core-functions.php:524
 msgid "Edit Course"
-msgstr ""
+msgstr "Servisi Düzenle"
 
 #: core-functions.php:525
 msgid "Update Course"
-msgstr ""
+msgstr "Servisi Güncelle"
 
 #: core-functions.php:526
 msgid "Add New Course"
-msgstr ""
+msgstr "Yeni Servis Ekle"
 
 #: core-functions.php:527
 msgid "New Course Name"
-msgstr ""
+msgstr "Yeni Servis Adı"
 
 #: core-functions.php:528
 msgid "Separate courses with commas"
-msgstr ""
+msgstr "Servisleri virgül ile ayır"
 
 #: core-functions.php:529
 msgid "Add or remove courses"
-msgstr ""
+msgstr "Servis ekle veya çıkar"
 
 #: core-functions.php:530
 msgid "Choose from the most used courses"
-msgstr ""
+msgstr "En fazla kullanılan servislerden seç"
 
 #: core-functions.php:531
 msgid "No courses found."
-msgstr ""
+msgstr "Servis bulunamadı."
 
 #: core-functions.php:543
 msgid "Breakfast"
-msgstr ""
+msgstr "Kahvaltı"
 
 #: core-functions.php:544
 msgid "Appetizer"
-msgstr ""
+msgstr "Aperatif "
 
 #: core-functions.php:545
 msgid "Soup"
-msgstr ""
+msgstr "Çorba"
 
 #: core-functions.php:546
 msgid "Main Course"
-msgstr ""
+msgstr "Ana Yemek"
 
 #: core-functions.php:547
 msgid "Side Dish"
-msgstr ""
+msgstr "Meze"
 
 #: core-functions.php:548
 msgid "Salad"
-msgstr ""
+msgstr "Salata"
 
 #: core-functions.php:549
 msgid "Dessert"
-msgstr ""
+msgstr "Tatlı"
 
 #: core-functions.php:550
 msgid "Snack"
-msgstr ""
+msgstr "Atıştırmalık"
 
 #: core-functions.php:551
 msgid "Drinks"
-msgstr ""
+msgstr "İçecekler"
 
 #: core-functions.php:567 core-functions.php:580
 msgid "Cuisines"
-msgstr ""
+msgstr "Mutfaklar"
 
 #: core-functions.php:568 template/recipe_public.php:66
 msgid "Cuisine"
-msgstr ""
+msgstr "Mutfak"
 
 #: core-functions.php:569
 msgid "Search Cuisines"
-msgstr ""
+msgstr "Mutfak Ara"
 
 #: core-functions.php:570
 msgid "Popular Cuisines"
-msgstr ""
+msgstr "Popüler Mutfaklar"
 
 #: core-functions.php:571
 msgid "All Cuisines"
-msgstr ""
+msgstr "Tüm Mutfaklar"
 
 #: core-functions.php:572
 msgid "Edit Cuisine"
-msgstr ""
+msgstr "Mutfağı Düzenle"
 
 #: core-functions.php:573
 msgid "Update Cuisine"
-msgstr ""
+msgstr "Mutfağı Düzenle"
 
 #: core-functions.php:574
 msgid "Add New Cuisine"
-msgstr ""
+msgstr "Yeni Mutfak Ekle"
 
 #: core-functions.php:575
 msgid "New Cuisine Name"
-msgstr ""
+msgstr "Yeni Mutfak Ekle"
 
 #: core-functions.php:576
 msgid "Separate cuisines with commas"
-msgstr ""
+msgstr "Mutfakları virgül ile ayır"
 
 #: core-functions.php:577
 msgid "Add or remove cuisines"
-msgstr ""
+msgstr "Mutfak ekle veya çıkar"
 
 #: core-functions.php:578
 msgid "Choose from the most used cuisines"
-msgstr ""
+msgstr "En fazla kullanılan mutfaklardan seç"
 
 #: core-functions.php:579
 msgid "No cuisines found."
-msgstr ""
+msgstr "Mutfak bulunamadı."
 
 #: core-functions.php:591
 msgid "French"
-msgstr ""
+msgstr "Fransız"
 
 #: core-functions.php:592
 msgid "Italian"
-msgstr ""
+msgstr "İtalyan"
 
 #: core-functions.php:593
 msgid "Mediterranean"
-msgstr ""
+msgstr "Akdeniz"
 
 #: core-functions.php:594
 msgid "Indian"
-msgstr ""
+msgstr "Hint"
 
 #: core-functions.php:595
 msgid "Chinese"
-msgstr ""
+msgstr "Çin"
 
 #: core-functions.php:596
 msgid "Japanese"
-msgstr ""
+msgstr "Japon"
 
 #: core-functions.php:597
 msgid "American"
-msgstr ""
+msgstr "Amerikan"
 
 #: core-functions.php:598
 msgid "Mexican"
-msgstr ""
+msgstr "Meksika"
 
 #: core-functions.php:614 core-functions.php:627
 msgid "Ratings"
-msgstr ""
+msgstr "Puanlar"
 
 #: core-functions.php:615 template/recipe_admin.php:26
 msgid "Rating"
-msgstr ""
+msgstr "Puan"
 
 #: core-functions.php:616
 msgid "Search Ratings"
-msgstr ""
+msgstr "Puan ara"
 
 #: core-functions.php:617
 msgid "Popular Ratings"
-msgstr ""
+msgstr "Popüler Puanlar"
 
 #: core-functions.php:618
 msgid "All Ratings"
-msgstr ""
+msgstr "Tüm Puanlar"

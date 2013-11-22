@@ -1,8 +1,8 @@
-# Translation of WP Ultimate Recipe in Swedish
+# Translation of WP Ultimate Recipe in German
 # This file is distributed under the same license as the WP Ultimate Recipe package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2013-11-21 09:23+0100\n"
+"PO-Revision-Date: 2013-11-21 09:29+0100\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -15,98 +15,99 @@ msgstr ""
 
 #: wp-ultimate-recipe.php:58
 msgid "WPURP Addons"
-msgstr "WPURP Tillägg"
+msgstr "WPURP Addons"
 
 #: wp-ultimate-recipe.php:58 wp-ultimate-recipe.php:110
 msgid "Addons"
-msgstr "Tillägg"
+msgstr "Addons"
 
 #: wp-ultimate-recipe.php:111
 msgid "To install new addons, visit the download link for instructions."
 msgstr ""
-"För att installera nya tillägg besök nedladdningslänken för instruktioner. "
+"Für weitere Anweisungen zum installieren von Addons, klicke auf den Link zum "
+"Download."
 
 #: wp-ultimate-recipe.php:140
 msgid "Installed"
-msgstr "Installerad"
+msgstr "Installiert"
 
 #: wp-ultimate-recipe.php:162
 msgid "Download!"
-msgstr "Ladda ner!"
+msgstr "Download!"
 
 #: wp-ultimate-recipe.php:292
 msgid "Upload Image"
-msgstr "Ladda upp en bild"
+msgstr "Bild hochladen"
 
 #: core-functions.php:619
 msgid "Edit Rating"
-msgstr "Redigera betyg"
+msgstr "Bewertung bearbeiten"
 
 #: core-functions.php:620
 msgid "Update Rating"
-msgstr "Uppdatera betyg"
+msgstr "Bewertung aktualisieren"
 
 #: core-functions.php:621
 msgid "Add New Rating"
-msgstr "Lägg till betyg"
+msgstr "Neue Bewertung dazu"
 
 #: core-functions.php:622
 msgid "New Rating Name"
-msgstr "Nytt betyg namn"
+msgstr "Neuer Bewertungsname"
 
 #: core-functions.php:623
 msgid "Separate ratings with commas"
-msgstr "Separera betyg med kommatecken"
+msgstr "Bewertungen mit Komma trennen"
 
 #: core-functions.php:624
 msgid "Add or remove ratings"
-msgstr "Lägg till eller ta bort betyg"
+msgstr "Bewertung hinzu oder entfernen"
 
 #: core-functions.php:625
 msgid "Choose from the most used ratings"
-msgstr "Välj bland de mest använda betygen"
+msgstr "Aus den meisten Bewertungen wählen"
 
 #: core-functions.php:626
 msgid "No ratings found."
-msgstr "Inga betyg hittades"
+msgstr "Keine Bewertung gefunden"
 
 #: template/recipe_admin.php:17
 msgid "General"
-msgstr "Allmän"
+msgstr "Allgemein"
 
 #: template/recipe_admin.php:20
 msgid "Description"
-msgstr "Beskrivning"
+msgstr "Beschreibung"
 
 #: template/recipe_admin.php:33
 msgid "star"
-msgstr "stjärna"
+msgstr "Stern"
 
 #: template/recipe_admin.php:33
 msgid "stars"
-msgstr "stjärnor"
+msgstr "Sterne"
 
 #: template/recipe_admin.php:40 template/recipe_public.php:76
 #: template/recipe_public.php:132
 msgid "Servings"
-msgstr "Portioner"
+msgstr "Portionen"
 
 #: template/recipe_admin.php:44
 msgid "(e.g. 2 people, 3 loafs, ...)"
-msgstr "(t.ex. 2 personer, 3 limpor, ...)"
+msgstr "(z.B. 2 Personen, 3 Portionen)"
 
 #: template/recipe_admin.php:48
 msgid "Prep time"
-msgstr "Förberedelsetid"
+msgstr "Vorbereitung"
 
 #: template/recipe_admin.php:51 template/recipe_admin.php:58
 #: template/recipe_public.php:84 template/recipe_public.php:85
 msgid "minutes"
-msgstr "minuter"
+msgstr "Minuten"
 
 #: template/recipe_admin.php:55
 msgid "Cook time"
-msgstr "Tillagningstid"
+msgstr "Kochzeit"
 
 #: template/recipe_admin.php:64
 msgid ""
@@ -114,25 +115,25 @@ msgid ""
 "<strong>Cuisines</strong> by using the boxes on the right. Use the "
 "<strong>featured image</strong> if you want a photo of the finished dish."
 msgstr ""
-"Glöm inte att du kan ange både <strong>Maträtt</strong> och <strong>Kök</"
-"strong> genom att använda fälten till höger. Använd <strong>\"featured\" "
-"bild</strong> om du vill lägga till en bild på den färdiga rätten. "
+"Achtung:  Du kannst Deine Rezepte einer <strong>Essensart</strong> und einer "
+"<strong>Küche</strong> zuordnen. Nutze dazu die Boxen rechts. Nutze das "
+"<strong>Beitragsbild</strong>  für ein Photo des fertigen Essens."
 
 #: template/recipe_admin.php:96
 msgid "cup"
-msgstr "cup"
+msgstr "Tasse"
 
 #: template/recipe_admin.php:97
 msgid "walnuts"
-msgstr "valnötter"
+msgstr "Walnüsse"
 
 #: template/recipe_admin.php:98
 msgid "coarsely chopped"
-msgstr "grovhackade"
+msgstr "fein gehackt"
 
 #: template/recipe_admin.php:104
 msgid "Add an ingredient"
-msgstr "Lägg till ingrediens"
+msgstr "Neue Zutat"
 
 #: template/recipe_admin.php:107
 msgid ""
@@ -140,25 +141,26 @@ msgid ""
 "automatically create new fields. <strong>Don't worry about empty lines</"
 "strong>, these will be ignored."
 msgstr ""
-"<strong>Använd TAB-knappen</strong> när du lägger till ingredienser. Det "
-"kommer automatiskt skapa nya fält. <strong>Tomma fält</strong> sparas inte. "
+"Neue Felder für die Zutaten können automatisch durch die <strong>TAB Taste</"
+"strong> erzeugt werden. <strong>Sorge Dich nicht um leere Zeilen</strong>, "
+"diese werden automatisch entfernt."
 
 #: template/recipe_admin.php:110 template/recipe_public.php:140
 msgid "Instructions"
-msgstr "Instruktioner"
+msgstr "Anleitungen"
 
 #: template/recipe_admin.php:137 template/recipe_admin.php:156
 msgid "Add Image"
-msgstr "Lägg till bild"
+msgstr "Bild dazu"
 
 #: wp-ultimate-recipe.php:293 template/recipe_admin.php:138
 #: template/recipe_admin.php:157
 msgid "Remove Image"
-msgstr "Ta bort bild"
+msgstr "Bild entfernen"
 
 #: template/recipe_admin.php:166
 msgid "Add an instruction"
-msgstr "Lägg till instruktioner"
+msgstr "Anleitung dazu"
 
 #: template/recipe_admin.php:169
 msgid ""
@@ -166,383 +168,384 @@ msgid ""
 "automatically create new fields. <strong>Don't worry about empty lines</"
 "strong>, these will be ignored."
 msgstr ""
-"<strong>Använd TAB-knappen</strong> när du lägger till instruktioner. Det "
-"kommer automatiskt skapa nya fält. <strong>Tomma fält</strong> sparas inte."
+"Neue Felder für die Anleitung können automatisch durch die <strong>TAB "
+"Taste</strong> erzeugt werden. <strong>Sorge Dich nicht um leere Zeilen</"
+"strong>, diese werden automatisch entfernt."
 
 #: template/recipe_menu.php:14
 msgid "Problems? Take a look at the"
-msgstr "Problem? Titta på "
+msgstr "Probleme? Schau in die"
 
 #: template/recipe_public.php:77
 msgid "Prep Time"
-msgstr "Förberedelsetid"
+msgstr "Vorbereitung"
 
 #: template/recipe_public.php:78
 msgid "Cook Time"
-msgstr "Tillagningstid"
+msgstr "Kochzeit"
 
 #: template/recipe_public.php:160
 msgid "Powered by"
-msgstr "Drivs av"
+msgstr "Powered by"
 
 #: wp-ultimate-recipe.php:57
 msgid "Recipe Settings"
-msgstr "Receptinställningar"
+msgstr "Rezepte - Einstellungen"
 
 #: wp-ultimate-recipe.php:57 template/recipe_menu.php:4
 msgid "Settings"
-msgstr "Inställningar"
+msgstr "Einstellungen"
 
 #: core-functions.php:113
 msgid "Recipe Box"
-msgstr "Receptlåda"
+msgstr "Rezeptkasten"
 
 #: core-functions.php:117
 msgid "Adjustable Servings"
-msgstr "Justerbara Portioner"
+msgstr "Einstellbare Mengenangaben"
 
 #: core-functions.php:123
 msgid "Allow users to dynamically adjust the servings of recipes."
-msgstr "Tillåt användare att dynamiskt justera antal portioner för recepten. "
+msgstr "Benutzern die Anpassung der Rezepte ermöglichen"
 
 #: core-functions.php:130
 msgid "Link to plugin"
-msgstr "Länk till plugin"
+msgstr "Link zum Plugin"
 
 #: core-functions.php:136
 msgid "Show a link to the plugin website as a little thank you."
-msgstr "Visa länk till pluginens hemsida som ett litet tack. "
+msgstr "Als *Danke schön!* einen Link zum Programmierer zeigen"
 
 #: core-functions.php:143
 msgid "Show full recipe"
-msgstr "Visa hela receptet"
+msgstr "Komplettes Rezept zeigen"
 
 #: core-functions.php:149
 msgid "Show the full recipe instead of the description/excerpt in"
-msgstr "Visa hela receptet istället för beskrivning/utdrag på"
+msgstr "Volles Rezept und nicht nur den Auszug anzeigen."
 
 #: core-functions.php:149
 msgid "the recipe archive"
-msgstr "receptarkivet"
+msgstr "Rezepte - Archiv"
 
 #: core-functions.php:172
 msgid "Settings regarding the recipe box shown to your visitors."
-msgstr "Inställningar för receptfönstret som visas för dina besökare. "
+msgstr "Einstellungen zur Sichtbarkeit des Rezeptkastens"
 
 #: core-functions.php:186
 msgid "Recipes"
-msgstr "Recept"
+msgstr "Rezepte"
 
 #: core-functions.php:187 core-functions.php:214
 msgid "Recipe"
-msgstr "Recept"
+msgstr "Rezept"
 
 #: core-functions.php:188
 msgid "Add New"
-msgstr "Lägg till"
+msgstr "Neu dazu"
 
 #: core-functions.php:189
 msgid "Add New Recipe"
-msgstr "Lägg till nytt recept"
+msgstr "Neues Rezept dazu"
 
 #: core-functions.php:190
 msgid "Edit"
-msgstr "Redigera"
+msgstr "Bearbeiten"
 
 #: core-functions.php:191
 msgid "Edit Recipe"
-msgstr "Redigera recept"
+msgstr "Rezept bearbeiten"
 
 #: core-functions.php:192
 msgid "New Recipe"
-msgstr "Nytt recept"
+msgstr "Neues Rezept"
 
 #: core-functions.php:193
 msgid "View"
-msgstr "Granska"
+msgstr "Ansehen"
 
 #: core-functions.php:194
 msgid "View Recipe"
-msgstr "Granska recept"
+msgstr "Rezept anschauen"
 
 #: core-functions.php:195
 msgid "Search Recipes"
-msgstr "Sök recept"
+msgstr "Rezepte suchen"
 
 #: core-functions.php:196
 msgid "No Recipes found"
-msgstr "Inga recept hittades"
+msgstr "Keine Rezepte zu finden"
 
 #: core-functions.php:197
 msgid "No Recipes found in Trash"
-msgstr "Inga recept hittades i papperskorgen"
+msgstr "Im Müll befinden sich keine Rezepte"
 
 #: core-functions.php:198
 msgid "Parent Recipe"
-msgstr "Tidiagare recept"
+msgstr "Übergeordnetes Rezept"
 
 #: core-functions.php:385
 msgid "Select the recipe to add to your post:"
-msgstr "Välj recept att inkludera i inlägget: "
+msgstr "Wähle das Rezept für Deinen Beitrag:"
 
 #: core-functions.php:394
 msgid "Insert Recipe"
-msgstr "Lägg till recept"
+msgstr "Rezept einfügen"
 
 #: core-functions.php:398 core-functions.php:450
 msgid ""
 "You have to create a recipe first, check the 'Recipes' menu on the left."
-msgstr "Du måste skapa en recept först. Se 'Recept' i menyn till vänster. "
+msgstr "Du musst zuerst ein Rezept erstellen. Schaue links in das Menue."
 
 #: core-functions.php:480 core-functions.php:495 template/recipe_admin.php:69
 #: template/recipe_public.php:97
 msgid "Ingredients"
-msgstr "Ingredienser"
+msgstr "Zutaten"
 
 #: core-functions.php:481
 msgid "Ingredient"
-msgstr "Ingrediens"
+msgstr "Zutat"
 
 #: core-functions.php:482
 msgid "Search Ingredients"
-msgstr "Sök ingredienser"
+msgstr "Zutaten suchen"
 
 #: core-functions.php:483
 msgid "Popular Ingredients"
-msgstr "Populära ingredienser"
+msgstr "Beliebte Zutaten"
 
 #: core-functions.php:484
 msgid "All Ingredients"
-msgstr "Alla ingredienser"
+msgstr "Alle Zutaten"
 
 #: core-functions.php:485
 msgid "Parent Ingredient"
-msgstr "Tidigare ingrediens"
+msgstr "Oberbegriff der Zutat"
 
 #: core-functions.php:486
 msgid "Parent Ingredient:"
-msgstr "Tidigare ingrediens:"
+msgstr "Kategorie der Zutat"
 
 #: core-functions.php:487
 msgid "Edit Ingredient"
-msgstr "Redigera ingrediens"
+msgstr "Zutat bearbeiten"
 
 #: core-functions.php:488
 msgid "Update Ingredient"
-msgstr "Uppdatera ingrediens"
+msgstr "Zutat aktualisieren"
 
 #: core-functions.php:489
 msgid "Add New Ingredient"
-msgstr "Lägg till ingrediens"
+msgstr "Neue Zutat"
 
 #: core-functions.php:490
 msgid "New Ingredient Name"
-msgstr "Ny ingrediens"
+msgstr "Name der neuen Zutat"
 
 #: core-functions.php:491
 msgid "Separate ingredients with commas"
-msgstr "Separera ingredienser med ett kommatecken"
+msgstr "Zutaten mit Kommas trennen"
 
 #: core-functions.php:492
 msgid "Add or remove ingredients"
-msgstr "Lägg till eller ta bort ingredienser"
+msgstr "Zutaten dazu oder entfernen"
 
 #: core-functions.php:493
 msgid "Choose from the most used ingredients"
-msgstr "Välj från de mest använda ingredienserna"
+msgstr "Wähle aus den meist benutzten Zutaten"
 
 #: core-functions.php:494
 msgid "No ingredients found."
-msgstr "Inga ingredienser hittades"
+msgstr "Keine Zutaten gefunden."
 
 #: core-functions.php:519 core-functions.php:532
 msgid "Courses"
-msgstr "Maträtter"
+msgstr "Essensarten"
 
 #: core-functions.php:520 template/recipe_public.php:53
 msgid "Course"
-msgstr "Rätter"
+msgstr "Essensart"
 
 #: core-functions.php:521
 msgid "Search Courses"
-msgstr "Sök maträtter"
+msgstr "Essensart suchen"
 
 #: core-functions.php:522
 msgid "Popular Courses"
-msgstr "Populära maträtter"
+msgstr "Beliebte Essensarten"
 
 #: core-functions.php:523
 msgid "All Courses"
-msgstr "Alla maträtter"
+msgstr "Alle Essensarten"
 
 #: core-functions.php:524
 msgid "Edit Course"
-msgstr "Redigera maträtt"
+msgstr "Essensart bearbeiten"
 
 #: core-functions.php:525
 msgid "Update Course"
-msgstr "Uppdatera maträtt"
+msgstr "Essensart aktualisieren"
 
 #: core-functions.php:526
 msgid "Add New Course"
-msgstr "Lägg till ny maträtt"
+msgstr "Neue Essensart dazu"
 
 #: core-functions.php:527
 msgid "New Course Name"
-msgstr "Nytt namn på maträtt"
+msgstr "Name der neuen Essensart"
 
 #: core-functions.php:528
 msgid "Separate courses with commas"
-msgstr "Separera maträtter med ett kommatecken"
+msgstr "Essensarten mit Komma trennen"
 
 #: core-functions.php:529
 msgid "Add or remove courses"
-msgstr "Lägg till eller ta bort maträtter"
+msgstr "Essensart hinzu oder entfernen"
 
 #: core-functions.php:530
 msgid "Choose from the most used courses"
-msgstr "Välj från de mest använda maträtterna"
+msgstr "Aus den meistbenutzen Gruppen wählen"
 
 #: core-functions.php:531
 msgid "No courses found."
-msgstr "Inga maträtter hittades"
+msgstr "Keine Gerichte gefunden"
 
 #: core-functions.php:543
 msgid "Breakfast"
-msgstr "Frukost"
+msgstr "Frühstück"
 
 #: core-functions.php:544
 msgid "Appetizer"
-msgstr "Förrätt"
+msgstr "Vorspeise"
 
 #: core-functions.php:545
 msgid "Soup"
-msgstr "Soppa"
+msgstr "Suppe"
 
 #: core-functions.php:546
 msgid "Main Course"
-msgstr "Huvudrätt"
+msgstr "Hauptgericht"
 
 #: core-functions.php:547
 msgid "Side Dish"
-msgstr "Tillbehör"
+msgstr "Beilage"
 
 #: core-functions.php:548
 msgid "Salad"
-msgstr "Sallad"
+msgstr "Salat"
 
 #: core-functions.php:549
 msgid "Dessert"
-msgstr "Efterrätt"
+msgstr "Nachtisch"
 
 #: core-functions.php:550
 msgid "Snack"
-msgstr "Snacks"
+msgstr "Snack"
 
 #: core-functions.php:551
 msgid "Drinks"
-msgstr "Dryck"
+msgstr "Getränke"
 
 #: core-functions.php:567 core-functions.php:580
 msgid "Cuisines"
-msgstr "Kök"
+msgstr "Küchen"
 
 #: core-functions.php:568 template/recipe_public.php:66
 msgid "Cuisine"
-msgstr "Kök"
+msgstr "Küche"
 
 #: core-functions.php:569
 msgid "Search Cuisines"
-msgstr "Sök kök"
+msgstr "Küche suchen"
 
 #: core-functions.php:570
 msgid "Popular Cuisines"
-msgstr "Populära kök"
+msgstr "Beliebte Küchen"
 
 #: core-functions.php:571
 msgid "All Cuisines"
-msgstr "Alla kök"
+msgstr "Alle Küchen"
 
 #: core-functions.php:572
 msgid "Edit Cuisine"
-msgstr "Redigera kök"
+msgstr "Küche bearbeiten"
 
 #: core-functions.php:573
 msgid "Update Cuisine"
-msgstr "Uppdatera kök"
+msgstr "Küchen aktualisieren"
 
 #: core-functions.php:574
 msgid "Add New Cuisine"
-msgstr "Lägg till kök"
+msgstr "Neue Küche dazu"
 
 #: core-functions.php:575
 msgid "New Cuisine Name"
-msgstr "Nytt kök namn"
+msgstr "Name der neuen Küche"
 
 #: core-functions.php:576
 msgid "Separate cuisines with commas"
-msgstr "Separera kök med kommatecken"
+msgstr "Küchen mit Komma trennen"
 
 #: core-functions.php:577
 msgid "Add or remove cuisines"
-msgstr "Lägg till eller ta bort kök"
+msgstr "Küche dazu oder entfernen"
 
 #: core-functions.php:578
 msgid "Choose from the most used cuisines"
-msgstr "Välj bland de mest använda köken"
+msgstr "Auswahl der beliebtesten Küchen"
 
 #: core-functions.php:579
 msgid "No cuisines found."
-msgstr "Inga kök hittades"
+msgstr "Keine Küche gefunden"
 
 #: core-functions.php:591
 msgid "French"
-msgstr "Fransk"
+msgstr "Französisch"
 
 #: core-functions.php:592
 msgid "Italian"
-msgstr "Italiensk"
+msgstr "Italienisch"
 
 #: core-functions.php:593
 msgid "Mediterranean"
-msgstr "Medelhavs"
+msgstr "Mediterran"
 
 #: core-functions.php:594
 msgid "Indian"
-msgstr "Indisk"
+msgstr "Indisch"
 
 #: core-functions.php:595
 msgid "Chinese"
-msgstr "Kinesisk"
+msgstr "Chinesisch"
 
 #: core-functions.php:596
 msgid "Japanese"
-msgstr "Japansk"
+msgstr "Japanisch"
 
 #: core-functions.php:597
 msgid "American"
-msgstr "Amerikansk"
+msgstr "Amerikanisch"
 
 #: core-functions.php:598
 msgid "Mexican"
-msgstr "Mexikansk"
+msgstr "Mexikanisch"
 
 #: core-functions.php:614 core-functions.php:627
 msgid "Ratings"
-msgstr "Betyg"
+msgstr "Bewertungen"
 
 #: core-functions.php:615 template/recipe_admin.php:26
 msgid "Rating"
-msgstr "Betyg"
+msgstr "Bewertung"
 
 #: core-functions.php:616
 msgid "Search Ratings"
-msgstr "Sök betyg"
+msgstr "Bewertungen suchen"
 
 #: core-functions.php:617
 msgid "Popular Ratings"
-msgstr "Populära betyg"
+msgstr "Angesagte Bewertungen"
 
 #: core-functions.php:618
 msgid "All Ratings"
-msgstr "Alla betyg"
+msgstr "Alle Bewertungen"

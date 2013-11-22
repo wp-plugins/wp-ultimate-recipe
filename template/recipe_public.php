@@ -156,7 +156,13 @@
         ?>
     </ol>
     <?php } ?>
+    <?php if( $recipe['recipe_notes'][0] ) { ?>
+    <h3><?php _e( 'Recipe notes', $this->pluginName ); ?></h3>
+    <div class="recipe-notes">
+        <?php echo $recipe['recipe_notes'][0]; ?>
+    </div>
+    <?php } ?>
     <?php if(get_option('wpurp_show_linkback', 1) == 1) { ?>
-    <div class="wpurp-footer"><?php _e( 'Powered by', $this->pluginName ); ?> <a href="http://www.wpultimaterecipeplugin.com" target="_blank">WP Ultimate Recipe</a></div>
+        <div class="wpurp-footer"><?php _e( 'Powered by', $this->pluginName ); ?> <a href="http://www.wpultimaterecipeplugin.com" target="_blank">WP Ultimate Recipe</a></div>
     <?php } ?>
 </div>

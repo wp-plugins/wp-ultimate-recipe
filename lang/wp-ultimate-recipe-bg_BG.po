@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WP Ultimate Recipe package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2013-11-07 14:00+0100\n"
+"PO-Revision-Date: 2013-11-21 09:28+0100\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -15,27 +15,29 @@ msgstr ""
 
 #: wp-ultimate-recipe.php:58
 msgid "WPURP Addons"
-msgstr ""
+msgstr "WPURP Добавки"
 
 #: wp-ultimate-recipe.php:58 wp-ultimate-recipe.php:110
 msgid "Addons"
-msgstr ""
+msgstr "Добавки"
 
 #: wp-ultimate-recipe.php:111
 msgid "To install new addons, visit the download link for instructions."
 msgstr ""
+"За да инсталирате нови Добавки, посетете линка за изтегляне и следвайте "
+"инструкцийте."
 
 #: wp-ultimate-recipe.php:140
 msgid "Installed"
-msgstr ""
+msgstr "Инсталиран"
 
 #: wp-ultimate-recipe.php:162
 msgid "Download!"
-msgstr ""
+msgstr "Сваляне!"
 
 #: wp-ultimate-recipe.php:292
 msgid "Upload Image"
-msgstr ""
+msgstr "Качи Изображение"
 
 #: core-functions.php:619
 msgid "Edit Rating"

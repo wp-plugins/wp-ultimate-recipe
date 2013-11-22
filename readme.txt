@@ -55,6 +55,11 @@ You can find more information at [WPUltimateRecipePlugin.com](http://www.wpultim
 
 == Changelog ==
 
+= 0.0.16 =
+* Added recipe notes field
+* Fixed default terms
+* Random recipe shortcode: [ultimate-recipe id=random]
+
 = 0.0.15 =
 * Fixes display issue
 
@@ -104,6 +109,9 @@ You can find more information at [WPUltimateRecipePlugin.com](http://www.wpultim
 * Very first version of this plugin
 
 == Upgrade notice ==
+
+= 0.0.16 =
+Update for new recipe notes feature
 
 = 0.0.15 =
 Update if you have issues with displaying recipes
