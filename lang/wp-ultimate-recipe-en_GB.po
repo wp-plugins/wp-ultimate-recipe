@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WP Ultimate Recipe Plugin\n"
-"POT-Creation-Date: 2013-11-07 13:51+0100\n"
-"PO-Revision-Date: 2013-11-07 13:51+0100\n"
+"POT-Creation-Date: 2013-11-22 18:12+0100\n"
+"PO-Revision-Date: 2013-11-22 18:12+0100\n"
 "Last-Translator: Brecht Vandersmissen <brecht.vandersmissen@gmail.com>\n"
 "Language-Team: BrechtVds.be\n"
 "MIME-Version: 1.0\n"
@@ -13,425 +13,425 @@ msgstr ""
 "X-Poedit-Basepath: /Users/Brecht/Sites/WPUltimateRecipePlugin/core/\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: core-functions.php:113
+#: core-functions.php:119
 msgid "Recipe Box"
 msgstr ""
 
-#: core-functions.php:117
+#: core-functions.php:123
 msgid "Adjustable Servings"
 msgstr ""
 
-#: core-functions.php:123
+#: core-functions.php:129
 msgid "Allow users to dynamically adjust the servings of recipes."
 msgstr ""
 
-#: core-functions.php:130
+#: core-functions.php:136
 msgid "Link to plugin"
 msgstr ""
 
-#: core-functions.php:136
+#: core-functions.php:142
 msgid "Show a link to the plugin website as a little thank you."
 msgstr ""
 
-#: core-functions.php:143
+#: core-functions.php:149
 msgid "Show full recipe"
 msgstr ""
 
-#: core-functions.php:149
+#: core-functions.php:155
 msgid "Show the full recipe instead of the description/excerpt in"
 msgstr ""
 
-#: core-functions.php:149
+#: core-functions.php:155
 msgid "the recipe archive"
 msgstr ""
 
-#: core-functions.php:172
+#: core-functions.php:178
 msgid "Settings regarding the recipe box shown to your visitors."
 msgstr ""
 
-#: core-functions.php:186
+#: core-functions.php:192
 msgid "Recipes"
 msgstr ""
 
-#: core-functions.php:187 core-functions.php:214
+#: core-functions.php:193 core-functions.php:220
 msgid "Recipe"
 msgstr ""
 
-#: core-functions.php:188
+#: core-functions.php:194
 msgid "Add New"
 msgstr ""
 
-#: core-functions.php:189
+#: core-functions.php:195
 msgid "Add New Recipe"
 msgstr ""
 
-#: core-functions.php:190
+#: core-functions.php:196
 msgid "Edit"
 msgstr ""
 
-#: core-functions.php:191
+#: core-functions.php:197
 msgid "Edit Recipe"
 msgstr ""
 
-#: core-functions.php:192
+#: core-functions.php:198
 msgid "New Recipe"
 msgstr ""
 
-#: core-functions.php:193
+#: core-functions.php:199
 msgid "View"
 msgstr ""
 
-#: core-functions.php:194
+#: core-functions.php:200
 msgid "View Recipe"
 msgstr ""
 
-#: core-functions.php:195
+#: core-functions.php:201
 msgid "Search Recipes"
 msgstr ""
 
-#: core-functions.php:196
+#: core-functions.php:202
 msgid "No Recipes found"
 msgstr ""
 
-#: core-functions.php:197
+#: core-functions.php:203
 msgid "No Recipes found in Trash"
 msgstr ""
 
-#: core-functions.php:198
+#: core-functions.php:204
 msgid "Parent Recipe"
 msgstr ""
 
-#: core-functions.php:385
+#: core-functions.php:404
 msgid "Select the recipe to add to your post:"
 msgstr ""
 
-#: core-functions.php:394
+#: core-functions.php:414
 msgid "Insert Recipe"
 msgstr ""
 
-#: core-functions.php:398 core-functions.php:450
+#: core-functions.php:418 core-functions.php:470
 msgid ""
 "You have to create a recipe first, check the 'Recipes' menu on the left."
 msgstr ""
 
-#: core-functions.php:480 core-functions.php:495 template/recipe_admin.php:69
+#: core-functions.php:500 core-functions.php:515 template/recipe_admin.php:69
 #: template/recipe_public.php:97
 msgid "Ingredients"
 msgstr ""
 
-#: core-functions.php:481
+#: core-functions.php:501
 msgid "Ingredient"
 msgstr ""
 
-#: core-functions.php:482
+#: core-functions.php:502
 msgid "Search Ingredients"
 msgstr ""
 
-#: core-functions.php:483
+#: core-functions.php:503
 msgid "Popular Ingredients"
 msgstr ""
 
-#: core-functions.php:484
+#: core-functions.php:504
 msgid "All Ingredients"
 msgstr ""
 
-#: core-functions.php:485
+#: core-functions.php:505
 msgid "Parent Ingredient"
 msgstr ""
 
-#: core-functions.php:486
+#: core-functions.php:506
 msgid "Parent Ingredient:"
 msgstr ""
 
-#: core-functions.php:487
+#: core-functions.php:507
 msgid "Edit Ingredient"
 msgstr ""
 
-#: core-functions.php:488
+#: core-functions.php:508
 msgid "Update Ingredient"
 msgstr ""
 
-#: core-functions.php:489
+#: core-functions.php:509
 msgid "Add New Ingredient"
 msgstr ""
 
-#: core-functions.php:490
+#: core-functions.php:510
 msgid "New Ingredient Name"
 msgstr ""
 
-#: core-functions.php:491
+#: core-functions.php:511
 msgid "Separate ingredients with commas"
 msgstr ""
 
-#: core-functions.php:492
+#: core-functions.php:512
 msgid "Add or remove ingredients"
 msgstr ""
 
-#: core-functions.php:493
+#: core-functions.php:513
 msgid "Choose from the most used ingredients"
 msgstr ""
 
-#: core-functions.php:494
+#: core-functions.php:514
 msgid "No ingredients found."
 msgstr ""
 
-#: core-functions.php:519 core-functions.php:532
+#: core-functions.php:540 core-functions.php:553
 msgid "Courses"
 msgstr ""
 
-#: core-functions.php:520 template/recipe_public.php:53
+#: core-functions.php:541 template/recipe_public.php:53
 msgid "Course"
 msgstr ""
 
-#: core-functions.php:521
+#: core-functions.php:542
 msgid "Search Courses"
 msgstr ""
 
-#: core-functions.php:522
+#: core-functions.php:543
 msgid "Popular Courses"
 msgstr ""
 
-#: core-functions.php:523
+#: core-functions.php:544
 msgid "All Courses"
 msgstr ""
 
-#: core-functions.php:524
+#: core-functions.php:545
 msgid "Edit Course"
 msgstr ""
 
-#: core-functions.php:525
+#: core-functions.php:546
 msgid "Update Course"
 msgstr ""
 
-#: core-functions.php:526
+#: core-functions.php:547
 msgid "Add New Course"
 msgstr ""
 
-#: core-functions.php:527
+#: core-functions.php:548
 msgid "New Course Name"
 msgstr ""
 
-#: core-functions.php:528
+#: core-functions.php:549
 msgid "Separate courses with commas"
 msgstr ""
 
-#: core-functions.php:529
+#: core-functions.php:550
 msgid "Add or remove courses"
 msgstr ""
 
-#: core-functions.php:530
+#: core-functions.php:551
 msgid "Choose from the most used courses"
 msgstr ""
 
-#: core-functions.php:531
+#: core-functions.php:552
 msgid "No courses found."
 msgstr ""
 
-#: core-functions.php:543
+#: core-functions.php:565
 msgid "Breakfast"
 msgstr ""
 
-#: core-functions.php:544
+#: core-functions.php:566
 msgid "Appetizer"
 msgstr ""
 
-#: core-functions.php:545
+#: core-functions.php:567
 msgid "Soup"
 msgstr ""
 
-#: core-functions.php:546
+#: core-functions.php:568
 msgid "Main Course"
 msgstr ""
 
-#: core-functions.php:547
+#: core-functions.php:569
 msgid "Side Dish"
 msgstr ""
 
-#: core-functions.php:548
+#: core-functions.php:570
 msgid "Salad"
 msgstr ""
 
-#: core-functions.php:549
+#: core-functions.php:571
 msgid "Dessert"
 msgstr ""
 
-#: core-functions.php:550
+#: core-functions.php:572
 msgid "Snack"
 msgstr ""
 
-#: core-functions.php:551
+#: core-functions.php:573
 msgid "Drinks"
 msgstr ""
 
-#: core-functions.php:567 core-functions.php:580
+#: core-functions.php:590 core-functions.php:603
 msgid "Cuisines"
 msgstr ""
 
-#: core-functions.php:568 template/recipe_public.php:66
+#: core-functions.php:591 template/recipe_public.php:66
 msgid "Cuisine"
 msgstr ""
 
-#: core-functions.php:569
+#: core-functions.php:592
 msgid "Search Cuisines"
 msgstr ""
 
-#: core-functions.php:570
+#: core-functions.php:593
 msgid "Popular Cuisines"
 msgstr ""
 
-#: core-functions.php:571
+#: core-functions.php:594
 msgid "All Cuisines"
 msgstr ""
 
-#: core-functions.php:572
+#: core-functions.php:595
 msgid "Edit Cuisine"
 msgstr ""
 
-#: core-functions.php:573
+#: core-functions.php:596
 msgid "Update Cuisine"
 msgstr ""
 
-#: core-functions.php:574
+#: core-functions.php:597
 msgid "Add New Cuisine"
 msgstr ""
 
-#: core-functions.php:575
+#: core-functions.php:598
 msgid "New Cuisine Name"
 msgstr ""
 
-#: core-functions.php:576
+#: core-functions.php:599
 msgid "Separate cuisines with commas"
 msgstr ""
 
-#: core-functions.php:577
+#: core-functions.php:600
 msgid "Add or remove cuisines"
 msgstr ""
 
-#: core-functions.php:578
+#: core-functions.php:601
 msgid "Choose from the most used cuisines"
 msgstr ""
 
-#: core-functions.php:579
+#: core-functions.php:602
 msgid "No cuisines found."
 msgstr ""
 
-#: core-functions.php:591
+#: core-functions.php:615
 msgid "French"
 msgstr ""
 
-#: core-functions.php:592
+#: core-functions.php:616
 msgid "Italian"
 msgstr ""
 
-#: core-functions.php:593
+#: core-functions.php:617
 msgid "Mediterranean"
 msgstr ""
 
-#: core-functions.php:594
+#: core-functions.php:618
 msgid "Indian"
 msgstr ""
 
-#: core-functions.php:595
+#: core-functions.php:619
 msgid "Chinese"
 msgstr ""
 
-#: core-functions.php:596
+#: core-functions.php:620
 msgid "Japanese"
 msgstr ""
 
-#: core-functions.php:597
+#: core-functions.php:621
 msgid "American"
 msgstr ""
 
-#: core-functions.php:598
+#: core-functions.php:622
 msgid "Mexican"
 msgstr ""
 
-#: core-functions.php:614 core-functions.php:627
+#: core-functions.php:638 core-functions.php:651
 msgid "Ratings"
 msgstr ""
 
-#: core-functions.php:615 template/recipe_admin.php:26
+#: core-functions.php:639 template/recipe_admin.php:26
 msgid "Rating"
 msgstr ""
 
-#: core-functions.php:616
+#: core-functions.php:640
 msgid "Search Ratings"
 msgstr ""
 
-#: core-functions.php:617
+#: core-functions.php:641
 msgid "Popular Ratings"
 msgstr ""
 
-#: core-functions.php:618
+#: core-functions.php:642
 msgid "All Ratings"
 msgstr ""
 
-#: core-functions.php:619
+#: core-functions.php:643
 msgid "Edit Rating"
 msgstr ""
 
-#: core-functions.php:620
+#: core-functions.php:644
 msgid "Update Rating"
 msgstr ""
 
-#: core-functions.php:621
+#: core-functions.php:645
 msgid "Add New Rating"
 msgstr ""
 
-#: core-functions.php:622
+#: core-functions.php:646
 msgid "New Rating Name"
 msgstr ""
 
-#: core-functions.php:623
+#: core-functions.php:647
 msgid "Separate ratings with commas"
 msgstr ""
 
-#: core-functions.php:624
+#: core-functions.php:648
 msgid "Add or remove ratings"
 msgstr ""
 
-#: core-functions.php:625
+#: core-functions.php:649
 msgid "Choose from the most used ratings"
 msgstr ""
 
-#: core-functions.php:626
+#: core-functions.php:650
 msgid "No ratings found."
 msgstr ""
 
-#: wp-ultimate-recipe.php:57
+#: wp-ultimate-recipe.php:61
 msgid "Recipe Settings"
 msgstr ""
 
-#: wp-ultimate-recipe.php:57 template/recipe_menu.php:4
+#: wp-ultimate-recipe.php:61 template/recipe_menu.php:4
 msgid "Settings"
 msgstr ""
 
-#: wp-ultimate-recipe.php:58
+#: wp-ultimate-recipe.php:62
 msgid "WPURP Addons"
 msgstr ""
 
-#: wp-ultimate-recipe.php:58 wp-ultimate-recipe.php:110
+#: wp-ultimate-recipe.php:62 wp-ultimate-recipe.php:114
 msgid "Addons"
 msgstr ""
 
-#: wp-ultimate-recipe.php:111
+#: wp-ultimate-recipe.php:115
 msgid "To install new addons, visit the download link for instructions."
 msgstr ""
 
-#: wp-ultimate-recipe.php:140
+#: wp-ultimate-recipe.php:144
 msgid "Installed"
 msgstr ""
 
-#: wp-ultimate-recipe.php:162
+#: wp-ultimate-recipe.php:166
 msgid "Download!"
 msgstr ""
 
-#: wp-ultimate-recipe.php:292
+#: wp-ultimate-recipe.php:304
 msgid "Upload Image"
 msgstr ""
 
-#: wp-ultimate-recipe.php:293 template/recipe_admin.php:138
+#: wp-ultimate-recipe.php:305 template/recipe_admin.php:138
 #: template/recipe_admin.php:157
 msgid "Remove Image"
 msgstr ""
@@ -523,6 +523,10 @@ msgid ""
 "strong>, these will be ignored."
 msgstr ""
 
+#: template/recipe_admin.php:172 template/recipe_public.php:160
+msgid "Recipe notes"
+msgstr ""
+
 #: template/recipe_menu.php:14
 msgid "Problems? Take a look at the"
 msgstr ""
@@ -535,6 +539,6 @@ msgstr ""
 msgid "Cook Time"
 msgstr ""
 
-#: template/recipe_public.php:160
+#: template/recipe_public.php:166
 msgid "Powered by"
 msgstr ""

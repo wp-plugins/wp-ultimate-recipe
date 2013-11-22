@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WP Ultimate Recipe package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2013-11-07 13:59+0100\n"
+"PO-Revision-Date: 2013-11-22 18:14+0100\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -13,61 +13,65 @@ msgstr ""
 "Last-Translator: Brecht Vandersmissen <brecht.vandersmissen@gmail.com>\n"
 "Language-Team: \n"
 
-#: wp-ultimate-recipe.php:58
+#: template/recipe_admin.php:172 template/recipe_public.php:160
+msgid "Recipe notes"
+msgstr "Extra informatie"
+
+#: wp-ultimate-recipe.php:62
 msgid "WPURP Addons"
 msgstr "WPURP Addons"
 
-#: wp-ultimate-recipe.php:58 wp-ultimate-recipe.php:110
+#: wp-ultimate-recipe.php:62 wp-ultimate-recipe.php:114
 msgid "Addons"
 msgstr "Addons"
 
-#: wp-ultimate-recipe.php:111
+#: wp-ultimate-recipe.php:115
 msgid "To install new addons, visit the download link for instructions."
 msgstr ""
 "Klik op de Download link om meer uitleg te krijgen over het installeren van "
 "nieuwe addons."
 
-#: wp-ultimate-recipe.php:140
+#: wp-ultimate-recipe.php:144
 msgid "Installed"
 msgstr "Geïnstalleerd"
 
-#: wp-ultimate-recipe.php:162
+#: wp-ultimate-recipe.php:166
 msgid "Download!"
 msgstr "Download!"
 
-#: wp-ultimate-recipe.php:292
+#: wp-ultimate-recipe.php:304
 msgid "Upload Image"
 msgstr "Afbeelding Uploaden"
 
-#: core-functions.php:619
+#: core-functions.php:643
 msgid "Edit Rating"
 msgstr "Score bewerken"
 
-#: core-functions.php:620
+#: core-functions.php:644
 msgid "Update Rating"
 msgstr "Score aanpassen"
 
-#: core-functions.php:621
+#: core-functions.php:645
 msgid "Add New Rating"
 msgstr "Score toevoegen"
 
-#: core-functions.php:622
+#: core-functions.php:646
 msgid "New Rating Name"
 msgstr "Nieuwe Score naam"
 
-#: core-functions.php:623
+#: core-functions.php:647
 msgid "Separate ratings with commas"
 msgstr "Scores scheiden met komma's"
 
-#: core-functions.php:624
+#: core-functions.php:648
 msgid "Add or remove ratings"
 msgstr "Scores toevoegen of verwijderen"
 
-#: core-functions.php:625
+#: core-functions.php:649
 msgid "Choose from the most used ratings"
 msgstr "Kies uit de meest gebruikte scores"
 
-#: core-functions.php:626
+#: core-functions.php:650
 msgid "No ratings found."
 msgstr "Geen scores gevonden."
 
@@ -126,11 +130,11 @@ msgstr "gram"
 
 #: template/recipe_admin.php:97
 msgid "walnuts"
-msgstr "walnoten"
+msgstr "olijfolie"
 
 #: template/recipe_admin.php:98
 msgid "coarsely chopped"
-msgstr "grof gehakt"
+msgstr "extra vierge"
 
 #: template/recipe_admin.php:104
 msgid "Add an ingredient"
@@ -154,7 +158,7 @@ msgstr "Instructies"
 msgid "Add Image"
 msgstr "Foto toevoegen"
 
-#: wp-ultimate-recipe.php:293 template/recipe_admin.php:138
+#: wp-ultimate-recipe.php:305 template/recipe_admin.php:138
 #: template/recipe_admin.php:157
 msgid "Remove Image"
 msgstr "Foto verwijderen"
@@ -185,371 +189,371 @@ msgstr "Prep tijd"
 msgid "Cook Time"
 msgstr "Kook tijd"
 
-#: template/recipe_public.php:160
+#: template/recipe_public.php:166
 msgid "Powered by"
 msgstr "Mogelijk door"
 
-#: wp-ultimate-recipe.php:57
+#: wp-ultimate-recipe.php:61
 msgid "Recipe Settings"
 msgstr "Recept Instellingen"
 
-#: wp-ultimate-recipe.php:57 template/recipe_menu.php:4
+#: wp-ultimate-recipe.php:61 template/recipe_menu.php:4
 msgid "Settings"
 msgstr "Instellingen"
 
-#: core-functions.php:113
+#: core-functions.php:119
 msgid "Recipe Box"
 msgstr "Recepten Box"
 
-#: core-functions.php:117
+#: core-functions.php:123
 msgid "Adjustable Servings"
 msgstr "Aanpasbare Porties"
 
-#: core-functions.php:123
+#: core-functions.php:129
 msgid "Allow users to dynamically adjust the servings of recipes."
 msgstr "Laat gebruikers toe om zelf de porties van de recepten aan te passen."
 
-#: core-functions.php:130
+#: core-functions.php:136
 msgid "Link to plugin"
 msgstr "Link naar plugin"
 
-#: core-functions.php:136
+#: core-functions.php:142
 msgid "Show a link to the plugin website as a little thank you."
 msgstr "Toon een link naar de plugin website bij wijze van dank."
 
-#: core-functions.php:143
+#: core-functions.php:149
 msgid "Show full recipe"
 msgstr "Toon volledig recept"
 
-#: core-functions.php:149
+#: core-functions.php:155
 msgid "Show the full recipe instead of the description/excerpt in"
 msgstr ""
 "Toon het volledige recept in plaats van de omschrijving/samenvatting in"
 
-#: core-functions.php:149
+#: core-functions.php:155
 msgid "the recipe archive"
 msgstr "de recept archieven"
 
-#: core-functions.php:172
+#: core-functions.php:178
 msgid "Settings regarding the recipe box shown to your visitors."
 msgstr "Instellingen over de recepten box die getoond wordt aan de bezoekers."
 
-#: core-functions.php:186
+#: core-functions.php:192
 msgid "Recipes"
 msgstr "Recepten"
 
-#: core-functions.php:187 core-functions.php:214
+#: core-functions.php:193 core-functions.php:220
 msgid "Recipe"
 msgstr "Recept"
 
-#: core-functions.php:188
+#: core-functions.php:194
 msgid "Add New"
 msgstr "Toevoegen"
 
-#: core-functions.php:189
+#: core-functions.php:195
 msgid "Add New Recipe"
 msgstr "Recept toevoegen"
 
-#: core-functions.php:190
+#: core-functions.php:196
 msgid "Edit"
 msgstr "Bewerken"
 
-#: core-functions.php:191
+#: core-functions.php:197
 msgid "Edit Recipe"
 msgstr "Recept bewerken"
 
-#: core-functions.php:192
+#: core-functions.php:198
 msgid "New Recipe"
 msgstr "Nieuw Recept"
 
-#: core-functions.php:193
+#: core-functions.php:199
 msgid "View"
 msgstr "Bekijken"
 
-#: core-functions.php:194
+#: core-functions.php:200
 msgid "View Recipe"
 msgstr "Recept bekijken"
 
-#: core-functions.php:195
+#: core-functions.php:201
 msgid "Search Recipes"
 msgstr "Recept zoeken"
 
-#: core-functions.php:196
+#: core-functions.php:202
 msgid "No Recipes found"
 msgstr "Geen Recepten gevonden"
 
-#: core-functions.php:197
+#: core-functions.php:203
 msgid "No Recipes found in Trash"
 msgstr "Geen Recepten in de Vuilbak gevonden"
 
-#: core-functions.php:198
+#: core-functions.php:204
 msgid "Parent Recipe"
 msgstr "Hoofd Recept"
 
-#: core-functions.php:385
+#: core-functions.php:404
 msgid "Select the recipe to add to your post:"
 msgstr "Selecteer het recept dat je wil toevoegen aan je bericht:"
 
-#: core-functions.php:394
+#: core-functions.php:414
 msgid "Insert Recipe"
 msgstr "Recept toevoegen"
 
-#: core-functions.php:398 core-functions.php:450
+#: core-functions.php:418 core-functions.php:470
 msgid ""
 "You have to create a recipe first, check the 'Recipes' menu on the left."
 msgstr ""
 "Je moet eerst een recept aanmaken, neem eens een kijkje in het 'Recpeten' "
 "menu aan je linkerkant."
 
-#: core-functions.php:480 core-functions.php:495 template/recipe_admin.php:69
+#: core-functions.php:500 core-functions.php:515 template/recipe_admin.php:69
 #: template/recipe_public.php:97
 msgid "Ingredients"
 msgstr "Ingrediënten"
 
-#: core-functions.php:481
+#: core-functions.php:501
 msgid "Ingredient"
 msgstr "Ingrediënt"
 
-#: core-functions.php:482
+#: core-functions.php:502
 msgid "Search Ingredients"
 msgstr "Ingrediënten zoeken"
 
-#: core-functions.php:483
+#: core-functions.php:503
 msgid "Popular Ingredients"
 msgstr "Populaire Ingrediënten"
 
-#: core-functions.php:484
+#: core-functions.php:504
 msgid "All Ingredients"
 msgstr "Alle Ingrediënten"
 
-#: core-functions.php:485
+#: core-functions.php:505
 msgid "Parent Ingredient"
 msgstr "Hoofd Ingrediënt"
 
-#: core-functions.php:486
+#: core-functions.php:506
 msgid "Parent Ingredient:"
 msgstr "Hoofd Ingrediënt"
 
-#: core-functions.php:487
+#: core-functions.php:507
 msgid "Edit Ingredient"
 msgstr "Ingrediënt bewerken"
 
-#: core-functions.php:488
+#: core-functions.php:508
 msgid "Update Ingredient"
 msgstr "Ingrediënt aanpassen"
 
-#: core-functions.php:489
+#: core-functions.php:509
 msgid "Add New Ingredient"
 msgstr "Ingrediënt toevoegen"
 
-#: core-functions.php:490
+#: core-functions.php:510
 msgid "New Ingredient Name"
 msgstr "Nieuw Ingrediënt naam"
 
-#: core-functions.php:491
+#: core-functions.php:511
 msgid "Separate ingredients with commas"
 msgstr "Ingrediënten scheiden met komma's"
 
-#: core-functions.php:492
+#: core-functions.php:512
 msgid "Add or remove ingredients"
 msgstr "Ingrediënten toevoegen of verwijderen"
 
-#: core-functions.php:493
+#: core-functions.php:513
 msgid "Choose from the most used ingredients"
 msgstr "Kies uit de meest gebruikte ingrediënten"
 
-#: core-functions.php:494
+#: core-functions.php:514
 msgid "No ingredients found."
 msgstr "Geen ingrediënten gevonden."
 
-#: core-functions.php:519 core-functions.php:532
+#: core-functions.php:540 core-functions.php:553
 msgid "Courses"
 msgstr "Maaltijden"
 
-#: core-functions.php:520 template/recipe_public.php:53
+#: core-functions.php:541 template/recipe_public.php:53
 msgid "Course"
 msgstr "Maaltijd"
 
-#: core-functions.php:521
+#: core-functions.php:542
 msgid "Search Courses"
 msgstr "Maaltijden zoeken"
 
-#: core-functions.php:522
+#: core-functions.php:543
 msgid "Popular Courses"
 msgstr "Populaire Maaltijden"
 
-#: core-functions.php:523
+#: core-functions.php:544
 msgid "All Courses"
 msgstr "Alle Maaltijden"
 
-#: core-functions.php:524
+#: core-functions.php:545
 msgid "Edit Course"
 msgstr "Maaltijd bewerken"
 
-#: core-functions.php:525
+#: core-functions.php:546
 msgid "Update Course"
 msgstr "Maaltijd aanpassen"
 
-#: core-functions.php:526
+#: core-functions.php:547
 msgid "Add New Course"
 msgstr "Maaltijd toevoegen"
 
-#: core-functions.php:527
+#: core-functions.php:548
 msgid "New Course Name"
 msgstr "Nieuwe Maaltijd naam"
 
-#: core-functions.php:528
+#: core-functions.php:549
 msgid "Separate courses with commas"
 msgstr "Maaltijden scheiden met komma's"
 
-#: core-functions.php:529
+#: core-functions.php:550
 msgid "Add or remove courses"
 msgstr "Maaltijden toevoegen of verwijderen"
 
-#: core-functions.php:530
+#: core-functions.php:551
 msgid "Choose from the most used courses"
 msgstr "Kies uit de meest gebruikte maaltijden"
 
-#: core-functions.php:531
+#: core-functions.php:552
 msgid "No courses found."
 msgstr "Geen maaltijden gevonden."
 
-#: core-functions.php:543
+#: core-functions.php:565
 msgid "Breakfast"
 msgstr "Ontbijt"
 
-#: core-functions.php:544
+#: core-functions.php:566
 msgid "Appetizer"
 msgstr "Voorgerecht"
 
-#: core-functions.php:545
+#: core-functions.php:567
 msgid "Soup"
 msgstr "Soep"
 
-#: core-functions.php:546
+#: core-functions.php:568
 msgid "Main Course"
 msgstr "Hoofdgerecht"
 
-#: core-functions.php:547
+#: core-functions.php:569
 msgid "Side Dish"
 msgstr "Bijgerecht"
 
-#: core-functions.php:548
+#: core-functions.php:570
 msgid "Salad"
 msgstr "Salade"
 
-#: core-functions.php:549
+#: core-functions.php:571
 msgid "Dessert"
 msgstr "Nagerecht"
 
-#: core-functions.php:550
+#: core-functions.php:572
 msgid "Snack"
 msgstr "Snack"
 
-#: core-functions.php:551
+#: core-functions.php:573
 msgid "Drinks"
 msgstr "Drinken"
 
-#: core-functions.php:567 core-functions.php:580
+#: core-functions.php:590 core-functions.php:603
 msgid "Cuisines"
 msgstr "Keukens"
 
-#: core-functions.php:568 template/recipe_public.php:66
+#: core-functions.php:591 template/recipe_public.php:66
 msgid "Cuisine"
 msgstr "Keuken"
 
-#: core-functions.php:569
+#: core-functions.php:592
 msgid "Search Cuisines"
 msgstr "Keukens zoeken"
 
-#: core-functions.php:570
+#: core-functions.php:593
 msgid "Popular Cuisines"
 msgstr "Populaire Keukens"
 
-#: core-functions.php:571
+#: core-functions.php:594
 msgid "All Cuisines"
 msgstr "Alle Keukens"
 
-#: core-functions.php:572
+#: core-functions.php:595
 msgid "Edit Cuisine"
 msgstr "Keuken bewerken"
 
-#: core-functions.php:573
+#: core-functions.php:596
 msgid "Update Cuisine"
 msgstr "Keuken aanpassen"
 
-#: core-functions.php:574
+#: core-functions.php:597
 msgid "Add New Cuisine"
 msgstr "Keuken toevoegen"
 
-#: core-functions.php:575
+#: core-functions.php:598
 msgid "New Cuisine Name"
 msgstr "Nieuwe Keuken naam"
 
-#: core-functions.php:576
+#: core-functions.php:599
 msgid "Separate cuisines with commas"
 msgstr "Keukens scheiden met komma's"
 
-#: core-functions.php:577
+#: core-functions.php:600
 msgid "Add or remove cuisines"
 msgstr "Keuken toevoegen of verwijderen"
 
-#: core-functions.php:578
+#: core-functions.php:601
 msgid "Choose from the most used cuisines"
 msgstr "Kies uit de meest gebruikte keukens"
 
-#: core-functions.php:579
+#: core-functions.php:602
 msgid "No cuisines found."
 msgstr "Geen keukens gevonden."
 
-#: core-functions.php:591
+#: core-functions.php:615
 msgid "French"
 msgstr "Frans"
 
-#: core-functions.php:592
+#: core-functions.php:616
 msgid "Italian"
 msgstr "Italiaans"
 
-#: core-functions.php:593
+#: core-functions.php:617
 msgid "Mediterranean"
 msgstr "Mediterraans"
 
-#: core-functions.php:594
+#: core-functions.php:618
 msgid "Indian"
 msgstr "Indisch"
 
-#: core-functions.php:595
+#: core-functions.php:619
 msgid "Chinese"
 msgstr "Chinees"
 
-#: core-functions.php:596
+#: core-functions.php:620
 msgid "Japanese"
 msgstr "Japans"
 
-#: core-functions.php:597
+#: core-functions.php:621
 msgid "American"
 msgstr "Amerikaans"
 
-#: core-functions.php:598
+#: core-functions.php:622
 msgid "Mexican"
 msgstr "Mexicaans"
 
-#: core-functions.php:614 core-functions.php:627
+#: core-functions.php:638 core-functions.php:651
 msgid "Ratings"
 msgstr "Scores"
 
-#: core-functions.php:615 template/recipe_admin.php:26
+#: core-functions.php:639 template/recipe_admin.php:26
 msgid "Rating"
 msgstr "Score"
 
-#: core-functions.php:616
+#: core-functions.php:640
 msgid "Search Ratings"
 msgstr "Scores zoeken"
 
-#: core-functions.php:617
+#: core-functions.php:641
 msgid "Popular Ratings"
 msgstr "Populaire Scores"
 
-#: core-functions.php:618
+#: core-functions.php:642
 msgid "All Ratings"
 msgstr "Alle Scores"
