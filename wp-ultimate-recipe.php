@@ -3,7 +3,7 @@
 Plugin Name: WP Ultimate Recipe
 Plugin URI: http://www.wpultimaterecipeplugin.com
 Description: WP Ultimate Recipe is a user friendly plugin for adding recipes to any of your posts and pages.
-Version: 0.0.16
+Version: 0.0.17
 Author: Bootstrapped Ventures
 Author URI: http://www.bootstrappedventures.com
 License: GPLv2
@@ -17,26 +17,36 @@ class WPUltimateRecipe {
     protected $pluginName;
     protected $pluginDir;
     protected $pluginUrl;
+
+    protected $premiumName;
+    protected $premiumDir;
+    protected $premiumUrl;
+
     protected $installed_addons;
+    protected $wpurp_core;
     
     public function __construct()
     {
-        $this->pluginName = trim( dirname( plugin_basename( __FILE__ ) ), '/' );
+        $this->pluginName = 'wp-ultimate-recipe';
         $this->pluginDir = WP_PLUGIN_DIR . '/' . $this->pluginName;
         $this->pluginUrl = WP_PLUGIN_URL . '/' . $this->pluginName;
 
+        $this->premiumName = 'wp-ultimate-recipe-premium';
+        $this->premiumDir = WP_PLUGIN_DIR . '/' . $this->premiumName;
+        $this->premiumUrl = WP_PLUGIN_URL . '/' . $this->premiumName;
+
         // Version
-        update_option( $this->pluginName . '_version', '0.0.16' );
+        update_option( $this->pluginName . '_version', '0.0.17' );
 
         // Textdomain
         load_plugin_textdomain($this->pluginName, false, basename( dirname( __FILE__ ) ) . '/lang/'  );
         
         //Include core
         include_once( $this->pluginDir . '/core-functions.php' );
-        $wpurp_core = new WPURP_Core( $this->pluginName, $this->pluginDir, $this->pluginUrl );
+        $this->wpurp_core = new WPURP_Core( $this->pluginName, $this->pluginDir, $this->pluginUrl );
 
         // Hooks
-        register_activation_hook( __FILE__, array( $wpurp_core, 'activate_taxonomies' ) );
+        register_activation_hook( __FILE__, array( $this->wpurp_core, 'activate_taxonomies' ) );
 
         //Actions
         //add_action( 'init', array( $this, 'load_installed_addons' ), -10 ); // Put this in core-functions
@@ -90,10 +100,10 @@ class WPUltimateRecipe {
         
         $installed = array();
         $not_installed = array();
-        
-        if( is_array( $this->installed_addons ) ) {
+
+        if( is_array( $this->wpurp_core->installed_addons ) ) {
             foreach( $available_addons as $k => $v ){
-                if( array_key_exists( $k, $this->installed_addons ) ) {
+                if( array_key_exists( $k, $this->wpurp_core->installed_addons ) ) {
                     $installed[$k] = $v; 
                 } else {
                     $not_installed[$k] = $v; 
@@ -195,7 +205,9 @@ class WPUltimateRecipe {
 
     public function admin_menu_settings_text($args) {
 
-        $html = '<input type="text" id="'.$args[0].'" name="'.$args[0].'" value="'.$args[2].'" />';
+        $val = get_option($args[0], $args[2]);
+
+        $html = '<input type="text" id="'.$args[0].'" name="'.$args[0].'" value="'.$val.'" />';
         $html .= '<label for="'.$args[0].'"> '  . $args[1] . '</label>';
 
         echo $html;
@@ -235,7 +247,8 @@ class WPUltimateRecipe {
     public function admin_menu_settings_preview_select($args) {
 
         $default = isset($args[2]) ? $args[2] : 0;
-        
+        $pluginUrl = isset($args[6]) ? $args[6] : $this->pluginUrl;
+
         if( get_option( $args[0] ) ) {
             $value = get_option( $args[0] );
         } else {
@@ -248,7 +261,7 @@ class WPUltimateRecipe {
             $preview = $value;
         }
         
-        $img = $this->pluginUrl . '/addons/' . $args[4] . '/img/previews/' . $preview . '.jpg';
+        $img = $pluginUrl . '/addons/' . $args[4] . '/img/previews/' . $preview . '.jpg';
 
         $html = '<select class="wpurp-preview-select" id="'.$args[0].'" name="'.$args[0].'">';
         foreach( $args[3] as $key => $opt ) {
@@ -362,6 +375,7 @@ class WPUltimateRecipe {
     protected function get_recipes( $orderby = 'date', $order = 'DESC', $taxonomy = '', $term = '' ) {
         $args = array(
             'post_type' => 'recipe',
+            'post_status' => 'publish',
             'orderby' => $orderby,
             'order' => $order,
             'posts_per_page' => -1,

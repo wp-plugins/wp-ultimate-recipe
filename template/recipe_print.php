@@ -8,7 +8,7 @@
         document.write('<link rel="stylesheet" type="text/css" href="'+window.opener.pluginUrl+'/css/print.css">');
     </script>
 </head>
-<body onload="window.print()">
+<body onload="setTimeout(function(){window.print()}, 500);">
 <div class="wpurp-container">
     <script>
         document.write(window.opener.parentRecipe);

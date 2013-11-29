@@ -1,8 +1,8 @@
-# Translation of WP Ultimate Recipe in German
+# Translation of WP Ultimate Recipe in Spanish (Spain)
 # This file is distributed under the same license as the WP Ultimate Recipe package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2013-11-29 14:22+0100\n"
+"PO-Revision-Date: 2013-11-29 17:40+0100\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -13,17 +13,21 @@ msgstr ""
 "Last-Translator: Brecht Vandersmissen <brecht.vandersmissen@gmail.com>\n"
 "Language-Team: \n"
 
+#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:206
+msgid "Amount"
+msgstr ""
+
 #: core/core-functions.php:126
 msgid "Recipe Slug"
-msgstr ""
+msgstr "Slug de receta"
 
 #: core/core-functions.php:132
 msgid "Recipe archive"
-msgstr ""
+msgstr "Archivo de recetas"
 
 #: core/core-functions.php:201
 msgid "General settings."
-msgstr ""
+msgstr "Preferencias generales."
 
 #: core/core-functions.php:272 core/core-functions.php:631
 #: core/addons/custom-taxonomies/custom-taxonomies.php:224
@@ -224,50 +228,54 @@ msgid ""
 "WP Ultimate Recipe must be installed and activated before WP Ultimate Recipe "
 "Premium can be used."
 msgstr ""
+"WP Ultmate Recipe debe estar instalado y activado antes de que WP Ultimate "
+"Recipe Premium pueda ser usado."
 
 #: wp-ultimate-recipe-premium/wp-ultimate-recipe-premium.php:30
 msgid ""
 "Please update WP Ultimate Recipe to the latest version before activating WP "
 "Ultimate Recipe Premium."
 msgstr ""
+"Por favor, actualiza WP Ultimate Recipe a la última versión antes de activar "
+"WP Ultimate Recipe Premium."
 
 #: wp-ultimate-recipe-premium/addons/custom-templates/custom-templates.php:37
 #: wp-ultimate-recipe-premium/addons/custom-templates/template-builder.php:4
 msgid "Custom Templates"
-msgstr ""
+msgstr "Plantillas personalizadas"
 
 #: wp-ultimate-recipe-premium/addons/custom-templates/custom-templates.php:37
 msgid "Templates"
-msgstr ""
+msgstr "Plantillas"
 
 #: wp-ultimate-recipe-premium/addons/custom-templates/custom-templates.php:42
 msgid "Basic options"
-msgstr ""
+msgstr "Opciones básicas"
 
 #: wp-ultimate-recipe-premium/addons/custom-templates/custom-templates.php:43
 msgid "Custom style"
-msgstr ""
+msgstr "Estilo presonalizado"
 
 #: wp-ultimate-recipe-premium/addons/custom-templates/custom-templates.php:47
 msgid "Layout"
-msgstr ""
+msgstr "Disposición"
 
 #: wp-ultimate-recipe-premium/addons/custom-templates/custom-templates.php:53
 msgid "Choose a layout for your recipes"
-msgstr ""
+msgstr "Elige una disposición para tus recetas"
 
 #: wp-ultimate-recipe-premium/addons/custom-templates/custom-templates.php:56
 #: wp-ultimate-recipe-premium/addons/custom-templates/custom-templates.php:77
 msgid "Default"
-msgstr ""
+msgstr "Predeterminada"
 
 #: wp-ultimate-recipe-premium/addons/custom-templates/custom-templates.php:57
 msgid "Modern"
-msgstr ""
+msgstr "Moderna"
 
 #: wp-ultimate-recipe-premium/addons/custom-templates/custom-templates.php:58
 msgid "Compact"
-msgstr ""
+msgstr "Compacta"
 
 #: wp-ultimate-recipe-premium/addons/custom-templates/custom-templates.php:68
 msgid "Style"
@@ -392,7 +400,7 @@ msgstr ""
 
 #: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:397
 msgid "Allow users to create their own menus and shopping lists."
-msgstr ""
+msgstr "Permite a los usuarios crear sus propios menús y listas de la compra"
 
 #: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:400
 #: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:70
@@ -425,6 +433,8 @@ msgid ""
 "Important: use the [wpurp_user_menus] shortcode to display the front-end "
 "form."
 msgstr ""
+"Importante: usa el código [wpurp_user_menus] para mostrar el formulario en "
+"la web."
 
 #: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:464
 msgid "Sorry, the site administrator has disabled user menus."
@@ -495,6 +505,8 @@ msgid ""
 "Important: use the [wpurp_submissions] shortcode to display the front-end "
 "form."
 msgstr ""
+"Importante: use el código [wpurp_submissions] para mostrar el formulario en "
+"la web."
 
 #: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:134
 msgid "Sorry, the site administrator has disabled recipe submissions."
@@ -524,32 +536,32 @@ msgstr ""
 msgid "Remove Featured Image"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:200
+#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:211
 msgid "Submit"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:241
+#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:252
 msgid "Recipe submitted! Thank you, your recipe is now awaiting moderation."
 msgstr ""
 
-#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:243
+#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:254
 msgid "Recipe submitted! Thank you, your recipe has been published."
 msgstr ""
 
-#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:261
+#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:273
 msgid "Anonymous"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:341
-#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:358
+#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:353
+#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:370
 msgid "Author"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:357
+#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:369
 msgid "Title"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:360
+#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:372
 msgid "Date"
 msgstr ""
 
@@ -558,81 +570,81 @@ msgstr ""
 #: wp-ultimate-recipe-premium/addons/custom-templates/layouts/default.php:148
 #: wp-ultimate-recipe-premium/addons/custom-templates/layouts/modern.php:172
 msgid "Recipe notes"
-msgstr ""
+msgstr "Notas de la receta"
 
 #: core/wp-ultimate-recipe.php:72
 msgid "WPURP Addons"
-msgstr "WPURP Addons"
+msgstr "Complementos para WPURP"
 
 #: core/wp-ultimate-recipe.php:72 core/wp-ultimate-recipe.php:124
 msgid "Addons"
-msgstr "Addons"
+msgstr "Complementos"
 
 #: core/wp-ultimate-recipe.php:125
 msgid "To install new addons, visit the download link for instructions."
 msgstr ""
-"Für weitere Anweisungen zum installieren von Addons, klicke auf den Link zum "
-"Download."
+"Para instalar nuevos complementos, visita el enlace de descarga para "
+"instrucciones."
 
 #: core/wp-ultimate-recipe.php:154
 msgid "Installed"
-msgstr "Installiert"
+msgstr "Instalado"
 
 #: core/wp-ultimate-recipe.php:176
 msgid "Download!"
-msgstr "Download!"
+msgstr "¡Descarga!"
 
 #: core/wp-ultimate-recipe.php:317
 msgid "Upload Image"
-msgstr "Bild hochladen"
+msgstr "Subir imagen"
 
 #: core/core-functions.php:667
 msgid "Edit Rating"
-msgstr "Bewertung bearbeiten"
+msgstr "Editar valoración"
 
 #: core/core-functions.php:668
 msgid "Update Rating"
-msgstr "Bewertung aktualisieren"
+msgstr "Actualizar valoración"
 
 #: core/core-functions.php:669
 msgid "Add New Rating"
-msgstr "Neue Bewertung dazu"
+msgstr "Añadir nueva valoración"
 
 #: core/core-functions.php:670
 msgid "New Rating Name"
-msgstr "Neuer Bewertungsname"
+msgstr "Añadir nombre de valoración"
 
 #: core/core-functions.php:671
 msgid "Separate ratings with commas"
-msgstr "Bewertungen mit Komma trennen"
+msgstr "Separa valoraciones con comas"
 
 #: core/core-functions.php:672
 msgid "Add or remove ratings"
-msgstr "Bewertung hinzu oder entfernen"
+msgstr "Añadir o borrar valoraciones"
 
 #: core/core-functions.php:673
 msgid "Choose from the most used ratings"
-msgstr "Aus den meisten Bewertungen wählen"
+msgstr "Elige entre la valoraciones más usadas"
 
 #: core/core-functions.php:674
 msgid "No ratings found."
-msgstr "Keine Bewertung gefunden"
+msgstr "No se han encontrado valoraciones."
 
 #: core/core-functions.php:120 core/template/recipe_admin.php:17
 msgid "General"
-msgstr "Allgemein"
+msgstr "General"
 
 #: core/template/recipe_admin.php:20
 msgid "Description"
-msgstr "Beschreibung"
+msgstr "Descripción"
 
 #: core/template/recipe_admin.php:33
 msgid "star"
-msgstr "Stern"
+msgstr "estrella"
 
 #: core/template/recipe_admin.php:33
 msgid "stars"
-msgstr "Sterne"
+msgstr "estrellas"
 
 #: core/template/recipe_admin.php:40 core/template/recipe_public.php:64
 #: core/template/recipe_public.php:120
@@ -645,15 +657,15 @@ msgstr "Sterne"
 #: wp-ultimate-recipe-premium/addons/user-menus/inc/menu-builder.php:18
 #: wp-ultimate-recipe-premium/addons/user-menus/inc/menu-view.php:7
 msgid "Servings"
-msgstr "Portionen"
+msgstr "Raciones"
 
 #: core/template/recipe_admin.php:44
 msgid "(e.g. 2 people, 3 loafs, ...)"
-msgstr "(z.B. 2 Personen, 3 Portionen)"
+msgstr "(ej: 2 personas, 3 porciones, ...)"
 
 #: core/template/recipe_admin.php:48
 msgid "Prep time"
-msgstr "Vorbereitung"
+msgstr "Tiempo de preparación"
 
 #: core/template/recipe_admin.php:51 core/template/recipe_admin.php:58
 #: core/template/recipe_public.php:72 core/template/recipe_public.php:73
@@ -664,11 +676,11 @@ msgstr "Vorbereitung"
 #: wp-ultimate-recipe-premium/addons/custom-templates/layouts/modern.php:63
 #: wp-ultimate-recipe-premium/addons/custom-templates/layouts/modern.php:64
 msgid "minutes"
-msgstr "Minuten"
+msgstr "minutos"
 
 #: core/template/recipe_admin.php:55
 msgid "Cook time"
-msgstr "Kochzeit"
+msgstr "Tiempo de cocción"
 
 #: core/template/recipe_admin.php:64
 msgid ""
@@ -676,13 +688,13 @@ msgid ""
 "<strong>Cuisines</strong> by using the boxes on the right. Use the "
 "<strong>featured image</strong> if you want a photo of the finished dish."
 msgstr ""
-"Achtung:  Du kannst Deine Rezepte einer <strong>Essensart</strong> und einer "
-"<strong>Küche</strong> zuordnen. Nutze dazu die Boxen rechts. Nutze das "
-"<strong>Beitragsbild</strong>  für ein Photo des fertigen Essens."
+"No olvides que puedes etiquetar tu receta con <strong>Platos</strong> y "
+"<strong>Cocinas</strong> utilizando las cajas a la derecha. Usa la "
+"<strong>imagen destacada</strong> si quieres una foto del plato terminado."
 
 #: core/template/recipe_admin.php:104
 msgid "Add an ingredient"
-msgstr "Neue Zutat"
+msgstr "Añadir un ingrediente"
 
 #: core/template/recipe_admin.php:107
 msgid ""
@@ -690,29 +702,29 @@ msgid ""
 "automatically create new fields. <strong>Don't worry about empty lines</"
 "strong>, these will be ignored."
 msgstr ""
-"Neue Felder für die Zutaten können automatisch durch die <strong>TAB Taste</"
-"strong> erzeugt werden. <strong>Sorge Dich nicht um leere Zeilen</strong>, "
-"diese werden automatisch entfernt."
+"<strong>Usa la tecla tabulador</strong> mientras añades ingredientes, "
+"automáticamente se crearán nuevos campos. <strong>No te preocupes por las "
+"líneas vacías</strong>, se ignorarán."
 
 #: core/template/recipe_admin.php:110 core/template/recipe_public.php:128
 #: wp-ultimate-recipe-premium/addons/custom-templates/layouts/compact.php:128
 #: wp-ultimate-recipe-premium/addons/custom-templates/layouts/default.php:128
 #: wp-ultimate-recipe-premium/addons/custom-templates/layouts/modern.php:152
 msgid "Instructions"
-msgstr "Anleitungen"
+msgstr "Instrucciones"
 
 #: core/template/recipe_admin.php:137 core/template/recipe_admin.php:156
 msgid "Add Image"
-msgstr "Bild dazu"
+msgstr "Añadir imagen"
 
 #: core/wp-ultimate-recipe.php:318 core/template/recipe_admin.php:138
 #: core/template/recipe_admin.php:157
 msgid "Remove Image"
-msgstr "Bild entfernen"
+msgstr "Quitar imagen"
 
 #: core/template/recipe_admin.php:166
 msgid "Add an instruction"
-msgstr "Anleitung dazu"
+msgstr "Añadir instrucción"
 
 #: core/template/recipe_admin.php:169
 msgid ""
@@ -720,89 +732,90 @@ msgid ""
 "automatically create new fields. <strong>Don't worry about empty lines</"
 "strong>, these will be ignored."
 msgstr ""
-"Neue Felder für die Anleitung können automatisch durch die <strong>TAB "
-"Taste</strong> erzeugt werden. <strong>Sorge Dich nicht um leere Zeilen</"
-"strong>, diese werden automatisch entfernt."
+"<strong>Usa la tecla tabulador</strong> mientras añades instrucciones, "
+"automáticamente se crearán nuevos campos. <strong>No te preocupes por las "
+"líneas vacías</strong>, se ignorarán."
 
 #: core/addons/custom-taxonomies/taxonomies-builder.php:12
 #: core/template/recipe_menu.php:14
 #: wp-ultimate-recipe-premium/addons/custom-taxonomies/taxonomies-builder.php:12
 #: wp-ultimate-recipe-premium/addons/custom-templates/template-builder.php:14
 msgid "Problems? Take a look at the"
-msgstr "Probleme? Schau in die"
+msgstr "¿Problemas? Echa un vistazo al"
 
 #: core/template/recipe_public.php:65
 #: wp-ultimate-recipe-premium/addons/custom-templates/layouts/compact.php:65
 #: wp-ultimate-recipe-premium/addons/custom-templates/layouts/default.php:65
 #: wp-ultimate-recipe-premium/addons/custom-templates/layouts/modern.php:56
 msgid "Prep Time"
-msgstr "Vorbereitung"
+msgstr "Tiempo de preparación"
 
 #: core/template/recipe_public.php:66
 #: wp-ultimate-recipe-premium/addons/custom-templates/layouts/compact.php:66
 #: wp-ultimate-recipe-premium/addons/custom-templates/layouts/default.php:66
 #: wp-ultimate-recipe-premium/addons/custom-templates/layouts/modern.php:57
 msgid "Cook Time"
-msgstr "Kochzeit"
+msgstr "Tiempo de cocción"
 
 #: core/template/recipe_public.php:154
 #: wp-ultimate-recipe-premium/addons/custom-templates/layouts/compact.php:154
 #: wp-ultimate-recipe-premium/addons/custom-templates/layouts/default.php:154
 #: wp-ultimate-recipe-premium/addons/custom-templates/layouts/modern.php:179
 msgid "Powered by"
-msgstr "Powered by"
+msgstr "Funciona gracias a"
 
 #: core/wp-ultimate-recipe.php:71
 msgid "Recipe Settings"
-msgstr "Rezepte - Einstellungen"
+msgstr "Ajustes de receta"
 
 #: core/wp-ultimate-recipe.php:71 core/template/recipe_menu.php:4
 msgid "Settings"
-msgstr "Einstellungen"
+msgstr "Ajustes"
 
 #: core/core-functions.php:137
 msgid "Recipe Box"
-msgstr "Rezeptkasten"
+msgstr "Caja de la receta"
 
 #: core/core-functions.php:141
 msgid "Adjustable Servings"
-msgstr "Einstellbare Mengenangaben"
+msgstr "Porciones ajustables"
 
 #: core/core-functions.php:147
 msgid "Allow users to dynamically adjust the servings of recipes."
-msgstr "Benutzern die Anpassung der Rezepte ermöglichen"
+msgstr ""
+"Permita a los usuarios ajustar dinámicamente las porciones de la receta"
 
 #: core/core-functions.php:154
 msgid "Link to plugin"
-msgstr "Link zum Plugin"
+msgstr "Enlace al plugin"
 
 #: core/core-functions.php:160
 msgid "Show a link to the plugin website as a little thank you."
-msgstr "Als *Danke schön!* einen Link zum Programmierer zeigen"
+msgstr "Muestra un enlace al sitio web del plugin como agradecimiento."
 
 #: core/core-functions.php:167
 msgid "Show full recipe"
-msgstr "Komplettes Rezept zeigen"
+msgstr "Mostrar receta completa"
 
 #: core/core-functions.php:173
 msgid "Show the full recipe instead of the description/excerpt in"
-msgstr "Volles Rezept und nicht nur den Auszug anzeigen."
+msgstr "Muestra la receta completa en lugar de la descripción en"
 
 #: core/core-functions.php:173
 msgid "the recipe archive"
-msgstr "Rezepte - Archiv"
+msgstr "el archivo de recetas"
 
 #: core/core-functions.php:206
 msgid "Settings regarding the recipe box shown to your visitors."
-msgstr "Einstellungen zur Sichtbarkeit des Rezeptkastens"
+msgstr "Ajustes de la caja de la receta que se mostrará a tus visitantes."
 
 #: core/core-functions.php:260
 msgid "Recipes"
-msgstr "Rezepte"
+msgstr "Recetas"
 
 #: core/core-functions.php:261 core/core-functions.php:296
 msgid "Recipe"
-msgstr "Rezept"
+msgstr "Receta"
 
 #: core/core-functions.php:268 core/core-functions.php:269
 #: core/core-functions.php:630
@@ -811,7 +824,7 @@ msgstr "Rezept"
 #: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:50
 #: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:51
 msgid "Add New"
-msgstr "Neu dazu"
+msgstr "Añadir nueva"
 
 #: core/core-functions.php:270 core/core-functions.php:271
 #: core/core-functions.php:628
@@ -820,26 +833,27 @@ msgstr "Neu dazu"
 #: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:52
 #: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:53
 msgid "Edit"
-msgstr "Bearbeiten"
+msgstr "Editar"
 
 #: core/core-functions.php:273 core/core-functions.php:274
 #: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:55
 #: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:56
 msgid "View"
-msgstr "Ansehen"
+msgstr "Ver"
 
 #: core/core-functions.php:486
 msgid "Select the recipe to add to your post:"
-msgstr "Wähle das Rezept für Deinen Beitrag:"
+msgstr "Elige la receta a añadir a tu entrada"
 
 #: core/core-functions.php:496
 msgid "Insert Recipe"
-msgstr "Rezept einfügen"
+msgstr "Insertar receta"
 
 #: core/core-functions.php:500 core/core-functions.php:552
 msgid ""
 "You have to create a recipe first, check the 'Recipes' menu on the left."
-msgstr "Du musst zuerst ein Rezept erstellen. Schaue links in das Menue."
+msgstr ""
+"Tiene que crear una receta primero, revisa el menú 'Recetas' a la izquierda."
 
 #: core/core-functions.php:587 core/template/recipe_admin.php:69
 #: core/template/recipe_public.php:85
@@ -847,112 +861,113 @@ msgstr "Du musst zuerst ein Rezept erstellen. Schaue links in das Menue."
 #: wp-ultimate-recipe-premium/addons/custom-templates/layouts/default.php:85
 #: wp-ultimate-recipe-premium/addons/custom-templates/layouts/modern.php:81
 msgid "Ingredients"
-msgstr "Zutaten"
+msgstr "Ingredientes"
 
 #: core/core-functions.php:587
+#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:206
 msgid "Ingredient"
-msgstr "Zutat"
+msgstr "Ingrediente"
 
 #: core/core-functions.php:588
 msgid "Courses"
-msgstr "Essensarten"
+msgstr "Platos"
 
 #: core/core-functions.php:588
 msgid "Course"
-msgstr "Essensart"
+msgstr "Plato"
 
 #: core/core-functions.php:594
 msgid "Breakfast"
-msgstr "Frühstück"
+msgstr "Desayuno"
 
 #: core/core-functions.php:595
 msgid "Appetizer"
-msgstr "Vorspeise"
+msgstr "Aperitivo"
 
 #: core/core-functions.php:596
 msgid "Soup"
-msgstr "Suppe"
+msgstr "Sopa"
 
 #: core/core-functions.php:597
 msgid "Main Course"
-msgstr "Hauptgericht"
+msgstr "Primer plato"
 
 #: core/core-functions.php:598
 msgid "Side Dish"
-msgstr "Beilage"
+msgstr "Entremés"
 
 #: core/core-functions.php:599
 msgid "Salad"
-msgstr "Salat"
+msgstr "Ensalada"
 
 #: core/core-functions.php:600
 msgid "Dessert"
-msgstr "Nachtisch"
+msgstr "Postre"
 
 #: core/core-functions.php:601
 msgid "Snack"
-msgstr "Snack"
+msgstr "Tentempié"
 
 #: core/core-functions.php:602
 msgid "Drinks"
-msgstr "Getränke"
+msgstr "Bebidas"
 
 #: core/core-functions.php:589
 msgid "Cuisines"
-msgstr "Küchen"
+msgstr "Cocinas"
 
 #: core/core-functions.php:589
 msgid "Cuisine"
-msgstr "Küche"
+msgstr "Cocina"
 
 #: core/core-functions.php:604
 msgid "French"
-msgstr "Französisch"
+msgstr "Francesa"
 
 #: core/core-functions.php:605
 msgid "Italian"
-msgstr "Italienisch"
+msgstr "Italiana"
 
 #: core/core-functions.php:606
 msgid "Mediterranean"
-msgstr "Mediterran"
+msgstr "Mediterránea"
 
 #: core/core-functions.php:607
 msgid "Indian"
-msgstr "Indisch"
+msgstr "India"
 
 #: core/core-functions.php:608
 msgid "Chinese"
-msgstr "Chinesisch"
+msgstr "China"
 
 #: core/core-functions.php:609
 msgid "Japanese"
-msgstr "Japanisch"
+msgstr "Japonesa"
 
 #: core/core-functions.php:610
 msgid "American"
-msgstr "Amerikanisch"
+msgstr "Americana"
 
 #: core/core-functions.php:611
 msgid "Mexican"
-msgstr "Mexikanisch"
+msgstr "Mexicana"
 
 #: core/core-functions.php:662 core/core-functions.php:675
 msgid "Ratings"
-msgstr "Bewertungen"
+msgstr "Valoraciones"
 
 #: core/core-functions.php:663 core/template/recipe_admin.php:26
 msgid "Rating"
-msgstr "Bewertung"
+msgstr "Valoración"
 
 #: core/core-functions.php:664
 msgid "Search Ratings"
-msgstr "Bewertungen suchen"
+msgstr "Buscar valoraciones"
 
 #: core/core-functions.php:665
 msgid "Popular Ratings"
-msgstr "Angesagte Bewertungen"
+msgstr "Valoraciones populares"
 
 #: core/core-functions.php:666
 msgid "All Ratings"
-msgstr "Alle Bewertungen"
+msgstr "Todas las valoraciones"

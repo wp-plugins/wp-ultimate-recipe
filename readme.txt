@@ -55,6 +55,11 @@ You can find more information at [WPUltimateRecipePlugin.com](http://www.wpultim
 
 == Changelog ==
 
+= 0.0.17 =
+* Bugfixes
+* Translatable slugs
+* Fixed print button in Chrome
+
 = 0.0.16 =
 * Added recipe notes field
 * Fixed default terms
@@ -109,6 +114,9 @@ You can find more information at [WPUltimateRecipePlugin.com](http://www.wpultim
 * Very first version of this plugin
 
 == Upgrade notice ==
+
+= 0.0.17 =
+Update for some bug fixes and extra translation options
 
 = 0.0.16 =
 Update for new recipe notes feature

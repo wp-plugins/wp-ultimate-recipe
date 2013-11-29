@@ -19,6 +19,18 @@ $available_addons = array(
         'url' => 'http://www.wpultimaterecipeplugin.com/addons/user-submissions',
         'available' => true,
     ),
+    'custom-taxonomies' => array(
+        'name' => 'Custom Taxonomies',
+        'desc' => 'Add custom tags to your recipes.',
+        'url' => 'http://www.wpultimaterecipeplugin.com/addons/custom-taxonomies',
+        'available' => true,
+    ),
+    'recipe-search' => array(
+        'name' => 'Recipe Search',
+        'desc' => 'Search and filter recipes by tags and ingredients.',
+        'url' => 'http://www.wpultimaterecipeplugin.com/addons/recipe-search',
+        'available' => false,
+    ),
     'recipe-calendar' => array(
         'name' => 'Recipe Calendar',
         'desc' => 'Assign recipes to dates and create diet plans.',

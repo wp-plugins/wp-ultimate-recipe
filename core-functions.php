@@ -11,10 +11,9 @@ class WPURP_Core extends WPUltimateRecipe {
         
         // Actions
         add_action( 'init', array( $this, 'load_installed_addons' ), -10 );
+        add_action( 'init', array( $this, 'get_installed_addons' ), -10 );  //TODO Combine these.
         add_action( 'init', array( $this, 'recipes_init' ));
-        add_action( 'init', array( $this, 'ingredients_init' ));
-        add_action( 'init', array( $this, 'courses_init' ));
-        add_action( 'init', array( $this, 'cuisines_init' ));
+        add_action( 'init', array( $this, 'wpurpp_custom_taxonomies_init' ));
         add_action( 'init', array( $this, 'ratings_init' ));
         add_action( 'wp_enqueue_scripts', array( $this, 'public_plugin_styles' ) );
         add_action( 'wp_enqueue_scripts', array( $this, 'public_plugin_scripts' ) );
@@ -24,7 +23,11 @@ class WPURP_Core extends WPUltimateRecipe {
         add_action( 'save_post', array( $this, 'recipes_save' ), 10, 2 );
         add_action( 'admin_menu', array( $this, 'admin_menu') );
         add_action( 'admin_init', array( $this, 'admin_init' ) );
-        add_action( 'after_wp_tiny_mce', array( $this, 'recipes_shortcode_form' ) );
+        add_action( 'update_option_wpurp_recipe_slug', array( $this, 'update_recipe_slug' ) );
+
+        if(is_admin()) {
+            add_action( 'after_wp_tiny_mce', array( $this, 'recipes_shortcode_form' ) );
+        }
 
         // Filters
         //add_filter( 'template_include', array( $this, 'recipes_template' ), 1 );
@@ -76,7 +79,7 @@ class WPURP_Core extends WPUltimateRecipe {
         }
     }
 
-    public function is_addon_active( $addon )
+    public function is_premium_addon_active( $addon )
     {
         include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
         if($this->installed_addons[$addon] === true && is_plugin_active( 'wp-ultimate-recipe-premium/wp-ultimate-recipe-premium.php' )) {
@@ -88,22 +91,20 @@ class WPURP_Core extends WPUltimateRecipe {
     public function activate_taxonomies()
     {
         $this->recipes_init();
-
-        $this->ingredients_init();
-
-        $this->courses_init();
-        $this->courses_defaults();
-
-        $this->cuisines_init();
-        $this->cuisines_defaults();
+        $this->wpurpp_custom_taxonomies_init();
 
         flush_rewrite_rules();
-        global $wp_rewrite;
-        $wp_rewrite->flush_rules();
+    }
+
+    public function update_recipe_slug()
+    {
+        $this->recipes_init();
+        flush_rewrite_rules();
     }
 
     public function admin_menu()
     {
+        remove_meta_box('tagsdiv-ingredient', 'recipe', 'side');
         remove_meta_box('ingredientdiv', 'recipe', 'side');
         remove_meta_box('stardiv', 'recipe', 'side');
     }
@@ -116,14 +117,31 @@ class WPURP_Core extends WPUltimateRecipe {
         add_filter( 'mce_external_plugins', array( $this, 'recipes_shortcode_button_plugin' ) );
         add_filter( 'mce_buttons', array( $this, 'recipes_shortcode_button_add' ) );
 
-        add_settings_section( 'wpurp_settings_section', __( 'Recipe Box', $this->pluginName ), array( $this, 'admin_menu_settings_general' ), 'wpurp_settings' );
+        add_settings_section( 'wpurp_settings_general_section', __( 'General', $this->pluginName ), array( $this, 'admin_menu_settings_general' ), 'wpurp_settings' );
+
+        $slug = get_option('wpurp_recipe_slug', 'recipe');
+
+        add_settings_field(
+            'wpurp_recipe_slug',
+            __( 'Recipe Slug', $this->pluginName ),
+            array( $this, 'admin_menu_settings_text' ),
+            'wpurp_settings',
+            'wpurp_settings_general_section',
+            array(
+                'wpurp_recipe_slug',
+                __( 'Recipe archive', $this->pluginName ) . ': <a href="'.site_url('/'.$slug.'/').'" target="_blank">'.site_url('/'.$slug.'/').'</a>',
+                'recipe'
+            )
+        );
+
+        add_settings_section( 'wpurp_settings_recipe_box_section', __( 'Recipe Box', $this->pluginName ), array( $this, 'admin_menu_settings_recipe_box' ), 'wpurp_settings' );
 
         add_settings_field(
             'wpurp_show_servings_adjust',
             __( 'Adjustable Servings', $this->pluginName ),
             array( $this, 'admin_menu_settings_checkbox' ),
             'wpurp_settings',
-            'wpurp_settings_section',
+            'wpurp_settings_recipe_box_section',
             array(
                 'wpurp_show_servings_adjust',
                 __( 'Allow users to dynamically adjust the servings of recipes.', $this->pluginName ),
@@ -136,7 +154,7 @@ class WPURP_Core extends WPUltimateRecipe {
             __( 'Link to plugin', $this->pluginName ),
             array( $this, 'admin_menu_settings_checkbox' ),
             'wpurp_settings',
-            'wpurp_settings_section',
+            'wpurp_settings_recipe_box_section',
             array(
                 'wpurp_show_linkback',
                 __( 'Show a link to the plugin website as a little thank you.', $this->pluginName ),
@@ -149,12 +167,17 @@ class WPURP_Core extends WPUltimateRecipe {
             __( 'Show full recipe', $this->pluginName ),
             array( $this, 'admin_menu_settings_checkbox' ),
             'wpurp_settings',
-            'wpurp_settings_section',
+            'wpurp_settings_recipe_box_section',
             array(
                 'wpurp_show_full_recipe',
-                __( 'Show the full recipe instead of the description/excerpt in', $this->pluginName ) . ' <a href="'.site_url('/recipe/').'" target="_blank">' . __( 'the recipe archive', $this->pluginName ) . '</a>.',
+                __( 'Show the full recipe instead of the description/excerpt in', $this->pluginName ) . ' <a href="'.site_url('/'.$slug.'/').'" target="_blank">' . __( 'the recipe archive', $this->pluginName ) . '</a>.',
                 0
             )
+        );
+
+        register_setting(
+            'wpurp_settings',
+            'wpurp_recipe_slug'
         );
 
         register_setting(
@@ -175,7 +198,53 @@ class WPURP_Core extends WPUltimateRecipe {
 
     public function admin_menu_settings_general()
     {
+        _e( 'General settings.', $this->pluginName );
+    }
+
+    public function admin_menu_settings_recipe_box()
+    {
         _e( 'Settings regarding the recipe box shown to your visitors.', $this->pluginName );
+    }
+
+    /*
+     * Load all available addons
+     */
+    public function get_installed_addons() {
+        $addons_dir = $this->pluginDir . '/addons';
+        if( !is_dir( $addons_dir ) ) {
+            return; //if addon directory does not exist, stop here
+        } else {
+            $dirContent = scandir($addons_dir);
+
+            foreach ($dirContent as $folder) {
+
+                if ($folder != '.' && $folder != '..') {
+                    if( !$this->is_premium_addon_active( $folder ) ) {
+                        $this->load_addon_file( $folder );
+                    }
+                }
+            }
+
+        }
+    }
+
+    public function load_addon_file( $addon ) {
+        $file = $this->pluginDir . '/addons/' . $addon . '/'. $addon . '.php';
+        if( is_file( $file ) ) {
+            include_once( $file );
+            $parts = explode( '-', $addon );
+            foreach( $parts as $k => $part ) {
+                if( 0 == $k ) {
+                    $addon_class = 'WPURP_' . $part;
+                } else {
+                    $addon_class .= ucwords( $part );
+                }
+            }
+            //Pass properties to addon constructor because you just know one of
+            //these addons will end up needing it
+            $this->addons[$addon] = new $addon_class( $this->pluginName, $this->pluginDir, $this->pluginUrl );
+        }
+        return;
     }
 
 
@@ -186,22 +255,27 @@ class WPURP_Core extends WPUltimateRecipe {
      */
     public function recipes_init()
     {
+        $slug = get_option('wpurp_recipe_slug', 'recipe');
+
+        $name = __( 'Recipes', $this->pluginName );
+        $singular = __( 'Recipe', $this->pluginName );
+
         register_post_type( 'recipe',
             array(
                'labels' => array(
-                   'name' => __('Recipes', $this->pluginName ),
-                   'singular_name' => __( 'Recipe', $this->pluginName ),
+                   'name' => $name,
+                   'singular_name' => $singular,
                    'add_new' => __( 'Add New', $this->pluginName ),
-                   'add_new_item' => __( 'Add New Recipe', $this->pluginName ),
+                   'add_new_item' => __( 'Add New', $this->pluginName ) . ' ' . $singular,
                    'edit' => __( 'Edit', $this->pluginName ),
-                   'edit_item' => __( 'Edit Recipe', $this->pluginName ),
-                   'new_item' => __( 'New Recipe', $this->pluginName ),
+                   'edit_item' => __( 'Edit', $this->pluginName ) . ' ' . $singular,
+                   'new_item' => __( 'New', $this->pluginName ) . ' ' . $singular,
                    'view' => __( 'View', $this->pluginName ),
-                   'view_item' => __( 'View Recipe', $this->pluginName ),
-                   'search_items' => __( 'Search Recipes', $this->pluginName ),
-                   'not_found' => __( 'No Recipes found', $this->pluginName ),
-                   'not_found_in_trash' => __( 'No Recipes found in Trash', $this->pluginName ),
-                   'parent' => __( 'Parent Recipe', $this->pluginName )
+                   'view_item' => __( 'View', $this->pluginName ) . ' ' . $singular,
+                   'search_items' => __( 'Search', $this->pluginName ) . ' ' . $name,
+                   'not_found' => __( 'No', $this->pluginName ) . ' ' . $name . ' ' . __( 'found.', $this->pluginName ),
+                   'not_found_in_trash' => __( 'No', $this->pluginName ) . ' ' . $name . ' ' . __( 'found in trash.', $this->pluginName ),
+                   'parent' => __( 'Parent', $this->pluginName ) . ' ' . $singular,
                ),
                 'public' => true,
                 'menu_position' => 5,
@@ -209,7 +283,9 @@ class WPURP_Core extends WPUltimateRecipe {
                 'taxonomies' => array( '' ),
                 'menu_icon' =>  $this->pluginUrl . '/img/icon_16.png',
                 'has_archive' => true,
-                'rewrite' => _x( 'recipe', 'Recipe slug', $this->pluginName ),
+                'rewrite' => array(
+                    'slug' => $slug
+                )
             ));
     }
     
@@ -304,6 +380,9 @@ class WPURP_Core extends WPUltimateRecipe {
 
                 if (is_single() || get_option('wpurp_show_full_recipe', 0) == 1)
                 {
+                    $taxonomies = $this->get_custom_taxonomies();
+                    unset($taxonomies['ingredient']);
+
                     ob_start();
                     include($this->pluginDir . '/template/recipe_public.php');
                     $content = ob_get_contents();
@@ -363,6 +442,9 @@ class WPURP_Core extends WPUltimateRecipe {
         if(!is_null($recipe_post) && $recipe_post->post_type == 'recipe')
         {
             $recipe = get_post_custom($recipe_post->ID);
+
+            $taxonomies = $this->get_custom_taxonomies();
+            unset($taxonomies['ingredient']);
 
             ob_start();
             include($this->pluginDir . '/template/recipe_public.php');
@@ -486,140 +568,82 @@ class WPURP_Core extends WPUltimateRecipe {
 
     /*
      * ================================================================================================================
-     * @INGREDIENTS
+     * @TAXONOMIES
      * ================================================================================================================
      */
 
-    public function ingredients_init()
+    function get_custom_taxonomies()
     {
-        register_taxonomy(
-            'ingredient',
-            'recipe',
+        return get_option('wpurp_taxonomies', array());
+    }
+
+    function wpurpp_custom_taxonomies_init()
+    {
+        $taxonomies = $this->get_custom_taxonomies();
+
+        if(count($taxonomies) == 0)
+        {
+
+            $taxonomies = $this->add_taxonomy_to_array($taxonomies, 'ingredient', __( 'Ingredients', $this->pluginName ), __( 'Ingredient', $this->pluginName ));
+            $taxonomies = $this->add_taxonomy_to_array($taxonomies, 'course', __( 'Courses', $this->pluginName ), __( 'Course', $this->pluginName ));
+            $taxonomies = $this->add_taxonomy_to_array($taxonomies, 'cuisine', __( 'Cuisines', $this->pluginName ), __( 'Cuisine', $this->pluginName ));
+
+            update_option('wpurp_taxonomies', $taxonomies);
+            flush_rewrite_rules();
+
+            wp_insert_term( __( 'Breakfast', $this->pluginName ), 'course' );
+            wp_insert_term( __( 'Appetizer', $this->pluginName ), 'course' );
+            wp_insert_term( __( 'Soup', $this->pluginName ), 'course' );
+            wp_insert_term( __( 'Main Course', $this->pluginName ), 'course' );
+            wp_insert_term( __( 'Side Dish', $this->pluginName ), 'course' );
+            wp_insert_term( __( 'Salad', $this->pluginName ), 'course' );
+            wp_insert_term( __( 'Dessert', $this->pluginName ), 'course' );
+            wp_insert_term( __( 'Snack', $this->pluginName ), 'course' );
+            wp_insert_term( __( 'Drinks', $this->pluginName ), 'course' );
+
+            wp_insert_term( __( 'French', $this->pluginName ), 'cuisine' );
+            wp_insert_term( __( 'Italian', $this->pluginName ), 'cuisine' );
+            wp_insert_term( __( 'Mediterranean', $this->pluginName ), 'cuisine' );
+            wp_insert_term( __( 'Indian', $this->pluginName ), 'cuisine' );
+            wp_insert_term( __( 'Chinese', $this->pluginName ), 'cuisine' );
+            wp_insert_term( __( 'Japanese', $this->pluginName ), 'cuisine' );
+            wp_insert_term( __( 'American', $this->pluginName ), 'cuisine' );
+            wp_insert_term( __( 'Mexican', $this->pluginName ), 'cuisine' );
+        }
+    }
+
+    private function add_taxonomy_to_array($arr, $tag, $name, $singular)
+    {
+        $name_lower = strtolower($name);
+        $singular_lower = strtolower($singular);
+
+        $arr[$tag] =
             array(
                 'labels' => array(
-                    'name'                       => __( 'Ingredients', $this->pluginName ),
-                    'singular_name'              => __( 'Ingredient', $this->pluginName ),
-                    'search_items'               => __( 'Search Ingredients', $this->pluginName ),
-                    'popular_items'              => __( 'Popular Ingredients', $this->pluginName ),
-                    'all_items'                  => __( 'All Ingredients', $this->pluginName ),
-                    'parent_item'                => __( 'Parent Ingredient', $this->pluginName ),
-                    'parent_item_colon'          => __( 'Parent Ingredient:', $this->pluginName ),
-                    'edit_item'                  => __( 'Edit Ingredient', $this->pluginName ),
-                    'update_item'                => __( 'Update Ingredient', $this->pluginName ),
-                    'add_new_item'               => __( 'Add New Ingredient', $this->pluginName ),
-                    'new_item_name'              => __( 'New Ingredient Name', $this->pluginName ),
-                    'separate_items_with_commas' => __( 'Separate ingredients with commas', $this->pluginName ),
-                    'add_or_remove_items'        => __( 'Add or remove ingredients', $this->pluginName ),
-                    'choose_from_most_used'      => __( 'Choose from the most used ingredients', $this->pluginName ),
-                    'not_found'                  => __( 'No ingredients found.', $this->pluginName ),
-                    'menu_name'                  => __( 'Ingredients', $this->pluginName )
+                    'name'                       => $name,
+                    'singular_name'              => $singular,
+                    'search_items'               => __( 'Search', $this->pluginName ) . ' ' . $name,
+                    'popular_items'              => __( 'Popular', $this->pluginName ) . ' ' . $name,
+                    'all_items'                  => __( 'All', $this->pluginName ) . ' ' . $name,
+                    'edit_item'                  => __( 'Edit', $this->pluginName ) . ' ' . $singular,
+                    'update_item'                => __( 'Update', $this->pluginName ) . ' ' . $singular,
+                    'add_new_item'               => __( 'Add New', $this->pluginName ) . ' ' . $singular,
+                    'new_item_name'              => __( 'New', $this->pluginName ) . ' ' . $singular . ' ' . __( 'Name', $this->pluginName ),
+                    'separate_items_with_commas' => __( 'Separate', $this->pluginName ) . ' ' . $name_lower . ' ' . __( 'with commas', $this->pluginName ),
+                    'add_or_remove_items'        => __( 'Add or remove', $this->pluginName ) . ' ' . $name_lower,
+                    'choose_from_most_used'      => __( 'Choose from the most used', $this->pluginName ) . ' ' . $name_lower,
+                    'not_found'                  => __( 'No', $this->pluginName ) . ' ' . $name_lower . ' ' . __( 'found.', $this->pluginName ),
+                    'menu_name'                  => $name
                 ),
-                'show_ui'       => true,
+                'show_ui' => true,
                 'show_tagcloud' => true,
-                'hierarchical'  => true,
-                'rewrite' 		=> true,
-                'query_var'     => true
-            )
-        );
-    }
-
-    /*
-     * ================================================================================================================
-     * @COURSES
-     * ================================================================================================================
-     */
-
-    public function courses_init()
-    {
-        if(!$this->is_addon_active('custom-taxonomies')) {
-            register_taxonomy(
-                'course',
-                'recipe',
-                array(
-                    'labels' => array(
-                        'name'                       => __( 'Courses', $this->pluginName ),
-                        'singular_name'              => __( 'Course', $this->pluginName ),
-                        'search_items'               => __( 'Search Courses', $this->pluginName ),
-                        'popular_items'              => __( 'Popular Courses', $this->pluginName ),
-                        'all_items'                  => __( 'All Courses', $this->pluginName ),
-                        'edit_item'                  => __( 'Edit Course', $this->pluginName ),
-                        'update_item'                => __( 'Update Course', $this->pluginName ),
-                        'add_new_item'               => __( 'Add New Course', $this->pluginName ),
-                        'new_item_name'              => __( 'New Course Name', $this->pluginName ),
-                        'separate_items_with_commas' => __( 'Separate courses with commas', $this->pluginName ),
-                        'add_or_remove_items'        => __( 'Add or remove courses', $this->pluginName ),
-                        'choose_from_most_used'      => __( 'Choose from the most used courses', $this->pluginName ),
-                        'not_found'                  => __( 'No courses found.', $this->pluginName ),
-                        'menu_name'                  => __( 'Courses', $this->pluginName )
-                    ),
-                    'show_ui' => true,
-                    'show_tagcloud' => true,
-                    'hierarchical' => false
+                'hierarchical' => true,
+                'rewrite' => array(
+                    'slug' => $singular_lower
                 )
             );
-        }
-    }
-    
-    public function courses_defaults()
-    {
-        wp_insert_term( __( 'Breakfast', $this->pluginName ), 'course' );
-        wp_insert_term( __( 'Appetizer', $this->pluginName ), 'course' );
-        wp_insert_term( __( 'Soup', $this->pluginName ), 'course' );
-        wp_insert_term( __( 'Main Course', $this->pluginName ), 'course' );
-        wp_insert_term( __( 'Side Dish', $this->pluginName ), 'course' );
-        wp_insert_term( __( 'Salad', $this->pluginName ), 'course' );
-        wp_insert_term( __( 'Dessert', $this->pluginName ), 'course' );
-        wp_insert_term( __( 'Snack', $this->pluginName ), 'course' );
-        wp_insert_term( __( 'Drinks', $this->pluginName ), 'course' );
-    }
 
-    /*
-     * ================================================================================================================
-     * @CUISINES
-     * ================================================================================================================
-     */
-
-    public function cuisines_init()
-    {
-        if(!$this->is_addon_active('custom-taxonomies')) {
-            register_taxonomy(
-                'cuisine',
-                'recipe',
-                array(
-                    'labels' => array(
-                        'name'                       => __( 'Cuisines', $this->pluginName ),
-                        'singular_name'              => __( 'Cuisine', $this->pluginName ),
-                        'search_items'               => __( 'Search Cuisines', $this->pluginName ),
-                        'popular_items'              => __( 'Popular Cuisines', $this->pluginName ),
-                        'all_items'                  => __( 'All Cuisines', $this->pluginName ),
-                        'edit_item'                  => __( 'Edit Cuisine', $this->pluginName ),
-                        'update_item'                => __( 'Update Cuisine', $this->pluginName ),
-                        'add_new_item'               => __( 'Add New Cuisine', $this->pluginName ),
-                        'new_item_name'              => __( 'New Cuisine Name', $this->pluginName ),
-                        'separate_items_with_commas' => __( 'Separate cuisines with commas', $this->pluginName ),
-                        'add_or_remove_items'        => __( 'Add or remove cuisines', $this->pluginName ),
-                        'choose_from_most_used'      => __( 'Choose from the most used cuisines', $this->pluginName ),
-                        'not_found'                  => __( 'No cuisines found.', $this->pluginName ),
-                        'menu_name'                  => __( 'Cuisines', $this->pluginName )
-                    ),
-                    'show_ui' => true,
-                    'show_tagcloud' => true,
-                    'hierarchical' => false
-                )
-            );
-        }
-    }
-
-    public function cuisines_defaults()
-    {
-        wp_insert_term( __( 'French', $this->pluginName ), 'cuisine' );
-        wp_insert_term( __( 'Italian', $this->pluginName ), 'cuisine' );
-        wp_insert_term( __( 'Mediterranean', $this->pluginName ), 'cuisine' );
-        wp_insert_term( __( 'Indian', $this->pluginName ), 'cuisine' );
-        wp_insert_term( __( 'Chinese', $this->pluginName ), 'cuisine' );
-        wp_insert_term( __( 'Japanese', $this->pluginName ), 'cuisine' );
-        wp_insert_term( __( 'American', $this->pluginName ), 'cuisine' );
-        wp_insert_term( __( 'Mexican', $this->pluginName ), 'cuisine' );
+        return $arr;
     }
 
     /*

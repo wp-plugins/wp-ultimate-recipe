@@ -44,31 +44,19 @@
             </ul>
             <ul>
                 <?php
-                $courses = get_the_term_list( $recipe_post->ID, 'course', '', ', ');
-
-                if($courses != '')
-                {
-                ?>
-                <li>
-                    <span class="recipe-tag-name"><?php _e( 'Course', $this->pluginName ); ?></span>
-                    <span class="recipe-tags">
-                        <?php echo $courses; ?>
-                    </span>
-                </li>
-                <?php } ?>
-                <?php
-                $cuisines = get_the_term_list( $recipe_post->ID, 'cuisine', '', ', ');
-
-                if($cuisines != '')
-                {
-                ?>
-                <li>
-                    <span class="recipe-tag-name"><?php _e( 'Cuisine', $this->pluginName ); ?></span>
-                    <span class="recipe-tags">
-                        <?php echo $cuisines; ?>
-                    </span>
-                </li>
-                <?php } ?>
+                foreach($taxonomies as $taxonomy => $options) {
+                    $terms = get_the_term_list( $recipe_post->ID, $taxonomy, '', ', ');
+                    if($terms != '')
+                    {
+                        ?>
+                        <li>
+                            <span class="recipe-tag-name"><?php echo $options['labels']['singular_name'] ?></span>
+                        <span class="recipe-tags">
+                            <?php echo $terms; ?>
+                        </span>
+                        </li>
+                    <?php }
+                }?>
             </ul>
             <table class="recipe-header-extra">
                 <thead>

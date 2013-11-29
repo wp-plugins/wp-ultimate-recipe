@@ -93,9 +93,9 @@ if( $ingredients != '')
     <tr>
         <td class="sort-handle"><img src="<?php echo $this->pluginUrl; ?>/img/arrows.png" width="18" height="16"></td>
         <td><input type="text" name="recipe_ingredients[<?php echo $i; ?>][amount]"   class="ingredients_amount" id="ingredients_amount_<?php echo $i; ?>" placeholder="1" /></td>
-        <td><input type="text" name="recipe_ingredients[<?php echo $i; ?>][unit]"       class="ingredients_unit" id="ingredients_unit_<?php echo $i; ?>" placeholder="<?php _e( 'cup', $this->pluginName ); ?>" /></td>
-        <td><input type="text" name="recipe_ingredients[<?php echo $i; ?>][ingredient]" class="ingredients_name" id="ingredients_<?php echo $i; ?>" onfocus="autoSuggestTag('ingredients_<?php echo $i; ?>', 'ingredient');" placeholder="<?php _e( 'walnuts', $this->pluginName ); ?>" /></td>
-        <td><input type="text" name="recipe_ingredients[<?php echo $i; ?>][notes]"      class="ingredients_notes" id="ingredient_notes_<?php echo $i; ?>" placeholder="<?php _e( 'coarsely chopped', $this->pluginName ); ?>" /></td>
+        <td><input type="text" name="recipe_ingredients[<?php echo $i; ?>][unit]"       class="ingredients_unit" id="ingredients_unit_<?php echo $i; ?>" placeholder="<?php _e( 'tbsp', $this->pluginName ); ?>" /></td>
+        <td><input type="text" name="recipe_ingredients[<?php echo $i; ?>][ingredient]" class="ingredients_name" id="ingredients_<?php echo $i; ?>" onfocus="autoSuggestTag('ingredients_<?php echo $i; ?>', 'ingredient');" placeholder="<?php _e( 'olive oil', $this->pluginName ); ?>" /></td>
+        <td><input type="text" name="recipe_ingredients[<?php echo $i; ?>][notes]"      class="ingredients_notes" id="ingredient_notes_<?php echo $i; ?>" placeholder="<?php _e( 'extra virgin', $this->pluginName ); ?>" /></td>
         <td><span class="ingredients-delete"><img src="<?php echo $this->pluginUrl; ?>/img/minus.png" width="16" height="16"></span></td>
     </tr>
     </tbody>
@@ -150,12 +150,22 @@ $image = $this->pluginUrl . '/img/image_placeholder.png';
 ?>
         <tr>
             <td class="sort-handle"><img src="<?php echo $this->pluginUrl; ?>/img/arrows.png" width="18" height="16"></td>
-            <td><textarea name="recipe_instructions[<?php echo $i; ?>][description]" rows="4" id="ingredient_description_<?php echo $i; ?>"></textarea></td>
             <td>
+                <textarea name="recipe_instructions[<?php echo $i; ?>][description]" rows="4" id="ingredient_description_<?php echo $i; ?>"></textarea>
+                <?php //if( !is_user_logged_in() ) { ?>
+                <?php if ( !current_user_can( 'manage_options' ) ) { ?>
+                    <?php _e( 'Add Image', $this->pluginName ); ?>:<br/>
+                    <input class="recipe_instructions_image button" type="file" id="recipe_humbnail" value="" size="50" name="recipe_thumbnail_<?php echo $i; ?>" />
+                    </td>
+                <?php } else { ?>
+            </td>
+            <td>
+
                 <input name="recipe_instructions[<?php echo $i; ?>][image]" class="recipe_instructions_image" type="hidden" value="" />
                 <input class="recipe_instructions_add_image button" rel="<?php echo $recipe->ID; ?>" type="button" value="<?php _e('Add Image', $this->pluginName ) ?>" />
                 <input class="recipe_instructions_remove_image button wpurp-hide" type="button" value="<?php _e( 'Remove Image', $this->pluginName ) ?>" />
                 <br /><img src="<?php echo $image; ?>" class="recipe_instructions_thumbnail" />
+                <?php } ?>
             </td>
             <td><span class="instructions-delete"><img src="<?php echo $this->pluginUrl; ?>/img/minus.png" width="16" height="16"></span></td>
         </tr>
