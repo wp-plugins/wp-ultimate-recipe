@@ -3,7 +3,7 @@
 Plugin Name: WP Ultimate Recipe
 Plugin URI: http://www.wpultimaterecipeplugin.com
 Description: WP Ultimate Recipe is a user friendly plugin for adding recipes to any of your posts and pages.
-Version: 0.0.17
+Version: 0.0.18
 Author: Bootstrapped Ventures
 Author URI: http://www.bootstrappedventures.com
 License: GPLv2
@@ -36,7 +36,7 @@ class WPUltimateRecipe {
         $this->premiumUrl = WP_PLUGIN_URL . '/' . $this->premiumName;
 
         // Version
-        update_option( $this->pluginName . '_version', '0.0.17' );
+        update_option( $this->pluginName . '_version', '0.0.18' );
 
         // Textdomain
         load_plugin_textdomain($this->pluginName, false, basename( dirname( __FILE__ ) ) . '/lang/'  );
@@ -48,13 +48,20 @@ class WPUltimateRecipe {
         // Hooks
         register_activation_hook( __FILE__, array( $this->wpurp_core, 'activate_taxonomies' ) );
 
-        //Actions
-        //add_action( 'init', array( $this, 'load_installed_addons' ), -10 ); // Put this in core-functions
+        // Actions
+        // add_action( 'init', array( $this, 'load_installed_addons' ), -10 ); // Put this in core-functions
         add_action( 'wp_print_styles', array( $this, 'wpurp_styles' ) );
         add_action( 'wp_footer', array( $this, 'wpurp_scripts' ) );
         add_action( 'admin_head', array( $this, 'wpurp_admin_styles' ) );
         add_action( 'admin_footer', array( $this, 'wpurp_admin_scripts' ) );   
         add_action( 'admin_menu', array( $this, 'menu_addons' ) );
+
+
+        // Other
+        if ( function_exists( 'add_image_size' ) ) {
+            add_image_size( 'recipe-thumbnail', 150, 9999 );
+            add_image_size( 'recipe-large', 600, 9999 );
+        }
         
     }
     
@@ -226,13 +233,13 @@ class WPUltimateRecipe {
     public function admin_menu_settings_select($args) {
 
         $default = isset($args[2]) ? $args[2] : 0;
-        
+
         $html = '<select id="'.$args[0].'" name="'.$args[0].'">';
         foreach( $args[3] as $key => $opt ) {
-            if( get_option( $args[0] ) && $key == get_option( $args[0] ) ) { 
+            if( !is_null(get_option( $args[0] )) && $key == get_option( $args[0] ) ) {
                 $selected = 'selected="selected"'; 
-            } elseif( !get_option( $args[0] ) && $key == $default ) {
-                $selected = 'selected="selected"'; 
+            } elseif( is_null(get_option( $args[0] )) && $key == $default ) {
+                $selected = 'selected="selected"';
             } else {
                 $selected = '';
             }
@@ -372,13 +379,14 @@ class WPUltimateRecipe {
     /*
      * Returns array of all recipes
      */
-    protected function get_recipes( $orderby = 'date', $order = 'DESC', $taxonomy = '', $term = '' ) {
+    protected function get_recipes( $orderby = 'date', $order = 'DESC', $taxonomy = '', $term = '', $limit = -1 ) {
         $args = array(
             'post_type' => 'recipe',
             'post_status' => 'publish',
             'orderby' => $orderby,
             'order' => $order,
-            'posts_per_page' => -1,
+            'no-paging' => true,
+            'posts_per_page' => $limit,
         );
         
         if( $taxonomy && !$term ) {

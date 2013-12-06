@@ -55,6 +55,11 @@ You can find more information at [WPUltimateRecipePlugin.com](http://www.wpultim
 
 == Changelog ==
 
+= 0.0.18 =
+* CSS Fixes
+* Thumbnail fixes
+* Recipe display fixes
+
 = 0.0.17 =
 * Bugfixes
 * Translatable slugs
@@ -114,6 +119,9 @@ You can find more information at [WPUltimateRecipePlugin.com](http://www.wpultim
 * Very first version of this plugin
 
 == Upgrade notice ==
+
+= 0.0.18 =
+Update for some bug fixes
 
 = 0.0.17 =
 Update for some bug fixes and extra translation options

@@ -2,16 +2,12 @@
     <meta itemprop="datePublished" content="<?php echo $recipe_post->post_date; ?>">
     <div class="recipe-header">
         <?php
-        $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($recipe_post->ID), 'post-thumbnail' );
+        $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($recipe_post->ID), 'recipe-thumbnail' );
         $thumb_url = $thumb['0'];
 
         if(!is_null($thumb_url)) {
         ?>
         <div class="recipe-header-image">
-            <?php
-
-            ?>
-
             <img itemprop="image" src="<?php echo $thumb_url; ?>" />
         </div>
         <?php } ?>
@@ -46,7 +42,7 @@
                 <?php
                 foreach($taxonomies as $taxonomy => $options) {
                     $terms = get_the_term_list( $recipe_post->ID, $taxonomy, '', ', ');
-                    if($terms != '')
+                    if(!is_wp_error($terms) && $terms != '')
                     {
                         ?>
                         <li>
