@@ -55,6 +55,9 @@ You can find more information at [WPUltimateRecipePlugin.com](http://www.wpultim
 
 == Changelog ==
 
+= 0.0.19 =
+* Bug Fixes for Premium version
+
 = 0.0.18 =
 * CSS Fixes
 * Thumbnail fixes
@@ -119,6 +122,9 @@ You can find more information at [WPUltimateRecipePlugin.com](http://www.wpultim
 * Very first version of this plugin
 
 == Upgrade notice ==
+
+= 0.0.19 =
+* Upgrade necessary for premium users
 
 = 0.0.18 =
 Update for some bug fixes

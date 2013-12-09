@@ -369,7 +369,9 @@ jQuery(document).ready(function() {
     /*
      * Colorpicker settings fields
      */
-    jQuery('.wpurp-colorpicker').wpColorPicker();
+    if (jQuery('.wpurp-colorpicker').length != 0) {
+        jQuery('.wpurp-colorpicker').wpColorPicker();
+    }
     
     /*
      * Image upload settings fields

@@ -3,7 +3,7 @@
 Plugin Name: WP Ultimate Recipe
 Plugin URI: http://www.wpultimaterecipeplugin.com
 Description: WP Ultimate Recipe is a user friendly plugin for adding recipes to any of your posts and pages.
-Version: 0.0.18
+Version: 0.0.19
 Author: Bootstrapped Ventures
 Author URI: http://www.bootstrappedventures.com
 License: GPLv2
@@ -11,6 +11,8 @@ License: GPLv2
 /*
  * Credit to subtlepatterns.com for background patterns.
  */
+
+define( 'COMPATIBLE_PREMIUM_VERSION', '0.0.7' );
 
 class WPUltimateRecipe {
     
@@ -47,9 +49,11 @@ class WPUltimateRecipe {
 
         // Hooks
         register_activation_hook( __FILE__, array( $this->wpurp_core, 'activate_taxonomies' ) );
+        register_activation_hook( __FILE__, array( $this, 'wpurp_check_premium' ) );
 
         // Actions
         // add_action( 'init', array( $this, 'load_installed_addons' ), -10 ); // Put this in core-functions
+        add_action( 'init', array( $this, 'wpurp_check_premium' ) );
         add_action( 'wp_print_styles', array( $this, 'wpurp_styles' ) );
         add_action( 'wp_footer', array( $this, 'wpurp_scripts' ) );
         add_action( 'admin_head', array( $this, 'wpurp_admin_styles' ) );
@@ -70,6 +74,26 @@ class WPUltimateRecipe {
      * @FRAMEWORK
      * ================================================================================================================
      */
+
+    public function wpurp_check_premium() {
+
+        if( is_plugin_active( 'wp-ultimate-recipe-premium/wp-ultimate-recipe-premium.php' ) ) {
+            $plugin_data = get_plugin_data( $this->premiumDir . '/' . $this->premiumName . '.php' );
+            $plugin_version = $plugin_data['Version'];
+
+            if ($plugin_version < COMPATIBLE_PREMIUM_VERSION) {
+                $message = __( 'Please update WP Ultimate Recipe Premium to the latest compatible version.', 'wp-ultimate-recipe' );
+            }
+        }
+
+        if( !empty( $message ) ) {
+
+            deactivate_plugins( plugin_basename( $this->premiumDir . '/' . $this->premiumName . '.php' ) );
+            wp_die( $message, 'WP Ultimate Recipe Premium', array( 'back_link' => true ) );
+
+        }
+
+    }
     
     /*
      * Generate settings & addons pages

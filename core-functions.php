@@ -79,7 +79,7 @@ class WPURP_Core extends WPUltimateRecipe {
 
     public function admin_plugin_scripts( $hook )
     {
-        if( 'post-new.php' != $hook && 'post.php' != $hook && 'recipe' != $_GET['post_type'] ) {
+        if( 'post-new.php' != $hook && 'post.php' != $hook && isset($_GET['post_type']) && 'recipe' != $_GET['post_type'] ) {
             return;
         } else {
             wp_register_script( $this->pluginName, $this->pluginUrl . '/js/admin.js', array('jquery', 'jquery-ui-sortable', 'suggest', 'wp-color-picker' ) );
@@ -343,7 +343,7 @@ class WPURP_Core extends WPUltimateRecipe {
     {
         if( $recipe->post_type == 'recipe' )
         {
-            if (!wp_verify_nonce($_POST['recipe_meta_box_nonce'], 'recipe'))
+            if (!isset($_POST['recipe_meta_box_nonce']) || !wp_verify_nonce($_POST['recipe_meta_box_nonce'], 'recipe'))
             {
                 return $recipe_id;
             }
@@ -416,7 +416,7 @@ class WPURP_Core extends WPUltimateRecipe {
 
                 ob_start();
 
-                if( $this->is_premium_addon_active('custom-templates') && !is_null(get_option( 'wpurp_custom_template_layout' )) ) {
+                if( $this->is_premium_addon_active('custom-templates') && !is_null(get_option( 'wpurp_custom_template_layout', null )) ) {
                     include($this->premiumDir . '/addons/custom-templates/layouts/' . get_option( 'wpurp_custom_template_layout' ) . '.php');
                 } else {
                     include($this->pluginDir . '/template/recipe_public.php');
@@ -507,7 +507,7 @@ class WPURP_Core extends WPUltimateRecipe {
             unset($taxonomies['ingredient']);
 
             ob_start();
-            if( $this->is_premium_addon_active('custom-templates') && !is_null(get_option( 'wpurp_custom_template_layout' )) ) {
+            if( $this->is_premium_addon_active('custom-templates') && !is_null(get_option( 'wpurp_custom_template_layout', null )) ) {
                 include($this->premiumDir . '/addons/custom-templates/layouts/' . get_option( 'wpurp_custom_template_layout' ) . '.php');
             } else {
                 include($this->pluginDir . '/template/recipe_public.php');
