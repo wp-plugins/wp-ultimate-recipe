@@ -1,16 +1,18 @@
 <div class="wpurp-container" itemscope itemtype="http://schema.org/Recipe">
     <meta itemprop="datePublished" content="<?php echo $recipe_post->post_date; ?>">
-    <div class="recipe-header">
-        <?php
-        $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($recipe_post->ID), 'recipe-thumbnail' );
-        $thumb_url = $thumb['0'];
+    <?php
+    $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($recipe_post->ID), 'recipe-thumbnail' );
+    $thumb_url = $thumb['0'];
 
-        if(!is_null($thumb_url)) {
-        ?>
+    if(!is_null($thumb_url)) {
+    ?>
+    <div class="recipe-header has-image">
         <div class="recipe-header-image">
             <img itemprop="image" src="<?php echo $thumb_url; ?>" />
         </div>
-        <?php } ?>
+    <?php } else { ?>
+    <div class="recipe-header">
+    <?php } ?>
         <div class="recipe-header-information">
             <ul class="recipe-header-name">
                 <li class="recipe-information-name" itemprop="name">

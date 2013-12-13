@@ -3,7 +3,7 @@ Contributors: BrechtVds
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QG7KZMGFU325Y
 Tags: recipe, ingredients, cuisines, food, courses, cook, kitchen, cooking
 Requires at least: 3.3
-Tested up to: 3.7.1
+Tested up to: 3.8
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -31,6 +31,9 @@ We also have a [premium version](http://www.wpultimaterecipeplugin.com/#premium)
 *   Custom **styling** of recipes
 *   Let your **users submit** recipes
 *   User menus with a **shopping list generator**
+*   Create **custom tags** for your recipes
+*   Advanced **recipe index** features
+*   Nice **recipe grid** to show and filter your recipes
 
 Feel free to contact me if any features are missing.
 You can find more information at [WPUltimateRecipePlugin.com](http://www.wpultimaterecipeplugin.com/)
@@ -54,6 +57,10 @@ You can find more information at [WPUltimateRecipePlugin.com](http://www.wpultim
 2. Manage everything about your recipes in one place
 
 == Changelog ==
+
+= 0.0.20 =
+* Bug fixes
+* WordPress 3.8 compatibility
 
 = 0.0.19 =
 * Bug Fixes for Premium version
@@ -123,8 +130,11 @@ You can find more information at [WPUltimateRecipePlugin.com](http://www.wpultim
 
 == Upgrade notice ==
 
+= 0.0.20 =
+Upgrade for WordPress 3.8 compatibility and some bugfixes
+
 = 0.0.19 =
-* Upgrade necessary for premium users
+Upgrade necessary for premium users
 
 = 0.0.18 =
 Update for some bug fixes

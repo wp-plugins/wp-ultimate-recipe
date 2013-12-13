@@ -403,7 +403,11 @@ class WPURP_Core extends WPUltimateRecipe {
 
     public function recipes_content( $content )
     {
-        if ( get_post_type() == 'recipe') {
+        if (!in_the_loop () || !is_main_query ()) {
+            return $content;
+        }
+
+        if ( get_post_type() == 'recipe' ) {
             remove_filter('the_content', array( $this, 'recipes_content' ), 10);
 
             $recipe_post = get_post();
@@ -447,6 +451,10 @@ class WPURP_Core extends WPUltimateRecipe {
 
     public function recipes_excerpt( $content )
     {
+        if (!in_the_loop () || !is_main_query ()) {
+            return $content;
+        }
+
         if ( get_post_type() == 'recipe') {
             remove_filter('the_excerpt', array( $this, 'recipes_excerpt' ), 10);
 

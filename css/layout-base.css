@@ -139,9 +139,14 @@
     margin: 5px auto !important;
 }
 
+.wpurp-container .recipe-notes ul, .wpurp-container .recipe-notes ol {
+    margin: 0 23px !important;
+}
+
 .wpurp-container .wpurp-footer {
     text-align: right;
     font-size: 0.8em;
+    margin-top: 10px !important;
 }
 
 .wpurp-error {

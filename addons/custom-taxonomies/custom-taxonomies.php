@@ -132,7 +132,7 @@ if( class_exists( 'WPUltimateRecipe' ) ) {
             echo     '<tr valign="top">
                         <th scope="row">'.__( 'Name', $this->pluginName ).'</th>
                         <td>';
-            $this->admin_menu_settings_text(array('wpurp_custom_taxonomy_name', __('(e.g. Courses)', $this->pluginName )));
+            $this->admin_menu_settings_text(array('wpurp_custom_taxonomy_name', __('(e.g. Courses)', $this->pluginName ), ''));
             echo        '</td>
                       </tr>';
 
@@ -140,7 +140,7 @@ if( class_exists( 'WPUltimateRecipe' ) ) {
             echo     '<tr valign="top">
                         <th scope="row">'.__( 'Singular Name', $this->pluginName ).'</th>
                         <td>';
-            $this->admin_menu_settings_text(array('wpurp_custom_taxonomy_singular_name', __('(e.g. Course)', $this->pluginName )));
+            $this->admin_menu_settings_text(array('wpurp_custom_taxonomy_singular_name', __('(e.g. Course)', $this->pluginName ), ''));
             echo        '</td>
                       </tr>';
 
@@ -148,7 +148,7 @@ if( class_exists( 'WPUltimateRecipe' ) ) {
             echo     '<tr valign="top">
                         <th scope="row">'.__( 'Slug', $this->pluginName ).'</th>
                         <td>';
-            $this->admin_menu_settings_text(array('wpurp_custom_taxonomy_slug', __('(e.g. http://www.yourwebsite.com/course/)', $this->pluginName )));
+            $this->admin_menu_settings_text(array('wpurp_custom_taxonomy_slug', __('(e.g. http://www.yourwebsite.com/course/)', $this->pluginName ), ''));
             echo        '</td>
                       </tr>';
 
