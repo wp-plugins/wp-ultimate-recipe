@@ -582,12 +582,7 @@ class WPURP_Core extends WPUltimateRecipe {
             'headers' => 'false'
         ), $options);
 
-        $posts = get_posts(array(
-            'post_type' => 'recipe',
-            'nopaging' => true,
-            'orderby' => 'title',
-            'order' => 'ASC'
-        ));
+        $posts = $this->get_recipes( 'title', 'ASC' );
 
         $out = '<div class="wpurp-index-container">';
         if($posts) {
