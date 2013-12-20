@@ -58,12 +58,14 @@ foreach( $fields as $field)
             <span class="recipe-general-form-notes"> <?php _e( 'minutes', $this->pluginName ) ?></span>
         </td>
     </tr>
+<?php if(!isset($wpurp_user_submission)) { ?>
     <tr>
         <td class="recipe-general-form-label">&nbsp;</td>
         <td class="recipe-general-form-field recipe-form-notes">
             <?php _e( "Don't forget that you can tag your recipe with <strong>Courses</strong> and <strong>Cuisines</strong> by using the boxes on the right. Use the <strong>featured image</strong> if you want a photo of the finished dish.", $this->pluginName ) ?>
         </td>
     </tr>
+<?php } ?>
 </table>
 
 <h4><?php _e( 'Ingredients', $this->pluginName ); ?></h4>

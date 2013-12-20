@@ -21,7 +21,7 @@ if( class_exists( 'WPUltimateRecipe' ) ) {
             $this->ignoreTaxonomies = array('rating');
 
             //Actions
-            add_action( 'init', array( $this, 'custom_taxonomies_init' ) );
+            add_action( 'init', array( $this, 'custom_taxonomies_init' ), 1 );
             add_action( 'admin_enqueue_scripts', array( $this, 'custom_taxonomies_enqueue' ) ); //TODO: Only on custom taxonomies page
             add_action( 'admin_init', array( $this, 'custom_taxonomies_settings' ) );
             add_action( 'admin_menu', array( $this, 'custom_taxonomies_menu' ) );
@@ -46,7 +46,7 @@ if( class_exists( 'WPUltimateRecipe' ) ) {
          * Generate settings & addons pages
          */
         public function custom_taxonomies_menu() {
-            add_submenu_page( 'edit.php?post_type=recipe', __( 'Custom Taxonomies', $this->pluginName ), __( 'Custom Tags', $this->pluginName ), 'manage_options', 'wpurp_taxonomies', array( $this, 'custom_taxonomies_page' ) );
+            add_submenu_page( 'edit.php?post_type=recipe', __( 'Custom Taxonomies', $this->pluginName ), __( 'Manage Tags', $this->pluginName ), 'manage_options', 'wpurp_taxonomies', array( $this, 'custom_taxonomies_page' ) );
         }
 
         public function custom_taxonomies_settings() {
@@ -131,25 +131,28 @@ if( class_exists( 'WPUltimateRecipe' ) ) {
             // Name
             echo     '<tr valign="top">
                         <th scope="row">'.__( 'Name', $this->pluginName ).'</th>
-                        <td>';
-            $this->admin_menu_settings_text(array('wpurp_custom_taxonomy_name', __('(e.g. Courses)', $this->pluginName ), ''));
-            echo        '</td>
+                        <td>
+                            <input type="text" id="wpurp_custom_taxonomy_name" name="wpurp_custom_taxonomy_name" />
+                            <label for="wpurp_custom_taxonomy_name"> '  . __('(e.g. Courses)', $this->pluginName ) . '</label>
+                        </td>
                       </tr>';
 
             // Singular name
             echo     '<tr valign="top">
                         <th scope="row">'.__( 'Singular Name', $this->pluginName ).'</th>
-                        <td>';
-            $this->admin_menu_settings_text(array('wpurp_custom_taxonomy_singular_name', __('(e.g. Course)', $this->pluginName ), ''));
-            echo        '</td>
+                        <td>
+                            <input type="text" id="wpurp_custom_taxonomy_singular_name" name="wpurp_custom_taxonomy_singular_name" />
+                            <label for="wpurp_custom_taxonomy_singular_name"> '  . __('(e.g. Course)', $this->pluginName ) . '</label>
+                        </td>
                       </tr>';
 
             // Slug
             echo     '<tr valign="top">
                         <th scope="row">'.__( 'Slug', $this->pluginName ).'</th>
-                        <td>';
-            $this->admin_menu_settings_text(array('wpurp_custom_taxonomy_slug', __('(e.g. http://www.yourwebsite.com/course/)', $this->pluginName ), ''));
-            echo        '</td>
+                        <td>
+                            <input type="text" id="wpurp_custom_taxonomy_slug" name="wpurp_custom_taxonomy_slug" />
+                            <label for="wpurp_custom_taxonomy_slug"> '  . __('(e.g. http://www.yourwebsite.com/course/)', $this->pluginName ) . '</label>
+                        </td>
                       </tr>';
 
 

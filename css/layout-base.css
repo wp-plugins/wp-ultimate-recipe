@@ -37,7 +37,7 @@
     box-sizing: border-box;
 }
 
-.wpurp-container ul, ol {
+.wpurp-container ul, .wpurp-container ol {
     -webkit-margin: 0 !important;
     -moz-margin: 0 !important;
     margin: 0 !important;

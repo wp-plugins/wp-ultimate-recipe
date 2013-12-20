@@ -58,6 +58,11 @@ You can find more information at [WPUltimateRecipePlugin.com](http://www.wpultim
 
 == Changelog ==
 
+= 0.0.21 =
+* New admin settings page
+* New shortcode generator when editing posts or pages
+* Various bug fixes
+
 = 0.0.20 =
 * Bug fixes
 * WordPress 3.8 compatibility
@@ -129,6 +134,9 @@ You can find more information at [WPUltimateRecipePlugin.com](http://www.wpultim
 * Very first version of this plugin
 
 == Upgrade notice ==
+
+= 0.0.21 =
+Upgrade for a new fancy admin page
 
 = 0.0.20 =
 Upgrade for WordPress 3.8 compatibility and some bugfixes

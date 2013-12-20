@@ -114,7 +114,7 @@
         echo $out;
         ?>
     </ul>
-    <?php if($recipe['recipe_servings'][0] != '' && get_option('wpurp_show_servings_adjust', 1) == 1) { ?>
+    <?php if($recipe['recipe_servings'][0] != '' && $this->option('recipe_adjustable_servings', '1') == '1') { ?>
     <div class="recipe-ingredients-servings"><?php _e( 'Servings', $this->pluginName ); ?>: <input type="number" class="adjust-recipe-servings" data-original="<?php echo $recipe['recipe_servings'][0]; ?>" value="<?php echo $recipe['recipe_servings'][0]; ?>" /> <?php echo $recipe['recipe_servings_type'][0]; ?></div>
     <?php } ?>
     <?php } ?>
@@ -148,7 +148,7 @@
         <?php echo $recipe['recipe_notes'][0]; ?>
     </div>
     <?php } ?>
-    <?php if(get_option('wpurp_show_linkback', 1) == 1) { ?>
+    <?php if($this->option('recipe_linkback', '1') == '1') { ?>
         <div class="wpurp-footer"><?php _e( 'Powered by', $this->pluginName ); ?> <a href="http://www.wpultimaterecipeplugin.com" target="_blank">WP Ultimate Recipe</a></div>
     <?php } ?>
 </div>

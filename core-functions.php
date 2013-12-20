@@ -26,12 +26,8 @@ class WPURP_Core extends WPUltimateRecipe {
         add_action( 'admin_init', array( $this, 'recipes_admin_init' ));
         add_action( 'save_post', array( $this, 'recipes_save' ), 10, 2 );
         add_action( 'admin_menu', array( $this, 'admin_menu') );
-        add_action( 'admin_init', array( $this, 'admin_init' ) );
         add_action( 'update_option_wpurp_recipe_slug', array( $this, 'update_recipe_slug' ) );
 
-        if(is_admin()) {
-            add_action( 'after_wp_tiny_mce', array( $this, 'recipes_shortcode_form' ) );
-        }
 
         // Filters
         //add_filter( 'template_include', array( $this, 'recipes_template' ), 1 );
@@ -47,9 +43,7 @@ class WPURP_Core extends WPUltimateRecipe {
         add_shortcode("ultimate-recipe-index", array( $this, 'recipes_index_shortcode' ));
 
     }
-    
 
-    
 
     /*
      * ================================================================================================================
@@ -118,127 +112,6 @@ class WPURP_Core extends WPUltimateRecipe {
         remove_meta_box('stardiv', 'recipe', 'side');
     }
 
-    public function admin_init()
-    {
-        if (!current_user_can('edit_posts') && !current_user_can('edit_pages'))
-            return;
-
-        add_filter( 'mce_external_plugins', array( $this, 'recipes_shortcode_button_plugin' ) );
-        add_filter( 'mce_buttons', array( $this, 'recipes_shortcode_button_add' ) );
-
-        add_settings_section( 'wpurp_settings_general_section', __( 'General', $this->pluginName ), array( $this, 'admin_menu_settings_general' ), 'wpurp_settings' );
-
-        $slug = get_option('wpurp_recipe_slug', 'recipe');
-
-        add_settings_field(
-            'wpurp_recipe_slug',
-            __( 'Recipe Slug', $this->pluginName ),
-            array( $this, 'admin_menu_settings_text' ),
-            'wpurp_settings',
-            'wpurp_settings_general_section',
-            array(
-                'wpurp_recipe_slug',
-                __( 'Recipe archive', $this->pluginName ) . ': <a href="'.site_url('/'.$slug.'/').'" target="_blank">'.site_url('/'.$slug.'/').'</a>',
-                'recipe'
-            )
-        );
-
-        add_settings_section( 'wpurp_settings_recipe_box_section', __( 'Recipe Box', $this->pluginName ), array( $this, 'admin_menu_settings_recipe_box' ), 'wpurp_settings' );
-
-        add_settings_field(
-            'wpurp_show_servings_adjust',
-            __( 'Adjustable Servings', $this->pluginName ),
-            array( $this, 'admin_menu_settings_checkbox' ),
-            'wpurp_settings',
-            'wpurp_settings_recipe_box_section',
-            array(
-                'wpurp_show_servings_adjust',
-                __( 'Allow users to dynamically adjust the servings of recipes.', $this->pluginName ),
-                1
-            )
-        );
-
-        add_settings_field(
-            'wpurp_show_linkback',
-            __( 'Link to plugin', $this->pluginName ),
-            array( $this, 'admin_menu_settings_checkbox' ),
-            'wpurp_settings',
-            'wpurp_settings_recipe_box_section',
-            array(
-                'wpurp_show_linkback',
-                __( 'Show a link to the plugin website as a little thank you.', $this->pluginName ),
-                1
-            )
-        );
-
-        add_settings_field(
-            'wpurp_show_full_recipe',
-            __( 'Show full recipe', $this->pluginName ),
-            array( $this, 'admin_menu_settings_checkbox' ),
-            'wpurp_settings',
-            'wpurp_settings_recipe_box_section',
-            array(
-                'wpurp_show_full_recipe',
-                __( 'Show the full recipe instead of the description/excerpt in', $this->pluginName ) . ' <a href="'.site_url('/'.$slug.'/').'" target="_blank">' . __( 'the recipe archive', $this->pluginName ) . '</a>.',
-                0
-            )
-        );
-
-        add_settings_field(
-            'wpurp_show_recipe_thumbnail',
-            __( 'Show recipe thumbnail', $this->pluginName ),
-            array( $this, 'admin_menu_settings_select' ),
-            'wpurp_settings',
-            'wpurp_settings_recipe_box_section',
-            array(
-                'wpurp_show_recipe_thumbnail',
-                __( 'Thumbnail position depends on the theme you use', $this->pluginName ),
-                1,
-                array(
-                    __( 'Never', $this->pluginName ),
-                    __( 'Only on archive pages', $this->pluginName ),
-                    __( 'Only on recipe pages', $this->pluginName ),
-                    __( 'Always', $this->pluginName ),
-                )
-            )
-        );
-
-        register_setting(
-            'wpurp_settings',
-            'wpurp_recipe_slug'
-        );
-
-        register_setting(
-            'wpurp_settings',
-            'wpurp_show_servings_adjust'
-        );
-
-        register_setting(
-            'wpurp_settings',
-            'wpurp_show_linkback'
-        );
-
-        register_setting(
-            'wpurp_settings',
-            'wpurp_show_full_recipe'
-        );
-
-        register_setting(
-            'wpurp_settings',
-            'wpurp_show_recipe_thumbnail'
-        );
-    }
-
-    public function admin_menu_settings_general()
-    {
-        _e( 'General settings.', $this->pluginName );
-    }
-
-    public function admin_menu_settings_recipe_box()
-    {
-        _e( 'Settings regarding the recipe box shown to your visitors.', $this->pluginName );
-    }
-
     /*
      * Load all available addons
      */
@@ -288,7 +161,7 @@ class WPURP_Core extends WPUltimateRecipe {
      */
     public function recipes_init()
     {
-        $slug = get_option('wpurp_recipe_slug', 'recipe');
+        $slug = $this->option('recipe_slug', 'recipe');
 
         $name = __( 'Recipes', $this->pluginName );
         $singular = __( 'Recipe', $this->pluginName );
@@ -413,15 +286,15 @@ class WPURP_Core extends WPUltimateRecipe {
             $recipe_post = get_post();
             $recipe = get_post_custom($recipe_post->ID);
 
-            if (is_single() || get_option('wpurp_show_full_recipe', 0) == 1)
+            if (is_single() || $this->option('recipe_archive_display', 'excerpt') == 'full')
             {
                 $taxonomies = $this->get_custom_taxonomies();
                 unset($taxonomies['ingredient']);
 
                 ob_start();
 
-                if( $this->is_premium_addon_active('custom-templates') && !is_null(get_option( 'wpurp_custom_template_layout', null )) ) {
-                    include($this->premiumDir . '/addons/custom-templates/layouts/' . get_option( 'wpurp_custom_template_layout' ) . '.php');
+                if( $this->is_premium_addon_active('custom-templates') && !is_null($this->option( 'recipe_template_layout', null )) ) {
+                    include($this->premiumDir . '/addons/custom-templates/layouts/' . $this->option( 'recipe_template_layout' ) . '.php');
                 } else {
                     include($this->pluginDir . '/template/recipe_public.php');
                 }
@@ -515,8 +388,8 @@ class WPURP_Core extends WPUltimateRecipe {
             unset($taxonomies['ingredient']);
 
             ob_start();
-            if( $this->is_premium_addon_active('custom-templates') && !is_null(get_option( 'wpurp_custom_template_layout', null )) ) {
-                include($this->premiumDir . '/addons/custom-templates/layouts/' . get_option( 'wpurp_custom_template_layout' ) . '.php');
+            if( $this->is_premium_addon_active('custom-templates') && !is_null($this->option( 'recipe_template_layout', null )) ) {
+                include($this->premiumDir . '/addons/custom-templates/layouts/' . $this->option( 'recipe_template_layout' ) . '.php');
             } else {
                 include($this->pluginDir . '/template/recipe_public.php');
             }
@@ -529,52 +402,6 @@ class WPURP_Core extends WPUltimateRecipe {
         }
 
         return $output;
-    }
-
-    public function recipes_shortcode_button_plugin($plugins)
-    {
-        $plugins['ultimaterecipe_button'] = $this->pluginUrl . '/js/button.js';
-
-        return $plugins;
-    }
-
-    public function recipes_shortcode_button_add($buttons)
-    {
-        $buttons[] = 'ultimaterecipe_button';
-
-        return $buttons;
-    }
-
-    public function recipes_shortcode_form()
-    {
-        $out = '<div id="wpurp-form" style="display: none;">';
-
-        $posts = get_posts(array(
-            'post_type' => 'recipe',
-            'nopaging' => true
-        ));
-
-        if($posts) {
-            $out .= '<label for="wpurp-recipe">' . __( 'Select the recipe to add to your post:', $this->pluginName ) .  '</label><br/><br/>';
-            $out .= '<select id="wpurp-recipe">';
-            $out .= '<option value="random">Show a random recipe to each visitor</option>';
-
-            foreach($posts as $post)
-            {
-                $out .= '<option value="'.$post->ID.'">'.$post->post_title.'</option>';
-            }
-
-            $out .= '</select><br/>';
-            $out .= get_submit_button( __( 'Insert Recipe', $this->pluginName ), 'primary', 'wpurp-insert-recipe', false);
-        }
-        else
-        {
-            $out .= __( "You have to create a recipe first, check the 'Recipes' menu on the left.", $this->pluginName );
-        }
-
-        $out .= '</div>';
-
-        echo $out;
     }
 
     public function recipes_index_shortcode($options) {
@@ -627,9 +454,9 @@ class WPURP_Core extends WPUltimateRecipe {
     {
         if ( get_post_type() == 'recipe' )
         {
-            $thumb = get_option('wpurp_show_recipe_thumbnail', 1);
+            $thumb = $this->option('recipe_theme_thumbnail', 'archive');
 
-            if($thumb == 0 || ($thumb == 1 && is_single()) || ($thumb == 2 && !is_single())) {
+            if($thumb == 'never' || ($thumb == 'archive' && is_single()) || ($thumb == 'recipe' && !is_single())) {
                 $html = ''; // Hide thumbnail
             }
         }

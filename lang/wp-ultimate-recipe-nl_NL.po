@@ -2,35 +2,533 @@
 # This file is distributed under the same license as the WP Ultimate Recipe package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2013-12-06 16:00:28+0000\n"
+"PO-Revision-Date: 2013-12-20 19:59+0100\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: GlotPress/0.1\n"
+"X-Generator: Poedit 1.5.7\n"
 "Project-Id-Version: WP Ultimate Recipe\n"
+"POT-Creation-Date: \n"
+"Last-Translator: Brecht Vandersmissen <brecht.vandersmissen@gmail.com>\n"
+"Language-Team: \n"
 
-#: core/core-functions.php:189
-msgid "Show recipe thumbnail"
-msgstr "Toon recept thumnail"
+#: core/template/shortcode_generator.php:7
+msgid "Display a random recipe"
+msgstr "Toon een willekeurig recept"
 
-#: core/core-functions.php:195
+#: core/helper/admin_menu_helper.php:22
+msgid "The user menus archive can be found at"
+msgstr "Het gebruiker menus archief kan gevonden worden op"
+
+#: core/helper/admin_menu_helper.php:16
+msgid "The recipe archive can be found at"
+msgstr "Het recept archief kan gevonden worden op"
+
+#: core/template/admin.php:314 core/template/admin.php:398
+msgid "Important"
+msgstr "Belangrijk"
+
+#: core/template/admin.php:214
+msgid "Custom Style"
+msgstr "Eigen Stijl"
+
+#: core/template/admin.php:227
+msgid "This will be used when no background image is selected."
+msgstr ""
+"Dit zal gebruikt worden indien er geen achtergrond afbeelding geselecteerd "
+"is."
+
+#: core/template/admin.php:221
+msgid "Optional. A color can be used instead."
+msgstr "Optioneel. Er kan ook een kleur gebruikt worden."
+
+#: core/template/admin.php:296
+msgid "User Submission"
+msgstr "Gebruikersinzending"
+
+#: core/template/admin.php:289
+msgid "Click here to manage the recipe tags."
+msgstr "Klik hier om de recept tags te beheren."
+
+#: core/template/admin.php:281
+msgid "Recipe Tags"
+msgstr "Recept Tags"
+
+#: core/template/admin.php:409
+msgid "Enable user menus for"
+msgstr "Gebruiker menus activeren voor"
+
+#: core/template/admin.php:348
+msgid "Auto approve submissions from"
+msgstr "Automatisch publiceren van inzendingen door"
+
+#: core/template/admin.php:399
+msgid "Use the [wpurp\\_user\\_menus] shortcode to display the front-end form."
+msgstr "Gebruik de [wpurp\\_user\\_menus] shortcode om het formulier te tonen."
+
+#: core/wp-ultimate-recipe.php:107
+msgid "Please update WP Ultimate Recipe Premium to at least version "
+msgstr "Gelieve WP Ultimate Recipe Premium te updaten naar minstens versie"
+
+#: core/wp-ultimate-recipe.php:162 core/wp-ultimate-recipe.php:163
+msgid "Admin"
+msgstr "Beheerder"
+
+#: core/wp-ultimate-recipe.php:175
+msgid "Shortcodes"
+msgstr "Shortcodes"
+
+#: core/addons/custom-taxonomies/custom-taxonomies.php:49
+#: core/template/admin.php:288
+#: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:52
+msgid "Manage Tags"
+msgstr "Tags Beheren"
+
+#: core/helper/drip_form.php:3
+msgid ""
+"Are you sure you want to dismiss this notice? (Make sure you have saved your "
+"changes first!)"
+msgstr ""
+"Ben je zeker dat je deze melding wil verbergen? (Let er op dat je eerst je "
+"aanpassingen opslaat!)"
+
+#: core/helper/drip_form.php:3
+msgid "Hide this message"
+msgstr "Verberg dit bericht"
+
+#: core/lib/vafpress/bootstrap.php:88 core/lib/vafpress/classes/option.php:357
+#: core/lib/vafpress/classes/option.php:382
+msgid "Successful"
+msgstr "Succesvol"
+
+#: core/lib/vafpress/bootstrap.php:99
+msgid "Unauthorized function"
+msgstr "Deze functie is niet toegelaten"
+
+#: core/lib/vafpress/classes/metabox.php:35
+msgid "[Development Mode] "
+msgstr "[Ontwikkelaarsmodus]"
+
+#: core/lib/vafpress/classes/metabox.php:564
+#: core/lib/vafpress/classes/metabox/alchemy.php:493
+msgid "Remove"
+msgstr "Verwijderen"
+
+#: core/lib/vafpress/classes/metabox.php:586
+#: core/lib/vafpress/classes/metabox/alchemy.php:515
+msgid "Add More"
+msgstr "Nieuwe"
+
+#: core/lib/vafpress/classes/option.php:47
+#: core/lib/vafpress/classes/option.php:48
+msgid "Vafpress Options"
+msgstr "Vafpress instellingen"
+
+#: core/lib/vafpress/classes/option.php:54
+msgid "Option Key is required"
+msgstr "Waarde is verplicht"
+
+#: core/lib/vafpress/classes/option.php:56
+msgid "Template Array/File is required"
+msgstr "Thema bestand is verplicht"
+
+#: core/lib/vafpress/classes/option.php:58
+msgid "Page Slug is required"
+msgstr "Pagina slug is verplicht"
+
+#: core/lib/vafpress/classes/option.php:160
+msgid ""
+"Development Mode is Active, options' values won't be saved into database."
+msgstr ""
+"Development Mode is Actief, opties worden niet opgeslaan in de database."
+
+#: core/lib/vafpress/classes/option.php:299
+msgid "Can not be empty"
+msgstr "Mag niet leeg zijn"
+
+#: core/lib/vafpress/classes/option.php:324
+msgid "Invalid data"
+msgstr "Foutieve data"
+
+#: core/lib/vafpress/classes/option.php:387
+msgid "Unverified Access"
+msgstr "Niet-geverifieerde toegang"
+
+#: core/lib/vafpress/classes/option.php:453
+msgid "Invalid template supplied"
+msgstr "Ongeldig thema toegepast"
+
+#: core/lib/vafpress/classes/option.php:466
+msgid "Utility"
+msgstr "Hulpmiddelen"
+
+#: core/lib/vafpress/classes/option.php:472
+#: core/lib/vafpress/views/option/restore.php:13
+msgid "Restore Default"
+msgstr "Herstellen naar standaard instellingen"
+
+#: core/lib/vafpress/classes/option.php:481
+msgid "Export/Import"
+msgstr "Exporteren/importeren"
+
+#: core/lib/vafpress/classes/shortcodegenerator.php:260
+msgid "Insert"
+msgstr "Invoegen"
+
+#: core/lib/vafpress/classes/shortcodegenerator.php:261
+msgid "Cancel"
+msgstr "Annuleren"
+
+#: core/lib/vafpress/classes/option/control/set.php:359
+msgid "Saving successful"
+msgstr "Instellingen opgeslagen"
+
+#: core/lib/vafpress/classes/option/control/set.php:370
+msgid "Saving failed"
+msgstr "Opslaan mislukt"
+
+#: core/lib/vafpress/classes/option/control/set.php:376
+msgid "No changes made"
+msgstr "Geen wijzigingen"
+
+#: core/lib/vafpress/config/messages.php:13
+msgid "Value needs to be Alphabet"
+msgstr "Alleen letters zijn toegestaan"
+
+#: core/lib/vafpress/config/messages.php:14
+msgid "Value needs to be Alphanumeric"
+msgstr "Mag alleen cijfers en letters bevatten"
+
+#: core/lib/vafpress/config/messages.php:15
+msgid "Value needs to be Numeric"
+msgstr "Alleen cijfers zijn toegestaan"
+
+#: core/lib/vafpress/config/messages.php:16
+msgid "Value needs to be Valid Email"
+msgstr "Vul een geldig e-mailadres in"
+
+#: core/lib/vafpress/config/messages.php:17
+msgid "Value needs to be Valid URL"
+msgstr "Vul een geldige URL in"
+
+#: core/lib/vafpress/config/messages.php:18
+msgid "Length needs to be less than {0} characters"
+msgstr "De lengte moet minder dan {0} karakters zijn"
+
+#: core/lib/vafpress/config/messages.php:19
+msgid "Length needs to be more than {0} characters"
+msgstr "De lengte moet minimaal {0} karakters zijn"
+
+#: core/lib/vafpress/config/messages.php:20
+msgid "Select no more than {0} items"
+msgstr "Selecteer niet meer dan {0} items"
+
+#: core/lib/vafpress/config/messages.php:21
+msgid "Select at least {0} items"
+msgstr "Selecteer tenminste {0} items"
+
+#: core/lib/vafpress/config/messages.php:22
+msgid "This is required"
+msgstr "Dit is verplicht"
+
+#: core/lib/vafpress/config/messages.php:29
+msgid "Import succeed, option page will be refreshed.."
+msgstr "Importeren geslaagd, de pagina zal worden vernieuwd."
+
+#: core/lib/vafpress/config/messages.php:30
+msgid "Import failed"
+msgstr "Importeren mislukt"
+
+#: core/lib/vafpress/config/messages.php:31
+msgid "Export succeed, copy the JSON formatted options"
+msgstr "Exporteren geslaagd, kopieer de seri?e code"
+
+#: core/lib/vafpress/config/messages.php:32
+msgid "Export failed"
+msgstr "Exporteren mislukt"
+
+#: core/lib/vafpress/config/messages.php:33
+msgid "Restoration succeed, option page will be refreshed.."
+msgstr "Herstellen geslaagd, de pagina zal worden vernieuwd."
+
+#: core/lib/vafpress/config/messages.php:34
+msgid "Options identical to default"
+msgstr "Er zijn geen wijzigingen gedaan"
+
+#: core/lib/vafpress/config/messages.php:35
+msgid "Restoration failed"
+msgstr "Herstellen mislukt"
+
+#: core/lib/vafpress/config/messages.php:43
+msgid "Select option(s)"
+msgstr "Selecteer optie(s)"
+
+#: core/lib/vafpress/config/messages.php:45
+msgid "Select an Icon"
+msgstr "Selecteer een icoon"
+
+#: core/lib/vafpress/views/control/upload.php:5
+msgid "Choose File"
+msgstr "Kies een bestand"
+
+#: core/lib/vafpress/views/option/impexp.php:4
+#: core/lib/vafpress/views/option/impexp.php:14
+msgid "Import"
+msgstr "Importeren"
+
+#: core/lib/vafpress/views/option/impexp.php:7
+msgid "Import Options"
+msgstr "Importeer instellingen"
+
+#: core/lib/vafpress/views/option/impexp.php:27
+#: core/lib/vafpress/views/option/impexp.php:37
+msgid "Export"
+msgstr "Exporteren"
+
+#: core/lib/vafpress/views/option/impexp.php:30
+msgid "Export Options"
+msgstr "Exporteer instellingen"
+
+#: core/lib/vafpress/views/option/restore.php:4
+msgid "Restore Default Options"
+msgstr "Herstellen naar standaard instellingen"
+
+#: core/lib/vafpress/views/option/restore.php:7
+msgid "Restore options to initial default values."
+msgstr "Herstellen naar standaard instellingen."
+
+#: core/lib/vafpress/views/option/restore.php:14
+msgid ""
+"** Please make sure you have already make a backup data of your current "
+"settings. Once you click this button, your current settings will be gone."
+msgstr ""
+"** Let op dat je reeds een backup hebt van je huidige instellingen. Zodra je "
+"op deze knop klikt, zijn je huidige instellingen verdwenen."
+
+#: core/lib/vafpress/views/option/set.php:69
+#: core/lib/vafpress/views/option/set.php:84
+msgid "Save Changes"
+msgstr "Wijzigingen opslaan"
+
+#: core/lib/vafpress/views/option/set.php:70
+#: core/lib/vafpress/views/option/set.php:85
+msgid "Saving Now"
+msgstr "Bezig met opslaan"
+
+#: core/lib/vafpress/views/option/set.php:93
+msgid ""
+"This option panel is built using <a href=\"http://vafpress.com/vafpress-"
+"framework\">Vafpress Framework %s</a> powered by <a href=\"http://vafpress."
+"com\">Vafpress</a>"
+msgstr ""
+"Dit bedieningspaneel is ontwikkeld met behulp van <a href=\"http://vafpress."
+"com/vafpress-framework\">Vafpress Framework %s</a> gemaakt door <a href="
+"\"http://vafpress.com\">Vafpress</a>"
+
+#: core/template/admin.php:9
+msgid "Latest News"
+msgstr "Laatste Nieuws"
+
+#: core/template/admin.php:15
+msgid "Changelog"
+msgstr "Laatste Wijzigingen"
+
+#: core/template/admin.php:32
+msgid "General Settings"
+msgstr "Algemene Instellingen"
+
+#: core/template/admin.php:59
+msgid "Recipe Archive Pages"
+msgstr "Recept Archief Pagina's"
+
+#: core/template/admin.php:65
+msgid "Display"
+msgstr "Toon"
+
+#: core/template/admin.php:69
+msgid "Only the excerpt"
+msgstr "Enkel de omschrijving"
+
+#: core/template/admin.php:73
+msgid "The entire recipe"
+msgstr "Het volledige recept"
+
+#: core/template/admin.php:84
+msgid "Display Thumbnail"
+msgstr "Toon Thumbnail"
+
+#: core/template/admin.php:127 core/template/admin.php:447
+msgid "404 error/page not found?"
+msgstr "404 fout/pagina niet gevonden?"
+
+#: core/template/admin.php:128 core/template/admin.php:448
+msgid "Try"
+msgstr "Probeer"
+
+#: core/template/admin.php:128 core/template/admin.php:448
+msgid "flushing your permalinks"
+msgstr "je permalinks te flushen"
+
+#: core/template/admin.php:137
+msgid "Recipe Template"
+msgstr "Recept Sjabloon"
+
+#: core/template/admin.php:144 core/template/admin.php:303
+#: core/template/admin.php:387
+msgid "WP Ultimate Recipe Premium"
+msgstr "WP Ultimate Recipe Premium"
+
+#: core/template/admin.php:145 core/template/admin.php:304
+#: core/template/admin.php:388
+msgid "These features are only available in "
+msgstr "Deze features zijn alleen beschikbaar in"
+
+#: core/template/admin.php:315
+msgid "Use the [wpurp_submissions] shortcode to display the front-end form."
+msgstr "Gebruik de [wpurp_submissions] shortcode om het formulier te tonen."
+
+#: core/template/admin.php:315 core/template/admin.php:399
+msgid "The shortcode can be added to any page or post."
+msgstr "De shortcode kan toegevoegd worden aan elke pagina of bericht."
+
+#: core/template/admin.php:325
+msgid "Allow submissions from"
+msgstr "Laat inzendingen toe van"
+
+#: core/template/admin.php:329 core/template/admin.php:353
+#: core/template/admin.php:413
+msgid "Nobody"
+msgstr "Niemand"
+
+#: core/template/admin.php:329 core/template/admin.php:413
+msgid "disabled"
+msgstr "inactief"
+
+#: core/template/admin.php:455
+msgid "Import Recipes"
+msgstr "Recepten Importeren"
+
+#: core/template/admin.php:462 core/template/admin.php:477
+msgid "Coming Soon"
+msgstr "Binnenkort Beschikbaar"
+
+#: core/template/admin.php:463 core/template/admin.php:478
+msgid "This feature is coming soon for "
+msgstr "Deze feature is binnenkort beschikbaar voor"
+
+#: core/template/admin.php:470
+msgid "Export Recipes"
+msgstr "Recepten Exporteren"
+
+#: core/template/admin.php:485 core/template/admin.php:493
+msgid "FAQ & Support"
+msgstr "FAQ & Ondersteuning"
+
+#: core/template/admin.php:492
+msgid "Need more help?"
+msgstr "Meer hulp nodig?"
+
+#: core/template/shortcode_generator.php:11
+#: core/template/shortcode_generator.php:30
+msgid "Select a recipe to display"
+msgstr "Kies een recept om weer te geven"
+
+#: core/template/shortcode_generator.php:11
+msgid "Ordered by date added"
+msgstr "Gesorteerd volgens datum toegevoegd"
+
+#: core/template/shortcode_generator.php:30
+msgid "Ordered by title"
+msgstr "Gesorteerd volgens titel"
+
+#: core/template/shortcode_generator.php:51
+msgid "Recipe Index"
+msgstr "Recepten Index"
+
+#: core/template/shortcode_generator.php:54
+msgid "Basic Recipe Index"
+msgstr "Basis Recepten Index"
+
+#: core/template/shortcode_generator.php:60
+msgid "Show headers"
+msgstr "Toon koppen"
+
+#: core/template/shortcode_generator.php:71
+msgid "Extended Recipe Index"
+msgstr "Uitgebreide Recepten Index"
+
+#: core/template/shortcode_generator.php:71
+#: core/template/shortcode_generator.php:170
+#: core/template/shortcode_generator.php:174
+msgid "WP Ultimate Recipe Premium only"
+msgstr "Enkel voor WP Ultimate Recipe Premium"
+
+#: core/template/shortcode_generator.php:77
+msgid "Group by"
+msgstr "Groepeer volgens"
+
+#: core/template/shortcode_generator.php:94
+msgid "Limit by"
+msgstr "Limiteer volgens"
+
+#: core/template/shortcode_generator.php:107
+msgid "Limit by values"
+msgstr "Limiteer volgens waarden"
+
+#: core/template/shortcode_generator.php:128
+msgid "Date Added"
+msgstr "Datum Toegevoegd"
+
+#: core/template/shortcode_generator.php:132
+msgid "Random"
+msgstr "Willekeurig"
+
+#: core/template/shortcode_generator.php:142
+msgid "Sort order"
+msgstr "Sorteer volgorde"
+
+#: core/template/shortcode_generator.php:146
+msgid "Ascending"
+msgstr "Oplopend"
+
+#: core/template/shortcode_generator.php:150
+msgid "Descending"
+msgstr "Aflopend"
+
+#: core/template/shortcode_generator.php:160
+msgid "Max number of recipes"
+msgstr "Maximum aantal recepten"
+
+#: core/template/shortcode_generator.php:167
+msgid "User Interaction"
+msgstr "Gebruikers Interactie"
+
+#: core/template/shortcode_generator.php:170
+msgid "User Submissions form"
+msgstr "Gebruiker Inzendingen formulier"
+
+#: core/template/shortcode_generator.php:174
+msgid "User Menus form"
+msgstr "Gebruiker Menus formulier"
+
+#: core/template/admin.php:85
 msgid "Thumbnail position depends on the theme you use"
 msgstr "Thumbnail positie is afhankelijk van het theme dat je gebruikt"
 
-#: core/core-functions.php:198
+#: core/template/admin.php:89
 msgid "Never"
 msgstr "Nooit"
 
-#: core/core-functions.php:199
+#: core/template/admin.php:93
 msgid "Only on archive pages"
 msgstr "Alleen op archief pagina's"
 
-#: core/core-functions.php:200
+#: core/template/admin.php:97
 msgid "Only on recipe pages"
 msgstr "Alleen op recept pagina's"
 
-#: core/core-functions.php:201
+#: core/template/admin.php:101
 msgid "Always"
 msgstr "Altijd"
 
@@ -43,8 +541,11 @@ msgid "Delete"
 msgstr "Verwijderen"
 
 #: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:126
-msgid "Do you really want to reset the taxonomies? All custom tags will be deleted."
-msgstr "Ben je zeker dat je de tags wil resetten? Alle eigen tags zullen verwijderd worden."
+msgid ""
+"Do you really want to reset the taxonomies? All custom tags will be deleted."
+msgstr ""
+"Ben je zeker dat je de tags wil resetten? Alle eigen tags zullen verwijderd "
+"worden."
 
 #: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:129
 msgid "Reset to defaults"
@@ -56,119 +557,113 @@ msgid "No recipes found."
 msgstr "Geen recepten gevonden."
 
 #: wp-ultimate-recipe-premium/includes/plugin-updater.php:457
-msgid "The plugin has been updated, but could not be reactivated. Please reactivate it manually."
-msgstr "De plugin werd geüpdatet, maar kon niet opnieuw geactiveerd worden. Gelieve de plugin manueel te heractiveren."
+msgid ""
+"The plugin has been updated, but could not be reactivated. Please reactivate "
+"it manually."
+msgstr ""
+"De plugin werd geüpdatet, maar kon niet opnieuw geactiveerd worden. Gelieve "
+"de plugin manueel te heractiveren."
 
 #: wp-ultimate-recipe-premium/includes/plugin-updater.php:458
 msgid "Plugin reactivated successfully. "
 msgstr "Plugin succesvol opnieuw geactiveerd."
 
-#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:206
+#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:205
 msgid "Amount"
 msgstr "Hoeveelheid"
 
-#: core/core-functions.php:135
-msgid "Recipe Slug"
-msgstr "Recept Slug"
-
-#: core/core-functions.php:141
-msgid "Recipe archive"
-msgstr "Recept archief"
-
-#: core/core-functions.php:234
-msgid "General settings."
-msgstr "Algemene instellingen."
-
-#: core/core-functions.php:305 core/core-functions.php:699
-#: core/addons/custom-taxonomies/custom-taxonomies.php:224
-#: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:268
-#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:54
+#: core/core-functions.php:178 core/core-functions.php:529
+#: core/addons/custom-taxonomies/custom-taxonomies.php:227
+#: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:271
+#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:53
 msgid "New"
 msgstr "Nieuw"
 
-#: core/core-functions.php:308 core/core-functions.php:693
-#: core/addons/custom-taxonomies/custom-taxonomies.php:218
-#: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:262
-#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:57
+#: core/core-functions.php:181 core/core-functions.php:523
+#: core/addons/custom-taxonomies/custom-taxonomies.php:221
+#: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:265
+#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:56
 msgid "Search"
 msgstr "Zoek"
 
-#: core/core-functions.php:309 core/core-functions.php:310
-#: core/core-functions.php:703
-#: core/addons/custom-taxonomies/custom-taxonomies.php:228
-#: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:272
+#: core/core-functions.php:182 core/core-functions.php:183
+#: core/core-functions.php:533
+#: core/addons/custom-taxonomies/custom-taxonomies.php:231
+#: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:275
+#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:57
 #: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:58
-#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:59
 msgid "No"
 msgstr "Geen"
 
-#: core/core-functions.php:309 core/core-functions.php:703
-#: core/addons/custom-taxonomies/custom-taxonomies.php:228
-#: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:272
-#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:58
+#: core/core-functions.php:182 core/core-functions.php:533
+#: core/addons/custom-taxonomies/custom-taxonomies.php:231
+#: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:275
+#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:57
 msgid "found."
 msgstr "gevonden."
 
-#: core/core-functions.php:310
-#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:59
+#: core/core-functions.php:183
+#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:58
 msgid "found in trash."
 msgstr "gevonden in de vuilbak."
 
-#: core/core-functions.php:311
-#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:60
+#: core/core-functions.php:184
+#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:59
 msgid "Parent"
 msgstr "Hoofd"
 
-#: core/core-functions.php:694
-#: core/addons/custom-taxonomies/custom-taxonomies.php:219
-#: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:263
+#: core/core-functions.php:524
+#: core/addons/custom-taxonomies/custom-taxonomies.php:222
+#: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:266
 msgid "Popular"
 msgstr "Populaire"
 
-#: core/core-functions.php:695
-#: core/addons/custom-taxonomies/custom-taxonomies.php:220
-#: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:264
+#: core/core-functions.php:525
+#: core/addons/custom-taxonomies/custom-taxonomies.php:223
+#: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:267
 #: wp-ultimate-recipe-premium/addons/recipe-grid/recipe-grid.php:69
 msgid "All"
 msgstr "Alle"
 
-#: core/core-functions.php:697
-#: core/addons/custom-taxonomies/custom-taxonomies.php:222
-#: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:266
+#: core/core-functions.php:527
+#: core/addons/custom-taxonomies/custom-taxonomies.php:225
+#: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:269
 msgid "Update"
 msgstr "Updaten"
 
-#: core/core-functions.php:699
+#: core/core-functions.php:529
 #: core/addons/custom-taxonomies/custom-taxonomies.php:78
 #: core/addons/custom-taxonomies/custom-taxonomies.php:133
-#: core/addons/custom-taxonomies/custom-taxonomies.php:224
+#: core/addons/custom-taxonomies/custom-taxonomies.php:227
+#: core/template/shortcode_generator.php:81
+#: core/template/shortcode_generator.php:120
 #: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:81
 #: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:147
-#: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:268
+#: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:271
 msgid "Name"
 msgstr "Naam"
 
-#: core/core-functions.php:700
-#: core/addons/custom-taxonomies/custom-taxonomies.php:225
-#: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:269
+#: core/core-functions.php:530
+#: core/addons/custom-taxonomies/custom-taxonomies.php:228
+#: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:272
 msgid "Separate"
 msgstr "Scheid"
 
-#: core/core-functions.php:700
-#: core/addons/custom-taxonomies/custom-taxonomies.php:225
-#: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:269
+#: core/core-functions.php:530
+#: core/addons/custom-taxonomies/custom-taxonomies.php:228
+#: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:272
 msgid "with commas"
 msgstr "met komma's"
 
-#: core/core-functions.php:701
-#: core/addons/custom-taxonomies/custom-taxonomies.php:226
-#: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:270
+#: core/core-functions.php:531
+#: core/addons/custom-taxonomies/custom-taxonomies.php:229
+#: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:273
 msgid "Add or remove"
 msgstr "Toevoegen of verwijderen van"
 
-#: core/core-functions.php:702
-#: core/addons/custom-taxonomies/custom-taxonomies.php:227
-#: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:271
+#: core/core-functions.php:532
+#: core/addons/custom-taxonomies/custom-taxonomies.php:230
+#: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:274
 msgid "Choose from the most used"
 msgstr "Kies uit de meest gebruikte"
 
@@ -177,9 +672,7 @@ msgstr "Kies uit de meest gebruikte"
 msgid "Custom Taxonomies"
 msgstr "Eigen Taxonomies"
 
-#: core/addons/custom-taxonomies/custom-taxonomies.php:49
 #: core/addons/custom-taxonomies/taxonomies-builder.php:5
-#: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:52
 #: wp-ultimate-recipe-premium/addons/custom-taxonomies/taxonomies-builder.php:5
 msgid "Custom Tags"
 msgstr "Eigen Tags"
@@ -200,16 +693,17 @@ msgid "Tag"
 msgstr "Tag"
 
 #: core/addons/custom-taxonomies/custom-taxonomies.php:75
-#: core/addons/custom-taxonomies/custom-taxonomies.php:141
+#: core/addons/custom-taxonomies/custom-taxonomies.php:142
 #: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:78
-#: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:155
+#: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:156
 msgid "Singular Name"
 msgstr "Naam (enkelvoud)"
 
 #: core/addons/custom-taxonomies/custom-taxonomies.php:81
-#: core/addons/custom-taxonomies/custom-taxonomies.php:149
+#: core/addons/custom-taxonomies/custom-taxonomies.php:151
+#: core/template/admin.php:112 core/template/admin.php:432
 #: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:84
-#: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:163
+#: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:165
 msgid "Slug"
 msgstr "Slug"
 
@@ -228,258 +722,201 @@ msgstr "Voeg eigen tags toe aan je recepten."
 msgid "Currently editing tag: "
 msgstr "Aanpassen van tag:"
 
-#: core/addons/custom-taxonomies/custom-taxonomies.php:135
-#: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:149
+#: core/addons/custom-taxonomies/custom-taxonomies.php:136
+#: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:150
 msgid "(e.g. Courses)"
 msgstr "(bv. Maaltijden)"
 
-#: core/addons/custom-taxonomies/custom-taxonomies.php:143
-#: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:157
+#: core/addons/custom-taxonomies/custom-taxonomies.php:145
+#: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:159
 msgid "(e.g. Course)"
 msgstr "(bv. Maaltijd)"
 
-#: core/addons/custom-taxonomies/custom-taxonomies.php:151
-#: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:165
+#: core/addons/custom-taxonomies/custom-taxonomies.php:154
+#: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:168
 msgid "(e.g. http://www.yourwebsite.com/course/)"
 msgstr "(bv. http://www.jouwwebsite.com/maaltijd/)"
 
-#: core/addons/custom-taxonomies/custom-taxonomies.php:158
-#: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:171
+#: core/addons/custom-taxonomies/custom-taxonomies.php:161
+#: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:174
 msgid "Add new tag"
 msgstr "Voeg nieuwe tag toe"
 
-#: core/addons/custom-taxonomies/custom-taxonomies.php:159
+#: core/addons/custom-taxonomies/custom-taxonomies.php:162
 msgid "Adding new tags is only possible in"
 msgstr "Nieuwe tags toevoegen kan alleen in"
 
-#: core/addons/custom-taxonomies/custom-taxonomies.php:162
-#: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:173
+#: core/addons/custom-taxonomies/custom-taxonomies.php:165
+#: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:176
 msgid "Edit tag"
 msgstr "Tag aanpassen"
 
-#: core/addons/custom-taxonomies/custom-taxonomies.php:163
-#: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:174
+#: core/addons/custom-taxonomies/custom-taxonomies.php:166
+#: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:177
 msgid "Cancel Edit"
 msgstr "Stoppen met aanpassen"
 
-#: core/template/recipe_admin.php:96
+#: core/template/recipe_admin.php:98
 msgid "tbsp"
 msgstr "el"
 
-#: core/template/recipe_admin.php:97
+#: core/template/recipe_admin.php:99
 msgid "olive oil"
 msgstr "olijfolie"
 
-#: core/template/recipe_admin.php:98
+#: core/template/recipe_admin.php:100
 msgid "extra virgin"
 msgstr "extra vierge"
 
-#: wp-ultimate-recipe-premium/wp-ultimate-recipe-premium.php:28
-msgid "WP Ultimate Recipe must be installed and activated before WP Ultimate Recipe Premium can be used."
-msgstr "WP Ultimate Recipe moet geïnstalleerd en geactiveerd zijn alvorens WP Ultimate Recipe Premium gebruikt kan worden."
-
 #: wp-ultimate-recipe-premium/wp-ultimate-recipe-premium.php:30
-msgid "Please update WP Ultimate Recipe to the latest version before activating WP Ultimate Recipe Premium."
-msgstr "Gelieve WP Ultimate Recipe naar de laatste versie te updaten alvorens WP Ultimate Recipe Premium te activeren."
+msgid ""
+"WP Ultimate Recipe must be installed and activated before WP Ultimate Recipe "
+"Premium can be used."
+msgstr ""
+"WP Ultimate Recipe moet geïnstalleerd en geactiveerd zijn alvorens WP "
+"Ultimate Recipe Premium gebruikt kan worden."
 
-#: wp-ultimate-recipe-premium/addons/custom-templates/custom-templates.php:32
-#: wp-ultimate-recipe-premium/addons/custom-templates/template-builder.php:4
-msgid "Custom Templates"
-msgstr "Aangepaste Templates"
+#: wp-ultimate-recipe-premium/wp-ultimate-recipe-premium.php:32
+msgid ""
+"Please update WP Ultimate Recipe to the latest version before activating WP "
+"Ultimate Recipe Premium."
+msgstr ""
+"Gelieve WP Ultimate Recipe naar de laatste versie te updaten alvorens WP "
+"Ultimate Recipe Premium te activeren."
 
-#: wp-ultimate-recipe-premium/addons/custom-templates/custom-templates.php:32
-msgid "Templates"
-msgstr "Templates"
-
-#: wp-ultimate-recipe-premium/addons/custom-templates/custom-templates.php:37
-msgid "Basic options"
-msgstr "Basis instellingen"
-
-#: wp-ultimate-recipe-premium/addons/custom-templates/custom-templates.php:38
-msgid "Custom style"
-msgstr "Eigen stijl"
-
-#: wp-ultimate-recipe-premium/addons/custom-templates/custom-templates.php:42
+#: core/template/admin.php:155
 msgid "Layout"
 msgstr "Layout"
 
-#: wp-ultimate-recipe-premium/addons/custom-templates/custom-templates.php:48
-msgid "Choose a layout for your recipes"
-msgstr "Kies een layout voor je recepten"
-
-#: wp-ultimate-recipe-premium/addons/custom-templates/custom-templates.php:51
-#: wp-ultimate-recipe-premium/addons/custom-templates/custom-templates.php:72
+#: core/template/admin.php:159 core/template/admin.php:184
 msgid "Default"
 msgstr "Standaard"
 
-#: wp-ultimate-recipe-premium/addons/custom-templates/custom-templates.php:52
+#: core/template/admin.php:167
 msgid "Modern"
 msgstr "Modern"
 
-#: wp-ultimate-recipe-premium/addons/custom-templates/custom-templates.php:53
+#: core/template/admin.php:163
 msgid "Compact"
 msgstr "Compact"
 
-#: wp-ultimate-recipe-premium/addons/custom-templates/custom-templates.php:63
+#: core/template/admin.php:178
 msgid "Style"
 msgstr "Stijl"
 
-#: wp-ultimate-recipe-premium/addons/custom-templates/custom-templates.php:69
-msgid "Choose a style for your recipes"
-msgstr "Kies een stijl voor je recepten"
-
-#: wp-ultimate-recipe-premium/addons/custom-templates/custom-templates.php:73
+#: core/template/admin.php:189
 msgid "Neutral"
 msgstr "Neutraal"
 
-#: wp-ultimate-recipe-premium/addons/custom-templates/custom-templates.php:74
+#: core/template/admin.php:194
 msgid "Blue"
 msgstr "Blauw"
 
-#: wp-ultimate-recipe-premium/addons/custom-templates/custom-templates.php:75
+#: core/template/admin.php:199
 msgid "Green"
 msgstr "Groen"
 
-#: wp-ultimate-recipe-premium/addons/custom-templates/custom-templates.php:76
+#: core/template/admin.php:204
 msgid "Custom"
 msgstr "Eigen"
 
-#: wp-ultimate-recipe-premium/addons/custom-templates/custom-templates.php:86
+#: core/template/admin.php:226
 msgid "Background"
 msgstr "Achtergrond"
 
-#: wp-ultimate-recipe-premium/addons/custom-templates/custom-templates.php:92
+#: core/template/admin.php:227
 msgid "Main recipe background color"
 msgstr "Recept achtergrondkleur"
 
-#: wp-ultimate-recipe-premium/addons/custom-templates/custom-templates.php:98
+#: core/template/admin.php:220
 msgid "Background image"
 msgstr "Achtergrond afbeelding"
 
-#: wp-ultimate-recipe-premium/addons/custom-templates/custom-templates.php:104
-msgid "Main recipe background image"
-msgstr "Recept achtergrond afbeelding"
-
-#: wp-ultimate-recipe-premium/addons/custom-templates/custom-templates.php:110
+#: core/template/admin.php:234
 msgid "Panel background"
 msgstr "Achtergrond paneel"
 
-#: wp-ultimate-recipe-premium/addons/custom-templates/custom-templates.php:116
+#: core/template/admin.php:235
 msgid "Background for various panels depending on layout"
 msgstr "Achtergrond voor verschillende panelen die gebruikt worden"
 
-#: wp-ultimate-recipe-premium/addons/custom-templates/custom-templates.php:122
+#: core/template/admin.php:242
 msgid "Borders"
 msgstr "Randen"
 
-#: wp-ultimate-recipe-premium/addons/custom-templates/custom-templates.php:128
+#: core/template/admin.php:243
 msgid "Recipe borders color"
 msgstr "Kleur van de recept randen"
 
-#: wp-ultimate-recipe-premium/addons/custom-templates/custom-templates.php:134
+#: core/template/admin.php:250
 msgid "Text"
 msgstr "Tekst"
 
-#: wp-ultimate-recipe-premium/addons/custom-templates/custom-templates.php:140
+#: core/template/admin.php:251
 msgid "Recipe text color"
 msgstr "Kleur van de recept tekst"
 
-#: wp-ultimate-recipe-premium/addons/custom-templates/custom-templates.php:146
+#: core/template/admin.php:258
 msgid "Highlights"
 msgstr "Accenten"
 
-#: wp-ultimate-recipe-premium/addons/custom-templates/custom-templates.php:152
+#: core/template/admin.php:259
 msgid "Links and other highlights"
 msgstr "Kleur van links en andere accenten"
 
-#: wp-ultimate-recipe-premium/addons/custom-templates/custom-templates.php:158
+#: core/template/admin.php:266
 msgid "Hover"
 msgstr "Hover"
 
-#: wp-ultimate-recipe-premium/addons/custom-templates/custom-templates.php:164
+#: core/template/admin.php:267
 msgid "Links hover effect"
 msgstr "Kleur van links bij het hoveren"
 
-#: wp-ultimate-recipe-premium/addons/custom-templates/custom-templates.php:216
-msgid "Choose from default layouts and styles."
-msgstr "Kies uit standaard layouts en stijlen"
-
-#: wp-ultimate-recipe-premium/addons/custom-templates/custom-templates.php:221
-msgid "Choose your own colors to make your template unique."
-msgstr "Kies je eigen kleuren om je template uniek te maken."
-
-#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:42
+#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:41
 msgid "Menus"
 msgstr "Menus"
 
-#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:43
-#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:78
+#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:42
+#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:77
 msgid "Menu"
 msgstr "Menu"
 
-#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:87
+#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:86
 msgid "Shopping List"
 msgstr "Winkellijst"
 
-#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:193
+#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:192
 msgid "Some recipes on this list have no associated ingredients."
 msgstr "Er zijn recepten in deze lijst die geen ingrediënten hebben."
 
-#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:214
+#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:213
 msgid "The shopping list will update automatically whenever the menu is saved."
-msgstr "De winkellijst wordt automatisch geüpdatet wanneer je het menu opslaat."
+msgstr ""
+"De winkellijst wordt automatisch geüpdatet wanneer je het menu opslaat."
 
-#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:256
+#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:255
 msgid "Unable to save menu with zero recipes added."
 msgstr "Je kan geen menu zonder recepten opslaan."
 
-#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:374
+#: core/template/admin.php:380
 msgid "User Menus"
 msgstr "Gebruiker Menus"
 
-#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:378
-msgid "User menus"
-msgstr "Gebruiker menus"
-
-#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:384
-msgid "Allow users to create their own menus and shopping lists."
-msgstr "Laat gebruikers hun eigen menus en winkellijsten aanmaken."
-
-#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:387
-#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:72
-#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:90
-msgid "Off"
-msgstr "Uit"
-
-#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:388
-#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:73
-#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:91
+#: core/template/admin.php:333 core/template/admin.php:357
+#: core/template/admin.php:417
 msgid "Guests and registered users"
 msgstr "Gasten en geregistreerde gebruikers"
 
-#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:389
-#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:74
-#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:92
+#: core/template/admin.php:337 core/template/admin.php:361
+#: core/template/admin.php:421
 msgid "Registered users only"
 msgstr "Enkel geregistreerde gebruikers"
 
-#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:398
-msgid "Menu Slug"
-msgstr "Menu Slug"
-
-#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:404
-msgid "Menu archive"
-msgstr "Menu archief"
-
-#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:423
-msgid "Important: use the [wpurp_user_menus] shortcode to display the front-end form."
-msgstr "Belangrijk: gebruik de [wpurp_user_menus] shortcode om het formulier te tonen."
-
-#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:451
+#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:392
 msgid "Sorry, the site administrator has disabled user menus."
 msgstr "Sorry, gebruiker menus zijn niet geactiveerd."
 
-#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:466
+#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:407
 msgid "Sorry, only registered users may create menus."
 msgstr "Sorry, enkel ingelogde gebruikers mogen menus aanmaken."
 
@@ -499,6 +936,7 @@ msgstr "Nieuwste"
 msgid "A-Z"
 msgstr "A-Z"
 
+#: core/template/shortcode_generator.php:112
 #: wp-ultimate-recipe-premium/addons/user-menus/inc/menu-builder.php:68
 msgid "Sort by"
 msgstr "Sorteer volgens"
@@ -511,159 +949,117 @@ msgstr "Menu opslaan"
 msgid "No recipes added to this menu."
 msgstr "Geen recepten toegevoegd aan dit menu."
 
-#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:59
-msgid "User submission features"
-msgstr "Gebruikers input features"
-
-#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:63
-msgid "User submissions"
-msgstr "Gebruikers input"
-
-#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:69
-msgid "Allow users to submit recipes?"
-msgstr "Gebruikers toelaten om recepten in te sturen?"
-
-#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:81
-msgid "Auto approve submissions"
-msgstr "Automatisch recepten goedkeuren"
-
-#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:87
+#: core/template/admin.php:349
 msgid "Publish recipe immediately on submission."
 msgstr "Recept meteen publiceren na insturen."
 
-#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:99
+#: core/template/admin.php:372
 msgid "Submission form CSS"
 msgstr "Instuur formulier CSS"
 
-#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:105
+#: core/template/admin.php:373
 msgid "Add basic CSS styles to the frontend form."
 msgstr "Basis CSS stijl toevoegen aan formulier."
 
-#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:128
-msgid "Important: use the [wpurp_submissions] shortcode to display the front-end form."
-msgstr "Belangrijk: gebruik de [wpurp_submissions] shortcode om het formulier te tonen."
-
-#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:136
+#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:61
 msgid "Sorry, the site administrator has disabled recipe submissions."
 msgstr "Sorry, recepten insturen is niet geactiveerd."
 
-#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:149
+#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:74
 msgid "Sorry, only registered users may submit recipes."
 msgstr "Sorry, enkel geregistreerde gebruikers mogen recepten insturen."
 
-#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:180
+#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:105
 msgid "Recipe title"
 msgstr "Recept titel"
 
-#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:185
+#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:110
 msgid "Your name"
 msgstr "Jouw naam"
 
-#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:189
+#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:114
 msgid "Featured image"
 msgstr "Uitgelichte afbeelding"
 
-#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:193
+#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:118
 msgid "Add Featured Image"
 msgstr "Uitgelichte afbeelding toevoegen"
 
-#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:194
+#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:119
 msgid "Remove Featured Image"
 msgstr "Uitgelichte afbeelding verwijderen"
 
-#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:215
+#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:141
 msgid "Submit"
 msgstr "Insturen"
 
-#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:256
+#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:184
 msgid "Recipe submitted! Thank you, your recipe is now awaiting moderation."
 msgstr "Recept ingestuurd! Bedankt, jouw recept wacht nu op goedkeuring."
 
-#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:258
+#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:186
 msgid "Recipe submitted! Thank you, your recipe has been published."
 msgstr "Recept ingestuurd! Bedankt, je recept werd gepubliceerd."
 
-#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:277
+#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:208
 msgid "Anonymous"
 msgstr "Anoniem"
 
-#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:331
-#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:348
+#: core/template/shortcode_generator.php:124
+#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:262
+#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:279
 msgid "Author"
 msgstr "Auteur"
 
-#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:347
+#: core/template/shortcode_generator.php:116
+#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:278
 msgid "Title"
 msgstr "Titel"
 
-#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:350
+#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:281
 msgid "Date"
 msgstr "Datum"
 
-#: core/template/recipe_admin.php:182 core/template/recipe_public.php:144
-#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/compact.php:148
-#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/default.php:148
+#: core/template/recipe_admin.php:184 core/template/recipe_public.php:146
+#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/compact.php:146
+#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/default.php:146
 #: wp-ultimate-recipe-premium/addons/custom-templates/layouts/modern.php:172
 msgid "Recipe notes"
 msgstr "Extra informatie"
 
-#: core/wp-ultimate-recipe.php:79
-msgid "WPURP Addons"
-msgstr "WPURP Addons"
-
-#: core/wp-ultimate-recipe.php:79 core/wp-ultimate-recipe.php:131
-msgid "Addons"
-msgstr "Addons"
-
-#: core/wp-ultimate-recipe.php:132
-msgid "To install new addons, visit the download link for instructions."
-msgstr "Klik op de Download link om meer uitleg te krijgen over het installeren van nieuwe addons."
-
-#: core/wp-ultimate-recipe.php:161
-msgid "Installed"
-msgstr "Geïnstalleerd"
-
-#: core/wp-ultimate-recipe.php:183
-msgid "Download!"
-msgstr "Download!"
-
-#: core/wp-ultimate-recipe.php:324
-msgid "Upload Image"
-msgstr "Afbeelding Uploaden"
-
-#: core/core-functions.php:735
+#: core/core-functions.php:565
 msgid "Edit Rating"
 msgstr "Score bewerken"
 
-#: core/core-functions.php:736
+#: core/core-functions.php:566
 msgid "Update Rating"
 msgstr "Score aanpassen"
 
-#: core/core-functions.php:737
+#: core/core-functions.php:567
 msgid "Add New Rating"
 msgstr "Score toevoegen"
 
-#: core/core-functions.php:738
+#: core/core-functions.php:568
 msgid "New Rating Name"
 msgstr "Nieuwe Score naam"
 
-#: core/core-functions.php:739
+#: core/core-functions.php:569
 msgid "Separate ratings with commas"
 msgstr "Scores scheiden met komma's"
 
-#: core/core-functions.php:740
+#: core/core-functions.php:570
 msgid "Add or remove ratings"
 msgstr "Scores toevoegen of verwijderen"
 
-#: core/core-functions.php:741
+#: core/core-functions.php:571
 msgid "Choose from the most used ratings"
 msgstr "Kies uit de meest gebruikte scores"
 
-#: core/core-functions.php:742
+#: core/core-functions.php:572
 msgid "No ratings found."
 msgstr "Geen scores gevonden."
 
-#: core/core-functions.php:129 core/template/recipe_admin.php:17
+#: core/template/recipe_admin.php:17
 msgid "General"
 msgstr "Algemeen"
 
@@ -679,12 +1075,12 @@ msgstr "ster"
 msgid "stars"
 msgstr "sterren"
 
-#: core/template/recipe_admin.php:40 core/template/recipe_public.php:60
-#: core/template/recipe_public.php:116
-#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/compact.php:64
-#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/compact.php:120
-#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/default.php:64
-#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/default.php:120
+#: core/template/recipe_admin.php:40 core/template/recipe_public.php:62
+#: core/template/recipe_public.php:118
+#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/compact.php:62
+#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/compact.php:118
+#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/default.php:62
+#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/default.php:118
 #: wp-ultimate-recipe-premium/addons/custom-templates/layouts/modern.php:55
 #: wp-ultimate-recipe-premium/addons/custom-templates/layouts/modern.php:116
 #: wp-ultimate-recipe-premium/addons/user-menus/inc/menu-builder.php:18
@@ -701,11 +1097,11 @@ msgid "Prep time"
 msgstr "Prep tijd"
 
 #: core/template/recipe_admin.php:51 core/template/recipe_admin.php:58
-#: core/template/recipe_public.php:68 core/template/recipe_public.php:69
-#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/compact.php:72
-#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/compact.php:73
-#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/default.php:72
-#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/default.php:73
+#: core/template/recipe_public.php:70 core/template/recipe_public.php:71
+#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/compact.php:70
+#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/compact.php:71
+#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/default.php:70
+#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/default.php:71
 #: wp-ultimate-recipe-premium/addons/custom-templates/layouts/modern.php:63
 #: wp-ultimate-recipe-premium/addons/custom-templates/layouts/modern.php:64
 msgid "minutes"
@@ -715,274 +1111,263 @@ msgstr "minuten"
 msgid "Cook time"
 msgstr "Kook tijd"
 
-#: core/template/recipe_admin.php:64
-msgid "Don't forget that you can tag your recipe with <strong>Courses</strong> and <strong>Cuisines</strong> by using the boxes on the right. Use the <strong>featured image</strong> if you want a photo of the finished dish."
-msgstr "Niet vergeten dat je je recept kan taggen met <strong>Maaltijden</strong> en <strong>Keukens</strong> met behulp van de kaders aan de rechterkant. Gebruik de <strong>uitgelichte afbeelding</strong> om een foto van het klaargemaakte gerecht te tonen."
+#: core/template/recipe_admin.php:65
+msgid ""
+"Don't forget that you can tag your recipe with <strong>Courses</strong> and "
+"<strong>Cuisines</strong> by using the boxes on the right. Use the "
+"<strong>featured image</strong> if you want a photo of the finished dish."
+msgstr ""
+"Niet vergeten dat je je recept kan taggen met <strong>Maaltijden</strong> en "
+"<strong>Keukens</strong> met behulp van de kaders aan de rechterkant. "
+"Gebruik de <strong>uitgelichte afbeelding</strong> om een foto van het "
+"klaargemaakte gerecht te tonen."
 
-#: core/template/recipe_admin.php:104
+#: core/template/recipe_admin.php:106
 msgid "Add an ingredient"
 msgstr "Voeg een ingrediënt toe"
 
-#: core/template/recipe_admin.php:107
-msgid "<strong>Use the TAB key</strong> while adding ingredients, it will automatically create new fields. <strong>Don't worry about empty lines</strong>, these will be ignored."
-msgstr "<strong>Gebruik de TAB toets</strong> terwijl je ingrediënten toevoegt om automatisch nieuwe velden aan te maken. <strong>Negeer de lege lijnen</strong>, deze worden niet meegenomen."
+#: core/template/recipe_admin.php:109
+msgid ""
+"<strong>Use the TAB key</strong> while adding ingredients, it will "
+"automatically create new fields. <strong>Don't worry about empty lines</"
+"strong>, these will be ignored."
+msgstr ""
+"<strong>Gebruik de TAB toets</strong> terwijl je ingrediënten toevoegt om "
+"automatisch nieuwe velden aan te maken. <strong>Negeer de lege lijnen</"
+"strong>, deze worden niet meegenomen."
 
-#: core/template/recipe_admin.php:110 core/template/recipe_public.php:124
-#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/compact.php:128
-#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/default.php:128
+#: core/template/recipe_admin.php:112 core/template/recipe_public.php:126
+#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/compact.php:126
+#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/default.php:126
 #: wp-ultimate-recipe-premium/addons/custom-templates/layouts/modern.php:152
 msgid "Instructions"
 msgstr "Instructies"
 
-#: core/template/recipe_admin.php:137 core/template/recipe_admin.php:157
-#: core/template/recipe_admin.php:165
+#: core/template/recipe_admin.php:139 core/template/recipe_admin.php:159
+#: core/template/recipe_admin.php:167
 msgid "Add Image"
 msgstr "Foto toevoegen"
 
-#: core/wp-ultimate-recipe.php:325 core/template/recipe_admin.php:138
-#: core/template/recipe_admin.php:166
+#: core/template/recipe_admin.php:140 core/template/recipe_admin.php:168
 msgid "Remove Image"
 msgstr "Foto verwijderen"
 
-#: core/template/recipe_admin.php:176
+#: core/template/recipe_admin.php:178
 msgid "Add an instruction"
 msgstr "Voeg een instructie toe"
 
-#: core/template/recipe_admin.php:179
-msgid "<strong>Use the TAB key</strong> while adding instructions, it will automatically create new fields. <strong>Don't worry about empty lines</strong>, these will be ignored."
-msgstr "<strong>Gebruik de TAB toets</strong> terwijl je instructies toevoegt om automatisch nieuwe velden aan te maken. <strong>Negeer de lege lijnen</strong>, deze worden niet meegenomen."
+#: core/template/recipe_admin.php:181
+msgid ""
+"<strong>Use the TAB key</strong> while adding instructions, it will "
+"automatically create new fields. <strong>Don't worry about empty lines</"
+"strong>, these will be ignored."
+msgstr ""
+"<strong>Gebruik de TAB toets</strong> terwijl je instructies toevoegt om "
+"automatisch nieuwe velden aan te maken. <strong>Negeer de lege lijnen</"
+"strong>, deze worden niet meegenomen."
 
 #: core/addons/custom-taxonomies/taxonomies-builder.php:12
-#: core/template/recipe_menu.php:14
 #: wp-ultimate-recipe-premium/addons/custom-taxonomies/taxonomies-builder.php:12
-#: wp-ultimate-recipe-premium/addons/custom-templates/template-builder.php:14
 msgid "Problems? Take a look at the"
 msgstr "Problemen? Neem een kijkje naar de"
 
-#: core/template/recipe_public.php:61
-#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/compact.php:65
-#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/default.php:65
+#: core/template/recipe_public.php:63
+#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/compact.php:63
+#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/default.php:63
 #: wp-ultimate-recipe-premium/addons/custom-templates/layouts/modern.php:56
 msgid "Prep Time"
 msgstr "Prep Tijd"
 
-#: core/template/recipe_public.php:62
-#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/compact.php:66
-#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/default.php:66
+#: core/template/recipe_public.php:64
+#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/compact.php:64
+#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/default.php:64
 #: wp-ultimate-recipe-premium/addons/custom-templates/layouts/modern.php:57
 msgid "Cook Time"
 msgstr "Kook Tijd"
 
-#: core/template/recipe_public.php:150
-#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/compact.php:154
-#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/default.php:154
+#: core/template/recipe_public.php:152
+#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/compact.php:152
+#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/default.php:152
 #: wp-ultimate-recipe-premium/addons/custom-templates/layouts/modern.php:179
 msgid "Powered by"
 msgstr "Mogelijk door"
 
-#: core/wp-ultimate-recipe.php:78
-msgid "Recipe Settings"
-msgstr "Recept Instellingen"
-
-#: core/wp-ultimate-recipe.php:78 core/template/recipe_menu.php:4
+#: core/template/admin.php:4
 msgid "Settings"
 msgstr "Instellingen"
 
-#: core/core-functions.php:146
-msgid "Recipe Box"
-msgstr "Recepten Box"
-
-#: core/core-functions.php:150
+#: core/template/admin.php:44
 msgid "Adjustable Servings"
 msgstr "Aanpasbare Porties"
 
-#: core/core-functions.php:156
+#: core/template/admin.php:45
 msgid "Allow users to dynamically adjust the servings of recipes."
 msgstr "Laat gebruikers toe om zelf de porties van de recepten aan te passen."
 
-#: core/core-functions.php:163
+#: core/template/admin.php:51
 msgid "Link to plugin"
 msgstr "Link naar plugin"
 
-#: core/core-functions.php:169
+#: core/template/admin.php:52
 msgid "Show a link to the plugin website as a little thank you."
 msgstr "Toon een link naar de plugin website bij wijze van dank."
 
-#: core/core-functions.php:176
-msgid "Show full recipe"
-msgstr "Toon volledig recept"
-
-#: core/core-functions.php:182
-msgid "Show the full recipe instead of the description/excerpt in"
-msgstr "Toon het volledige recept in plaats van de omschrijving/samenvatting in"
-
-#: core/core-functions.php:182
-msgid "the recipe archive"
-msgstr "de recept archieven"
-
-#: core/core-functions.php:239
-msgid "Settings regarding the recipe box shown to your visitors."
-msgstr "Instellingen over de recepten box die getoond wordt aan de bezoekers."
-
-#: core/core-functions.php:293
+#: core/core-functions.php:166 core/template/shortcode_generator.php:4
 msgid "Recipes"
 msgstr "Recepten"
 
-#: core/core-functions.php:294 core/core-functions.php:329
+#: core/core-functions.php:167 core/core-functions.php:202
+#: core/template/admin.php:38 core/template/shortcode_generator.php:17
+#: core/template/shortcode_generator.php:36
 msgid "Recipe"
 msgstr "Recept"
 
-#: core/core-functions.php:301 core/core-functions.php:302
-#: core/core-functions.php:698
-#: core/addons/custom-taxonomies/custom-taxonomies.php:223
-#: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:267
+#: core/core-functions.php:174 core/core-functions.php:175
+#: core/core-functions.php:528
+#: core/addons/custom-taxonomies/custom-taxonomies.php:226
+#: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:270
+#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:49
 #: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:50
-#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:51
 msgid "Add New"
 msgstr "Toevoegen"
 
-#: core/core-functions.php:303 core/core-functions.php:304
-#: core/core-functions.php:696
-#: core/addons/custom-taxonomies/custom-taxonomies.php:221
+#: core/core-functions.php:176 core/core-functions.php:177
+#: core/core-functions.php:526
+#: core/addons/custom-taxonomies/custom-taxonomies.php:224
 #: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:108
-#: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:265
+#: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:268
+#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:51
 #: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:52
-#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:53
 msgid "Edit"
 msgstr "Aanpassen"
 
-#: core/core-functions.php:306 core/core-functions.php:307
+#: core/core-functions.php:179 core/core-functions.php:180
+#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:54
 #: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:55
-#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:56
 msgid "View"
 msgstr "Bekijken"
 
-#: core/core-functions.php:550
-msgid "Select the recipe to add to your post:"
-msgstr "Selecteer het recept dat je wil toevoegen aan je bericht:"
-
-#: core/core-functions.php:560
-msgid "Insert Recipe"
-msgstr "Recept toevoegen"
-
-#: core/core-functions.php:564 core/core-functions.php:616
+#: core/core-functions.php:446
 #: wp-ultimate-recipe-premium/addons/extended-shortcodes/extended-shortcodes.php:134
-msgid "You have to create a recipe first, check the 'Recipes' menu on the left."
-msgstr "Je moet eerst een recept aanmaken, neem eens een kijkje in het 'Recpeten' menu aan je linkerkant."
+msgid ""
+"You have to create a recipe first, check the 'Recipes' menu on the left."
+msgstr ""
+"Je moet eerst een recept aanmaken, neem eens een kijkje in het 'Recpeten' "
+"menu aan je linkerkant."
 
-#: core/core-functions.php:655 core/template/recipe_admin.php:69
-#: core/template/recipe_public.php:81
-#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/compact.php:85
-#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/default.php:85
+#: core/core-functions.php:485 core/template/recipe_admin.php:71
+#: core/template/recipe_public.php:83
+#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/compact.php:83
+#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/default.php:83
 #: wp-ultimate-recipe-premium/addons/custom-templates/layouts/modern.php:81
 msgid "Ingredients"
 msgstr "Ingrediënten"
 
-#: core/core-functions.php:655
-#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:206
+#: core/core-functions.php:485
+#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:205
 msgid "Ingredient"
 msgstr "Ingrediënt"
 
-#: core/core-functions.php:656
+#: core/core-functions.php:486
 msgid "Courses"
 msgstr "Maaltijden"
 
-#: core/core-functions.php:656
+#: core/core-functions.php:486
 msgid "Course"
 msgstr "Maaltijd"
 
-#: core/core-functions.php:662
+#: core/core-functions.php:492
 msgid "Breakfast"
 msgstr "Ontbijt"
 
-#: core/core-functions.php:663
+#: core/core-functions.php:493
 msgid "Appetizer"
 msgstr "Voorgerecht"
 
-#: core/core-functions.php:664
+#: core/core-functions.php:494
 msgid "Soup"
 msgstr "Soep"
 
-#: core/core-functions.php:665
+#: core/core-functions.php:495
 msgid "Main Course"
 msgstr "Hoofdgerecht"
 
-#: core/core-functions.php:666
+#: core/core-functions.php:496
 msgid "Side Dish"
 msgstr "Bijgerecht"
 
-#: core/core-functions.php:667
+#: core/core-functions.php:497
 msgid "Salad"
 msgstr "Salade"
 
-#: core/core-functions.php:668
+#: core/core-functions.php:498
 msgid "Dessert"
 msgstr "Nagerecht"
 
-#: core/core-functions.php:669
+#: core/core-functions.php:499
 msgid "Snack"
 msgstr "Snack"
 
-#: core/core-functions.php:670
+#: core/core-functions.php:500
 msgid "Drinks"
 msgstr "Drinken"
 
-#: core/core-functions.php:657
+#: core/core-functions.php:487
 msgid "Cuisines"
 msgstr "Keukens"
 
-#: core/core-functions.php:657
+#: core/core-functions.php:487
 msgid "Cuisine"
 msgstr "Keuken"
 
-#: core/core-functions.php:672
+#: core/core-functions.php:502
 msgid "French"
 msgstr "Frans"
 
-#: core/core-functions.php:673
+#: core/core-functions.php:503
 msgid "Italian"
 msgstr "Italiaans"
 
-#: core/core-functions.php:674
+#: core/core-functions.php:504
 msgid "Mediterranean"
 msgstr "Mediterraans"
 
-#: core/core-functions.php:675
+#: core/core-functions.php:505
 msgid "Indian"
 msgstr "Indisch"
 
-#: core/core-functions.php:676
+#: core/core-functions.php:506
 msgid "Chinese"
 msgstr "Chinees"
 
-#: core/core-functions.php:677
+#: core/core-functions.php:507
 msgid "Japanese"
 msgstr "Japans"
 
-#: core/core-functions.php:678
+#: core/core-functions.php:508
 msgid "American"
 msgstr "Amerikaans"
 
-#: core/core-functions.php:679
+#: core/core-functions.php:509
 msgid "Mexican"
 msgstr "Mexicaans"
 
-#: core/core-functions.php:730 core/core-functions.php:743
+#: core/core-functions.php:560 core/core-functions.php:573
 msgid "Ratings"
 msgstr "Scores"
 
-#: core/core-functions.php:731 core/template/recipe_admin.php:26
+#: core/core-functions.php:561 core/template/recipe_admin.php:26
 msgid "Rating"
 msgstr "Score"
 
-#: core/core-functions.php:732
+#: core/core-functions.php:562
 msgid "Search Ratings"
 msgstr "Scores zoeken"
 
-#: core/core-functions.php:733
+#: core/core-functions.php:563
 msgid "Popular Ratings"
 msgstr "Populaire Scores"
 
-#: core/core-functions.php:734
+#: core/core-functions.php:564
 msgid "All Ratings"
 msgstr "Alle Scores"

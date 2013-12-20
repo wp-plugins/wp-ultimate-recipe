@@ -1,3 +1,20 @@
+#wpurp_drip_form_div {
+    margin-bottom: 5px;
+}
+
+#wpurp_drip_form h3 {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+#wpurp_drip_form_div #email {
+    width: 300px;
+}
+
+#wpurp_drip_form_dismiss {
+    margin-top: 8px;
+    float: right;
+}
 #recipe_meta_box h4 {
     font-size: 1.2em;
 }

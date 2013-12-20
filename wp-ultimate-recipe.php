@@ -3,7 +3,7 @@
 Plugin Name: WP Ultimate Recipe
 Plugin URI: http://www.wpultimaterecipeplugin.com
 Description: WP Ultimate Recipe is a user friendly plugin for adding recipes to any of your posts and pages.
-Version: 0.0.20
+Version: 0.0.21
 Author: Bootstrapped Ventures
 Author URI: http://www.bootstrappedventures.com
 License: GPLv2
@@ -12,7 +12,7 @@ License: GPLv2
  * Credit to subtlepatterns.com for background patterns.
  */
 
-define( 'COMPATIBLE_PREMIUM_VERSION', '0.0.7' );
+define( 'COMPATIBLE_PREMIUM_VERSION', '0.0.8' );
 
 class WPUltimateRecipe {
     
@@ -38,7 +38,7 @@ class WPUltimateRecipe {
         $this->premiumUrl = WP_PLUGIN_URL . '/' . $this->premiumName;
 
         // Version
-        update_option( $this->pluginName . '_version', '0.0.18' );
+        update_option( $this->pluginName . '_version', '0.0.21' );
 
         // Textdomain
         load_plugin_textdomain($this->pluginName, false, basename( dirname( __FILE__ ) ) . '/lang/'  );
@@ -53,12 +53,15 @@ class WPUltimateRecipe {
 
         // Actions
         // add_action( 'init', array( $this, 'load_installed_addons' ), -10 ); // Put this in core-functions
+        add_action( 'after_setup_theme', array( $this, 'wpurp_admin_menu' ) );
+        add_action( 'after_setup_theme', array( $this, 'wpurp_shortcodegenerator' ) );
         add_action( 'init', array( $this, 'wpurp_check_premium' ) );
-        add_action( 'wp_print_styles', array( $this, 'wpurp_styles' ) );
+        add_action( 'admin_init', array( $this, 'wpurp_hide_notice' ) );
+        add_action( 'wp_print_scripts', array( $this, 'wpurp_styles' ), 99 ); // Not wp_print_styles because we need this to be the last outputted css
         add_action( 'wp_footer', array( $this, 'wpurp_scripts' ) );
         add_action( 'admin_head', array( $this, 'wpurp_admin_styles' ) );
-        add_action( 'admin_footer', array( $this, 'wpurp_admin_scripts' ) );   
-        add_action( 'admin_menu', array( $this, 'menu_addons' ) );
+        add_action( 'admin_footer', array( $this, 'wpurp_admin_scripts' ) );
+        add_action( 'admin_notices', array( $this, 'wpurp_admin_notices' ) );
 
         // Other
         if ( function_exists( 'add_image_size' ) ) {
@@ -74,14 +77,34 @@ class WPUltimateRecipe {
      * ================================================================================================================
      */
 
-    public function wpurp_check_premium() {
+    public function wpurp_admin_notices()
+    {
+        if(get_current_screen()->id == 'recipe_page_wpurp_admin' && get_user_meta( get_current_user_id(), '_wpurp_hide_notice', true ) != get_option($this->pluginName . '_version')) {
+            include($this->pluginDir . '/helper/drip_form.php');
+        }
+    }
+
+    function wpurp_hide_notice()
+    {
+        if ( ! isset( $_GET['wpurp_hide_notice'] ) ) {
+            return;
+        }
+
+        check_admin_referer( 'wpurp_hide_notice', 'wpurp_hide_notice' );
+        update_user_meta( get_current_user_id(), '_wpurp_hide_notice', get_option($this->pluginName . '_version') );
+    }
+
+    public function wpurp_check_premium()
+    {
+
+        include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 
         if( is_plugin_active( 'wp-ultimate-recipe-premium/wp-ultimate-recipe-premium.php' ) ) {
             $plugin_data = get_plugin_data( $this->premiumDir . '/' . $this->premiumName . '.php' );
             $plugin_version = $plugin_data['Version'];
 
             if ($plugin_version < COMPATIBLE_PREMIUM_VERSION) {
-                $message = __( 'Please update WP Ultimate Recipe Premium to the latest compatible version.', 'wp-ultimate-recipe' );
+                $message = __( 'Please update WP Ultimate Recipe Premium to at least version ', $this->pluginName ) . COMPATIBLE_PREMIUM_VERSION;
             }
         }
 
@@ -93,19 +116,12 @@ class WPUltimateRecipe {
         }
 
     }
-    
-    /*
-     * Generate settings & addons pages
-     */
-    public function menu_addons() {
-        add_submenu_page( 'edit.php?post_type=recipe', __( 'Recipe Settings', $this->pluginName ), __( 'Settings', $this->pluginName ), 'manage_options', 'wpurp_settings', array( $this, 'admin_menu_settings' ) );
-        add_submenu_page( 'edit.php?post_type=recipe', __( 'WPURP Addons', $this->pluginName  ), __( 'Addons', $this->pluginName ), 'manage_options', 'wpurp_addons', array( $this, 'admin_menu_addons' ) );
-    }
 
     /*
      * Load all available addons - Just duplicated this because I didn't feel like thinking. Sorry. - Brecht
      */
-    public function load_installed_addons() {
+    public function load_installed_addons()
+    {
 
         $addons_dir = WP_PLUGIN_DIR . '/' . $this->pluginName . '-premium' . '/addons'; // Such solution. Wow.
 
@@ -123,232 +139,52 @@ class WPUltimateRecipe {
 
         }
     }
-    
-    public function admin_menu_addons() { //TODO Find a better solution, this is just to get it working
-        
-        include( 'available-addons.php');
-        
-        $installed = array();
-        $not_installed = array();
 
-        if( is_array( $this->wpurp_core->installed_addons ) ) {
-            foreach( $available_addons as $k => $v ){
-                if( array_key_exists( $k, $this->wpurp_core->installed_addons ) ) {
-                    $installed[$k] = $v; 
-                } else {
-                    $not_installed[$k] = $v; 
-                }
-            }
-        } else {
-            $not_installed = $available_addons;
-        }
-        
-        return $this->display_addons_page( $installed, $not_installed );
-        
-    }
-    
-    public function display_addons_page( $installed, $not_installed ) {
-
-        $output =  '<div class="wrap">
-                    <div id="icon-plugins" class="icon32"></div>
-                    <h2>WP Ultimate Recipe ' . __( 'Addons', $this->pluginName ) . '</h2>
-                    <p>' . __( 'To install new addons, visit the download link for instructions.', $this->pluginName ) . '</p>
-                    <table class="wp-list-table widefat plugins" cellspacing="0">
-                        <thead>
-                        <tr>
-                            <th scope="col" id="name" class="manage-column column-name">
-                                Addon
-                            </th>
-                            <th scope="col" id="description" class="manage-column column-description">
-                                Description
-                            </th>
-                            <th></th>
-                        </tr>
-                        </thead>
-
-                        <tbody id="the-list">';
-        
-        foreach( $installed as $k => $v ) {
-        
-            $output .=          '<tr id="' . $k . '" class="active">
-                                    <td class="plugin-title">
-                                        <strong>' . $v['name'] . '</strong>
-                                        <div class="row-actions-visible">
-                                        <span class="activate">
-                                    </td>
-                                    <td class="column-description desc">
-                                        <div class="plugin-description">
-                                            <p>' . $v['desc'] . '</p>
-                                        </div>
-                                    <td>
-                                       <p>' . __( 'Installed', $this->pluginName  ) . '</p> 
-                                    </td>
-                                </tr>';
-        
-        }
-        
-        foreach( $not_installed as $k => $v ) {
-        
-            $output .=          '<tr id="' . $k . '" class="inactive">
-                                    <td class="plugin-title">
-                                        <strong>' . $v['name'] . '</strong>
-                                        <div class="row-actions-visible">
-                                        <span class="activate">
-                                    </td>
-                                    <td class="column-description desc">
-                                        <div class="plugin-description">
-                                            <p>' . $v['desc'] . '</p>
-                                        </div>
-                                    </td>
-                                    <td>';
-            
-                                    if( $v['available'] ) {
-                                        $output .= '<a href="http://www.wpultimaterecipeplugin.com/#premium" target="_blank">' . __( 'Download!', $this->pluginName ) . '</a>';
-                                    } else {
-                                        $output .= 'Coming soon';
-                                    }
-            
-        $output .=                 '
-                                </tr>';
-        
-        }
-        
-        $output .=      '</tbody>
-                    </table>
-                    </div>';
-        
-        echo $output;
-        
-    }
-    
     /*
-     * Plugin settings functions
+     * WP Ultimate Recipe Settings page
      */
-    public function admin_menu_settings()
+
+    public function wpurp_admin_menu()
     {
-        if (!current_user_can('manage_options')) {
-            wp_die('You do not have sufficient permissions to access this page.');
-        }
+        require_once('helper/admin_menu_helper.php');
+        require_once('template/admin.php');
 
-        include($this->pluginDir . '/template/recipe_menu.php');
+        new VP_Option(array(
+            'is_dev_mode'           => false,
+            'option_key'            => 'wpurp_option',
+            'page_slug'             => 'wpurp_admin',
+            'template'              => $admin_menu,
+            'menu_page'             => 'edit.php?post_type=recipe',
+            'use_auto_group_naming' => true,
+            'use_exim_menu'         => true,
+            'minimum_role'          => 'manage_options',
+            'layout'                => 'fluid',
+            'page_title'            => __( 'Admin', $this->pluginName ),
+            'menu_label'            => __( 'Admin', $this->pluginName ),
+        ));
+
     }
 
-    public function admin_menu_settings_text($args) {
+    public function wpurp_shortcodegenerator()
+    {
+        require_once('template/shortcode_generator.php');
 
-        $val = get_option($args[0], $args[2]);
-
-        $html = '<input type="text" id="'.$args[0].'" name="'.$args[0].'" value="'.$val.'" />';
-        $html .= '<label for="'.$args[0].'"> '  . $args[1] . '</label>';
-
-        echo $html;
+        new VP_ShortcodeGenerator(array(
+            'name'           => 'wpurp_shortcode_generator',
+            'template'       => $shortcode_generator,
+            'modal_title'    => 'WP Ultimate Recipe ' . __( 'Shortcodes', $this->pluginName ),
+            'button_title'   => 'WP Ultimate Recipe',
+            'types'          => array( 'post', 'page' ),
+            'main_image'     => $this->pluginUrl . '/img/icon_20.png',
+            'sprite_image'   => $this->pluginUrl . '/img/icon_sprite.png',
+        ));
     }
 
-    public function admin_menu_settings_checkbox($args) {
+    public function option( $name, $default = null )
+    {
+        $option = vp_option( "wpurp_option." . $name );
 
-        $default = isset($args[2]) ? $args[2] : 0;
-
-        $html = '<input type="checkbox" id="'.$args[0].'" name="'.$args[0].'" value="1" ' . checked(1, get_option($args[0], $default), false) . '/>';
-        $html .= '<label for="'.$args[0].'"> '  . $args[1] . '</label>';
-
-        echo $html;
-    }
-    
-    public function admin_menu_settings_select($args) {
-
-        $default = isset($args[2]) ? $args[2] : 0;
-
-        $html = '<select id="'.$args[0].'" name="'.$args[0].'">';
-        foreach( $args[3] as $key => $opt ) {
-            if( !is_null(get_option( $args[0] )) && $key == get_option( $args[0] ) ) {
-                $selected = 'selected="selected"'; 
-            } elseif( is_null(get_option( $args[0] )) && $key == $default ) {
-                $selected = 'selected="selected"';
-            } else {
-                $selected = '';
-            }
-            $html .= '<option value="' . $key . '" ' . $selected . '>'.$opt.'</option>';  
-        }
-        $html .= '</select>';
-        $html .= '<label for="'.$args[0].'"> '  . $args[1] . '</label>';
-
-        echo $html;
-    }
-    
-    public function admin_menu_settings_preview_select($args) {
-
-        $default = isset($args[2]) ? $args[2] : 0;
-        $pluginUrl = isset($args[6]) ? $args[6] : $this->pluginUrl;
-
-        if( get_option( $args[0] ) ) {
-            $value = get_option( $args[0] );
-        } else {
-            $value = $default;
-        }
-        
-        if( $args[5] ) {
-            $preview = $args[5] . '-' . $value;
-        } else {
-            $preview = $value;
-        }
-        
-        $img = $pluginUrl . '/addons/' . $args[4] . '/img/previews/' . $preview . '.jpg';
-
-        $html = '<select class="wpurp-preview-select" id="'.$args[0].'" name="'.$args[0].'">';
-        foreach( $args[3] as $key => $opt ) {
-            if( $key == $value ) { 
-                $selected = 'selected="selected"'; 
-            } else {
-                $selected = '';
-            }
-            $html .= '<option value="' . $key . '" ' . $selected . '>'.$opt.'</option>';  
-        }
-        $html .= '</select>';
-        $html .= '<label for="'.$args[0].'"> '  . $args[1] . '</label>';
-        $html .= '<div class="wpurp-preview-img preview-' . $args[0] . '"><img src="' . $img . '" alt="' . $preview . '"></div>';
-
-        echo $html;
-    }
-    
-    public function admin_menu_settings_colorpicker($args) {
-
-        $default = isset($args[2]) ? $args[2] : '#ffffff';
-        
-        if( get_option( $args[0] ) ) {
-            $value = get_option( $args[0] );
-        } else {
-            $value = $default;
-        }
-
-        $html = '<input type="text" class="wpurp-colorpicker" id="'.$args[0].'" name="'.$args[0].'" value="' . $value . '"/>';
-        $html .= '<label for="'.$args[0].'"> '  . $args[1] . '</label>';
-
-        echo $html;
-    }
-    
-    //Note - individual addons should enqueue media upload script if using this field
-    public function admin_menu_settings_upload($args) {
-
-        $default = isset($args[2]) ? $args[2] : '';
-        
-        if( get_option( $args[0] ) ) {
-            $value = get_option( $args[0] );
-            $hideadd = ' wpurp-hide';
-            $hideremove = '';
-        } else {
-            $value = $default;
-            $hideadd = '';
-            $hideremove = ' wpurp-hide';
-        }
-        
-        $image = wp_get_attachment_image_src( get_option( 'wpurp_custom_template_background_image' ), 'full-size' );
-        $image = $image[0];
-        
-        $html .= '<input name="' . $args[0] . '" class="' . $args[0] . '_image" type="hidden" value="' . $value . '" />';
-        $html .= '<input class="wpurp-file-upload ' . $args[0] . '_add_image button button' . $hideadd . '" type="button" value="' . __( 'Upload Image', $this->pluginName ).'" />';
-        $html .= '<input class="wpurp-file-remove ' . $args[0] . '_remove_image button' . $hideremove . '" type="button" value="' . __('Remove Image', $this->pluginName ) . '" />';
-        $html.= '<br /><img src="' . $image . '" class="' . $args[0] . '" style="max-width: 150px; height: auto;" />';
-
-        echo $html;
+        return is_null($option) ? $default : $option;
     }
     
     /*
@@ -529,4 +365,5 @@ class WPUltimateRecipe {
 
 }
 
+require_once('lib/vafpress/bootstrap.php');
 $wpurp = new WPUltimateRecipe();
