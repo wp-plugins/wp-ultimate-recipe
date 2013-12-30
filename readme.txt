@@ -34,6 +34,7 @@ We also have a [premium version](http://www.wpultimaterecipeplugin.com/#premium)
 *   Create **custom tags** for your recipes
 *   Advanced **recipe index** features
 *   Nice **recipe grid** to show and filter your recipes
+*   **Import ReciPress** recipes
 
 Feel free to contact me if any features are missing.
 You can find more information at [WPUltimateRecipePlugin.com](http://www.wpultimaterecipeplugin.com/)
@@ -57,6 +58,10 @@ You can find more information at [WPUltimateRecipePlugin.com](http://www.wpultim
 2. Manage everything about your recipes in one place
 
 == Changelog ==
+
+= 0.0.22 =
+* Use default WP categories and tags to organize your recipes
+* Added "Passive Time"
 
 = 0.0.21 =
 * New admin settings page
@@ -134,6 +139,9 @@ You can find more information at [WPUltimateRecipePlugin.com](http://www.wpultim
 * Very first version of this plugin
 
 == Upgrade notice ==
+
+= 0.0.22 =
+Upgrade for some new settings
 
 = 0.0.21 =
 Upgrade for a new fancy admin page

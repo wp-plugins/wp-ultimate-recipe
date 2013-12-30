@@ -36,7 +36,7 @@ class WPURP_Core extends WPUltimateRecipe {
         add_filter( 'get_the_excerpt', array( $this, 'recipes_get_the_excerpt' ), 10 );
         add_filter( 'post_class', array( $this, 'recipes_post_class' ) ); // Add post and type-post classes
         add_filter( 'post_thumbnail_html', array( $this, 'recipes_thumbnail' ), 10 );
-
+        add_filter( 'pre_get_posts', array( $this, 'query_recipes' ), 10 );
 
         // Shortcodes
         add_shortcode("ultimate-recipe", array( $this, 'recipes_shortcode' ));
@@ -166,6 +166,11 @@ class WPURP_Core extends WPUltimateRecipe {
         $name = __( 'Recipes', $this->pluginName );
         $singular = __( 'Recipe', $this->pluginName );
 
+        $taxonomies = array( '' );
+        if($this->option('recipe_categories_tags', '0') == '1') {
+            $taxonomies = array( 'category', 'post_tag' );
+        }
+
         register_post_type( 'recipe',
             array(
                'labels' => array(
@@ -186,7 +191,7 @@ class WPURP_Core extends WPUltimateRecipe {
                 'public' => true,
                 'menu_position' => 5,
                 'supports' => array( 'title', 'thumbnail', 'comments', 'excerpt' ),
-                'taxonomies' => array( '' ),
+                'taxonomies' => $taxonomies,
                 'menu_icon' =>  $this->pluginUrl . '/img/icon_16.png',
                 'has_archive' => true,
                 'rewrite' => array(
@@ -194,7 +199,22 @@ class WPURP_Core extends WPUltimateRecipe {
                 )
             ));
     }
-    
+
+    function query_recipes($query) {
+        if($this->option('recipe_categories_tags', '0') == '1')
+        {
+            if(is_category() || is_tag()) {
+                $post_type = get_query_var('post_type');
+                if($post_type)
+                    $post_type = $post_type;
+                else
+                    $post_type = array('post','recipe');
+                $query->set('post_type',$post_type);
+                return $query;
+            }
+        }
+    }
+
     public function recipes_admin_init()
     {
         add_meta_box(

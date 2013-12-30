@@ -47,6 +47,13 @@ $admin_menu = array(
                         ),
                         array(
                             'type' => 'toggle',
+                            'name' => 'recipe_categories_tags',
+                            'label' => __('Use Categories and Tags', $this->pluginName),
+                            'description' => __( 'Use the default WP Categories and Tags to organize your recipes.', $this->pluginName ),
+                            'default' => '0',
+                        ),
+                        array(
+                            'type' => 'toggle',
                             'name' => 'recipe_linkback',
                             'label' => __('Link to plugin', $this->pluginName),
                             'description' => __( 'Show a link to the plugin website as a little thank you.', $this->pluginName ),
@@ -458,10 +465,22 @@ $admin_menu = array(
             'controls' => array(
                 array(
                     'type' => 'notebox',
-                    'name' => 'export_coming_soon',
-                    'label' => __('Coming Soon', $this->pluginName),
-                    'description' => __('This feature is coming soon for ', $this->pluginName) . ' <a href="http://www.wpultimaterecipeplugin.com/premium/" target="_blank">WP Ultimate Recipe Premium</a></strong>.',
-                    'status' => 'info',
+                    'name' => 'user_menus_premium_not_installed',
+                    'label' => 'WP Ultimate Recipe Premium',
+                    'description' => __('These features are only available in ', $this->pluginName) . ' <a href="http://www.wpultimaterecipeplugin.com/premium/" target="_blank">WP Ultimate Recipe Premium</a></strong>.',
+                    'status' => 'warning',
+                    'dependency' => array(
+                        'field' => '',
+                        'function' => 'wpurp_admin_premium_not_installed',
+                    ),
+                ),
+                array(
+                    'type' => 'html',
+                    'name' => 'import_recipress',
+                    'binding' => array(
+                        'field'    => '',
+                        'function' => 'wpurp_admin_import_recipress',
+                    ),
                 ),
             ),
         ),

@@ -45,16 +45,23 @@ foreach( $fields as $field)
         </td>
     </tr>
     <tr>
-        <td class="recipe-general-form-label"><label for="recipe_prep_time"><?php _e( 'Prep time', $this->pluginName ) ?></label></td>
+        <td class="recipe-general-form-label"><label for="recipe_prep_time"><?php _e( 'Prep Time', $this->pluginName ) ?></label></td>
         <td class="recipe-general-form-field">
             <input type="number" name="recipe_prep_time" id="recipe_prep_time" value="<?php echo $prep_time; ?>" />
             <span class="recipe-general-form-notes"> <?php _e( 'minutes', $this->pluginName ) ?></span>
         </td>
     </tr>
     <tr>
-        <td class="recipe-general-form-label"><label for="recipe_cook_time"><?php _e( 'Cook time', $this->pluginName ) ?></label></td>
+        <td class="recipe-general-form-label"><label for="recipe_cook_time"><?php _e( 'Cook Time', $this->pluginName ) ?></label></td>
         <td class="recipe-general-form-field">
             <input type="number" name="recipe_cook_time" id="recipe_cook_time" value="<?php echo $cook_time; ?>" />
+            <span class="recipe-general-form-notes"> <?php _e( 'minutes', $this->pluginName ) ?></span>
+        </td>
+    </tr>
+    <tr>
+        <td class="recipe-general-form-label"><label for="recipe_passive_time"><?php _e( 'Passive Time', $this->pluginName ) ?></label></td>
+        <td class="recipe-general-form-field">
+            <input type="number" name="recipe_passive_time" id="recipe_passive_time" value="<?php echo $passive_time; ?>" />
             <span class="recipe-general-form-notes"> <?php _e( 'minutes', $this->pluginName ) ?></span>
         </td>
     </tr>

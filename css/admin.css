@@ -38,7 +38,7 @@
     width: 100%;
 }
 
-#recipe_meta_box #recipe_servings, #recipe_meta_box #recipe_prep_time, #recipe_meta_box #recipe_cook_time {
+#recipe_meta_box #recipe_servings, #recipe_meta_box #recipe_prep_time, #recipe_meta_box #recipe_cook_time, #recipe_meta_box #recipe_passive_time {
     width: 50px;
 }
 

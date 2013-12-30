@@ -62,6 +62,7 @@
                     <?php if($recipe['recipe_servings'][0] != '') { ?><td><?php _e( 'Servings', $this->pluginName ); ?></td><?php } ?>
                     <?php if($recipe['recipe_prep_time'][0] != '') { ?><td><?php _e('Prep Time', $this->pluginName ); ?></td><?php } ?>
                     <?php if($recipe['recipe_cook_time'][0] != '') { ?><td><?php _e('Cook Time', $this->pluginName ); ?></td><?php } ?>
+                    <?php if($recipe['recipe_passive_time'][0] != '') { ?><td><?php _e('Passive Time', $this->pluginName ); ?></td><?php } ?>
                 </tr>
                 </thead>
                 <tbody>
@@ -69,6 +70,7 @@
                     <?php if($recipe['recipe_servings'][0] != '') { ?><td itemprop="recipeYield"><span class="recipe-information-servings"><?php echo $recipe['recipe_servings'][0]; ?></span><span class="recipe-information-servings-type"><?php echo $recipe['recipe_servings_type'][0]; ?></span></td><?php } ?>
                     <?php if($recipe['recipe_prep_time'][0] != '') { ?><td><meta itemprop="prepTime" content="PT<?php echo $recipe['recipe_prep_time'][0];?>M"><?php echo $recipe['recipe_prep_time'][0]; ?><span class="recipe-information-time-unit"><?php _e( 'minutes', $this->pluginName ); ?></span></td><?php } ?>
                     <?php if($recipe['recipe_cook_time'][0] != '') { ?><td><meta itemprop="cookTime" content="PT<?php echo $recipe['recipe_cook_time'][0];?>M"><?php echo $recipe['recipe_cook_time'][0]; ?><span class="recipe-information-time-unit"><?php _e( 'minutes', $this->pluginName ); ?></span></td><?php } ?>
+                    <?php if($recipe['recipe_passive_time'][0] != '') { ?><td><?php echo $recipe['recipe_passive_time'][0]; ?><span class="recipe-information-time-unit"><?php _e( 'minutes', $this->pluginName ); ?></span></td><?php } ?>
                 </tr>
                 </tbody>
             </table>
