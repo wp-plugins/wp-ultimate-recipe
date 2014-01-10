@@ -47,9 +47,9 @@ $admin_menu = array(
                         ),
                         array(
                             'type' => 'toggle',
-                            'name' => 'recipe_categories_tags',
-                            'label' => __('Use Categories and Tags', $this->pluginName),
-                            'description' => __( 'Use the default WP Categories and Tags to organize your recipes.', $this->pluginName ),
+                            'name' => 'recipe_images_clickable',
+                            'label' => __('Clickable Images', $this->pluginName),
+                            'description' => __( 'Best used in combination with a lightbox plugin.', $this->pluginName ),
                             'default' => '0',
                         ),
                         array(
@@ -58,6 +58,76 @@ $admin_menu = array(
                             'label' => __('Link to plugin', $this->pluginName),
                             'description' => __( 'Show a link to the plugin website as a little thank you.', $this->pluginName ),
                             'default' => '1',
+                        ),
+                    ),
+                ),
+                array(
+                    'type' => 'section',
+                    'title' => __('Ingredients', $this->pluginName),
+                    'name' => 'section_ingredients',
+                    'fields' => array(
+                        array(
+                            'type' => 'notebox',
+                            'name' => 'recipe_ingredient_links_premium_not_installed',
+                            'label' => 'WP Ultimate Recipe Premium',
+                            'description' => __('Custom links are only available in ', $this->pluginName) . ' <a href="http://www.wpultimaterecipeplugin.com/premium/" target="_blank">WP Ultimate Recipe Premium</a></strong>.',
+                            'status' => 'warning',
+                            'dependency' => array(
+                                'field' => '',
+                                'function' => 'wpurp_admin_premium_not_installed',
+                            ),
+                        ),
+                        array(
+                            'type' => 'select',
+                            'name' => 'recipe_ingredient_links',
+                            'label' => __('Ingredient Links', $this->pluginName),
+                            'description' => __( 'Links to be used in the ingredient list.', $this->pluginName ),
+                            'items' => array(
+                                array(
+                                    'value' => 'disabled',
+                                    'label' => __('No ingredient links', $this->pluginName),
+                                ),
+                                array(
+                                    'value' => 'archive',
+                                    'label' => __('Only link to ingredient archive page', $this->pluginName),
+                                ),
+                                array(
+                                    'value' => 'archive_custom',
+                                    'label' => __('Custom link if provided, otherwise archive page', $this->pluginName),
+                                ),
+                                array(
+                                    'value' => 'custom',
+                                    'label' => __('Custom links if provided, otherwise no link', $this->pluginName),
+                                ),
+                            ),
+                            'default' => array(
+                                'archive_custom',
+                            ),
+                            'validation' => 'required',
+                        ),
+                        array(
+                            'type' => 'select',
+                            'name' => 'recipe_ingredient_custom_links_target',
+                            'label' => __('Custom Links', $this->pluginName),
+                            'description' => __( 'Custom links can be added on the ', $this->pluginName ) . '<a href="'.admin_url('edit-tags.php?taxonomy=ingredient&post_type=recipe').'" target="_blank">' . __( 'ingredients page', $this->pluginName ) . '</a>.',
+                            'items' => array(
+                                array(
+                                    'value' => '_self',
+                                    'label' => __('Open in the current tab/window', $this->pluginName),
+                                ),
+                                array(
+                                    'value' => '_blank',
+                                    'label' => __('Open in a new tab/window', $this->pluginName),
+                                ),
+                            ),
+                            'default' => array(
+                                '_blank',
+                            ),
+                            'dependency' => array(
+                                'field' => '',
+                                'function' => 'wpurp_admin_premium_installed',
+                            ),
+                            'validation' => 'required',
                         ),
                     ),
                 ),
@@ -283,6 +353,71 @@ $admin_menu = array(
                 ),
             ),
         ),
+//=-=-=-=-=-=-= RECIPE SHARING =-=-=-=-=-=-=
+        array(
+            'title' => __('Recipe Sharing', $this->pluginName),
+            'name' => 'recipe_sharing',
+            'icon' => 'font-awesome:fa-thumbs-o-up',
+            'controls' => array(
+                array(
+                    'type' => 'section',
+                    'title' => __('General', $this->pluginName),
+                    'name' => 'section_general',
+                    'fields' => array(
+                        array(
+                            'type' => 'toggle',
+                            'name' => 'recipe_sharing_enable',
+                            'label' => __('Enable Sharing', $this->pluginName),
+                            'description' => __( 'Show sharing buttons.', $this->pluginName ),
+                            'default' => '1',
+                        ),
+                    ),
+                ),
+                array(
+                    'type' => 'section',
+                    'title' => __('Default text to share', $this->pluginName),
+                    'name' => 'section_recipe_archive_pages',
+                    'fields' => array(
+                        array(
+                            'type' => 'notebox',
+                            'name' => 'recipe_sharing_premium_not_installed',
+                            'label' => 'WP Ultimate Recipe Premium',
+                            'description' => __('These features are only available in ', $this->pluginName) . ' <a href="http://www.wpultimaterecipeplugin.com/premium/" target="_blank">WP Ultimate Recipe Premium</a></strong>.',
+                            'status' => 'warning',
+                            'dependency' => array(
+                                'field' => '',
+                                'function' => 'wpurp_admin_premium_not_installed',
+                            ),
+                        ),
+                        array(
+                            'type' => 'notebox',
+                            'name' => 'recipe_sharing_codes',
+                            'label' => __('Important', $this->pluginName),
+                            'description' => __('Use %title% as a placeholder for the recipe title.', $this->pluginName),
+                            'status' => 'info',
+                            'dependency' => array(
+                                'field' => '',
+                                'function' => 'wpurp_admin_premium_installed',
+                            ),
+                        ),
+                        array(
+                            'type' => 'textbox',
+                            'name' => 'recipe_sharing_twitter',
+                            'label' => __('Twitter', $this->pluginName),
+                            'default' => '%title% - Powered by @WPUltimRecipe',
+                            'validation' => 'required',
+                        ),
+                        array(
+                            'type' => 'textbox',
+                            'name' => 'recipe_sharing_pinterest',
+                            'label' => __('Pinterest', $this->pluginName),
+                            'default' => '%title% - Powered by @ultimaterecipe',
+                            'validation' => 'required',
+                        ),
+                    ),
+                ),
+            ),
+        ),
 //=-=-=-=-=-=-= RECIPE TAGS =-=-=-=-=-=-=
         array(
             'title' => __('Recipe Tags', $this->pluginName),
@@ -290,11 +425,153 @@ $admin_menu = array(
             'icon' => 'font-awesome:fa-tags',
             'controls' => array(
                 array(
-                    'type' => 'notebox',
-                    'name' => 'recipe_tags_notebox',
-                    'label' => __('Manage Tags', $this->pluginName),
-                    'description' => '<a href="'.admin_url('edit.php?post_type=recipe&page=wpurp_taxonomies').'" target="_blank">' . __('Click here to manage the recipe tags.', $this->pluginName). '</a>',
-                    'status' => 'info',
+                    'type' => 'section',
+                    'title' => __('Custom Recipe Tags', $this->pluginName),
+                    'name' => 'section_recipe_tags_custom',
+                    'fields' => array(
+                        array(
+                            'type' => 'html',
+                            'name' => 'recipe_tags_manage_custom',
+                            'binding' => array(
+                                'field'    => '',
+                                'function' => 'wpurp_admin_manage_tags',
+                            ),
+                        ),
+                    ),
+                ),
+                array(
+                    'type' => 'section',
+                    'title' => __('WordPress Categories & Tags', $this->pluginName),
+                    'name' => 'section_recipe_tags_wordpress',
+                    'fields' => array(
+                        array(
+                            'type' => 'toggle',
+                            'name' => 'recipe_tags_use_wp_categories',
+                            'label' => __('Use Categories and Tags', $this->pluginName),
+                            'description' => __( 'Use the default WP Categories and Tags to organize your recipes.', $this->pluginName ),
+                            'default' => '0',
+                        ),
+                        array(
+                            'type' => 'toggle',
+                            'name' => 'recipe_tags_show_in_archives',
+                            'label' => __('Show Recipes in Archives', $this->pluginName),
+                            'description' => __( 'Show recipes in the WP Categories and Tags archives.', $this->pluginName ),
+                            'default' => '1',
+                        ),
+                    ),
+                ),
+                array(
+                    'type' => 'section',
+                    'title' => __('Advanced', $this->pluginName),
+                    'name' => 'section_recipe_tags_advanced',
+                    'fields' => array(
+                        array(
+                            'type' => 'notebox',
+                            'name' => 'recipe_tags_premium_not_installed',
+                            'label' => 'WP Ultimate Recipe Premium',
+                            'description' => __('These features are only available in ', $this->pluginName) . ' <a href="http://www.wpultimaterecipeplugin.com/premium/" target="_blank">WP Ultimate Recipe Premium</a></strong>.',
+                            'status' => 'warning',
+                            'dependency' => array(
+                                'field' => '',
+                                'function' => 'wpurp_admin_premium_not_installed',
+                            ),
+                        ),
+                        array(
+                            'type' => 'notebox',
+                            'name' => 'recipe_tags_show_in_recipe_info',
+                            'label' => __('Important', $this->pluginName),
+                            'description' => __('Categories will only show up as tags in the recipe if they have a parent category. For example: a "Courses" parent category with "Main Dish" and "Dessert" as child categories assigned to your recipes.', $this->pluginName),
+                            'status' => 'info',
+                            'dependency' => array(
+                                'field' => '',
+                                'function' => 'wpurp_admin_premium_installed',
+                            ),
+                        ),
+                        array(
+                            'type' => 'toggle',
+                            'name' => 'recipe_tags_show_in_recipe',
+                            'label' => __('Show Categories in Recipe', $this->pluginName),
+                            'description' => __( 'Use WP categories as if they are tags for their parent category.', $this->pluginName ),
+                            'default' => '0',
+                        ),
+                        array(
+                            'type' => 'toggle',
+                            'name' => 'recipe_tags_user_submissions_categories',
+                            'label' => __('User Submitted Categories', $this->pluginName),
+                            'description' => __( 'Allow users to assign categories when submitting recipes.', $this->pluginName ),
+                            'default' => '0',
+                        ),
+                        array(
+                            'type' => 'toggle',
+                            'name' => 'recipe_tags_user_submissions_tags',
+                            'label' => __('User Submitted Tags', $this->pluginName),
+                            'description' => __( 'Allow users to assign tags when submitting recipes.', $this->pluginName ),
+                            'default' => '0',
+                        ),
+                        array(
+                            'type' => 'toggle',
+                            'name' => 'recipe_tags_filter_categories',
+                            'label' => __('Show Categories Filter', $this->pluginName),
+                            'description' => __( 'Users can see the categories when filtering.', $this->pluginName ),
+                            'default' => '0',
+                        ),
+                        array(
+                            'type' => 'toggle',
+                            'name' => 'recipe_tags_filter_tags',
+                            'label' => __('Show Tags Filter', $this->pluginName),
+                            'description' => __( 'Users can see the tags when filtering.', $this->pluginName ),
+                            'default' => '0',
+                        ),
+                    ),
+                ),
+            ),
+        ),
+//=-=-=-=-=-=-= USER RATINGS =-=-=-=-=-=-=
+        array(
+            'title' => __('User Ratings', $this->pluginName),
+            'name' => 'user_ratings',
+            'icon' => 'font-awesome:fa-star-half-o',
+            'controls' => array(
+                array(
+                    'type' => 'section',
+                    'title' => __('General', $this->pluginName),
+                    'name' => 'section_user_ratings_general',
+                    'fields' => array(
+                        array(
+                            'type' => 'notebox',
+                            'name' => 'user_ratings_premium_not_installed',
+                            'label' => 'WP Ultimate Recipe Premium',
+                            'description' => __('These features are only available in ', $this->pluginName) . ' <a href="http://www.wpultimaterecipeplugin.com/premium/" target="_blank">WP Ultimate Recipe Premium</a></strong>.',
+                            'status' => 'warning',
+                            'dependency' => array(
+                                'field' => '',
+                                'function' => 'wpurp_admin_premium_not_installed',
+                            ),
+                        ),
+                        array(
+                            'type' => 'select',
+                            'name' => 'user_ratings_enable',
+                            'label' => __('User Ratings', $this->pluginName),
+                            'items' => array(
+                                array(
+                                    'value' => 'disabled',
+                                    'label' => __('Disabled', $this->pluginName),
+                                ),
+                                array(
+                                    'value' => 'users_only',
+                                    'label' => __('Only logged in users can rate recipes', $this->pluginName),
+                                ),
+                                array(
+                                    'value' => 'everyone',
+                                    'label' => __('Everyone can rate recipes', $this->pluginName),
+                                ),
+                            ),
+                            'default' => array(
+                                'everyone',
+                            ),
+                            'validation' => 'required',
+                        ),
+                    ),
                 ),
             ),
         ),
@@ -465,7 +742,7 @@ $admin_menu = array(
             'controls' => array(
                 array(
                     'type' => 'notebox',
-                    'name' => 'user_menus_premium_not_installed',
+                    'name' => 'import_recipes_premium_not_installed',
                     'label' => 'WP Ultimate Recipe Premium',
                     'description' => __('These features are only available in ', $this->pluginName) . ' <a href="http://www.wpultimaterecipeplugin.com/premium/" target="_blank">WP Ultimate Recipe Premium</a></strong>.',
                     'status' => 'warning',
@@ -476,7 +753,7 @@ $admin_menu = array(
                 ),
                 array(
                     'type' => 'html',
-                    'name' => 'import_recipress',
+                    'name' => 'import_recipress_recipes',
                     'binding' => array(
                         'field'    => '',
                         'function' => 'wpurp_admin_import_recipress',

@@ -3,8 +3,8 @@ jQuery(document).ready(function() {
     /*
      * Do not allow removal of first ingredient/instruction
      */
-    jQuery('#recipe-ingredients tr:first').find('span.ingredients-delete').hide();
-    jQuery('#recipe-instructions tr:first').find('span.instructions-delete').hide();
+    jQuery('#recipe-ingredients tr.ingredient:first').find('span.ingredients-delete').hide();
+    jQuery('#recipe-instructions tr.instruction:first').find('span.instructions-delete').hide();
     
 
     /*
@@ -50,6 +50,137 @@ jQuery(document).ready(function() {
         });
     }
 
+
+    /*
+     * Ingredient Groups
+     * */
+
+    calculateIngredientGroups();
+
+    jQuery('#ingredients-add-group').on('click', function(e){
+        e.preventDefault();
+        addRecipeIngredientGroup();
+    });
+
+    var calculateIngredientGroupsTimer;
+    jQuery('.ingredient-group-label').on('input', function() {
+        window.clearTimeout(calculateIngredientGroupsTimer);
+        calculateIngredientGroupsTimer = window.setTimeout(function() {
+            calculateIngredientGroups();
+        }, 500);
+    });
+
+    function addRecipeIngredientGroup()
+    {
+        var last_group = jQuery('#recipe-ingredients tr.ingredient-group-stub')
+        var last_row = jQuery('#recipe-ingredients tr:last')
+        var clone_group = last_group.clone(true);
+
+        clone_group
+            .insertAfter(last_row)
+            .removeClass('ingredient-group-stub')
+            .addClass('ingredient-group');
+
+        jQuery('.ingredient-groups-disabled').hide();
+        jQuery('.ingredient-groups-enabled').show();
+
+        calculateIngredientGroups();
+    }
+
+    jQuery('.ingredient-group-delete').on('click', function(){
+        jQuery(this).parents('tr').remove();
+
+        calculateIngredientGroups();
+    });
+
+    function calculateIngredientGroups()
+    {
+        if(jQuery('.ingredient-group').length == 1) {
+            jQuery('#recipe-ingredients .ingredient .ingredients_group').val('');
+
+            jQuery('.ingredient-groups-disabled').show();
+            jQuery('.ingredient-groups-enabled').hide();
+        } else {
+            jQuery('#recipe-ingredients tr.ingredient').each(function(i, row){
+                var group = jQuery(row).prevAll('.ingredient-group:first').find('.ingredient-group-label').val();
+
+                if(group === undefined) {
+                    group = jQuery('.ingredient-group-first').find('.ingredient-group-label').val();
+                }
+
+                jQuery(row).find('.ingredients_group').val(group);
+            });
+
+            jQuery('.ingredient-groups-disabled').hide();
+            jQuery('.ingredient-groups-enabled').show();
+        }
+    }
+
+    /*
+     * Instruction Groups
+     * */
+
+    calculateInstructionGroups();
+
+    jQuery('#instructions-add-group').on('click', function(e){
+        e.preventDefault();
+        addRecipeInstructionGroup();
+    });
+
+    var calculateInstructionGroupsTimer;
+    jQuery('.instruction-group-label').on('input', function() {
+        window.clearTimeout(calculateInstructionGroupsTimer);
+        calculateInstructionGroupsTimer = window.setTimeout(function() {
+            calculateInstructionGroups();
+        }, 500);
+    });
+
+    function addRecipeInstructionGroup()
+    {
+        var last_group = jQuery('#recipe-instructions tr.instruction-group-stub')
+        var last_row = jQuery('#recipe-instructions tr:last')
+        var clone_group = last_group.clone(true);
+
+        clone_group
+            .insertAfter(last_row)
+            .removeClass('instruction-group-stub')
+            .addClass('instruction-group');
+
+        jQuery('.instruction-groups-disabled').hide();
+        jQuery('.instruction-groups-enabled').show();
+
+        calculateInstructionGroups();
+    }
+
+    jQuery('.instruction-group-delete').on('click', function(){
+        jQuery(this).parents('tr').remove();
+
+        calculateInstructionGroups();
+    });
+
+    function calculateInstructionGroups()
+    {
+        if(jQuery('.instruction-group').length == 1) {
+            jQuery('#recipe-instructions .instruction .instructions_group').val('');
+
+            jQuery('.instruction-groups-disabled').show();
+            jQuery('.instruction-groups-enabled').hide();
+        } else {
+            jQuery('#recipe-instructions tr.instruction').each(function(i, row){
+                var group = jQuery(row).prevAll('.instruction-group:first').find('.instruction-group-label').val();
+
+                if(group === undefined) {
+                    group = jQuery('.instruction-group-first').find('.instruction-group-label').val();
+                }
+
+                jQuery(row).find('.instructions_group').val(group);
+            });
+
+            jQuery('.instruction-groups-disabled').hide();
+            jQuery('.instruction-groups-enabled').show();
+        }
+    }
+
     /*
      * Recipe ingredients
      * */
@@ -61,6 +192,7 @@ jQuery(document).ready(function() {
         handle: '.sort-handle',
         update: function() {
             addRecipeIngredientOnTab();
+            calculateIngredientGroups();
         }
     });
 
@@ -77,9 +209,10 @@ jQuery(document).ready(function() {
     function addRecipeIngredient()
     {
         var last_row = jQuery('#recipe-ingredients tr:last')
-        var clone_row = last_row.clone(true);
+        var last_ingredient = jQuery('#recipe-ingredients tr.ingredient:last')
+        var clone_ingredient = last_ingredient.clone(true);
 
-        clone_row
+        clone_ingredient
             .insertAfter(last_row)
             .find('input').val('')
             .attr('name', function(index, name) {
@@ -99,12 +232,13 @@ jQuery(document).ready(function() {
                 });
             });
 
-        last_row.find('input').attr('placeholder','');
-        clone_row.find('span.ingredients-delete').show();
+        last_ingredient.find('input').attr('placeholder','');
+        clone_ingredient.find('span.ingredients-delete').show();
 
         addRecipeIngredientOnTab();
 
         jQuery('#recipe-ingredients tr:last .ingredients_amount').focus();
+        calculateIngredientGroups();
     }
 
     addRecipeIngredientOnTab();
@@ -133,6 +267,7 @@ jQuery(document).ready(function() {
         handle: '.sort-handle',
         update: function() {
             addRecipeInstructionOnTab();
+            calculateInstructionGroups();
         }
     });
 
@@ -148,7 +283,7 @@ jQuery(document).ready(function() {
 
     function addRecipeInstruction()
     {
-        var new_instruction = jQuery('#recipe-instructions tr:last').clone(true)
+        var new_instruction = jQuery('#recipe-instructions tr.instruction:last').clone(true)
             
         new_instruction
             .insertAfter('#recipe-instructions tr:last')
@@ -184,10 +319,25 @@ jQuery(document).ready(function() {
                 });
             });
 
+        new_instruction
+            .find('.instructions_group')
+            .attr('name', function(index, name) {
+                return name.replace(/(\d+)/, function(match, n) {
+                    return Number(n) + 1;
+                });
+            })
+            .attr('id', function(index, id) {
+                return id.replace(/(\d+)/, function(match, n) {
+                    return Number(n) + 1;
+                });
+            });
+
+
         new_instruction.find('span.instructions-delete').show();
         addRecipeInstructionOnTab();
 
         jQuery('#recipe-instructions tr:last textarea').focus();
+        calculateInstructionGroups();
 
     }
 

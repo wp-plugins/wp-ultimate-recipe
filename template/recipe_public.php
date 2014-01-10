@@ -5,10 +5,20 @@
     $thumb_url = $thumb['0'];
 
     if(!is_null($thumb_url)) {
+        $full_img = wp_get_attachment_image_src( get_post_thumbnail_id($recipe_post->ID), 'full' );
+        $full_img_url = $full_img['0'];
     ?>
     <div class="recipe-header has-image">
         <div class="recipe-header-image">
-            <img itemprop="image" src="<?php echo $thumb_url; ?>" />
+            <?php
+            if($this->option('recipe_images_clickable', '0') == 1) {
+            ?>
+            <a href="<?php echo $full_img_url; ?>" title="<?php echo $recipe_post->post_title;?>">
+                <img itemprop="image" src="<?php echo $thumb_url; ?>" title="<?php echo $recipe_post->post_title;?>" />
+            </a>
+            <?php } else { ?>
+                <img itemprop="image" src="<?php echo $thumb_url; ?>" title="<?php echo $recipe_post->post_title;?>" />
+            <?php } ?>
         </div>
     <?php } else { ?>
     <div class="recipe-header">
@@ -48,13 +58,50 @@
                     {
                         ?>
                         <li>
-                            <span class="recipe-tag-name"><?php echo $options['labels']['singular_name'] ?></span>
+                            <span class="recipe-tag-name"><?php echo $options['labels']['singular_name']; ?></span>
                         <span class="recipe-tags">
                             <?php echo $terms; ?>
                         </span>
                         </li>
                     <?php }
                 }?>
+                <?php
+                if($this->is_premium_addon_active('custom-taxonomies') && $this->option('recipe_tags_show_in_recipe', '0') == '1')
+                {
+                    $categories = wp_get_post_categories( $recipe_post->ID );
+                    $category_groups = array();
+
+                    foreach($categories as $category){
+                        $cat = get_category( $category );
+
+                        if(!is_null($cat->parent) && $cat->parent != 0)
+                        {
+                            $category_groups[$cat->parent][] = $cat;
+                        }
+                    }
+
+                    foreach($category_groups as $group => $categories)
+                    {
+                        $group_category = get_category($group);
+                        $group_name = $group_category->name;
+
+                        $cats = array();
+                        foreach($categories as $cat)
+                        {
+                            $link = get_category_link($cat->cat_ID);
+                            $cats[] = '<a href="'.$link.'">'.$cat->name.'</a>';
+                        }
+                        ?>
+                        <li>
+                            <span class="recipe-tag-name"><?php echo $group_name; ?></span>
+                        <span class="recipe-tags">
+                            <?php echo implode(', ', $cats); ?>
+                        </span>
+                        </li>
+                        <?php
+                    }
+                }
+                ?>
             </ul>
             <table class="recipe-header-extra">
                 <thead>
@@ -86,7 +133,13 @@
     <ul class="recipe-ingredients">
         <?php
         $out = '';
+        $previous_group = '';
         foreach($ingredients as $ingredient) {
+            if(isset($ingredient['group']) && $ingredient['group'] != $previous_group) {
+                $out .= '<li class="group">' . $ingredient['group'] . '</li>';
+                $previous_group = $ingredient['group'];
+            }
+
             $out .= '<li itemprop="ingredients">';
             $out .= '<span class="recipe-ingredient-quantity-unit"><span class="recipe-ingredient-quantity" data-original="'.$ingredient['amount'].'">'.$ingredient['amount'].'</span><span class="recipe-ingredient-unit">'.$ingredient['unit'].'</span></span>';
 
@@ -94,15 +147,29 @@
             $taxonomy = get_term_by('name', $ingredient['ingredient'], 'ingredient');
 
             $out .= '<span class="recipe-ingredient-name">';
-            if (!empty($taxonomy)) {
-                $out .= '<a href="'.get_term_link($taxonomy->slug, 'ingredient').'">';
+
+            $ingredient_links = $this->option('recipe_ingredient_links', 'archive_custom');
+
+            $closing_tag = '';
+            if (!empty($taxonomy) && $ingredient_links != 'disabled') {
+
+                if($ingredient_links == 'archive_custom' || $ingredient_links == 'custom') {
+                    $custom_link = Taxonomy_MetaData::get( 'ingredient', $taxonomy->slug, 'link' );
+                } else {
+                    $custom_link = false;
+                }
+
+                if($custom_link !== false && $custom_link !== '') {
+                    $out .= '<a href="'.$custom_link.'" class="custom-ingredient-link" target="'.$this->option('recipe_ingredient_custom_links_target', '_blank').'">';
+                    $closing_tag = '</a>';
+                } else if($ingredient_links != 'custom') {
+                    $out .= '<a href="'.get_term_link($taxonomy->slug, 'ingredient').'">';
+                    $closing_tag = '</a>';
+                }
             }
 
             $out .= $ingredient['ingredient'];
-
-            if (!empty($taxonomy)) {
-                $out .= '</a>';
-            }
+            $out .= $closing_tag;
             $out .= '</span>';
 
             if($ingredient['notes'] != '') {
@@ -129,12 +196,32 @@
     <ol class="recipe-instructions">
         <?php
         $out = '';
+        $previous_group = '';
         foreach($instructions as $instruction) {
+            if(isset($instruction['group']) && $instruction['group'] != $previous_group) {
+                $out .= '</ol>';
+                $out .= '<div class="instruction-group">' . $instruction['group'] . '</div>';
+                $out .= '<ol class="recipe-instructions">';
+                $previous_group = $instruction['group'];
+            }
+
             $out .= '<li itemprop="recipeInstructions">';
             $out .= '<span class="recipe-instruction">'.$instruction['description'].'</span>';
 
             if($instruction['image'] != '') {
-                $out .= wp_get_attachment_image($instruction['image'], 'large');
+                $thumb = wp_get_attachment_image_src( $instruction['image'], 'large' );
+                $thumb_url = $thumb['0'];
+
+                $full_img = wp_get_attachment_image_src( $instruction['image'], 'full' );
+                $full_img_url = $full_img['0'];
+
+                if($this->option('recipe_images_clickable', '0') == 1) {
+                    $out .= '<a href="' . $full_img_url . '" title="' . $instruction['description'] . '">';
+                    $out .= '<img src="' . $thumb_url . '" />';
+                    $out .= '</a>';
+                } else {
+                    $out .= '<img src="' . $thumb_url . '" />';
+                }
             }
 
             $out .= '</li>';
@@ -149,6 +236,39 @@
     <div class="recipe-notes">
         <?php echo $recipe['recipe_notes'][0]; ?>
     </div>
+    <?php } ?>
+    <?php if( $this->option('recipe_sharing_enable', '1') == '1' ) { ?>
+        <h3 class="recipe-sharing-header"><?php _e( 'Share this Recipe', $this->pluginName ); ?></h3>
+        <?php
+        $share_url = get_permalink( $recipe_post->ID );
+
+        if( $this->is_premium_addon_active('custom-templates')) {
+            $twitter_text = $this->option('recipe_sharing_twitter', '%title% - Powered by @WPUltimRecipe');
+            $pinterest_text = $this->option('recipe_sharing_pinterest', '%title% - Powered by @ultimaterecipe');
+        } else {
+            $twitter_text = '%title% - Powered by @WPUltimRecipe';
+            $pinterest_text = '%title% - Powered by @ultimaterecipe';
+        }
+
+        $twitter_text = str_ireplace('%title%', $recipe_post->post_title, $twitter_text);
+        $pinterest_text = str_ireplace('%title%', $recipe_post->post_title, $pinterest_text);
+        ?>
+        <ul class="recipe-sharing-buttons">
+            <li>
+                <a href="http://twitter.com/share" class="socialite twitter-share" data-text="<?php echo $twitter_text; ?>" data-url="<?php echo $share_url; ?>" data-count="vertical" rel="nofollow" target="_blank"><span class="vhidden">Share on Twitter</span></a>
+            </li><li>
+                <a href="http://www.facebook.com/sharer.php?u=<?php echo $share_url; ?>&t=Socialite.js" class="socialite facebook-like" data-href="<?php echo $share_url; ?>" data-send="false" data-layout="box_count" data-width="60" data-show-faces="false" rel="nofollow" target="_blank"><span class="vhidden">Share on Facebook</span></a>
+            </li><li>
+                <a href="https://plus.google.com/share?url=<?php echo $share_url; ?>" class="socialite googleplus-one" data-size="tall" data-href="<?php echo $share_url; ?>" rel="nofollow" target="_blank"><span class="vhidden">Share on Google+</span></a>
+            </li><?php
+            if(!is_null($thumb_url)) {
+                $img = wp_get_attachment_image_src( get_post_thumbnail_id($recipe_post->ID), 'full' );
+                $pin_img = $img['0'];
+                ?><li>
+                    <a href="//www.pinterest.com/pin/create/button/?url=<?php echo $share_url; ?>&media=<?php echo $pin_img; ?>&description=<?php echo $pinterest_text; ?>" class="socialite pinterest-pinit" data-pin-log="button_pinit_bookmarklet" data-pin-do="buttonPin" data-pin-config="above" data-pin-height="28" rel="nofollow" target="_blank"><span class="vhidden">Share on Pinterest</span></a>
+                </li>
+            <?php } ?>
+        </ul>
     <?php } ?>
     <?php if($this->option('recipe_linkback', '1') == '1') { ?>
         <div class="wpurp-footer"><?php _e( 'Powered by', $this->pluginName ); ?> <a href="http://www.wpultimaterecipeplugin.com" target="_blank">WP Ultimate Recipe</a></div>

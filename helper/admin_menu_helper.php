@@ -36,15 +36,19 @@ function wpurp_admin_premium_installed()
     return is_plugin_active( 'wp-ultimate-recipe-premium/wp-ultimate-recipe-premium.php' );
 }
 
-
 function wpurp_admin_recipe_template_style($style)
 {
     return $style == 'custom' ? true : false;
 }
 
+function wpurp_admin_manage_tags()
+{
+    return '<a href="'.admin_url('edit.php?post_type=recipe&page=wpurp_taxonomies').'" class="button button-primary" target="_blank">'.__('Manage custom recipe tags', 'wp-ultimate-recipe').'</a>';
+}
+
 function wpurp_admin_import_recipress()
 {
-    return '<a href="'.admin_url('edit.php?post_type=recipe&page=wpurp_import').'" class="button" target="_blank">'.__('Import ReciPress recipes', 'wp-ultimate-recipe').'</a>';
+    return '<a href="'.admin_url('edit.php?post_type=recipe&page=wpurp_import').'" class="button button-primary" target="_blank">'.__('Import ReciPress recipes', 'wp-ultimate-recipe').'</a>';
 }
 
 //=-=-=-=-=-=-= SHORTCODE GENERATOR =-=-=-=-=-=-=
@@ -115,6 +119,7 @@ VP_Security::instance()->whitelist_function('wpurp_admin_user_menus_slug_preview
 VP_Security::instance()->whitelist_function('wpurp_admin_premium_not_installed');
 VP_Security::instance()->whitelist_function('wpurp_admin_premium_installed');
 VP_Security::instance()->whitelist_function('wpurp_admin_recipe_template_style');
+VP_Security::instance()->whitelist_function('wpurp_admin_manage_tags');
 VP_Security::instance()->whitelist_function('wpurp_admin_import_recipress');
 
 VP_Security::instance()->whitelist_function('wpurp_shortcode_generator_recipes_by_date');

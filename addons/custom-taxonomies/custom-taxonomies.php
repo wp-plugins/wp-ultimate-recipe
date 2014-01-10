@@ -46,7 +46,7 @@ if( class_exists( 'WPUltimateRecipe' ) ) {
          * Generate settings & addons pages
          */
         public function custom_taxonomies_menu() {
-            add_submenu_page( 'edit.php?post_type=recipe', __( 'Custom Taxonomies', $this->pluginName ), __( 'Manage Tags', $this->pluginName ), 'manage_options', 'wpurp_taxonomies', array( $this, 'custom_taxonomies_page' ) );
+            add_submenu_page( null, __( 'Custom Taxonomies', $this->pluginName ), __( 'Manage Tags', $this->pluginName ), 'manage_options', 'wpurp_taxonomies', array( $this, 'custom_taxonomies_page' ) );
         }
 
         public function custom_taxonomies_settings() {

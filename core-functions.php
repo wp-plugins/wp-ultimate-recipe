@@ -42,6 +42,8 @@ class WPURP_Core extends WPUltimateRecipe {
         add_shortcode("ultimate-recipe", array( $this, 'recipes_shortcode' ));
         add_shortcode("ultimate-recipe-index", array( $this, 'recipes_index_shortcode' ));
 
+        // Other
+        $this->add_link_to_ingredients();
     }
 
 
@@ -53,21 +55,25 @@ class WPURP_Core extends WPUltimateRecipe {
 
     public function public_plugin_styles()
     {
-        wp_register_style( $this->pluginName, $this->pluginUrl . '/css/layout-base.css' );
-        wp_register_style( 'wpurp_default_layout', $this->pluginUrl . '/css/layout-default.css' );
+        wp_register_style( $this->pluginName, $this->pluginUrl . '/css/layout-base.css', '', WPURP_VERSION );
+        wp_register_style( 'wpurp_default_layout', $this->pluginUrl . '/css/layout-default.css', '', WPURP_VERSION );
         wp_enqueue_style( $this->pluginName );
         wp_enqueue_style( 'wpurp_default_layout' );
     }
 
     public function public_plugin_scripts()
     {
-        wp_register_script( $this->pluginName, $this->pluginUrl . '/js/public.js', array('jquery') );
+        wp_register_script( $this->pluginName, $this->pluginUrl . '/js/public.js', array('jquery'), WPURP_VERSION );
         wp_enqueue_script( $this->pluginName );
+        wp_register_script( 'socialite', $this->pluginUrl . '/lib/socialite/socialite.min.js', '', WPURP_VERSION );
+        wp_enqueue_script( 'socialite' );
+        wp_register_script( 'socialite-pinit', $this->pluginUrl . '/lib/socialite/extensions/socialite.pinterest.js', '', WPURP_VERSION );
+        wp_enqueue_script( 'socialite-pinit' );
     }
 
     public function admin_plugin_styles()
     {
-        wp_register_style( $this->pluginName, $this->pluginUrl . '/css/admin.css' );
+        wp_register_style( $this->pluginName, $this->pluginUrl . '/css/admin.css', '', WPURP_VERSION );
         wp_enqueue_style( $this->pluginName );
     }
 
@@ -76,7 +82,7 @@ class WPURP_Core extends WPUltimateRecipe {
         if( 'post-new.php' != $hook && 'post.php' != $hook && isset($_GET['post_type']) && 'recipe' != $_GET['post_type'] ) {
             return;
         } else {
-            wp_register_script( $this->pluginName, $this->pluginUrl . '/js/admin.js', array('jquery', 'jquery-ui-sortable', 'suggest', 'wp-color-picker' ) );
+            wp_register_script( $this->pluginName, $this->pluginUrl . '/js/admin.js', array('jquery', 'jquery-ui-sortable', 'suggest', 'wp-color-picker' ), WPURP_VERSION );
             wp_enqueue_script( $this->pluginName );
             wp_enqueue_style( 'wp-color-picker' ); //TODO not needed on recipe edit pages
         }
@@ -84,8 +90,16 @@ class WPURP_Core extends WPUltimateRecipe {
 
     public function is_premium_addon_active( $addon )
     {
+        if($this->installed_addons[$addon] === true && $this->is_premium_active()) {
+            return true;
+        }
+        return false;
+    }
+
+    public function is_premium_active()
+    {
         include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
-        if($this->installed_addons[$addon] === true && is_plugin_active( $this->premiumName . '/wp-ultimate-recipe-premium.php' )) {
+        if(is_plugin_active( $this->premiumName . '/wp-ultimate-recipe-premium.php' )) {
             return true;
         }
         return false;
@@ -167,7 +181,7 @@ class WPURP_Core extends WPUltimateRecipe {
         $singular = __( 'Recipe', $this->pluginName );
 
         $taxonomies = array( '' );
-        if($this->option('recipe_categories_tags', '0') == '1') {
+        if($this->option('recipe_tags_use_wp_categories', '0') == '1') {
             $taxonomies = array( 'category', 'post_tag' );
         }
 
@@ -201,7 +215,7 @@ class WPURP_Core extends WPUltimateRecipe {
     }
 
     function query_recipes($query) {
-        if($this->option('recipe_categories_tags', '0') == '1')
+        if($this->option('recipe_tags_use_wp_categories', '0') == '1' && $this->option('recipe_tags_show_in_archives', '1') == '1')
         {
             if(is_category() || is_tag()) {
                 $post_type = get_query_var('post_type');
@@ -421,7 +435,7 @@ class WPURP_Core extends WPUltimateRecipe {
             $output = '';
         }
 
-        return $output;
+        return do_shortcode($output);
     }
 
     public function recipes_index_shortcode($options) {
@@ -597,5 +611,53 @@ class WPURP_Core extends WPUltimateRecipe {
                 'hierarchical' => false
             )
         );
+    }
+
+    /*
+     * ================================================================================================================
+     * @INGREDIENTS
+     * ================================================================================================================
+     */
+
+    public function add_link_to_ingredients()
+    {
+        require_once( $this->pluginDir. '/lib/taxonomy-metadata/Taxonomy_MetaData.php' );
+
+        if( $this->is_premium_active() ) {
+
+        new Taxonomy_MetaData( 'ingredient', array(
+            'link' => array(
+                'label'       => __( 'Link', $this->pluginName ),
+                'desc'        => __( 'Send your visitors to a specific link when clicking on an ingredient.', $this->pluginName ),
+                'placeholder' => 'http://www.example.com',
+            ),
+        ) );
+
+        add_filter( 'manage_edit-ingredient_columns', array( $this, 'add_link_column_to_ingredients' ) );
+        add_filter( 'manage_ingredient_custom_column', array( $this, 'add_link_column_content' ), 10, 3 );
+
+        }
+    }
+
+    public function add_link_column_to_ingredients($columns)
+    {
+        $columns['link'] = __( 'Link', $this->pluginName );
+        return $columns;
+    }
+
+    public function add_link_column_content($content, $column_name, $term_id)
+    {
+        $term = get_term($term_id, 'ingredient');
+        switch ($column_name) {
+            case 'link':
+                $custom_link = Taxonomy_MetaData::get( 'ingredient', $term->slug, 'link' );
+                if($custom_link !== false) {
+                    $content = $custom_link;
+                }
+                break;
+            default:
+                break;
+        }
+        return $content;
     }
 }

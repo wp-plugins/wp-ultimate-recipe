@@ -3,7 +3,7 @@
 Plugin Name: WP Ultimate Recipe
 Plugin URI: http://www.wpultimaterecipeplugin.com
 Description: WP Ultimate Recipe is a user friendly plugin for adding recipes to any of your posts and pages.
-Version: 0.0.22
+Version: 1.0.0
 Author: Bootstrapped Ventures
 Author URI: http://www.bootstrappedventures.com
 License: GPLv2
@@ -12,7 +12,8 @@ License: GPLv2
  * Credit to subtlepatterns.com for background patterns.
  */
 
-define( 'COMPATIBLE_PREMIUM_VERSION', '0.0.8' );
+define( 'COMPATIBLE_PREMIUM_VERSION', '1.0.0' );
+define( 'WPURP_VERSION', '1.0.0' );
 
 class WPUltimateRecipe {
     
@@ -38,7 +39,7 @@ class WPUltimateRecipe {
         $this->premiumUrl = WP_PLUGIN_URL . '/' . $this->premiumName;
 
         // Version
-        update_option( $this->pluginName . '_version', '0.0.22' );
+        update_option( $this->pluginName . '_version', WPURP_VERSION );
 
         // Textdomain
         load_plugin_textdomain($this->pluginName, false, basename( dirname( __FILE__ ) ) . '/lang/'  );
@@ -258,7 +259,13 @@ class WPUltimateRecipe {
         }
         
         if( $taxonomy && $term ) {
-            $args[$taxonomy] = $term;
+            if( $taxonomy == 'category' ) {
+                $args['category_name'] = $term;
+            } else if ( $taxonomy == 'post_tag' ) {
+                $args['tag'] = $term;
+            } else {
+                $args[$taxonomy] = $term;
+            }
         }
         
         $query = new WP_Query( $args );

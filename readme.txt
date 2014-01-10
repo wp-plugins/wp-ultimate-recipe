@@ -12,7 +12,7 @@ WP Ultimate Recipe is a user friendly plugin for adding recipes to any of your p
 
 == Description ==
 
-WP Ultimate Recipe is a user friendly plugin for adding recipes to any of your posts and pages.
+[WP Ultimate Recipe](http://www.wpultimaterecipeplugin.com/) is a user friendly plugin for adding recipes to any of your posts and pages.
 
 Some features:
 
@@ -22,9 +22,11 @@ Some features:
 *   Just click the printer icon to **print an image-less version** of the recipe.
 *   This plugin is **fully responsive**. That means that your recipes will look good on any device.
 *   Uses microdata optimised for **Google Recipe search**.
-*   Easily **translatable**, already available in English, Dutch and Swedish
+*   Easily **translatable**, already available in English, Dutch, Swedish and many others
 *   Let visitors **adjust the ingredient quantities** for more or less servings
 *   Add a **recipe index** to any post or page
+*   Structure your ingredients and instructions in **groups** (e.g. icing and cake batter)
+*   Visitors can **share your recipes**
 
 We also have a [premium version](http://www.wpultimaterecipeplugin.com/#premium) which offers the following features:
 
@@ -35,6 +37,9 @@ We also have a [premium version](http://www.wpultimaterecipeplugin.com/#premium)
 *   Advanced **recipe index** features
 *   Nice **recipe grid** to show and filter your recipes
 *   **Import ReciPress** recipes
+*   Custom **ingredient links** (great for affiliate marketing)
+*   Let your **users rate your recipes**
+*   Advanced usage of **WP categories and tags**
 
 Feel free to contact me if any features are missing.
 You can find more information at [WPUltimateRecipePlugin.com](http://www.wpultimaterecipeplugin.com/)
@@ -58,6 +63,12 @@ You can find more information at [WPUltimateRecipePlugin.com](http://www.wpultim
 2. Manage everything about your recipes in one place
 
 == Changelog ==
+
+= 1.0.0 =
+* Structure your ingredients and instructions in groups
+* Make your images clickable (use it in combination with a lightbox plugin!)
+* Disable ingredient links
+* Shareable recipes (Facebook, Twitter, Google Plus & Pinterest)
 
 = 0.0.22 =
 * Use default WP categories and tags to organize your recipes
@@ -139,6 +150,9 @@ You can find more information at [WPUltimateRecipePlugin.com](http://www.wpultim
 * Very first version of this plugin
 
 == Upgrade notice ==
+
+= 1.0.0 =
+Major release, update now!
 
 = 0.0.22 =
 Upgrade for some new settings
