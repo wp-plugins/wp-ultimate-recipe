@@ -3,7 +3,7 @@ Contributors: BrechtVds
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QG7KZMGFU325Y
 Tags: recipe, ingredients, cuisines, food, courses, cook, kitchen, cooking
 Requires at least: 3.3
-Tested up to: 3.8
+Tested up to: 3.8.1
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -63,6 +63,11 @@ You can find more information at [WPUltimateRecipePlugin.com](http://www.wpultim
 2. Manage everything about your recipes in one place
 
 == Changelog ==
+
+= 1.0.1 =
+* Use your recipes just like normal posts
+* Contact support directly from Recipe Admin page
+* General Bug Fixes
 
 = 1.0.0 =
 * Structure your ingredients and instructions in groups
@@ -150,6 +155,9 @@ You can find more information at [WPUltimateRecipePlugin.com](http://www.wpultim
 * Very first version of this plugin
 
 == Upgrade notice ==
+
+= 1.0.1 =
+Upgrade if you want to use your recipes just like posts
 
 = 1.0.0 =
 Major release, update now!

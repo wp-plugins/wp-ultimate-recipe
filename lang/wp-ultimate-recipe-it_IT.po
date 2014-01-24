@@ -1,8 +1,8 @@
-# Translation of WP Ultimate Recipe in Bulgarian
+# Translation of WP Ultimate Recipe in Italian
 # This file is distributed under the same license as the WP Ultimate Recipe package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2014-01-24 15:51:43+0000\n"
+"PO-Revision-Date: 2014-01-24 15:50:23+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -57,555 +57,555 @@ msgstr ""
 
 #: core/template/admin.php:565
 msgid "Disabled"
-msgstr "Изключен"
+msgstr "Disattivo"
 
 #: core/template/admin.php:569
 msgid "Only logged in users can rate recipes"
-msgstr "Само регистрирани потребители могат да гласуват за рецептите"
+msgstr "Solo gli utenti registrati possono votare le ricette"
 
 #: core/template/admin.php:573
 msgid "Everyone can rate recipes"
-msgstr "Всеки може да оценява рецептите"
+msgstr "Tutti possono votare le ricette"
 
 #: wp-ultimate-recipe-premium/addons/recipe-grid/recipe-grid.php:70
 msgid "Categories"
-msgstr "Категории"
+msgstr "Categorie"
 
 #: core/core-functions.php:709 core/core-functions.php:723
 msgid "Link"
-msgstr "Линк"
+msgstr "Link"
 
 #: core/core-functions.php:710
 msgid "Send your visitors to a specific link when clicking on an ingredient."
-msgstr "Изпратете вашите посетители към конкретна връзка, когато кликнат върху дадена съставка."
+msgstr "Indirizza i visitatori ad un link specifico quando cliccano un ingrediente."
 
 #: core/helper/admin_menu_helper.php:46
 msgid "Manage custom recipe tags"
-msgstr "Управление на персонализираните тагове на рецепта."
+msgstr "Gestisce tags ricette personalizzati"
 
 #: core/template/admin.php:58
 msgid "Clickable Images"
-msgstr ""
+msgstr "Immagini cliccabili"
 
 #: core/template/admin.php:59
 msgid "Best used in combination with a lightbox plugin."
-msgstr "Най-добре ще се използва в комбинация с Lightbox плъгин."
+msgstr "Si consiglia di usare un plugin per i lightbox"
 
 #: core/template/admin.php:80
 msgid "Custom links are only available in "
-msgstr "Линкове по избор са възможни само в"
+msgstr "I links personalizzati sono disponibili sono nella "
 
 #: core/template/admin.php:90
 msgid "Ingredient Links"
-msgstr "Линкове към продукти"
+msgstr "Links ingredienti"
 
 #: core/template/admin.php:91
 msgid "Links to be used in the ingredient list."
-msgstr "Линкове, които се използват в списъка на продуктите."
+msgstr "Links da usarsi nella lista ingredienti."
 
 #: core/template/admin.php:95
 msgid "No ingredient links"
-msgstr "Няма линкове към продукти "
+msgstr "Nessun links ingredienti"
 
 #: core/template/admin.php:99
 msgid "Only link to ingredient archive page"
-msgstr "Само линк към архива на страницата с продукти"
+msgstr "Link solo alle pagine archivio ingredienti"
 
 #: core/template/admin.php:103
 msgid "Custom link if provided, otherwise archive page"
-msgstr "Ако е предвидено,персонализиран линк,  в противен случай страница на архив "
+msgstr "Link personalizzati se disponibili, altrimenti pagine archivio"
 
 #: core/template/admin.php:107
 msgid "Custom links if provided, otherwise no link"
-msgstr "Ако е предвидено, персонализиран линк, в противен случай без линк"
+msgstr "Link personalizzati se disponibili, altrimenti nessun link"
 
 #: core/template/admin.php:118
 msgid "Custom Links"
-msgstr "Персонализиран линк"
+msgstr "Link personalizzati"
 
 #: core/template/admin.php:119
 msgid "Custom links can be added on the "
-msgstr "Персонализиран линк може да бъде добавен към"
+msgstr "Link personalizzati possono essere aggiunti nella"
 
 #: core/template/admin.php:119
 msgid "ingredients page"
-msgstr "страница със продукти"
+msgstr "pagine ingredienti"
 
 #: core/template/admin.php:123
 msgid "Open in the current tab/window"
-msgstr "Отвори в текущия таб / прозорец"
+msgstr "Apri nel tab/finestra corrente"
 
 #: core/template/admin.php:127
 msgid "Open in a new tab/window"
-msgstr "Отвори в нов таб / прозорец "
+msgstr "Apri in un nuovo tab/finestra"
 
 #: core/template/admin.php:365
 msgid "Recipe Sharing"
-msgstr "Споделяне на рецепта"
+msgstr "Condivisione Ricetta"
 
 #: core/template/admin.php:377
 msgid "Enable Sharing"
-msgstr "Включи споделянето"
+msgstr "Abilita Condivisione"
 
 #: core/template/admin.php:378
 msgid "Show sharing buttons."
-msgstr "Покажи бутона за споделяне"
+msgstr "Mostra pulsanti condivisione."
 
 #: core/template/admin.php:385
 msgid "Default text to share"
-msgstr "Текст по подразбиране при споделяне"
+msgstr "Testo predefinito da condividere"
 
 #: core/template/admin.php:403
 msgid "Use %title% as a placeholder for the recipe title."
-msgstr "Използвайте %title% като вместо заглавието на рецептата."
+msgstr "Utilizza %title% come segnaposto per il titolo della ricetta."
 
 #: core/template/admin.php:413
 msgid "Twitter"
-msgstr ""
+msgstr "Twitter"
 
 #: core/template/admin.php:420
 msgid "Pinterest"
-msgstr ""
+msgstr "Pinterest"
 
 #: core/template/admin.php:436
 msgid "Custom Recipe Tags"
-msgstr "Персонализирани тагове на рецепта"
+msgstr "Tags ricetta personalizzati"
 
 #: core/template/admin.php:451
 msgid "WordPress Categories & Tags"
-msgstr "WordPress категории и тагове"
+msgstr "Categorie e Tags di Wordpress"
 
 #: core/template/admin.php:464
 msgid "Show Recipes in Archives"
-msgstr "показвай рецептите в архивите"
+msgstr "Mostra Ricette negli Archivi"
 
 #: core/template/admin.php:465
 msgid "Show recipes in the WP Categories and Tags archives."
-msgstr "Показвай рецептите в архивите на WP категории и тагове."
+msgstr "Mostra ricette nelle Categorie e Tags di WP."
 
 #: core/template/admin.php:472
 msgid "Advanced"
-msgstr "Разширен"
+msgstr "Avanzate"
 
 #: core/template/admin.php:490
 msgid "Categories will only show up as tags in the recipe if they have a parent category. For example: a \"Courses\" parent category with \"Main Dish\" and \"Dessert\" as child categories assigned to your recipes."
-msgstr ""
+msgstr "Le Categorie saranno mostrate come tags nella ricetta solo se hanno una categoria hgenitore. Per esempio una categoria genitore come \"Piatti\" con \"Portata Principale\" e \"Dessert\" come categorie figlie assegnate alle ricette."
 
 #: core/template/admin.php:500
 msgid "Show Categories in Recipe"
-msgstr "Покажи Категориите в Рецептата"
+msgstr "Mostra Categorie nella Ricetta"
 
 #: core/template/admin.php:501
 msgid "Use WP categories as if they are tags for their parent category."
-msgstr "Използвайте WP категориите , както ако те са тагове за тяхната родителска категория."
+msgstr "Usa le Categorie WP come se fossero Tags per la loro categoria padre."
 
 #: core/template/admin.php:507
 msgid "User Submitted Categories"
-msgstr "Потребителят одобрява категории"
+msgstr "Categorie inviate dagli utenti"
 
 #: core/template/admin.php:508
 msgid "Allow users to assign categories when submitting recipes."
-msgstr "Позволи на потребителите да добавят категории при изпращане на рецепти."
+msgstr "Permetti agli utenti di assegnare una categoria quando inviano le ricette."
 
 #: core/template/admin.php:514
 msgid "User Submitted Tags"
-msgstr "Потребителят одобрява тагове"
+msgstr "Tags inviati dagli utenti"
 
 #: core/template/admin.php:515
 msgid "Allow users to assign tags when submitting recipes."
-msgstr "Позволи на потребителите да добавят тагове при изпращане на рецепти. "
+msgstr "Permetti agli utenti di assegnare tags quando inviano le ricette."
 
 #: core/template/admin.php:521
 msgid "Show Categories Filter"
-msgstr "Покажи филтър на категориите "
+msgstr "Mostra Filtri Categorie"
 
 #: core/template/admin.php:522
 msgid "Users can see the categories when filtering."
-msgstr "Потребителите могат да виждат категориите когато използват филтъра."
+msgstr "Gli utenti possono vedere le categorie quando filtrano."
 
 #: core/template/admin.php:528
 msgid "Show Tags Filter"
-msgstr ""
+msgstr "Mostra Filtri Tags"
 
 #: core/template/admin.php:529
 msgid "Users can see the tags when filtering."
-msgstr ""
+msgstr "Gli utenti possono vedere i tags quando filtrano"
 
 #: core/template/admin.php:538 core/template/admin.php:561
 msgid "User Ratings"
-msgstr ""
+msgstr "Voti Utenti"
 
 #: core/template/recipe_admin.php:92 core/template/recipe_admin.php:110
 #: core/template/recipe_admin.php:124 core/template/recipe_admin.php:179
 #: core/template/recipe_admin.php:196 core/template/recipe_admin.php:212
 msgid "Group"
-msgstr "Група"
+msgstr "Gruppo"
 
 #: core/template/recipe_admin.php:94
 msgid "Main Ingredients"
-msgstr "Основни продукти"
+msgstr "Ingredienti Principali"
 
 #: core/template/recipe_admin.php:94 core/template/recipe_admin.php:180
 msgid "(this label is not shown)"
-msgstr "(този етикет няма да е показан)"
+msgstr "(questa etichetta non è mostrata)"
 
 #: core/template/recipe_admin.php:167
 msgid "Add an ingredient group"
-msgstr "Добави група продукти"
+msgstr "Aggiungi un gruppo ingredienti"
 
 #: core/template/recipe_admin.php:180
 msgid "Main Instructions"
-msgstr "Основни инструкции"
+msgstr "Istruzioni Principali"
 
 #: core/template/recipe_admin.php:284
 msgid "Add an instruction group"
-msgstr ""
+msgstr "Aggiungi un gruppo di istruzioni"
 
 #: core/template/recipe_public.php:244
 #: wp-ultimate-recipe-premium/addons/custom-templates/layouts/compact.php:249
 #: wp-ultimate-recipe-premium/addons/custom-templates/layouts/default.php:249
 #: wp-ultimate-recipe-premium/addons/custom-templates/layouts/modern.php:267
 msgid "Share this Recipe"
-msgstr "Сподели тази рецепта"
+msgstr "Condividi questa Ricetta"
 
 #: wp-ultimate-recipe-premium/addons/recipe-grid/recipe-grid.php:78
 msgid "Tags"
-msgstr "Тагове"
+msgstr "Tags"
 
 #: wp-ultimate-recipe-premium/addons/user-menus/inc/menu-builder.php:59
 #: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:139
 msgid "Category"
-msgstr "Категория"
+msgstr "Categoria"
 
 #: wp-ultimate-recipe-premium/addons/user-ratings/helper/public_rating.php:31
 msgid "Votes"
-msgstr "Гласове"
+msgstr "Voti"
 
 #: core/helper/admin_menu_helper.php:51
 msgid "Import ReciPress recipes"
-msgstr ""
+msgstr "Importa ricette da ReciPress"
 
 #: core/wp-ultimate-recipe.php:109
 msgid "Please update WP Ultimate Recipe Premium to at least version"
-msgstr ""
+msgstr "Per favore aggiora WP Ultimate Recipe Premium all'ultima versione"
 
 #: core/template/admin.php:457
 msgid "Use Categories and Tags"
-msgstr ""
+msgstr "Usa Categorie e Tags"
 
 #: core/template/admin.php:458
 msgid "Use the default WP Categories and Tags to organize your recipes."
-msgstr ""
+msgstr "Utilizza le Categorie e Tags predefinite di WP per organizzare le ricette."
 
 #: core/template/recipe_admin.php:71 core/template/recipe_public.php:115
 #: wp-ultimate-recipe-premium/addons/custom-templates/layouts/compact.php:120
 #: wp-ultimate-recipe-premium/addons/custom-templates/layouts/default.php:120
 #: wp-ultimate-recipe-premium/addons/custom-templates/layouts/modern.php:74
 msgid "Passive Time"
-msgstr ""
+msgstr "Tempo Passivo"
 
 #: wp-ultimate-recipe-premium/addons/import/import.php:52
 msgid "It's a good idea to backup your WP database before using the import feature."
-msgstr ""
+msgstr "E' una buona idea fare un backup del database di VP prima di usare questa funzione di importazione"
 
 #: wp-ultimate-recipe-premium/addons/import/import.php:53
 msgid "recipes are about to be imported to"
-msgstr ""
+msgstr "ricette stanno per essere importate su"
 
 #: wp-ultimate-recipe-premium/addons/import/import.php:53
 msgid "Are you sure you want to do this?"
-msgstr ""
+msgstr "Sei sicuro di volerlo fare?"
 
 #: wp-ultimate-recipe-premium/addons/import/import.php:59
 #: wp-ultimate-recipe-premium/addons/import/import.php:68
 #: wp-ultimate-recipe-premium/addons/import/import.php:77
 msgid "New tag for"
-msgstr ""
+msgstr "Nuovo tag per"
 
 #: wp-ultimate-recipe-premium/addons/import/import.php:62
 #: wp-ultimate-recipe-premium/addons/import/import.php:71
 #: wp-ultimate-recipe-premium/addons/import/import.php:80
 msgid "Select a recipe tag"
-msgstr ""
+msgstr "Seleziona un tag ricetta"
 
 #: wp-ultimate-recipe-premium/addons/import/import.php:86
 msgid "Post categories and tags"
-msgstr ""
+msgstr "Tags e Categorie post"
 
 #: wp-ultimate-recipe-premium/addons/import/import.php:89
 msgid "Don't use these for the recipe"
-msgstr ""
+msgstr "Non usare questo per la ricetta"
 
 #: wp-ultimate-recipe-premium/addons/import/import.php:90
 msgid "Copy categories and tags from the ReciPress post to the new recipe"
-msgstr ""
+msgstr "Copia categorie e tags dai posts ReciPress nella nuova ricetta"
 
 #: wp-ultimate-recipe-premium/addons/import/import.php:95
 msgid "ReciPress posts"
-msgstr ""
+msgstr "posts ReciPress"
 
 #: wp-ultimate-recipe-premium/addons/import/import.php:98
 msgid "Don't change these"
-msgstr ""
+msgstr "Non cambiare queste"
 
 #: wp-ultimate-recipe-premium/addons/import/import.php:99
 msgid "Replace ReciPress [recipe] shortcode with WP Ultimate Recipe shortcode"
-msgstr ""
+msgstr "Sostituisce lo shortcode [recipe] di ReciPress con lo shortcode di WP Ultimate Recipe"
 
 #: wp-ultimate-recipe-premium/addons/import/import.php:100
 msgid "Move to trash (permanent delete if trash is disabled!)"
-msgstr ""
+msgstr "Sposta nel cestino (cancella in modo permanente se il cestino è disattivato!)"
 
 #: wp-ultimate-recipe-premium/addons/import/import.php:123
 msgid "You should activate this plugin:"
-msgstr ""
+msgstr "Dovresti attivare questo plugin:"
 
 #: wp-ultimate-recipe-premium/addons/import/import.php:140
 msgid "You should select a new tag for the imported recipes"
-msgstr ""
+msgstr "Dovresti selezionare un nuovo tag per le ricette importate"
 
 #: core/template/shortcode_generator.php:7
 msgid "Display a random recipe"
-msgstr ""
+msgstr "Mostra una ricetta a caso"
 
 #: core/helper/admin_menu_helper.php:22
 msgid "The user menus archive can be found at"
-msgstr ""
+msgstr "Gli achivi dei menu utenti possono essere trovati su"
 
 #: core/helper/admin_menu_helper.php:16
 msgid "The recipe archive can be found at"
-msgstr ""
+msgstr "Gli archivi delle ricette possono essere trovati su"
 
 #: core/template/admin.php:402 core/template/admin.php:489
 #: core/template/admin.php:612 core/template/admin.php:696
 msgid "Important"
-msgstr "Важно"
+msgstr "Importante"
 
 #: core/template/admin.php:298
 msgid "Custom Style"
-msgstr ""
+msgstr "Stile Personalizzato"
 
 #: core/template/admin.php:311
 msgid "This will be used when no background image is selected."
-msgstr ""
+msgstr "Questo è usato quando nessuna immagine di sfondo è selezionata."
 
 #: core/template/admin.php:305
 msgid "Optional. A color can be used instead."
-msgstr ""
+msgstr "Opzionale. Si può usare un colore in alternativa."
 
 #: core/template/admin.php:594
 msgid "User Submission"
-msgstr ""
+msgstr "Invio Utente"
 
 #: core/template/admin.php:430
 msgid "Recipe Tags"
-msgstr ""
+msgstr "Tags Ricetta"
 
 #: core/template/admin.php:707
 msgid "Enable user menus for"
-msgstr ""
+msgstr "Abilita menu utenti per"
 
 #: core/template/admin.php:646
 msgid "Auto approve submissions from"
-msgstr ""
+msgstr "Approva automaticamente il form di invio"
 
 #: core/template/admin.php:697
 msgid "Use the [wpurp\\_user\\_menus] shortcode to display the front-end form."
-msgstr ""
+msgstr "Usa lo shortcode  [wpurp\\_user\\_menus] per mostrare il form di front-end."
 
 #: core/wp-ultimate-recipe.php:163 core/wp-ultimate-recipe.php:164
 msgid "Admin"
-msgstr ""
+msgstr "Amministrazione"
 
 #: core/wp-ultimate-recipe.php:181
 msgid "Shortcodes"
-msgstr ""
+msgstr "Shorcodes"
 
 #: core/addons/custom-taxonomies/custom-taxonomies.php:49
 #: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:52
 msgid "Manage Tags"
-msgstr ""
+msgstr "Gestisci Tags"
 
 #: core/helper/drip_form.php:3
 msgid "Are you sure you want to dismiss this notice? (Make sure you have saved your changes first!)"
-msgstr ""
+msgstr "Sei sicuro che vuoi nascondere questa notifica? (Accertati di aver salvato le modifiche prima!)"
 
 #: core/helper/drip_form.php:3
 msgid "Hide this message"
-msgstr ""
+msgstr "Nascondi questo messaggio"
 
 #: core/lib/vafpress/bootstrap.php:88 core/lib/vafpress/classes/option.php:357
 #: core/lib/vafpress/classes/option.php:382
 msgid "Successful"
-msgstr ""
+msgstr "Successo"
 
 #: core/lib/vafpress/bootstrap.php:99
 msgid "Unauthorized function"
-msgstr ""
+msgstr "Funzione non autorizzata"
 
 #: core/lib/vafpress/classes/metabox.php:35
 msgid "[Development Mode] "
-msgstr ""
+msgstr "[Modalità Sviluppatore]"
 
 #: core/lib/vafpress/classes/metabox.php:564
 #: core/lib/vafpress/classes/metabox/alchemy.php:493
 msgid "Remove"
-msgstr ""
+msgstr "Rimuovi"
 
 #: core/lib/vafpress/classes/metabox.php:586
 #: core/lib/vafpress/classes/metabox/alchemy.php:515
 msgid "Add More"
-msgstr ""
+msgstr "Aggiungi Altro"
 
 #: core/lib/vafpress/classes/option.php:47
 #: core/lib/vafpress/classes/option.php:48
 msgid "Vafpress Options"
-msgstr ""
+msgstr "Opzioni Vafpress"
 
 #: core/lib/vafpress/classes/option.php:54
 msgid "Option Key is required"
-msgstr ""
+msgstr "La Chiave Opzionale è richiesta"
 
 #: core/lib/vafpress/classes/option.php:56
 msgid "Template Array/File is required"
-msgstr ""
+msgstr "Template Array/File è richiesto"
 
 #: core/lib/vafpress/classes/option.php:58
 msgid "Page Slug is required"
-msgstr ""
+msgstr "Page Slug è richiesto"
 
 #: core/lib/vafpress/classes/option.php:160
 msgid "Development Mode is Active, options' values won't be saved into database."
-msgstr ""
+msgstr "La Modalità Sviluppatore è Attiva, le opzioni non saranno salvate nel database."
 
 #: core/lib/vafpress/classes/option.php:299
 msgid "Can not be empty"
-msgstr ""
+msgstr "Non può essere vuoto"
 
 #: core/lib/vafpress/classes/option.php:324
 msgid "Invalid data"
-msgstr ""
+msgstr "Dato non valido"
 
 #: core/lib/vafpress/classes/option.php:387
 msgid "Unverified Access"
-msgstr ""
+msgstr "Accesso non verificato"
 
 #: core/lib/vafpress/classes/option.php:453
 msgid "Invalid template supplied"
-msgstr ""
+msgstr "Inviato template non valido"
 
 #: core/lib/vafpress/classes/option.php:466
 msgid "Utility"
-msgstr ""
+msgstr "Utility"
 
 #: core/lib/vafpress/classes/option.php:472
 #: core/lib/vafpress/views/option/restore.php:13
 msgid "Restore Default"
-msgstr ""
+msgstr "Ripristina Predefiniti"
 
 #: core/lib/vafpress/classes/option.php:481
 msgid "Export/Import"
-msgstr ""
+msgstr "Esporta/Importa"
 
 #: core/lib/vafpress/classes/shortcodegenerator.php:260
 msgid "Insert"
-msgstr "Постави"
+msgstr "Inserisci"
 
 #: core/lib/vafpress/classes/shortcodegenerator.php:261
 msgid "Cancel"
-msgstr "Отказ"
+msgstr "Cancella"
 
 #: core/lib/vafpress/classes/option/control/set.php:359
 msgid "Saving successful"
-msgstr ""
+msgstr "Salvataggio avvenuto con successo"
 
 #: core/lib/vafpress/classes/option/control/set.php:370
 msgid "Saving failed"
-msgstr ""
+msgstr "Salvataggio NON riuscito"
 
 #: core/lib/vafpress/classes/option/control/set.php:376
 msgid "No changes made"
-msgstr ""
+msgstr "Nessun cambiamento effettuato"
 
 #: core/lib/vafpress/config/messages.php:13
 msgid "Value needs to be Alphabet"
-msgstr ""
+msgstr "Il valore dev'essere alfabetico"
 
 #: core/lib/vafpress/config/messages.php:14
 msgid "Value needs to be Alphanumeric"
-msgstr ""
+msgstr "Il valore dev'essere Alfanumerico"
 
 #: core/lib/vafpress/config/messages.php:15
 msgid "Value needs to be Numeric"
-msgstr ""
+msgstr "Il valore dev'essere Numerico"
 
 #: core/lib/vafpress/config/messages.php:16
 msgid "Value needs to be Valid Email"
-msgstr ""
+msgstr "Il valore dev'essere un indirizzo Email Valido"
 
 #: core/lib/vafpress/config/messages.php:17
 msgid "Value needs to be Valid URL"
-msgstr ""
+msgstr "Il valore dev'essere un URL Valido"
 
 #: core/lib/vafpress/config/messages.php:18
 msgid "Length needs to be less than {0} characters"
-msgstr ""
+msgstr "La lunghezza dev'essere minore di {0} caratteri"
 
 #: core/lib/vafpress/config/messages.php:19
 msgid "Length needs to be more than {0} characters"
-msgstr ""
+msgstr "La lunghezza dev'essere maggiore di {0} caratteri"
 
 #: core/lib/vafpress/config/messages.php:20
 msgid "Select no more than {0} items"
-msgstr ""
+msgstr "Seleziona non più di {0} oggetti"
 
 #: core/lib/vafpress/config/messages.php:21
 msgid "Select at least {0} items"
-msgstr ""
+msgstr "Seleziona almeno {0} oggetti"
 
 #: core/lib/vafpress/config/messages.php:22
 msgid "This is required"
-msgstr "Това е задължително"
+msgstr "Questo è richiesto"
 
 #: core/lib/vafpress/config/messages.php:29
 msgid "Import succeed, option page will be refreshed.."
-msgstr ""
+msgstr "Importazione avvenuta con successo, la pagina sarà ricaricata"
 
 #: core/lib/vafpress/config/messages.php:30
 msgid "Import failed"
-msgstr ""
+msgstr "Importazione fallita"
 
 #: core/lib/vafpress/config/messages.php:31
 msgid "Export succeed, copy the JSON formatted options"
-msgstr ""
+msgstr "Importazione avvenuta con successo, copio le opzioni formattate JSON"
 
 #: core/lib/vafpress/config/messages.php:32
 msgid "Export failed"
-msgstr ""
+msgstr "Esportazione fallita"
 
 #: core/lib/vafpress/config/messages.php:33
 msgid "Restoration succeed, option page will be refreshed.."
-msgstr ""
+msgstr "Restore avvenuto con successo, la pagina sarà ricaricata"
 
 #: core/lib/vafpress/config/messages.php:34
 msgid "Options identical to default"
-msgstr ""
+msgstr "Opzioni identiche al predefinito"
 
 #: core/lib/vafpress/config/messages.php:35
 msgid "Restoration failed"
-msgstr ""
+msgstr "Recupero fallito"
 
 #: core/lib/vafpress/config/messages.php:43
 msgid "Select option(s)"
-msgstr ""
+msgstr "Sleziona opzione(i)"
 
 #: core/lib/vafpress/config/messages.php:45
 msgid "Select an Icon"
-msgstr "Избери икона"
+msgstr "Seleziona un Icona"
 
 #: core/lib/vafpress/views/control/upload.php:5
 msgid "Choose File"
-msgstr "Избери файл"
+msgstr "Seleziona File"
 
 #: core/lib/vafpress/views/option/impexp.php:4
 #: core/lib/vafpress/views/option/impexp.php:14
@@ -613,302 +613,302 @@ msgstr "Избери файл"
 #: wp-ultimate-recipe-premium/addons/import/import.php:51
 #: wp-ultimate-recipe-premium/addons/import/import.php:106
 msgid "Import"
-msgstr "Импорт"
+msgstr "Importa"
 
 #: core/lib/vafpress/views/option/impexp.php:7
 msgid "Import Options"
-msgstr ""
+msgstr "Opzioni Importazione"
 
 #: core/lib/vafpress/views/option/impexp.php:27
 #: core/lib/vafpress/views/option/impexp.php:37
 msgid "Export"
-msgstr "Експорт"
+msgstr "Esporta"
 
 #: core/lib/vafpress/views/option/impexp.php:30
 msgid "Export Options"
-msgstr ""
+msgstr "Opzioni Esportazione"
 
 #: core/lib/vafpress/views/option/restore.php:4
 msgid "Restore Default Options"
-msgstr ""
+msgstr "Ripristina Opzioni Predefinite"
 
 #: core/lib/vafpress/views/option/restore.php:7
 msgid "Restore options to initial default values."
-msgstr ""
+msgstr "Ripristina le opzioni ai valori predefiniti."
 
 #: core/lib/vafpress/views/option/restore.php:14
 msgid "** Please make sure you have already make a backup data of your current settings. Once you click this button, your current settings will be gone."
-msgstr ""
+msgstr "** Per favore accertati di aver già fatto un backup dei dati delle attuali impostazioni. Una volta cliccato questo pulsante le tue impostazioni attuali saranno eliminate."
 
 #: core/lib/vafpress/views/option/set.php:69
 #: core/lib/vafpress/views/option/set.php:84
 msgid "Save Changes"
-msgstr "Запази промените"
+msgstr "Salva Cambiamenti"
 
 #: core/lib/vafpress/views/option/set.php:70
 #: core/lib/vafpress/views/option/set.php:85
 msgid "Saving Now"
-msgstr ""
+msgstr "Salva Ora"
 
 #: core/lib/vafpress/views/option/set.php:93
 msgid "This option panel is built using <a href=\"http://vafpress.com/vafpress-framework\">Vafpress Framework %s</a> powered by <a href=\"http://vafpress.com\">Vafpress</a>"
-msgstr ""
+msgstr "Questo pannello opzionale è realizzato usando <a href=\"http://vafpress.com/vafpress-framework\">Vafpress Framework %s</a> powered by <a href=\"http://vafpress.com\">Vafpress</a>"
 
 #: core/template/admin.php:9
 msgid "Latest News"
-msgstr "Последни новини"
+msgstr "Ultime Notizie"
 
 #: core/template/admin.php:15
 msgid "Changelog"
-msgstr "Преглед на промените"
+msgstr "Changelog"
 
 #: core/template/admin.php:32
 msgid "General Settings"
-msgstr "Основни настройки"
+msgstr "Impostazioni Generali"
 
 #: core/template/admin.php:143
 msgid "Recipe Archive Pages"
-msgstr ""
+msgstr "Pagine Archivio Ricette"
 
 #: core/template/admin.php:149 core/template/shortcode_generator.php:185
 msgid "Display"
-msgstr "Покажи"
+msgstr "Display"
 
 #: core/template/admin.php:153
 msgid "Only the excerpt"
-msgstr ""
+msgstr "Solo il riassunto"
 
 #: core/template/admin.php:157
 msgid "The entire recipe"
-msgstr ""
+msgstr "L'intera ricetta"
 
 #: core/template/admin.php:168
 msgid "Display Thumbnail"
-msgstr ""
+msgstr "Mostra Thumbnail"
 
 #: core/template/admin.php:211 core/template/admin.php:745
 msgid "404 error/page not found?"
-msgstr "404 error/ страницата не е намерена?"
+msgstr "404 error/pagina non trovata?"
 
 #: core/template/admin.php:212 core/template/admin.php:746
 msgid "Try"
-msgstr "опитай"
+msgstr "Prova"
 
 #: core/template/admin.php:212 core/template/admin.php:746
 msgid "flushing your permalinks"
-msgstr ""
+msgstr "svuotare i permalinks"
 
 #: core/template/admin.php:221
 msgid "Recipe Template"
-msgstr ""
+msgstr "Template RIcetta"
 
 #: core/template/admin.php:229 core/template/admin.php:392
 #: core/template/admin.php:479 core/template/admin.php:551
 #: core/template/admin.php:602 core/template/admin.php:686
 #: core/template/admin.php:761
 msgid "These features are only available in "
-msgstr ""
+msgstr "Questa funzione è disponibile solo nella"
 
 #: core/template/admin.php:613
 msgid "Use the [wpurp_submissions] shortcode to display the front-end form."
-msgstr ""
+msgstr "Usa lo shortcode [wpurp_submissions] per mostrare il form di front-end."
 
 #: core/template/admin.php:613 core/template/admin.php:697
 msgid "The shortcode can be added to any page or post."
-msgstr ""
+msgstr "Lo shortcode può essere aggiunto ad ogni pagina o post."
 
 #: core/template/admin.php:623
 msgid "Allow submissions from"
-msgstr ""
+msgstr "Consenti form di invio"
 
 #: core/template/admin.php:627 core/template/admin.php:651
 #: core/template/admin.php:711
 msgid "Nobody"
-msgstr "Никой"
+msgstr "Nessuno"
 
 #: core/template/admin.php:627 core/template/admin.php:711
 msgid "disabled"
-msgstr "изключен"
+msgstr "disattivo"
 
 #: core/template/admin.php:753
 msgid "Import Recipes"
-msgstr "Импортирай Рецепти "
+msgstr "Importa Ricette"
 
 #: core/template/admin.php:787
 msgid "Coming Soon"
-msgstr "Очаквайте скоро"
+msgstr "Presto in Arrivo"
 
 #: core/template/admin.php:788
 msgid "This feature is coming soon for "
-msgstr ""
+msgstr "Questa funzione è presto in arrivo per"
 
 #: core/template/admin.php:780
 msgid "Export Recipes"
-msgstr "Експортирай Рецепти"
+msgstr "Esporta Ricette"
 
 #: core/template/admin.php:795 core/template/admin.php:803
 msgid "FAQ & Support"
-msgstr ""
+msgstr "FAQ & Supporto"
 
 #: core/template/admin.php:802
 msgid "Need more help?"
-msgstr "Нуждаете се от допълнителна помощ?"
+msgstr "Serve altro aiuto?"
 
 #: core/template/shortcode_generator.php:11
 #: core/template/shortcode_generator.php:30
 msgid "Select a recipe to display"
-msgstr "Изберете рецепта за да показване"
+msgstr "Seleziona una ricetta da mostrare"
 
 #: core/template/shortcode_generator.php:11
 msgid "Ordered by date added"
-msgstr "Подредени по дата на добавяне"
+msgstr "Ordina per data di aggiunta"
 
 #: core/template/shortcode_generator.php:30
 msgid "Ordered by title"
-msgstr "Подредени по заглавие"
+msgstr "Ordina per titolo"
 
 #: core/template/shortcode_generator.php:51
 msgid "Recipe Index"
-msgstr "Индекс на рецептите"
+msgstr "Indice Ricette"
 
 #: core/template/shortcode_generator.php:54
 msgid "Basic Recipe Index"
-msgstr "Основен индекс на рецептите "
+msgstr "Indice Ricette Basico"
 
 #: core/template/shortcode_generator.php:60
 msgid "Show headers"
-msgstr ""
+msgstr "Mostra intestazioni"
 
 #: core/template/shortcode_generator.php:71
 msgid "Extended Recipe Index"
-msgstr ""
+msgstr "Estendi Indice Ricette"
 
 #: core/template/shortcode_generator.php:71
 #: core/template/shortcode_generator.php:166
 #: core/template/shortcode_generator.php:170
 #: core/template/shortcode_generator.php:179
 msgid "WP Ultimate Recipe Premium only"
-msgstr ""
+msgstr "versione WP Ultimate Recpie Premium"
 
 #: core/template/shortcode_generator.php:77
 msgid "Group by"
-msgstr ""
+msgstr "Raggruppa per"
 
 #: core/template/shortcode_generator.php:94
 msgid "Limit by"
-msgstr "Ограничен от"
+msgstr "Limita per"
 
 #: core/template/shortcode_generator.php:107
 msgid "Limit by values"
-msgstr "Ограничен от стойности"
+msgstr "Limita per valori"
 
 #: core/template/shortcode_generator.php:124
 #: core/template/shortcode_generator.php:237
 msgid "Date Added"
-msgstr "Дата на добавяне"
+msgstr "Data di aggiunta"
 
 #: core/template/shortcode_generator.php:128
 #: core/template/shortcode_generator.php:241
 msgid "Random"
-msgstr "Произволен"
+msgstr "Casuale"
 
 #: core/template/shortcode_generator.php:138
 #: core/template/shortcode_generator.php:251
 msgid "Sort order"
-msgstr "Ред на сортиране"
+msgstr "Ordinamento"
 
 #: core/template/shortcode_generator.php:142
 #: core/template/shortcode_generator.php:255
 msgid "Ascending"
-msgstr "Възходящ"
+msgstr "Crescente"
 
 #: core/template/shortcode_generator.php:146
 #: core/template/shortcode_generator.php:259
 msgid "Descending"
-msgstr "Низходящ"
+msgstr "Decrescente"
 
 #: core/template/shortcode_generator.php:156
 msgid "Max number of recipes"
-msgstr "Максимален брой рецепти"
+msgstr "Numero massimo di ricette"
 
 #: core/template/shortcode_generator.php:163
 msgid "User Interaction"
-msgstr "Взаимодействие с потребителя"
+msgstr "Interazione Utente"
 
 #: core/template/shortcode_generator.php:166
 msgid "User Submissions form"
-msgstr ""
+msgstr "form Invio Utente"
 
 #: core/template/shortcode_generator.php:170
 msgid "User Menus form"
-msgstr ""
+msgstr "Form Menu Utente"
 
 #: core/template/admin.php:169
 msgid "Thumbnail position depends on the theme you use"
-msgstr ""
+msgstr "La Posizione della Miniatura dipende dal tema che usi"
 
 #: core/template/admin.php:173
 msgid "Never"
-msgstr "Никога"
+msgstr "Mai"
 
 #: core/template/admin.php:177
 msgid "Only on archive pages"
-msgstr "Само на страниците с архиви"
+msgstr "Solo sulle pagine di archivio"
 
 #: core/template/admin.php:181
 msgid "Only on recipe pages"
-msgstr "Само на страниците на рецептата "
+msgstr "Solo sulle pagine delle ricette"
 
 #: core/template/admin.php:185
 msgid "Always"
-msgstr "Винаги"
+msgstr "Sempre"
 
 #: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:67
 msgid "Do you really want to delete this taxonomy?."
-msgstr "Наистина ли искате да изтриете тази таксономия?"
+msgstr "Vuoi veramente cancellare questa tassonomia"
 
 #: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:111
 msgid "Delete"
-msgstr "Изтрий"
+msgstr "Cancella"
 
 #: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:126
 msgid "Do you really want to reset the taxonomies? All custom tags will be deleted."
-msgstr "Наистина ли искате да нулирате таксономиите? Всички потребителски тагове ще бъдат изтрити."
+msgstr "Vuoi veramente resettare le tassonomie? Tutti tags personali saranno cancellati"
 
 #: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:129
 msgid "Reset to defaults"
-msgstr "Върни настройките по подразбиране"
+msgstr "Ripristina impostazioni di base"
 
 #: wp-ultimate-recipe-premium/addons/recipe-grid/recipe-grid.php:108
 #: wp-ultimate-recipe-premium/addons/recipe-grid/recipe-grid.php:112
 msgid "No recipes found."
-msgstr "Няма открити рецепти."
+msgstr "Nessuna ricetta trovata"
 
 #: wp-ultimate-recipe-premium/includes/plugin-updater.php:457
 msgid "The plugin has been updated, but could not be reactivated. Please reactivate it manually."
-msgstr "Плъгина е актуализиран, но не може да се активира отново. Моля активирате ръчно."
+msgstr "Il plugin e' stato aggiornato, ma non puo essere riattivato. Perfavore riattivalo manualmente"
 
 #: wp-ultimate-recipe-premium/includes/plugin-updater.php:458
 msgid "Plugin reactivated successfully. "
-msgstr "Плъгина е реактивиран успешно"
+msgstr "Plugin riativvato con successo."
 
 #: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:205
 msgid "Amount"
-msgstr "Количество"
+msgstr "Quantità"
 
 #: core/core-functions.php:238 core/core-functions.php:642
 #: core/addons/custom-taxonomies/custom-taxonomies.php:227
 #: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:271
 #: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:53
 msgid "New"
-msgstr "Добави"
+msgstr "Nuovo"
 
 #: core/core-functions.php:241 core/core-functions.php:636
 #: core/addons/custom-taxonomies/custom-taxonomies.php:221
 #: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:265
 #: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:56
 msgid "Search"
-msgstr "Търси"
+msgstr "Cerca"
 
 #: core/core-functions.php:242 core/core-functions.php:243
 #: core/core-functions.php:646
@@ -917,43 +917,43 @@ msgstr "Търси"
 #: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:57
 #: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:58
 msgid "No"
-msgstr "Не"
+msgstr "No"
 
 #: core/core-functions.php:242 core/core-functions.php:646
 #: core/addons/custom-taxonomies/custom-taxonomies.php:231
 #: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:275
 #: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:57
 msgid "found."
-msgstr "Намерен"
+msgstr "Trovato."
 
 #: core/core-functions.php:243
 #: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:58
 msgid "found in trash."
-msgstr "Намерен в кошчето"
+msgstr "Trovato nel cestino."
 
 #: core/core-functions.php:244
 #: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:59
 msgid "Parent"
-msgstr "Родител"
+msgstr "Padre"
 
 #: core/core-functions.php:637
 #: core/addons/custom-taxonomies/custom-taxonomies.php:222
 #: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:266
 msgid "Popular"
-msgstr "Популярен"
+msgstr "Popolare"
 
 #: core/core-functions.php:638
 #: core/addons/custom-taxonomies/custom-taxonomies.php:223
 #: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:267
 #: wp-ultimate-recipe-premium/addons/recipe-grid/recipe-grid.php:85
 msgid "All"
-msgstr "Всички"
+msgstr "Tutti/e"
 
 #: core/core-functions.php:640
 #: core/addons/custom-taxonomies/custom-taxonomies.php:225
 #: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:269
 msgid "Update"
-msgstr "Обнови"
+msgstr "Aggiornare"
 
 #: core/core-functions.php:642
 #: core/addons/custom-taxonomies/custom-taxonomies.php:78
@@ -964,65 +964,65 @@ msgstr "Обнови"
 #: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:147
 #: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:271
 msgid "Name"
-msgstr "Име"
+msgstr "Nome"
 
 #: core/core-functions.php:643
 #: core/addons/custom-taxonomies/custom-taxonomies.php:228
 #: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:272
 msgid "Separate"
-msgstr "Раздели"
+msgstr "Dividere"
 
 #: core/core-functions.php:643
 #: core/addons/custom-taxonomies/custom-taxonomies.php:228
 #: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:272
 msgid "with commas"
-msgstr "със запетаи"
+msgstr "Con Apostrofi"
 
 #: core/core-functions.php:644
 #: core/addons/custom-taxonomies/custom-taxonomies.php:229
 #: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:273
 msgid "Add or remove"
-msgstr "Добави или премехни"
+msgstr "Aggiungi o rimuovi"
 
 #: core/core-functions.php:645
 #: core/addons/custom-taxonomies/custom-taxonomies.php:230
 #: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:274
 msgid "Choose from the most used"
-msgstr "Избери от най-използваните"
+msgstr "Scegli dai piu usati"
 
 #: core/addons/custom-taxonomies/custom-taxonomies.php:49
 #: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:52
 msgid "Custom Taxonomies"
-msgstr "Персонализирани Класификации"
+msgstr "Tassonomie personali"
 
 #: core/addons/custom-taxonomies/taxonomies-builder.php:5
 #: wp-ultimate-recipe-premium/addons/custom-taxonomies/taxonomies-builder.php:5
 msgid "Custom Tags"
-msgstr "Персонализирани Етикети"
+msgstr "Tags personali"
 
 #: core/addons/custom-taxonomies/custom-taxonomies.php:53
 #: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:56
 msgid "Current Recipe Tags"
-msgstr "Текущ Етикет на Рецептата"
+msgstr "Tags della ricetta corrente"
 
 #: core/addons/custom-taxonomies/custom-taxonomies.php:54
 #: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:57
 msgid "Add new Recipe Tag"
-msgstr "Добави нов Етикет на Рецептата"
+msgstr "Aggiungi un tag alla ricetta"
 
 #: core/addons/custom-taxonomies/custom-taxonomies.php:72
 #: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:75
 #: wp-ultimate-recipe-premium/addons/user-menus/inc/menu-builder.php:63
 #: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:144
 msgid "Tag"
-msgstr "Етикет"
+msgstr "Tag"
 
 #: core/addons/custom-taxonomies/custom-taxonomies.php:75
 #: core/addons/custom-taxonomies/custom-taxonomies.php:142
 #: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:78
 #: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:156
 msgid "Singular Name"
-msgstr ""
+msgstr "Nome Singolare"
 
 #: core/addons/custom-taxonomies/custom-taxonomies.php:81
 #: core/addons/custom-taxonomies/custom-taxonomies.php:151
@@ -1030,370 +1030,370 @@ msgstr ""
 #: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:84
 #: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:165
 msgid "Slug"
-msgstr ""
+msgstr "Slug"
 
 #: core/addons/custom-taxonomies/custom-taxonomies.php:84
 #: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:87
 msgid "Actions"
-msgstr "Действия"
+msgstr "Azioni"
 
 #: core/addons/custom-taxonomies/custom-taxonomies.php:121
 #: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:135
 msgid "Create custom tags for your recipes."
-msgstr "Направете собствен Етикет за вашата рецепта"
+msgstr "crea dei tag personalizzati per le tue ricette."
 
 #: core/addons/custom-taxonomies/custom-taxonomies.php:128
 #: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:142
 msgid "Currently editing tag: "
-msgstr "В момента редактирате етикети:"
+msgstr "Tag modificato ora"
 
 #: core/addons/custom-taxonomies/custom-taxonomies.php:136
 #: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:150
 msgid "(e.g. Courses)"
-msgstr "(напр. Kурсове)"
+msgstr "(es. Portate)"
 
 #: core/addons/custom-taxonomies/custom-taxonomies.php:145
 #: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:159
 msgid "(e.g. Course)"
-msgstr "(напр. Kурс) "
+msgstr "(es Portata)"
 
 #: core/addons/custom-taxonomies/custom-taxonomies.php:154
 #: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:168
 msgid "(e.g. http://www.yourwebsite.com/course/)"
-msgstr "(напр. http://www.yourwebsite.com/course/)"
+msgstr "(e.s. http://www.yourwebsite.com/ricette/)"
 
 #: core/addons/custom-taxonomies/custom-taxonomies.php:161
 #: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:174
 msgid "Add new tag"
-msgstr "Добави нов Етикет"
+msgstr "aggiungi un nuovo tag"
 
 #: core/addons/custom-taxonomies/custom-taxonomies.php:162
 msgid "Adding new tags is only possible in"
-msgstr "Добавянето на нови етикети е възможно само в"
+msgstr "Aggiungere nuovi tags e solo possibile in"
 
 #: core/addons/custom-taxonomies/custom-taxonomies.php:165
 #: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:176
 msgid "Edit tag"
-msgstr "Редактирай етикет"
+msgstr "Modifica tag"
 
 #: core/addons/custom-taxonomies/custom-taxonomies.php:166
 #: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:177
 msgid "Cancel Edit"
-msgstr "Отказ от редакция"
+msgstr "Cancella modifica"
 
 #: core/template/recipe_admin.php:153
 msgid "tbsp"
-msgstr "с.л"
+msgstr "Cc"
 
 #: core/template/recipe_admin.php:154
 msgid "olive oil"
-msgstr "зехтин"
+msgstr "olio d'oliva"
 
 #: core/template/recipe_admin.php:156
 msgid "extra virgin"
-msgstr "екстра върджин"
+msgstr "extra vergine"
 
 #: wp-ultimate-recipe-premium/wp-ultimate-recipe-premium.php:31
 msgid "WP Ultimate Recipe must be installed and activated before WP Ultimate Recipe Premium can be used."
-msgstr "За да използвате WP Ultimate Recipe Premium , трябва да бъде активиран преди това плъгина WP Ultimate Recipe."
+msgstr "WP Ultimate Recipe deve essere installato ed attivato prima che WP Ultimate Recipe Premium possa essere usato"
 
 #: wp-ultimate-recipe-premium/wp-ultimate-recipe-premium.php:33
 msgid "Please update WP Ultimate Recipe to the latest version before activating WP Ultimate Recipe Premium."
-msgstr "Моля обновете WP Ultimate Recipe до последната актуална версия преди да инсталирате WP Ultimate Recipe Premium."
+msgstr "Per favore, aggiorna WP Ultimate Recipe alla ultima versione prima di attivare WP Ultimate Recipe Premium."
 
 #: core/template/admin.php:239
 msgid "Layout"
-msgstr "Оформление"
+msgstr "Layout"
 
 #: core/template/admin.php:243 core/template/admin.php:268
 msgid "Default"
-msgstr "По подразбиране"
+msgstr "Predefinito"
 
 #: core/template/admin.php:251
 msgid "Modern"
-msgstr "Модерен"
+msgstr "Moderna"
 
 #: core/template/admin.php:247
 msgid "Compact"
-msgstr "Компактен"
+msgstr "Compatta"
 
 #: core/template/admin.php:262
 msgid "Style"
-msgstr "Стил"
+msgstr "Stile"
 
 #: core/template/admin.php:273
 msgid "Neutral"
-msgstr "Неутрален"
+msgstr "Neutrale"
 
 #: core/template/admin.php:278
 msgid "Blue"
-msgstr "Син"
+msgstr "Blu"
 
 #: core/template/admin.php:283
 msgid "Green"
-msgstr "Зелен"
+msgstr "Verde"
 
 #: core/template/admin.php:288
 msgid "Custom"
-msgstr "Персонализиран"
+msgstr "Personalizzato"
 
 #: core/template/admin.php:310
 msgid "Background"
-msgstr "Фон"
+msgstr "Sfondo"
 
 #: core/template/admin.php:311
 msgid "Main recipe background color"
-msgstr "Фон на основната рецепта"
+msgstr "Colore di sfondo della ricetta principale"
 
 #: core/template/admin.php:304
 msgid "Background image"
-msgstr "Фоново изображение"
+msgstr "Immagine di sfondo"
 
 #: core/template/admin.php:318
 msgid "Panel background"
-msgstr "Фон на панела"
+msgstr "Sfondo pannello"
 
 #: core/template/admin.php:319
 msgid "Background for various panels depending on layout"
-msgstr "Фон на различните панели в зависимост от оформлението"
+msgstr "Sfondo dei vari pannelli dipendenti dal layout"
 
 #: core/template/admin.php:326
 msgid "Borders"
-msgstr "Граници"
+msgstr "Bordi"
 
 #: core/template/admin.php:327
 msgid "Recipe borders color"
-msgstr "Цвят на границите на рецептата"
+msgstr "Colori del bordo della ricetta"
 
 #: core/template/admin.php:334
 msgid "Text"
-msgstr "Текст"
+msgstr "Testo"
 
 #: core/template/admin.php:335
 msgid "Recipe text color"
-msgstr "Цвят на текста на рецептата"
+msgstr "Colore del testo della ricetta"
 
 #: core/template/admin.php:342
 msgid "Highlights"
-msgstr "Акценти"
+msgstr "Sottolinea"
 
 #: core/template/admin.php:343
 msgid "Links and other highlights"
-msgstr "Връзки и други акценти"
+msgstr "Links ed altri highlights"
 
 #: core/template/admin.php:350
 msgid "Hover"
-msgstr ""
+msgstr "Hover"
 
 #: core/template/admin.php:351
 msgid "Links hover effect"
-msgstr "Ефект при преминаване на мишката"
+msgstr "Effetto hover sui Links"
 
 #: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:41
 msgid "Menus"
-msgstr "Менюта"
+msgstr "Menu"
 
 #: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:42
 #: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:77
 msgid "Menu"
-msgstr "Меню"
+msgstr "Menu"
 
 #: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:86
 msgid "Shopping List"
-msgstr "Списък за пазаруване"
+msgstr "Lista della Spesa"
 
 #: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:192
 msgid "Some recipes on this list have no associated ingredients."
-msgstr "Някои рецепти в този списък са без свързани продукти."
+msgstr "Alcune ricette su questa lista non hanno ingredienti associati"
 
 #: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:213
 msgid "The shopping list will update automatically whenever the menu is saved."
-msgstr "Списъкът за пазаруване ще се актуализира автоматично, след като се запише менюто."
+msgstr "La lista della spesa sara' aggiornata automaticamente appena il menu sara' saÃ²vato."
 
 #: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:255
 msgid "Unable to save menu with zero recipes added."
-msgstr "Не може да се запази меню без добавени рецепти."
+msgstr "incapace di salvare il menu cone nessuna ricetta aggiunta."
 
 #: core/template/admin.php:678
 msgid "User Menus"
-msgstr "Потребителски менюта"
+msgstr "Menu utente"
 
 #: core/template/admin.php:631 core/template/admin.php:655
 #: core/template/admin.php:715
 msgid "Guests and registered users"
-msgstr "Гости и регистрирани потребители"
+msgstr "Ospiti e untenti registrati"
 
 #: core/template/admin.php:635 core/template/admin.php:659
 #: core/template/admin.php:719
 msgid "Registered users only"
-msgstr "Само за регистрирани потребители"
+msgstr "Solo utenti registrati"
 
 #: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:395
 msgid "Sorry, the site administrator has disabled user menus."
-msgstr "Съжаляваме, администраторът на сайта е забранил потребителските менюта."
+msgstr "Spiacenti l'amministratore ha disabilitato i menu personali."
 
 #: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:410
 msgid "Sorry, only registered users may create menus."
-msgstr "Съжаляваме, само регистрирани потребители могат да създават менюта."
+msgstr "Spiacenti solo gli utenti iscritti possono creare menu."
 
 #: wp-ultimate-recipe-premium/addons/user-menus/inc/menu-builder.php:15
 msgid "Menu Title"
-msgstr "Име на менюто"
+msgstr "Titolo del menu"
 
 #: wp-ultimate-recipe-premium/addons/user-menus/inc/menu-builder.php:40
 msgid "Add recipes from the list to create your own menu."
-msgstr "Добавете рецепти от списъка, за да създадете свое собствено меню."
+msgstr "Aggiungi ricette dalla lista per creare il tuo menu personalizzato."
 
 #: wp-ultimate-recipe-premium/addons/user-menus/inc/menu-builder.php:54
 msgid "Newest"
-msgstr "Най-нови"
+msgstr "il piu' nuovo"
 
 #: wp-ultimate-recipe-premium/addons/user-menus/inc/menu-builder.php:55
 msgid "A-Z"
-msgstr "А-Я"
+msgstr "A-Z"
 
 #: core/template/shortcode_generator.php:112
 #: core/template/shortcode_generator.php:225
 #: wp-ultimate-recipe-premium/addons/user-menus/inc/menu-builder.php:76
 msgid "Sort by"
-msgstr "Сортиране по"
+msgstr "Ordina per"
 
 #: wp-ultimate-recipe-premium/addons/user-menus/inc/menu-builder.php:101
 msgid "Save menu"
-msgstr "Запази меню"
+msgstr "Salva il menu"
 
 #: wp-ultimate-recipe-premium/addons/user-menus/inc/menu-view.php:31
 msgid "No recipes added to this menu."
-msgstr "Няма добавени рецепти към това меню."
+msgstr "Nessuna ricetta aggiunta a questo menu"
 
 #: core/template/admin.php:647
 msgid "Publish recipe immediately on submission."
-msgstr "Публикуване рецепта веднага след изпращането."
+msgstr "pubblica la ricetta immediatamente dopo l'aggiunta"
 
 #: core/template/admin.php:670
 msgid "Submission form CSS"
-msgstr "CSS потребителска форма  "
+msgstr "Invio CSS"
 
 #: core/template/admin.php:671
 msgid "Add basic CSS styles to the frontend form."
-msgstr "Добави основен CSS към формата."
+msgstr "Aggiungi stili base CSS al form di frontend"
 
 #: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:64
 msgid "Sorry, the site administrator has disabled recipe submissions."
-msgstr "Съжаляваме, администраторът на сайта е забранил изпращането на рецепти."
+msgstr "spiacenti, l'amministartore del sito ha disabilitato l'aggiunta di ricette."
 
 #: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:77
 msgid "Sorry, only registered users may submit recipes."
-msgstr "Съжаляваме, само регистрирани потребители могат да изпращат рецепти."
+msgstr "Spiacenti, solo gli utenti registrati possono aggiungere ricette."
 
 #: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:108
 msgid "Recipe title"
-msgstr "Име на рецептата"
+msgstr "Titolo della ricetta"
 
 #: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:113
 msgid "Your name"
-msgstr "Вашето име"
+msgstr "Tuo nome"
 
 #: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:117
 msgid "Featured image"
-msgstr "Картинка за публикацията "
+msgstr "Immagine in evidenza"
 
 #: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:121
 msgid "Add Featured Image"
-msgstr "Добави Картинка за публикацията"
+msgstr "Aggiungi immagine in evidenza"
 
 #: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:122
 msgid "Remove Featured Image"
-msgstr "Премахни Картинката за публикацията "
+msgstr "Rimuovi immagine in evidenza"
 
 #: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:154
 msgid "Submit"
-msgstr "Изпращане"
+msgstr "Invia"
 
 #: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:197
 msgid "Recipe submitted! Thank you, your recipe is now awaiting moderation."
-msgstr "Рецепта е изпратена! Благодарим Ви, вашата рецепта в момента очаква одобрение."
+msgstr "Ricetta accettata! Grazie, la tua ricetta e' in attesa di conferma"
 
 #: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:199
 msgid "Recipe submitted! Thank you, your recipe has been published."
-msgstr "Рецепта е одобрена! Благодарим Ви, вашата рецепта е публикувана."
+msgstr "Ricetta accettata! Grazie, la tua ricetta e' stata pubblicata"
 
 #: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:229
 msgid "Anonymous"
-msgstr "Анонимен"
+msgstr "Anonimo"
 
 #: core/template/shortcode_generator.php:120
 #: core/template/shortcode_generator.php:233
 #: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:283
 #: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:300
 msgid "Author"
-msgstr "Автор"
+msgstr "Autore"
 
 #: core/template/recipe_admin.php:21 core/template/shortcode_generator.php:116
 #: core/template/shortcode_generator.php:229
 #: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:299
 msgid "Title"
-msgstr "Заглавие"
+msgstr "Titolo"
 
 #: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:302
 msgid "Date"
-msgstr "Дата"
+msgstr "Data"
 
 #: core/template/recipe_admin.php:290 core/template/recipe_public.php:238
 #: wp-ultimate-recipe-premium/addons/custom-templates/layouts/compact.php:243
 #: wp-ultimate-recipe-premium/addons/custom-templates/layouts/default.php:243
 #: wp-ultimate-recipe-premium/addons/custom-templates/layouts/modern.php:261
 msgid "Recipe notes"
-msgstr "Бележки"
+msgstr "Note della ricetta"
 
 #: core/core-functions.php:678
 msgid "Edit Rating"
-msgstr "Редактиране на оценката"
+msgstr "Edita la valutazione"
 
 #: core/core-functions.php:679
 msgid "Update Rating"
-msgstr "Обнови оценката"
+msgstr "Aggiorna la valutazione"
 
 #: core/core-functions.php:680
 msgid "Add New Rating"
-msgstr "Добави нова оценка"
+msgstr "Aggiungi una nuova valutazione"
 
 #: core/core-functions.php:681
 msgid "New Rating Name"
-msgstr "Име на новата оценка"
+msgstr "Nuovo nome della valutazione"
 
 #: core/core-functions.php:682
 msgid "Separate ratings with commas"
-msgstr "Раздели оценките със запетаи "
+msgstr "Separa le valutazioni con le virgole"
 
 #: core/core-functions.php:683
 msgid "Add or remove ratings"
-msgstr "Добави или премахни оценки"
+msgstr "aggiungi o rimuovi valutazioni"
 
 #: core/core-functions.php:684
 msgid "Choose from the most used ratings"
-msgstr "Избери от най-използваните оценки"
+msgstr "Scegli fra le valutazioni piu' usate"
 
 #: core/core-functions.php:685
 msgid "No ratings found."
-msgstr "Няма намерени оценки"
+msgstr "Nessuna valutazione trovata."
 
 #: core/template/admin.php:371 core/template/admin.php:544
 #: core/template/recipe_admin.php:17
 msgid "General"
-msgstr "Основен"
+msgstr "Generale"
 
 #: core/template/recipe_admin.php:29
 msgid "Description"
-msgstr "Описание"
+msgstr "Descrizione"
 
 #: core/template/recipe_admin.php:42
 msgid "star"
-msgstr "звезда"
+msgstr "stella"
 
 #: core/template/recipe_admin.php:42
 msgid "stars"
-msgstr "звезди"
+msgstr "stelle"
 
 #: core/template/recipe_admin.php:49 core/template/recipe_public.php:112
 #: core/template/recipe_public.php:190
@@ -1406,11 +1406,11 @@ msgstr "звезди"
 #: wp-ultimate-recipe-premium/addons/user-menus/inc/menu-builder.php:18
 #: wp-ultimate-recipe-premium/addons/user-menus/inc/menu-view.php:7
 msgid "Servings"
-msgstr "Порции "
+msgstr "Porzioni"
 
 #: core/template/recipe_admin.php:53
 msgid "(e.g. 2 people, 3 loafs, ...)"
-msgstr "(напр. 2 души, 3 питки, ...)"
+msgstr "(es: 2 persone, 3 porzioni, ...)"
 
 #: core/template/recipe_admin.php:60 core/template/recipe_admin.php:67
 #: core/template/recipe_admin.php:74 core/template/recipe_public.php:121
@@ -1425,61 +1425,61 @@ msgstr "(напр. 2 души, 3 питки, ...)"
 #: wp-ultimate-recipe-premium/addons/custom-templates/layouts/modern.php:81
 #: wp-ultimate-recipe-premium/addons/custom-templates/layouts/modern.php:82
 msgid "minutes"
-msgstr "Минути"
+msgstr "minuti"
 
 #: core/template/recipe_admin.php:81
 msgid "Don't forget that you can tag your recipe with <strong>Courses</strong> and <strong>Cuisines</strong> by using the boxes on the right. Use the <strong>featured image</strong> if you want a photo of the finished dish."
-msgstr "Не забравяйте, че можете да маркирате вашата рецепта с <strong> Ястия</strong> и <strong> Кухня </strong> с помощта на кутииките в дясно. Използвайте <strong> картинка за публикацията  </strong> ако искате снимка на готовото ястие."
+msgstr "Non dimenticare che puoi taggare le tue ricette con<strong>Piatti</strong> y <strong>Cucina</strong> utilizzando i campi di spunta sulla destra. Usa la <strong>Immkagine preferita</strong> se vuoi una foto del piatto terminato."
 
 #: core/template/recipe_admin.php:164
 msgid "Add an ingredient"
-msgstr "Добави съставка"
+msgstr "Aggiungi un'ingrediente"
 
 #: core/template/recipe_admin.php:170
 msgid "<strong>Use the TAB key</strong> while adding ingredients, it will automatically create new fields. <strong>Don't worry about empty lines</strong>, these will be ignored."
-msgstr "<strong> Използвайте клавиша TAB </strong> за добавянето на нови съставки, автоматично ще бъдат създадени нови полета. <strong> Не се тревожете за празните редове </strong>, те ще бъдат игнорирани."
+msgstr "<strong>usa il tasto tab</strong>mentre aggiungi gli ingredienti, i nuovi campi si creeranno automaticamente. <strong>non preoccuparti per le linee vuote</strong>, saranno ignorate."
 
 #: core/template/recipe_admin.php:173 core/template/recipe_public.php:198
 #: wp-ultimate-recipe-premium/addons/custom-templates/layouts/compact.php:203
 #: wp-ultimate-recipe-premium/addons/custom-templates/layouts/default.php:203
 #: wp-ultimate-recipe-premium/addons/custom-templates/layouts/modern.php:221
 msgid "Instructions"
-msgstr "Инструкции"
+msgstr "Le Istruzioni"
 
 #: core/template/recipe_admin.php:241 core/template/recipe_admin.php:262
 #: core/template/recipe_admin.php:270
 msgid "Add Image"
-msgstr "Добави снимка"
+msgstr "Aggiungi immagine"
 
 #: core/template/recipe_admin.php:242 core/template/recipe_admin.php:271
 msgid "Remove Image"
-msgstr "Премахни снимката"
+msgstr "Rimuovi Immagine"
 
 #: core/template/recipe_admin.php:281
 msgid "Add an instruction"
-msgstr "Добави инструкция"
+msgstr "Aggiungi istruzione"
 
 #: core/template/recipe_admin.php:287
 msgid "<strong>Use the TAB key</strong> while adding instructions, it will automatically create new fields. <strong>Don't worry about empty lines</strong>, these will be ignored."
-msgstr "<strong>Използвайте клавиша TAB </strong> за добавянето на нови инструкции, автоматично ще бъдат създадени нови полета. <strong> Не се тревожете за празните редове </strong>, те ще бъдат премахнати автоматично."
+msgstr "<strong>usa il tasto tab</strong> mentre aggiungi le istruzioni,i nuovi campi si creerano automaticamente. <strong>Non preoccuparti per le linee vuote</strong>, saranno ignorate."
 
 #: wp-ultimate-recipe-premium/addons/import/import.php:109
 msgid "Problems? Take a look at the"
-msgstr "Възникнали са проблеми? Обърнете внимание на"
+msgstr "Problemi? Dai un'occhiata a"
 
 #: core/template/recipe_admin.php:57 core/template/recipe_public.php:113
 #: wp-ultimate-recipe-premium/addons/custom-templates/layouts/compact.php:118
 #: wp-ultimate-recipe-premium/addons/custom-templates/layouts/default.php:118
 #: wp-ultimate-recipe-premium/addons/custom-templates/layouts/modern.php:72
 msgid "Prep Time"
-msgstr "Време за подготовка"
+msgstr "Tempo di preparazione"
 
 #: core/template/recipe_admin.php:64 core/template/recipe_public.php:114
 #: wp-ultimate-recipe-premium/addons/custom-templates/layouts/compact.php:119
 #: wp-ultimate-recipe-premium/addons/custom-templates/layouts/default.php:119
 #: wp-ultimate-recipe-premium/addons/custom-templates/layouts/modern.php:73
 msgid "Cook Time"
-msgstr "Време за готвене"
+msgstr "Tempo di cottura"
 
 #: core/template/recipe_public.php:277
 #: wp-ultimate-recipe-premium/addons/custom-templates/layouts/compact.php:282
@@ -1490,33 +1490,33 @@ msgstr "Powered by"
 
 #: core/template/admin.php:4
 msgid "Settings"
-msgstr "Настройки"
+msgstr "Impostazioni"
 
 #: core/template/admin.php:51
 msgid "Adjustable Servings"
-msgstr "Промяна на порции"
+msgstr "Porzioni aggiustabili"
 
 #: core/template/admin.php:52
 msgid "Allow users to dynamically adjust the servings of recipes."
-msgstr "Разрешаване на потребителите динамично да променят порциите в рецептите."
+msgstr "Permetti agli utenti di aggiustare dinamicamente le porzioni delle ricette."
 
 #: core/template/admin.php:65
 msgid "Link to plugin"
-msgstr "Линк с плъгина"
+msgstr "Linka al plugin"
 
 #: core/template/admin.php:66
 msgid "Show a link to the plugin website as a little thank you."
-msgstr "Покажи линк към сайта на плъгина, като благодарност към създателите му."
+msgstr "Mostra un link al sito del plugin come piccolo ringraziamento."
 
 #: core/core-functions.php:221 core/template/shortcode_generator.php:4
 msgid "Recipes"
-msgstr "Рецепти"
+msgstr "Le Ricette"
 
 #: core/core-functions.php:222 core/core-functions.php:310
 #: core/template/admin.php:38 core/template/shortcode_generator.php:17
 #: core/template/shortcode_generator.php:36
 msgid "Recipe"
-msgstr "Рецепта"
+msgstr "La Ricetta"
 
 #: core/core-functions.php:234 core/core-functions.php:235
 #: core/core-functions.php:641
@@ -1525,7 +1525,7 @@ msgstr "Рецепта"
 #: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:49
 #: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:50
 msgid "Add New"
-msgstr "Добави"
+msgstr "Aggiungi nuova"
 
 #: core/core-functions.php:236 core/core-functions.php:237
 #: core/core-functions.php:639
@@ -1535,18 +1535,18 @@ msgstr "Добави"
 #: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:51
 #: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:52
 msgid "Edit"
-msgstr "Редактирай"
+msgstr "Edita"
 
 #: core/core-functions.php:239 core/core-functions.php:240
 #: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:54
 #: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:55
 msgid "View"
-msgstr "Преглед"
+msgstr "Guarda"
 
 #: core/core-functions.php:559
 #: wp-ultimate-recipe-premium/addons/extended-shortcodes/extended-shortcodes.php:134
 msgid "You have to create a recipe first, check the 'Recipes' menu on the left."
-msgstr "Първо трябва да се създаде рецепта,вижте менюто \"Рецепти\" в ляво."
+msgstr "Tu devi aggiungere prima una ricetta,clicca il menu ricette sulla sinistra."
 
 #: core/core-functions.php:598 core/template/admin.php:73
 #: core/template/recipe_admin.php:87 core/template/recipe_public.php:135
@@ -1554,114 +1554,114 @@ msgstr "Първо трябва да се създаде рецепта,вижт
 #: wp-ultimate-recipe-premium/addons/custom-templates/layouts/default.php:140
 #: wp-ultimate-recipe-premium/addons/custom-templates/layouts/modern.php:99
 msgid "Ingredients"
-msgstr "Продукти"
+msgstr "Gli Ingredienti"
 
 #: core/core-functions.php:598
 #: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:205
 msgid "Ingredient"
-msgstr "Съставка"
+msgstr "Ingrediente"
 
 #: core/core-functions.php:599
 msgid "Courses"
-msgstr "Ястия"
+msgstr "Piatti"
 
 #: core/core-functions.php:599
 msgid "Course"
-msgstr "Ястие"
+msgstr "Piatto"
 
 #: core/core-functions.php:605
 msgid "Breakfast"
-msgstr "Закуска"
+msgstr "Colazione"
 
 #: core/core-functions.php:606
 msgid "Appetizer"
-msgstr "Предястие"
+msgstr "Aperitivo"
 
 #: core/core-functions.php:607
 msgid "Soup"
-msgstr "Супа"
+msgstr "Zuppa"
 
 #: core/core-functions.php:608
 msgid "Main Course"
-msgstr "Основно ястие"
+msgstr "Primo piatto"
 
 #: core/core-functions.php:609
 msgid "Side Dish"
-msgstr "Гарнитура"
+msgstr "Contorno"
 
 #: core/core-functions.php:610
 msgid "Salad"
-msgstr "Салата"
+msgstr "Insalata"
 
 #: core/core-functions.php:611
 msgid "Dessert"
-msgstr "Десерт"
+msgstr "Dolce"
 
 #: core/core-functions.php:612
 msgid "Snack"
-msgstr "Леки закуски"
+msgstr "Antipasto"
 
 #: core/core-functions.php:613
 msgid "Drinks"
-msgstr "Напитки"
+msgstr "Bibite"
 
 #: core/core-functions.php:600
 msgid "Cuisines"
-msgstr "Кухни"
+msgstr "Cucine"
 
 #: core/core-functions.php:600
 msgid "Cuisine"
-msgstr "Кухня"
+msgstr "Cucina"
 
 #: core/core-functions.php:615
 msgid "French"
-msgstr "Френска"
+msgstr "Francese"
 
 #: core/core-functions.php:616
 msgid "Italian"
-msgstr "Италианска"
+msgstr "Italiana"
 
 #: core/core-functions.php:617
 msgid "Mediterranean"
-msgstr "Средиземноморска"
+msgstr "Mediterranea"
 
 #: core/core-functions.php:618
 msgid "Indian"
-msgstr "Индийска"
+msgstr "Indiana"
 
 #: core/core-functions.php:619
 msgid "Chinese"
-msgstr "Китайска"
+msgstr "Cinese"
 
 #: core/core-functions.php:620
 msgid "Japanese"
-msgstr "Японска"
+msgstr "Giapponese"
 
 #: core/core-functions.php:621
 msgid "American"
-msgstr "Американска"
+msgstr "Americana"
 
 #: core/core-functions.php:622
 msgid "Mexican"
-msgstr "Мексиканска"
+msgstr "Messicana"
 
 #: core/core-functions.php:673 core/core-functions.php:686
 msgid "Ratings"
-msgstr "Оценки"
+msgstr "Le Valutazioni"
 
 #: core/core-functions.php:674 core/template/recipe_admin.php:35
 #: wp-ultimate-recipe-premium/addons/user-ratings/helper/public_rating.php:32
 msgid "Rating"
-msgstr "Оценка"
+msgstr "Valutazione"
 
 #: core/core-functions.php:675
 msgid "Search Ratings"
-msgstr "Търси Оценки"
+msgstr "Cerca valutazioni"
 
 #: core/core-functions.php:676
 msgid "Popular Ratings"
-msgstr "Популярни Оценки"
+msgstr "Valutazioni piu' popolari"
 
 #: core/core-functions.php:677
 msgid "All Ratings"
-msgstr "Всички Оценки."
+msgstr "Tutte le valutazioni"

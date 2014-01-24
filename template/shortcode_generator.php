@@ -116,10 +116,6 @@ $shortcode_generator = array(
                                 'label' => __('Title', $this->pluginName),
                             ),
                             array(
-                                'value' => 'name',
-                                'label' => __('Name', $this->pluginName),
-                            ),
-                            array(
                                 'value' => 'author',
                                 'label' => __('Author', $this->pluginName),
                             ),
@@ -173,6 +169,101 @@ $shortcode_generator = array(
             'menus' => array(
                 'title'   => __('User Menus form', $this->pluginName) . ' (' . __('WP Ultimate Recipe Premium only', $this->pluginName). ')',
                 'code'    => '[wpurp_user_menus]',
+            ),
+        ),
+    ),
+//=-=-=-=-=-=-= RECIPE GRID =-=-=-=-=-=-=
+    __( 'Recipe Grid', $this->pluginName ) => array(
+        'elements' => array(
+            'recipe_grid' => array(
+                'title'   => __('Recipe Grid', $this->pluginName) . ' (' . __('WP Ultimate Recipe Premium only', $this->pluginName). ')',
+                'code'    => '[ultimate-recipe-grid]',
+                'attributes' => array(
+                    array(
+                        'type' => 'select',
+                        'name' => 'display',
+                        'label' => __('Display', $this->pluginName),
+                        'items' => array(
+                            array(
+                                'value' => 'text',
+                                'label' => __('Recipe Title Only', $this->pluginName),
+                            ),
+                            array(
+                                'value' => 'card',
+                                'label' => __('Recipe Card with photo', $this->pluginName),
+                            ),
+                        ),
+                        'default' => array(
+                            'card',
+                        ),
+                    ),
+                    array(
+                        'type' => 'checkbox',
+                        'name' => 'images_only',
+                        'label' => __('Exclude recipes without a photo', $this->pluginName),
+                        'items' => array(
+                            array(
+                                'value' => 'true',
+                                'label' => '',
+                            ),
+                        ),
+                    ),
+                    array(
+                        'type' => 'checkbox',
+                        'name' => 'no_filter',
+                        'label' => __("Don't let your visitors filter the recipes", $this->pluginName),
+                        'items' => array(
+                            array(
+                                'value' => 'true',
+                                'label' => '',
+                            ),
+                        ),
+                    ),
+                    array(
+                        'type' => 'select',
+                        'name' => 'sort_by',
+                        'label' => __('Sort by', $this->pluginName),
+                        'items' => array(
+                            array(
+                                'value' => 'title',
+                                'label' => __('Title', $this->pluginName),
+                            ),
+                            array(
+                                'value' => 'author',
+                                'label' => __('Author', $this->pluginName),
+                            ),
+                            array(
+                                'value' => 'date',
+                                'label' => __('Date Added', $this->pluginName),
+                            ),
+                            array(
+                                'value' => 'rand',
+                                'label' => __('Random', $this->pluginName),
+                            ),
+                        ),
+                        'default' => array(
+                            'date',
+                        ),
+                    ),
+                    array(
+                        'type' => 'select',
+                        'name' => 'sort_order',
+                        'label' => __('Sort order', $this->pluginName),
+                        'items' => array(
+                            array(
+                                'value' => 'ASC',
+                                'label' => __('Ascending', $this->pluginName),
+                            ),
+                            array(
+                                'value' => 'DESC',
+                                'label' => __('Descending', $this->pluginName),
+                            ),
+                        ),
+                        'default' => array(
+                            'DESC',
+                        ),
+                    ),
+                ),
             ),
         ),
     ),

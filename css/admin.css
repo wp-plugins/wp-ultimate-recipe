@@ -23,6 +23,10 @@
     width: 100%;
 }
 
+#recipe_meta_box #recipe_title {
+    width: 300px;
+}
+
 #recipe_meta_box .recipe-general-form-label {
     width: 20%;
     vertical-align: top;

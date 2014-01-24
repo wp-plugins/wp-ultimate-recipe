@@ -16,6 +16,15 @@ foreach( $fields as $field)
 <input type="hidden" name="recipe_meta_box_nonce" value="<?php echo wp_create_nonce('recipe'); ?>" />
 <h4><?php _e( 'General', $this->pluginName ); ?></h4>
 <table class="recipe-general-form">
+<?php if(!isset($wpurp_user_submission)) { ?>
+    <tr>
+        <td class="recipe-general-form-label"><label for="recipe_title"><?php _e('Title', $this->pluginName ); ?></label></td>
+        <td class="recipe-general-form-field">
+            <input type="text" name="recipe_title" id="recipe_title" value="<?php echo $title; ?>" />
+            <span class="recipe-general-form-notes"> <?php _e( '(leave blank to use post title)', $this->pluginName ) ?></span>
+        </td>
+    </tr>
+<?php } ?>
     <tr>
         <td class="recipe-general-form-label"><label for="recipe_description"><?php _e('Description', $this->pluginName ); ?></label></td>
         <td class="recipe-general-form-field">

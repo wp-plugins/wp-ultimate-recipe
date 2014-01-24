@@ -21,7 +21,7 @@ if( class_exists( 'WPUltimateRecipe' ) ) {
             $this->ignoreTaxonomies = array('rating');
 
             //Actions
-            add_action( 'init', array( $this, 'custom_taxonomies_init' ), 1 );
+            add_action( 'init', array( $this, 'custom_taxonomies_init' ), 2 );
             add_action( 'admin_enqueue_scripts', array( $this, 'custom_taxonomies_enqueue' ) ); //TODO: Only on custom taxonomies page
             add_action( 'admin_init', array( $this, 'custom_taxonomies_settings' ) );
             add_action( 'admin_menu', array( $this, 'custom_taxonomies_menu' ) );

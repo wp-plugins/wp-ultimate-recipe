@@ -1,3 +1,6 @@
+<?php
+$recipe_title = $this->get_recipe_title( $recipe_post );
+?>
 <div class="wpurp-container" itemscope itemtype="http://schema.org/Recipe">
     <meta itemprop="datePublished" content="<?php echo $recipe_post->post_date; ?>">
     <?php
@@ -13,11 +16,11 @@
             <?php
             if($this->option('recipe_images_clickable', '0') == 1) {
             ?>
-            <a href="<?php echo $full_img_url; ?>" title="<?php echo $recipe_post->post_title;?>">
-                <img itemprop="image" src="<?php echo $thumb_url; ?>" title="<?php echo $recipe_post->post_title;?>" />
+            <a href="<?php echo $full_img_url; ?>" title="<?php echo $recipe_title;?>">
+                <img itemprop="image" src="<?php echo $thumb_url; ?>" title="<?php echo $recipe_title;?>" />
             </a>
             <?php } else { ?>
-                <img itemprop="image" src="<?php echo $thumb_url; ?>" title="<?php echo $recipe_post->post_title;?>" />
+                <img itemprop="image" src="<?php echo $thumb_url; ?>" title="<?php echo $recipe_title;?>" />
             <?php } ?>
         </div>
     <?php } else { ?>
@@ -46,7 +49,7 @@
                         ?>
                         <script>var pluginUrl = '<?php echo $this->pluginUrl; ?>';</script>
                          <a href="#" class="print-recipe"><img src="<?php echo $this->pluginUrl; ?>/img/printer.png"></span></a>
-                    <?php echo $recipe_post->post_title; ?>
+                    <?php echo $recipe_title; ?>
                 </li>
                 <li class="recipe-information-description" itemprop="description"><?php echo $recipe['recipe_description'][0]; ?></li>
             </ul>
@@ -250,8 +253,8 @@
             $pinterest_text = '%title% - Powered by @ultimaterecipe';
         }
 
-        $twitter_text = str_ireplace('%title%', $recipe_post->post_title, $twitter_text);
-        $pinterest_text = str_ireplace('%title%', $recipe_post->post_title, $pinterest_text);
+        $twitter_text = str_ireplace('%title%', $recipe_title, $twitter_text);
+        $pinterest_text = str_ireplace('%title%', $recipe_title, $pinterest_text);
         ?>
         <ul class="recipe-sharing-buttons">
             <li>

@@ -40,6 +40,13 @@ $admin_menu = array(
                     'fields' => array(
                         array(
                             'type' => 'toggle',
+                            'name' => 'recipe_as_posts',
+                            'label' => __('Recipes act as posts', $this->pluginName),
+                            'description' => __( 'Recipes act like normal posts. For example: they show up on your front page.', $this->pluginName ),
+                            'default' => '1',
+                        ),
+                        array(
+                            'type' => 'toggle',
                             'name' => 'recipe_adjustable_servings',
                             'label' => __('Adjustable Servings', $this->pluginName),
                             'description' => __( 'Allow users to dynamically adjust the servings of recipes.', $this->pluginName ),
@@ -179,7 +186,7 @@ $admin_menu = array(
                                 ),
                             ),
                             'default' => array(
-                                'archive',
+                                'always',
                             ),
                             'validation' => 'required',
                         ),
@@ -449,7 +456,7 @@ $admin_menu = array(
                             'name' => 'recipe_tags_use_wp_categories',
                             'label' => __('Use Categories and Tags', $this->pluginName),
                             'description' => __( 'Use the default WP Categories and Tags to organize your recipes.', $this->pluginName ),
-                            'default' => '0',
+                            'default' => '1',
                         ),
                         array(
                             'type' => 'toggle',
@@ -570,6 +577,13 @@ $admin_menu = array(
                                 'everyone',
                             ),
                             'validation' => 'required',
+                        ),
+                        array(
+                            'type' => 'toggle',
+                            'name' => 'user_ratings_vote_attention',
+                            'label' => __('Show indicator', $this->pluginName),
+                            'description' => __( 'Attract attention to the possibility to vote.', $this->pluginName ),
+                            'default' => '1',
                         ),
                     ),
                 ),

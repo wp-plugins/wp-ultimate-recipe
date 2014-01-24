@@ -3,7 +3,7 @@
 Plugin Name: WP Ultimate Recipe
 Plugin URI: http://www.wpultimaterecipeplugin.com
 Description: WP Ultimate Recipe is a user friendly plugin for adding recipes to any of your posts and pages.
-Version: 1.0.0
+Version: 1.0.1
 Author: Bootstrapped Ventures
 Author URI: http://www.bootstrappedventures.com
 License: GPLv2
@@ -12,8 +12,8 @@ License: GPLv2
  * Credit to subtlepatterns.com for background patterns.
  */
 
-define( 'COMPATIBLE_PREMIUM_VERSION', '1.0.0' );
-define( 'WPURP_VERSION', '1.0.0' );
+define( 'COMPATIBLE_PREMIUM_VERSION', '1.0.1' );
+define( 'WPURP_VERSION', '1.0.1' );
 
 class WPUltimateRecipe {
     
@@ -32,11 +32,11 @@ class WPUltimateRecipe {
     {
         $this->pluginName = 'wp-ultimate-recipe';
         $this->pluginDir = WP_PLUGIN_DIR . '/' . $this->pluginName;
-        $this->pluginUrl = WP_PLUGIN_URL . '/' . $this->pluginName;
+        $this->pluginUrl = plugins_url() . '/' . $this->pluginName;
 
         $this->premiumName = 'wp-ultimate-recipe-premium';
         $this->premiumDir = WP_PLUGIN_DIR . '/' . $this->premiumName;
-        $this->premiumUrl = WP_PLUGIN_URL . '/' . $this->premiumName;
+        $this->premiumUrl = plugins_url() . '/' . $this->premiumName;
 
         // Version
         update_option( $this->pluginName . '_version', WPURP_VERSION );
@@ -63,13 +63,14 @@ class WPUltimateRecipe {
         add_action( 'admin_head', array( $this, 'wpurp_admin_styles' ) );
         add_action( 'admin_footer', array( $this, 'wpurp_admin_scripts' ) );
         add_action( 'admin_notices', array( $this, 'wpurp_admin_notices' ) );
+        add_action( 'admin_footer-recipe_page_wpurp_admin', array( $this, 'support_tab' ) );
 
         // Other
         if ( function_exists( 'add_image_size' ) ) {
             add_image_size( 'recipe-thumbnail', 150, 9999 );
             add_image_size( 'recipe-large', 600, 9999 );
         }
-        
+
     }
     
     /*
@@ -144,7 +145,6 @@ class WPUltimateRecipe {
     /*
      * WP Ultimate Recipe Settings page
      */
-
     public function wpurp_admin_menu()
     {
         require_once('helper/admin_menu_helper.php');
@@ -163,7 +163,12 @@ class WPUltimateRecipe {
             'page_title'            => __( 'Admin', $this->pluginName ),
             'menu_label'            => __( 'Admin', $this->pluginName ),
         ));
+    }
 
+    public function support_tab()
+    {
+        //var_dump(get_current_screen());
+        include($this->pluginDir . '/helper/support_tab.html');
     }
 
     public function wpurp_shortcodegenerator()
@@ -280,7 +285,24 @@ class WPUltimateRecipe {
                 $recipes[] = $post;
             }
         }
+
+        if( $orderby == 'post_title' || $orderby == 'title' || $orderby == 'name' ) {
+            usort($recipes, array($this, "compare_post_titles"));
+
+            if( $order == 'DESC' ) {
+                $recipes = array_reverse($recipes);
+            }
+        }
+
         return $recipes;
+    }
+
+    /*
+     * TODO - This is probably not that performant but does the job for now
+     */
+    protected function compare_post_titles($a, $b)
+    {
+        return strcmp($this->get_recipe_title($a), $this->get_recipe_title($b));
     }
     
     /*
@@ -288,6 +310,7 @@ class WPUltimateRecipe {
      */
     protected function recipes_fields() {
         return array(
+            'recipe_title',
             'recipe_description',
             'recipe_rating',
             'recipe_servings',
@@ -369,6 +392,17 @@ class WPUltimateRecipe {
         }  
         
         return false;
+    }
+
+    public function get_recipe_title( $recipe )
+    {
+        $meta = get_post_custom($recipe->ID);
+
+        if (!is_null($meta['recipe_title'][0]) && $meta['recipe_title'][0] != '') {
+            return $meta['recipe_title'][0];
+        } else {
+            return $recipe->post_title;
+        }
     }
 
 }

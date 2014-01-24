@@ -81,11 +81,32 @@ function wpurp_shortcode_generator_recipes($orderby, $order)
 
         $recipe_list[] = array(
             'value' => $recipe->ID,
-            'label' => $recipe->post_title,
+            'label' => get_recipe_title($recipe),
         );
 
     }
+
+    if( $orderby == 'title' ) {
+        usort($recipe_list, "compare_post_titles");
+    }
+
     return $recipe_list;
+}
+
+function compare_post_titles($a, $b)
+{
+    return strcmp($a['label'], $b['label']);
+}
+
+function get_recipe_title( $recipe )
+{
+    $meta = get_post_custom($recipe->ID);
+
+    if (!is_null($meta['recipe_title'][0]) && $meta['recipe_title'][0] != '') {
+        return $meta['recipe_title'][0];
+    } else {
+        return $recipe->post_title;
+    }
 }
 
 function wpurp_shortcode_generator_taxonomies()
