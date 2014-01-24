@@ -2,8 +2,6 @@ var parentRecipe = '';
 
 jQuery(document).ready(function() {
 
-    Socialite.load();
-
     jQuery(document).on('click', '.print-recipe', function(e) {
         e.preventDefault();
 

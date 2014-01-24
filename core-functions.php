@@ -109,6 +109,8 @@ class WPURP_Core extends WPUltimateRecipe {
             wp_enqueue_script( 'socialite' );
             wp_register_script( 'socialite-pinit', $this->pluginUrl . '/lib/socialite/extensions/socialite.pinterest.js', '', WPURP_VERSION );
             wp_enqueue_script( 'socialite-pinit' );
+            wp_register_script( 'recipesharing', $this->pluginUrl . '/js/sharing.js', array('jquery'), WPURP_VERSION );
+            wp_enqueue_script( 'recipesharing' );
         }
     }
 

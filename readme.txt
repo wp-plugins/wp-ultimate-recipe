@@ -64,6 +64,9 @@ You can find more information at [WPUltimateRecipePlugin.com](http://www.wpultim
 
 == Changelog ==
 
+= 1.0.2 =
+* Bug fix for those who disabled recipe sharing
+
 = 1.0.1 =
 * Use your recipes just like normal posts
 * Contact support directly from Recipe Admin page
@@ -155,6 +158,9 @@ You can find more information at [WPUltimateRecipePlugin.com](http://www.wpultim
 * Very first version of this plugin
 
 == Upgrade notice ==
+
+= 1.0.2 =
+Upgrade if you disable recipe sharing
 
 = 1.0.1 =
 Upgrade if you want to use your recipes just like posts
