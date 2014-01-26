@@ -30,6 +30,7 @@ class WPURP_Core extends WPUltimateRecipe {
         add_action( 'admin_menu', array( $this, 'admin_menu') );
         add_action( 'update_option_wpurp_recipe_slug', array( $this, 'update_recipe_slug' ) );
         add_action( 'vp_option_set_after_save', array( $this, 'set_flush_needed' ) );
+        add_action( 'pre_get_posts', array( $this, 'query_recipes' ) );
 
         // Filters
         //add_filter( 'template_include', array( $this, 'recipes_template' ), 1 );
@@ -38,7 +39,6 @@ class WPURP_Core extends WPUltimateRecipe {
         add_filter( 'get_the_excerpt', array( $this, 'recipes_get_the_excerpt' ), 10 );
         add_filter( 'post_class', array( $this, 'recipes_post_class' ) ); // Add post and type-post classes
         add_filter( 'post_thumbnail_html', array( $this, 'recipes_thumbnail' ), 10 );
-        add_filter( 'pre_get_posts', array( $this, 'query_recipes' ), 99999 ); // We want this last so no theme can alter it after us
 
         // Shortcodes
         add_shortcode("ultimate-recipe", array( $this, 'recipes_shortcode' ));
@@ -261,7 +261,7 @@ class WPURP_Core extends WPUltimateRecipe {
 
         if($this->option('recipe_as_posts', '1') == '1')
         {
-            if($query->get('page_id') !== 0 || $query->get('pagename') !== '') {
+            if($query->get('page_id') !== 0 || $query->get('pagename') !== '' || $query->get('attachment_id') !== 0) {
                 return $query;
             }
 
