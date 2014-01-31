@@ -114,10 +114,17 @@ foreach( $fields as $field)
     </tr>
 <?php
 $i = 0;
-
 if( $ingredients != '')
 {
     foreach($ingredients as $ingredient) {
+
+        if( isset( $ingredient['ingredient_id'] ) ) {
+            $term = get_term($ingredient['ingredient_id'], 'ingredient');
+            if ( $term !== null && !is_wp_error( $term ) ) {
+                $ingredient['ingredient'] = $term->name;
+            }
+        }
+
         if($ingredient['group'] != $previous_group) { ?>
             <tr class="ingredient-group">
                 <td>&nbsp;</td>

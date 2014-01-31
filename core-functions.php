@@ -14,7 +14,7 @@ class WPURP_Core extends WPUltimateRecipe {
         $this->premiumUrl = plugins_url() . '/' . $this->premiumName;
         
         // Actions
-        add_action( 'init', array( $this, 'check_theme_support' ), 99999 );
+        add_action( 'init', array( $this, 'check_theme_support' ), 20 );
         add_action( 'init', array( $this, 'load_installed_addons' ), -10 );
         add_action( 'init', array( $this, 'get_installed_addons' ), -10 );  //TODO Combine these.
         add_action( 'init', array( $this, 'recipes_init' ), 1);
@@ -26,6 +26,7 @@ class WPURP_Core extends WPUltimateRecipe {
         add_action( 'admin_enqueue_scripts', array( $this, 'admin_plugin_styles' ) );
         add_action( 'admin_enqueue_scripts', array( $this, 'admin_plugin_scripts' ) );
         add_action( 'admin_init', array( $this, 'recipes_admin_init' ));
+        add_action( 'admin_init', array( $this, 'migrate_check' ));
         add_action( 'save_post', array( $this, 'recipes_save' ), 10, 2 );
         add_action( 'admin_menu', array( $this, 'admin_menu') );
         add_action( 'update_option_wpurp_recipe_slug', array( $this, 'update_recipe_slug' ) );
@@ -35,8 +36,7 @@ class WPURP_Core extends WPUltimateRecipe {
         // Filters
         //add_filter( 'template_include', array( $this, 'recipes_template' ), 1 );
         add_filter( 'the_content', array( $this, 'recipes_content' ), 10 );
-        add_filter( 'the_excerpt', array( $this, 'recipes_excerpt' ), 10 );
-        add_filter( 'get_the_excerpt', array( $this, 'recipes_get_the_excerpt' ), 10 );
+        add_filter( 'get_the_excerpt', array( $this, 'recipes_excerpt' ), 10 );
         add_filter( 'post_class', array( $this, 'recipes_post_class' ) ); // Add post and type-post classes
         add_filter( 'post_thumbnail_html', array( $this, 'recipes_thumbnail' ), 10 );
 
@@ -55,9 +55,13 @@ class WPURP_Core extends WPUltimateRecipe {
      * ================================================================================================================
      */
 
+    public function migrate_check()
+    {
+        include_once('helper/migrate.php');
+    }
+
     public function check_theme_support()
     {
-        add_theme_support( 'post-thumbnails', array( 'post', 'lol' ) );
         $thumbs = get_theme_support( 'post-thumbnails' );
 
         if($thumbs !== true)
@@ -261,8 +265,21 @@ class WPURP_Core extends WPUltimateRecipe {
 
         if($this->option('recipe_as_posts', '1') == '1')
         {
+            // Querying specific page or attachment
             if($query->get('page_id') !== 0 || $query->get('pagename') !== '' || $query->get('attachment_id') !== 0) {
-                return $query;
+                return;
+            }
+
+            // Querying a specific taxonomy
+            $tax_queries = $query->tax_query->queries;
+
+            if(is_array($tax_queries)) {
+                foreach($tax_queries as $tax_query)
+                {
+                    if(isset($tax_query['taxonomy']) && $tax_query['taxonomy'] !== '') {
+                        return;
+                    }
+                }
             }
 
             $post_type = $query->get('post_type');
@@ -280,12 +297,12 @@ class WPURP_Core extends WPUltimateRecipe {
 
             $query->set('post_type',$post_type);
 
-            return $query;
+            return;
         }
         else
         {
             if (!in_the_loop () || !$query->is_main_query ()) {
-                return $query;
+                return;
             }
 
             if($this->option('recipe_tags_use_wp_categories', '1') == '1' && $this->option('recipe_tags_show_in_archives', '1') == '1')
@@ -297,12 +314,12 @@ class WPURP_Core extends WPUltimateRecipe {
                     else
                         $post_type = array('post','recipe');
                     $query->set('post_type',$post_type);
-                    return $query;
+                    return;
                 }
             }
         }
 
-        return $query;
+        return;
     }
 
     public function recipes_admin_init()
@@ -348,12 +365,22 @@ class WPURP_Core extends WPUltimateRecipe {
                     foreach($new as $ingredient) {
                         if($ingredient['ingredient'] != '')
                         {
-                            $ingredients[] = $ingredient['ingredient'];
+                            $term = term_exists($ingredient['ingredient'], 'ingredient');
+
+                            if ( $term === 0 || $term === null) {
+                                $term = wp_insert_term($ingredient['ingredient'], 'ingredient');
+                            }
+
+                            $term_id = intval($term['term_id']);
+
+                            $ingredient['ingredient_id'] = $term_id;
+                            $ingredients[] = $term_id;
+
                             $non_empty_ingredients[] = $ingredient;
                         }
                     }
 
-                    wp_set_object_terms( $recipe_id, $ingredients, 'ingredient' );
+                    wp_set_post_terms( $recipe_id, $ingredients, 'ingredient' );
                     $new = $non_empty_ingredients;
                 }
                 elseif ($field == 'recipe_instructions')
@@ -428,15 +455,6 @@ class WPURP_Core extends WPUltimateRecipe {
         return $content;
     }
 
-    public function recipes_get_the_excerpt( $content )
-    {
-        if ( get_post_type() == 'recipe') {
-            $content = $this->recipes_excerpt( $content );
-        }
-
-        return $content;
-    }
-
     public function recipes_excerpt( $content )
     {
         if (!in_the_loop () || !is_main_query ()) {
@@ -444,19 +462,15 @@ class WPURP_Core extends WPUltimateRecipe {
         }
 
         if ( get_post_type() == 'recipe' ) {
-            remove_filter('the_excerpt', array( $this, 'recipes_excerpt' ), 10);
-
+            remove_filter('get_the_excerpt', array( $this, 'recipes_excerpt' ), 10);
             $recipe_post = get_post();
             $recipe = get_post_custom($recipe_post->ID);
 
-            if(!empty($recipe_post->post_excerpt)) {
-                the_excerpt();
-            } else {
+            if($recipe_post->post_content == '' && empty($recipe_post->post_excerpt)) {
                 $content = $recipe['recipe_description'][0];
             }
 
-            add_filter('the_excerpt', array( $this, 'recipes_excerpt' ), 10);
-
+            add_filter('get_the_excerpt', array( $this, 'recipes_excerpt' ), 10);
         }
 
         return $content;
@@ -706,7 +720,7 @@ class WPURP_Core extends WPUltimateRecipe {
 
         if( $this->is_premium_active() ) {
 
-        new Taxonomy_MetaData( 'ingredient', array(
+        new WPURP_Taxonomy_MetaData( 'ingredient', array(
             'link' => array(
                 'label'       => __( 'Link', $this->pluginName ),
                 'desc'        => __( 'Send your visitors to a specific link when clicking on an ingredient.', $this->pluginName ),
@@ -731,7 +745,7 @@ class WPURP_Core extends WPUltimateRecipe {
         $term = get_term($term_id, 'ingredient');
         switch ($column_name) {
             case 'link':
-                $custom_link = Taxonomy_MetaData::get( 'ingredient', $term->slug, 'link' );
+                $custom_link = WPURP_Taxonomy_MetaData::get( 'ingredient', $term->slug, 'link' );
                 if($custom_link !== false) {
                     $content = $custom_link;
                 }

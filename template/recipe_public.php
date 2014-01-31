@@ -16,7 +16,7 @@ $recipe_title = $this->get_recipe_title( $recipe_post );
             <?php
             if($this->option('recipe_images_clickable', '0') == 1) {
             ?>
-            <a href="<?php echo $full_img_url; ?>" title="<?php echo $recipe_title;?>">
+            <a href="<?php echo $full_img_url; ?>" rel="lightbox" title="<?php echo $recipe_title;?>">
                 <img itemprop="image" src="<?php echo $thumb_url; ?>" title="<?php echo $recipe_title;?>" />
             </a>
             <?php } else { ?>
@@ -28,7 +28,7 @@ $recipe_title = $this->get_recipe_title( $recipe_post );
     <?php } ?>
         <div class="recipe-header-information">
             <ul class="recipe-header-name">
-                <li class="recipe-information-name" itemprop="name">
+                <li class="recipe-information-name">
                     <span class="recipe-rating">
                         <?php
                         $star_full = '<img src="'.$this->pluginUrl.'/img/star.png" width="15" height="14">';
@@ -49,7 +49,7 @@ $recipe_title = $this->get_recipe_title( $recipe_post );
                         ?>
                         <script>var pluginUrl = '<?php echo $this->pluginUrl; ?>';</script>
                          <a href="#" class="print-recipe"><img src="<?php echo $this->pluginUrl; ?>/img/printer.png"></span></a>
-                    <?php echo $recipe_title; ?>
+                    <span itemprop="name"><?php echo $recipe_title; ?></span>
                 </li>
                 <li class="recipe-information-description" itemprop="description"><?php echo $recipe['recipe_description'][0]; ?></li>
             </ul>
@@ -138,6 +138,14 @@ $recipe_title = $this->get_recipe_title( $recipe_post );
         $out = '';
         $previous_group = '';
         foreach($ingredients as $ingredient) {
+
+            if( isset( $ingredient['ingredient_id'] ) ) {
+                $term = get_term($ingredient['ingredient_id'], 'ingredient');
+                if ( $term !== null && !is_wp_error( $term ) ) {
+                    $ingredient['ingredient'] = $term->name;
+                }
+            }
+
             if(isset($ingredient['group']) && $ingredient['group'] != $previous_group) {
                 $out .= '<li class="group">' . $ingredient['group'] . '</li>';
                 $previous_group = $ingredient['group'];
@@ -157,7 +165,7 @@ $recipe_title = $this->get_recipe_title( $recipe_post );
             if (!empty($taxonomy) && $ingredient_links != 'disabled') {
 
                 if($ingredient_links == 'archive_custom' || $ingredient_links == 'custom') {
-                    $custom_link = Taxonomy_MetaData::get( 'ingredient', $taxonomy->slug, 'link' );
+                    $custom_link = WPURP_Taxonomy_MetaData::get( 'ingredient', $taxonomy->slug, 'link' );
                 } else {
                     $custom_link = false;
                 }
@@ -219,7 +227,7 @@ $recipe_title = $this->get_recipe_title( $recipe_post );
                 $full_img_url = $full_img['0'];
 
                 if($this->option('recipe_images_clickable', '0') == 1) {
-                    $out .= '<a href="' . $full_img_url . '" title="' . $instruction['description'] . '">';
+                    $out .= '<a href="' . $full_img_url . '" rel="lightbox" title="' . $instruction['description'] . '">';
                     $out .= '<img src="' . $thumb_url . '" />';
                     $out .= '</a>';
                 } else {

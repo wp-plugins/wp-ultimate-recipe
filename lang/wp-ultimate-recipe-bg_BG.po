@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WP Ultimate Recipe package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2014-01-24 15:51:43+0000\n"
+"PO-Revision-Date: 2014-01-31 19:23:16+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -233,7 +233,7 @@ msgstr ""
 
 #: core/template/admin.php:538 core/template/admin.php:561
 msgid "User Ratings"
-msgstr ""
+msgstr "Потребителски рейтинг"
 
 #: core/template/recipe_admin.php:92 core/template/recipe_admin.php:110
 #: core/template/recipe_admin.php:124 core/template/recipe_admin.php:179
@@ -320,13 +320,13 @@ msgstr ""
 #: wp-ultimate-recipe-premium/addons/import/import.php:68
 #: wp-ultimate-recipe-premium/addons/import/import.php:77
 msgid "New tag for"
-msgstr ""
+msgstr "Нов таг за"
 
 #: wp-ultimate-recipe-premium/addons/import/import.php:62
 #: wp-ultimate-recipe-premium/addons/import/import.php:71
 #: wp-ultimate-recipe-premium/addons/import/import.php:80
 msgid "Select a recipe tag"
-msgstr ""
+msgstr "изберете таг за рецептата"
 
 #: wp-ultimate-recipe-premium/addons/import/import.php:86
 msgid "Post categories and tags"
@@ -437,7 +437,7 @@ msgstr ""
 #: core/lib/vafpress/bootstrap.php:88 core/lib/vafpress/classes/option.php:357
 #: core/lib/vafpress/classes/option.php:382
 msgid "Successful"
-msgstr ""
+msgstr "Успешно"
 
 #: core/lib/vafpress/bootstrap.php:99
 msgid "Unauthorized function"
@@ -450,7 +450,7 @@ msgstr ""
 #: core/lib/vafpress/classes/metabox.php:564
 #: core/lib/vafpress/classes/metabox/alchemy.php:493
 msgid "Remove"
-msgstr ""
+msgstr "Премахни"
 
 #: core/lib/vafpress/classes/metabox.php:586
 #: core/lib/vafpress/classes/metabox/alchemy.php:515
@@ -496,16 +496,16 @@ msgstr ""
 
 #: core/lib/vafpress/classes/option.php:466
 msgid "Utility"
-msgstr ""
+msgstr "Инструменти"
 
 #: core/lib/vafpress/classes/option.php:472
 #: core/lib/vafpress/views/option/restore.php:13
 msgid "Restore Default"
-msgstr ""
+msgstr "Възстанови по подразбиране"
 
 #: core/lib/vafpress/classes/option.php:481
 msgid "Export/Import"
-msgstr ""
+msgstr "Експорт/импорт"
 
 #: core/lib/vafpress/classes/shortcodegenerator.php:260
 msgid "Insert"

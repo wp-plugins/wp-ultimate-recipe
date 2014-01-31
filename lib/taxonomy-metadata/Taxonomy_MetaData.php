@@ -1,12 +1,12 @@
 <?php
 
-if ( ! class_exists( 'Taxonomy_MetaData' ) ) {
+if ( ! class_exists( 'WPURP_Taxonomy_MetaData' ) ) {
 /**
  * Adds pseudo term meta functionality
  * @version 0.1.0
  * @author  Justin Sternberg
  */
-class Taxonomy_MetaData {
+class WPURP_Taxonomy_MetaData {
 
 	/**
 	 * Session-cached taxonomy option
