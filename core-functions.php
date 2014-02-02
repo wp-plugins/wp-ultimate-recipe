@@ -272,11 +272,12 @@ class WPURP_Core extends WPUltimateRecipe {
 
             // Querying a specific taxonomy
             $tax_queries = $query->tax_query->queries;
+            $recipe_taxonomies = get_object_taxonomies( 'recipe' );
 
             if(is_array($tax_queries)) {
                 foreach($tax_queries as $tax_query)
                 {
-                    if(isset($tax_query['taxonomy']) && $tax_query['taxonomy'] !== '') {
+                    if(isset($tax_query['taxonomy']) && !in_array( $tax_query['taxonomy'], $recipe_taxonomies ) ) {
                         return;
                     }
                 }

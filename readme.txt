@@ -64,6 +64,9 @@ You can find more information at [WPUltimateRecipePlugin.com](http://www.wpultim
 
 == Changelog ==
 
+= 1.0.5 =
+* Recipes as posts fix
+
 = 1.0.4 =
 * Various bug fixes
 
@@ -165,7 +168,10 @@ You can find more information at [WPUltimateRecipePlugin.com](http://www.wpultim
 
 == Upgrade notice ==
 
-= 1.0,4 =
+= 1.0.5 =
+Upgrade if you use recipes as posts
+
+= 1.0.4 =
 Upgrade to get rid of some nasty bugs
 
 = 1.0.3 =
