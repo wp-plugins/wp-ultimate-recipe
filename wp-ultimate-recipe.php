@@ -274,10 +274,9 @@ class WPUltimateRecipe {
         }
         
         $query = new WP_Query( $args );
-        
+        $recipes = array();
+
         if( $query->have_posts() ) { //recipes found
-            
-            $recipes = array();
             
             while( $query->have_posts() ) {
                 $query->the_post();

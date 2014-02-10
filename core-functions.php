@@ -39,6 +39,10 @@ class WPURP_Core extends WPUltimateRecipe {
         add_filter( 'get_the_excerpt', array( $this, 'recipes_excerpt' ), 10 );
         add_filter( 'post_class', array( $this, 'recipes_post_class' ) ); // Add post and type-post classes
         add_filter( 'post_thumbnail_html', array( $this, 'recipes_thumbnail' ), 10 );
+        add_filter( 'getarchives_where' , array( $this, 'getarchives_filter' ), 10 , 2 );
+
+        add_filter('get_next_post_where', array( $this, 'adjacent_post_filter' ) );
+        add_filter('get_previous_post_where', array( $this, 'adjacent_post_filter' ) );
 
         // Shortcodes
         add_shortcode("ultimate-recipe", array( $this, 'recipes_shortcode' ));
@@ -277,7 +281,7 @@ class WPURP_Core extends WPUltimateRecipe {
             if(is_array($tax_queries)) {
                 foreach($tax_queries as $tax_query)
                 {
-                    if(isset($tax_query['taxonomy']) && !in_array( $tax_query['taxonomy'], $recipe_taxonomies ) ) {
+                    if(isset($tax_query['taxonomy']) && $tax_query['taxonomy'] !== '' && !in_array( $tax_query['taxonomy'], $recipe_taxonomies ) ) {
                         return;
                     }
                 }
@@ -322,6 +326,29 @@ class WPURP_Core extends WPUltimateRecipe {
 
         return;
     }
+
+    /*
+     * Have recipes show up in monthly archive widget
+     */
+    public function getarchives_filter( $where , $r )
+    {
+        if($this->option('recipe_as_posts', '1') == '1')
+        {
+            $where = str_replace( "post_type = 'post'" , "post_type IN ( 'post', 'recipe' )" , $where );
+        }
+
+        return $where;
+    }
+
+    function adjacent_post_filter($where) {
+        if($this->option('recipe_as_posts', '1') == '1')
+        {
+            $where = str_replace( "post_type = 'post'" , "post_type IN ( 'post', 'recipe' )" , $where );
+            $where = str_replace( "post_type = 'recipe'" , "post_type IN ( 'post', 'recipe' )" , $where );
+        }
+        return $where;
+    }
+
 
     public function recipes_admin_init()
     {
