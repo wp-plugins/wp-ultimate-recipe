@@ -20,16 +20,16 @@ class WPURP_Core extends WPUltimateRecipe {
         add_action( 'init', array( $this, 'recipes_init' ), 1);
         add_action( 'init', array( $this, 'wpurpp_custom_taxonomies_init' ));
         add_action( 'init', array( $this, 'ratings_init' ));
-        add_action( 'init', array( $this, 'flush_permalinks_if_needed' ));
+        add_filter( 'init', array( $this, 'edit_posts_page' ));
         add_action( 'wp_enqueue_scripts', array( $this, 'public_plugin_styles' ) );
         add_action( 'wp_enqueue_scripts', array( $this, 'public_plugin_scripts' ) );
         add_action( 'admin_enqueue_scripts', array( $this, 'admin_plugin_styles' ) );
         add_action( 'admin_enqueue_scripts', array( $this, 'admin_plugin_scripts' ) );
         add_action( 'admin_init', array( $this, 'recipes_admin_init' ));
         add_action( 'admin_init', array( $this, 'migrate_check' ));
+        add_action( 'admin_init', array( $this, 'flush_permalinks_if_needed' ));
         add_action( 'save_post', array( $this, 'recipes_save' ), 10, 2 );
         add_action( 'admin_menu', array( $this, 'admin_menu') );
-        add_action( 'update_option_wpurp_recipe_slug', array( $this, 'update_recipe_slug' ) );
         add_action( 'vp_option_set_after_save', array( $this, 'set_flush_needed' ) );
         add_action( 'pre_get_posts', array( $this, 'query_recipes' ) );
 
@@ -161,13 +161,7 @@ class WPURP_Core extends WPUltimateRecipe {
         $this->recipes_init();
         $this->wpurpp_custom_taxonomies_init();
 
-        flush_rewrite_rules();
-    }
-
-    public function update_recipe_slug()
-    {
-        $this->recipes_init();
-        flush_rewrite_rules();
+        update_option( 'wpurp_flush', '1' );
     }
 
     public function admin_menu()
@@ -269,9 +263,21 @@ class WPURP_Core extends WPUltimateRecipe {
 
         if($this->option('recipe_as_posts', '1') == '1')
         {
-            // Querying specific page or attachment
-            if($query->get('page_id') !== 0 || $query->get('pagename') !== '' || $query->get('attachment_id') !== 0) {
-                return;
+            // Hide recipes in admin posts overview when enabled
+            if( $this->option('show_recipes_in_posts', '1') != '1' )
+            {
+                global $pagenow;
+
+                if( $pagenow == 'edit.php' ) {
+                    return;
+                }
+            }
+
+            // Querying specific page (not set as home/posts page) or attachment
+            if(!$query->is_home()) {
+                if($query->get('page_id') !== 0 || $query->get('pagename') !== '' || $query->get('attachment_id') !== 0) {
+                    return;
+                }
             }
 
             // Querying a specific taxonomy
@@ -325,6 +331,19 @@ class WPURP_Core extends WPUltimateRecipe {
         }
 
         return;
+    }
+
+    function edit_posts_page()
+    {
+        if($this->option('recipe_as_posts', '1') == '1' && $this->option('show_recipes_in_posts', '1') == '1')
+        {
+            global $pagenow, $typenow;
+
+            if( $pagenow == 'edit.php' && isset($_REQUEST['post_type']) && $_REQUEST['post_type'] === 'Array' ) {
+                $_REQUEST['post_type'] = 'post';
+                $typenow = 'post';
+            }
+        }
     }
 
     /*
@@ -644,7 +663,7 @@ class WPURP_Core extends WPUltimateRecipe {
             $taxonomies = $this->add_taxonomy_to_array($taxonomies, 'cuisine', __( 'Cuisines', $this->pluginName ), __( 'Cuisine', $this->pluginName ));
 
             update_option('wpurp_taxonomies', $taxonomies);
-            flush_rewrite_rules();
+            update_option( 'wpurp_flush', '1' );
 
             wp_insert_term( __( 'Breakfast', $this->pluginName ), 'course' );
             wp_insert_term( __( 'Appetizer', $this->pluginName ), 'course' );

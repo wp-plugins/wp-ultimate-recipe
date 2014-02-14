@@ -3,7 +3,7 @@
 Plugin Name: WP Ultimate Recipe
 Plugin URI: http://www.wpultimaterecipeplugin.com
 Description: WP Ultimate Recipe is a user friendly plugin for adding recipes to any of your posts and pages.
-Version: 1.0.5
+Version: 1.0.6
 Author: Bootstrapped Ventures
 Author URI: http://www.bootstrappedventures.com
 License: GPLv2
@@ -13,7 +13,7 @@ License: GPLv2
  */
 
 define( 'COMPATIBLE_PREMIUM_VERSION', '1.0.2' );
-define( 'WPURP_VERSION', '1.0.4' );
+define( 'WPURP_VERSION', '1.0.6' );
 
 class WPUltimateRecipe {
     
@@ -51,6 +51,7 @@ class WPUltimateRecipe {
         // Hooks
         register_activation_hook( __FILE__, array( $this->wpurp_core, 'activate_taxonomies' ) );
         register_activation_hook( __FILE__, array( $this, 'wpurp_check_premium' ) );
+        register_activation_hook( __FILE__, array( $this, 'activation_notice' ) );
 
         // Actions
         // add_action( 'init', array( $this, 'load_installed_addons' ), -10 ); // Put this in core-functions
@@ -83,6 +84,14 @@ class WPUltimateRecipe {
     {
         if(get_current_screen()->id == 'recipe_page_wpurp_admin' && get_user_meta( get_current_user_id(), '_wpurp_hide_notice', true ) != get_option($this->pluginName . '_version')) {
             include($this->pluginDir . '/helper/drip_form.php');
+        }
+
+        if( $notices = get_option( 'wpurp_deferred_admin_notices' ) ) {
+            foreach( $notices as $notice ) {
+                echo '<div class="updated"><p>'.$notice.'</p></div>';
+            }
+
+            delete_option('wpurp_deferred_admin_notices');
         }
     }
 
@@ -117,6 +126,16 @@ class WPUltimateRecipe {
 
         }
 
+    }
+
+    public function activation_notice() {
+        $notices = get_option('wpurp_deferred_admin_notices', array());
+
+        $notice  = '<strong>WP Ultimate Recipe</strong><br/>';
+        $notice .= '<a href="'.admin_url('edit.php?post_type=recipe&page=wpurp_admin#_latest_news').'">Check out our latest changes in your <strong>Recipes > Admin</strong> panel</a>';
+
+        $notices[] = $notice;
+        update_option('wpurp_deferred_admin_notices', $notices);
     }
 
     /*
@@ -244,7 +263,7 @@ class WPUltimateRecipe {
     /*
      * Returns array of all recipes
      */
-    protected function get_recipes( $orderby = 'date', $order = 'DESC', $taxonomy = '', $term = '', $limit = -1 ) {
+    protected function get_recipes( $orderby = 'date', $order = 'DESC', $taxonomy = '', $term = '', $limit = -1, $author = '' ) {
         $args = array(
             'post_type' => 'recipe',
             'post_status' => 'publish',
@@ -271,6 +290,10 @@ class WPUltimateRecipe {
             } else {
                 $args[$taxonomy] = $term;
             }
+        }
+
+        if( !is_null($author) && $author != '' ) {
+            $args['author'] = $author;
         }
         
         $query = new WP_Query( $args );

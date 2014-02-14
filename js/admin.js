@@ -197,6 +197,18 @@ jQuery(document).ready(function() {
         }
     });
 
+    // Hide AutoSuggest box on TAB or click
+    jQuery('#recipe-ingredients').on('keydown', function(e) {
+        var keyCode = e.keyCode || e.which;
+
+        if (keyCode == 9) {
+            jQuery('ul.ac_results').hide();
+        }
+    });
+    jQuery('#recipe-ingredients').on('click', function() {
+        jQuery('ul.ac_results').hide();
+    });
+
     jQuery('.ingredients-delete').on('click', function(){
         jQuery(this).parents('tr').remove();
         addRecipeIngredientOnTab();

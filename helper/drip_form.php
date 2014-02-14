@@ -7,7 +7,7 @@
         <p data-drip-attribute="description">Don't let your site be "just another recipe blog". Discover the secrets of successful food bloggers in our free email course and find out how to stand out from the crowd.</p>
         <div id="wpurp_drip_form_div">
             <label for="fields[email]">Email</label><br />
-            <input type="email" name="fields[email]" id="email" value="" />
+            <input type="email" name="fields[email]" id="email" value="<?php echo wp_get_current_user()->user_email; ?>" />
             <input type="submit" class="button button-primary" name="submit" id="submit" value="Sign me up!" data-drip-attribute="sign-up-button" />
         </div>
     </form>

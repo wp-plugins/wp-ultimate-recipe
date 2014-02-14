@@ -11,6 +11,16 @@ function wpurp_admin_latest_news_changelog()
     return $out;
 }
 
+function wpurp_admin_latest_news_video_lessons()
+{
+    ob_start();
+    include('video_lessons.html');
+    $out = ob_get_contents();
+    ob_end_clean();
+
+    return $out;
+}
+
 function wpurp_admin_recipe_slug_preview( $slug )
 {
     return __( 'The recipe archive can be found at', 'wp-ultimate-recipe' ) . ' <a href="'.site_url('/'.$slug.'/').'" target="_blank">'.site_url('/'.$slug.'/').'</a>';
@@ -132,9 +142,42 @@ function wpurp_shortcode_generator_taxonomies()
     return $taxonomy_list;
 }
 
+function wpurp_shortcode_generator_authors()
+{
+    $authors_list = array();
+    $authors = array();
+
+    $args = array(
+        'post_type' => 'recipe',
+        'no-paging' => true,
+        'posts_per_page' => -1,
+    );
+
+    $recipes = get_posts( $args );
+    foreach ( $recipes as $recipe ) {
+
+        $user_id = $recipe->post_author;
+
+        if(!in_array($user_id, $authors))
+        {
+            $authors[] = $user_id;
+
+            $user = get_userdata($user_id);
+
+            $authors_list[] = array(
+                'value' => $user_id,
+                'label' => $user->display_name,
+            );
+        }
+    }
+
+    return $authors_list;
+}
+
 //=-=-=-=-=-=-= WHITELIST =-=-=-=-=-=-=
 
 VP_Security::instance()->whitelist_function('wpurp_admin_latest_news_changelog');
+VP_Security::instance()->whitelist_function('wpurp_admin_latest_news_video_lessons');
 VP_Security::instance()->whitelist_function('wpurp_admin_recipe_slug_preview');
 VP_Security::instance()->whitelist_function('wpurp_admin_user_menus_slug_preview');
 VP_Security::instance()->whitelist_function('wpurp_admin_premium_not_installed');
@@ -146,3 +189,4 @@ VP_Security::instance()->whitelist_function('wpurp_admin_import_recipress');
 VP_Security::instance()->whitelist_function('wpurp_shortcode_generator_recipes_by_date');
 VP_Security::instance()->whitelist_function('wpurp_shortcode_generator_recipes_by_title');
 VP_Security::instance()->whitelist_function('wpurp_shortcode_generator_taxonomies');
+VP_Security::instance()->whitelist_function('wpurp_shortcode_generator_authors');

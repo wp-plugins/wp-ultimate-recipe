@@ -40,6 +40,7 @@ We also have a [premium version](http://www.wpultimaterecipeplugin.com/#premium)
 *   Custom **ingredient links** (great for affiliate marketing)
 *   Let your **users rate your recipes**
 *   Advanced usage of **WP categories and tags**
+*   Dynamically switch between **Imperial and Metric units**
 
 Feel free to contact me if any features are missing.
 You can find more information at [WPUltimateRecipePlugin.com](http://www.wpultimaterecipeplugin.com/)
@@ -63,6 +64,13 @@ You can find more information at [WPUltimateRecipePlugin.com](http://www.wpultim
 2. Manage everything about your recipes in one place
 
 == Changelog ==
+
+= 1.0.6 =
+* Fix: Recipe notes newlines work now
+* Fix: AutoSuggest ingredient should hide now
+* Fix: Recipes as posts integration fixes
+* Premium: Convert between Imperial and Metric units
+* Premium: List all recipes by author
 
 = 1.0.5 =
 * Recipes as posts fix
@@ -167,6 +175,9 @@ You can find more information at [WPUltimateRecipePlugin.com](http://www.wpultim
 * Very first version of this plugin
 
 == Upgrade notice ==
+
+= 1.0.6 =
+Upgrade for bug fixes and new premium features
 
 = 1.0.5 =
 Upgrade if you use recipes as posts

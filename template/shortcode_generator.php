@@ -80,10 +80,27 @@ $shortcode_generator = array(
                                 'value' => 'name',
                                 'label' => __('Name', $this->pluginName),
                             ),
+                            array(
+                                'value' => 'author',
+                                'label' => __('Author', $this->pluginName),
+                            ),
                             'data' => array(
                                 array(
                                     'source' => 'function',
                                     'value' => 'wpurp_shortcode_generator_taxonomies',
+                                ),
+                            ),
+                        ),
+                    ),
+                    array(
+                        'type' => 'multiselect',
+                        'name' => 'limit_author',
+                        'label' => __('Limit Author', $this->pluginName),
+                        'items' => array(
+                            'data' => array(
+                                array(
+                                    'source' => 'function',
+                                    'value' => 'wpurp_shortcode_generator_authors',
                                 ),
                             ),
                         ),

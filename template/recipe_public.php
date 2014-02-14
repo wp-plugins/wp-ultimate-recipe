@@ -245,7 +245,7 @@ $recipe_title = $this->get_recipe_title( $recipe_post );
     <?php if( $recipe['recipe_notes'][0] ) { ?>
     <h3><?php _e( 'Recipe notes', $this->pluginName ); ?></h3>
     <div class="recipe-notes">
-        <?php echo $recipe['recipe_notes'][0]; ?>
+        <?php echo apply_filters( 'the_content', $recipe['recipe_notes'][0] ); ?>
     </div>
     <?php } ?>
     <?php if( $this->option('recipe_sharing_enable', '1') == '1' ) { ?>

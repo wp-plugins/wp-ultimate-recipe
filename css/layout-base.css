@@ -117,6 +117,12 @@
     font-size: 1em;
 }
 
+.wpurp-container .advanced-adjust-recipe-servings {
+    width: 40px;
+    padding: 2px;
+    font-size: 1em;
+}
+
 .wpurp-container ol.recipe-instructions {
     margin: 0 23px !important;
 }

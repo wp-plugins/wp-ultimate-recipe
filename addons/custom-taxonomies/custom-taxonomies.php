@@ -242,7 +242,7 @@ if( class_exists( 'WPUltimateRecipe' ) ) {
                 update_option('wpurp_taxonomies', $taxonomies);
 
                 $this->custom_taxonomies_init();
-                flush_rewrite_rules();
+                update_option( 'wpurp_flush', '1' );
             }
 
             wp_redirect( $_SERVER['HTTP_REFERER'] );

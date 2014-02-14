@@ -12,6 +12,21 @@ $admin_menu = array(
             'controls' => array(
                 array(
                     'type' => 'section',
+                    'title' => __('Latest Video Lesson', $this->pluginName),
+                    'name' => 'section_video_lessons',
+                    'fields' => array(
+                        array(
+                            'type' => 'htmlunsafe',
+                            'name' => 'latest_news_video_lessons_' . get_option($this->pluginName . '_version'),
+                            'binding' => array(
+                                'field'    => '',
+                                'function' => 'wpurp_admin_latest_news_video_lessons',
+                            ),
+                        ),
+                    ),
+                ),
+                array(
+                    'type' => 'section',
                     'title' => __('Changelog', $this->pluginName),
                     'name' => 'section_changelog',
                     'fields' => array(
@@ -47,6 +62,13 @@ $admin_menu = array(
                         ),
                         array(
                             'type' => 'toggle',
+                            'name' => 'show_recipes_in_posts',
+                            'label' => __('Recipes in admin posts', $this->pluginName),
+                            'description' => __( 'Show recipes in admin posts overview when acting as posts.', $this->pluginName ),
+                            'default' => '1',
+                        ),
+                        array(
+                            'type' => 'toggle',
                             'name' => 'recipe_adjustable_servings',
                             'label' => __('Adjustable Servings', $this->pluginName),
                             'description' => __( 'Allow users to dynamically adjust the servings of recipes.', $this->pluginName ),
@@ -57,7 +79,7 @@ $admin_menu = array(
                             'name' => 'recipe_images_clickable',
                             'label' => __('Clickable Images', $this->pluginName),
                             'description' => __( 'Best used in combination with a lightbox plugin.', $this->pluginName ),
-                            'default' => '0',
+                            'default' => '',
                         ),
                         array(
                             'type' => 'toggle',
@@ -583,6 +605,39 @@ $admin_menu = array(
                             'name' => 'user_ratings_vote_attention',
                             'label' => __('Show indicator', $this->pluginName),
                             'description' => __( 'Attract attention to the possibility to vote.', $this->pluginName ),
+                            'default' => '1',
+                        ),
+                    ),
+                ),
+            ),
+        ),
+//=-=-=-=-=-=-= UNIT CONVERSION =-=-=-=-=-=-=
+        array(
+            'title' => __('Unit Conversion', $this->pluginName),
+            'name' => 'unit_conversion',
+            'icon' => 'font-awesome:fa-exchange',
+            'controls' => array(
+                array(
+                    'type' => 'section',
+                    'title' => __('General', $this->pluginName),
+                    'name' => 'section_unit_conversion_general',
+                    'fields' => array(
+                        array(
+                            'type' => 'notebox',
+                            'name' => 'unit_conversion_premium_not_installed',
+                            'label' => 'WP Ultimate Recipe Premium',
+                            'description' => __('These features are only available in ', $this->pluginName) . ' <a href="http://www.wpultimaterecipeplugin.com/premium/" target="_blank">WP Ultimate Recipe Premium</a></strong>.',
+                            'status' => 'warning',
+                            'dependency' => array(
+                                'field' => '',
+                                'function' => 'wpurp_admin_premium_not_installed',
+                            ),
+                        ),
+                        array(
+                            'type' => 'toggle',
+                            'name' => 'recipe_adjustable_units',
+                            'label' => __('Allow Conversion', $this->pluginName),
+                            'description' => __( 'Allow your visitors to switch between Imperial and Metric units.', $this->pluginName ),
                             'default' => '1',
                         ),
                     ),

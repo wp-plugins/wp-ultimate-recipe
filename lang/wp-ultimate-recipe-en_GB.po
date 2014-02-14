@@ -1,323 +1,19 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WP Ultimate Recipe Plugin\n"
-"POT-Creation-Date: 2014-01-24 16:45+0100\n"
-"PO-Revision-Date: 2014-01-24 16:52+0100\n"
+"POT-Creation-Date: 2014-02-14 20:18+0100\n"
+"PO-Revision-Date: 2014-02-14 20:18+0100\n"
 "Last-Translator: Brecht Vandersmissen <brecht.vandersmissen@gmail.com>\n"
 "Language-Team: BrechtVds.be\n"
+"Language: en_GB\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.7\n"
+"X-Generator: Poedit 1.6.4\n"
 "X-Poedit-KeywordsList: __;_e\n"
 "X-Poedit-Basepath: /Users/Brecht/Sites/WPUltimateRecipePlugin/\n"
 "X-Poedit-SearchPath-0: core\n"
 "X-Poedit-SearchPath-1: wp-ultimate-recipe-premium\n"
-
-#: core/core-functions.php:221 core/template/shortcode_generator.php:4
-msgid "Recipes"
-msgstr ""
-
-#: core/core-functions.php:222 core/core-functions.php:310
-#: core/template/admin.php:38 core/template/shortcode_generator.php:17
-#: core/template/shortcode_generator.php:36
-msgid "Recipe"
-msgstr ""
-
-#: core/core-functions.php:234 core/core-functions.php:235
-#: core/core-functions.php:641
-#: core/addons/custom-taxonomies/custom-taxonomies.php:226
-#: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:270
-#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:49
-#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:50
-msgid "Add New"
-msgstr ""
-
-#: core/core-functions.php:236 core/core-functions.php:237
-#: core/core-functions.php:639
-#: core/addons/custom-taxonomies/custom-taxonomies.php:224
-#: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:108
-#: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:268
-#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:51
-#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:52
-msgid "Edit"
-msgstr ""
-
-#: core/core-functions.php:238 core/core-functions.php:642
-#: core/addons/custom-taxonomies/custom-taxonomies.php:227
-#: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:271
-#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:53
-msgid "New"
-msgstr ""
-
-#: core/core-functions.php:239 core/core-functions.php:240
-#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:54
-#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:55
-msgid "View"
-msgstr ""
-
-#: core/core-functions.php:241 core/core-functions.php:636
-#: core/addons/custom-taxonomies/custom-taxonomies.php:221
-#: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:265
-#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:56
-msgid "Search"
-msgstr ""
-
-#: core/core-functions.php:242 core/core-functions.php:243
-#: core/core-functions.php:646
-#: core/addons/custom-taxonomies/custom-taxonomies.php:231
-#: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:275
-#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:57
-#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:58
-msgid "No"
-msgstr ""
-
-#: core/core-functions.php:242 core/core-functions.php:646
-#: core/addons/custom-taxonomies/custom-taxonomies.php:231
-#: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:275
-#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:57
-msgid "found."
-msgstr ""
-
-#: core/core-functions.php:243
-#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:58
-msgid "found in trash."
-msgstr ""
-
-#: core/core-functions.php:244
-#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:59
-msgid "Parent"
-msgstr ""
-
-#: core/core-functions.php:559
-#: wp-ultimate-recipe-premium/addons/extended-shortcodes/extended-shortcodes.php:134
-msgid ""
-"You have to create a recipe first, check the 'Recipes' menu on the left."
-msgstr ""
-
-#: core/core-functions.php:598 core/template/admin.php:73
-#: core/template/recipe_admin.php:87 core/template/recipe_public.php:135
-#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/compact.php:140
-#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/default.php:140
-#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/modern.php:99
-msgid "Ingredients"
-msgstr ""
-
-#: core/core-functions.php:598
-#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:205
-msgid "Ingredient"
-msgstr ""
-
-#: core/core-functions.php:599
-msgid "Courses"
-msgstr ""
-
-#: core/core-functions.php:599
-msgid "Course"
-msgstr ""
-
-#: core/core-functions.php:600
-msgid "Cuisines"
-msgstr ""
-
-#: core/core-functions.php:600
-msgid "Cuisine"
-msgstr ""
-
-#: core/core-functions.php:605
-msgid "Breakfast"
-msgstr ""
-
-#: core/core-functions.php:606
-msgid "Appetizer"
-msgstr ""
-
-#: core/core-functions.php:607
-msgid "Soup"
-msgstr ""
-
-#: core/core-functions.php:608
-msgid "Main Course"
-msgstr ""
-
-#: core/core-functions.php:609
-msgid "Side Dish"
-msgstr ""
-
-#: core/core-functions.php:610
-msgid "Salad"
-msgstr ""
-
-#: core/core-functions.php:611
-msgid "Dessert"
-msgstr ""
-
-#: core/core-functions.php:612
-msgid "Snack"
-msgstr ""
-
-#: core/core-functions.php:613
-msgid "Drinks"
-msgstr ""
-
-#: core/core-functions.php:615
-msgid "French"
-msgstr ""
-
-#: core/core-functions.php:616
-msgid "Italian"
-msgstr ""
-
-#: core/core-functions.php:617
-msgid "Mediterranean"
-msgstr ""
-
-#: core/core-functions.php:618
-msgid "Indian"
-msgstr ""
-
-#: core/core-functions.php:619
-msgid "Chinese"
-msgstr ""
-
-#: core/core-functions.php:620
-msgid "Japanese"
-msgstr ""
-
-#: core/core-functions.php:621
-msgid "American"
-msgstr ""
-
-#: core/core-functions.php:622
-msgid "Mexican"
-msgstr ""
-
-#: core/core-functions.php:637
-#: core/addons/custom-taxonomies/custom-taxonomies.php:222
-#: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:266
-msgid "Popular"
-msgstr ""
-
-#: core/core-functions.php:638
-#: core/addons/custom-taxonomies/custom-taxonomies.php:223
-#: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:267
-#: wp-ultimate-recipe-premium/addons/recipe-grid/recipe-grid.php:85
-msgid "All"
-msgstr ""
-
-#: core/core-functions.php:640
-#: core/addons/custom-taxonomies/custom-taxonomies.php:225
-#: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:269
-msgid "Update"
-msgstr ""
-
-#: core/core-functions.php:642
-#: core/addons/custom-taxonomies/custom-taxonomies.php:78
-#: core/addons/custom-taxonomies/custom-taxonomies.php:133
-#: core/addons/custom-taxonomies/custom-taxonomies.php:227
-#: core/template/shortcode_generator.php:81
-#: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:81
-#: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:147
-#: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:271
-msgid "Name"
-msgstr ""
-
-#: core/core-functions.php:643
-#: core/addons/custom-taxonomies/custom-taxonomies.php:228
-#: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:272
-msgid "Separate"
-msgstr ""
-
-#: core/core-functions.php:643
-#: core/addons/custom-taxonomies/custom-taxonomies.php:228
-#: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:272
-msgid "with commas"
-msgstr ""
-
-#: core/core-functions.php:644
-#: core/addons/custom-taxonomies/custom-taxonomies.php:229
-#: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:273
-msgid "Add or remove"
-msgstr ""
-
-#: core/core-functions.php:645
-#: core/addons/custom-taxonomies/custom-taxonomies.php:230
-#: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:274
-msgid "Choose from the most used"
-msgstr ""
-
-#: core/core-functions.php:673 core/core-functions.php:686
-msgid "Ratings"
-msgstr ""
-
-#: core/core-functions.php:674 core/template/recipe_admin.php:35
-#: wp-ultimate-recipe-premium/addons/user-ratings/helper/public_rating.php:32
-msgid "Rating"
-msgstr ""
-
-#: core/core-functions.php:675
-msgid "Search Ratings"
-msgstr ""
-
-#: core/core-functions.php:676
-msgid "Popular Ratings"
-msgstr ""
-
-#: core/core-functions.php:677
-msgid "All Ratings"
-msgstr ""
-
-#: core/core-functions.php:678
-msgid "Edit Rating"
-msgstr ""
-
-#: core/core-functions.php:679
-msgid "Update Rating"
-msgstr ""
-
-#: core/core-functions.php:680
-msgid "Add New Rating"
-msgstr ""
-
-#: core/core-functions.php:681
-msgid "New Rating Name"
-msgstr ""
-
-#: core/core-functions.php:682
-msgid "Separate ratings with commas"
-msgstr ""
-
-#: core/core-functions.php:683
-msgid "Add or remove ratings"
-msgstr ""
-
-#: core/core-functions.php:684
-msgid "Choose from the most used ratings"
-msgstr ""
-
-#: core/core-functions.php:685
-msgid "No ratings found."
-msgstr ""
-
-#: core/core-functions.php:709 core/core-functions.php:723
-msgid "Link"
-msgstr ""
-
-#: core/core-functions.php:710
-msgid "Send your visitors to a specific link when clicking on an ingredient."
-msgstr ""
-
-#: core/wp-ultimate-recipe.php:109
-msgid "Please update WP Ultimate Recipe Premium to at least version"
-msgstr ""
-
-#: core/wp-ultimate-recipe.php:163 core/wp-ultimate-recipe.php:164
-msgid "Admin"
-msgstr ""
-
-#: core/wp-ultimate-recipe.php:181
-msgid "Shortcodes"
-msgstr ""
 
 #: core/addons/custom-taxonomies/custom-taxonomies.php:49
 #: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:52
@@ -353,9 +49,19 @@ msgstr ""
 msgid "Singular Name"
 msgstr ""
 
+#: core/addons/custom-taxonomies/custom-taxonomies.php:78
+#: core/addons/custom-taxonomies/custom-taxonomies.php:133
+#: core/addons/custom-taxonomies/custom-taxonomies.php:227
+#: core/core-functions.php:705 core/template/shortcode_generator.php:81
+#: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:81
+#: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:147
+#: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:271
+msgid "Name"
+msgstr ""
+
 #: core/addons/custom-taxonomies/custom-taxonomies.php:81
 #: core/addons/custom-taxonomies/custom-taxonomies.php:151
-#: core/template/admin.php:196 core/template/admin.php:730
+#: core/template/admin.php:218 core/template/admin.php:785
 #: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:84
 #: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:165
 msgid "Slug"
@@ -410,24 +116,306 @@ msgstr ""
 msgid "Cancel Edit"
 msgstr ""
 
+#: core/addons/custom-taxonomies/custom-taxonomies.php:221
+#: core/core-functions.php:245 core/core-functions.php:699
+#: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:265
+#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:55
+msgid "Search"
+msgstr ""
+
+#: core/addons/custom-taxonomies/custom-taxonomies.php:222
+#: core/core-functions.php:700
+#: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:266
+msgid "Popular"
+msgstr ""
+
+#: core/addons/custom-taxonomies/custom-taxonomies.php:223
+#: core/core-functions.php:701
+#: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:267
+#: wp-ultimate-recipe-premium/addons/recipe-grid/recipe-grid.php:85
+msgid "All"
+msgstr ""
+
+#: core/addons/custom-taxonomies/custom-taxonomies.php:224
+#: core/core-functions.php:240 core/core-functions.php:241
+#: core/core-functions.php:702
+#: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:108
+#: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:268
+#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:50
+#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:51
+msgid "Edit"
+msgstr ""
+
+#: core/addons/custom-taxonomies/custom-taxonomies.php:225
+#: core/core-functions.php:703
+#: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:269
+msgid "Update"
+msgstr ""
+
+#: core/addons/custom-taxonomies/custom-taxonomies.php:226
+#: core/core-functions.php:238 core/core-functions.php:239
+#: core/core-functions.php:704
+#: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:270
+#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:48
+#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:49
+msgid "Add New"
+msgstr ""
+
+#: core/addons/custom-taxonomies/custom-taxonomies.php:227
+#: core/core-functions.php:242 core/core-functions.php:705
+#: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:271
+#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:52
+msgid "New"
+msgstr ""
+
+#: core/addons/custom-taxonomies/custom-taxonomies.php:228
+#: core/core-functions.php:706
+#: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:272
+msgid "Separate"
+msgstr ""
+
+#: core/addons/custom-taxonomies/custom-taxonomies.php:228
+#: core/core-functions.php:706
+#: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:272
+msgid "with commas"
+msgstr ""
+
+#: core/addons/custom-taxonomies/custom-taxonomies.php:229
+#: core/core-functions.php:707
+#: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:273
+msgid "Add or remove"
+msgstr ""
+
+#: core/addons/custom-taxonomies/custom-taxonomies.php:230
+#: core/core-functions.php:708
+#: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:274
+msgid "Choose from the most used"
+msgstr ""
+
+#: core/addons/custom-taxonomies/custom-taxonomies.php:231
+#: core/core-functions.php:246 core/core-functions.php:247
+#: core/core-functions.php:709
+#: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:275
+#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:56
+#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:57
+msgid "No"
+msgstr ""
+
+#: core/addons/custom-taxonomies/custom-taxonomies.php:231
+#: core/core-functions.php:246 core/core-functions.php:709
+#: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:275
+#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:56
+msgid "found."
+msgstr ""
+
 #: core/addons/custom-taxonomies/taxonomies-builder.php:5
 #: wp-ultimate-recipe-premium/addons/custom-taxonomies/taxonomies-builder.php:5
 msgid "Custom Tags"
 msgstr ""
 
-#: core/helper/admin_menu_helper.php:16
+#: core/core-functions.php:225 core/template/shortcode_generator.php:4
+msgid "Recipes"
+msgstr ""
+
+#: core/core-functions.php:226 core/core-functions.php:376
+#: core/template/admin.php:53 core/template/shortcode_generator.php:17
+#: core/template/shortcode_generator.php:36
+msgid "Recipe"
+msgstr ""
+
+#: core/core-functions.php:243 core/core-functions.php:244
+#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:53
+#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:54
+msgid "View"
+msgstr ""
+
+#: core/core-functions.php:247
+#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:57
+msgid "found in trash."
+msgstr ""
+
+#: core/core-functions.php:248
+#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:58
+msgid "Parent"
+msgstr ""
+
+#: core/core-functions.php:622
+#: wp-ultimate-recipe-premium/addons/extended-shortcodes/extended-shortcodes.php:164
+msgid ""
+"You have to create a recipe first, check the 'Recipes' menu on the left."
+msgstr ""
+
+#: core/core-functions.php:661 core/template/admin.php:95
+#: core/template/recipe_admin.php:87 core/template/recipe_public.php:135
+#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/compact.php:140
+#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/default.php:140
+#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/modern.php:98
+msgid "Ingredients"
+msgstr ""
+
+#: core/core-functions.php:661
+#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:211
+msgid "Ingredient"
+msgstr ""
+
+#: core/core-functions.php:662
+msgid "Courses"
+msgstr ""
+
+#: core/core-functions.php:662
+msgid "Course"
+msgstr ""
+
+#: core/core-functions.php:663
+msgid "Cuisines"
+msgstr ""
+
+#: core/core-functions.php:663
+msgid "Cuisine"
+msgstr ""
+
+#: core/core-functions.php:668
+msgid "Breakfast"
+msgstr ""
+
+#: core/core-functions.php:669
+msgid "Appetizer"
+msgstr ""
+
+#: core/core-functions.php:670
+msgid "Soup"
+msgstr ""
+
+#: core/core-functions.php:671
+msgid "Main Course"
+msgstr ""
+
+#: core/core-functions.php:672
+msgid "Side Dish"
+msgstr ""
+
+#: core/core-functions.php:673
+msgid "Salad"
+msgstr ""
+
+#: core/core-functions.php:674
+msgid "Dessert"
+msgstr ""
+
+#: core/core-functions.php:675
+msgid "Snack"
+msgstr ""
+
+#: core/core-functions.php:676
+msgid "Drinks"
+msgstr ""
+
+#: core/core-functions.php:678
+msgid "French"
+msgstr ""
+
+#: core/core-functions.php:679
+msgid "Italian"
+msgstr ""
+
+#: core/core-functions.php:680
+msgid "Mediterranean"
+msgstr ""
+
+#: core/core-functions.php:681
+msgid "Indian"
+msgstr ""
+
+#: core/core-functions.php:682
+msgid "Chinese"
+msgstr ""
+
+#: core/core-functions.php:683
+msgid "Japanese"
+msgstr ""
+
+#: core/core-functions.php:684
+msgid "American"
+msgstr ""
+
+#: core/core-functions.php:685
+msgid "Mexican"
+msgstr ""
+
+#: core/core-functions.php:736 core/core-functions.php:749
+msgid "Ratings"
+msgstr ""
+
+#: core/core-functions.php:737 core/template/recipe_admin.php:35
+#: wp-ultimate-recipe-premium/addons/user-ratings/helper/public_rating.php:32
+msgid "Rating"
+msgstr ""
+
+#: core/core-functions.php:738
+msgid "Search Ratings"
+msgstr ""
+
+#: core/core-functions.php:739
+msgid "Popular Ratings"
+msgstr ""
+
+#: core/core-functions.php:740
+msgid "All Ratings"
+msgstr ""
+
+#: core/core-functions.php:741
+msgid "Edit Rating"
+msgstr ""
+
+#: core/core-functions.php:742
+msgid "Update Rating"
+msgstr ""
+
+#: core/core-functions.php:743
+msgid "Add New Rating"
+msgstr ""
+
+#: core/core-functions.php:744
+msgid "New Rating Name"
+msgstr ""
+
+#: core/core-functions.php:745
+msgid "Separate ratings with commas"
+msgstr ""
+
+#: core/core-functions.php:746
+msgid "Add or remove ratings"
+msgstr ""
+
+#: core/core-functions.php:747
+msgid "Choose from the most used ratings"
+msgstr ""
+
+#: core/core-functions.php:748
+msgid "No ratings found."
+msgstr ""
+
+#: core/core-functions.php:772 core/core-functions.php:786
+msgid "Link"
+msgstr ""
+
+#: core/core-functions.php:773
+msgid "Send your visitors to a specific link when clicking on an ingredient."
+msgstr ""
+
+#: core/helper/admin_menu_helper.php:26
 msgid "The recipe archive can be found at"
 msgstr ""
 
-#: core/helper/admin_menu_helper.php:22
+#: core/helper/admin_menu_helper.php:32
 msgid "The user menus archive can be found at"
 msgstr ""
 
-#: core/helper/admin_menu_helper.php:46
+#: core/helper/admin_menu_helper.php:56
 msgid "Manage custom recipe tags"
 msgstr ""
 
-#: core/helper/admin_menu_helper.php:51
+#: core/helper/admin_menu_helper.php:61
 msgid "Import ReciPress recipes"
 msgstr ""
 
@@ -515,14 +503,6 @@ msgstr ""
 msgid "Export/Import"
 msgstr ""
 
-#: core/lib/vafpress/classes/shortcodegenerator.php:260
-msgid "Insert"
-msgstr ""
-
-#: core/lib/vafpress/classes/shortcodegenerator.php:261
-msgid "Cancel"
-msgstr ""
-
 #: core/lib/vafpress/classes/option/control/set.php:359
 msgid "Saving successful"
 msgstr ""
@@ -533,6 +513,14 @@ msgstr ""
 
 #: core/lib/vafpress/classes/option/control/set.php:376
 msgid "No changes made"
+msgstr ""
+
+#: core/lib/vafpress/classes/shortcodegenerator.php:260
+msgid "Insert"
+msgstr ""
+
+#: core/lib/vafpress/classes/shortcodegenerator.php:261
+msgid "Cancel"
 msgstr ""
 
 #: core/lib/vafpress/config/messages.php:13
@@ -619,7 +607,7 @@ msgstr ""
 #: core/lib/vafpress/views/option/impexp.php:14
 #: wp-ultimate-recipe-premium/addons/import/import.php:29
 #: wp-ultimate-recipe-premium/addons/import/import.php:51
-#: wp-ultimate-recipe-premium/addons/import/import.php:106
+#: wp-ultimate-recipe-premium/addons/import/import.php:87
 msgid "Import"
 msgstr ""
 
@@ -677,487 +665,511 @@ msgid "Latest News"
 msgstr ""
 
 #: core/template/admin.php:15
+msgid "Latest Video Lesson"
+msgstr ""
+
+#: core/template/admin.php:30
 msgid "Changelog"
 msgstr ""
 
-#: core/template/admin.php:32
+#: core/template/admin.php:47
 msgid "General Settings"
 msgstr ""
 
-#: core/template/admin.php:44
+#: core/template/admin.php:59
 msgid "Recipes act as posts"
 msgstr ""
 
-#: core/template/admin.php:45
+#: core/template/admin.php:60
 msgid ""
 "Recipes act like normal posts. For example: they show up on your front page."
 msgstr ""
 
-#: core/template/admin.php:51
+#: core/template/admin.php:66
+msgid "Recipes in admin posts"
+msgstr ""
+
+#: core/template/admin.php:67
+msgid "Show recipes in admin posts overview when acting as posts."
+msgstr ""
+
+#: core/template/admin.php:73
 msgid "Adjustable Servings"
 msgstr ""
 
-#: core/template/admin.php:52
+#: core/template/admin.php:74
 msgid "Allow users to dynamically adjust the servings of recipes."
 msgstr ""
 
-#: core/template/admin.php:58
+#: core/template/admin.php:80
 msgid "Clickable Images"
 msgstr ""
 
-#: core/template/admin.php:59
+#: core/template/admin.php:81
 msgid "Best used in combination with a lightbox plugin."
 msgstr ""
 
-#: core/template/admin.php:65
+#: core/template/admin.php:87
 msgid "Link to plugin"
 msgstr ""
 
-#: core/template/admin.php:66
+#: core/template/admin.php:88
 msgid "Show a link to the plugin website as a little thank you."
 msgstr ""
 
-#: core/template/admin.php:80
+#: core/template/admin.php:102
 msgid "Custom links are only available in "
 msgstr ""
 
-#: core/template/admin.php:90
+#: core/template/admin.php:112
 msgid "Ingredient Links"
 msgstr ""
 
-#: core/template/admin.php:91
+#: core/template/admin.php:113
 msgid "Links to be used in the ingredient list."
 msgstr ""
 
-#: core/template/admin.php:95
+#: core/template/admin.php:117
 msgid "No ingredient links"
 msgstr ""
 
-#: core/template/admin.php:99
+#: core/template/admin.php:121
 msgid "Only link to ingredient archive page"
 msgstr ""
 
-#: core/template/admin.php:103
+#: core/template/admin.php:125
 msgid "Custom link if provided, otherwise archive page"
 msgstr ""
 
-#: core/template/admin.php:107
+#: core/template/admin.php:129
 msgid "Custom links if provided, otherwise no link"
 msgstr ""
 
-#: core/template/admin.php:118
+#: core/template/admin.php:140
 msgid "Custom Links"
 msgstr ""
 
-#: core/template/admin.php:119
+#: core/template/admin.php:141
 msgid "Custom links can be added on the "
 msgstr ""
 
-#: core/template/admin.php:119
+#: core/template/admin.php:141
 msgid "ingredients page"
 msgstr ""
 
-#: core/template/admin.php:123
+#: core/template/admin.php:145
 msgid "Open in the current tab/window"
 msgstr ""
 
-#: core/template/admin.php:127
+#: core/template/admin.php:149
 msgid "Open in a new tab/window"
 msgstr ""
 
-#: core/template/admin.php:143
+#: core/template/admin.php:165
 msgid "Recipe Archive Pages"
 msgstr ""
 
-#: core/template/admin.php:149 core/template/shortcode_generator.php:185
+#: core/template/admin.php:171 core/template/shortcode_generator.php:202
 msgid "Display"
 msgstr ""
 
-#: core/template/admin.php:153
+#: core/template/admin.php:175
 msgid "Only the excerpt"
 msgstr ""
 
-#: core/template/admin.php:157
+#: core/template/admin.php:179
 msgid "The entire recipe"
 msgstr ""
 
-#: core/template/admin.php:168
+#: core/template/admin.php:190
 msgid "Display Thumbnail"
 msgstr ""
 
-#: core/template/admin.php:169
+#: core/template/admin.php:191
 msgid "Thumbnail position depends on the theme you use"
 msgstr ""
 
-#: core/template/admin.php:173
+#: core/template/admin.php:195
 msgid "Never"
 msgstr ""
 
-#: core/template/admin.php:177
+#: core/template/admin.php:199
 msgid "Only on archive pages"
 msgstr ""
 
-#: core/template/admin.php:181
+#: core/template/admin.php:203
 msgid "Only on recipe pages"
 msgstr ""
 
-#: core/template/admin.php:185
+#: core/template/admin.php:207
 msgid "Always"
 msgstr ""
 
-#: core/template/admin.php:211 core/template/admin.php:745
+#: core/template/admin.php:233 core/template/admin.php:800
 msgid "404 error/page not found?"
 msgstr ""
 
-#: core/template/admin.php:212 core/template/admin.php:746
+#: core/template/admin.php:234 core/template/admin.php:801
 msgid "Try"
 msgstr ""
 
-#: core/template/admin.php:212 core/template/admin.php:746
+#: core/template/admin.php:234 core/template/admin.php:801
 msgid "flushing your permalinks"
 msgstr ""
 
-#: core/template/admin.php:221
+#: core/template/admin.php:243
 msgid "Recipe Template"
 msgstr ""
 
-#: core/template/admin.php:229 core/template/admin.php:392
-#: core/template/admin.php:479 core/template/admin.php:551
-#: core/template/admin.php:602 core/template/admin.php:686
-#: core/template/admin.php:761
+#: core/template/admin.php:251 core/template/admin.php:414
+#: core/template/admin.php:501 core/template/admin.php:573
+#: core/template/admin.php:629 core/template/admin.php:657
+#: core/template/admin.php:741 core/template/admin.php:816
 msgid "These features are only available in "
 msgstr ""
 
-#: core/template/admin.php:239
+#: core/template/admin.php:261
 msgid "Layout"
 msgstr ""
 
-#: core/template/admin.php:243 core/template/admin.php:268
+#: core/template/admin.php:265 core/template/admin.php:290
 msgid "Default"
 msgstr ""
 
-#: core/template/admin.php:247
+#: core/template/admin.php:269
 msgid "Compact"
 msgstr ""
 
-#: core/template/admin.php:251
+#: core/template/admin.php:273
 msgid "Modern"
 msgstr ""
 
-#: core/template/admin.php:262
+#: core/template/admin.php:284
 msgid "Style"
 msgstr ""
 
-#: core/template/admin.php:273
+#: core/template/admin.php:295
 msgid "Neutral"
 msgstr ""
 
-#: core/template/admin.php:278
+#: core/template/admin.php:300
 msgid "Blue"
 msgstr ""
 
-#: core/template/admin.php:283
+#: core/template/admin.php:305
 msgid "Green"
 msgstr ""
 
-#: core/template/admin.php:288
+#: core/template/admin.php:310
 msgid "Custom"
 msgstr ""
 
-#: core/template/admin.php:298
+#: core/template/admin.php:320
 msgid "Custom Style"
 msgstr ""
 
-#: core/template/admin.php:304
+#: core/template/admin.php:326
 msgid "Background image"
 msgstr ""
 
-#: core/template/admin.php:305
+#: core/template/admin.php:327
 msgid "Optional. A color can be used instead."
 msgstr ""
 
-#: core/template/admin.php:310
+#: core/template/admin.php:332
 msgid "Background"
 msgstr ""
 
-#: core/template/admin.php:311
+#: core/template/admin.php:333
 msgid "Main recipe background color"
 msgstr ""
 
-#: core/template/admin.php:311
+#: core/template/admin.php:333
 msgid "This will be used when no background image is selected."
 msgstr ""
 
-#: core/template/admin.php:318
+#: core/template/admin.php:340
 msgid "Panel background"
 msgstr ""
 
-#: core/template/admin.php:319
+#: core/template/admin.php:341
 msgid "Background for various panels depending on layout"
 msgstr ""
 
-#: core/template/admin.php:326
+#: core/template/admin.php:348
 msgid "Borders"
 msgstr ""
 
-#: core/template/admin.php:327
+#: core/template/admin.php:349
 msgid "Recipe borders color"
 msgstr ""
 
-#: core/template/admin.php:334
+#: core/template/admin.php:356
 msgid "Text"
 msgstr ""
 
-#: core/template/admin.php:335
+#: core/template/admin.php:357
 msgid "Recipe text color"
 msgstr ""
 
-#: core/template/admin.php:342
+#: core/template/admin.php:364
 msgid "Highlights"
 msgstr ""
 
-#: core/template/admin.php:343
+#: core/template/admin.php:365
 msgid "Links and other highlights"
 msgstr ""
 
-#: core/template/admin.php:350
+#: core/template/admin.php:372
 msgid "Hover"
 msgstr ""
 
-#: core/template/admin.php:351
+#: core/template/admin.php:373
 msgid "Links hover effect"
 msgstr ""
 
-#: core/template/admin.php:365
+#: core/template/admin.php:387
 msgid "Recipe Sharing"
 msgstr ""
 
-#: core/template/admin.php:371 core/template/admin.php:544
-#: core/template/recipe_admin.php:17
+#: core/template/admin.php:393 core/template/admin.php:566
+#: core/template/admin.php:622 core/template/recipe_admin.php:17
 msgid "General"
 msgstr ""
 
-#: core/template/admin.php:377
+#: core/template/admin.php:399
 msgid "Enable Sharing"
 msgstr ""
 
-#: core/template/admin.php:378
+#: core/template/admin.php:400
 msgid "Show sharing buttons."
 msgstr ""
 
-#: core/template/admin.php:385
+#: core/template/admin.php:407
 msgid "Default text to share"
 msgstr ""
 
-#: core/template/admin.php:402 core/template/admin.php:489
-#: core/template/admin.php:612 core/template/admin.php:696
+#: core/template/admin.php:424 core/template/admin.php:511
+#: core/template/admin.php:667 core/template/admin.php:751
 msgid "Important"
 msgstr ""
 
-#: core/template/admin.php:403
+#: core/template/admin.php:425
 msgid "Use %title% as a placeholder for the recipe title."
 msgstr ""
 
-#: core/template/admin.php:413
+#: core/template/admin.php:435
 msgid "Twitter"
 msgstr ""
 
-#: core/template/admin.php:420
+#: core/template/admin.php:442
 msgid "Pinterest"
 msgstr ""
 
-#: core/template/admin.php:430
+#: core/template/admin.php:452
 msgid "Recipe Tags"
 msgstr ""
 
-#: core/template/admin.php:436
+#: core/template/admin.php:458
 msgid "Custom Recipe Tags"
 msgstr ""
 
-#: core/template/admin.php:451
+#: core/template/admin.php:473
 msgid "WordPress Categories & Tags"
 msgstr ""
 
-#: core/template/admin.php:457
+#: core/template/admin.php:479
 msgid "Use Categories and Tags"
 msgstr ""
 
-#: core/template/admin.php:458
+#: core/template/admin.php:480
 msgid "Use the default WP Categories and Tags to organize your recipes."
 msgstr ""
 
-#: core/template/admin.php:464
+#: core/template/admin.php:486
 msgid "Show Recipes in Archives"
 msgstr ""
 
-#: core/template/admin.php:465
+#: core/template/admin.php:487
 msgid "Show recipes in the WP Categories and Tags archives."
 msgstr ""
 
-#: core/template/admin.php:472
+#: core/template/admin.php:494
 msgid "Advanced"
 msgstr ""
 
-#: core/template/admin.php:490
+#: core/template/admin.php:512
 msgid ""
 "Categories will only show up as tags in the recipe if they have a parent "
 "category. For example: a \"Courses\" parent category with \"Main Dish\" and "
 "\"Dessert\" as child categories assigned to your recipes."
 msgstr ""
 
-#: core/template/admin.php:500
+#: core/template/admin.php:522
 msgid "Show Categories in Recipe"
 msgstr ""
 
-#: core/template/admin.php:501
+#: core/template/admin.php:523
 msgid "Use WP categories as if they are tags for their parent category."
 msgstr ""
 
-#: core/template/admin.php:507
+#: core/template/admin.php:529
 msgid "User Submitted Categories"
 msgstr ""
 
-#: core/template/admin.php:508
+#: core/template/admin.php:530
 msgid "Allow users to assign categories when submitting recipes."
 msgstr ""
 
-#: core/template/admin.php:514
+#: core/template/admin.php:536
 msgid "User Submitted Tags"
 msgstr ""
 
-#: core/template/admin.php:515
+#: core/template/admin.php:537
 msgid "Allow users to assign tags when submitting recipes."
 msgstr ""
 
-#: core/template/admin.php:521
+#: core/template/admin.php:543
 msgid "Show Categories Filter"
 msgstr ""
 
-#: core/template/admin.php:522
+#: core/template/admin.php:544
 msgid "Users can see the categories when filtering."
 msgstr ""
 
-#: core/template/admin.php:528
+#: core/template/admin.php:550
 msgid "Show Tags Filter"
 msgstr ""
 
-#: core/template/admin.php:529
+#: core/template/admin.php:551
 msgid "Users can see the tags when filtering."
 msgstr ""
 
-#: core/template/admin.php:538 core/template/admin.php:561
+#: core/template/admin.php:560 core/template/admin.php:583
 msgid "User Ratings"
 msgstr ""
 
-#: core/template/admin.php:565
+#: core/template/admin.php:587
 msgid "Disabled"
 msgstr ""
 
-#: core/template/admin.php:569
+#: core/template/admin.php:591
 msgid "Only logged in users can rate recipes"
 msgstr ""
 
-#: core/template/admin.php:573
+#: core/template/admin.php:595
 msgid "Everyone can rate recipes"
 msgstr ""
 
-#: core/template/admin.php:584
+#: core/template/admin.php:606
 msgid "Show indicator"
 msgstr ""
 
-#: core/template/admin.php:585
+#: core/template/admin.php:607
 msgid "Attract attention to the possibility to vote."
 msgstr ""
 
-#: core/template/admin.php:594
+#: core/template/admin.php:616
+msgid "Unit Conversion"
+msgstr ""
+
+#: core/template/admin.php:639
+msgid "Allow Conversion"
+msgstr ""
+
+#: core/template/admin.php:640
+msgid "Allow your visitors to switch between Imperial and Metric units."
+msgstr ""
+
+#: core/template/admin.php:649
 msgid "User Submission"
 msgstr ""
 
-#: core/template/admin.php:613
+#: core/template/admin.php:668
 msgid "Use the [wpurp_submissions] shortcode to display the front-end form."
 msgstr ""
 
-#: core/template/admin.php:613 core/template/admin.php:697
+#: core/template/admin.php:668 core/template/admin.php:752
 msgid "The shortcode can be added to any page or post."
 msgstr ""
 
-#: core/template/admin.php:623
+#: core/template/admin.php:678
 msgid "Allow submissions from"
 msgstr ""
 
-#: core/template/admin.php:627 core/template/admin.php:651
-#: core/template/admin.php:711
+#: core/template/admin.php:682 core/template/admin.php:706
+#: core/template/admin.php:766
 msgid "Nobody"
 msgstr ""
 
-#: core/template/admin.php:627 core/template/admin.php:711
+#: core/template/admin.php:682 core/template/admin.php:766
 msgid "disabled"
 msgstr ""
 
-#: core/template/admin.php:631 core/template/admin.php:655
-#: core/template/admin.php:715
+#: core/template/admin.php:686 core/template/admin.php:710
+#: core/template/admin.php:770
 msgid "Guests and registered users"
 msgstr ""
 
-#: core/template/admin.php:635 core/template/admin.php:659
-#: core/template/admin.php:719
+#: core/template/admin.php:690 core/template/admin.php:714
+#: core/template/admin.php:774
 msgid "Registered users only"
 msgstr ""
 
-#: core/template/admin.php:646
+#: core/template/admin.php:701
 msgid "Auto approve submissions from"
 msgstr ""
 
-#: core/template/admin.php:647
+#: core/template/admin.php:702
 msgid "Publish recipe immediately on submission."
 msgstr ""
 
-#: core/template/admin.php:670
+#: core/template/admin.php:725
 msgid "Submission form CSS"
 msgstr ""
 
-#: core/template/admin.php:671
+#: core/template/admin.php:726
 msgid "Add basic CSS styles to the frontend form."
 msgstr ""
 
-#: core/template/admin.php:678
+#: core/template/admin.php:733
 msgid "User Menus"
 msgstr ""
 
-#: core/template/admin.php:697
+#: core/template/admin.php:752
 msgid "Use the [wpurp\\_user\\_menus] shortcode to display the front-end form."
 msgstr ""
 
-#: core/template/admin.php:707
+#: core/template/admin.php:762
 msgid "Enable user menus for"
 msgstr ""
 
-#: core/template/admin.php:753
+#: core/template/admin.php:808
 msgid "Import Recipes"
 msgstr ""
 
-#: core/template/admin.php:780
+#: core/template/admin.php:835
 msgid "Export Recipes"
 msgstr ""
 
-#: core/template/admin.php:787
+#: core/template/admin.php:842
 msgid "Coming Soon"
 msgstr ""
 
-#: core/template/admin.php:788
+#: core/template/admin.php:843
 msgid "This feature is coming soon for "
 msgstr ""
 
-#: core/template/admin.php:795 core/template/admin.php:803
+#: core/template/admin.php:850 core/template/admin.php:858
 msgid "FAQ & Support"
 msgstr ""
 
-#: core/template/admin.php:802
+#: core/template/admin.php:857
 msgid "Need more help?"
 msgstr ""
 
-#: core/template/recipe_admin.php:21 core/template/shortcode_generator.php:116
-#: core/template/shortcode_generator.php:229
+#: core/template/recipe_admin.php:21 core/template/shortcode_generator.php:133
+#: core/template/shortcode_generator.php:246
 #: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:299
 msgid "Title"
 msgstr ""
@@ -1179,13 +1191,13 @@ msgid "stars"
 msgstr ""
 
 #: core/template/recipe_admin.php:49 core/template/recipe_public.php:112
-#: core/template/recipe_public.php:190
+#: core/template/recipe_public.php:198
 #: wp-ultimate-recipe-premium/addons/custom-templates/layouts/compact.php:117
-#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/compact.php:195
+#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/compact.php:204
 #: wp-ultimate-recipe-premium/addons/custom-templates/layouts/default.php:117
-#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/default.php:195
-#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/modern.php:71
-#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/modern.php:154
+#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/default.php:204
+#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/modern.php:70
+#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/modern.php:162
 #: wp-ultimate-recipe-premium/addons/user-menus/inc/menu-builder.php:18
 #: wp-ultimate-recipe-premium/addons/user-menus/inc/menu-view.php:7
 msgid "Servings"
@@ -1198,7 +1210,7 @@ msgstr ""
 #: core/template/recipe_admin.php:57 core/template/recipe_public.php:113
 #: wp-ultimate-recipe-premium/addons/custom-templates/layouts/compact.php:118
 #: wp-ultimate-recipe-premium/addons/custom-templates/layouts/default.php:118
-#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/modern.php:72
+#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/modern.php:71
 msgid "Prep Time"
 msgstr ""
 
@@ -1211,23 +1223,23 @@ msgstr ""
 #: wp-ultimate-recipe-premium/addons/custom-templates/layouts/default.php:126
 #: wp-ultimate-recipe-premium/addons/custom-templates/layouts/default.php:127
 #: wp-ultimate-recipe-premium/addons/custom-templates/layouts/default.php:128
+#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/modern.php:79
 #: wp-ultimate-recipe-premium/addons/custom-templates/layouts/modern.php:80
 #: wp-ultimate-recipe-premium/addons/custom-templates/layouts/modern.php:81
-#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/modern.php:82
 msgid "minutes"
 msgstr ""
 
 #: core/template/recipe_admin.php:64 core/template/recipe_public.php:114
 #: wp-ultimate-recipe-premium/addons/custom-templates/layouts/compact.php:119
 #: wp-ultimate-recipe-premium/addons/custom-templates/layouts/default.php:119
-#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/modern.php:73
+#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/modern.php:72
 msgid "Cook Time"
 msgstr ""
 
 #: core/template/recipe_admin.php:71 core/template/recipe_public.php:115
 #: wp-ultimate-recipe-premium/addons/custom-templates/layouts/compact.php:120
 #: wp-ultimate-recipe-premium/addons/custom-templates/layouts/default.php:120
-#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/modern.php:74
+#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/modern.php:73
 msgid "Passive Time"
 msgstr ""
 
@@ -1239,8 +1251,8 @@ msgid ""
 msgstr ""
 
 #: core/template/recipe_admin.php:92 core/template/recipe_admin.php:110
-#: core/template/recipe_admin.php:124 core/template/recipe_admin.php:179
-#: core/template/recipe_admin.php:196 core/template/recipe_admin.php:212
+#: core/template/recipe_admin.php:131 core/template/recipe_admin.php:186
+#: core/template/recipe_admin.php:203 core/template/recipe_admin.php:219
 msgid "Group"
 msgstr ""
 
@@ -1248,90 +1260,90 @@ msgstr ""
 msgid "Main Ingredients"
 msgstr ""
 
-#: core/template/recipe_admin.php:94 core/template/recipe_admin.php:180
+#: core/template/recipe_admin.php:94 core/template/recipe_admin.php:187
 msgid "(this label is not shown)"
 msgstr ""
 
-#: core/template/recipe_admin.php:153
+#: core/template/recipe_admin.php:160
 msgid "tbsp"
 msgstr ""
 
-#: core/template/recipe_admin.php:154
+#: core/template/recipe_admin.php:161
 msgid "olive oil"
 msgstr ""
 
-#: core/template/recipe_admin.php:156
+#: core/template/recipe_admin.php:163
 msgid "extra virgin"
 msgstr ""
 
-#: core/template/recipe_admin.php:164
+#: core/template/recipe_admin.php:171
 msgid "Add an ingredient"
 msgstr ""
 
-#: core/template/recipe_admin.php:167
+#: core/template/recipe_admin.php:174
 msgid "Add an ingredient group"
 msgstr ""
 
-#: core/template/recipe_admin.php:170
+#: core/template/recipe_admin.php:177
 msgid ""
 "<strong>Use the TAB key</strong> while adding ingredients, it will "
 "automatically create new fields. <strong>Don't worry about empty lines</"
 "strong>, these will be ignored."
 msgstr ""
 
-#: core/template/recipe_admin.php:173 core/template/recipe_public.php:198
-#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/compact.php:203
-#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/default.php:203
-#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/modern.php:221
+#: core/template/recipe_admin.php:180 core/template/recipe_public.php:206
+#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/compact.php:221
+#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/default.php:221
+#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/modern.php:238
 msgid "Instructions"
 msgstr ""
 
-#: core/template/recipe_admin.php:180
+#: core/template/recipe_admin.php:187
 msgid "Main Instructions"
 msgstr ""
 
-#: core/template/recipe_admin.php:241 core/template/recipe_admin.php:262
-#: core/template/recipe_admin.php:270
+#: core/template/recipe_admin.php:248 core/template/recipe_admin.php:269
+#: core/template/recipe_admin.php:277
 msgid "Add Image"
 msgstr ""
 
-#: core/template/recipe_admin.php:242 core/template/recipe_admin.php:271
+#: core/template/recipe_admin.php:249 core/template/recipe_admin.php:278
 msgid "Remove Image"
 msgstr ""
 
-#: core/template/recipe_admin.php:281
+#: core/template/recipe_admin.php:288
 msgid "Add an instruction"
 msgstr ""
 
-#: core/template/recipe_admin.php:284
+#: core/template/recipe_admin.php:291
 msgid "Add an instruction group"
 msgstr ""
 
-#: core/template/recipe_admin.php:287
+#: core/template/recipe_admin.php:294
 msgid ""
 "<strong>Use the TAB key</strong> while adding instructions, it will "
 "automatically create new fields. <strong>Don't worry about empty lines</"
 "strong>, these will be ignored."
 msgstr ""
 
-#: core/template/recipe_admin.php:290 core/template/recipe_public.php:238
-#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/compact.php:243
-#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/default.php:243
-#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/modern.php:261
+#: core/template/recipe_admin.php:297 core/template/recipe_public.php:246
+#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/compact.php:261
+#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/default.php:261
+#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/modern.php:278
 msgid "Recipe notes"
 msgstr ""
 
-#: core/template/recipe_public.php:244
-#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/compact.php:249
-#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/default.php:249
-#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/modern.php:267
+#: core/template/recipe_public.php:252
+#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/compact.php:267
+#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/default.php:267
+#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/modern.php:284
 msgid "Share this Recipe"
 msgstr ""
 
-#: core/template/recipe_public.php:277
-#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/compact.php:282
-#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/default.php:282
-#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/modern.php:301
+#: core/template/recipe_public.php:285
+#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/compact.php:300
+#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/default.php:300
+#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/modern.php:318
 msgid "Powered by"
 msgstr ""
 
@@ -1369,9 +1381,9 @@ msgid "Extended Recipe Index"
 msgstr ""
 
 #: core/template/shortcode_generator.php:71
-#: core/template/shortcode_generator.php:166
-#: core/template/shortcode_generator.php:170
-#: core/template/shortcode_generator.php:179
+#: core/template/shortcode_generator.php:183
+#: core/template/shortcode_generator.php:187
+#: core/template/shortcode_generator.php:196
 msgid "WP Ultimate Recipe Premium only"
 msgstr ""
 
@@ -1379,99 +1391,104 @@ msgstr ""
 msgid "Group by"
 msgstr ""
 
-#: core/template/shortcode_generator.php:94
-msgid "Limit by"
-msgstr ""
-
-#: core/template/shortcode_generator.php:107
-msgid "Limit by values"
-msgstr ""
-
-#: core/template/shortcode_generator.php:112
-#: core/template/shortcode_generator.php:225
-#: wp-ultimate-recipe-premium/addons/user-menus/inc/menu-builder.php:76
-msgid "Sort by"
-msgstr ""
-
-#: core/template/shortcode_generator.php:120
-#: core/template/shortcode_generator.php:233
+#: core/template/shortcode_generator.php:85
+#: core/template/shortcode_generator.php:137
+#: core/template/shortcode_generator.php:250
 #: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:283
 #: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:300
 msgid "Author"
 msgstr ""
 
+#: core/template/shortcode_generator.php:98
+msgid "Limit Author"
+msgstr ""
+
+#: core/template/shortcode_generator.php:111
+msgid "Limit by"
+msgstr ""
+
 #: core/template/shortcode_generator.php:124
-#: core/template/shortcode_generator.php:237
+msgid "Limit by values"
+msgstr ""
+
+#: core/template/shortcode_generator.php:129
+#: core/template/shortcode_generator.php:242
+#: wp-ultimate-recipe-premium/addons/user-menus/inc/menu-builder.php:76
+msgid "Sort by"
+msgstr ""
+
+#: core/template/shortcode_generator.php:141
+#: core/template/shortcode_generator.php:254
 msgid "Date Added"
 msgstr ""
 
-#: core/template/shortcode_generator.php:128
-#: core/template/shortcode_generator.php:241
+#: core/template/shortcode_generator.php:145
+#: core/template/shortcode_generator.php:258
 msgid "Random"
 msgstr ""
 
-#: core/template/shortcode_generator.php:138
-#: core/template/shortcode_generator.php:251
+#: core/template/shortcode_generator.php:155
+#: core/template/shortcode_generator.php:268
 msgid "Sort order"
 msgstr ""
 
-#: core/template/shortcode_generator.php:142
-#: core/template/shortcode_generator.php:255
+#: core/template/shortcode_generator.php:159
+#: core/template/shortcode_generator.php:272
 msgid "Ascending"
 msgstr ""
 
-#: core/template/shortcode_generator.php:146
-#: core/template/shortcode_generator.php:259
+#: core/template/shortcode_generator.php:163
+#: core/template/shortcode_generator.php:276
 msgid "Descending"
 msgstr ""
 
-#: core/template/shortcode_generator.php:156
+#: core/template/shortcode_generator.php:173
 msgid "Max number of recipes"
 msgstr ""
 
-#: core/template/shortcode_generator.php:163
+#: core/template/shortcode_generator.php:180
 msgid "User Interaction"
 msgstr ""
 
-#: core/template/shortcode_generator.php:166
+#: core/template/shortcode_generator.php:183
 msgid "User Submissions form"
 msgstr ""
 
-#: core/template/shortcode_generator.php:170
+#: core/template/shortcode_generator.php:187
 msgid "User Menus form"
 msgstr ""
 
-#: core/template/shortcode_generator.php:176
-#: core/template/shortcode_generator.php:179
+#: core/template/shortcode_generator.php:193
+#: core/template/shortcode_generator.php:196
 msgid "Recipe Grid"
 msgstr ""
 
-#: core/template/shortcode_generator.php:189
+#: core/template/shortcode_generator.php:206
 msgid "Recipe Title Only"
 msgstr ""
 
-#: core/template/shortcode_generator.php:193
+#: core/template/shortcode_generator.php:210
 msgid "Recipe Card with photo"
 msgstr ""
 
-#: core/template/shortcode_generator.php:203
+#: core/template/shortcode_generator.php:220
 msgid "Exclude recipes without a photo"
 msgstr ""
 
-#: core/template/shortcode_generator.php:214
+#: core/template/shortcode_generator.php:231
 msgid "Don't let your visitors filter the recipes"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/wp-ultimate-recipe-premium.php:31
-msgid ""
-"WP Ultimate Recipe must be installed and activated before WP Ultimate Recipe "
-"Premium can be used."
+#: core/wp-ultimate-recipe.php:118
+msgid "Please update WP Ultimate Recipe Premium to at least version"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/wp-ultimate-recipe-premium.php:33
-msgid ""
-"Please update WP Ultimate Recipe to the latest version before activating WP "
-"Ultimate Recipe Premium."
+#: core/wp-ultimate-recipe.php:182 core/wp-ultimate-recipe.php:183
+msgid "Admin"
+msgstr ""
+
+#: core/wp-ultimate-recipe.php:200
+msgid "Shortcodes"
 msgstr ""
 
 #: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:67
@@ -1489,6 +1506,20 @@ msgstr ""
 
 #: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:129
 msgid "Reset to defaults"
+msgstr ""
+
+#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/compact.php:207
+#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/default.php:207
+#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/modern.php:165
+msgid "Units"
+msgstr ""
+
+#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/default.php:209
+msgid "Metric"
+msgstr ""
+
+#: wp-ultimate-recipe-premium/addons/custom-templates/layouts/default.php:210
+msgid "Imperial"
 msgstr ""
 
 #: wp-ultimate-recipe-premium/addons/import/import.php:52
@@ -1516,43 +1547,15 @@ msgstr ""
 msgid "Select a recipe tag"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/addons/import/import.php:86
-msgid "Post categories and tags"
-msgstr ""
-
-#: wp-ultimate-recipe-premium/addons/import/import.php:89
-msgid "Don't use these for the recipe"
-msgstr ""
-
 #: wp-ultimate-recipe-premium/addons/import/import.php:90
-msgid "Copy categories and tags from the ReciPress post to the new recipe"
-msgstr ""
-
-#: wp-ultimate-recipe-premium/addons/import/import.php:95
-msgid "ReciPress posts"
-msgstr ""
-
-#: wp-ultimate-recipe-premium/addons/import/import.php:98
-msgid "Don't change these"
-msgstr ""
-
-#: wp-ultimate-recipe-premium/addons/import/import.php:99
-msgid "Replace ReciPress [recipe] shortcode with WP Ultimate Recipe shortcode"
-msgstr ""
-
-#: wp-ultimate-recipe-premium/addons/import/import.php:100
-msgid "Move to trash (permanent delete if trash is disabled!)"
-msgstr ""
-
-#: wp-ultimate-recipe-premium/addons/import/import.php:109
 msgid "Problems? Take a look at the"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/addons/import/import.php:123
+#: wp-ultimate-recipe-premium/addons/import/import.php:104
 msgid "You should activate this plugin:"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/addons/import/import.php:140
+#: wp-ultimate-recipe-premium/addons/import/import.php:118
 msgid "You should select a new tag for the imported recipes"
 msgstr ""
 
@@ -1567,43 +1570,6 @@ msgstr ""
 #: wp-ultimate-recipe-premium/addons/recipe-grid/recipe-grid.php:108
 #: wp-ultimate-recipe-premium/addons/recipe-grid/recipe-grid.php:112
 msgid "No recipes found."
-msgstr ""
-
-#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:41
-msgid "Menus"
-msgstr ""
-
-#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:42
-#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:77
-msgid "Menu"
-msgstr ""
-
-#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:86
-msgid "Shopping List"
-msgstr ""
-
-#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:192
-msgid "Some recipes on this list have no associated ingredients."
-msgstr ""
-
-#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:205
-msgid "Amount"
-msgstr ""
-
-#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:213
-msgid "The shopping list will update automatically whenever the menu is saved."
-msgstr ""
-
-#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:255
-msgid "Unable to save menu with zero recipes added."
-msgstr ""
-
-#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:395
-msgid "Sorry, the site administrator has disabled user menus."
-msgstr ""
-
-#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:410
-msgid "Sorry, only registered users may create menus."
 msgstr ""
 
 #: wp-ultimate-recipe-premium/addons/user-menus/inc/menu-builder.php:15
@@ -1633,6 +1599,43 @@ msgstr ""
 
 #: wp-ultimate-recipe-premium/addons/user-menus/inc/menu-view.php:31
 msgid "No recipes added to this menu."
+msgstr ""
+
+#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:40
+msgid "Menus"
+msgstr ""
+
+#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:41
+#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:76
+msgid "Menu"
+msgstr ""
+
+#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:85
+msgid "Shopping List"
+msgstr ""
+
+#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:198
+msgid "Some recipes on this list have no associated ingredients."
+msgstr ""
+
+#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:211
+msgid "Amount"
+msgstr ""
+
+#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:219
+msgid "The shopping list will update automatically whenever the menu is saved."
+msgstr ""
+
+#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:261
+msgid "Unable to save menu with zero recipes added."
+msgstr ""
+
+#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:394
+msgid "Sorry, the site administrator has disabled user menus."
+msgstr ""
+
+#: wp-ultimate-recipe-premium/addons/user-menus/user-menus.php:409
+msgid "Sorry, only registered users may create menus."
 msgstr ""
 
 #: wp-ultimate-recipe-premium/addons/user-ratings/helper/public_rating.php:31
@@ -1699,4 +1702,16 @@ msgstr ""
 
 #: wp-ultimate-recipe-premium/includes/plugin-updater.php:458
 msgid "Plugin reactivated successfully. "
+msgstr ""
+
+#: wp-ultimate-recipe-premium/wp-ultimate-recipe-premium.php:31
+msgid ""
+"WP Ultimate Recipe must be installed and activated before WP Ultimate Recipe "
+"Premium can be used."
+msgstr ""
+
+#: wp-ultimate-recipe-premium/wp-ultimate-recipe-premium.php:33
+msgid ""
+"Please update WP Ultimate Recipe to the latest version before activating WP "
+"Ultimate Recipe Premium."
 msgstr ""
