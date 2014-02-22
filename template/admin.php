@@ -231,7 +231,7 @@ $admin_menu = array(
                             'type' => 'notebox',
                             'name' => 'recipe_slug_notebox',
                             'label' => __('404 error/page not found?', $this->pluginName),
-                            'description' => __('Try', $this->pluginName) . ' <a href="https://wpultimaterecipe.desk.com/customer/portal/articles/1362598-flushing-your-permalinks" target="_blank">'.__('flushing your permalinks', $this->pluginName).'</a>.',
+                            'description' => __('Try', $this->pluginName) . ' <a href="https://bootstrappedventures.zendesk.com/hc/en-us/articles/200181822-404-Error-Page-not-found" target="_blank">'.__('flushing your permalinks', $this->pluginName).'</a>.',
                             'status' => 'info',
                         ),
                     ),
@@ -644,6 +644,64 @@ $admin_menu = array(
                 ),
             ),
         ),
+//=-=-=-=-=-=-= RECIPE GRID =-=-=-=-=-=-=
+        array(
+            'title' => __('Recipe Grid', $this->pluginName),
+            'name' => 'recipe_grid',
+            'icon' => 'font-awesome:fa-th',
+            'controls' => array(
+                array(
+                    'type' => 'section',
+                    'title' => __('General', $this->pluginName),
+                    'name' => 'section_recipe_grid_general',
+                    'fields' => array(
+                        array(
+                            'type' => 'notebox',
+                            'name' => 'recipe_grid_premium_not_installed',
+                            'label' => 'WP Ultimate Recipe Premium',
+                            'description' => __('These features are only available in ', $this->pluginName) . ' <a href="http://www.wpultimaterecipeplugin.com/premium/" target="_blank">WP Ultimate Recipe Premium</a></strong>.',
+                            'status' => 'warning',
+                            'dependency' => array(
+                                'field' => '',
+                                'function' => 'wpurp_admin_premium_not_installed',
+                            ),
+                        ),
+                        array(
+                            'type' => 'notebox',
+                            'name' => 'recipe_grid_shortcode',
+                            'label' => __('Important', $this->pluginName),
+                            'description' => __('Use the [ultimate-recipe-grid] shortcode to display the Recipe Grid.', $this->pluginName) . ' '. __('The shortcode can be added to any page or post.', $this->pluginName),
+                            'status' => 'info',
+                            'dependency' => array(
+                                'field' => '',
+                                'function' => 'wpurp_admin_premium_installed',
+                            ),
+                        ),
+                        array(
+                            'type' => 'toggle',
+                            'name' => 'recipe_grid_multiselect',
+                            'label' => __('Multi-Select', $this->pluginName),
+                            'description' => __( 'Allow visitors to select multiple values for a tag or category.', $this->pluginName ),
+                            'default' => '1',
+                        ),
+                        array(
+                            'type' => 'toggle',
+                            'name' => 'recipe_grid_match_all',
+                            'label' => __('Match All', $this->pluginName),
+                            'description' => __( 'Recipes will only match if they match all selections.', $this->pluginName ),
+                            'default' => '1',
+                        ),
+                        array(
+                            'type' => 'toggle',
+                            'name' => 'recipe_grid_parents',
+                            'label' => __('Parents match Children', $this->pluginName),
+                            'description' => __( 'Selecting a parent will also match recipes with a child category or tag of that parent.', $this->pluginName ),
+                            'default' => '1',
+                        ),
+                    ),
+                ),
+            ),
+        ),
 //=-=-=-=-=-=-= USER SUBMISSION =-=-=-=-=-=-=
         array(
             'title' => __('User Submission', $this->pluginName),
@@ -798,7 +856,7 @@ $admin_menu = array(
                     'type' => 'notebox',
                     'name' => 'user_menus_slug_notebox',
                     'label' => __('404 error/page not found?', $this->pluginName),
-                    'description' => __('Try', $this->pluginName) . ' <a href="https://wpultimaterecipe.desk.com/customer/portal/articles/1362598-flushing-your-permalinks" target="_blank">'.__('flushing your permalinks', $this->pluginName).'</a>.',
+                    'description' => __('Try', $this->pluginName) . ' <a href="https://bootstrappedventures.zendesk.com/hc/en-us/articles/200181822-404-Error-Page-not-found" target="_blank">'.__('flushing your permalinks', $this->pluginName).'</a>.',
                     'status' => 'info',
                 ),
             ),

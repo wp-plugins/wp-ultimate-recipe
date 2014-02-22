@@ -122,3 +122,15 @@
     margin: 5px 0 15px;
     padding: 0.6em;
 }
+
+.wpurp_license {
+    width: 100%;
+}
+
+.wpurp_license th, .wpurp_license td {
+    vertical-align: middle;
+}
+
+.wpurp_license .license_button {
+    float: right;
+}

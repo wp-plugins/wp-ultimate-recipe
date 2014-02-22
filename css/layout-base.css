@@ -100,7 +100,6 @@
 }
 
 .wpurp-container .recipe-ingredient-unit {
-    margin-left: 3px;
     color: #666666 !important;
     font-size: 0.9em !important;
 }
@@ -173,10 +172,15 @@
     display: inline-block;
     width: 25%;
     text-align: center !important;
+    vertical-align: top;
 }
 
 .wpurp-container .recipe-sharing-buttons iframe {
     margin: 0 !important;
+}
+
+.wpurp-container .recipe-sharing-buttons .pinterest-pinit {
+    margin-top: 32px;
 }
 
 .wpurp-container .wpurp-footer {

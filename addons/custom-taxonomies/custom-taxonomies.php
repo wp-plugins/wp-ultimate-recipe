@@ -235,7 +235,8 @@ if( class_exists( 'WPUltimateRecipe' ) ) {
                         'show_tagcloud' => true,
                         'hierarchical' => true,
                         'rewrite' => array(
-                            'slug' => $slug
+                            'slug' => $slug,
+                            'hierarchical' => true
                         )
                     );
 

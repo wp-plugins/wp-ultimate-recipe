@@ -2,6 +2,8 @@
 $recipe_title = $this->get_recipe_title( $recipe_post );
 ?>
 <div class="wpurp-container" itemscope itemtype="http://schema.org/Recipe">
+    <?php $user = get_userdata($recipe_post->post_author); ?>
+    <meta itemprop="author" content="<?php echo $user->data->display_name; ?>">
     <meta itemprop="datePublished" content="<?php echo $recipe_post->post_date; ?>">
     <?php
     $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($recipe_post->ID), 'recipe-thumbnail' );
@@ -117,10 +119,10 @@ $recipe_title = $this->get_recipe_title( $recipe_post );
                 </thead>
                 <tbody>
                 <tr>
-                    <?php if($recipe['recipe_servings'][0] != '') { ?><td itemprop="recipeYield"><span class="recipe-information-servings"><?php echo $recipe['recipe_servings'][0]; ?></span><span class="recipe-information-servings-type"><?php echo $recipe['recipe_servings_type'][0]; ?></span></td><?php } ?>
-                    <?php if($recipe['recipe_prep_time'][0] != '') { ?><td><meta itemprop="prepTime" content="PT<?php echo $recipe['recipe_prep_time'][0];?>M"><?php echo $recipe['recipe_prep_time'][0]; ?><span class="recipe-information-time-unit"><?php _e( 'minutes', $this->pluginName ); ?></span></td><?php } ?>
-                    <?php if($recipe['recipe_cook_time'][0] != '') { ?><td><meta itemprop="cookTime" content="PT<?php echo $recipe['recipe_cook_time'][0];?>M"><?php echo $recipe['recipe_cook_time'][0]; ?><span class="recipe-information-time-unit"><?php _e( 'minutes', $this->pluginName ); ?></span></td><?php } ?>
-                    <?php if($recipe['recipe_passive_time'][0] != '') { ?><td><?php echo $recipe['recipe_passive_time'][0]; ?><span class="recipe-information-time-unit"><?php _e( 'minutes', $this->pluginName ); ?></span></td><?php } ?>
+                    <?php if($recipe['recipe_servings'][0] != '') { ?><td itemprop="recipeYield"><span class="recipe-information-servings"><?php echo $recipe['recipe_servings'][0]; ?></span> <span class="recipe-information-servings-type"><?php echo $recipe['recipe_servings_type'][0]; ?></span></td><?php } ?>
+                    <?php if($recipe['recipe_prep_time'][0] != '') { ?><td><meta itemprop="prepTime" content="PT<?php echo $recipe['recipe_prep_time'][0];?>M"><?php echo $recipe['recipe_prep_time'][0]; ?> <span class="recipe-information-time-unit"><?php _e( 'minutes', $this->pluginName ); ?></span></td><?php } ?>
+                    <?php if($recipe['recipe_cook_time'][0] != '') { ?><td><meta itemprop="cookTime" content="PT<?php echo $recipe['recipe_cook_time'][0];?>M"><?php echo $recipe['recipe_cook_time'][0]; ?> <span class="recipe-information-time-unit"><?php _e( 'minutes', $this->pluginName ); ?></span></td><?php } ?>
+                    <?php if($recipe['recipe_passive_time'][0] != '') { ?><td><?php echo $recipe['recipe_passive_time'][0]; ?> <span class="recipe-information-time-unit"><?php _e( 'minutes', $this->pluginName ); ?></span></td><?php } ?>
                 </tr>
                 </tbody>
             </table>
@@ -152,12 +154,12 @@ $recipe_title = $this->get_recipe_title( $recipe_post );
             }
 
             $out .= '<li itemprop="ingredients">';
-            $out .= '<span class="recipe-ingredient-quantity-unit"><span class="recipe-ingredient-quantity" data-original="'.$ingredient['amount'].'">'.$ingredient['amount'].'</span><span class="recipe-ingredient-unit">'.$ingredient['unit'].'</span></span>';
+            $out .= '<span class="recipe-ingredient-quantity-unit"><span class="recipe-ingredient-quantity" data-original="'.$ingredient['amount'].'">'.$ingredient['amount'].'</span> <span class="recipe-ingredient-unit">'.$ingredient['unit'].'</span></span>';
 
 
             $taxonomy = get_term_by('name', $ingredient['ingredient'], 'ingredient');
 
-            $out .= '<span class="recipe-ingredient-name">';
+            $out .= ' <span class="recipe-ingredient-name">';
 
             $ingredient_links = $this->option('recipe_ingredient_links', 'archive_custom');
 
@@ -245,7 +247,7 @@ $recipe_title = $this->get_recipe_title( $recipe_post );
     <?php if( $recipe['recipe_notes'][0] ) { ?>
     <h3><?php _e( 'Recipe notes', $this->pluginName ); ?></h3>
     <div class="recipe-notes">
-        <?php echo apply_filters( 'the_content', $recipe['recipe_notes'][0] ); ?>
+        <?php echo wpautop( $recipe['recipe_notes'][0] ); ?>
     </div>
     <?php } ?>
     <?php if( $this->option('recipe_sharing_enable', '1') == '1' ) { ?>

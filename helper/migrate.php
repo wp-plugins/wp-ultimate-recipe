@@ -30,7 +30,7 @@ if ( $migrate_version < '1.0.4' )
 
         foreach( $recipe_ingredients as $recipe_ingredient )
         {
-            if(isset($recipe_ingredient['ingredient']) && $recipe_ingredient['ingredient'] !== '')
+            if(isset($recipe_ingredient['ingredient']) && str_replace(' ', '', $recipe_ingredient['ingredient']) !== '')
             {
                 $term = term_exists($recipe_ingredient['ingredient'], 'ingredient');
 
@@ -38,12 +38,15 @@ if ( $migrate_version < '1.0.4' )
                     $term = wp_insert_term($recipe_ingredient['ingredient'], 'ingredient');
                 }
 
-                $term_id = intval($term['term_id']);
+                if( !is_wp_error( $term ) )
+                {
+                    $term_id = intval($term['term_id']);
 
-                $recipe_ingredient['ingredient_id'] = $term_id;
+                    $recipe_ingredient['ingredient_id'] = $term_id;
 
-                $ingredients[] = $recipe_ingredient;
-                $terms[] = $term_id;
+                    $ingredients[] = $recipe_ingredient;
+                    $terms[] = $term_id;
+                }
             }
         }
 
@@ -216,6 +219,8 @@ if ( $migrate_special == 'RecipesToPosts' )
                     add_post_meta( $post->ID, 'recipe_cook_time', $meta['recipe_cook_time'][0] );
                     add_post_meta( $post->ID, 'recipe_passive_time', $meta['recipe_passive_time'][0] );
                     add_post_meta( $post->ID, 'recipe_cost', $meta['recipe_cost'][0] );
+                    add_post_meta( $post->ID, 'recipe_user_ratings', $meta['recipe_user_ratings'][0] );
+                    add_post_meta( $post->ID, 'recipe_migrated_from', $recipe->ID );
 
 
                     // Custom tags

@@ -65,6 +65,13 @@ You can find more information at [WPUltimateRecipePlugin.com](http://www.wpultim
 
 == Changelog ==
 
+= 1.0.7 =
+* Fix: Schema.org/Recipe format: added author and fixed whitespaces
+* Fix: Share buttons layout
+* Fix: Migration error
+* Fix: Recipe Notes newlines
+* Premium: Multiselect for recipe grid
+
 = 1.0.6 =
 * Fix: Recipe notes newlines work now
 * Fix: AutoSuggest ingredient should hide now
@@ -175,6 +182,9 @@ You can find more information at [WPUltimateRecipePlugin.com](http://www.wpultim
 * Very first version of this plugin
 
 == Upgrade notice ==
+
+= 1.0.7 =
+Upgrade for bug fixes and a new premium feature
 
 = 1.0.6 =
 Upgrade for bug fixes and new premium features
