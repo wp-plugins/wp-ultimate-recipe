@@ -117,7 +117,8 @@ if ( $migrate_version < '1.0.8' )
             global $post;
 
             $servings = get_post_meta( $post->ID, 'user-menus-global-servings', true );
-            $recipes = get_post_meta( $post->ID, 'user-menus-recipe-ids' )[0];
+            $recipes = get_post_meta( $post->ID, 'user-menus-recipe-ids' );
+            $recipes = $recipes[0];
 
             if( !is_null( $recipes ) && count( $recipes ) > 0 )
             {
