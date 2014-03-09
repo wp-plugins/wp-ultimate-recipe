@@ -1,5 +1,10 @@
 <?php
 
+include_once($this->pluginDir . '/helper/units.php');
+$unit_helper = new WPURP_Helper_Units();
+$conversion_units_admin = $unit_helper->get_unit_admin_settings();
+$unit_systems_admin = $unit_helper->get_unit_system_admin_settings();
+
 $admin_menu = array(
     'title' => 'WP Ultimate Recipe ' . __('Settings', $this->pluginName),
     'logo'  => $this->pluginUrl . '/img/logo.png',
@@ -73,6 +78,16 @@ $admin_menu = array(
                             'label' => __('Adjustable Servings', $this->pluginName),
                             'description' => __( 'Allow users to dynamically adjust the servings of recipes.', $this->pluginName ),
                             'default' => '1',
+                        ),
+                        array(
+                            'type' => 'slider',
+                            'name' => 'recipe_default_servings',
+                            'label' => __('Default Servings', $this->pluginName),
+                            'description' => __('Default number of servings to use when none specified.', $this->pluginName),
+                            'min' => '1',
+                            'max' => '10',
+                            'step' => '1',
+                            'default' => '4',
                         ),
                         array(
                             'type' => 'toggle',
@@ -616,31 +631,47 @@ $admin_menu = array(
             'title' => __('Unit Conversion', $this->pluginName),
             'name' => 'unit_conversion',
             'icon' => 'font-awesome:fa-exchange',
-            'controls' => array(
+            'menus' => array(
                 array(
-                    'type' => 'section',
-                    'title' => __('General', $this->pluginName),
-                    'name' => 'section_unit_conversion_general',
-                    'fields' => array(
+                    'title' => __('General Settings', $this->pluginName),
+                    'name' => 'unit_conversion_general_settings',
+                    'controls' => array(
                         array(
-                            'type' => 'notebox',
-                            'name' => 'unit_conversion_premium_not_installed',
-                            'label' => 'WP Ultimate Recipe Premium',
-                            'description' => __('These features are only available in ', $this->pluginName) . ' <a href="http://www.wpultimaterecipeplugin.com/premium/" target="_blank">WP Ultimate Recipe Premium</a></strong>.',
-                            'status' => 'warning',
-                            'dependency' => array(
-                                'field' => '',
-                                'function' => 'wpurp_admin_premium_not_installed',
+                            'type' => 'section',
+                            'title' => __('General', $this->pluginName),
+                            'name' => 'section_unit_conversion_general',
+                            'fields' => array(
+                                array(
+                                    'type' => 'notebox',
+                                    'name' => 'unit_conversion_premium_not_installed',
+                                    'label' => 'WP Ultimate Recipe Premium',
+                                    'description' => __('These features are only available in ', $this->pluginName) . ' <a href="http://www.wpultimaterecipeplugin.com/premium/" target="_blank">WP Ultimate Recipe Premium</a></strong>.',
+                                    'status' => 'warning',
+                                    'dependency' => array(
+                                        'field' => '',
+                                        'function' => 'wpurp_admin_premium_not_installed',
+                                    ),
+                                ),
+                                array(
+                                    'type' => 'toggle',
+                                    'name' => 'recipe_adjustable_units',
+                                    'label' => __('Allow Conversion', $this->pluginName),
+                                    'description' => __( 'Allow your visitors to switch between Imperial and Metric units.', $this->pluginName ),
+                                    'default' => '1',
+                                ),
                             ),
                         ),
-                        array(
-                            'type' => 'toggle',
-                            'name' => 'recipe_adjustable_units',
-                            'label' => __('Allow Conversion', $this->pluginName),
-                            'description' => __( 'Allow your visitors to switch between Imperial and Metric units.', $this->pluginName ),
-                            'default' => '1',
-                        ),
                     ),
+                ),
+                array(
+                    'title' => __('Unit Systems', $this->pluginName),
+                    'name' => 'unit_conversion_unit_systems',
+                    'controls' => $unit_systems_admin, //TODO Universal units
+                ),
+                array(
+                    'title' => __('Unit Aliases', $this->pluginName),
+                    'name' => 'unit_conversion_unit_aliases',
+                    'controls' => $conversion_units_admin
                 ),
             ),
         ),

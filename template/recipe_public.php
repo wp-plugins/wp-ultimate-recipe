@@ -49,7 +49,7 @@ $recipe_title = $this->get_recipe_title( $recipe_post );
                             }
                         }
                         ?>
-                        <script>var pluginUrl = '<?php echo $this->pluginUrl; ?>';</script>
+                        <script>var wpurp_pluginUrl = '<?php echo $this->pluginUrl; ?>';</script>
                          <a href="#" class="print-recipe"><img src="<?php echo $this->pluginUrl; ?>/img/printer.png"></span></a>
                     <span itemprop="name"><?php echo $recipe_title; ?></span>
                 </li>
@@ -135,7 +135,7 @@ $recipe_title = $this->get_recipe_title( $recipe_post );
     {
     ?>
     <h3><?php _e('Ingredients', $this->pluginName ); ?></h3>
-    <ul class="recipe-ingredients">
+    <ul class="recipe-ingredients" data-servings="<?php echo $recipe['recipe_servings_normalized'][0]; ?>">
         <?php
         $out = '';
         $previous_group = '';
@@ -154,7 +154,7 @@ $recipe_title = $this->get_recipe_title( $recipe_post );
             }
 
             $out .= '<li itemprop="ingredients">';
-            $out .= '<span class="recipe-ingredient-quantity-unit"><span class="recipe-ingredient-quantity" data-original="'.$ingredient['amount'].'">'.$ingredient['amount'].'</span> <span class="recipe-ingredient-unit">'.$ingredient['unit'].'</span></span>';
+            $out .= '<span class="recipe-ingredient-quantity-unit"><span class="recipe-ingredient-quantity" data-normalized="'.$ingredient['amount_normalized'].'" data-original="'.$ingredient['amount'].'">'.$ingredient['amount'].'</span> <span class="recipe-ingredient-unit">'.$ingredient['unit'].'</span></span>';
 
 
             $taxonomy = get_term_by('name', $ingredient['ingredient'], 'ingredient');
@@ -196,8 +196,8 @@ $recipe_title = $this->get_recipe_title( $recipe_post );
         echo $out;
         ?>
     </ul>
-    <?php if($recipe['recipe_servings'][0] != '' && $this->option('recipe_adjustable_servings', '1') == '1') { ?>
-    <div class="recipe-ingredients-servings"><?php _e( 'Servings', $this->pluginName ); ?>: <input type="number" class="adjust-recipe-servings" data-original="<?php echo $recipe['recipe_servings'][0]; ?>" value="<?php echo $recipe['recipe_servings'][0]; ?>" /> <?php echo $recipe['recipe_servings_type'][0]; ?></div>
+    <?php if($this->option('recipe_adjustable_servings', '1') == '1') { ?>
+    <div class="recipe-ingredients-servings"><?php _e( 'Servings', $this->pluginName ); ?>: <input type="number" class="adjust-recipe-servings" data-original="<?php echo $recipe['recipe_servings_normalized'][0]; ?>" value="<?php echo $recipe['recipe_servings_normalized'][0]; ?>" /> <?php echo $recipe['recipe_servings_type'][0]; ?></div>
     <?php } ?>
     <?php } ?>
     <?php

@@ -65,6 +65,13 @@ You can find more information at [WPUltimateRecipePlugin.com](http://www.wpultim
 
 == Changelog ==
 
+= 1.0.8 =
+* Recipes now support Jetpack Publicize feature
+* Added French translations
+* Premium: Advanced Unit Conversion settings, many improvements
+* Premium: Redesigned User Menus feature: dynamically change serving size per ingredient, group ingredients, change unit system, ...
+* Premium: Only show tags and categories that actually have recipes in the Recipe Grid
+
 = 1.0.7 =
 * Fix: Schema.org/Recipe format: added author and fixed whitespaces
 * Fix: Share buttons layout
@@ -182,6 +189,9 @@ You can find more information at [WPUltimateRecipePlugin.com](http://www.wpultim
 * Very first version of this plugin
 
 == Upgrade notice ==
+
+= 1.0.8 =
+Upgrade for improvements
 
 = 1.0.7 =
 Upgrade for bug fixes and a new premium feature

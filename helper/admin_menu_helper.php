@@ -61,6 +61,26 @@ function wpurp_admin_import_recipress()
     return '<a href="'.admin_url('edit.php?post_type=recipe&page=wpurp_import').'" class="button button-primary" target="_blank">'.__('Import ReciPress recipes', 'wp-ultimate-recipe').'</a>';
 }
 
+function wpurp_admin_system_3( $nbr )
+{
+    return $nbr >= 3 ? true : false;
+}
+
+function wpurp_admin_system_4( $nbr )
+{
+    return $nbr >= 4 ? true : false;
+}
+
+function wpurp_admin_system_5( $nbr )
+{
+    return $nbr >= 5 ? true : false;
+}
+
+function wpurp_admin_system_cups( $units )
+{
+    return in_array('cup', $units);
+}
+
 //=-=-=-=-=-=-= SHORTCODE GENERATOR =-=-=-=-=-=-=
 
 function wpurp_shortcode_generator_recipes_by_date()
@@ -185,6 +205,10 @@ VP_Security::instance()->whitelist_function('wpurp_admin_premium_installed');
 VP_Security::instance()->whitelist_function('wpurp_admin_recipe_template_style');
 VP_Security::instance()->whitelist_function('wpurp_admin_manage_tags');
 VP_Security::instance()->whitelist_function('wpurp_admin_import_recipress');
+VP_Security::instance()->whitelist_function('wpurp_admin_system_3');
+VP_Security::instance()->whitelist_function('wpurp_admin_system_4');
+VP_Security::instance()->whitelist_function('wpurp_admin_system_5');
+VP_Security::instance()->whitelist_function('wpurp_admin_system_cups');
 
 VP_Security::instance()->whitelist_function('wpurp_shortcode_generator_recipes_by_date');
 VP_Security::instance()->whitelist_function('wpurp_shortcode_generator_recipes_by_title');

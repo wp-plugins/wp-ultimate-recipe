@@ -249,7 +249,7 @@ class WPURP_Core extends WPUltimateRecipe {
                ),
                 'public' => true,
                 'menu_position' => 5,
-                'supports' => array( 'title', 'editor', 'thumbnail', 'comments', 'excerpt' ),
+                'supports' => array( 'title', 'editor', 'thumbnail', 'comments', 'excerpt', 'publicize' ),
                 'taxonomies' => $taxonomies,
                 'menu_icon' =>  $this->pluginUrl . '/img/icon_16.png',
                 'has_archive' => true,
@@ -410,7 +410,7 @@ class WPURP_Core extends WPUltimateRecipe {
                     $non_empty_ingredients = array();
 
                     foreach($new as $ingredient) {
-                        if($ingredient['ingredient'] != '')
+                        if( trim( $ingredient['ingredient'] ) != '' )
                         {
                             $term = term_exists($ingredient['ingredient'], 'ingredient');
 
@@ -422,6 +422,8 @@ class WPURP_Core extends WPUltimateRecipe {
 
                             $ingredient['ingredient_id'] = $term_id;
                             $ingredients[] = $term_id;
+
+                            $ingredient['amount_normalized'] = $this->normalize_amount( $ingredient['amount'] );
 
                             $non_empty_ingredients[] = $ingredient;
                         }
@@ -442,6 +444,10 @@ class WPURP_Core extends WPUltimateRecipe {
                     }
 
                     $new = $non_empty_instructions;
+                }
+                elseif ($field == 'recipe_servings')
+                {
+                    update_post_meta( $recipe_id, 'recipe_servings_normalized', $this->normalize_servings( $new ) );
                 }
 
                 // Update or delete meta data if changed
@@ -632,6 +638,7 @@ class WPURP_Core extends WPUltimateRecipe {
         {
             $thumb = $this->option('recipe_theme_thumbnail', 'archive');
 
+
             if($thumb == 'never' || ($thumb == 'archive' && is_single()) || ($thumb == 'recipe' && !is_single())) {
                 $html = ''; // Hide thumbnail
             }
@@ -772,6 +779,11 @@ class WPURP_Core extends WPUltimateRecipe {
                 'label'       => __( 'Link', $this->pluginName ),
                 'desc'        => __( 'Send your visitors to a specific link when clicking on an ingredient.', $this->pluginName ),
                 'placeholder' => 'http://www.example.com',
+            ),
+            'group' => array(
+                'label'       => __( 'Group', $this->pluginName ),
+                'desc'        => __( 'Use this to group ingredients in the shopping list.', $this->pluginName ),
+                'placeholder' => __( 'Vegetables', $this->pluginName ),
             ),
         ) );
 

@@ -18,7 +18,7 @@ if( isset( $_GET['wpurp_migrate'] ) ) {
 if ( $migrate_version < '1.0.4' )
 {
     // Get all recipe posts and loop through them
-    $posts = $this->get_recipes( 'title', 'ASC' );
+    $posts = $this->get_recipes( 'title', 'ASC', '', '', -1, '', true );
 
     foreach ( $posts as $post )
     {
@@ -30,7 +30,7 @@ if ( $migrate_version < '1.0.4' )
 
         foreach( $recipe_ingredients as $recipe_ingredient )
         {
-            if(isset($recipe_ingredient['ingredient']) && str_replace(' ', '', $recipe_ingredient['ingredient']) !== '')
+            if(isset($recipe_ingredient['ingredient']) && trim( $recipe_ingredient['ingredient'] ) !== '')
             {
                 $term = term_exists($recipe_ingredient['ingredient'], 'ingredient');
 
@@ -57,6 +57,109 @@ if ( $migrate_version < '1.0.4' )
     // Successfully migrated to 1.0.4
     $migrate_version = '1.0.4';
     update_option( 'wpurp_migrate_version', $migrate_version );
+    $this->add_admin_notice( '<strong>WP Ultimate Recipe</strong> Successfully migrated to 1.0.4+' );
+}
+
+/*
+ * -> 1.0.8
+ *
+ * Store normalized ingredient amounts and migrate user menus
+ */
+
+if ( $migrate_version < '1.0.8' )
+{
+    /**
+     * Normalized amounts and servings
+     */
+    // Get all recipe posts and loop through them
+    $posts = $this->get_recipes( 'title', 'ASC', '', '', -1, '', true  );
+
+    foreach ( $posts as $post )
+    {
+        $recipe = get_post_custom( $post->ID );
+        $recipe_ingredients = unserialize( $recipe['recipe_ingredients'][0] );
+
+        // Normalize servings
+        $servings = $this->normalize_servings( $recipe['recipe_servings'][0] );
+        update_post_meta( $post->ID, 'recipe_servings_normalized', $servings );
+
+        // Normalize ingredient amounts
+        $ingredients = array();
+
+        foreach( $recipe_ingredients as $recipe_ingredient )
+        {
+            if(isset($recipe_ingredient['ingredient']) && trim( $recipe_ingredient['ingredient'] ) !== '')
+            {
+                $recipe_ingredient['amount_normalized'] = $this->normalize_amount( $recipe_ingredient['amount'] );
+                $ingredients[] = $recipe_ingredient;
+            }
+        }
+
+        update_post_meta( $post->ID, 'recipe_ingredients', $ingredients );
+    }
+
+    /**
+     * User menus migration
+     */
+    $args = array(
+        'post_type' => 'menu',
+        'post_status' => 'any',
+        'posts_per_page' => -1,
+        'nopaging' => true,
+    );
+
+    $query = new WP_Query( $args );
+
+    if( $query->have_posts() )
+    {
+        while( $query->have_posts() ) {
+            $query->the_post();
+            global $post;
+
+            $servings = get_post_meta( $post->ID, 'user-menus-global-servings', true );
+            $recipes = get_post_meta( $post->ID, 'user-menus-recipe-ids' )[0];
+
+            if( !is_null( $recipes ) && count( $recipes ) > 0 )
+            {
+                $migrated_recipes = array();
+                $order = array();
+                $nbrRecipes = 0;
+                $unitSystem = 0;
+
+                foreach( $recipes as $recipe_id )
+                {
+                    $recipe = get_post( $recipe_id );
+
+                    $servings_original = get_post_meta( $recipe->ID, 'recipe_servings_normalized', true );
+                    if( $servings_original < 1 ) {
+                        $servings_original = 1;
+                    }
+
+                    $migrated = array(
+                        'id' => $recipe_id,
+                        'name' => $this->get_recipe_title( $recipe ),
+                        'link' => get_permalink($recipe->ID),
+                        'servings_original' => $servings_original,
+                        'servings_wanted' => $servings,
+                    );
+
+                    $migrated_recipes[] = $migrated;
+                    $order[] = strval( $nbrRecipes );
+                    $nbrRecipes++;
+                }
+
+                update_post_meta( $post->ID, 'user-menus-recipes', $migrated_recipes );
+                update_post_meta( $post->ID, 'user-menus-order', $order );
+                update_post_meta( $post->ID, 'user-menus-nbrRecipes', $nbrRecipes );
+                update_post_meta( $post->ID, 'user-menus-unitSystem', $unitSystem );
+            }
+        }
+    }
+
+    // Successfully migrated to 1.0.8
+    $migrate_version = '1.0.8';
+    update_option( 'wpurp_migrate_version', $migrate_version );
+    $this->add_admin_notice( '<strong>WP Ultimate Recipe</strong> successfully migrated to 1.0.8+' );
 }
 
 /*
@@ -177,6 +280,8 @@ if ( $migrate_special == 'RecipesToPosts' )
 
                                 $ingredient['ingredient_id'] = $term_id;
 
+                                $ingredient['amount_normalized'] = $this->normalize_amount( $ingredient['amount'] );
+
                                 $new_ingredients[] = $ingredient;
                                 $ingredient_terms[] = $term_id;
                             }
@@ -211,8 +316,12 @@ if ( $migrate_special == 'RecipesToPosts' )
                     // Recipe Title
                     add_post_meta( $post->ID, 'recipe_title', $this->get_recipe_title( $recipe ) );
 
-                    // Other metadata
+                    // Servings
                     add_post_meta( $post->ID, 'recipe_servings', $meta['recipe_servings'][0] );
+                    $servings = $this->normalize_servings( $meta['recipe_servings'][0] );
+                    add_post_meta( $post->ID, 'recipe_servings_normalized', $servings );
+
+                    // Other metadata
                     add_post_meta( $post->ID, 'recipe_servings_type', $meta['recipe_servings_type'][0] );
                     add_post_meta( $post->ID, 'recipe_description', $meta['recipe_description'][0] );
                     add_post_meta( $post->ID, 'recipe_prep_time', $meta['recipe_prep_time'][0] );

@@ -5,7 +5,7 @@
     <title>WP Ultimate Recipe Plugin</title>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <script>
-        document.write('<link rel="stylesheet" type="text/css" href="'+window.opener.pluginUrl+'/css/print.css">');
+        document.write('<link rel="stylesheet" type="text/css" href="'+window.opener.wpurp_pluginUrl+'/css/print.css">');
     </script>
 </head>
 <body onload="setTimeout(function(){window.print()}, 500);">

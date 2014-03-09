@@ -3,7 +3,7 @@
 Plugin Name: WP Ultimate Recipe
 Plugin URI: http://www.wpultimaterecipeplugin.com
 Description: WP Ultimate Recipe is a user friendly plugin for adding recipes to any of your posts and pages.
-Version: 1.0.7
+Version: 1.0.8
 Author: Bootstrapped Ventures
 Author URI: http://www.bootstrappedventures.com
 License: GPLv2
@@ -13,7 +13,7 @@ License: GPLv2
  */
 
 define( 'COMPATIBLE_PREMIUM_VERSION', '1.0.2' );
-define( 'WPURP_VERSION', '1.0.7' );
+define( 'WPURP_VERSION', '1.0.8' );
 
 class WPUltimateRecipe {
     
@@ -66,6 +66,10 @@ class WPUltimateRecipe {
         add_action( 'admin_notices', array( $this, 'wpurp_admin_notices' ) );
         add_action( 'admin_footer-recipe_page_wpurp_admin', array( $this, 'support_tab' ) );
 
+
+        // Filters
+        add_filter( 'plugin_action_links_' . plugin_basename(__FILE__), array( $this, 'plugin_settings_link' ) );
+
         // Other
         if ( function_exists( 'add_image_size' ) ) {
             add_image_size( 'recipe-thumbnail', 150, 9999 );
@@ -79,6 +83,13 @@ class WPUltimateRecipe {
      * @FRAMEWORK
      * ================================================================================================================
      */
+
+    public function plugin_settings_link( $links )
+    {
+        $links[] = '<a href="'. get_admin_url(null, 'edit.php?post_type=recipe&page=wpurp_admin') .'">'.__( 'Settings', $this->pluginName ).'</a>';
+        $links[] = '<a href="http://www.wpultimaterecipe.com" target="_blank">'.__( 'More information', $this->pluginName ).'</a>';
+        return $links;
+    }
 
     public function wpurp_admin_notices()
     {
@@ -129,11 +140,15 @@ class WPUltimateRecipe {
     }
 
     public function activation_notice() {
-        $notices = get_option('wpurp_deferred_admin_notices', array());
-
         $notice  = '<strong>WP Ultimate Recipe</strong><br/>';
         $notice .= '<a href="'.admin_url('edit.php?post_type=recipe&page=wpurp_admin#_latest_news').'">Check out our latest changes in your <strong>Recipes > Admin</strong> panel</a>';
 
+        $this->add_admin_notice( $notice );
+    }
+
+    public function add_admin_notice( $notice )
+    {
+        $notices = get_option('wpurp_deferred_admin_notices', array());
         $notices[] = $notice;
         update_option('wpurp_deferred_admin_notices', $notices);
     }
@@ -263,7 +278,7 @@ class WPUltimateRecipe {
     /*
      * Returns array of all recipes
      */
-    protected function get_recipes( $orderby = 'date', $order = 'DESC', $taxonomy = '', $term = '', $limit = -1, $author = '' ) {
+    protected function get_recipes( $orderby = 'date', $order = 'DESC', $taxonomy = '', $term = '', $limit = -1, $author = '', $all = false ) {
         $args = array(
             'post_type' => 'recipe',
             'post_status' => 'publish',
@@ -271,6 +286,10 @@ class WPUltimateRecipe {
             'order' => $order,
             'posts_per_page' => $limit,
         );
+
+        if( $all ) {
+            $args['post_status'] = 'any';
+        }
 
         if( is_null($limit) || $limit == -1 ) {
             $args['nopaging'] = true;
@@ -424,6 +443,106 @@ class WPUltimateRecipe {
             return $meta['recipe_title'][0];
         } else {
             return $recipe->post_title;
+        }
+    }
+
+
+    // Normalize servings and amounts
+
+
+    public function normalize_servings( $servings )
+    {
+        preg_match("/^\d+/", ltrim( $servings ), $out);
+
+        if( isset( $out[0] ) ) {
+            $amount = $out[0];
+        } else {
+            $amount = $this->option( 'recipe_default_servings', 4 );
+        }
+
+        return intval( $amount );
+    }
+
+    /**
+     * Get normalized amount. 0 if not a valid amount.
+     *
+     * @param $amount       Amount to be normalized
+     * @return int
+     */
+    public function normalize_amount( $amount )
+    {
+        if( is_null($amount) || trim($amount) == '' ) {
+            return 0;
+        }
+
+        $amount = preg_replace( "/[^\d\.\/\,\s-]/", "", $amount ); // Only keep digits, comma, point and forward slash
+        // Only take first part if we have a dash (e.g. 1-2 cups)
+        $parts = explode( '-', $amount );
+        $amount = $parts[0];
+
+        // If spaces treat as separate amounts to be added (e.g. 2 1/2 cups = 2 + 1/2)
+        $parts = explode( ' ', $amount );
+
+        $float = 0.0;
+        foreach( $parts as $amount ) {
+            $separator = $this->find_separator( $amount );
+
+            switch ($separator) {
+                case '/':
+                    $amount = str_replace( '.','', $amount );
+                    $amount = str_replace( ',','', $amount );
+                    $parts = explode( '/', $amount );
+
+                    $float += floatval($parts[0]) / floatval($parts[1]);
+                    break;
+                case '.':
+                    $amount = str_replace( ',','', $amount );
+                    $float += floatval($amount);
+                    break;
+                case ',':
+                    $amount = str_replace( '.','', $amount );
+                    $amount = str_replace( ',','.', $amount );
+                    $float += floatval($amount);
+                    break;
+                default:
+                    $float += floatval($amount);
+            }
+        }
+
+        return $float;
+    }
+
+    /**
+     * Pick a separator for the amount
+     * Examples:
+     * 1/2 => /
+     * 1.123,42 => ,
+     * 1,123.42 => .
+     *
+     * @param $string
+     * @return string
+     */
+    private function find_separator( $string )
+    {
+        $slash = strrpos($string, '/');
+        $point = strrpos($string, '.');
+        $comma = strrpos($string, ',');
+
+        if( $slash ) {
+            return '/';
+        }
+        else {
+            if( !$point && !$comma ) {
+                return '';
+            } else if( !$point && $comma ) {
+                return ',';
+            } else if( $point && !$comma ) {
+                return '.';
+            } else if( $point > $comma ) {
+                return '.';
+            } else {
+                return ',';
+            }
         }
     }
 
