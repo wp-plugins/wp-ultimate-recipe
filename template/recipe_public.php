@@ -120,9 +120,26 @@ $recipe_title = $this->get_recipe_title( $recipe_post );
                 <tbody>
                 <tr>
                     <?php if($recipe['recipe_servings'][0] != '') { ?><td itemprop="recipeYield"><span class="recipe-information-servings"><?php echo $recipe['recipe_servings'][0]; ?></span> <span class="recipe-information-servings-type"><?php echo $recipe['recipe_servings_type'][0]; ?></span></td><?php } ?>
-                    <?php if($recipe['recipe_prep_time'][0] != '') { ?><td><meta itemprop="prepTime" content="PT<?php echo $recipe['recipe_prep_time'][0];?>M"><?php echo $recipe['recipe_prep_time'][0]; ?> <span class="recipe-information-time-unit"><?php _e( 'minutes', $this->pluginName ); ?></span></td><?php } ?>
-                    <?php if($recipe['recipe_cook_time'][0] != '') { ?><td><meta itemprop="cookTime" content="PT<?php echo $recipe['recipe_cook_time'][0];?>M"><?php echo $recipe['recipe_cook_time'][0]; ?> <span class="recipe-information-time-unit"><?php _e( 'minutes', $this->pluginName ); ?></span></td><?php } ?>
-                    <?php if($recipe['recipe_passive_time'][0] != '') { ?><td><?php echo $recipe['recipe_passive_time'][0]; ?> <span class="recipe-information-time-unit"><?php _e( 'minutes', $this->pluginName ); ?></span></td><?php } ?>
+                    <?php if($recipe['recipe_prep_time'][0] != '') { ?>
+                        <td>
+                            <?php if($recipe['recipe_prep_time_text'][0] == __( 'minutes', $this->pluginName )) { ?><meta itemprop="prepTime" content="PT<?php echo $recipe['recipe_prep_time'][0];?>M"><?php }?>
+                            <?php echo $recipe['recipe_prep_time'][0]; ?>
+                             <span class="recipe-information-time-unit"><?php echo $recipe['recipe_prep_time_text'][0]; ?></span>
+                        </td>
+                    <?php } ?>
+                    <?php if($recipe['recipe_cook_time'][0] != '') { ?>
+                        <td>
+                            <?php if($recipe['recipe_cook_time_text'][0] == __( 'minutes', $this->pluginName )) { ?><meta itemprop="cookTime" content="PT<?php echo $recipe['recipe_cook_time'][0];?>M"><?php }?>
+                            <?php echo $recipe['recipe_cook_time'][0]; ?>
+                             <span class="recipe-information-time-unit"><?php echo $recipe['recipe_cook_time_text'][0]; ?></span>
+                        </td>
+                    <?php } ?>
+                    <?php if($recipe['recipe_passive_time'][0] != '') { ?>
+                        <td>
+                            <?php echo $recipe['recipe_passive_time'][0]; ?>
+                             <span class="recipe-information-time-unit"><?php echo $recipe['recipe_passive_time_text'][0]; ?></span>
+                        </td>
+                    <?php } ?>
                 </tr>
                 </tbody>
             </table>

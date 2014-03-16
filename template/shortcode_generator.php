@@ -226,15 +226,54 @@ $shortcode_generator = array(
                         ),
                     ),
                     array(
-                        'type' => 'checkbox',
-                        'name' => 'no_filter',
-                        'label' => __("Don't let your visitors filter the recipes", $this->pluginName),
+                        'type' => 'multiselect',
+                        'name' => 'filter',
+                        'label' => __('Allow filtering by', $this->pluginName),
                         'items' => array(
                             array(
-                                'value' => 'true',
-                                'label' => '',
+                                'value' => 'category',
+                                'label' => __('Category', $this->pluginName),
+                            ),
+                            array(
+                                'value' => 'post_tag',
+                                'label' => __('Tag', $this->pluginName),
+                            ),
+                            'data' => array(
+                                array(
+                                    'source' => 'function',
+                                    'value' => 'wpurp_shortcode_generator_taxonomies',
+                                ),
                             ),
                         ),
+                        'default' => array(
+                            '{{all}}',
+                        ),
+                    ),
+                    array(
+                        'type' => 'select',
+                        'name' => 'limit_by_tag',
+                        'label' => __('Limit by', $this->pluginName),
+                        'items' => array(
+                            array(
+                                'value' => 'category',
+                                'label' => __('Category', $this->pluginName),
+                            ),
+                            array(
+                                'value' => 'post_tag',
+                                'label' => __('Tag', $this->pluginName),
+                            ),
+                            'data' => array(
+                                array(
+                                    'source' => 'function',
+                                    'value' => 'wpurp_shortcode_generator_taxonomies',
+                                ),
+                            ),
+                        ),
+                    ),
+                    array(
+                        'type' => 'textbox',
+                        'name' => 'limit_by_values',
+                        'label' => __('Limit by values', $this->pluginName),
                     ),
                     array(
                         'type' => 'select',

@@ -50,28 +50,29 @@ foreach( $fields as $field)
         <td class="recipe-general-form-field">
             <input type="number" name="recipe_servings" id="recipe_servings" value="<?php echo $servings; ?>" />
             <input type="text" name="recipe_servings_type" id="recipe_servings_type" value="<?php echo $servings_type; ?>" />
-            <span class="recipe-general-form-notes"> <?php _e( '(e.g. 2 people, 3 loafs, ...)', $this->pluginName ) ?></span>
+            <span class="recipe-general-form-notes"> <?php _e( '(e.g. 2 people, 3 loafs, ...)', $this->pluginName ); ?></span>
         </td>
     </tr>
     <tr>
         <td class="recipe-general-form-label"><label for="recipe_prep_time"><?php _e( 'Prep Time', $this->pluginName ); ?></label></td>
         <td class="recipe-general-form-field">
-            <input type="number" name="recipe_prep_time" id="recipe_prep_time" value="<?php echo $prep_time; ?>" />
-            <span class="recipe-general-form-notes"> <?php _e( 'minutes', $this->pluginName ) ?></span>
+            <input type="text" name="recipe_prep_time" id="recipe_prep_time" value="<?php echo $prep_time; ?>" />
+            <input type="text" name="recipe_prep_time_text" id="recipe_prep_time_text" value="<?php echo $prep_time_text; ?>" />
+            <span class="recipe-general-form-notes"> <?php _e( '(e.g. 20 minutes, 1-2 hours, ...)', $this->pluginName ); ?></span>
         </td>
     </tr>
     <tr>
         <td class="recipe-general-form-label"><label for="recipe_cook_time"><?php _e( 'Cook Time', $this->pluginName ); ?></label></td>
         <td class="recipe-general-form-field">
-            <input type="number" name="recipe_cook_time" id="recipe_cook_time" value="<?php echo $cook_time; ?>" />
-            <span class="recipe-general-form-notes"> <?php _e( 'minutes', $this->pluginName ) ?></span>
+            <input type="text" name="recipe_cook_time" id="recipe_cook_time" value="<?php echo $cook_time; ?>" />
+            <input type="text" name="recipe_cook_time_text" id="recipe_cook_time_text" value="<?php echo $cook_time_text; ?>" />
         </td>
     </tr>
     <tr>
         <td class="recipe-general-form-label"><label for="recipe_passive_time"><?php _e( 'Passive Time', $this->pluginName ); ?></label></td>
         <td class="recipe-general-form-field">
-            <input type="number" name="recipe_passive_time" id="recipe_passive_time" value="<?php echo $passive_time; ?>" />
-            <span class="recipe-general-form-notes"> <?php _e( 'minutes', $this->pluginName ) ?></span>
+            <input type="text" name="recipe_passive_time" id="recipe_passive_time" value="<?php echo $passive_time; ?>" />
+            <input type="text" name="recipe_passive_time_text" id="recipe_passive_time_text" value="<?php echo $passive_time_text; ?>" />
         </td>
     </tr>
 <?php if(!isset($wpurp_user_submission)) { ?>

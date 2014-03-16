@@ -164,6 +164,41 @@ if ( $migrate_version < '1.0.8' )
 }
 
 /*
+ * -> 1.0.9
+ *
+ * Allow free text for recipe times
+ */
+
+if ( $migrate_version < '1.0.9' )
+{
+    /**
+     * Normalized amounts and servings
+     */
+    // Get all recipe posts and loop through them
+    $posts = $this->get_recipes( 'title', 'ASC', '', '', -1, '', true  );
+
+    foreach ( $posts as $post )
+    {
+        $recipe = get_post_custom( $post->ID );
+
+        if( $recipe['recipe_prep_time'][0] != '' ) {
+            update_post_meta( $post->ID, 'recipe_prep_time_text', __( 'minutes', $this->pluginName ) );
+        }
+        if( $recipe['recipe_cook_time'][0] != '' ) {
+            update_post_meta( $post->ID, 'recipe_cook_time_text', __( 'minutes', $this->pluginName ) );
+        }
+        if( $recipe['recipe_passive_time'][0] != '' ) {
+            update_post_meta( $post->ID, 'recipe_passive_time_text', __( 'minutes', $this->pluginName ) );
+        }
+    }
+
+    // Successfully migrated to 1.0.9
+    $migrate_version = '1.0.9';
+    update_option( 'wpurp_migrate_version', $migrate_version );
+    $this->add_admin_notice( '<strong>WP Ultimate Recipe</strong> successfully migrated to 1.0.9+' );
+}
+
+/*
  * -> Recipes to Posts
  *
  * Convert posts that include 1 recipe to actual recipes
@@ -328,6 +363,9 @@ if ( $migrate_special == 'RecipesToPosts' )
                     add_post_meta( $post->ID, 'recipe_prep_time', $meta['recipe_prep_time'][0] );
                     add_post_meta( $post->ID, 'recipe_cook_time', $meta['recipe_cook_time'][0] );
                     add_post_meta( $post->ID, 'recipe_passive_time', $meta['recipe_passive_time'][0] );
+                    add_post_meta( $post->ID, 'recipe_prep_time_text', $meta['recipe_prep_time_text'][0] );
+                    add_post_meta( $post->ID, 'recipe_cook_time_text', $meta['recipe_cook_time_text'][0] );
+                    add_post_meta( $post->ID, 'recipe_passive_time_text', $meta['recipe_passive_time_text'][0] );
                     add_post_meta( $post->ID, 'recipe_cost', $meta['recipe_cost'][0] );
                     add_post_meta( $post->ID, 'recipe_user_ratings', $meta['recipe_user_ratings'][0] );
                     add_post_meta( $post->ID, 'recipe_migrated_from', $recipe->ID );

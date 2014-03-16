@@ -65,6 +65,12 @@ You can find more information at [WPUltimateRecipePlugin.com](http://www.wpultim
 
 == Changelog ==
 
+= 1.0.9 =
+* Free text field for the recipe times. Not limited to minutes anymore
+* Premium: Extended shortcode options for the Recipe Grid
+* Fix: Media queries
+* Fix: Premium unit conversion works better
+
 = 1.0.8 =
 * Recipes now support Jetpack Publicize feature
 * Added French translations
@@ -189,6 +195,9 @@ You can find more information at [WPUltimateRecipePlugin.com](http://www.wpultim
 * Very first version of this plugin
 
 == Upgrade notice ==
+
+= 1.0.9 =
+Upgrading is fun
 
 = 1.0.8 =
 Upgrade for improvements

@@ -103,21 +103,24 @@ class WPURP_Core extends WPUltimateRecipe {
     {
         wp_register_style( $this->pluginName, $this->pluginUrl . '/css/layout-base.css', '', WPURP_VERSION );
         wp_register_style( 'wpurp_default_layout', $this->pluginUrl . '/css/layout-default.css', '', WPURP_VERSION );
+        wp_register_style( 'wpurp_mobile_layout', $this->pluginUrl . '/css/layout-mobile.css', '', WPURP_VERSION );
+
         wp_enqueue_style( $this->pluginName );
         wp_enqueue_style( 'wpurp_default_layout' );
+        wp_enqueue_style( 'wpurp_mobile_layout' );
     }
 
     public function public_plugin_scripts()
     {
-        wp_register_script( $this->pluginName, $this->pluginUrl . '/js/public.js', array('jquery'), WPURP_VERSION );
+        wp_register_script( $this->pluginName, $this->pluginUrl . '/js/public.js', array('jquery'), WPURP_VERSION, true );
         wp_enqueue_script( $this->pluginName );
 
         if( $this->option('recipe_sharing_enable', '1') == '1' ) {
-            wp_register_script( 'socialite', $this->pluginUrl . '/lib/socialite/socialite.min.js', '', WPURP_VERSION );
+            wp_register_script( 'socialite', $this->pluginUrl . '/lib/socialite/socialite.min.js', '', WPURP_VERSION, true );
             wp_enqueue_script( 'socialite' );
-            wp_register_script( 'socialite-pinit', $this->pluginUrl . '/lib/socialite/extensions/socialite.pinterest.js', '', WPURP_VERSION );
+            wp_register_script( 'socialite-pinit', $this->pluginUrl . '/lib/socialite/extensions/socialite.pinterest.js', '', WPURP_VERSION, true );
             wp_enqueue_script( 'socialite-pinit' );
-            wp_register_script( 'recipesharing', $this->pluginUrl . '/js/sharing.js', array('jquery'), WPURP_VERSION );
+            wp_register_script( 'recipesharing', $this->pluginUrl . '/js/sharing.js', array('jquery'), WPURP_VERSION, true );
             wp_enqueue_script( 'recipesharing' );
         }
     }
@@ -249,7 +252,7 @@ class WPURP_Core extends WPUltimateRecipe {
                ),
                 'public' => true,
                 'menu_position' => 5,
-                'supports' => array( 'title', 'editor', 'thumbnail', 'comments', 'excerpt', 'publicize' ),
+                'supports' => array( 'title', 'editor', 'thumbnail', 'comments', 'excerpt', 'author', 'publicize' ),
                 'taxonomies' => $taxonomies,
                 'menu_icon' =>  $this->pluginUrl . '/img/icon_16.png',
                 'has_archive' => true,

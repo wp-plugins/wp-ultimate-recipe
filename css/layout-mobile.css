@@ -1,0 +1,24 @@
+@media screen and (max-width: 768px) {
+    .wpurp-container .recipe-header-image {
+        float: none !important;
+        text-align: center;
+
+        margin-bottom: 10px !important;
+    }
+
+    .wpurp-container .recipe-header-information ul,
+    .wpurp-container .recipe-header.has-image .recipe-header-information ul {
+        margin: 0 0 20px 0 !important;
+    }
+
+    .wpurp-container .recipe-header-extra,
+    .wpurp-container .recipe-header.has-image .recipe-header-extra {
+        margin: 0 !important;
+    }
+
+    .wpurp-container .recipe-ingredient-quantity-unit {
+        display: inline;
+        width: auto;
+        margin-right: 5px;
+    }
+}

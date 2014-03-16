@@ -18,7 +18,7 @@ if( class_exists( 'WPUltimateRecipe' ) ) {
             $this->coreUrl = WP_PLUGIN_URL . '/wp-ultimate-recipe';
 
             // Recipe taxonomies that users should not be able to delete
-            $this->ignoreTaxonomies = array('rating');
+            $this->ignoreTaxonomies = array('rating', 'post_tag', 'category');
 
             //Actions
             add_action( 'init', array( $this, 'custom_taxonomies_init' ), 2 );

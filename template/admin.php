@@ -659,6 +659,28 @@ $admin_menu = array(
                                     'description' => __( 'Allow your visitors to switch between Imperial and Metric units.', $this->pluginName ),
                                     'default' => '1',
                                 ),
+                                array(
+                                    'type' => 'select',
+                                    'name' => 'user_menus_default_unit_system',
+                                    'label' => __('User Menus unit system', $this->pluginName),
+                                    'description' => __( 'Unit system to use for the shopping list feature.', $this->pluginName ),
+                                    'items' => array(
+                                        'data' => array(
+                                            array(
+                                                'source' => 'function',
+                                                'value' => 'wpurp_get_unit_systems',
+                                            ),
+                                        ),
+                                    ),
+                                    'default' => array(
+                                        '0',
+                                    ),
+                                    'validation' => 'required',
+                                    'dependency' => array(
+                                        'field' => 'recipe_adjustable_units',
+                                        'function' => 'vp_dep_boolean_inverse',
+                                    ),
+                                ),
                             ),
                         ),
                     ),
@@ -867,6 +889,15 @@ $admin_menu = array(
                         'guests',
                     ),
                     'validation' => 'required',
+                ),
+                array(
+                    'type' => 'slider',
+                    'name' => 'user_menus_default_servings',
+                    'label' => __('Default Servings', $this->pluginName),
+                    'min' => '1',
+                    'max' => '10',
+                    'step' => '1',
+                    'default' => '4',
                 ),
                 array(
                     'type' => 'textbox',

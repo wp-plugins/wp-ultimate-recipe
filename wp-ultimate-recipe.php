@@ -3,7 +3,7 @@
 Plugin Name: WP Ultimate Recipe
 Plugin URI: http://www.wpultimaterecipeplugin.com
 Description: WP Ultimate Recipe is a user friendly plugin for adding recipes to any of your posts and pages.
-Version: 1.0.8
+Version: 1.0.9
 Author: Bootstrapped Ventures
 Author URI: http://www.bootstrappedventures.com
 License: GPLv2
@@ -13,7 +13,7 @@ License: GPLv2
  */
 
 define( 'COMPATIBLE_PREMIUM_VERSION', '1.0.2' );
-define( 'WPURP_VERSION', '1.0.8' );
+define( 'WPURP_VERSION', '1.0.9' );
 
 class WPUltimateRecipe {
     
@@ -319,10 +319,10 @@ class WPUltimateRecipe {
         $recipes = array();
 
         if( $query->have_posts() ) { //recipes found
-            
-            while( $query->have_posts() ) {
-                $query->the_post();
-                global $post;
+
+            $posts = $query->posts;
+
+            foreach( $posts as $post ) {
                 $recipes[] = $post;
             }
         }
@@ -357,8 +357,11 @@ class WPUltimateRecipe {
             'recipe_servings',
             'recipe_servings_type',
             'recipe_prep_time',
+            'recipe_prep_time_text',
             'recipe_cook_time',
+            'recipe_cook_time_text',
             'recipe_passive_time',
+            'recipe_passive_time_text',
             'recipe_ingredients',
             'recipe_instructions',
             'recipe_notes',
@@ -493,7 +496,12 @@ class WPUltimateRecipe {
                     $amount = str_replace( ',','', $amount );
                     $parts = explode( '/', $amount );
 
-                    $float += floatval($parts[0]) / floatval($parts[1]);
+                    $denominator = floatval($parts[1]);
+                    if( $denominator == 0 ) {
+                        $denominator = 1;
+                    }
+
+                    $float += floatval($parts[0]) / $denominator;
                     break;
                 case '.':
                     $amount = str_replace( ',','', $amount );

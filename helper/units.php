@@ -98,6 +98,7 @@ class WPURP_Helper_Units {
                     'tbls',
                     'tb',
                     'tbs',
+                    'T'
                 ),
                 'teaspoon' => array(
                     'teaspoon',
@@ -158,6 +159,12 @@ class WPURP_Helper_Units {
                 'name' => 'unit_conversion_unit_aliases_notebox',
                 'label' => __('Unit Aliases', $this->pluginName),
                 'description' => __('Use a semicolon to separate unit aliases. For example: ', $this->pluginName) . ' ounce;ounces;oz',
+                'status' => 'info',
+            ),
+            array(
+                'type' => 'notebox',
+                'name' => 'unit_conversion_unit_aliases_notebox_abbreviation',
+                'description' => __('The first alias in the list will be shown after converting to this unit.', $this->pluginName),
                 'status' => 'info',
             ),
         );
@@ -458,7 +465,17 @@ class WPURP_Helper_Units {
                 }
 
                 foreach( $aliases as $alias ) {
-                    $out[preg_replace( "/[^a-z]/", "", strtolower( $alias) )] = $unit;
+                    $clean = preg_replace( "/[^a-z]/i", "", $alias );
+                    $lower = strtolower( $clean );
+
+                    if( $clean != '' ) {
+                        // Both case sensitive and lower version in output, will be the same for most cases
+                        $out[$clean] = $unit;
+
+                        if( !array_key_exists( $lower, $out ) ) {
+                            $out[$lower] = $unit;
+                        }
+                    }
                 }
             }
         }
@@ -472,6 +489,26 @@ class WPURP_Helper_Units {
         foreach( $this->units as $unit_type => $units ) {
             foreach( $units as $unit => $aliases ) {
                 $out[$unit] = $unit_type;
+            }
+        }
+
+        return $out;
+    }
+
+    public function get_unit_user_abbreviations()
+    {
+        $out = array();
+        foreach( $this->units as $units ) {
+            foreach( $units as $unit => $default_aliases ) {
+                $user_aliases = $this->option( 'unit_conversion_alias_' . $unit, false );
+
+                if($user_aliases) {
+                    $aliases = explode( ';', $user_aliases );
+                } else {
+                    $aliases = $default_aliases;
+                }
+
+                $out[$unit] = $aliases[0];
             }
         }
 
