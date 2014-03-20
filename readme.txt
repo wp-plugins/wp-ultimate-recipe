@@ -1,7 +1,7 @@
 === WP Ultimate Recipe ===
 Contributors: BrechtVds
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QG7KZMGFU325Y
-Tags: recipe, ingredients, cuisines, food, courses, cook, kitchen, cooking
+Tags: recipe, ingredients, food, cooking, seo, schema.org
 Requires at least: 3.3
 Tested up to: 3.8.1
 Stable tag: trunk
@@ -12,23 +12,29 @@ WP Ultimate Recipe is a user friendly plugin for adding recipes to any of your p
 
 == Description ==
 
-[WP Ultimate Recipe](http://www.wpultimaterecipeplugin.com/) is a user friendly plugin for adding recipes to any of your posts and pages.
+[WP Ultimate Recipe](http://www.wpultimaterecipe.com/) is a user friendly plugin for adding recipes to any of your posts and pages. Want to see it all in action? Take a look at our [demo website](http://demo.wpultimaterecipe.com) and [video lessons](http://www.wpultimaterecipe.com/category/video-lessons/).
 
-Some features:
+This first [video lesson](http://www.wpultimaterecipe.com/category/video-lessons/) offers an introduction to WP Ultimate Recipe:
+
+[youtube http://www.youtube.com/watch?v=ePd2TFCw8aw]
+
+**Your visitors will love WP Ultimate Recipe**. They will be able to adjust the servings, print the recipe, find other recipes using a specific ingredient, share your recipe, ... Try it out today and you'll never want another recipe plugin again!
+
+An overview of the WP Ultimate Recipe features:
 
 *   Use shortcodes or the "Insert Recipe" button to add **multiple recipes to any of your posts and pages**.
 *   Ingredients, course types, cuisines and ratings are all **taxonomies** related to your recipe. This means that you can display these in a nice tag cloud widget.
 *   Add **photos** to any step of the recipe.
 *   Just click the printer icon to **print an image-less version** of the recipe.
 *   This plugin is **fully responsive**. That means that your recipes will look good on any device.
-*   Uses microdata optimised for **Google Recipe search**.
+*   Uses schema.org/Recipe microdata optimised for **Google Recipe search**.
 *   Easily **translatable**, already available in English, Dutch, Swedish and many others
 *   Let visitors **adjust the ingredient quantities** for more or less servings
 *   Add a **recipe index** to any post or page
 *   Structure your ingredients and instructions in **groups** (e.g. icing and cake batter)
 *   Visitors can **share your recipes**
 
-We also have a [premium version](http://www.wpultimaterecipeplugin.com/#premium) which offers the following features:
+We also have a [WP Ultimate Recipe Premium version](http://www.wpultimaterecipe.com/get-the-plugin/) which offers the following features:
 
 *   Custom **styling** of recipes
 *   Let your **users submit** recipes
@@ -42,26 +48,45 @@ We also have a [premium version](http://www.wpultimaterecipeplugin.com/#premium)
 *   Advanced usage of **WP categories and tags**
 *   Dynamically switch between **Imperial and Metric units**
 
-Feel free to contact me if any features are missing.
-You can find more information at [WPUltimateRecipePlugin.com](http://www.wpultimaterecipeplugin.com/)
+Feel free to contact us if any features are missing.
+You can find more information at [WPUltimateRecipe.com](http://www.wpultimaterecipe.com/)
 
 == Installation ==
 
 1. Upload the `wp-ultimate-recipe` directory (directory included) to the `/wp-content/plugins/` directory
 1. Activate the plugin through the 'Plugins' menu in WordPress
 1. Add recipes using the menu on the left
-1. Display recipes in post and pages using the *Add Recipe* button in the editor
 
 == Frequently asked questions ==
 
-= Where can I find more information =
+= How does feature X work? =
 
-[WPUltimateRecipePlugin.com](http://www.wpultimaterecipeplugin.com/)
+Check out our [WP Ultimate Recipe demo website](http://demo.wpultimaterecipe.com) for an overview of all the free and premium features. If you want to see it all in action, take a look at [our video lessons](http://www.wpultimaterecipe.com/category/video-lessons/).
+
+= Do you offer any support? =
+
+Yes! We pride ourselves on offering awesome support and almost always answer support questions within 24 hours. Send us an email at [support@wpultimaterecipe.com](mailto:support@wpultimaterecipe.com) whenever you have a question or suggestion!
+
+= That is WP Ultimate Recipe Premium? =
+
+[WP Ultimate Recipe Premium](http://www.wpultimaterecip.com/get-the-plugin/) is a paid add-on to the free WP Ultimate Recipe plugin (this one!). You can get started with the free plugin and switch to the Premium version whenever you're ready without losing any data. Or just keep using the free version forever if you don't need the advanced features. We will always keep the free version around.
+
+= Where can I find more information? =
+
+[WPUltimateRecipe.com](http://www.wpultimaterecipe.com/)
 
 == Screenshots ==
 
-1. Example recipe for Pasta Pesto. Check it out in action at [WPUltimateRecipePlugin.com](http://www.wpultimaterecipeplugin.com/)
-2. Manage everything about your recipes in one place
+1. Example recipe for Pasta Pesto. Get an overview of all its features at [WPUltimateRecipe.com](http://www.wpultimaterecipe.com/)
+2. Example admin page for the Pasto Pesto recipe.
+3. Recipes are added as a custom post type to your WordPress backend and can be handled just like normal posts. Your recipes can be categorized and tagged however you want it.
+4. WP Ultimate Recipe comes with an extensive settings page to adjust everything to your liking. But the plugin works great out of the box as well.
+5. The WP Ultimate Recipe shortcode editor can be used to easily add recipes and other functionality to posts or pages. Just click on the Chef's Hat icon.
+6. The shortcode editor is easy to use and will automatically generate the correct shortcode for the recipe you want.
+7. Add a nice Recipe Index to any page or post with a simple shortcode.
+8. Recipe ingredients (and cuisines, courses, ...) are custom taxonomies and can therefore be used in lots of different widgets, like the Tag Cloud widget you see here.
+9. Clicking on the Print Button will allow your visitors to print the recipe in a paper-friendly format without any layout or photos.
+10. WP Ultimate Recipe automatically formats your data so it can be picked up by Google Recipe Search and others. Great for SEO!
 
 == Changelog ==
 
