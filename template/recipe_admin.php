@@ -265,8 +265,7 @@ $image = $this->pluginUrl . '/img/image_placeholder.png';
             <td>
                 <textarea name="recipe_instructions[<?php echo $i; ?>][description]" rows="4" id="ingredient_description_<?php echo $i; ?>"></textarea>
                 <input type="hidden" name="recipe_instructions[<?php echo $i; ?>][group]"    class="instructions_group" id="instruction_group_<?php echo $i; ?>" value="" />
-                <?php //if( !is_user_logged_in() ) { ?>
-                <?php if ( !current_user_can( 'manage_options' ) ) { ?>
+                <?php if ( !current_user_can( 'upload_files' ) ) { ?>
                     <?php _e( 'Add Image', $this->pluginName ); ?>:<br/>
                     <input class="recipe_instructions_image button" type="file" id="recipe_thumbnail" value="" size="50" name="recipe_thumbnail_<?php echo $i; ?>" />
                     </td>

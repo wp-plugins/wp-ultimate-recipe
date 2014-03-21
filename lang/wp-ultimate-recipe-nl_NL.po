@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WP Ultimate Recipe package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2014-03-16 15:14:49+0000\n"
+"PO-Revision-Date: 2014-03-21 19:15:09+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -10,9 +10,25 @@ msgstr ""
 "X-Generator: GlotPress/0.1\n"
 "Project-Id-Version: WP Ultimate Recipe\n"
 
-#: core/helper/units.php:167
-msgid "The first alias in the list will be shown after converting to this unit."
-msgstr "De eerste alias in de lijst zal getoond worden na het converteren naar deze eenheid."
+#: core/helper/units.php:194
+msgid "When converting to a unit the alias defined below will be shown. The singular form will be shown when the amount is 1, the plural otherwise."
+msgstr "De alias hieronder zal getoond worden indien er naar deze eenheid geconverteerd wordt. Het enkelvoud wordt getoond indien de hoeveelheid 1 is, anders het meervoud."
+
+#: core/helper/units.php:207
+msgid "Singular"
+msgstr "Enkelvoud"
+
+#: core/helper/units.php:228
+msgid "Plural"
+msgstr "Meervoud"
+
+#: core/helper/units.php:248
+msgid "Alias to convert to"
+msgstr "Alias om naar te converteren"
+
+#: core/template/admin.php:896
+msgid "Enable user menus save function for"
+msgstr "Gebruikers menus opslaan functie activeren voor"
 
 #: core/template/admin.php:665
 msgid "User Menus unit system"
@@ -38,11 +54,11 @@ msgstr "Dit menu kan in de front end worden aangepast:"
 msgid "More information"
 msgstr "Meer Informatie"
 
-#: core/helper/units.php:340
+#: core/helper/units.php:400
 msgid "US Customary"
 msgstr "US Customary"
 
-#: core/helper/units.php:344
+#: core/helper/units.php:404
 msgid "US Legal"
 msgstr "US Legal"
 
@@ -55,7 +71,8 @@ msgstr "Gebruik dit om ingrediënten in de winkellijst te groeperen."
 msgid "Vegetables"
 msgstr "Groenten"
 
-#: core/helper/units.php:160 core/template/admin.php:694
+#: core/helper/units.php:160 core/helper/units.php:193
+#: core/template/admin.php:694
 msgid "Unit Aliases"
 msgstr "Eenheid Aliassen"
 
@@ -63,49 +80,49 @@ msgstr "Eenheid Aliassen"
 msgid "Use a semicolon to separate unit aliases. For example: "
 msgstr "Gebruik een puntkomma om de verschillende eenheid aliassen te onderscheiden. Bijvoorbeeld:"
 
-#: core/helper/units.php:187
+#: core/helper/units.php:182
 msgid " Units"
 msgstr "Eenheden"
 
-#: core/helper/units.php:204 core/template/admin.php:689
+#: core/helper/units.php:264 core/template/admin.php:689
 msgid "Unit Systems"
 msgstr "Eenheid Systemen"
 
-#: core/helper/units.php:210
+#: core/helper/units.php:270
 msgid "Number of Systems"
 msgstr "Aantal Systemen"
 
-#: core/helper/units.php:211
+#: core/helper/units.php:271
 msgid "Number of unit systems for your visitors to choose from."
 msgstr "Aantal eenheid systeem waartussen je bezoekers kunnen kiezen."
 
-#: core/helper/units.php:220 core/helper/units.php:226
-#: core/helper/units.php:232 core/helper/units.php:242
-#: core/helper/units.php:252 core/helper/units.php:364
+#: core/helper/units.php:280 core/helper/units.php:286
+#: core/helper/units.php:292 core/helper/units.php:302
+#: core/helper/units.php:312 core/helper/units.php:424
 msgid "Unit System"
 msgstr "Eenheid Systeem"
 
-#: core/helper/units.php:275 core/helper/units.php:281
+#: core/helper/units.php:335 core/helper/units.php:341
 msgid "Universal Units"
 msgstr "Universele Eenheden"
 
-#: core/helper/units.php:282
+#: core/helper/units.php:342
 msgid "These units are considered universal to all systems and will not be converted."
 msgstr "Deze eenheden worden verondersteld universeel te zijn voor alle systemen en zullen dan ook niet geconverteerd worden."
 
-#: core/helper/units.php:321
+#: core/helper/units.php:381
 msgid " units"
 msgstr "eenheden"
 
-#: core/helper/units.php:332
+#: core/helper/units.php:392
 msgid "Cup Type"
 msgstr "Cup Type"
 
-#: core/helper/units.php:385
+#: core/helper/units.php:445
 msgid "US Imperial"
 msgstr "US Imperial"
 
-#: core/template/admin.php:85 core/template/admin.php:896
+#: core/template/admin.php:85 core/template/admin.php:919
 msgid "Default Servings"
 msgstr "Standaard Porties"
 
@@ -133,11 +150,11 @@ msgstr "Er zijn nog geen recepten in je menu"
 msgid "Drop a recipe here to remove it"
 msgstr "Sleep een recept naar hier om het te verwijderen"
 
-#: wp-ultimate-recipe-premium/addons/user-menus/inc/builder.php:88
+#: wp-ultimate-recipe-premium/addons/user-menus/inc/builder.php:109
 msgid "Save Menu"
 msgstr "Menu Opslaan"
 
-#: wp-ultimate-recipe-premium/addons/user-menus/inc/builder.php:90
+#: wp-ultimate-recipe-premium/addons/user-menus/inc/builder.php:111
 msgid "Print Shopping List"
 msgstr "Winkellijst Afdrukken"
 
@@ -207,7 +224,7 @@ msgstr "ongeldig"
 msgid "Change License"
 msgstr "Licentie Veranderen"
 
-#: core/helper/units.php:336 core/helper/units.php:383
+#: core/helper/units.php:396 core/helper/units.php:443
 msgid "Metric"
 msgstr "Metrisch"
 
@@ -490,7 +507,7 @@ msgstr "Voeg een ingrediënt groep toe"
 msgid "Main Instructions"
 msgstr "Recept Instructies"
 
-#: core/template/recipe_admin.php:292
+#: core/template/recipe_admin.php:291
 msgid "Add an instruction group"
 msgstr "Voeg een instructie groep toe"
 
@@ -508,7 +525,7 @@ msgstr "Tags"
 #: core/template/shortcode_generator.php:235
 #: core/template/shortcode_generator.php:259
 #: wp-ultimate-recipe-premium/addons/user-menus/inc/builder.php:5
-#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:139
+#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:149
 msgid "Category"
 msgstr "Categorie"
 
@@ -894,15 +911,15 @@ msgstr "Het volledige recept"
 msgid "Display Thumbnail"
 msgstr "Toon Thumbnail"
 
-#: core/template/admin.php:248 core/template/admin.php:920
+#: core/template/admin.php:248 core/template/admin.php:943
 msgid "404 error/page not found?"
 msgstr "404 fout/pagina niet gevonden?"
 
-#: core/template/admin.php:249 core/template/admin.php:921
+#: core/template/admin.php:249 core/template/admin.php:944
 msgid "Try"
 msgstr "Probeer"
 
-#: core/template/admin.php:249 core/template/admin.php:921
+#: core/template/admin.php:249 core/template/admin.php:944
 msgid "flushing your permalinks"
 msgstr "je permalinks te flushen"
 
@@ -914,7 +931,7 @@ msgstr "Recept Sjabloon"
 #: core/template/admin.php:516 core/template/admin.php:588
 #: core/template/admin.php:648 core/template/admin.php:715
 #: core/template/admin.php:768 core/template/admin.php:852
-#: core/template/admin.php:936
+#: core/template/admin.php:959
 msgid "These features are only available in "
 msgstr "Deze features zijn alleen beschikbaar in"
 
@@ -932,35 +949,36 @@ msgid "Allow submissions from"
 msgstr "Laat inzendingen toe van"
 
 #: core/template/admin.php:793 core/template/admin.php:817
-#: core/template/admin.php:877
+#: core/template/admin.php:877 core/template/admin.php:900
 msgid "Nobody"
 msgstr "Niemand"
 
 #: core/template/admin.php:793 core/template/admin.php:877
+#: core/template/admin.php:900
 msgid "disabled"
 msgstr "inactief"
 
-#: core/template/admin.php:928
+#: core/template/admin.php:951
 msgid "Import Recipes"
 msgstr "Recepten Importeren"
 
-#: core/template/admin.php:962
+#: core/template/admin.php:985
 msgid "Coming Soon"
 msgstr "Binnenkort Beschikbaar"
 
-#: core/template/admin.php:963
+#: core/template/admin.php:986
 msgid "This feature is coming soon for "
 msgstr "Deze feature is binnenkort beschikbaar voor"
 
-#: core/template/admin.php:955
+#: core/template/admin.php:978
 msgid "Export Recipes"
 msgstr "Recepten Exporteren"
 
-#: core/template/admin.php:970 core/template/admin.php:978
+#: core/template/admin.php:993 core/template/admin.php:1001
 msgid "FAQ & Support"
 msgstr "FAQ & Ondersteuning"
 
-#: core/template/admin.php:977
+#: core/template/admin.php:1000
 msgid "Need more help?"
 msgstr "Meer hulp nodig?"
 
@@ -1097,7 +1115,7 @@ msgstr "Reset naar beginwaarden"
 msgid "No recipes found."
 msgstr "Geen recepten gevonden."
 
-#: wp-ultimate-recipe-premium/addons/user-menus/inc/builder.php:96
+#: wp-ultimate-recipe-premium/addons/user-menus/inc/builder.php:117
 msgid "Amount"
 msgstr "Hoeveelheid"
 
@@ -1218,7 +1236,7 @@ msgstr "Voeg een nieuwe Recept Tag toe"
 #: core/template/shortcode_generator.php:263
 #: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:75
 #: wp-ultimate-recipe-premium/addons/user-menus/inc/builder.php:9
-#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:144
+#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:154
 msgid "Tag"
 msgstr "Tag"
 
@@ -1231,7 +1249,7 @@ msgstr "Naam (enkelvoud)"
 
 #: core/addons/custom-taxonomies/custom-taxonomies.php:81
 #: core/addons/custom-taxonomies/custom-taxonomies.php:151
-#: core/template/admin.php:233 core/template/admin.php:905
+#: core/template/admin.php:233 core/template/admin.php:928
 #: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:84
 #: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:165
 msgid "Slug"
@@ -1338,8 +1356,8 @@ msgstr "Blauw"
 msgid "Green"
 msgstr "Groen"
 
-#: core/helper/units.php:233 core/helper/units.php:243
-#: core/helper/units.php:253 core/template/admin.php:325
+#: core/helper/units.php:293 core/helper/units.php:303
+#: core/helper/units.php:313 core/template/admin.php:325
 msgid "Custom"
 msgstr "Eigen"
 
@@ -1409,12 +1427,12 @@ msgid "User Menus"
 msgstr "Gebruiker Menus"
 
 #: core/template/admin.php:797 core/template/admin.php:821
-#: core/template/admin.php:881
+#: core/template/admin.php:881 core/template/admin.php:904
 msgid "Guests and registered users"
 msgstr "Gasten en geregistreerde gebruikers"
 
 #: core/template/admin.php:801 core/template/admin.php:825
-#: core/template/admin.php:885
+#: core/template/admin.php:885 core/template/admin.php:908
 msgid "Registered users only"
 msgstr "Enkel geregistreerde gebruikers"
 
@@ -1443,69 +1461,69 @@ msgstr "Instuur formulier CSS"
 msgid "Add basic CSS styles to the frontend form."
 msgstr "Basis CSS stijl toevoegen aan formulier."
 
-#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:64
+#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:74
 msgid "Sorry, the site administrator has disabled recipe submissions."
 msgstr "Sorry, recepten insturen is niet geactiveerd."
 
-#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:77
+#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:87
 msgid "Sorry, only registered users may submit recipes."
 msgstr "Sorry, enkel geregistreerde gebruikers mogen recepten insturen."
 
-#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:108
+#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:118
 msgid "Recipe title"
 msgstr "Recept titel"
 
-#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:113
+#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:123
 msgid "Your name"
 msgstr "Jouw naam"
 
-#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:117
+#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:127
 msgid "Featured image"
 msgstr "Uitgelichte afbeelding"
 
-#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:121
+#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:131
 msgid "Add Featured Image"
 msgstr "Uitgelichte afbeelding toevoegen"
 
-#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:122
+#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:132
 msgid "Remove Featured Image"
 msgstr "Uitgelichte afbeelding verwijderen"
 
-#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:154
+#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:164
 msgid "Submit"
 msgstr "Insturen"
 
-#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:197
+#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:207
 msgid "Recipe submitted! Thank you, your recipe is now awaiting moderation."
 msgstr "Recept ingestuurd! Bedankt, jouw recept wacht nu op goedkeuring."
 
-#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:199
+#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:209
 msgid "Recipe submitted! Thank you, your recipe has been published."
 msgstr "Recept ingestuurd! Bedankt, je recept werd gepubliceerd."
 
-#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:229
+#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:239
 msgid "Anonymous"
 msgstr "Anoniem"
 
 #: core/template/shortcode_generator.php:85
 #: core/template/shortcode_generator.php:137
 #: core/template/shortcode_generator.php:289
-#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:283
-#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:302
+#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:293
+#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:312
 msgid "Author"
 msgstr "Auteur"
 
 #: core/template/recipe_admin.php:21 core/template/shortcode_generator.php:133
 #: core/template/shortcode_generator.php:285
-#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:301
+#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:311
 msgid "Title"
 msgstr "Titel"
 
-#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:304
+#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:314
 msgid "Date"
 msgstr "Datum"
 
-#: core/template/recipe_admin.php:298 core/template/recipe_public.php:265
+#: core/template/recipe_admin.php:297 core/template/recipe_public.php:265
 #: wp-ultimate-recipe-premium/addons/custom-templates/layouts/compact.php:289
 #: wp-ultimate-recipe-premium/addons/custom-templates/layouts/default.php:289
 #: wp-ultimate-recipe-premium/addons/custom-templates/layouts/modern.php:306
@@ -1612,20 +1630,20 @@ msgstr "<strong>Gebruik de TAB toets</strong> terwijl je ingrediënten toevoegt 
 msgid "Instructions"
 msgstr "Instructies"
 
-#: core/template/recipe_admin.php:249 core/template/recipe_admin.php:270
-#: core/template/recipe_admin.php:278
+#: core/template/recipe_admin.php:249 core/template/recipe_admin.php:269
+#: core/template/recipe_admin.php:277
 msgid "Add Image"
 msgstr "Foto toevoegen"
 
-#: core/template/recipe_admin.php:250 core/template/recipe_admin.php:279
+#: core/template/recipe_admin.php:250 core/template/recipe_admin.php:278
 msgid "Remove Image"
 msgstr "Foto verwijderen"
 
-#: core/template/recipe_admin.php:289
+#: core/template/recipe_admin.php:288
 msgid "Add an instruction"
 msgstr "Voeg een instructie toe"
 
-#: core/template/recipe_admin.php:295
+#: core/template/recipe_admin.php:294
 msgid "<strong>Use the TAB key</strong> while adding instructions, it will automatically create new fields. <strong>Don't worry about empty lines</strong>, these will be ignored."
 msgstr "<strong>Gebruik de TAB toets</strong> terwijl je instructies toevoegt om automatisch nieuwe velden aan te maken. <strong>Negeer de lege lijnen</strong>, deze worden niet meegenomen."
 
@@ -1723,7 +1741,7 @@ msgid "Ingredients"
 msgstr "Ingrediënten"
 
 #: core/core-functions.php:671
-#: wp-ultimate-recipe-premium/addons/user-menus/inc/builder.php:95
+#: wp-ultimate-recipe-premium/addons/user-menus/inc/builder.php:116
 msgid "Ingredient"
 msgstr "Ingrediënt"
 
@@ -1799,7 +1817,7 @@ msgstr "Indisch"
 msgid "Chinese"
 msgstr "Chinees"
 
-#: core/core-functions.php:693 core/helper/units.php:348
+#: core/core-functions.php:693 core/helper/units.php:408
 msgid "Japanese"
 msgstr "Japans"
 

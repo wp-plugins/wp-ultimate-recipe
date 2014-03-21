@@ -891,6 +891,29 @@ $admin_menu = array(
                     'validation' => 'required',
                 ),
                 array(
+                    'type' => 'select',
+                    'name' => 'user_menus_enable_save',
+                    'label' => __('Enable user menus save function for', $this->pluginName),
+                    'items' => array(
+                        array(
+                            'value' => 'off',
+                            'label' => __('Nobody', $this->pluginName) . ' (' . __('disabled', $this->pluginName) . ')',
+                        ),
+                        array(
+                            'value' => 'guests',
+                            'label' => __('Guests and registered users', $this->pluginName),
+                        ),
+                        array(
+                            'value' => 'registered',
+                            'label' => __('Registered users only', $this->pluginName),
+                        ),
+                    ),
+                    'default' => array(
+                        'guests',
+                    ),
+                    'validation' => 'required',
+                ),
+                array(
                     'type' => 'slider',
                     'name' => 'user_menus_default_servings',
                     'label' => __('Default Servings', $this->pluginName),

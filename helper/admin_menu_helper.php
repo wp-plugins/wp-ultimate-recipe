@@ -107,6 +107,22 @@ function wpurp_get_unit_systems()
     return $unit_systems;
 }
 
+function wpurp_alias_options($param = '')
+{
+    $options = array();
+
+    $aliases = explode(';', $param);
+
+    foreach($aliases as $index => $alias) {
+        $options[] = array(
+            'value' => $index,
+            'label' => $alias
+        );
+    }
+
+    return $options;
+}
+
 function vp_dep_boolean_inverse($value)
 {
     $args   = func_get_args();
@@ -247,6 +263,7 @@ VP_Security::instance()->whitelist_function('wpurp_admin_system_4');
 VP_Security::instance()->whitelist_function('wpurp_admin_system_5');
 VP_Security::instance()->whitelist_function('wpurp_admin_system_cups');
 VP_Security::instance()->whitelist_function('wpurp_get_unit_systems');
+VP_Security::instance()->whitelist_function('wpurp_alias_options');
 VP_Security::instance()->whitelist_function('vp_dep_boolean_inverse');
 
 VP_Security::instance()->whitelist_function('wpurp_shortcode_generator_recipes_by_date');

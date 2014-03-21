@@ -161,14 +161,9 @@ class WPURP_Helper_Units {
                 'description' => __('Use a semicolon to separate unit aliases. For example: ', $this->pluginName) . ' ounce;ounces;oz',
                 'status' => 'info',
             ),
-            array(
-                'type' => 'notebox',
-                'name' => 'unit_conversion_unit_aliases_notebox_abbreviation',
-                'description' => __('The first alias in the list will be shown after converting to this unit.', $this->pluginName),
-                'status' => 'info',
-            ),
         );
 
+        // Unit type aliases
         foreach( $this->units as $unit_type => $units ) {
 
             $units_admin = array();
@@ -189,6 +184,71 @@ class WPURP_Helper_Units {
                 'fields' => $units_admin,
             );
         }
+
+        // Alias to convert to
+
+        $admin[] = array(
+            'type' => 'notebox',
+            'name' => 'unit_conversion_unit_aliases_translate_notebox',
+            'label' => __('Unit Aliases', $this->pluginName),
+            'description' => __('When converting to a unit the alias defined below will be shown. The singular form will be shown when the amount is 1, the plural otherwise.', $this->pluginName),
+            'status' => 'info',
+        );
+
+        $units_admin = array();
+
+        foreach( $this->units as $unit_type => $units ) {
+            foreach( $units as $unit => $aliases ) {
+                // Singular
+                $units_admin[] = array(
+                    'type' => 'select',
+                    'name' => 'unit_conversion_alias_' . $unit . '_singular',
+                    'label' => __( ucfirst( str_replace( '_', ' ', $unit ) ), $this->pluginName ),
+                    'description' => __( 'Singular', $this->pluginName ),
+                    'items' => array(
+                        'data' => array(
+                            array(
+                                'source' => 'binding',
+                                'field' => 'unit_conversion_alias_' . $unit,
+                                'value' => 'wpurp_alias_options',
+                            ),
+                        ),
+                    ),
+                    'validation' => 'required',
+                    'default' => array(
+                        '{{first}}',
+                    ),
+                );
+
+                // Plural
+                $units_admin[] = array(
+                    'type' => 'select',
+                    'name' => 'unit_conversion_alias_' . $unit . '_plural',
+                    'label' => '',
+                    'description' => __( 'Plural', $this->pluginName ),
+                    'items' => array(
+                        'data' => array(
+                            array(
+                                'source' => 'binding',
+                                'field' => 'unit_conversion_alias_' . $unit,
+                                'value' => 'wpurp_alias_options',
+                            ),
+                        ),
+                    ),
+                    'validation' => 'required',
+                    'default' => array(
+                        '{{first}}',
+                    ),
+                );
+            }
+        }
+
+        $admin[] = array (
+            'type' => 'section',
+            'title' => __( 'Alias to convert to', $this->pluginName),
+            'name' => 'section_unit_conversion_unit_aliases_to_convert_to',
+            'fields' => $units_admin,
+        );
 
         return $admin;
     }
@@ -508,7 +568,13 @@ class WPURP_Helper_Units {
                     $aliases = $default_aliases;
                 }
 
-                $out[$unit] = $aliases[0];
+                $singular = intval( $this->option( 'unit_conversion_alias_' . $unit . '_singular', '0' ) );
+                $plural = intval( $this->option( 'unit_conversion_alias_' . $unit . '_plural', '0' ) );
+
+                $out[$unit] = array(
+                    'singular' => $aliases[$singular],
+                    'plural' => $aliases[$plural]
+                );
             }
         }
 

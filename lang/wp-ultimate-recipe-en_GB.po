@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WP Ultimate Recipe Plugin\n"
-"POT-Creation-Date: 2014-03-16 16:12+0100\n"
-"PO-Revision-Date: 2014-03-16 16:12+0100\n"
+"POT-Creation-Date: 2014-03-21 20:12+0100\n"
+"PO-Revision-Date: 2014-03-21 20:13+0100\n"
 "Last-Translator: Brecht Vandersmissen <brecht.vandersmissen@gmail.com>\n"
 "Language-Team: BrechtVds.be\n"
 "Language: en_GB\n"
@@ -40,7 +40,7 @@ msgstr ""
 #: core/template/shortcode_generator.php:263
 #: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:75
 #: wp-ultimate-recipe-premium/addons/user-menus/inc/builder.php:9
-#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:144
+#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:154
 msgid "Tag"
 msgstr ""
 
@@ -63,7 +63,7 @@ msgstr ""
 
 #: core/addons/custom-taxonomies/custom-taxonomies.php:81
 #: core/addons/custom-taxonomies/custom-taxonomies.php:151
-#: core/template/admin.php:233 core/template/admin.php:905
+#: core/template/admin.php:233 core/template/admin.php:928
 #: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:84
 #: wp-ultimate-recipe-premium/addons/custom-taxonomies/custom-taxonomies.php:165
 msgid "Slug"
@@ -255,7 +255,7 @@ msgid "Ingredients"
 msgstr ""
 
 #: core/core-functions.php:671
-#: wp-ultimate-recipe-premium/addons/user-menus/inc/builder.php:95
+#: wp-ultimate-recipe-premium/addons/user-menus/inc/builder.php:116
 msgid "Ingredient"
 msgstr ""
 
@@ -331,7 +331,7 @@ msgstr ""
 msgid "Chinese"
 msgstr ""
 
-#: core/core-functions.php:693 core/helper/units.php:348
+#: core/core-functions.php:693 core/helper/units.php:408
 msgid "Japanese"
 msgstr ""
 
@@ -461,7 +461,8 @@ msgstr ""
 msgid "minutes"
 msgstr ""
 
-#: core/helper/units.php:160 core/template/admin.php:694
+#: core/helper/units.php:160 core/helper/units.php:193
+#: core/template/admin.php:694
 msgid "Unit Aliases"
 msgstr ""
 
@@ -469,69 +470,82 @@ msgstr ""
 msgid "Use a semicolon to separate unit aliases. For example: "
 msgstr ""
 
-#: core/helper/units.php:167
-msgid ""
-"The first alias in the list will be shown after converting to this unit."
-msgstr ""
-
-#: core/helper/units.php:187
+#: core/helper/units.php:182
 msgid " Units"
 msgstr ""
 
-#: core/helper/units.php:204 core/template/admin.php:689
+#: core/helper/units.php:194
+msgid ""
+"When converting to a unit the alias defined below will be shown. The "
+"singular form will be shown when the amount is 1, the plural otherwise."
+msgstr ""
+
+#: core/helper/units.php:207
+msgid "Singular"
+msgstr ""
+
+#: core/helper/units.php:228
+msgid "Plural"
+msgstr ""
+
+#: core/helper/units.php:248
+msgid "Alias to convert to"
+msgstr ""
+
+#: core/helper/units.php:264 core/template/admin.php:689
 msgid "Unit Systems"
 msgstr ""
 
-#: core/helper/units.php:210
+#: core/helper/units.php:270
 msgid "Number of Systems"
 msgstr ""
 
-#: core/helper/units.php:211
+#: core/helper/units.php:271
 msgid "Number of unit systems for your visitors to choose from."
 msgstr ""
 
-#: core/helper/units.php:220 core/helper/units.php:226
-#: core/helper/units.php:232 core/helper/units.php:242
-#: core/helper/units.php:252 core/helper/units.php:364
+#: core/helper/units.php:280 core/helper/units.php:286
+#: core/helper/units.php:292 core/helper/units.php:302
+#: core/helper/units.php:312 core/helper/units.php:424
 msgid "Unit System"
 msgstr ""
 
-#: core/helper/units.php:233 core/helper/units.php:243
-#: core/helper/units.php:253 core/template/admin.php:325
+#: core/helper/units.php:293 core/helper/units.php:303
+#: core/helper/units.php:313 core/template/admin.php:325
 msgid "Custom"
 msgstr ""
 
-#: core/helper/units.php:275 core/helper/units.php:281
+#: core/helper/units.php:335 core/helper/units.php:341
 msgid "Universal Units"
 msgstr ""
 
-#: core/helper/units.php:282
+#: core/helper/units.php:342
 msgid ""
 "These units are considered universal to all systems and will not be "
 "converted."
 msgstr ""
 
-#: core/helper/units.php:321
+#: core/helper/units.php:381
 msgid " units"
 msgstr ""
 
-#: core/helper/units.php:332
+#: core/helper/units.php:392
 msgid "Cup Type"
 msgstr ""
 
-#: core/helper/units.php:336 core/helper/units.php:383
+#: core/helper/units.php:396 core/helper/units.php:443
 msgid "Metric"
 msgstr ""
 
-#: core/helper/units.php:340
+#: core/helper/units.php:400
 msgid "US Customary"
 msgstr ""
 
-#: core/helper/units.php:344
+#: core/helper/units.php:404
 msgid "US Legal"
 msgstr ""
 
-#: core/helper/units.php:385
+#: core/helper/units.php:445
 msgid "US Imperial"
 msgstr ""
 
@@ -807,7 +821,7 @@ msgstr ""
 msgid "Allow users to dynamically adjust the servings of recipes."
 msgstr ""
 
-#: core/template/admin.php:85 core/template/admin.php:896
+#: core/template/admin.php:85 core/template/admin.php:919
 msgid "Default Servings"
 msgstr ""
 
@@ -919,15 +933,15 @@ msgstr ""
 msgid "Always"
 msgstr ""
 
-#: core/template/admin.php:248 core/template/admin.php:920
+#: core/template/admin.php:248 core/template/admin.php:943
 msgid "404 error/page not found?"
 msgstr ""
 
-#: core/template/admin.php:249 core/template/admin.php:921
+#: core/template/admin.php:249 core/template/admin.php:944
 msgid "Try"
 msgstr ""
 
-#: core/template/admin.php:249 core/template/admin.php:921
+#: core/template/admin.php:249 core/template/admin.php:944
 msgid "flushing your permalinks"
 msgstr ""
 
@@ -939,7 +953,7 @@ msgstr ""
 #: core/template/admin.php:516 core/template/admin.php:588
 #: core/template/admin.php:648 core/template/admin.php:715
 #: core/template/admin.php:768 core/template/admin.php:852
-#: core/template/admin.php:936
+#: core/template/admin.php:959
 msgid "These features are only available in "
 msgstr ""
 
@@ -1255,21 +1269,22 @@ msgid "Allow submissions from"
 msgstr ""
 
 #: core/template/admin.php:793 core/template/admin.php:817
-#: core/template/admin.php:877
+#: core/template/admin.php:877 core/template/admin.php:900
 msgid "Nobody"
 msgstr ""
 
 #: core/template/admin.php:793 core/template/admin.php:877
+#: core/template/admin.php:900
 msgid "disabled"
 msgstr ""
 
 #: core/template/admin.php:797 core/template/admin.php:821
-#: core/template/admin.php:881
+#: core/template/admin.php:881 core/template/admin.php:904
 msgid "Guests and registered users"
 msgstr ""
 
 #: core/template/admin.php:801 core/template/admin.php:825
-#: core/template/admin.php:885
+#: core/template/admin.php:885 core/template/admin.php:908
 msgid "Registered users only"
 msgstr ""
 
@@ -1301,33 +1316,37 @@ msgstr ""
 msgid "Enable user menus for"
 msgstr ""
 
-#: core/template/admin.php:928
+#: core/template/admin.php:896
+msgid "Enable user menus save function for"
+msgstr ""
+
+#: core/template/admin.php:951
 msgid "Import Recipes"
 msgstr ""
 
-#: core/template/admin.php:955
+#: core/template/admin.php:978
 msgid "Export Recipes"
 msgstr ""
 
-#: core/template/admin.php:962
+#: core/template/admin.php:985
 msgid "Coming Soon"
 msgstr ""
 
-#: core/template/admin.php:963
+#: core/template/admin.php:986
 msgid "This feature is coming soon for "
 msgstr ""
 
-#: core/template/admin.php:970 core/template/admin.php:978
+#: core/template/admin.php:993 core/template/admin.php:1001
 msgid "FAQ & Support"
 msgstr ""
 
-#: core/template/admin.php:977
+#: core/template/admin.php:1000
 msgid "Need more help?"
 msgstr ""
 
 #: core/template/recipe_admin.php:21 core/template/shortcode_generator.php:133
 #: core/template/shortcode_generator.php:285
-#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:301
+#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:311
 msgid "Title"
 msgstr ""
 
@@ -1441,31 +1460,31 @@ msgstr ""
 msgid "Main Instructions"
 msgstr ""
 
-#: core/template/recipe_admin.php:249 core/template/recipe_admin.php:270
-#: core/template/recipe_admin.php:278
+#: core/template/recipe_admin.php:249 core/template/recipe_admin.php:269
+#: core/template/recipe_admin.php:277
 msgid "Add Image"
 msgstr ""
 
-#: core/template/recipe_admin.php:250 core/template/recipe_admin.php:279
+#: core/template/recipe_admin.php:250 core/template/recipe_admin.php:278
 msgid "Remove Image"
 msgstr ""
 
-#: core/template/recipe_admin.php:289
+#: core/template/recipe_admin.php:288
 msgid "Add an instruction"
 msgstr ""
 
-#: core/template/recipe_admin.php:292
+#: core/template/recipe_admin.php:291
 msgid "Add an instruction group"
 msgstr ""
 
-#: core/template/recipe_admin.php:295
+#: core/template/recipe_admin.php:294
 msgid ""
 "<strong>Use the TAB key</strong> while adding instructions, it will "
 "automatically create new fields. <strong>Don't worry about empty lines</"
 "strong>, these will be ignored."
 msgstr ""
 
-#: core/template/recipe_admin.php:298 core/template/recipe_public.php:265
+#: core/template/recipe_admin.php:297 core/template/recipe_public.php:265
 #: wp-ultimate-recipe-premium/addons/custom-templates/layouts/compact.php:289
 #: wp-ultimate-recipe-premium/addons/custom-templates/layouts/default.php:289
 #: wp-ultimate-recipe-premium/addons/custom-templates/layouts/modern.php:306
@@ -1534,8 +1553,8 @@ msgstr ""
 #: core/template/shortcode_generator.php:85
 #: core/template/shortcode_generator.php:137
 #: core/template/shortcode_generator.php:289
-#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:283
-#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:302
+#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:293
+#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:312
 msgid "Author"
 msgstr ""
 
@@ -1618,7 +1637,7 @@ msgstr ""
 #: core/template/shortcode_generator.php:235
 #: core/template/shortcode_generator.php:259
 #: wp-ultimate-recipe-premium/addons/user-menus/inc/builder.php:5
-#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:139
+#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:149
 msgid "Category"
 msgstr ""
 
@@ -1732,15 +1751,15 @@ msgstr ""
 msgid "Drop a recipe here to remove it"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/addons/user-menus/inc/builder.php:88
+#: wp-ultimate-recipe-premium/addons/user-menus/inc/builder.php:109
 msgid "Save Menu"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/addons/user-menus/inc/builder.php:90
+#: wp-ultimate-recipe-premium/addons/user-menus/inc/builder.php:111
 msgid "Print Shopping List"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/addons/user-menus/inc/builder.php:96
+#: wp-ultimate-recipe-premium/addons/user-menus/inc/builder.php:117
 msgid "Amount"
 msgstr ""
 
@@ -1791,51 +1810,51 @@ msgstr ""
 msgid "Rate this recipe!"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:64
+#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:74
 msgid "Sorry, the site administrator has disabled recipe submissions."
 msgstr ""
 
-#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:77
+#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:87
 msgid "Sorry, only registered users may submit recipes."
 msgstr ""
 
-#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:108
+#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:118
 msgid "Recipe title"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:113
+#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:123
 msgid "Your name"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:117
+#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:127
 msgid "Featured image"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:121
+#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:131
 msgid "Add Featured Image"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:122
+#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:132
 msgid "Remove Featured Image"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:154
+#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:164
 msgid "Submit"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:197
+#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:207
 msgid "Recipe submitted! Thank you, your recipe is now awaiting moderation."
 msgstr ""
 
-#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:199
+#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:209
 msgid "Recipe submitted! Thank you, your recipe has been published."
 msgstr ""
 
-#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:229
+#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:239
 msgid "Anonymous"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:304
+#: wp-ultimate-recipe-premium/addons/user-submissions/user-submissions.php:314
 msgid "Date"
 msgstr ""
 

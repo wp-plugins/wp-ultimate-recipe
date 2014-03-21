@@ -67,9 +67,9 @@ Check out our [WP Ultimate Recipe demo website](http://demo.wpultimaterecipe.com
 
 Yes! We pride ourselves on offering awesome support and almost always answer support questions within 24 hours. Send us an email at [support@wpultimaterecipe.com](mailto:support@wpultimaterecipe.com) whenever you have a question or suggestion!
 
-= That is WP Ultimate Recipe Premium? =
+= What is WP Ultimate Recipe Premium? =
 
-[WP Ultimate Recipe Premium](http://www.wpultimaterecip.com/get-the-plugin/) is a paid add-on to the free WP Ultimate Recipe plugin (this one!). You can get started with the free plugin and switch to the Premium version whenever you're ready without losing any data. Or just keep using the free version forever if you don't need the advanced features. We will always keep the free version around.
+[WP Ultimate Recipe Premium](http://www.wpultimaterecipe.com/get-the-plugin/) is a paid add-on to the free WP Ultimate Recipe plugin (this one!). You can get started with the free plugin and switch to the Premium version whenever you're ready without losing any data. Or just keep using the free version forever if you don't need the advanced features. We will always keep the free version around.
 
 = Where can I find more information? =
 
@@ -89,6 +89,9 @@ Yes! We pride ourselves on offering awesome support and almost always answer sup
 10. WP Ultimate Recipe automatically formats your data so it can be picked up by Google Recipe Search and others. Great for SEO!
 
 == Changelog ==
+
+= 1.0.10 =
+* A couple of bugfixes and added settings
 
 = 1.0.9 =
 * Free text field for the recipe times. Not limited to minutes anymore
@@ -220,6 +223,9 @@ Yes! We pride ourselves on offering awesome support and almost always answer sup
 * Very first version of this plugin
 
 == Upgrade notice ==
+
+= 1.0.10 =
+Upgrade for some tiny improvements
 
 = 1.0.9 =
 Upgrading is fun
