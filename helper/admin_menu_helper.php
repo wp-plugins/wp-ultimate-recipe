@@ -58,7 +58,7 @@ function wpurp_admin_manage_tags()
 
 function wpurp_admin_import_recipress()
 {
-    return '<a href="'.admin_url('edit.php?post_type=recipe&page=wpurp_import').'" class="button button-primary" target="_blank">'.__('Import ReciPress recipes', 'wp-ultimate-recipe').'</a>';
+    return '<a href="'.admin_url('edit.php?post_type=recipe&page=wpurp_import_recipress').'" class="button button-primary" target="_blank">'.__('Import ReciPress recipes', 'wp-ultimate-recipe').'</a>';
 }
 
 function wpurp_admin_system_3( $nbr )
@@ -132,6 +132,26 @@ function vp_dep_boolean_inverse($value)
         $result = ($result and !empty($val));
     }
     return !$result;
+}
+
+function wpurp_font_preview_with_text($text, $face, $style, $weight, $size)
+{
+    VP_Site_GoogleWebFont::instance()->add($face, $weight, $style);
+    $fonts = VP_Site_GoogleWebFont::instance()->get_font_links();
+
+    $out = '';
+    foreach($fonts as $font)
+    {
+         $out .= '<link href="'.$font.'" rel="stylesheet" type="text/css">';
+    }
+
+    $out .= '<div style="font-family: '.$face.'; font-style: '.$style.'; font-weight: '.$weight.'; font-size: '.$size.'px; height: '.($size + 5).'px; margin-top: 15px;">' . $text . '</div>';
+    return $out;
+}
+
+function wpurp_font_preview($face, $style, $weight, $size)
+{
+    return wpurp_font_preview_with_text('The quick brown fox jumps over the lazy dog', $face, $style, $weight, $size);
 }
 
 //=-=-=-=-=-=-= SHORTCODE GENERATOR =-=-=-=-=-=-=
@@ -265,6 +285,8 @@ VP_Security::instance()->whitelist_function('wpurp_admin_system_cups');
 VP_Security::instance()->whitelist_function('wpurp_get_unit_systems');
 VP_Security::instance()->whitelist_function('wpurp_alias_options');
 VP_Security::instance()->whitelist_function('vp_dep_boolean_inverse');
+VP_Security::instance()->whitelist_function('wpurp_font_preview');
+VP_Security::instance()->whitelist_function('wpurp_font_preview_with_text');
 
 VP_Security::instance()->whitelist_function('wpurp_shortcode_generator_recipes_by_date');
 VP_Security::instance()->whitelist_function('wpurp_shortcode_generator_recipes_by_title');

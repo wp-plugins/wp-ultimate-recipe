@@ -11,14 +11,18 @@ jQuery(document).ready(function() {
 
         var servings = recipe.find('input.adjust-recipe-servings').val();
 
-        if(servings != '') {
+        if(servings === undefined) {
+            servings = recipe.find('input.advanced-adjust-recipe-servings').val();
+        }
+
+        if(servings !== undefined && servings != '') {
             recipe.find('.recipe-information-servings')
                 .replaceWith(servings);
         }
 
         parentRecipe = recipe.html();
 
-        window.open(wpurp_pluginUrl + '/template/recipe_print.php');
+        window.open(wpurp.pluginUrl + '/template/recipe_print.php');
     });
 
     jQuery(document).on('keyup change', '.adjust-recipe-servings', function(e) {

@@ -1,3 +1,15 @@
+.print-logo {
+    float: right;
+}
+
+.print-header {
+    margin: 20px 0;
+}
+
+.print-footer {
+    margin-top: 20px;
+}
+
 .wpurp-container {
     font-family: 'Open Sans', sans-serif;
 }

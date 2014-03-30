@@ -23,6 +23,7 @@ class WPURP_Core extends WPUltimateRecipe {
         add_filter( 'init', array( $this, 'edit_posts_page' ));
         add_action( 'wp_enqueue_scripts', array( $this, 'public_plugin_styles' ) );
         add_action( 'wp_enqueue_scripts', array( $this, 'public_plugin_scripts' ) );
+        add_action( 'wp_enqueue_scripts', array( $this, 'custom_plugin_styles' ), 20 );
         add_action( 'admin_enqueue_scripts', array( $this, 'admin_plugin_styles' ) );
         add_action( 'admin_enqueue_scripts', array( $this, 'admin_plugin_scripts' ) );
         add_action( 'admin_init', array( $this, 'recipes_admin_init' ));
@@ -32,6 +33,10 @@ class WPURP_Core extends WPUltimateRecipe {
         add_action( 'admin_menu', array( $this, 'admin_menu') );
         add_action( 'vp_option_set_after_save', array( $this, 'set_flush_needed' ) );
         add_action( 'pre_get_posts', array( $this, 'query_recipes' ) );
+
+        // AJAX
+        add_action('wp_ajax_wpurp_custom_css', array( $this, 'wpurp_custom_css' ) );
+        add_action('wp_ajax_nopriv_wpurp_custom_css', array( $this, 'wpurp_custom_css' ) );
 
         // Filters
         //add_filter( 'template_include', array( $this, 'recipes_template' ), 1 );
@@ -115,6 +120,16 @@ class WPURP_Core extends WPUltimateRecipe {
         wp_register_script( $this->pluginName, $this->pluginUrl . '/js/public.js', array('jquery'), WPURP_VERSION, true );
         wp_enqueue_script( $this->pluginName );
 
+        $print_template = $this->get_print_template();
+
+        wp_localize_script( $this->pluginName, 'wpurp',
+            array(
+                'custom_print_css' => $this->option( 'custom_code_print_css', ''),
+                'pluginUrl' => $this->pluginUrl,
+                'print_template' => $print_template
+            )
+        );
+
         if( $this->option('recipe_sharing_enable', '1') == '1' ) {
             wp_register_script( 'socialite', $this->pluginUrl . '/lib/socialite/socialite.min.js', '', WPURP_VERSION, true );
             wp_enqueue_script( 'socialite' );
@@ -123,6 +138,83 @@ class WPURP_Core extends WPUltimateRecipe {
             wp_register_script( 'recipesharing', $this->pluginUrl . '/js/sharing.js', array('jquery'), WPURP_VERSION, true );
             wp_enqueue_script( 'recipesharing' );
         }
+    }
+
+    public function get_print_template()
+    {
+        if ( $this->is_premium_active() ) {
+            // Print template header font
+            VP_Site_GoogleWebFont::instance()->add(
+                $this->option( 'print_template_header_text_font_face', 'Open Sans' ),
+                $this->option( 'print_template_header_text_font_weight', 'normal' ),
+                $this->option( 'print_template_header_text_font_style', 'normal' )
+            );
+
+            // Print template recipe font
+            VP_Site_GoogleWebFont::instance()->add(
+                $this->option( 'print_template_recipe_text_font_face', 'Open Sans' ),
+                $this->option( 'print_template_recipe_text_font_weight', 'normal' ),
+                $this->option( 'print_template_recipe_text_font_style', 'normal' )
+            );
+
+            $fonts = VP_Site_GoogleWebFont::instance()->get_font_links();
+
+            return array(
+                'title'     => $this->option( 'print_template_title_text', get_bloginfo('name') ),
+                'logo'      => $this->option( 'print_template_header_logo', '' ),
+                'fonts'     => $fonts,
+                'header' => array(
+                    'text'      => $this->option( 'print_template_header_text', get_bloginfo('name') ),
+                    'font'      => $this->option( 'print_template_header_text_font_face', 'Open Sans' ),
+                    'style'     => $this->option( 'print_template_header_text_font_style', 'normal' ),
+                    'weight'    => $this->option( 'print_template_header_text_font_weight', 'normal' ),
+                    'size'      => $this->option( 'print_template_header_text_font_size', '32' ),
+                ),
+                'recipe' => array(
+                    'font'      => $this->option( 'print_template_recipe_text_font_face', 'Open Sans' ),
+                    'style'     => $this->option( 'print_template_recipe_text_font_style', 'normal' ),
+                    'weight'    => $this->option( 'print_template_recipe_text_font_weight', 'normal' ),
+                    'size'      => $this->option( 'print_template_recipe_text_font_size', '14' ),
+                ),
+                'footer'     => $this->option( 'print_template_footer', '' ),
+            );
+        } else {
+            return array(
+                'title'     => get_bloginfo('name'),
+                'logo'      => '',
+                'fonts'     => array(),
+                'header' => array(
+                    'text'      => '',
+                    'font'      => 'Open Sans',
+                    'style'     => 'normal',
+                    'weight'    => 'normal',
+                    'size'      => 'weight',
+                ),
+                'recipe' => array(
+                    'font'      => 'Open Sans',
+                    'style'     => 'normal',
+                    'weight'    => 'normal',
+                    'size'      => 'weight',
+                ),
+                'footer'     => '',
+            );
+        }
+
+    }
+
+    public function custom_plugin_styles()
+    {
+        if ( $this->option('custom_code_public_css', '') != '' ) {
+            wp_register_style( 'custom-styling', admin_url('admin-ajax.php').'?action=wpurp_custom_css', $this->pluginName, WPURP_VERSION );
+
+            wp_enqueue_style( 'custom-styling' );
+        }
+    }
+
+    public function wpurp_custom_css()
+    {
+        require( $this->pluginDir. '/helper/custom_style_public.css.php' );
+        exit;
     }
 
     public function admin_plugin_styles()
@@ -304,7 +396,7 @@ class WPURP_Core extends WPUltimateRecipe {
             }
             else if( is_array($post_type) )
             {
-                if(array_key_exists('post', $post_type) && !array_key_exists('recipe', $post_type)) {
+                if(in_array('post', $post_type) && !in_array('recipe', $post_type)) {
                     $post_type[] = 'recipe';
                 }
             }

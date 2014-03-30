@@ -1,5 +1,6 @@
 .wpurp-container {
     position: relative;
+    clear: both;
 
     max-width: 600px;
     margin: 0 auto;
@@ -134,6 +135,8 @@
 }
 
 .wpurp-container .instruction-group {
+    clear: both;
+    
     padding-bottom: 10px;
     margin-bottom: 10px;
     border-bottom: 1px dashed #999999;

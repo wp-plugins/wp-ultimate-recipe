@@ -397,6 +397,236 @@ $admin_menu = array(
                 ),
             ),
         ),
+//=-=-=-=-=-=-= PRINT TEMPLATE =-=-=-=-=-=-=
+        array(
+            'title' => __('Print Template', $this->pluginName),
+            'name' => 'print_template',
+            'icon' => 'font-awesome:fa-print',
+            'controls' => array(
+                array(
+                    'type' => 'notebox',
+                    'name' => 'print_template_premium_not_installed',
+                    'label' => 'WP Ultimate Recipe Premium',
+                    'description' => __('These features are only available in ', $this->pluginName) . ' <a href="http://www.wpultimaterecipeplugin.com/premium/" target="_blank">WP Ultimate Recipe Premium</a></strong>.',
+                    'status' => 'warning',
+                    'dependency' => array(
+                        'field' => '',
+                        'function' => 'wpurp_admin_premium_not_installed',
+                    ),
+                ),
+                array(
+                    'type' => 'section',
+                    'title' => __('Title', $this->pluginName),
+                    'name' => 'print_template_section_title',
+                    'fields' => array(
+                        array(
+                            'type' => 'textbox',
+                            'name' => 'print_template_title_text',
+                            'label' => __('Title Text', $this->pluginName),
+                            'description' => __('Title of the new webpage that opens.', $this->pluginName),
+                            'default' => get_bloginfo('name'),
+                            'validation' => 'required',
+                        ),
+                    ),
+                ),
+                array(
+                    'type' => 'section',
+                    'title' => __('Header Logo', $this->pluginName),
+                    'name' => 'print_template_section_header_logo',
+                    'fields' => array(
+                        array(
+                            'type' => 'upload',
+                            'name' => 'print_template_header_logo',
+                            'label' => __('Logo', $this->pluginName),
+                        ),
+                    ),
+                ),
+                array(
+                    'type' => 'section',
+                    'title' => __('Header Text', $this->pluginName),
+                    'name' => 'print_template_section_header_text',
+                    'fields' => array(
+                        array(
+                            'type' => 'textbox',
+                            'name' => 'print_template_header_text',
+                            'label' => __('Header Text', $this->pluginName),
+                            'description' => __('Text shown above the recipe. Leave empty to hide.', $this->pluginName),
+                            'default' => get_bloginfo('name'),
+                        ),
+                        array(
+                            'type' => 'select',
+                            'name' => 'print_template_header_text_font_face',
+                            'label' => __('Header Font', $this->pluginName),
+                            'description' => '<a href="https://www.google.com/fonts" target="_blank">Google Web Fonts</a>',
+                            'items' => array(
+                                'data' => array(
+                                    array(
+                                        'source' => 'function',
+                                        'value' => 'vp_get_gwf_family',
+                                    ),
+                                ),
+                            ),
+                            'default' => array(
+                                'Open Sans',
+                            ),
+                        ),
+                        array(
+                            'type' => 'radiobutton',
+                            'name' => 'print_template_header_text_font_style',
+                            'label' => __('Header Font Style', $this->pluginName),
+                            'items' => array(
+                                'data' => array(
+                                    array(
+                                        'source' => 'binding',
+                                        'field' => 'print_template_header_text_font_face',
+                                        'value' => 'vp_get_gwf_style',
+                                    ),
+                                ),
+                            ),
+                            'default' => array(
+                                'normal',
+                            ),
+                        ),
+                        array(
+                            'type' => 'radiobutton',
+                            'name' => 'print_template_header_text_font_weight',
+                            'label' => __('Header Font Weight', $this->pluginName),
+                            'items' => array(
+                                'data' => array(
+                                    array(
+                                        'source' => 'binding',
+                                        'field' => 'print_template_header_text_font_face',
+                                        'value' => 'vp_get_gwf_weight',
+                                    ),
+                                ),
+                            ),
+                            'default' => array(
+                                'normal',
+                            ),
+                        ),
+                        array(
+                            'type' => 'slider',
+                            'name' => 'print_template_header_text_font_size',
+                            'label' => __('Header Font Size', $this->pluginName),
+                            'min' => '8',
+                            'max' => '72',
+                            'step' => '1',
+                            'default' => '32',
+                        ),
+                    ),
+                ),
+                array(
+                    'type' => 'section',
+                    'title' => __('Header Text Preview', $this->pluginName),
+                    'name' => 'print_template_section_header_text_preview',
+                    'fields' => array(
+                        array(
+                            'type' => 'html',
+                            'name' => 'print_template_header_text_preview',
+                            'binding' => array(
+                                'field'    => 'print_template_header_text,print_template_header_text_font_face,print_template_header_text_font_style,print_template_header_text_font_weight,print_template_header_text_font_size',
+                                'function' => 'wpurp_font_preview_with_text',
+                            ),
+                        ),
+                    ),
+                ),
+                array(
+                    'type' => 'section',
+                    'title' => __('Recipe Text', $this->pluginName),
+                    'name' => 'print_template_section_recipe_text',
+                    'fields' => array(
+                        array(
+                            'type' => 'select',
+                            'name' => 'print_template_recipe_text_font_face',
+                            'label' => __('Recipe Font', $this->pluginName),
+                            'description' => '<a href="https://www.google.com/fonts" target="_blank">Google Web Fonts</a>',
+                            'items' => array(
+                                'data' => array(
+                                    array(
+                                        'source' => 'function',
+                                        'value' => 'vp_get_gwf_family',
+                                    ),
+                                ),
+                            ),
+                            'default' => array(
+                                'Open Sans',
+                            ),
+                        ),
+                        array(
+                            'type' => 'radiobutton',
+                            'name' => 'print_template_recipe_text_font_style',
+                            'label' => __('Recipe Font Style', $this->pluginName),
+                            'items' => array(
+                                'data' => array(
+                                    array(
+                                        'source' => 'binding',
+                                        'field' => 'print_template_recipe_text_font_face',
+                                        'value' => 'vp_get_gwf_style',
+                                    ),
+                                ),
+                            ),
+                            'default' => array(
+                                'normal',
+                            ),
+                        ),
+                        array(
+                            'type' => 'radiobutton',
+                            'name' => 'print_template_recipe_text_font_weight',
+                            'label' => __('Recipe Font Weight', $this->pluginName),
+                            'items' => array(
+                                'data' => array(
+                                    array(
+                                        'source' => 'binding',
+                                        'field' => 'print_template_recipe_text_font_face',
+                                        'value' => 'vp_get_gwf_weight',
+                                    ),
+                                ),
+                            ),
+                            'default' => array(
+                                'normal',
+                            ),
+                        ),
+                        array(
+                            'type' => 'slider',
+                            'name' => 'print_template_recipe_text_font_size',
+                            'label' => __('Recipe Font Size', $this->pluginName),
+                            'min' => '8',
+                            'max' => '36',
+                            'step' => '1',
+                            'default' => '14',
+                        ),
+                    ),
+                ),
+                array(
+                    'type' => 'section',
+                    'title' => __('Recipe Text Preview', $this->pluginName),
+                    'name' => 'print_template_section_recipe_text_preview',
+                    'fields' => array(
+                        array(
+                            'type' => 'html',
+                            'name' => 'print_template_recipe_text_preview',
+                            'binding' => array(
+                                'field'    => 'print_template_recipe_text_font_face,print_template_recipe_text_font_style,print_template_recipe_text_font_weight,print_template_recipe_text_font_size',
+                                'function' => 'wpurp_font_preview',
+                            ),
+                        ),
+                    ),
+                ),
+                array(
+                    'type' => 'section',
+                    'title' => __('Footer', $this->pluginName),
+                    'name' => 'print_template_section_footer',
+                    'fields' => array(
+                        array(
+                            'type' => 'textarea',
+                            'name' => 'print_template_footer',
+                            'label' => __('Footer', $this->pluginName),
+                            'description' => __('You can use HTML', $this->pluginName),
+                        ),
+                    ),
+                ),
+            ),
+        ),
 //=-=-=-=-=-=-= RECIPE SHARING =-=-=-=-=-=-=
         array(
             'title' => __('Recipe Sharing', $this->pluginName),
@@ -620,6 +850,16 @@ $admin_menu = array(
                             'name' => 'user_ratings_vote_attention',
                             'label' => __('Show indicator', $this->pluginName),
                             'description' => __( 'Attract attention to the possibility to vote.', $this->pluginName ),
+                            'default' => '1',
+                        ),
+                        array(
+                            'type' => 'slider',
+                            'name' => 'user_ratings_minimum_votes',
+                            'label' => __('Minimum # Votes', $this->pluginName),
+                            'description' => __('Minimum number of votes needed before sharing the rating as metadata used by Google and other search engines.', $this->pluginName),
+                            'min' => '1',
+                            'max' => '50',
+                            'step' => '1',
                             'default' => '1',
                         ),
                     ),
@@ -965,7 +1205,7 @@ $admin_menu = array(
                 ),
                 array(
                     'type' => 'html',
-                    'name' => 'import_recipress_recipes',
+                    'name' => 'import_recipes_recipress',
                     'binding' => array(
                         'field'    => '',
                         'function' => 'wpurp_admin_import_recipress',
@@ -985,6 +1225,28 @@ $admin_menu = array(
                     'label' => __('Coming Soon', $this->pluginName),
                     'description' => __('This feature is coming soon for ', $this->pluginName) . ' <a href="http://www.wpultimaterecipeplugin.com/premium/" target="_blank">WP Ultimate Recipe Premium</a></strong>.',
                     'status' => 'info',
+                ),
+            ),
+        ),
+//=-=-=-=-=-=-= CUSTOM CODE =-=-=-=-=-=-=
+        array(
+            'title' => __('Custom Code', $this->pluginName),
+            'name' => 'custom_code',
+            'icon' => 'font-awesome:fa-code',
+            'controls' => array(
+                array(
+                    'type' => 'codeeditor',
+                    'name' => 'custom_code_public_css',
+                    'label' => __('Public CSS', $this->pluginName),
+                    'theme' => 'github',
+                    'mode' => 'css',
+                ),
+                array(
+                    'type' => 'codeeditor',
+                    'name' => 'custom_code_print_css',
+                    'label' => __('Print CSS', $this->pluginName),
+                    'theme' => 'github',
+                    'mode' => 'css',
                 ),
             ),
         ),

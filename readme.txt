@@ -90,6 +90,13 @@ Yes! We pride ourselves on offering awesome support and almost always answer sup
 
 == Changelog ==
 
+= 1.0.11 =
+* Ability to add custom CSS from the recipe settings
+* Premium: Customize the print template (add your own logo!)
+* Premium: Import plain text recipes (beta version)
+* Premium: Ability to reset User Ratings
+* Premium: Ability to define minimum # votes before sharing the user rating with search engines
+
 = 1.0.10 =
 * A couple of bugfixes and added settings
 
@@ -223,6 +230,9 @@ Yes! We pride ourselves on offering awesome support and almost always answer sup
 * Very first version of this plugin
 
 == Upgrade notice ==
+
+= 1.0.11 =
+Another WP Ultimate Recipe upgrade
 
 = 1.0.10 =
 Upgrade for some tiny improvements
