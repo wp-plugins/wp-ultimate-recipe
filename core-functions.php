@@ -344,7 +344,7 @@ class WPURP_Core extends WPUltimateRecipe {
                ),
                 'public' => true,
                 'menu_position' => 5,
-                'supports' => array( 'title', 'editor', 'thumbnail', 'comments', 'excerpt', 'author', 'publicize' ),
+                'supports' => array( 'title', 'editor', 'thumbnail', 'comments', 'excerpt', 'author', 'publicize', 'shortlinks', 'custom-fields' ),
                 'taxonomies' => $taxonomies,
                 'menu_icon' =>  $this->pluginUrl . '/img/icon_16.png',
                 'has_archive' => true,
@@ -588,12 +588,13 @@ class WPURP_Core extends WPUltimateRecipe {
 
                 if(strpos($content, '[recipe]') !== false) {
                     $content = str_replace('[recipe]', $recipe_box, $content);
-                } else { // Add recipe to end of post
+                } else if(!preg_match("/<!--\s*more.*-->/", $recipe_post->post_content, $out)) { // Add recipe to end of post if there was no <!--more--> tag
                     $content .= $recipe_box;
                 }
             }
             else
             {
+                $content = str_replace('[recipe]', '', $content); // Remove shortcode from excerpt
                 $content = $this->recipes_excerpt( $content );
             }
 

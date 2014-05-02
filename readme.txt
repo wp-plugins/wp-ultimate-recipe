@@ -3,7 +3,7 @@ Contributors: BrechtVds
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QG7KZMGFU325Y
 Tags: recipe, ingredients, food, cooking, seo, schema.org
 Requires at least: 3.3
-Tested up to: 3.8.1
+Tested up to: 3.9
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -89,6 +89,12 @@ Yes! We pride ourselves on offering awesome support and almost always answer sup
 10. WP Ultimate Recipe automatically formats your data so it can be picked up by Google Recipe Search and others. Great for SEO!
 
 == Changelog ==
+
+= 1.0.12 =
+* WordPress 3.9 compatibility (just increased the version number, everthing was already compatible)
+* Language updates
+* Plugin now supports custom fields and publicize shortlinks
+* Fix: Recipes respect the <!--more--> tag now
 
 = 1.0.11 =
 * Ability to add custom CSS from the recipe settings
@@ -230,6 +236,9 @@ Yes! We pride ourselves on offering awesome support and almost always answer sup
 * Very first version of this plugin
 
 == Upgrade notice ==
+
+= 1.0.12 =
+A tiny WP Ultimate Recipe upgrade
 
 = 1.0.11 =
 Another WP Ultimate Recipe upgrade

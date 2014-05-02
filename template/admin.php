@@ -425,7 +425,6 @@ $admin_menu = array(
                             'label' => __('Title Text', $this->pluginName),
                             'description' => __('Title of the new webpage that opens.', $this->pluginName),
                             'default' => get_bloginfo('name'),
-                            'validation' => 'required',
                         ),
                     ),
                 ),
