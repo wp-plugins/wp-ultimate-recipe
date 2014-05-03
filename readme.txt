@@ -90,11 +90,14 @@ Yes! We pride ourselves on offering awesome support and almost always answer sup
 
 == Changelog ==
 
+= 1.0.12b =
+* Introduced a bug with the more tag fixed. Fixed now.
+
 = 1.0.12 =
 * WordPress 3.9 compatibility (just increased the version number, everthing was already compatible)
 * Language updates
 * Plugin now supports custom fields and publicize shortlinks
-* Fix: Recipes respect the <!--more--> tag now
+* Fix: Recipes respect the more tag now
 
 = 1.0.11 =
 * Ability to add custom CSS from the recipe settings
@@ -236,6 +239,9 @@ Yes! We pride ourselves on offering awesome support and almost always answer sup
 * Very first version of this plugin
 
 == Upgrade notice ==
+
+= 1.0.12 =
+Upgrade if you use more tags in recipes
 
 = 1.0.12 =
 A tiny WP Ultimate Recipe upgrade

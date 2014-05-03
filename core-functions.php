@@ -588,7 +588,7 @@ class WPURP_Core extends WPUltimateRecipe {
 
                 if(strpos($content, '[recipe]') !== false) {
                     $content = str_replace('[recipe]', $recipe_box, $content);
-                } else if(!preg_match("/<!--\s*more.*-->/", $recipe_post->post_content, $out)) { // Add recipe to end of post if there was no <!--more--> tag
+                } else if( is_single() || !preg_match("/<!--\s*more.*-->/", $recipe_post->post_content, $out)) { // Add recipe to end of post if there was no <!--more--> tag
                     $content .= $recipe_box;
                 }
             }
