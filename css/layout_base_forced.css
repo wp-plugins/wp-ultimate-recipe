@@ -1,0 +1,48 @@
+.wpurp-clear {
+  float: none;
+  clear: both; }
+
+html body .wpurp-container {
+  position: relative !important;
+  clear: both !important; }
+  html body .wpurp-container span {
+    display: inline-block !important; }
+  html body .wpurp-container * {
+    border: 0 !important;
+    -webkit-margin: 0 !important;
+    -moz-margin: 0 !important;
+    margin: 0 !important;
+    -webkit-padding: 0 !important;
+    -moz-padding: 0 !important;
+    padding: 0 !important;
+    background: none !important;
+    -webkit-border-radius: 0px !important;
+    -moz-border-radius: 0px !important;
+    border-radius: 0px !important;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+    -webkit-box-sizing: border-box !important;
+    -moz-box-sizing: border-box !important;
+    box-sizing: border-box !important;
+    color: inherit !important;
+    font-size: 14px !important;
+    line-height: 1.4 !important;
+    font-weight: normal !important; }
+  html body .wpurp-container .wpurp-recipe-notes ul,
+  html body .wpurp-container .wpurp-recipe-notes ol {
+    padding-left: 23px !important; }
+  html body .wpurp-container table {
+    border-collapse: collapse !important; }
+  html body .wpurp-container a {
+    text-decoration: none !important; }
+    html body .wpurp-container a:hover {
+      text-decoration: underline !important; }
+  html body .wpurp-container .wpurp-responsive-mobile {
+    display: none; }
+  html body .wpurp-container .wpurp-recipe-sharing iframe {
+    margin: 0 !important; }
+  html body .wpurp-container .wpurp-recipe-sharing .pinterest-pinit {
+    margin-top: 32px !important; }
+    html body .wpurp-container .wpurp-recipe-sharing .pinterest-pinit a {
+      background-image: url(http://passets.pinterest.com/images/pidgets/pinit_bg_en_rect_gray_28_1.png) !important; }

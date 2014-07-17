@@ -1,560 +1,229 @@
 <?php
 /*
 Plugin Name: WP Ultimate Recipe
-Plugin URI: http://www.wpultimaterecipeplugin.com
+Plugin URI: http://www.wpultimaterecipe.com
 Description: WP Ultimate Recipe is a user friendly plugin for adding recipes to any of your posts and pages.
-Version: 1.0.12b
+Version: 2.0
 Author: Bootstrapped Ventures
 Author URI: http://www.bootstrappedventures.com
 License: GPLv2
 */
-/*
- * Credit to subtlepatterns.com for background patterns.
- */
 
-define( 'COMPATIBLE_PREMIUM_VERSION', '1.0.2' );
-define( 'WPURP_VERSION', '1.0.12b' );
+define( 'WPURP_VERSION', '2.0' );
 
 class WPUltimateRecipe {
-    
-    protected $pluginName;
-    protected $pluginDir;
-    protected $pluginUrl;
 
-    protected $premiumName;
-    protected $premiumDir;
-    protected $premiumUrl;
+    private static $instance;
+    private static $instantiated_by_premium;
+    private static $addons = array();
 
-    protected $installed_addons;
-    protected $wpurp_core;
-    
-    public function __construct()
+    /**
+     * Return instance of self
+     */
+    public static function get( $instantiated_by_premium = false )
     {
-        $this->pluginName = 'wp-ultimate-recipe';
-        $this->pluginDir = WP_PLUGIN_DIR . '/' . $this->pluginName;
-        $this->pluginUrl = plugins_url() . '/' . $this->pluginName;
+        // Instantiate self only once
+        if( is_null( self::$instance ) ) {
+            self::$instantiated_by_premium = $instantiated_by_premium;
+            self::$instance = new self;
+            self::$instance->init();
+        }
 
-        $this->premiumName = 'wp-ultimate-recipe-premium';
-        $this->premiumDir = WP_PLUGIN_DIR . '/' . $this->premiumName;
-        $this->premiumUrl = plugins_url() . '/' . $this->premiumName;
+        return self::$instance;
+    }
 
-        // Version
+    /**
+     * Returns true if we are using the Premium version
+     */
+    public static function is_premium_active()
+    {
+        return self::$instantiated_by_premium;
+    }
+
+    /**
+     * Add loaded addon to array of loaded addons
+     */
+    public static function loaded_addon( $addon, $instance )
+    {
+        if( !array_key_exists( $addon, self::$addons ) ) {
+            self::$addons[$addon] = $instance;
+        }
+    }
+
+    /**
+     * Returns true if the specified addon has been loaded
+     */
+    public static function is_addon_active( $addon )
+    {
+        return array_key_exists( $addon, self::$addons );
+    }
+
+    public static function addon( $addon )
+    {
+        if( isset( self::$addons[$addon] ) ) {
+            return self::$addons[$addon];
+        }
+
+        return false;
+    }
+
+    /**
+     * Access a VafPress option with optional default value
+     */
+    public static function option( $name, $default = null )
+    {
+        $option = vp_option( 'wpurp_option.' . $name );
+
+        return is_null( $option ) ? $default : $option;
+    }
+
+
+    public $pluginName = 'wp-ultimate-recipe';
+    public $coreDir;
+    public $coreUrl;
+    public $pluginFile;
+
+    protected $helper_dirs = array();
+    protected $helpers = array();
+
+    /**
+     * Initialize
+     */
+    public function init()
+    {
+        // Load external libraries
+        require_once( 'vendor/vafpress/bootstrap.php' );
+        require_once( 'vendor/taxonomy-metadata/Taxonomy_MetaData.php' );
+
+        // Update plugin version
         update_option( $this->pluginName . '_version', WPURP_VERSION );
 
-        // Textdomain
-        load_plugin_textdomain($this->pluginName, false, basename( dirname( __FILE__ ) ) . '/lang/'  );
-        
-        //Include core
-        include_once( $this->pluginDir . '/core-functions.php' );
-        $this->wpurp_core = new WPURP_Core( $this->pluginName, $this->pluginDir, $this->pluginUrl );
+        // Set core directory, URL and main plugin file
+        $this->coreDir = apply_filters( 'wpurp_core_dir', WP_PLUGIN_DIR . '/' . $this->pluginName );
+        $this->coreUrl = apply_filters( 'wpurp_core_url', plugins_url() . '/' . $this->pluginName );
+        $this->pluginFile = apply_filters( 'wpurp_plugin_file', __FILE__ );
 
-        // Hooks
-        register_activation_hook( __FILE__, array( $this->wpurp_core, 'activate_taxonomies' ) );
-        register_activation_hook( __FILE__, array( $this, 'wpurp_check_premium' ) );
-        register_activation_hook( __FILE__, array( $this, 'activation_notice' ) );
-
-        // Actions
-        // add_action( 'init', array( $this, 'load_installed_addons' ), -10 ); // Put this in core-functions
-        add_action( 'after_setup_theme', array( $this, 'wpurp_admin_menu' ) );
-        add_action( 'after_setup_theme', array( $this, 'wpurp_shortcodegenerator' ) );
-        add_action( 'init', array( $this, 'wpurp_check_premium' ) );
-        add_action( 'admin_init', array( $this, 'wpurp_hide_notice' ) );
-        add_action( 'wp_print_scripts', array( $this, 'wpurp_styles' ), 99 ); // Not wp_print_styles because we need this to be the last outputted css
-        add_action( 'wp_footer', array( $this, 'wpurp_scripts' ) );
-        add_action( 'admin_head', array( $this, 'wpurp_admin_styles' ) );
-        add_action( 'admin_footer', array( $this, 'wpurp_admin_scripts' ) );
-        add_action( 'admin_notices', array( $this, 'wpurp_admin_notices' ) );
-        add_action( 'admin_footer-recipe_page_wpurp_admin', array( $this, 'support_tab' ) );
-
-
-        // Filters
-        add_filter( 'plugin_action_links_' . plugin_basename(__FILE__), array( $this, 'plugin_settings_link' ) );
-
-        // Other
-        if ( function_exists( 'add_image_size' ) ) {
-            add_image_size( 'recipe-thumbnail', 150, 9999 );
-            add_image_size( 'recipe-large', 600, 9999 );
+        // Load textdomain
+        if( !self::is_premium_active() ) {
+            load_plugin_textdomain( 'wp-ultimate-recipe', false, basename( dirname( __FILE__ ) ) . '/lang/' );
         }
 
-    }
-    
-    /*
-     * ================================================================================================================
-     * @FRAMEWORK
-     * ================================================================================================================
-     */
+        // Add core helper directory
+        $this->add_helper_directory( $this->coreDir . '/helpers' );
 
-    public function plugin_settings_link( $links )
-    {
-        $links[] = '<a href="'. get_admin_url(null, 'edit.php?post_type=recipe&page=wpurp_admin') .'">'.__( 'Settings', $this->pluginName ).'</a>';
-        $links[] = '<a href="http://www.wpultimaterecipe.com" target="_blank">'.__( 'More information', $this->pluginName ).'</a>';
-        return $links;
-    }
+        // Migrate first if needed
+        $this->helper( 'migration' );
 
-    public function wpurp_admin_notices()
-    {
-        if(get_current_screen()->id == 'recipe_page_wpurp_admin' && get_user_meta( get_current_user_id(), '_wpurp_hide_notice', true ) != get_option($this->pluginName . '_version')) {
-            include($this->pluginDir . '/helper/drip_form.php');
-        }
+        // Load required helpers
+        $this->helper( 'activate' );
+        $this->helper( 'admin_tour' );
+        $this->helper( 'notices' );
+        $this->helper( 'permalinks_flusher' );
+        $this->helper( 'plugin_action_link' );
+        $this->helper( 'query_posts' );
+        $this->helper( 'recipe_content' );
+        $this->helper( 'recipe_demo' );
+        $this->helper( 'recipe_meta_box' );
+        $this->helper( 'recipe_post_type' );
+        $this->helper( 'recipe_save' );
+        $this->helper( 'support_tab' );
+        $this->helper( 'taxonomies' );
+        $this->helper( 'thumbnails' );
+        $this->helper( 'vafpress_menu' );
+        $this->helper( 'vafpress_shortcode' );
 
-        if( $notices = get_option( 'wpurp_deferred_admin_notices' ) ) {
-            foreach( $notices as $notice ) {
-                echo '<div class="updated"><p>'.$notice.'</p></div>';
-            }
+        $this->helper( 'shortcodes/index_shortcode' );
+        $this->helper( 'shortcodes/recipe_shortcode' );
 
-            delete_option('wpurp_deferred_admin_notices');
-        }
-    }
+        // Include required helpers but don't instantiate
+        $this->include_helper( 'addons/addon' );
+        $this->include_helper( 'addons/premium_addon' );
+        $this->include_helper( 'models/ingredient' );
+        $this->include_helper( 'models/instruction' );
+        $this->include_helper( 'models/recipe' );
 
-    function wpurp_hide_notice()
-    {
-        if ( ! isset( $_GET['wpurp_hide_notice'] ) ) {
-            return;
-        }
+        // Load core addons
+        $this->helper( 'addon_loader' )->load_addons( $this->coreDir . '/addons' );
 
-        check_admin_referer( 'wpurp_hide_notice', 'wpurp_hide_notice' );
-        update_user_meta( get_current_user_id(), '_wpurp_hide_notice', get_option($this->pluginName . '_version') );
-    }
-
-    public function wpurp_check_premium()
-    {
-
-        include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
-
-        if( is_plugin_active( 'wp-ultimate-recipe-premium/wp-ultimate-recipe-premium.php' ) ) {
-            $plugin_data = get_plugin_data( $this->premiumDir . '/' . $this->premiumName . '.php' );
-            $plugin_version = $plugin_data['Version'];
-
-            if ($plugin_version < COMPATIBLE_PREMIUM_VERSION) {
-                $message = __( 'Please update WP Ultimate Recipe Premium to at least version', $this->pluginName ) . ' ' . COMPATIBLE_PREMIUM_VERSION;
-            }
-        }
-
-        if( !empty( $message ) ) {
-
-            deactivate_plugins( plugin_basename( $this->premiumDir . '/' . $this->premiumName . '.php' ) );
-            wp_die( $message, 'WP Ultimate Recipe Premium', array( 'back_link' => true ) );
-
-        }
-
-    }
-
-    public function activation_notice() {
-        $notice  = '<strong>WP Ultimate Recipe</strong><br/>';
-        $notice .= '<a href="'.admin_url('edit.php?post_type=recipe&page=wpurp_admin#_latest_news').'">Check out our latest changes in your <strong>Recipes > Admin</strong> panel</a>';
-
-        $this->add_admin_notice( $notice );
-    }
-
-    public function add_admin_notice( $notice )
-    {
-        $notices = get_option('wpurp_deferred_admin_notices', array());
-        $notices[] = $notice;
-        update_option('wpurp_deferred_admin_notices', $notices);
-    }
-
-    /*
-     * Load all available addons - Just duplicated this because I didn't feel like thinking. Sorry. - Brecht
-     */
-    public function load_installed_addons()
-    {
-
-        $addons_dir = WP_PLUGIN_DIR . '/' . $this->pluginName . '-premium' . '/addons'; // Such solution. Wow.
-
-        if( !is_dir( $addons_dir ) ) {
-            return; // Should probably spam them into buying right here.
-        } else {
-            $dirContent = scandir($addons_dir);
-
-            foreach ($dirContent as $folder) {
-
-                if ($folder != '.' && $folder != '..') {
-                    $this->installed_addons[$folder] = true;
-                }
-            }
-
-        }
-    }
-
-    /*
-     * WP Ultimate Recipe Settings page
-     */
-    public function wpurp_admin_menu()
-    {
-        require_once('helper/admin_menu_helper.php');
-        require_once('template/admin.php');
-
-        new VP_Option(array(
-            'is_dev_mode'           => false,
-            'option_key'            => 'wpurp_option',
-            'page_slug'             => 'wpurp_admin',
-            'template'              => $admin_menu,
-            'menu_page'             => 'edit.php?post_type=recipe',
-            'use_auto_group_naming' => true,
-            'use_exim_menu'         => true,
-            'minimum_role'          => 'manage_options',
-            'layout'                => 'fluid',
-            'page_title'            => __( 'Admin', $this->pluginName ),
-            'menu_label'            => __( 'Admin', $this->pluginName ),
-        ));
-    }
-
-    public function support_tab()
-    {
-        //var_dump(get_current_screen());
-        include($this->pluginDir . '/helper/support_tab.html');
-    }
-
-    public function wpurp_shortcodegenerator()
-    {
-        require_once('template/shortcode_generator.php');
-
-        new VP_ShortcodeGenerator(array(
-            'name'           => 'wpurp_shortcode_generator',
-            'template'       => $shortcode_generator,
-            'modal_title'    => 'WP Ultimate Recipe ' . __( 'Shortcodes', $this->pluginName ),
-            'button_title'   => 'WP Ultimate Recipe',
-            'types'          => array( 'post', 'page' ),
-            'main_image'     => $this->pluginUrl . '/img/icon_20.png',
-            'sprite_image'   => $this->pluginUrl . '/img/icon_sprite.png',
-        ));
-    }
-
-    public function option( $name, $default = null )
-    {
-        $option = vp_option( "wpurp_option." . $name );
-
-        return is_null($option) ? $default : $option;
-    }
-    
-    /*
-     * Add inline styles and scripts from addons
-     */
-    
-    public function wpurp_styles() { //front end CSS
-        $styles  = '<style type="text/css" media="screen">';
-        ob_start();
-        do_action( 'wpurp_styles' );
-        $styles .= ob_get_clean();
-        $styles .= '</style>';        
-
-        $output = trim(preg_replace('/\s\s+/', ' ', $styles));
-        echo $output;
-    }
-    
-    public function wpurp_scripts() { //front end JS
-        $scripts  = '<script type="text/javascript">';
-        ob_start();
-        do_action( 'wpurp_scripts' );
-        $scripts .= ob_get_clean();
-        $scripts .= '</script>';
-        
-        $output = trim(preg_replace('/\s\s+/', ' ', $scripts));
-        echo $output;
-    }
-    
-    public function wpurp_admin_styles() { //admin CSS
-        $styles  = '<style type="text/css" media="screen">';
-        ob_start();
-        do_action( 'wpurp_admin_styles' );
-        $styles .= ob_get_clean();
-        $styles .= '</style>';
-        
-        $output = trim(preg_replace('/\s\s+/', ' ', $styles));
-        echo $output;
-    }
-    
-    public function wpurp_admin_scripts() { //admin JS
-        $scripts  = '<script type="text/javascript">';
-        ob_start();
-        do_action( 'wpurp_admin_scripts' );
-        $scripts .= ob_get_clean();
-        $scripts .= '</script>';
-        
-        $output = trim(preg_replace('/\s\s+/', ' ', $scripts));
-        echo $output;
-    }
-      
-    /*
-     * Returns array of all recipes
-     */
-    protected function get_recipes( $orderby = 'date', $order = 'DESC', $taxonomy = '', $term = '', $limit = -1, $author = '', $all = false ) {
-        $args = array(
-            'post_type' => 'recipe',
-            'post_status' => 'publish',
-            'orderby' => $orderby,
-            'order' => $order,
-            'posts_per_page' => $limit,
-        );
-
-        if( $all ) {
-            $args['post_status'] = 'any';
-        }
-
-        if( is_null($limit) || $limit == -1 ) {
-            $args['nopaging'] = true;
-        }
-        
-        if( $taxonomy && !$term ) {
-            $args['tax_query'] = array(
-                'taxonomy' => $taxonomy,
-            );
-        }
-        
-        if( $taxonomy && $term ) {
-            if( $taxonomy == 'category' ) {
-                $args['category_name'] = $term;
-            } else if ( $taxonomy == 'post_tag' ) {
-                $args['tag'] = $term;
-            } else {
-                $args[$taxonomy] = $term;
-            }
-        }
-
-        if( !is_null($author) && $author != '' ) {
-            $args['author'] = $author;
-        }
-        
-        $query = new WP_Query( $args );
-        $recipes = array();
-
-        if( $query->have_posts() ) { //recipes found
-
-            $posts = $query->posts;
-
-            foreach( $posts as $post ) {
-                $recipes[] = $post;
-            }
-        }
-
-        if( $orderby == 'post_title' || $orderby == 'title' || $orderby == 'name' ) {
-            usort($recipes, array($this, "compare_post_titles"));
-
-            if( $order == 'DESC' ) {
-                $recipes = array_reverse($recipes);
-            }
-        }
-
-        return $recipes;
-    }
-
-    /*
-     * TODO - This is probably not that performant but does the job for now
-     */
-    protected function compare_post_titles($a, $b)
-    {
-        return strcmp($this->get_recipe_title($a), $this->get_recipe_title($b));
-    }
-    
-    /*
-     * Used in various places.
-     */
-    protected function recipes_fields() {
-        return array(
-            'recipe_title',
-            'recipe_description',
-            'recipe_rating',
-            'recipe_servings',
-            'recipe_servings_type',
-            'recipe_prep_time',
-            'recipe_prep_time_text',
-            'recipe_cook_time',
-            'recipe_cook_time_text',
-            'recipe_passive_time',
-            'recipe_passive_time_text',
-            'recipe_ingredients',
-            'recipe_instructions',
-            'recipe_notes',
-        );
-    }
-    
-    /*
-     * Check if shortcode is present in current post/page
-     * Only works inside The Loop.
-     */
-    public function check_for_shortcode( $shortcode, $post = '' ) {
-        if( $post == '' ) {
-            global $post;
-        }
-        if( function_exists( 'has_shortcode' ) ) {
-            
-            if( isset($post->post_content) AND has_shortcode( $post->post_content, $shortcode )) { 
-                return true;
-            } 
-            return false;
-        }
-        return true; //in older versions of WP we'll just have to enqueue everything :(
-    }
-    
-    /* 
-     * Checks whether given taxonomy is in use.
-     * Returns true if more than one term used.
-     */
-    protected function site_is_using( $taxonomy = '' ) {
-        $terms_used = get_terms( $taxonomy );
-        if( count( $terms_used ) > 1 ) {
-            return true;
-        }
-        return false;
-    }
-    
-    /*
-     * Permission checks for users.
-     * Prevents future changes to permission names from breaking addons.
-     * 
-     * Example usage if capability type in core changed to "recipe":
-     * wpurp_user_can( 'edit_posts' );
-     * Will check for edit_recipes capability.
-     * 
-     */
-    protected function wpurp_user_can( $user_id = '', $capability = '' ) {
-        if( '' == $user_id || '' == $capability ) {
-            return false;
-        }
-        
-        if( $GLOBALS['wp_post_types']['recipe']['cap']->$capability ) {
-            $wpurp_cap = $GLOBALS['wp_post_types']['recipe']['cap']->$capability;  
-            return user_can( $user_id, $wpurp_cap );
-        }  
-        
-        return false;
-    }
-    
-    protected function wpurp_current_user_can( $capability = '') {
-        if( '' == $capability ) {
-            return false;
-        }
-        //echo '<pre>'.print_r($GLOBALS['wp_post_types']['recipe']->cap->$capability, true).'</pre>';
-        if( isset( $GLOBALS['wp_post_types']['recipe']->cap->$capability ) ) {
-            $wpurp_cap = $GLOBALS['wp_post_types']['recipe']->cap->$capability;  
-
-
-            $args = array_slice( func_get_args(), 1 );
-            $args = array_merge( array( $wpurp_cap ), $args );
-
-            return current_user_can( $wpurp_cap, $args );
-        }  
-        
-        return false;
-    }
-
-    public function get_recipe_title( $recipe )
-    {
-        $meta = get_post_custom($recipe->ID);
-
-        if (isset($meta['recipe_title']) && !is_null($meta['recipe_title'][0]) && $meta['recipe_title'][0] != '') {
-            return $meta['recipe_title'][0];
-        } else {
-            return $recipe->post_title;
-        }
-    }
-
-
-    // Normalize servings and amounts
-
-
-    public function normalize_servings( $servings )
-    {
-        preg_match("/^\d+/", ltrim( $servings ), $out);
-
-        if( isset( $out[0] ) ) {
-            $amount = $out[0];
-        } else {
-            $amount = $this->option( 'recipe_default_servings', 4 );
-        }
-
-        return intval( $amount );
+        // Load default assets
+        $this->helper( 'assets' );
     }
 
     /**
-     * Get normalized amount. 0 if not a valid amount.
-     *
-     * @param $amount       Amount to be normalized
-     * @return int
+     * Access a helper. Will instantiate if helper hasn't been loaded before.
      */
-    public function normalize_amount( $amount )
+    public function helper( $helper )
     {
-        if( is_null($amount) || trim($amount) == '' ) {
-            return 0;
-        }
+        // Lazy instantiate helper
+        if( !isset( $this->helpers[$helper] ) ) {
+            $this->include_helper( $helper );
 
-        $amount = preg_replace( "/[^\d\.\/\,\s-]/", "", $amount ); // Only keep digits, comma, point and forward slash
-        // Only take first part if we have a dash (e.g. 1-2 cups)
-        $parts = explode( '-', $amount );
-        $amount = $parts[0];
+            // Get class name from filename
+            $class_name = 'WPURP';
 
-        // If spaces treat as separate amounts to be added (e.g. 2 1/2 cups = 2 + 1/2)
-        $parts = explode( ' ', $amount );
+            $dirs = explode( '/', $helper );
+            $file = end( $dirs );
+            $name_parts = explode( '_', $file );
+            foreach( $name_parts as $name_part ) {
+                $class_name .= '_' . ucfirst( $name_part );
+            }
 
-        $float = 0.0;
-        foreach( $parts as $amount ) {
-            $separator = $this->find_separator( $amount );
-
-            switch ($separator) {
-                case '/':
-                    $amount = str_replace( '.','', $amount );
-                    $amount = str_replace( ',','', $amount );
-                    $parts = explode( '/', $amount );
-
-                    $denominator = floatval($parts[1]);
-                    if( $denominator == 0 ) {
-                        $denominator = 1;
-                    }
-
-                    $float += floatval($parts[0]) / $denominator;
-                    break;
-                case '.':
-                    $amount = str_replace( ',','', $amount );
-                    $float += floatval($amount);
-                    break;
-                case ',':
-                    $amount = str_replace( '.','', $amount );
-                    $amount = str_replace( ',','.', $amount );
-                    $float += floatval($amount);
-                    break;
-                default:
-                    $float += floatval($amount);
+            // Instantiate class if exists
+            if( class_exists( $class_name ) ) {
+                $this->helpers[$helper] = new $class_name();
             }
         }
 
-        return $float;
+        // Return helper instance
+        return $this->helpers[$helper];
     }
 
     /**
-     * Pick a separator for the amount
-     * Examples:
-     * 1/2 => /
-     * 1.123,42 => ,
-     * 1,123.42 => .
-     *
-     * @param $string
-     * @return string
+     * Include a helper. Looks through all helper directories that have been added.
      */
-    private function find_separator( $string )
+    public function include_helper( $helper )
     {
-        $slash = strrpos($string, '/');
-        $point = strrpos($string, '.');
-        $comma = strrpos($string, ',');
+        foreach( $this->helper_dirs as $dir )
+        {
+            $file = $dir . '/'.$helper.'.php';
 
-        if( $slash ) {
-            return '/';
-        }
-        else {
-            if( !$point && !$comma ) {
-                return '';
-            } else if( !$point && $comma ) {
-                return ',';
-            } else if( $point && !$comma ) {
-                return '.';
-            } else if( $point > $comma ) {
-                return '.';
-            } else {
-                return ',';
+            if( file_exists( $file ) ) {
+                require_once( $file );
             }
         }
     }
 
+    /**
+     * Add a directory to look for helpers.
+     */
+    public function add_helper_directory( $dir )
+    {
+        if( is_dir( $dir ) ) {
+            $this->helper_dirs[] = $dir;
+        }
+    }
+
+    /*
+     * Quick access functions
+     */
+
+    public function tags()
+    {
+        return $this->helper( 'taxonomies' )->get();
+    }
+
+    public function query()
+    {
+        return $this->helper( 'query_recipes' );
+    }
+
+    public function template( $type, $template )
+    {
+        return $this->addon( 'custom-templates' )->get_template( $type, $template );
+    }
 }
 
-require_once('lib/vafpress/bootstrap.php');
-$wpurp = new WPUltimateRecipe();
+// Premium version is responsible for instantiating if available
+if( !class_exists( 'WPUltimateRecipePremium' ) ) {
+    WPUltimateRecipe::get();
+}

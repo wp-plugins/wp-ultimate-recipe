@@ -1,0 +1,47 @@
+#wpurp_drip_form {
+
+    #wpurp_drip_form_dismiss {
+        margin-top: 8px;
+        float: right;
+    }
+
+    h3 {
+        margin-top: 5px;
+        margin-bottom: 10px;
+    }
+
+    p {
+        max-width: 600px;
+    }
+
+    #wpurp_drip_form_div {
+        margin-bottom: 5px;
+
+        #mce-EMAIL {
+            width: 300px;
+        }
+    }
+}
+
+.wpurp_license {
+    width: 100%;
+
+    th, td {
+        vertical-align: middle;
+    }
+
+    .license_button {
+        float: right;
+    }
+}
+
+#section_changelog {
+    ul {
+        list-style: square;
+        margin-left: 1.8em;
+    }
+
+    hr {
+        margin: 25px 0;
+    }
+}

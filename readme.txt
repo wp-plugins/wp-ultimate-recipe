@@ -3,7 +3,7 @@ Contributors: BrechtVds
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QG7KZMGFU325Y
 Tags: recipe, ingredients, food, cooking, seo, schema.org
 Requires at least: 3.3
-Tested up to: 3.9
+Tested up to: 3.9.1
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -61,7 +61,7 @@ You can find more information at [WPUltimateRecipe.com](http://www.wpultimaterec
 
 = How does feature X work? =
 
-Check out our [WP Ultimate Recipe demo website](http://demo.wpultimaterecipe.com) for an overview of all the free and premium features. If you want to see it all in action, take a look at [our video lessons](http://www.wpultimaterecipe.com/category/video-lessons/).
+Check out our [WP Ultimate Recipe demo website](http://www.wpultimaterecipe.com/demo/) for an overview of all the free and premium features. If you want to see it all in action, take a look at [our video lessons](http://www.wpultimaterecipe.com/category/video-lessons/).
 
 = Do you offer any support? =
 
@@ -90,14 +90,21 @@ Yes! We pride ourselves on offering awesome support and almost always answer sup
 
 == Changelog ==
 
-= 1.0.12b =
-* Introduced a bug with the more tag fixed. Fixed now.
+= 2.0 =
+* Language updates
+* Default template will be more consistent in different themes
+* Completely restructured code of the core plugin allows for easier modifications and faster development
+* Clarifications for the correct way of entering ingredients
+* Demo Recipe included to show the correct way of entering recipes
+* Added setting to add Recipe Shortcode Editor to other custom post types
+* Possibility to adjust the mobile breakpoint, based on recipe box width
+* Advanced setting to remove the recipe slug in URLs
 
 = 1.0.12 =
 * WordPress 3.9 compatibility (just increased the version number, everthing was already compatible)
 * Language updates
 * Plugin now supports custom fields and publicize shortlinks
-* Fix: Recipes respect the more tag now
+* Fix: Recipes respect the <!--more--> tag now
 
 = 1.0.11 =
 * Ability to add custom CSS from the recipe settings
@@ -240,8 +247,9 @@ Yes! We pride ourselves on offering awesome support and almost always answer sup
 
 == Upgrade notice ==
 
-= 1.0.12 =
-Upgrade if you use more tags in recipes
+= 2.0 =
+Important: If you are using WP Ultimate Recipe Premium you should just download WP Ultimate Recipe Premium 2.0 and install that, the core plugin is NOT needed anymore.
+Everyone else can safely update to the latest and greatest WordPress recipe plugin!
 
 = 1.0.12 =
 A tiny WP Ultimate Recipe upgrade

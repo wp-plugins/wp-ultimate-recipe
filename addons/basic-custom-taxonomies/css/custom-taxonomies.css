@@ -1,0 +1,19 @@
+#wpurp_editing {
+  margin-top: 15px;
+  font-weight: bold; }
+
+.wpurp_editing {
+  display: none; }
+
+#wpurp-tags-table tr {
+  height: 32px; }
+#wpurp-tags-table #tag {
+  width: 20%; }
+#wpurp-tags-table #singular-name {
+  width: 20%; }
+#wpurp-tags-table #name {
+  width: 20%; }
+#wpurp-tags-table #slug {
+  width: 20%; }
+#wpurp-tags-table #action {
+  width: 20%; }

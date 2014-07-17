@@ -1,0 +1,124 @@
+.wpurp-hide {
+    display: none !important;
+}
+
+#recipe_meta_box {
+    h4 {
+        font-size: 1.2em;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    #recipe_title {
+        width: 300px;
+    }
+
+    .recipe-general-form-label {
+        width: 20%;
+        vertical-align: top;
+    }
+
+    .recipe-general-form-field {
+        width: 80%;
+        vertical-align: top;
+    }
+
+    textarea {
+        resize: vertical;
+        width: 100%;
+    }
+
+    #recipe_servings,
+    #recipe_prep_time,
+    #recipe_cook_time,
+    #recipe_passive_time {
+        width: 50px;
+    }
+
+    #recipe_servings_type,
+    #recipe_prep_time_text,
+    #recipe_cook_time_text,
+    #recipe_passive_time_text {
+        width: 100px;
+    }
+
+    .recipe-general-form-notes,
+    .recipe-ingredients-notes {
+        font-style: italic;
+    }
+
+    .recipe-form-notes {
+        font-style: italic;
+        padding-top: 20px;
+    }
+
+    #recipe_rating_star_selection .star {
+        cursor: pointer;
+    }
+
+    .ingredient-field-header td {
+        font-weight: bold;
+        padding-top: 10px;
+    }
+
+    .ingredient-group-stub,
+    .instruction-group-stub {
+        display: none;
+    }
+
+    .instruction-group-label,
+    .instruction-groups-disabled {
+        margin-left: 20px;
+    }
+
+    .sort-handle  {
+        cursor: move;
+    }
+
+    .center-column { text-align: center; }
+
+    .wpurp-required {
+        color: #a00000;
+        font-size: 0.8em;
+    }
+
+    #recipe-ingredients {
+        input {
+            width: 100%;
+        }
+
+        .ingredients-delete img,
+        .ingredient-group-delete img {
+            cursor: pointer;
+        }
+
+        td:nth-child(1) { width: 5%; text-align: center; }
+        td:nth-child(2) { width: 10%; }
+        td:nth-child(3) { width: 15%; }
+        td:nth-child(4) { width: 25%; }
+        td:nth-child(5) { width: 40%; }
+        td:nth-child(6) { width: 5%; text-align: center; }
+    }
+
+    #ingredients-add-box {
+        margin-top: 5px;
+    }
+
+    #recipe-instructions {
+        .instructions-delete img,
+        .instruction-group-delete img {
+            cursor: pointer;
+        }
+
+        td:nth-child(1) { width: 5%; text-align: center; }
+        td:nth-child(2) { width: 60%; }
+        td:nth-child(3) { width: 30%; vertical-align: top; }
+        td:nth-child(4) { width: 5%; text-align: center; }
+    }
+
+    .recipe_instructions_thumbnail {
+        max-height: 50px;
+    }
+}

@@ -1,0 +1,79 @@
+.wpurp-clear {
+    float: none;
+    clear: both;
+}
+
+html body .wpurp-container {
+    position: relative;
+    clear: both;
+
+    span {
+        display: inline-block;
+    }
+
+    * {
+        border: 0;
+
+        -webkit-margin: 0;
+        -moz-margin: 0;
+        margin: 0;
+
+        -webkit-padding: 0;
+        -moz-padding: 0;
+        padding: 0;
+
+        background: none;
+
+        -webkit-border-radius: 0px;
+        -moz-border-radius:    0px;
+        border-radius:         0px;
+
+        -webkit-box-shadow: none;
+        -moz-box-shadow:    none;
+        box-shadow:         none;
+
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+
+        color: inherit;
+        font-size: 14px;
+        line-height: 1.4;
+        font-weight: normal;
+    }
+
+    .wpurp-recipe-notes ul,
+    .wpurp-recipe-notes ol {
+        padding-left: 23px;
+    }
+
+    table {
+        border-collapse: collapse;
+    }
+
+    a {
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .wpurp-responsive-mobile {
+        display: none;
+    }
+
+    .wpurp-recipe-sharing {
+        iframe {
+            margin: 0 !important;
+        }
+
+        .pinterest-pinit {
+            margin-top: 32px;
+
+            a {
+                background-image: url(http://passets.pinterest.com/images/pidgets/pinit_bg_en_rect_gray_28_1.png) !important;
+            }
+        }
+    }
+}
