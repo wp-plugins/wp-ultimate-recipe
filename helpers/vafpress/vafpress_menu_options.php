@@ -741,6 +741,14 @@ $admin_menu = array(
                             ),
                         ),
                         array(
+                            'type' => 'html',
+                            'name' => 'recipe_grid_reset_terms',
+                            'binding' => array(
+                                'field'    => '',
+                                'function' => 'wpurp_reset_recipe_grid_terms',
+                            ),
+                        ),
+                        array(
                             'type' => 'toggle',
                             'name' => 'recipe_grid_multiselect',
                             'label' => __('Multi-Select', 'wp-ultimate-recipe'),

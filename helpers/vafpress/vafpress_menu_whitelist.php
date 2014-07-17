@@ -199,6 +199,11 @@ function wpurp_reset_demo_recipe()
     return '<a href="'.admin_url( 'edit.php?post_type=recipe&wpurp_reset_demo_recipe=true' ).'" class="button button-primary" target="_blank">'.__('Reset Demo Recipe', 'wp-ultimate-recipe').'</a>';
 }
 
+function wpurp_reset_recipe_grid_terms()
+{
+    return '<a href="'.admin_url( 'edit.php?post_type=recipe&wpurp_reset_recipe_grid_terms=true' ).'" class="button button-primary" target="_blank">'.__('Recalculate Recipe Grid Terms', 'wp-ultimate-recipe').'</a>';
+}
+
 function wpurp_admin_post_types()
 {
     $post_types = get_post_types( '', 'names' );

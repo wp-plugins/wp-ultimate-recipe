@@ -11,6 +11,7 @@ class WPURP_Recipe_Demo {
     {
         if( isset( $_GET['wpurp_reset_demo_recipe'] ) ) {
             update_option( 'wpurp_demo_recipe', false );
+            WPUltimateRecipe::get()->helper( 'notices' )->add_admin_notice( '<strong>WP Ultimate Recipe</strong> The Recipe Demo has been reset' );
         }
 
         if( !get_option( 'wpurp_demo_recipe', false ) ) {

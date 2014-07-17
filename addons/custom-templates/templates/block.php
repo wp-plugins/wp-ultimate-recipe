@@ -140,14 +140,14 @@ class WPURP_Template_Block {
         if( $this->present( $block, 'fontColor' ) )  $this->add_style( 'color',       $block->fontColor );
         if( $this->present( $block, 'linkColor' ) )  $this->link_color = $block->linkColor;
 
-        if( $this->present( $block, 'fontFamilyType' ) && $block->fontFamilyType = 'manual' ) {
+        if( $this->present( $block, 'fontFamilyType' ) && $block->fontFamilyType == 'manual' ) {
             if( $this->present( $block, 'fontFamilyManual' ) ) $this->add_style( 'font-family',       $block->fontFamilyManual );
         }
-        if( $this->present( $block, 'fontFamilyType' ) && $block->fontFamilyType = 'gwf' ) {
+        if( $this->present( $block, 'fontFamilyType' ) && $block->fontFamilyType == 'gwf' ) {
             if( $this->present( $block, 'fontFamilyGWF' ) ) {
                 $font = str_replace( '+',' ', $block->fontFamilyGWF );
                 $font .= ', sans-serif';
-                $this->add_style( 'font-family',       $font );
+                $this->add_style( 'font-family', $font );
             }
         }
 
@@ -182,7 +182,7 @@ class WPURP_Template_Block {
 
     public function add_style( $property, $value, $name = 'default' )
     {
-        $this->style[$name][$property] = $value;
+        $this->style[$name][$property] = str_replace( '"', "'", $value );
     }
 
     private function get_style_string( $name )

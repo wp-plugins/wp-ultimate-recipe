@@ -36,7 +36,7 @@ An overview of the WP Ultimate Recipe features:
 
 We also have a [WP Ultimate Recipe Premium version](http://www.wpultimaterecipe.com/get-the-plugin/) which offers the following features:
 
-*   Custom **styling** of recipes
+*   Create your own unique recipe template with the **Template Editor**
 *   Let your **users submit** recipes
 *   User menus with a **shopping list generator**
 *   Create **custom tags** for your recipes
@@ -89,6 +89,9 @@ Yes! We pride ourselves on offering awesome support and almost always answer sup
 10. WP Ultimate Recipe automatically formats your data so it can be picked up by Google Recipe Search and others. Great for SEO!
 
 == Changelog ==
+
+= 2.0.1 =
+* Translation fix
 
 = 2.0 =
 * Language updates
@@ -246,6 +249,9 @@ Yes! We pride ourselves on offering awesome support and almost always answer sup
 * Very first version of this plugin
 
 == Upgrade notice ==
+
+= 2.0.1 =
+Update recommended if your website is not in English
 
 = 2.0 =
 Important: If you are using WP Ultimate Recipe Premium you should just download WP Ultimate Recipe Premium 2.0 and install that, the core plugin is NOT needed anymore.

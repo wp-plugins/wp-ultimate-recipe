@@ -14,6 +14,9 @@ class WPURP_Activate {
         WPUltimateRecipe::get()->helper( 'taxonomies' )->check_recipe_taxonomies();
 
         WPUltimateRecipe::get()->helper( 'permalinks_flusher' )->set_flush_needed();
-        WPUltimateRecipe::addon( 'custom-templates' )->default_templates();
+
+        if( !WPUltimateRecipe::is_premium_active() ) {
+            WPUltimateRecipe::addon( 'custom-templates' )->default_templates( true );
+        }
     }
 }

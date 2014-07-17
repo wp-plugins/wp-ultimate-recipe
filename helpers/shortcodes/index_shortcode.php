@@ -29,7 +29,7 @@ class WPURP_Index_Shortcode {
                 {
                     if ( $options['headers'] != 'false' )
                     {
-                        $first_letter = substr( $title, 0, 1 );
+                        $first_letter = strtoupper( mb_substr( $title, 0, 1 ) );
 
                         if( !in_array( $first_letter, $letters ) )
                         {
