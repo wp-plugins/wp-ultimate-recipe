@@ -6,6 +6,7 @@
 html body .wpurp-container {
     position: relative !important;
     clear: both !important;
+    text-align: left; // Not !important to support RTL languages
 
     span {
         display: inline-block !important;

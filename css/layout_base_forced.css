@@ -4,7 +4,8 @@
 
 html body .wpurp-container {
   position: relative !important;
-  clear: both !important; }
+  clear: both !important;
+  text-align: left; }
   html body .wpurp-container span {
     display: inline-block !important; }
   html body .wpurp-container * {

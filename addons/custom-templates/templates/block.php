@@ -121,7 +121,7 @@ class WPURP_Template_Block {
         }
 
         // Text Style
-        if( $this->present( $block, 'textAlign' ) ) {
+        if( $this->present( $block, 'textAlign' ) && $this->type != 'container' ) {
             $this->add_style( 'text-align',   $block->textAlign );
             $this->add_style( 'text-align',   $block->textAlign, 'td' );
         }
@@ -263,6 +263,10 @@ class WPURP_Template_Block {
             }
         } else if( $condition['condition_type'] == 'setting' ) {
             $val = WPUltimateRecipe::option( $condition['setting'], '1' ); // TODO Only works for default 1 options at the moment
+
+            if( $condition['setting'] == 'recipe_adjustable_units' && !WPUltimateRecipe::is_premium_active() ) {
+                return false; // Hide unit conversion block if we're not Premium
+            }
 
             if( isset( $condition['when'] ) && $condition['when'] == 'enabled' ) {
                 $show = $show && $val != '1';

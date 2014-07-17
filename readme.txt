@@ -90,6 +90,9 @@ Yes! We pride ourselves on offering awesome support and almost always answer sup
 
 == Changelog ==
 
+= 2.0.2 =
+* Fix for RTL languages
+
 = 2.0.1 =
 * Translation fix
 
@@ -249,6 +252,9 @@ Yes! We pride ourselves on offering awesome support and almost always answer sup
 * Very first version of this plugin
 
 == Upgrade notice ==
+
+= 2.0.2 =
+Update for RTL websites
 
 = 2.0.1 =
 Update recommended if your website is not in English
