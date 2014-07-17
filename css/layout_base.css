@@ -2,6 +2,9 @@
   float: none;
   clear: both; }
 
+html body.rtl .wpurp-container {
+  text-align: right; }
+
 html body .wpurp-container {
   position: relative;
   clear: both;
