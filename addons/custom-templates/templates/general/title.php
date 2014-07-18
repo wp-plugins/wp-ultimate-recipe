@@ -33,6 +33,10 @@ class WPURP_Template_Title extends WPURP_Template_Block {
         switch( $this->text ) {
             case 'Servings':
                 $string = __( 'Servings', 'wp-ultimate-recipe' ); break;
+            case 'Servings:':
+                $string = __( 'Servings', 'wp-ultimate-recipe' ) . ':'; break;
+            case 'Units:':
+                $string = __( 'Units', 'wp-ultimate-recipe' ) . ':'; break;
             case 'Prep Time':
                 $string = __( 'Prep Time', 'wp-ultimate-recipe' ); break;
             case 'Cook Time':
