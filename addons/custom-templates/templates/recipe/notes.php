@@ -16,6 +16,6 @@ class WPURP_Template_Recipe_Notes extends WPURP_Template_Block {
         $output = $this->before_output();
         $output .= '<div' . $this->style() . '>' . wpautop( $recipe->notes() ) . '</div>';
 
-        return $this->after_output( $output );
+        return $this->after_output( $output, $recipe );
     }
 }

@@ -38,6 +38,6 @@ class WPURP_Template_Container extends WPURP_Template_Block {
         $output .= ob_get_contents();
         ob_end_clean();
 
-        return $this->after_output( $output );
+        return $this->after_output( $output, $recipe );
     }
 }

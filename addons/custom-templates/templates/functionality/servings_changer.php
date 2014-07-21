@@ -29,6 +29,6 @@ class WPURP_Template_Recipe_Servings_Changer extends WPURP_Template_Block {
             }
         }
 
-        return $this->after_output( $output );
+        return $this->after_output( $output, $recipe );
     }
 }

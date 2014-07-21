@@ -28,6 +28,8 @@ class WPURP_Template_Recipe_Instructions extends WPURP_Template_Block {
         $this->add_style( 'border-bottom', 'none', 'li-last' );
 
         $this->add_style( 'vertical-align', 'top', 'instruction' );
+
+        $this->add_style( 'max-width', '100%', 'img' );
     }
 
     public function show_images( $show_images )
@@ -51,7 +53,7 @@ class WPURP_Template_Recipe_Instructions extends WPURP_Template_Block {
         $output .= ob_get_contents();
         ob_end_clean();
 
-        return $this->after_output( $output );
+        return $this->after_output( $output, $recipe );
     }
 
     private function instructions_list( $recipe )

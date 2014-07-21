@@ -45,7 +45,7 @@ class WPURP_Template_Recipe_Ingredients extends WPURP_Template_Block {
         $output .= ob_get_contents();
         ob_end_clean();
 
-        return $this->after_output( $output );
+        return $this->after_output( $output, $recipe );
     }
 
     private function ingredients_list( $recipe )
@@ -66,8 +66,10 @@ class WPURP_Template_Recipe_Ingredients extends WPURP_Template_Block {
                 $previous_group = $ingredient['group'];
             }
 
+            $fraction = strpos($ingredient['amount'], '/') === false ? false : true;
+
             $out .= '<li itemprop="ingredients"' . $this->style(array('li','li-ingredient')) . '>';
-            $out .= '<span class="recipe-ingredient-quantity-unit"' . $this->style('quantity-unit') . '><span class="recipe-ingredient-quantity" data-normalized="'.$ingredient['amount_normalized'].'" data-original="'.$ingredient['amount'].'"' . $this->style('quantity') . '>'.$ingredient['amount'].'</span> <span class="recipe-ingredient-unit" data-original="'.$ingredient['unit'].'"' . $this->style('unit') . '>'.$ingredient['unit'].'</span></span>';
+            $out .= '<span class="recipe-ingredient-quantity-unit"' . $this->style('quantity-unit') . '><span class="recipe-ingredient-quantity" data-normalized="'.$ingredient['amount_normalized'].'" data-fraction="'.$fraction.'" data-original="'.$ingredient['amount'].'"' . $this->style('quantity') . '>'.$ingredient['amount'].'</span> <span class="recipe-ingredient-unit" data-original="'.$ingredient['unit'].'"' . $this->style('unit') . '>'.$ingredient['unit'].'</span></span>';
 
             $taxonomy = get_term_by('name', $ingredient['ingredient'], 'ingredient');
 

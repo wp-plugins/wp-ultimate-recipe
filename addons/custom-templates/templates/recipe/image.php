@@ -58,6 +58,6 @@ class WPURP_Template_Recipe_Image extends WPURP_Template_Block {
         $output .= ob_get_contents();
         ob_end_clean();
 
-        return $this->after_output( $output );
+        return $this->after_output( $output, $recipe );
     }
 }

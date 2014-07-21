@@ -24,6 +24,6 @@ class WPURP_Template_Paragraph extends WPURP_Template_Block {
         $output = $this->before_output();
         $output .= '<div' . $this->style() . '>' . $this->text . '</div>';
 
-        return $this->after_output( $output );
+        return $this->after_output( $output, $recipe );
     }
 }

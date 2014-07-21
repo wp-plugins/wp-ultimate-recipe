@@ -38,6 +38,6 @@ class WPURP_Template_Link extends WPURP_Template_Block {
         $output = $this->before_output();
         $output .= '<a href="' . $this->url . '" target="' . $this->target . '"'. $this->style() .'>' . $this->text . '</a>';
 
-        return $this->after_output( $output );
+        return $this->after_output( $output, $recipe );
     }
 }

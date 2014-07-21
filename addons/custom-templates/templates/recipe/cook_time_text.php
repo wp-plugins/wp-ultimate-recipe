@@ -16,6 +16,6 @@ class WPURP_Template_Recipe_Cook_Time_Text extends WPURP_Template_Block {
         $output = $this->before_output();
         $output .= '<span' . $this->style() . '>' . $recipe->cook_time_text() . '</span>';
 
-        return $this->after_output( $output );
+        return $this->after_output( $output, $recipe );
     }
 }

@@ -4,6 +4,7 @@ wpurp_adjustable_servings.updateAmounts = function(amounts, servings_original, s
 {
     amounts.each(function() {
         var amount = parseFloat(jQuery(this).data('normalized'));
+        var fraction = jQuery(this).data('fraction');
 
         if(servings_original == servings_new)
         {
@@ -14,15 +15,23 @@ wpurp_adjustable_servings.updateAmounts = function(amounts, servings_original, s
             if(!isFinite(amount)) {
                 jQuery(this).addClass('recipe-ingredient-nan');
             } else {
-                var new_amount = wpurp_adjustable_servings.toFixed(servings_new * amount/servings_original);
-                jQuery(this).text(new_amount);
+                var new_amount = servings_new * amount/servings_original;
+                var new_amount_text = wpurp_adjustable_servings.toFixed(new_amount, fraction);
+                jQuery(this).text(new_amount_text);
             }
         }
     });
 }
 
-wpurp_adjustable_servings.toFixed = function(amount)
+wpurp_adjustable_servings.toFixed = function(amount, fraction)
 {
+    if(fraction) {
+        var fractioned_amount = Fraction(amount.toString());
+        if(fractioned_amount.denominator < 100) {
+            return fractioned_amount;
+        }
+    }
+
     if(amount == '' || amount == 0) {
         return '';
     }

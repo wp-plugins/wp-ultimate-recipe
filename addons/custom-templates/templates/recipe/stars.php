@@ -23,7 +23,7 @@ class WPURP_Template_Recipe_Stars extends WPURP_Template_Block {
         $output = $this->before_output();
         $output .= '<span' . $this->style() . '>' . $stars . '</span>';
 
-        return $this->after_output( $output );
+        return $this->after_output( $output, $recipe );
     }
 
     private function stars_author( $recipe )

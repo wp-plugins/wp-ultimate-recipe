@@ -32,6 +32,6 @@ class WPURP_Template_Recipe_Unit_Changer extends WPURP_Template_Block {
             $output .= '</select></span>';
         }
 
-        return $this->after_output( $output );
+        return $this->after_output( $output, $recipe );
     }
 }

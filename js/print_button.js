@@ -11,7 +11,10 @@ jQuery(document).ready(function() {
             servings_input = recipe.find('input.advanced-adjust-recipe-servings');
         }
 
-        var units = recipe.find('select.adjust-recipe-unit option:selected').val();
+        var ingredientList = recipe.find('ul.wpurp-recipe-ingredients');
+
+        wpurp_print.old_system = parseInt(ingredientList.data('system'))
+        wpurp_print.new_system = recipe.find('select.adjust-recipe-unit option:selected').val();
 
         var data = {
             action: 'get_recipe_template',
@@ -20,9 +23,13 @@ jQuery(document).ready(function() {
         };
 
         wpurp_print.template = '';
-        wpurp_print.servings_original = parseInt(servings_input.data('start-servings'));
-        wpurp_print.servings_new = parseInt(servings_input.val());
-        wpurp_print.units = units;
+        wpurp_print.servings_original = parseInt(ingredientList.data('servings'));
+
+        if(servings_input.length == 0) {
+            wpurp_print.servings_new = wpurp_print.servings_original;
+        } else {
+            wpurp_print.servings_new = parseInt(servings_input.val());
+        }
 
         jQuery.post(wpurp_print.ajaxurl, data, function(template) {
             wpurp_print.template = template.output;

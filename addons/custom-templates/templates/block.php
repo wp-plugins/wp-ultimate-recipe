@@ -328,7 +328,7 @@ class WPURP_Template_Block {
         return $output;
     }
 
-    protected function after_output( $output )
+    protected function after_output( $output, $recipe )
     {
         if( !$this->show_on_desktop || !$this->show_on_mobile ) {
             $output .= '</div>';
@@ -350,7 +350,7 @@ class WPURP_Template_Block {
             }
         }
 
-        return apply_filters( 'wpurp_output_recipe_' .$this->type, $output );
+        return apply_filters( 'wpurp_output_recipe_block_' . $this->type, $output, $recipe );
     }
 
     /*

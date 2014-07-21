@@ -11,6 +11,7 @@ html body .wpurp-container {
     position: relative !important;
     clear: both !important;
     text-align: left; // Not !important to support RTL languages
+    font-size: 14px !important;
 
     span {
         display: inline-block !important;
@@ -42,7 +43,7 @@ html body .wpurp-container {
         box-sizing: border-box !important;
 
         color: inherit !important;
-        font-size: 14px !important;
+        font-size: inherit !important;
         line-height: 1.4 !important;
         font-weight: normal !important;
     }

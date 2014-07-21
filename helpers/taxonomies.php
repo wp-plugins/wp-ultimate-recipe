@@ -80,7 +80,7 @@ class WPURP_Taxonomies {
         $name_lower = strtolower($name);
         $singular_lower = strtolower($singular);
 
-        $arr[$tag] = apply_filters( 'wpurp_default_taxonomies',
+        $arr[$tag] = apply_filters( 'wpurp_register_taxonomy',
             array(
                 'labels' => array(
                     'name'                       => $name,
@@ -104,7 +104,8 @@ class WPURP_Taxonomies {
                 'rewrite' => array(
                     'slug' => $singular_lower
                 )
-            )
+            ),
+            $tag
         );
 
         return $arr;

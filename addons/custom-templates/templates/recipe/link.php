@@ -1,10 +1,10 @@
 <?php
 
-class WPURP_Template_Recipe_Prep_Time extends WPURP_Template_Block {
+class WPURP_Template_Recipe_Link extends WPURP_Template_Block {
 
-    public $editorField = 'recipePrepTime';
+    public $editorField = 'recipeLink';
 
-    public function __construct( $type = 'recipe-prep-time' )
+    public function __construct( $type = 'recipe-link' )
     {
         parent::__construct( $type );
     }
@@ -14,7 +14,8 @@ class WPURP_Template_Recipe_Prep_Time extends WPURP_Template_Block {
         if( !$this->output_block( $recipe ) ) return '';
 
         $output = $this->before_output();
-        $output .= '<span' . $this->style() . '>' . $recipe->prep_time() . '</span>';
+
+        $output .= '<span' . $this->style() . '>' . $recipe->link() . '</span>';
 
         return $this->after_output( $output, $recipe );
     }

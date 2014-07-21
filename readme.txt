@@ -90,11 +90,17 @@ Yes! We pride ourselves on offering awesome support and almost always answer sup
 
 == Changelog ==
 
+= 2.0.3 =
+* Fixed problems with print version
+* Added multiple plugin hooks
+* Keep fractions after changing serving size
+
 = 2.0.2 =
 * Fix for RTL languages
 
 = 2.0.1 =
 * Translation fix
+* Recipe Index fix for non-latin letters
 
 = 2.0 =
 * Language updates
@@ -252,6 +258,9 @@ Yes! We pride ourselves on offering awesome support and almost always answer sup
 * Very first version of this plugin
 
 == Upgrade notice ==
+
+= 2.0.3 =
+Update to fix the print version of your recipes
 
 = 2.0.2 =
 Update for RTL websites

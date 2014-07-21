@@ -8,7 +8,8 @@ html body.rtl .wpurp-container {
 html body .wpurp-container {
   position: relative;
   clear: both;
-  text-align: left; }
+  text-align: left;
+  font-size: 14px; }
   html body .wpurp-container span {
     display: inline-block; }
   html body .wpurp-container * {
@@ -30,7 +31,7 @@ html body .wpurp-container {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     color: inherit;
-    font-size: 14px;
+    font-size: inherit;
     line-height: 1.4;
     font-weight: normal; }
   html body .wpurp-container .wpurp-recipe-notes ul,

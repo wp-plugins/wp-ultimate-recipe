@@ -26,6 +26,6 @@ class WPURP_Template_Recipe_Title extends WPURP_Template_Block {
         $tag = isset( $this->tag ) ? $this->tag : 'span';
         $output .= '<' . $tag . $this->style() . '>' . $recipe->title() . '</' . $tag . '>';
 
-        return $this->after_output( $output );
+        return $this->after_output( $output, $recipe );
     }
 }

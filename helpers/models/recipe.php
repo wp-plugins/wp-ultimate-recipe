@@ -153,12 +153,14 @@ class WPURP_Recipe {
 
     public function ingredients()
     {
-        return unserialize( $this->meta( 'recipe_ingredients' ) );
+        $ingredients = unserialize( $this->meta( 'recipe_ingredients' ) );
+        return apply_filters( 'wpurp_recipe_field_ingredients', $ingredients, $this );
     }
 
     public function instructions()
     {
-        return unserialize( $this->meta( 'recipe_instructions' ) );
+        $instructions = unserialize( $this->meta( 'recipe_instructions' ) );
+        return apply_filters( 'wpurp_recipe_field_instructions', $instructions, $this );
     }
 
     public function link()

@@ -61,6 +61,8 @@ class WPURP_Recipe_Content {
                 $content = $recipe->description();
             }
 
+            $content = apply_filters( 'wpurp_output_recipe_excerpt', $content, $recipe );
+
             add_filter( 'get_the_excerpt', array( $this, 'excerpt_filter' ), 10 );
         }
 

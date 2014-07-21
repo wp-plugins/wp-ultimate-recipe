@@ -35,6 +35,6 @@ class WPURP_Template_Image extends WPURP_Template_Block {
         $output = $this->before_output();
         $output .= '<img src="' . $this->url . '"' . $this->style() . '\>';
 
-        return $this->after_output( $output );
+        return $this->after_output( $output, $recipe );
     }
 }

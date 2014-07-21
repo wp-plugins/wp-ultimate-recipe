@@ -38,10 +38,16 @@ class WPURP_Assets {
                 'priority' => 99,
             ),
             array(
+                'file' => WPUltimateRecipe::get()->coreUrl . '/vendor/fraction-js/fraction.js',
+                'name' => 'fraction',
+                'display' => 'public',
+            ),
+            array(
                 'file' => WPUltimateRecipe::get()->coreUrl . '/js/adjustable_servings.js',
                 'display' => 'public',
                 'deps' => array(
                     'jquery',
+                    'fraction',
                 ),
             ),
             array(

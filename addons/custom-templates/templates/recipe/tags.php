@@ -43,7 +43,7 @@ class WPURP_Template_Recipe_Tags extends WPURP_Template_Block {
         $output .= ob_get_contents();
         ob_end_clean();
 
-        return $this->after_output( $output );
+        return $this->after_output( $output, $recipe );
     }
 
     /**
@@ -95,6 +95,6 @@ class WPURP_Template_Recipe_Tags extends WPURP_Template_Block {
             }
         }
 
-        return $tags;
+        return apply_filters( 'wpurp_output_recipe_block_recipe-tags_terms', $tags, $recipe );
     }
 }
