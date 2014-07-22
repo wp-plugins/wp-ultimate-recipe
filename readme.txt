@@ -90,6 +90,9 @@ Yes! We pride ourselves on offering awesome support and almost always answer sup
 
 == Changelog ==
 
+= 2.0.4 =
+* Fixed settings page bug
+
 = 2.0.3 =
 * Fixed problems with print version
 * Added multiple plugin hooks
@@ -258,6 +261,9 @@ Yes! We pride ourselves on offering awesome support and almost always answer sup
 * Very first version of this plugin
 
 == Upgrade notice ==
+
+= 2.0.4 =
+Update to fix the recipe settings page
 
 = 2.0.3 =
 Update to fix the print version of your recipes

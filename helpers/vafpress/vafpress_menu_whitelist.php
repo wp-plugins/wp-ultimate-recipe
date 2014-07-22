@@ -83,8 +83,12 @@ function wpurp_admin_template_editor()
 
 function wpurp_admin_template_editor_premium()
 {
-    $url = WPUltimateRecipe::addon( 'template-editor' )->editor_url();
-    $button = '<a href="' . $url . '" class="button button-primary" target="_blank">' . __('Open the Template Editor', 'wp-ultimate-recipe') . '</a>';
+    if( WPUltimateRecipe::is_premium_active() ) {
+      $url = WPUltimateRecipe::addon( 'template-editor' )->editor_url();
+      $button = '<a href="' . $url . '" class="button button-primary" target="_blank">' . __('Open the Template Editor', 'wp-ultimate-recipe') . '</a>';
+    } else {
+      $button = '<a href="#" class="button button-primary button-disabled" disabled>' . __('Open the Template Editor', 'wp-ultimate-recipe') . '</a>';
+    }
 
     return $button;
 }
