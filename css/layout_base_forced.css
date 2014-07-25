@@ -38,7 +38,8 @@ html body .wpurp-container {
   html body .wpurp-container .wpurp-recipe-notes ol {
     padding-left: 23px !important; }
   html body .wpurp-container table {
-    border-collapse: collapse !important; }
+    border-collapse: collapse !important;
+    width: 100% !important; }
   html body .wpurp-container a {
     text-decoration: none !important; }
     html body .wpurp-container a:hover {

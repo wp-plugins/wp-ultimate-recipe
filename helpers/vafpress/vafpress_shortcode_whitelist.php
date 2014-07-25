@@ -1,5 +1,4 @@
 <?php
-
 function wpurp_shortcode_generator_templates()
 {
     $template_list = array();
@@ -45,10 +44,18 @@ function wpurp_shortcode_generator_recipes( $orderby, $order )
 
     $recipes = get_posts( $args );
     foreach ( $recipes as $recipe ) {
+        
+        $meta = get_post_custom( $recipe->ID );
+
+        if ( isset( $meta['recipe_title'] ) && !is_null( $meta['recipe_title'][0] ) && $meta['recipe_title'][0] != '' ) {
+            $title = $meta['recipe_title'][0];
+        } else {
+            $title = $recipe->post_title;
+        }
 
         $recipe_list[] = array(
             'value' => $recipe->ID,
-            'label' => get_recipe_title($recipe),
+            'label' => $title,
         );
 
     }
@@ -63,17 +70,6 @@ function wpurp_shortcode_generator_recipes( $orderby, $order )
 function wpurp_shortcodes_sort_by_label( $a, $b )
 {
     return strcmp($a['label'], $b['label']);
-}
-
-function get_recipe_title( $recipe )
-{
-    $meta = get_post_custom($recipe->ID);
-
-    if (isset($meta['recipe_title']) && !is_null($meta['recipe_title'][0]) && $meta['recipe_title'][0] != '') {
-        return $meta['recipe_title'][0];
-    } else {
-        return $recipe->post_title;
-    }
 }
 
 function wpurp_shortcode_generator_taxonomies()

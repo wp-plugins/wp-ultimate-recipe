@@ -4,6 +4,8 @@ $unit_helper = WPUltimateRecipe::get()->helper('ingredient_units');
 $conversion_units_admin = $unit_helper->get_unit_admin_settings();
 $unit_systems_admin = $unit_helper->get_unit_system_admin_settings();
 
+$template_editor_button = WPUltimateRecipe::is_addon_active( 'template-editor' ) ? 'recipe_template_open_template_editor_active' : 'recipe_template_open_template_editor_disabled';
+
 $admin_menu = array(
     'title' => 'WP Ultimate Recipe ' . __('Settings', 'wp-ultimate-recipe'),
     'logo'  => WPUltimateRecipe::get()->coreUrl . '/img/logo.png',
@@ -59,26 +61,10 @@ $admin_menu = array(
                             'fields' => array(
                                 array(
                                     'type' => 'html',
-                                    'name' => 'recipe_template_open_template_editor',
+                                    'name' => $template_editor_button,
                                     'binding' => array(
                                         'field'    => '',
                                         'function' => 'wpurp_admin_template_editor',
-                                    ),
-                                    'dependency' => array(
-                                        'field' => '',
-                                        'function' => 'wpurp_admin_premium_not_installed',
-                                    ),
-                                ),
-                                array(
-                                    'type' => 'html',
-                                    'name' => 'recipe_template_open_template_editor_premium',
-                                    'binding' => array(
-                                        'field'    => '',
-                                        'function' => 'wpurp_admin_template_editor_premium',
-                                    ),
-                                    'dependency' => array(
-                                        'field' => '',
-                                        'function' => 'wpurp_admin_premium_installed',
                                     ),
                                 ),
                                 array(
@@ -765,25 +751,15 @@ $admin_menu = array(
                             ),
                         ),
                         array(
-                            'type' => 'toggle',
-                            'name' => 'recipe_grid_multiselect',
-                            'label' => __('Multi-Select', 'wp-ultimate-recipe'),
-                            'description' => __( 'Allow visitors to select multiple values for a tag or category.', 'wp-ultimate-recipe' ),
-                            'default' => '1',
-                        ),
-                        array(
-                            'type' => 'toggle',
-                            'name' => 'recipe_grid_match_all',
-                            'label' => __('Match All', 'wp-ultimate-recipe'),
-                            'description' => __( 'Recipes will only match if they match all selections.', 'wp-ultimate-recipe' ),
-                            'default' => '1',
-                        ),
-                        array(
-                            'type' => 'toggle',
-                            'name' => 'recipe_grid_parents',
-                            'label' => __('Parents match Children', 'wp-ultimate-recipe'),
-                            'description' => __( 'Selecting a parent will also match recipes with a child category or tag of that parent.', 'wp-ultimate-recipe' ),
-                            'default' => '1',
+                            'type' => 'notebox',
+                            'name' => 'recipe_grid_shortcode',
+                            'label' => __('Important', 'wp-ultimate-recipe'),
+                            'description' => __('The Multi-Select, Match All and Parents match Children setting has been moved to the shortcode and can now be changed per Recipe Grid.', 'wp-ultimate-recipe'),
+                            'status' => 'info',
+                            'dependency' => array(
+                                'field' => '',
+                                'function' => 'wpurp_admin_premium_installed',
+                            ),
                         ),
                     ),
                 ),

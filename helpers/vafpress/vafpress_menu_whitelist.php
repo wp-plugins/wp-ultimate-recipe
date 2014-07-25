@@ -58,9 +58,17 @@ function wpurp_admin_template_editor_recipe()
     $recipes = get_posts( $args );
     foreach ( $recipes as $recipe ) {
 
+        $meta = get_post_custom( $recipe->ID );
+
+        if ( isset( $meta['recipe_title'] ) && !is_null( $meta['recipe_title'][0] ) && $meta['recipe_title'][0] != '' ) {
+            $title = $meta['recipe_title'][0];
+        } else {
+            $title = $recipe->post_title;
+        }
+
         $recipe_list[] = array(
             'value' => $recipe->ID,
-            'label' => get_recipe_title($recipe),
+            'label' => $title,
         );
 
     }
@@ -76,18 +84,11 @@ function wpurp_menu_sort_by_label( $a, $b )
 
 function wpurp_admin_template_editor()
 {
-    $button = '<a href="#" class="button button-primary button-disabled" disabled>' . __('Open the Template Editor', 'wp-ultimate-recipe') . '</a>';
-
-    return $button;
-}
-
-function wpurp_admin_template_editor_premium()
-{
-    if( WPUltimateRecipe::is_premium_active() ) {
-      $url = WPUltimateRecipe::addon( 'template-editor' )->editor_url();
-      $button = '<a href="' . $url . '" class="button button-primary" target="_blank">' . __('Open the Template Editor', 'wp-ultimate-recipe') . '</a>';
+    if( WPUltimateRecipe::is_addon_active( 'template-editor' ) ) {
+        $url = WPUltimateRecipe::addon( 'template-editor' )->editor_url();
+        $button = '<a href="' . $url . '" class="button button-primary" target="_blank">' . __('Open the Template Editor', 'wp-ultimate-recipe') . '</a>';
     } else {
-      $button = '<a href="#" class="button button-primary button-disabled" disabled>' . __('Open the Template Editor', 'wp-ultimate-recipe') . '</a>';
+        $button = '<a href="#" class="button button-primary button-disabled" disabled>' . __('Open the Template Editor', 'wp-ultimate-recipe') . '</a>';
     }
 
     return $button;
@@ -235,7 +236,6 @@ VP_Security::instance()->whitelist_function('wpurp_admin_recipe_template_style')
 VP_Security::instance()->whitelist_function('wpurp_admin_manage_tags');
 VP_Security::instance()->whitelist_function('wpurp_admin_template_editor_recipe');
 VP_Security::instance()->whitelist_function('wpurp_admin_template_editor');
-VP_Security::instance()->whitelist_function('wpurp_admin_template_editor_premium');
 VP_Security::instance()->whitelist_function('wpurp_admin_templates');
 VP_Security::instance()->whitelist_function('wpurp_admin_import_recipress');
 VP_Security::instance()->whitelist_function('wpurp_admin_system_3');

@@ -90,6 +90,9 @@ Yes! We pride ourselves on offering awesome support and almost always answer sup
 
 == Changelog ==
 
+= 2.0.5 =
+* CSS table fix
+
 = 2.0.4 =
 * Fixed settings page bug
 
@@ -261,6 +264,9 @@ Yes! We pride ourselves on offering awesome support and almost always answer sup
 * Very first version of this plugin
 
 == Upgrade notice ==
+
+= 2.0.5 =
+Update not necessary if your recipes look fine
 
 = 2.0.4 =
 Update to fix the recipe settings page

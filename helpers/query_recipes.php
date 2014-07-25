@@ -4,11 +4,14 @@ class WPURP_Query_Recipes {
 
     private $author;
     private $limit;
+    private $offset;
     private $order_by;
     private $order;
     private $post_status;
     private $taxonomy;
     private $term;
+    private $ids;
+    private $ids_only;
 
     public function __construct()
     {
@@ -19,11 +22,14 @@ class WPURP_Query_Recipes {
     {
         $this->author = '';
         $this->limit = -1;
+        $this->offset = 0;
         $this->order_by = 'date';
         $this->order = 'DESC';
         $this->post_status = 'publish';
         $this->taxonomy = '';
         $this->term = '';
+        $this->ids = false;
+        $this->ids_only = false;
     }
 
     public function get()
@@ -34,6 +40,7 @@ class WPURP_Query_Recipes {
             'orderby' => $this->order_by,
             'order' => $this->order,
             'posts_per_page' => $this->limit,
+            'offset' => $this->offset,
         );
 
         if( $this->limit == -1 ) {
@@ -60,12 +67,26 @@ class WPURP_Query_Recipes {
             }
         }
 
+        if( $this->ids ) {
+            $args['post__in'] = $this->ids;
+        }
+
+        if( $this->ids_only ) {
+            $args['fields'] = 'ids';
+        }
 
         $query = new WP_Query( $args );
         $recipes = array();
 
         if( $query->have_posts() ) {
             $posts = $query->posts;
+
+            if( $this->ids_only ) {
+                // Reset to defaults for next query
+                $this->defaults();
+
+                return $posts;
+            }
 
             foreach( $posts as $post ) {
                 $recipes[] = new WPURP_Recipe( $post );
@@ -118,6 +139,12 @@ class WPURP_Query_Recipes {
         return $this;
     }
 
+    public function offset( $offset )
+    {
+        $this->offset = $offset;
+        return $this;
+    }
+
     public function order_by( $order_by )
     {
         $this->order_by = $order_by;
@@ -145,6 +172,18 @@ class WPURP_Query_Recipes {
     public function term( $term )
     {
         $this->term = $term;
+        return $this;
+    }
+
+    public function ids( $ids )
+    {
+        $this->ids = $ids;
+        return $this;
+    }
+
+    public function ids_only()
+    {
+        $this->ids_only = true;
         return $this;
     }
 

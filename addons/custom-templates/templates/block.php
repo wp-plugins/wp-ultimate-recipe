@@ -210,16 +210,29 @@ class WPURP_Template_Block {
         $style = '';
         $class = '';
 
-        if( in_array( 'default', $names ) ) {
-            $class = ' class="wpurp-'.$this->type.'"';
-        }
-
         foreach( $names as $name )
         {
             if( isset( $this->style[$name] ) ) {
                 $style .= $this->get_style_string( $name );
             }
         }
+
+        if( in_array( 'default', $names ) ) {
+            // Custom inline CSS
+            if( $this->present( $this->settings, 'customStyle' ) ) {
+                $style .= esc_attr( preg_replace( "/\r|\n/", '', $this->settings->customStyle ) );
+            }
+
+            // Class name
+            $custom_class = '';
+
+            if( $this->present( $this->settings, 'customClass' ) ) {
+                $custom_class = ' ' . esc_attr( $this->settings->customClass );
+            }
+
+            $class = ' class="wpurp-' . $this->type . $custom_class . '"';
+        }
+
 
         if( $style == '' ) {
             return $class;

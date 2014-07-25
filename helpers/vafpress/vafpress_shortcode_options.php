@@ -252,24 +252,6 @@ $shortcode_generator = array(
                         'label' => __('Name', 'wp-ultimate-recipe'),
                     ),
                     array(
-                        'type' => 'select',
-                        'name' => 'display',
-                        'label' => __('Display', 'wp-ultimate-recipe'),
-                        'items' => array(
-                            array(
-                                'value' => 'text',
-                                'label' => __('Recipe Title Only', 'wp-ultimate-recipe'),
-                            ),
-                            array(
-                                'value' => 'card',
-                                'label' => __('Recipe Card with photo', 'wp-ultimate-recipe'),
-                            ),
-                        ),
-                        'default' => array(
-                            'card',
-                        ),
-                    ),
-                    array(
                         'type' => 'checkbox',
                         'name' => 'images_only',
                         'label' => __('Exclude recipes without a photo', 'wp-ultimate-recipe'),
@@ -302,6 +284,60 @@ $shortcode_generator = array(
                         ),
                         'default' => array(
                             '{{all}}',
+                        ),
+                    ),
+                    array(
+                        'type' => 'select',
+                        'name' => 'multiselect',
+                        'label' => __('Multi-Select', 'wp-ultimate-recipe'),
+                        'items' => array(
+                            array(
+                                'value' => 'true',
+                                'label' => __( 'Allow visitors to select multiple values for a tag or category.', 'wp-ultimate-recipe' ),
+                            ),
+                            array(
+                                'value' => 'false',
+                                'label' => __( 'Disabled', 'wp-ultimate-recipe' ),
+                            ),
+                        ),
+                        'default' => array(
+                            'true',
+                        ),
+                    ),
+                    array(
+                        'type' => 'select',
+                        'name' => 'match_all',
+                        'label' => __('Match All', 'wp-ultimate-recipe'),
+                        'items' => array(
+                            array(
+                                'value' => 'true',
+                                'label' => __( 'Recipes will only match if they match all selections.', 'wp-ultimate-recipe' ),
+                            ),
+                            array(
+                                'value' => 'false',
+                                'label' => __( 'Disabled', 'wp-ultimate-recipe' ),
+                            ),
+                        ),
+                        'default' => array(
+                            'true',
+                        ),
+                    ),
+                    array(
+                        'type' => 'select',
+                        'name' => 'match_parents',
+                        'label' => __('Parents match Children', 'wp-ultimate-recipe'),
+                        'items' => array(
+                            array(
+                                'value' => 'true',
+                                'label' => __( 'Selecting a parent will also match recipes with a child category or tag of that parent.', 'wp-ultimate-recipe' ),
+                            ),
+                            array(
+                                'value' => 'false',
+                                'label' => __( 'Disabled', 'wp-ultimate-recipe' ),
+                            ),
+                        ),
+                        'default' => array(
+                            'true',
                         ),
                     ),
                     array(
@@ -377,6 +413,12 @@ $shortcode_generator = array(
                         'default' => array(
                             'DESC',
                         ),
+                    ),
+                    array(
+                        'type' => 'textbox',
+                        'name' => 'limit',
+                        'label' => __('Limit recipes at start', 'wp-ultimate-recipe'),
+                        'default' => '30',
                     ),
                 ),
             ),
