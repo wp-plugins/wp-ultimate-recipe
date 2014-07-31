@@ -14,7 +14,13 @@ class WPURP_Taxonomies {
      */
     public function get()
     {
-        return get_option( 'wpurp_taxonomies', array() );
+        $taxonomies = get_option( 'wpurp_taxonomies', array() );
+
+        if( !is_array( $taxonomies ) ) {
+            $taxonomies = array();
+        }
+
+        return $taxonomies;
     }
 
     /**
@@ -42,7 +48,7 @@ class WPURP_Taxonomies {
     {
         $taxonomies = $this->get();
 
-        if(count($taxonomies) == 0)
+        if( count($taxonomies) == 0 )
         {
             $taxonomies = $this->add_taxonomy_to_array($taxonomies, 'ingredient',   __( 'Ingredients', 'wp-ultimate-recipe' ),  __( 'Ingredient', 'wp-ultimate-recipe' ));
             $taxonomies = $this->add_taxonomy_to_array($taxonomies, 'course',       __( 'Courses', 'wp-ultimate-recipe' ),      __( 'Course', 'wp-ultimate-recipe' ));
