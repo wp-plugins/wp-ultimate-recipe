@@ -77,6 +77,9 @@ class WPURP_Taxonomies {
      */
     private function add_taxonomy_to_array($arr, $tag, $name, $singular)
     {
+        $name = sanitize_text_field( $name );
+        $singular = sanitize_text_field( $singular );
+
         $name_lower = strtolower($name);
         $singular_lower = strtolower($singular);
 

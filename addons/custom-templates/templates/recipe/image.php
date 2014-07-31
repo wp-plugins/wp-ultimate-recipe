@@ -29,7 +29,7 @@ class WPURP_Template_Recipe_Image extends WPURP_Template_Block {
         $image_url = $thumb[0];
 
         // Don't distort the image
-        if( is_array( $this->thumbnail ) ) {
+        if( is_array( $this->thumbnail ) && $thumb[1] && $thumb[2] ) {
             $new_height = $this->thumbnail[0] * ( $thumb[2] / $thumb[1] );
 
             $this->add_style( 'height', $new_height.'px');
