@@ -63,7 +63,9 @@ class WPURP_Query_Posts {
                 }
             }
 
-            $query->set( 'post_type',$post_type );
+            $post_type = apply_filters( 'wpurp_query_posts', $post_type, $query );
+
+            $query->set( 'post_type', $post_type );
 
             return;
         }
@@ -82,6 +84,8 @@ class WPURP_Query_Posts {
                     } else {
                         $post_type = array( 'post', 'recipe' );
                     }
+
+                    $post_type = apply_filters( 'wpurp_query_posts', $post_type, $query );
 
                     $query->set( 'post_type', $post_type );
                     return;

@@ -67,7 +67,7 @@ class WPURP_Template_Recipe_Instructions extends WPURP_Template_Block {
 
             if( isset( $instruction['group'] ) && $instruction['group'] != $previous_group ) {
                 $out .= '</ol>';
-                $out .= '<div' . $this->style('group') . '>' . $instruction['group'] . '</div>';
+                $out .= '<div class="recipe-instruction-group"' . $this->style('group') . '>' . $instruction['group'] . '</div>';
                 $out .= '<ol' . $this->style() . '>';
                 $previous_group = $instruction['group'];
             }

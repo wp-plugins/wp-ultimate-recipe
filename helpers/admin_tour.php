@@ -10,6 +10,8 @@ class WPURP_Admin_Tour {
         add_filter( 'wpurp_admin_tour-edit-recipe', array( $this, 'pointer_recipes' ) );
         add_filter( 'wpurp_admin_tour-recipe', array( $this, 'pointer_recipe' ) );
         add_filter( 'wpurp_admin_tour-recipe_page_wpurp_admin', array( $this, 'pointer_settings' ) );
+        add_filter( 'wpurp_admin_tour-post', array( $this, 'pointer_post_page' ) );
+        add_filter( 'wpurp_admin_tour-page', array( $this, 'pointer_post_page' ) );
     }
 
     /*
@@ -94,6 +96,28 @@ class WPURP_Admin_Tour {
                 'position' => array(
                     'edge' => 'top',
                     'align' => 'middle'
+                )
+            ),
+        );
+
+        return $pointers;
+    }
+
+    /*
+     * Pointers to be shown on the add post or add page pages
+     */
+    public function pointer_post_page( $pointers )
+    {
+        $pointers['wpurp_shortcode_editor'] = array(
+            'target' => '.wp-editor-wrap',
+            'options' => array(
+                'content' => sprintf( '<h3> %s </h3> <p> %s </p>',
+                    __( 'Easily add shortcodes', 'wp-ultimate-recipe' ),
+                    __( "Click on the <strong>chef's hat</strong> in the visual editor toolbar to easily <strong>add recipes and functionality</strong> to any post or page.", 'wp-ultimate-recipe' )
+                ),
+                'position' => array(
+                    'edge' => 'bottom',
+                    'align' => 'right'
                 )
             ),
         );

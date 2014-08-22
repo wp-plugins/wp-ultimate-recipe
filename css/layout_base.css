@@ -34,9 +34,40 @@ html body .wpurp-container {
     font-size: inherit;
     line-height: 1.4;
     font-weight: normal; }
-  html body .wpurp-container .wpurp-recipe-notes ul,
-  html body .wpurp-container .wpurp-recipe-notes ol {
-    padding-left: 23px; }
+  html body .wpurp-container .wpurp-recipe-notes h1 {
+    font-size: 2em;
+    margin: 0.67em 0; }
+  html body .wpurp-container .wpurp-recipe-notes h2 {
+    font-size: 1.5em;
+    margin: 0.83em 0; }
+  html body .wpurp-container .wpurp-recipe-notes h3 {
+    font-size: 1.17em;
+    margin: 1em 0; }
+  html body .wpurp-container .wpurp-recipe-notes h4 {
+    font-size: 1em;
+    margin: 1.33em 0; }
+  html body .wpurp-container .wpurp-recipe-notes h5 {
+    font-size: 0.83em;
+    margin: 1.67em 0; }
+  html body .wpurp-container .wpurp-recipe-notes h6 {
+    font-size: 0.75em;
+    margin: 2.33em 0; }
+  html body .wpurp-container .wpurp-recipe-notes p, html body .wpurp-container .wpurp-recipe-notes pre {
+    margin: 1em 0; }
+  html body .wpurp-container .wpurp-recipe-notes code, html body .wpurp-container .wpurp-recipe-notes kbd, html body .wpurp-container .wpurp-recipe-notes pre, html body .wpurp-container .wpurp-recipe-notes samp {
+    font-family: monospace, serif;
+    _font-family: 'courier new', monospace;
+    font-size: 1em; }
+  html body .wpurp-container .wpurp-recipe-notes blockquote {
+    margin: 1em 40px; }
+  html body .wpurp-container .wpurp-recipe-notes b, html body .wpurp-container .wpurp-recipe-notes strong {
+    font-weight: bold; }
+  html body .wpurp-container .wpurp-recipe-notes dl, html body .wpurp-container .wpurp-recipe-notes menu, html body .wpurp-container .wpurp-recipe-notes ol, html body .wpurp-container .wpurp-recipe-notes ul {
+    margin: 1em 0; }
+  html body .wpurp-container .wpurp-recipe-notes dd {
+    margin: 0 0 0 40px; }
+  html body .wpurp-container .wpurp-recipe-notes menu, html body .wpurp-container .wpurp-recipe-notes ol, html body .wpurp-container .wpurp-recipe-notes ul {
+    padding: 0 0 0 40px; }
   html body .wpurp-container table {
     border-collapse: collapse;
     width: 100%; }
@@ -47,7 +78,8 @@ html body .wpurp-container {
   html body .wpurp-container .wpurp-responsive-mobile {
     display: none; }
   html body .wpurp-container .wpurp-recipe-sharing iframe {
-    margin: 0 !important; }
+    margin: 0 !important;
+    max-width: none !important; }
   html body .wpurp-container .wpurp-recipe-sharing .pinterest-pinit {
     margin-top: 32px; }
     html body .wpurp-container .wpurp-recipe-sharing .pinterest-pinit a {

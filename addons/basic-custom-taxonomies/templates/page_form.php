@@ -13,7 +13,7 @@
                 <th scope="row"><?php _e( 'Name', 'wp-ultimate-recipe' ); ?></th>
                 <td>
                     <input type="text" id="wpurp_custom_taxonomy_name" name="wpurp_custom_taxonomy_name" />
-                    <label for="wpurp_custom_taxonomy_name"><?php __('(e.g. Courses)', 'wp-ultimate-recipe' ); ?></label>
+                    <label for="wpurp_custom_taxonomy_name"><?php _e('(e.g. Courses)', 'wp-ultimate-recipe' ); ?></label>
                 </td>
             </tr>
             <tr valign="top">

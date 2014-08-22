@@ -6,8 +6,10 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script>
         var wpurp = window.opener.wpurp_print;
+
         document.title = wpurp.title;
 
+        // Include CSS files
         document.write('<link rel="stylesheet" type="text/css" href="' + wpurp.coreUrl + '/css/layout_base.css">');
         if(wpurp.addonUrl) {
             document.write('<link rel="stylesheet" type="text/css" href="' + wpurp.addonUrl + '/css/user-ratings.css">');
@@ -15,6 +17,12 @@
         document.write('<style>' + wpurp.custom_print_css + '</style>');
 
         jQuery(document).ready(function() {
+
+            // Set RTL if opener was in RTL
+            if(wpurp.rtl) {
+                jQuery('html').attr('dir', 'rtl')
+                    .find('body').addClass('rtl');
+            }
 
             var wpurp_printed = false;
 

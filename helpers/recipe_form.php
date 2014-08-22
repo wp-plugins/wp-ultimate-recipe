@@ -15,7 +15,7 @@ if( is_null( $recipe ) ) $recipe = new WPURP_Recipe(0);
     <tr>
         <td class="recipe-general-form-label"><label for="recipe_title"><?php _e( 'Title', 'wp-ultimate-recipe' ); ?></label></td>
         <td class="recipe-general-form-field">
-            <input type="text" name="recipe_title" id="recipe_title" value="<?php echo $recipe->title(); ?>" />
+            <input type="text" name="recipe_title" id="recipe_title" value="<?php echo esc_attr( $recipe->title() ); ?>" />
             <span class="recipe-general-form-notes"> <?php _e( '(leave blank to use post title)', 'wp-ultimate-recipe' ) ?></span>
         </td>
     </tr>
@@ -43,31 +43,31 @@ if( is_null( $recipe ) ) $recipe = new WPURP_Recipe(0);
     <tr>
         <td class="recipe-general-form-label"><label for="recipe_servings"><?php _e( 'Servings', 'wp-ultimate-recipe' ); ?></label></td>
         <td class="recipe-general-form-field">
-            <input type="number" name="recipe_servings" id="recipe_servings" value="<?php echo $recipe->servings(); ?>" />
-            <input type="text" name="recipe_servings_type" id="recipe_servings_type" value="<?php echo $recipe->servings_type(); ?>" />
+            <input type="number" name="recipe_servings" id="recipe_servings" value="<?php echo esc_attr( $recipe->servings() ); ?>" />
+            <input type="text" name="recipe_servings_type" id="recipe_servings_type" value="<?php echo esc_attr( $recipe->servings_type() ); ?>" />
             <span class="recipe-general-form-notes"> <?php _e( '(e.g. 2 people, 3 loafs, ...)', 'wp-ultimate-recipe' ); ?></span>
         </td>
     </tr>
     <tr>
         <td class="recipe-general-form-label"><label for="recipe_prep_time"><?php _e( 'Prep Time', 'wp-ultimate-recipe' ); ?></label></td>
         <td class="recipe-general-form-field">
-            <input type="text" name="recipe_prep_time" id="recipe_prep_time" value="<?php echo $recipe->prep_time(); ?>" />
-            <input type="text" name="recipe_prep_time_text" id="recipe_prep_time_text" value="<?php echo $recipe->prep_time_text(); ?>" />
+            <input type="text" name="recipe_prep_time" id="recipe_prep_time" value="<?php echo esc_attr( $recipe->prep_time() ); ?>" />
+            <input type="text" name="recipe_prep_time_text" id="recipe_prep_time_text" value="<?php echo esc_attr( $recipe->prep_time_text() ); ?>" />
             <span class="recipe-general-form-notes"> <?php _e( '(e.g. 20 minutes, 1-2 hours, ...)', 'wp-ultimate-recipe' ); ?></span>
         </td>
     </tr>
     <tr>
         <td class="recipe-general-form-label"><label for="recipe_cook_time"><?php _e( 'Cook Time', 'wp-ultimate-recipe' ); ?></label></td>
         <td class="recipe-general-form-field">
-            <input type="text" name="recipe_cook_time" id="recipe_cook_time" value="<?php echo $recipe->cook_time(); ?>" />
-            <input type="text" name="recipe_cook_time_text" id="recipe_cook_time_text" value="<?php echo $recipe->cook_time_text(); ?>" />
+            <input type="text" name="recipe_cook_time" id="recipe_cook_time" value="<?php echo esc_attr( $recipe->cook_time() ); ?>" />
+            <input type="text" name="recipe_cook_time_text" id="recipe_cook_time_text" value="<?php echo esc_attr( $recipe->cook_time_text() ); ?>" />
         </td>
     </tr>
     <tr>
         <td class="recipe-general-form-label"><label for="recipe_passive_time"><?php _e( 'Passive Time', 'wp-ultimate-recipe' ); ?></label></td>
         <td class="recipe-general-form-field">
-            <input type="text" name="recipe_passive_time" id="recipe_passive_time" value="<?php echo $recipe->passive_time(); ?>" />
-            <input type="text" name="recipe_passive_time_text" id="recipe_passive_time_text" value="<?php echo $recipe->passive_time_text(); ?>" />
+            <input type="text" name="recipe_passive_time" id="recipe_passive_time" value="<?php echo esc_attr( $recipe->passive_time() ); ?>" />
+            <input type="text" name="recipe_passive_time_text" id="recipe_passive_time_text" value="<?php echo esc_attr( $recipe->passive_time_text() ); ?>" />
         </td>
     </tr>
 <?php if( !isset( $wpurp_user_submission ) ) { ?>
@@ -95,7 +95,7 @@ if( is_null( $recipe ) ) $recipe = new WPURP_Recipe(0);
                 $previous_group = $ingredients[0]['group'];
             }
             ?>
-            <span class="ingredient-groups-enabled"><input type="text" class="ingredient-group-label" value="<?php echo $previous_group; ?>" /></span>
+            <span class="ingredient-groups-enabled"><input type="text" class="ingredient-group-label" value="<?php echo esc_attr( $previous_group ); ?>" /></span>
         </td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
@@ -137,7 +137,7 @@ if( $ingredients )
             <tr class="ingredient-group">
                 <td>&nbsp;</td>
                 <td><strong><?php _e( 'Group', 'wp-ultimate-recipe' ); ?>:</strong></td>
-                <td colspan="2"><input type="text" class="ingredient-group-label" value="<?php echo $ingredient['group']; ?>" /></td>
+                <td colspan="2"><input type="text" class="ingredient-group-label" value="<?php echo esc_attr( $ingredient['group'] ); ?>" /></td>
                 <td>&nbsp;</td>
                 <td class="center-column"><span class="ingredient-group-delete"><img src="<?php echo WPUltimateRecipe::get()->coreUrl; ?>/img/minus.png" width="16" height="16"></span></td>
             </tr>
@@ -147,12 +147,12 @@ if( $ingredients )
 ?>
     <tr class="ingredient">
         <td class="sort-handle"><img src="<?php echo WPUltimateRecipe::get()->coreUrl; ?>/img/arrows.png" width="18" height="16"></td>
-        <td><input type="text"   name="recipe_ingredients[<?php echo $i; ?>][amount]"     class="ingredients_amount" id="ingredients_amount_<?php echo $i; ?>" value="<?php echo $ingredient['amount']; ?>" /></td>
-        <td><input type="text"   name="recipe_ingredients[<?php echo $i; ?>][unit]"       class="ingredients_unit" id="ingredients_unit_<?php echo $i; ?>" value="<?php echo $ingredient['unit']; ?>" /></td>
-        <td><input type="text"   name="recipe_ingredients[<?php echo $i; ?>][ingredient]" class="ingredients_name" id="ingredients_<?php echo $i; ?>" onfocus="autoSuggestTag('ingredients_<?php echo $i; ?>', 'ingredient');"  value="<?php echo $ingredient['ingredient']; ?>" /></td>
+        <td><input type="text"   name="recipe_ingredients[<?php echo $i; ?>][amount]"     class="ingredients_amount" id="ingredients_amount_<?php echo $i; ?>" value="<?php echo esc_attr( $ingredient['amount'] ); ?>" /></td>
+        <td><input type="text"   name="recipe_ingredients[<?php echo $i; ?>][unit]"       class="ingredients_unit" id="ingredients_unit_<?php echo $i; ?>" value="<?php echo esc_attr( $ingredient['unit'] ); ?>" /></td>
+        <td><input type="text"   name="recipe_ingredients[<?php echo $i; ?>][ingredient]" class="ingredients_name" id="ingredients_<?php echo $i; ?>" onfocus="autoSuggestTag('ingredients_<?php echo $i; ?>', 'ingredient');"  value="<?php echo esc_attr( $ingredient['ingredient'] ); ?>" /></td>
         <td>
-            <input type="text"   name="recipe_ingredients[<?php echo $i; ?>][notes]"      class="ingredients_notes" id="ingredient_notes_<?php echo $i; ?>" value="<?php echo $ingredient['notes']; ?>" />
-            <input type="hidden" name="recipe_ingredients[<?php echo $i; ?>][group]"      class="ingredients_group" id="ingredient_group_<?php echo $i; ?>" value="<?php echo $ingredient['group']; ?>" />
+            <input type="text"   name="recipe_ingredients[<?php echo $i; ?>][notes]"      class="ingredients_notes" id="ingredient_notes_<?php echo $i; ?>" value="<?php echo esc_attr( $ingredient['notes'] ); ?>" />
+            <input type="hidden" name="recipe_ingredients[<?php echo $i; ?>][group]"      class="ingredients_group" id="ingredient_group_<?php echo $i; ?>" value="<?php echo esc_attr( $ingredient['group'] ); ?>" />
         </td>
         <td><span class="ingredients-delete"><img src="<?php echo WPUltimateRecipe::get()->coreUrl; ?>/img/minus.png" width="16" height="16"></span></td>
     </tr>
@@ -181,7 +181,7 @@ if( $ingredients )
                 foreach( $ingredient_terms as $term )
                 {
                 ?>
-                    <option value="<?php echo $term->name; ?>"><?php echo $term->name; ?></option>
+                    <option value="<?php echo esc_attr( $term->name ); ?>"><?php echo $term->name; ?></option>
                 <?php } ?>
             </select>
         <?php } else { ?>
@@ -221,7 +221,7 @@ if( $ingredients )
                 $previous_group = $instructions[0]['group'];
             }
             ?>
-            <span class="instruction-groups-enabled"><input type="text" class="instruction-group-label" value="<?php echo $previous_group; ?>"/></span>
+            <span class="instruction-groups-enabled"><input type="text" class="instruction-group-label" value="<?php echo esc_attr( $previous_group ); ?>"/></span>
         </td>
         <td>&nbsp;</td>
     </tr>
@@ -251,7 +251,7 @@ if( $instructions )
                 <td>&nbsp;</td>
                 <td colspan="2">
                     <strong><?php _e( 'Group', 'wp-ultimate-recipe' ); ?>:</strong>
-                    <input type="text" class="instruction-group-label" value="<?php echo $instruction['group']; ?>"/>
+                    <input type="text" class="instruction-group-label" value="<?php echo esc_attr( $instruction['group'] ); ?>"/>
                 </td>
                 <td class="center-column"><span class="instruction-group-delete"><img src="<?php echo WPUltimateRecipe::get()->coreUrl; ?>/img/minus.png" width="16" height="16"></span></td>
             </tr>
@@ -279,7 +279,7 @@ if( $instructions )
             <td class="sort-handle"><img src="<?php echo WPUltimateRecipe::get()->coreUrl; ?>/img/arrows.png" width="18" height="16"></td>
             <td>
                 <textarea name="recipe_instructions[<?php echo $i; ?>][description]" rows="4" id="ingredient_description_<?php echo $i; ?>"><?php echo $instruction['description']; ?></textarea>
-                <input type="hidden" name="recipe_instructions[<?php echo $i; ?>][group]"    class="instructions_group" id="instruction_group_<?php echo $i; ?>" value="<?php echo $instruction['group']; ?>" />
+                <input type="hidden" name="recipe_instructions[<?php echo $i; ?>][group]"    class="instructions_group" id="instruction_group_<?php echo $i; ?>" value="<?php echo esc_attr( $instruction['group'] ); ?>" />
             </td>
             <td>
                 <input name="recipe_instructions[<?php echo $i; ?>][image]" class="recipe_instructions_image" type="hidden" value="<?php echo $instruction['image']; ?>" />

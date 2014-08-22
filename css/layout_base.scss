@@ -48,9 +48,67 @@ html body .wpurp-container {
         font-weight: normal;
     }
 
-    .wpurp-recipe-notes ul,
-    .wpurp-recipe-notes ol {
-        padding-left: 23px;
+    // Reset CSS as best as possible (based on normalize.css)
+    .wpurp-recipe-notes {
+        h1 {
+            font-size: 2em;
+            margin: 0.67em 0;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            margin: 0.83em 0;
+        }
+
+        h3 {
+            font-size: 1.17em;
+            margin: 1em 0;
+        }
+
+        h4 {
+            font-size: 1em;
+            margin: 1.33em 0;
+        }
+
+        h5 {
+            font-size: 0.83em;
+            margin: 1.67em 0;
+        }
+
+        h6 {
+            font-size: 0.75em;
+            margin: 2.33em 0;
+        }
+
+        p, pre {
+            margin: 1em 0;
+        }
+
+        code, kbd, pre, samp {
+            font-family: monospace, serif;
+            _font-family: 'courier new', monospace;
+            font-size: 1em;
+        }
+
+        blockquote {
+            margin: 1em 40px;
+        }
+
+        b, strong {
+            font-weight: bold;
+        }
+
+        dl, menu, ol, ul {
+            margin: 1em 0;
+        }
+
+        dd {
+            margin: 0 0 0 40px;
+        }
+
+        menu, ol, ul {
+            padding: 0 0 0 40px;
+        }
     }
 
     table {
@@ -73,6 +131,7 @@ html body .wpurp-container {
     .wpurp-recipe-sharing {
         iframe {
             margin: 0 !important;
+            max-width: none !important;
         }
 
         .pinterest-pinit {

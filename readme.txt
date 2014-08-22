@@ -90,6 +90,16 @@ Yes! We pride ourselves on offering awesome support and almost always answer sup
 
 == Changelog ==
 
+= 2.0.6 =
+* Translation updates
+* Fix for recipe thumbnail resizing in some themes
+* Fixed metadata
+* Sharing buttons overflow fix
+* Updated VafPress to latest version
+* Improved Recipe Notes styling
+* RTL support on recipe print page
+* New hook: wpurp_query_posts
+
 = 2.0.5 =
 * CSS table fix
 
@@ -264,6 +274,9 @@ Yes! We pride ourselves on offering awesome support and almost always answer sup
 * Very first version of this plugin
 
 == Upgrade notice ==
+
+= 2.0.7 =
+Update to get the latest and greatest recipe & food plugin
 
 = 2.0.5 =
 Update not necessary if your recipes look fine
