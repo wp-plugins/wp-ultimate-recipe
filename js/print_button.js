@@ -5,10 +5,9 @@ jQuery(document).ready(function() {
 
         var recipeId = jQuery(this).data('recipe-id');
         var recipe = jQuery(this).parents('.wpurp-container');
-        var ingredientList = recipe.find('ul.wpurp-recipe-ingredients');
 
-        wpurp_print.servings_original = parseInt(ingredientList.data('servings'));
-        wpurp_print.old_system = parseInt(ingredientList.data('system'))
+        wpurp_print.servings_original = parseInt(recipe.data('servings-original'));
+        wpurp_print.old_system = parseInt(recipe.data('system'))
         wpurp_print.new_system = recipe.find('select.adjust-recipe-unit option:selected').val();
 
         // Check if the page was in RTL

@@ -145,6 +145,24 @@ $admin_menu = array(
                                     ),
                                     'validation' => 'required',
                                 ),
+                                array(
+                                    'type' => 'select',
+                                    'name' => 'recipe_template_feed_template',
+                                    'label' => __('RSS Feed Template', 'wp-ultimate-recipe'),
+                                    'description' => __( 'The default template to use for RSS feeds.', 'wp-ultimate-recipe' ),
+                                    'items' => array(
+                                        'data' => array(
+                                            array(
+                                                'source' => 'function',
+                                                'value' => 'wpurp_admin_templates',
+                                            ),
+                                        ),
+                                    ),
+                                    'default' => array(
+                                        '3',
+                                    ),
+                                    'validation' => 'required',
+                                ),
                             ),
                         ),
                     ),
@@ -459,6 +477,42 @@ $admin_menu = array(
                             'label' => __('Pinterest', 'wp-ultimate-recipe'),
                             'default' => '%title% - Powered by @ultimaterecipe',
                             'validation' => 'required',
+                        ),
+                    ),
+                ),
+            ),
+        ),
+//=-=-=-=-=-=-= RECIPE FIELDS =-=-=-=-=-=-=
+        array(
+            'title' => __('Recipe Fields', 'wp-ultimate-recipe'),
+            'name' => 'recipe_fields',
+            'icon' => 'font-awesome:fa-edit',
+            'controls' => array(
+                array(
+                    'type' => 'section',
+                    'title' => __('Custom Recipe Fields', 'wp-ultimate-recipe'),
+                    'name' => 'section_recipe_fields_custom',
+                    'fields' => array(
+                        array(
+                            'type' => 'html',
+                            'name' => 'recipe_fields_manage_custom',
+                            'binding' => array(
+                                'field'    => '',
+                                'function' => 'wpurp_admin_manage_fields',
+                            ),
+                        ),
+                    ),
+                ),
+                array(
+                    'type' => 'section',
+                    'title' => __('Advanced', 'wp-ultimate-recipe'),
+                    'name' => 'section_recipe_fields_advanced',
+                    'fields' => array(
+                        array(
+                            'type' => 'toggle',
+                            'name' => 'recipe_fields_in_user_submission',
+                            'label' => __('Show Custom Fields in User Submission form', 'wp-ultimate-recipe'),
+                            'default' => '1',
                         ),
                     ),
                 ),

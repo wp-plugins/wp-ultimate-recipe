@@ -238,7 +238,7 @@ class WPURP_Assets {
      * Check if any of the shortcodes is used in post
      */
     public function check_for_shortcode( $shortcodes ) {
-        if( !is_single() ) return true; // TODO Needs better solution
+        if( !is_single() ) return apply_filters( 'wpurp_check_for_shortcode', true, $shortcodes ); // TODO Needs better solution
 
         global $post;
 
@@ -254,17 +254,17 @@ class WPURP_Assets {
                     }
                 }
 
-                return $shortcode_used;
+                return apply_filters( 'wpurp_check_for_shortcode', $shortcode_used, $shortcodes );
             }
 
             // Only one shortcode passed, true if that one is in the post
             if( isset( $post->post_content ) && has_shortcode( $post->post_content, $shortcodes ) ) {
-                return true;
+                return apply_filters( 'wpurp_check_for_shortcode', true, $shortcodes );
             }
 
-            return false;
+            return apply_filters( 'wpurp_check_for_shortcode', false, $shortcodes );
         }
 
-        return true; // In older versions of WP just enqueue everything
+        return apply_filters( 'wpurp_check_for_shortcode', true, $shortcodes ); // In older versions of WP just enqueue everything
     }
 }

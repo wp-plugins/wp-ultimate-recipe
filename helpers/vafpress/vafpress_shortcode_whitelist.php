@@ -117,9 +117,11 @@ function wpurp_shortcode_generator_authors()
 
             $user = get_userdata($user_id);
 
+            $name = $user ? $user->display_name : 'Onbekend';
+
             $authors_list[] = array(
                 'value' => $user_id,
-                'label' => $user->display_name,
+                'label' => $name,
             );
         }
     }

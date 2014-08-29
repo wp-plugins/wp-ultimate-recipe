@@ -21,9 +21,9 @@ class WPURP_Recipe {
         'recipe_notes',
     );
 
-    // TODO parse ingredients as ingredient objects? Likewise for instructions.
     public function __construct( $post )
     {
+        // Get associated post
         if( is_object( $post ) && $post instanceof WP_Post ) {
             $this->post = $post;
         } else if( is_numeric( $post ) ) {
@@ -32,6 +32,21 @@ class WPURP_Recipe {
             throw new InvalidArgumentException( 'Recipes can only be instantiated with a Post object or Post ID.' );
         }
 
+        // Add custom fields to recipe fields if there are any
+        $custom_fields_addon = WPUltimateRecipe::addon( 'custom-fields' );
+        if( $custom_fields_addon ) {
+            $fields = $this->fields;
+
+            $custom_fields = $custom_fields_addon->get_custom_fields();
+
+            foreach( $custom_fields as $key => $custom_field ) {
+                $fields[] = $key;
+            }
+
+            $this->fields = $fields;
+        }
+
+        // Get metadata
         $this->meta = get_post_custom( $this->post->ID );
     }
 
@@ -245,6 +260,12 @@ class WPURP_Recipe {
         } else {
             return $this->post->post_title;
         }
+    }
+
+    // Custom fields
+    public function custom_field( $field )
+    {
+        return $this->meta( $field );
     }
 
 }

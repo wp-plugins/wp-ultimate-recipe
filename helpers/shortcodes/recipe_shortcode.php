@@ -31,7 +31,10 @@ class WPURP_Recipe_Shortcode {
         if( !is_null( $recipe_post ) && $recipe_post->post_type == 'recipe' )
         {
             $recipe = new WPURP_Recipe( $recipe_post );
-            $output = apply_filters( 'wpurp_output_recipe', $recipe->output_string( 'recipe', $options['template'] ), $recipe ); //TODO Pick template for output
+
+            $type = is_feed() ? 'feed' : 'recipe';
+            $template = is_feed() ? null : $options['template'];
+            $output = apply_filters( 'wpurp_output_recipe', $recipe->output_string( $type, $template ), $recipe );
         }
         else
         {

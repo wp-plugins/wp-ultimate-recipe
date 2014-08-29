@@ -37,6 +37,11 @@ function wpurp_admin_recipe_template_style($style)
     return $style == 'custom' ? true : false;
 }
 
+function wpurp_admin_manage_fields()
+{
+    return '<a href="'.admin_url( 'edit.php?post_type=recipe&page=wpurp_custom_fields' ).'" class="button button-primary" target="_blank">'.__('Manage custom recipe fields', 'wp-ultimate-recipe').'</a>';
+}
+
 function wpurp_admin_manage_tags()
 {
     return '<a href="'.admin_url( 'edit.php?post_type=recipe&page=wpurp_taxonomies' ).'" class="button button-primary" target="_blank">'.__('Manage custom recipe tags', 'wp-ultimate-recipe').'</a>';
@@ -233,6 +238,7 @@ VP_Security::instance()->whitelist_function('wpurp_admin_user_menus_slug_preview
 VP_Security::instance()->whitelist_function('wpurp_admin_premium_not_installed');
 VP_Security::instance()->whitelist_function('wpurp_admin_premium_installed');
 VP_Security::instance()->whitelist_function('wpurp_admin_recipe_template_style');
+VP_Security::instance()->whitelist_function('wpurp_admin_manage_fields');
 VP_Security::instance()->whitelist_function('wpurp_admin_manage_tags');
 VP_Security::instance()->whitelist_function('wpurp_admin_template_editor_recipe');
 VP_Security::instance()->whitelist_function('wpurp_admin_template_editor');

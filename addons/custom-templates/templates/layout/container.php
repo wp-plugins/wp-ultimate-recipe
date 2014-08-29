@@ -23,7 +23,7 @@ class WPURP_Template_Container extends WPURP_Template_Block {
 
         ob_start();
 ?>
-<div itemscope itemtype="http://schema.org/Recipe"<?php echo $this->style(); ?>>
+<div itemscope itemtype="http://schema.org/Recipe" data-servings-original="<?php echo $recipe->servings_normalized(); ?>"<?php echo $this->style(); ?>>
     <meta itemprop="author" content="<?php echo esc_attr( $recipe->author() ); ?>">
     <meta itemprop="datePublished" content="<?php echo esc_attr( $recipe->date() ); ?>">
     <meta itemprop="name" content="<?php echo esc_attr( $recipe->title() ); ?>"

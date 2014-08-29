@@ -19,13 +19,13 @@ class WPURP_Recipe_Content {
 
             $recipe = new WPURP_Recipe( get_post() );
 
-            if ( is_single() || WPUltimateRecipe::option( 'recipe_archive_display', 'excerpt' ) == 'full' )
+            if ( is_single() || is_feed() || WPUltimateRecipe::option( 'recipe_archive_display', 'excerpt' ) == 'full' )
             {
                 $taxonomies = WPUltimateRecipe::get()->tags();
                 unset($taxonomies['ingredient']);
 
-                // TODO Work with templates
-                $recipe_box = apply_filters( 'wpurp_output_recipe', $recipe->output_string(), $recipe );
+                $type = is_feed() ? 'feed' : 'recipe';
+                $recipe_box = apply_filters( 'wpurp_output_recipe', $recipe->output_string( $type ), $recipe );
 
                 if( strpos( $content, '[recipe]' ) !== false ) {
                     $content = str_replace( '[recipe]', $recipe_box, $content );

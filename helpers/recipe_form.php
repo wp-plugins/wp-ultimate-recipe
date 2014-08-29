@@ -343,3 +343,24 @@ if( isset( $wpurp_user_submission ) ) {
 
 wp_editor( $recipe->notes(), 'recipe_notes',  $options );
 ?>
+<?php
+$custom_fields_addon = WPUltimateRecipe::addon( 'custom-fields' );
+if( $custom_fields_addon && ( !isset( $wpurp_user_submission ) || WPUltimateRecipe::option( 'recipe_fields_in_user_submission', '1' ) == '1' ) )
+{
+    $custom_fields = $custom_fields_addon->get_custom_fields();
+
+    if( count( $custom_fields ) > 0 ) {
+?>
+<h4><?php _e( 'Custom Fields', 'wp-ultimate-recipe' ) ?></h4>
+<table class="recipe-general-form">
+    <?php foreach( $custom_fields as $key => $custom_field ) { ?>
+    <tr>
+        <td class="recipe-general-form-label"><label for="<?php echo $key; ?>"><?php echo $custom_field['name']; ?></label></td>
+        <td class="recipe-general-form-field">
+            <textarea name="<?php echo $key; ?>" id="<?php echo $key; ?>" rows="1"><?php echo $recipe->custom_field( $key ); ?></textarea>
+        </td>
+    </tr>
+    <?php } ?>
+</table>
+<?php }
+} ?>

@@ -134,6 +134,14 @@ $shortcode_generator = array(
                                 'value' => 'author',
                                 'label' => __('Author', 'wp-ultimate-recipe'),
                             ),
+                            array(
+                                'value' => 'category',
+                                'label' => __('Category', 'wp-ultimate-recipe'),
+                            ),
+                            array(
+                                'value' => 'post_tag',
+                                'label' => __('Tag', 'wp-ultimate-recipe'),
+                            ),
                             'data' => array(
                                 array(
                                     'source' => 'function',

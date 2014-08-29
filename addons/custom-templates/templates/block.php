@@ -156,7 +156,7 @@ class WPURP_Template_Block {
          */
         if( isset( $block->conditions ) ) {
             foreach( $block->conditions as $condition ) {
-                if( $condition->condition_type == 'field' && $this->present( $condition, 'field' ) ) {
+                if( ( $condition->condition_type == 'field' || $condition->condition_type == 'custom_field' ) && $this->present( $condition, 'field' ) ) {
                     $this->add_condition( array( 'type' => 'hide', 'condition_type' => 'field', 'field' => $condition->field, 'when' => $condition->when ), $condition->target );
                 } else if( $condition->condition_type == 'setting' && $this->present( $condition, 'setting' ) ) {
                     $this->add_condition( array( 'type' => 'hide', 'condition_type' => 'setting', 'setting' => $condition->setting, 'when' => $condition->when ), $condition->target );
@@ -349,14 +349,22 @@ class WPURP_Template_Block {
 
         // TODO Better way of doing this?
         if( $this->link_color ) {
+
+            if( WPUltimateRecipe::option( 'recipe_template_force_style', '1' ) == '1' ) {
+                $important = ' !important';
+            } else {
+                $important = '';
+            }
+
+
             preg_match_all("/<a [^><]*>/i", $output, $links);
 
             foreach( $links[0] as $link )
             {
-                $new_link = preg_replace('/( style=")([^"]*")/i', '$1color: '.$this->link_color.' !important;$2', $link);
+                $new_link = preg_replace('/( style=")([^"]*")/i', '$1color: ' . $this->link_color . $important .';$2', $link);
 
                 if( $new_link == $link ) {
-                    $new_link = str_ireplace('<a ', '<a style="color: '.$this->link_color.' !important;" ', $link);
+                    $new_link = str_ireplace('<a ', '<a style="color: ' . $this->link_color . $important . ';" ', $link);
                 }
 
                 $output = str_ireplace( $link, $new_link, $output );
