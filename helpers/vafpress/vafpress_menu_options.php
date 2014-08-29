@@ -159,7 +159,7 @@ $admin_menu = array(
                                         ),
                                     ),
                                     'default' => array(
-                                        '3',
+                                        '99',
                                     ),
                                     'validation' => 'required',
                                 ),
