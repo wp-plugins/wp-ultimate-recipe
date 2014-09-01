@@ -8,7 +8,6 @@ Author: Bootstrapped Ventures
 Author URI: http://bootstrapped.ventures
 License: GPLv2
 */
-
 define( 'WPURP_VERSION', '2.0.7' );
 
 class WPUltimateRecipe {
@@ -105,7 +104,11 @@ class WPUltimateRecipe {
 
         // Load textdomain
         if( !self::is_premium_active() ) {
-            load_plugin_textdomain( 'wp-ultimate-recipe', false, basename( dirname( __FILE__ ) ) . '/lang/' );
+            $domain = 'wp-ultimate-recipe';
+            $locale = apply_filters( 'plugin_locale', get_locale(), $domain );
+
+            load_textdomain( $domain, WP_LANG_DIR.'/'.$domain.'/'.$domain.'-'.$locale.'.mo' );
+            load_plugin_textdomain( $domain, false, basename( dirname( __FILE__ ) ) . '/lang/' );
         }
 
         // Add core helper directory
