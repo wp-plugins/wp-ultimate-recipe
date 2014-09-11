@@ -36,7 +36,10 @@ class WPURP_Template_Container extends WPURP_Template_Block {
     <?php
     // Ingredients metadata (done here to avoid doubles)
     foreach( $recipe->ingredients() as $ingredient ) {
-        $meta = $ingredient['amount'] . ' ' . $ingredient['unit'] . ' ' . $ingredient['ingredient'] . ' (' . $ingredient['notes'] . ')';
+        $meta = $ingredient['amount'] . ' ' . $ingredient['unit'] . ' ' . $ingredient['ingredient'];
+        if( trim( $ingredient['notes'] ) !== '' ) {
+            $meta .= ' (' . $ingredient['notes'] . ')';
+        }
         echo '<meta itemprop="ingredients" content="' . esc_attr( $meta ). '">';
     }
 
