@@ -48,6 +48,7 @@ We also have a [WP Ultimate Recipe Premium version](http://www.wpultimaterecipe.
 *   Let your **users rate your recipes**
 *   Advanced usage of **WP categories and tags**
 *   Dynamically switch between **Imperial and Metric units**
+*   A selection of **Premium Widgets**
 
 Feel free to contact us if any features are missing.
 You can find more information at [WPUltimateRecipe.com](http://www.wpultimaterecipe.com/)
@@ -90,6 +91,12 @@ Yes! We pride ourselves on offering awesome support and almost always answer sup
 10. WP Ultimate Recipe automatically formats your data so it can be picked up by Google Recipe Search and others. Great for SEO!
 
 == Changelog ==
+
+= 2.0.8 =
+* Fixed CSS and JS problem on settings page for some users
+* Fixed recipe metadata
+* New hook: wpurp_query_posts_loop_check
+* New hook: wpurp_recipe_content_loop_check
 
 = 2.0.7 =
 * Fixed 'Force CSS Style' setting for link colors
@@ -282,6 +289,9 @@ Yes! We pride ourselves on offering awesome support and almost always answer sup
 * Very first version of this plugin
 
 == Upgrade notice ==
+
+= 2.0.8 =
+Update to fix your recipe metadata
 
 = 2.0.7 =
 Another fine WP Ultimate Recipe release

@@ -59,8 +59,8 @@ jQuery(document).ready(function() {
     jQuery(document).on('keyup change', '.adjust-recipe-servings', function(e) {
         var servings_input = jQuery(this);
 
-        var amounts = servings_input.parents('.wpurp-container').find('.recipe-ingredient-quantity');
-        var servings_original = parseInt(servings_input.data('original'));
+        var amounts = servings_input.parents('.wpurp-container').find('.wpurp-recipe-ingredient-quantity');
+        var servings_original = parseFloat(servings_input.data('original'));
         var servings_new = servings_input.val();
 
         if(isNaN(servings_new) || servings_new <= 0){

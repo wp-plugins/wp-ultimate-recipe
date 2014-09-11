@@ -179,7 +179,7 @@ $shortcode_generator = array(
                     array(
                         'type' => 'textbox',
                         'name' => 'limit_by_values',
-                        'label' => __('Limit by values', 'wp-ultimate-recipe'),
+                        'label' => __('Limit by values', 'wp-ultimate-recipe') . ' ' . __('(separate slugs with ;)', 'wp-ultimate-recipe'),
                     ),
                     array(
                         'type' => 'select',
@@ -258,6 +258,22 @@ $shortcode_generator = array(
                         'type' => 'textbox',
                         'name' => 'name',
                         'label' => __('Name', 'wp-ultimate-recipe'),
+                    ),
+                    array(
+                        'type' => 'select',
+                        'name' => 'template',
+                        'label' => __('Template', 'wp-ultimate-recipe'),
+                        'items' => array(
+                            'data' => array(
+                                array(
+                                    'source' => 'function',
+                                    'value' => 'wpurp_shortcode_generator_templates',
+                                ),
+                            ),
+                        ),
+                        'default' => array(
+                            'default',
+                        ),
                     ),
                     array(
                         'type' => 'checkbox',
@@ -372,7 +388,7 @@ $shortcode_generator = array(
                     array(
                         'type' => 'textbox',
                         'name' => 'limit_by_values',
-                        'label' => __('Limit by values', 'wp-ultimate-recipe'),
+                        'label' => __('Limit by values', 'wp-ultimate-recipe') . ' ' . __('(separate slugs with ;)', 'wp-ultimate-recipe'),
                     ),
                     array(
                         'type' => 'select',

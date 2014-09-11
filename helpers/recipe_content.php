@@ -10,7 +10,8 @@ class WPURP_Recipe_Content {
 
     public function content_filter( $content )
     {
-        if ( !in_the_loop () || !is_main_query () ) {
+        $ignore_query = !in_the_loop() || !is_main_query();
+        if ( apply_filters( 'wpurp_recipe_content_loop_check', $ignore_query ) ) {
             return $content;
         }
 

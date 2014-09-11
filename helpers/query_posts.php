@@ -71,7 +71,8 @@ class WPURP_Query_Posts {
         }
         else
         {
-            if ( !in_the_loop () || !$query->is_main_query() ) {
+            $secondary_query = !in_the_loop () || !$query->is_main_query();
+            if ( apply_filters( 'wpurp_query_posts_loop_check', $secondary_query, $query ) ) {
                 return;
             }
 

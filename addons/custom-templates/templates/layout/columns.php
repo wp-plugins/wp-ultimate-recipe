@@ -44,7 +44,7 @@ class WPURP_Template_Columns extends WPURP_Template_Block {
         return $this;
     }
 
-    public function output( $recipe )
+    public function output( $recipe, $args = array() )
     {
         if( !$this->output_block( $recipe ) ) return '';
 
@@ -59,7 +59,7 @@ class WPURP_Template_Columns extends WPURP_Template_Block {
             <?php for( $j = $this->columns-1; $j >= 0; $j-- ) { ?>
                 <?php if( $this->show( $recipe, 'col-' . $j ) ) { ?>
                     <div class="wpurp-rows-row">
-                        <?php $this->output_children( $recipe, 0, $j ); ?>
+                        <?php $this->output_children( $recipe, 0, $j, $args ); ?>
                     </div>
                 <?php } // end if show col ?>
             <?php } // end for cols ?>
@@ -67,7 +67,7 @@ class WPURP_Template_Columns extends WPURP_Template_Block {
             <?php for( $j = 0; $j < $this->columns; $j++ ) { ?>
                 <?php if( $this->show( $recipe, 'col-' . $j ) ) { ?>
                     <div class="wpurp-rows-row">
-                        <?php $this->output_children( $recipe, 0, $j ); ?>
+                        <?php $this->output_children( $recipe, 0, $j, $args ); ?>
                     </div>
                 <?php } // end if show col ?>
             <?php } // end for cols ?>
@@ -82,7 +82,7 @@ class WPURP_Template_Columns extends WPURP_Template_Block {
         <?php for( $j = 0; $j < $this->columns; $j++ ) { ?>
         <?php if( $this->show( $recipe, 'col-' . $j ) ) { ?>
         <td<?php echo $this->style( array( 'td', 'col-' . $j ) ); ?>>
-            <?php $this->output_children( $recipe, 0, $j ); ?>
+            <?php $this->output_children( $recipe, 0, $j, $args ); ?>
         </td>
         <?php } // end if show col ?>
         <?php } // end for cols ?>

@@ -5,6 +5,7 @@ $conversion_units_admin = $unit_helper->get_unit_admin_settings();
 $unit_systems_admin = $unit_helper->get_unit_system_admin_settings();
 
 $template_editor_button = WPUltimateRecipe::is_addon_active( 'template-editor' ) ? 'recipe_template_open_template_editor_active' : 'recipe_template_open_template_editor_disabled';
+$custom_fields_button = WPUltimateRecipe::is_addon_active( 'custom-fields' ) ? 'recipe_fields_manage_custom_active' : 'recipe_fields_manage_custom_disabled';
 
 $admin_menu = array(
     'title' => 'WP Ultimate Recipe ' . __('Settings', 'wp-ultimate-recipe'),
@@ -489,13 +490,24 @@ $admin_menu = array(
             'icon' => 'font-awesome:fa-edit',
             'controls' => array(
                 array(
+                    'type' => 'notebox',
+                    'name' => 'recipe_tags_premium_not_installed',
+                    'label' => 'WP Ultimate Recipe Premium',
+                    'description' => __('These features are only available in ', 'wp-ultimate-recipe') . ' <a href="http://www.wpultimaterecipeplugin.com/premium/" target="_blank">WP Ultimate Recipe Premium</a></strong>.',
+                    'status' => 'warning',
+                    'dependency' => array(
+                        'field' => '',
+                        'function' => 'wpurp_admin_premium_not_installed',
+                    ),
+                ),
+                array(
                     'type' => 'section',
                     'title' => __('Custom Recipe Fields', 'wp-ultimate-recipe'),
                     'name' => 'section_recipe_fields_custom',
                     'fields' => array(
                         array(
                             'type' => 'html',
-                            'name' => 'recipe_fields_manage_custom',
+                            'name' => $custom_fields_button,
                             'binding' => array(
                                 'field'    => '',
                                 'function' => 'wpurp_admin_manage_fields',
@@ -567,7 +579,7 @@ $admin_menu = array(
                     'fields' => array(
                         array(
                             'type' => 'notebox',
-                            'name' => 'recipe_tags_premium_not_installed',
+                            'name' => 'recipe_tags_cu_not_installed',
                             'label' => 'WP Ultimate Recipe Premium',
                             'description' => __('These features are only available in ', 'wp-ultimate-recipe') . ' <a href="http://www.wpultimaterecipeplugin.com/premium/" target="_blank">WP Ultimate Recipe Premium</a></strong>.',
                             'status' => 'warning',

@@ -39,7 +39,13 @@ function wpurp_admin_recipe_template_style($style)
 
 function wpurp_admin_manage_fields()
 {
-    return '<a href="'.admin_url( 'edit.php?post_type=recipe&page=wpurp_custom_fields' ).'" class="button button-primary" target="_blank">'.__('Manage custom recipe fields', 'wp-ultimate-recipe').'</a>';
+    if( WPUltimateRecipe::is_addon_active( 'template-editor' ) ) {
+        $button = '<a href="'.admin_url( 'edit.php?post_type=recipe&page=wpurp_custom_fields' ).'" class="button button-primary" target="_blank">'.__('Manage custom recipe fields', 'wp-ultimate-recipe').'</a>';
+    } else {
+        $button = '<a href="#" class="button button-primary button-disabled" disabled>'.__('Manage custom recipe fields', 'wp-ultimate-recipe').'</a>';
+    }
+
+    return $button;
 }
 
 function wpurp_admin_manage_tags()

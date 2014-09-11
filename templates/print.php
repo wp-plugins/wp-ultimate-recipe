@@ -67,7 +67,7 @@
                 // Premium system
                 if(wpurp.new_system !== undefined && window.opener.RecipeUnitConversion !== undefined)
                 {
-                    var ingredientList = jQuery('ul.wpurp-recipe-ingredients');
+                    var ingredientList = jQuery('.wpurp-recipe-ingredients');
                     var old_system = wpurp.old_system;
                     var new_system = wpurp.new_system;
 
@@ -81,7 +81,7 @@
                 // Free system
                 else if(wpurp.servings_original !== NaN && wpurp.servings_new !== NaN)
                 {
-                    var amounts = jQuery('.recipe-ingredient-quantity');
+                    var amounts = jQuery('.wpurp-recipe-ingredient-quantity');
                     window.opener.wpurp_adjustable_servings.updateAmounts(amounts, wpurp.servings_original, wpurp.servings_new);
                     jQuery('.wpurp-recipe-servings').text(wpurp.servings_new);
                 }

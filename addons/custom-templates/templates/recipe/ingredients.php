@@ -3,11 +3,79 @@
 class WPURP_Template_Recipe_Ingredients extends WPURP_Template_Block {
 
     public $editorField = 'recipeIngredients';
+    public $include_groups;
+    public $exclude_groups;
 
     public function __construct( $type = 'recipe-ingredients' )
     {
         parent::__construct( $type );
+    }
 
+    public function groups( $type, $groups )
+    {
+        $list = explode( ';', $groups );
+
+        if( $type == 'only' ) {
+            $this->include_groups = $list;
+        } else {
+            $this->exclude_groups = $list;
+        }
+
+        return $this;
+    }
+
+    public function output( $recipe, $args = array() )
+    {
+        if( !$this->output_block( $recipe ) ) return '';
+
+        // Backwards compatibility
+        if( empty( $this->children ) ) {
+            $output = $this->default_output( $recipe );
+        } else {
+
+            $output = $this->before_output();
+
+            ob_start();
+?>
+<div data-servings="<?php echo $recipe->servings_normalized(); ?>"<?php echo $this->style(); ?>>
+    <?php
+    $previous_group = null;
+    $groups = array();
+
+    foreach( $recipe->ingredients() as $ingredient ) {
+        $group = isset( $ingredient['group'] ) ? $ingredient['group'] : '';
+
+        if( $group !== $previous_group ) {
+            $groups[] = $group;
+            $previous_group = $group;
+        }
+    }
+
+    foreach( $groups as $index => $group ) {
+        if( isset( $this->exclude_groups ) && in_array( $group, $this->exclude_groups ) ) continue;
+        if( isset( $this->include_groups ) && !in_array( $group, $this->include_groups ) ) continue;
+
+        echo '<div>';
+        $child_args = array(
+            'ingredient_group' => $index,
+            'ingredient_group_name' => $group,
+        );
+
+        $this->output_children( $recipe, 0, 0, $child_args );
+        echo '</div>';
+    }
+    ?>
+</div>
+<?php
+            $output .= ob_get_contents();
+            ob_end_clean();
+        }
+
+        return $this->after_output( $output, $recipe );
+    }
+
+    private function default_output( $recipe )
+    {
         $this->add_style( 'margin', '0 23px 5px 23px' );
 
         $this->add_style( 'line-height', '1.6em', 'li' );
@@ -28,11 +96,6 @@ class WPURP_Template_Recipe_Ingredients extends WPURP_Template_Block {
         $this->add_style( 'color', '#666666', 'notes' );
         $this->add_style( 'font-size', '0.9em', 'notes' );
         $this->add_style( 'margin-left', '5px', 'notes' );
-    }
-
-    public function output( $recipe )
-    {
-        if( !$this->output_block( $recipe ) ) return '';
 
         $output = $this->before_output();
 
@@ -45,7 +108,7 @@ class WPURP_Template_Recipe_Ingredients extends WPURP_Template_Block {
         $output .= ob_get_contents();
         ob_end_clean();
 
-        return $this->after_output( $output, $recipe );
+        return $output;
     }
 
     private function ingredients_list( $recipe )
@@ -68,12 +131,12 @@ class WPURP_Template_Recipe_Ingredients extends WPURP_Template_Block {
 
             $fraction = strpos($ingredient['amount'], '/') === false ? false : true;
 
-            $out .= '<li itemprop="ingredients"' . $this->style(array('li','li-ingredient')) . '>';
-            $out .= '<span class="recipe-ingredient-quantity-unit"' . $this->style('quantity-unit') . '><span class="recipe-ingredient-quantity" data-normalized="'.$ingredient['amount_normalized'].'" data-fraction="'.$fraction.'" data-original="'.$ingredient['amount'].'"' . $this->style('quantity') . '>'.$ingredient['amount'].'</span> <span class="recipe-ingredient-unit" data-original="'.$ingredient['unit'].'"' . $this->style('unit') . '>'.$ingredient['unit'].'</span></span>';
+            $out .= '<li itemprop="ingredients" class="wpurp-recipe-ingredient"' . $this->style(array('li','li-ingredient')) . '>';
+            $out .= '<span class="recipe-ingredient-quantity-unit"' . $this->style('quantity-unit') . '><span class="wpurp-recipe-ingredient-quantity recipe-ingredient-quantity" data-normalized="'.$ingredient['amount_normalized'].'" data-fraction="'.$fraction.'" data-original="'.$ingredient['amount'].'"' . $this->style('quantity') . '>'.$ingredient['amount'].'</span> <span class="wpurp-recipe-ingredient-unit recipe-ingredient-unit" data-original="'.$ingredient['unit'].'"' . $this->style('unit') . '>'.$ingredient['unit'].'</span></span>';
 
             $taxonomy = get_term_by('name', $ingredient['ingredient'], 'ingredient');
 
-            $out .= ' <span class="recipe-ingredient-name"' . $this->style('name') . '>';
+            $out .= ' <span class="wpurp-recipe-ingredient-name recipe-ingredient-name"' . $this->style('name') . '>';
 
             $ingredient_links = WPUltimateRecipe::option('recipe_ingredient_links', 'archive_custom');
 
@@ -101,7 +164,7 @@ class WPURP_Template_Recipe_Ingredients extends WPURP_Template_Block {
 
             if( $ingredient['notes'] != '' ) {
                 $out .= ' ';
-                $out .= '<span class="recipe-ingredient-notes"' . $this->style('notes') . '>'.$ingredient['notes'].'</span>';
+                $out .= '<span class="wpurp-recipe-ingredient-notes recipe-ingredient-notes"' . $this->style('notes') . '>'.$ingredient['notes'].'</span>';
             }
 
             $out .= '</li>';

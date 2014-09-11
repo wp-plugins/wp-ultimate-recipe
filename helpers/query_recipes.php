@@ -75,6 +75,22 @@ class WPURP_Query_Recipes {
             $args['fields'] = 'ids';
         }
 
+        // Special order bys
+        if( in_array( $this->order_by, array( 'post_title', 'title', 'name' ) ) ) {
+            $args['orderby'] = 'meta_value';
+            $args['meta_key'] = 'recipe_title';
+        }
+
+        if( $this->order_by == 'rating' ) {
+            $args['orderby'] = 'meta_value_num';
+
+            if( WPUltimateRecipe::is_addon_active( 'user-ratings' ) && WPUltimateRecipe::option( 'user_ratings_enable', 'everyone' ) != 'disabled' ) {
+                $args['meta_key'] = 'recipe_user_ratings_rating';
+            } else {
+                $args['meta_key'] = 'recipe_rating';
+            }
+        }
+
         $query = new WP_Query( $args );
         $recipes = array();
 
@@ -93,38 +109,10 @@ class WPURP_Query_Recipes {
             }
         }
 
-        // Order by title
-        if( in_array( $this->order_by, array( 'post_title', 'title', 'name' ) ) ) {
-            usort( $recipes, array( $this, 'sortByTitle' ) );
-
-            if( $this->order == 'DESC' ) {
-                $recipes = array_reverse( $recipes );
-            }
-        }
-
-        // Order by rating
-        if( $this->order_by == 'rating' ) {
-            usort( $recipes, array( $this, 'sortByRating' ) );
-
-            if( $this->order == 'DESC' ) {
-                $recipes = array_reverse( $recipes );
-            }
-        }
-
         // Reset to defaults for next query
         $this->defaults();
 
         return $recipes;
-    }
-
-    public function sortByTitle( $a, $b )
-    {
-        return strcmp( $a->title(), $b->title() );
-    }
-
-    public function sortByRating( $a, $b )
-    {
-        return strcmp( $a->rating(), $b->rating() );
     }
 
     public function author( $author )

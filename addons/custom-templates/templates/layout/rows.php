@@ -28,7 +28,7 @@ class WPURP_Template_Rows extends WPURP_Template_Block {
         return $this;
     }
 
-    public function output( $recipe )
+    public function output( $recipe, $args = array() )
     {
         if( !$this->output_block( $recipe ) ) return '';
 
@@ -40,7 +40,7 @@ class WPURP_Template_Rows extends WPURP_Template_Block {
     <?php for( $i = 0; $i < $this->rows; $i++ ) { ?>
     <?php if( $this->show( $recipe, 'row-' . $i ) ) { ?>
     <div class="wpurp-rows-row"<?php echo $this->style( 'row-' . $i ); ?>>
-        <?php $this->output_children( $recipe, $i, 0 ); ?>
+        <?php $this->output_children( $recipe, $i, 0, $args ); ?>
     </div>
     <?php } // end if show row ?>
     <?php } // end for rows ?>

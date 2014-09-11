@@ -9,7 +9,7 @@ class WPURP_Template_Box extends WPURP_Template_Block {
         parent::__construct( $type );
     }
 
-    public function output( $recipe )
+    public function output( $recipe, $args = array() )
     {
         if( !$this->output_block( $recipe ) ) return '';
 
@@ -18,7 +18,7 @@ class WPURP_Template_Box extends WPURP_Template_Block {
         ob_start();
 ?>
 <span<?php echo $this->style(); ?>>
-    <?php $this->output_children( $recipe ) ?>
+    <?php $this->output_children( $recipe, 0, 0, $args ) ?>
 </span>
 <?php
         $output .= ob_get_contents();

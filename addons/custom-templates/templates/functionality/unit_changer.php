@@ -13,7 +13,7 @@ class WPURP_Template_Recipe_Unit_Changer extends WPURP_Template_Block {
     }
 
     //TODO Refactor this.
-    public function output( $recipe )
+    public function output( $recipe, $args = array() )
     {
         if( !$this->output_block( $recipe ) ) return '';
 

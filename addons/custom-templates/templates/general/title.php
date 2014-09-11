@@ -24,7 +24,7 @@ class WPURP_Template_Title extends WPURP_Template_Block {
         return $this;
     }
 
-    public function output( $recipe )
+    public function output( $recipe, $args = array() )
     {
         if( !$this->output_block( $recipe ) ) return '';
 

@@ -54,7 +54,7 @@ class WPURP_Template_Table extends WPURP_Template_Block {
         return $this;
     }
 
-    public function output( $recipe )
+    public function output( $recipe, $args = array() )
     {
         if( !$this->output_block( $recipe ) ) return '';
 
@@ -70,7 +70,7 @@ class WPURP_Template_Table extends WPURP_Template_Block {
                 <?php for( $j = 0; $j < $this->columns; $j++ ) { ?>
                     <?php if( $this->show( $recipe, 'col-' . $j ) ) { ?>
                         <td<?php echo $this->style( array( 'td', 'row-' . $i, 'col-' . $j ) ); ?>>
-                            <?php $this->output_children( $recipe, $i, $j ); ?>
+                            <?php $this->output_children( $recipe, $i, $j, $args ); ?>
                         </td>
                     <?php } // end if show col ?>
                 <?php } // end for cols ?>

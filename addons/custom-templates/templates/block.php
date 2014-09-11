@@ -36,14 +36,23 @@ class WPURP_Template_Block {
         $this->children[$block->row][$block->column][] = $block;
     }
 
-    public function output_children( $recipe, $row = 0, $column = 0 )
+    public function output_children_string( $recipe, $row = 0, $column = 0, $args = array() )
     {
+        $output = '';
+
         if( isset( $this->children[$row][$column] ) ) {
             foreach( $this->children[$row][$column] as $child )
             {
-                echo $child->output( $recipe );
+                $output .= $child->output( $recipe, $args );
             }
         }
+
+        return $output;
+    }
+
+    public function output_children( $recipe, $row = 0, $column = 0, $args = array() )
+    {
+        echo $this->output_children_string( $recipe, $row, $column, $args );
     }
 
     /*
@@ -99,7 +108,12 @@ class WPURP_Template_Block {
         if( $this->present( $block, 'backgroundColor' ) ) $this->add_style( 'background-color', $block->backgroundColor );
 
         if( $this->present( $block, 'borderWidth' ) ) {
-            $this->add_style( 'border-width', $block->borderWidth . 'px' );
+            $borderTop =    $this->present( $block, 'borderTop' ) ? $block->borderWidth . 'px' : '0';
+            $borderBottom = $this->present( $block, 'borderBottom' ) ? $block->borderWidth . 'px' : '0';
+            $borderLeft =   $this->present( $block, 'borderLeft' ) ? $block->borderWidth . 'px' : '0';
+            $borderRight =  $this->present( $block, 'borderRight' ) ? $block->borderWidth . 'px' : '0';
+
+            $this->add_style( 'border-width', $borderTop . ' ' . $borderRight . ' ' .$borderBottom . ' ' . $borderLeft );
             if( $this->present( $block, 'borderColor' ) ) $this->add_style( 'border-color', $block->borderColor );
             if( $this->present( $block, 'borderStyle' ) ) $this->add_style( 'border-style', $block->borderStyle );
 
@@ -124,6 +138,9 @@ class WPURP_Template_Block {
         if( $this->present( $block, 'textAlign' ) && $this->type != 'container' ) {
             $this->add_style( 'text-align',   $block->textAlign );
             $this->add_style( 'text-align',   $block->textAlign, 'td' );
+        }
+        if( $this->present( $block, 'verticalAlign' ) ) {
+            $this->add_style( 'vertical-align',   $block->verticalAlign );
         }
 
         if( $this->present( $block, 'fontBold' ) && $block->fontBold ) {
@@ -214,6 +231,25 @@ class WPURP_Template_Block {
         {
             if( isset( $this->style[$name] ) ) {
                 $style .= $this->get_style_string( $name );
+            }
+        }
+
+        // Special Custom styles
+        if( in_array( $this->type, array( 'recipe-ingredient-container', 'recipe-instruction-container' ) ) ) {
+            if( in_array( 'li', $names ) && $this->present( $this->settings, 'customStyleItem' ) ) {
+                $style .= esc_attr( preg_replace( "/\r|\n/", '', $this->settings->customStyleItem ) );
+            }
+            if( in_array( 'li-odd', $names ) && $this->present( $this->settings, 'customStyleOdd' ) ) {
+                $style .= esc_attr( preg_replace( "/\r|\n/", '', $this->settings->customStyleOdd ) );
+            }
+            if( in_array( 'li-even', $names ) && $this->present( $this->settings, 'customStyleEven' ) ) {
+                $style .= esc_attr( preg_replace( "/\r|\n/", '', $this->settings->customStyleEven ) );
+            }
+            if( in_array( 'li-first', $names ) && $this->present( $this->settings, 'customStyleFirst' ) ) {
+                $style .= esc_attr( preg_replace( "/\r|\n/", '', $this->settings->customStyleFirst ) );
+            }
+            if( in_array( 'li-last', $names ) && $this->present( $this->settings, 'customStyleLast' ) ) {
+                $style .= esc_attr( preg_replace( "/\r|\n/", '', $this->settings->customStyleLast ) );
             }
         }
 

@@ -9,7 +9,7 @@ class WPURP_Template_Recipe_Prep_Time extends WPURP_Template_Block {
         parent::__construct( $type );
     }
 
-    public function output( $recipe )
+    public function output( $recipe, $args = array() )
     {
         if( !$this->output_block( $recipe ) ) return '';
 

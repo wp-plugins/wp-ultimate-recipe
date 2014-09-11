@@ -15,7 +15,7 @@ class WPURP_Template_Container extends WPURP_Template_Block {
         $this->order = 0;
     }
 
-    public function output( $recipe )
+    public function output( $recipe, $args = array() )
     {
         if( !$this->output_block( $recipe ) ) return '';
 
@@ -26,13 +26,27 @@ class WPURP_Template_Container extends WPURP_Template_Block {
 <div itemscope itemtype="http://schema.org/Recipe" data-servings-original="<?php echo $recipe->servings_normalized(); ?>"<?php echo $this->style(); ?>>
     <meta itemprop="author" content="<?php echo esc_attr( $recipe->author() ); ?>">
     <meta itemprop="datePublished" content="<?php echo esc_attr( $recipe->date() ); ?>">
-    <meta itemprop="name" content="<?php echo esc_attr( $recipe->title() ); ?>"
+    <meta itemprop="image" content="<?php echo esc_attr( $recipe->image_url( 'full' ) ); ?>">
+    <meta itemprop="name" content="<?php echo esc_attr( $recipe->title() ); ?>">
     <meta itemprop="description" content="<?php echo esc_attr( $recipe->description() ); ?>">
     <meta itemprop="recipeYield" content="<?php echo esc_attr( $recipe->servings() ) . ' ' . esc_attr( $recipe->servings_type() ); ?>">
     <?php if( strtolower( $recipe->prep_time_text() ) == __( 'minutes', 'wp-ultimate-recipe' ) ) { ?><meta itemprop="prepTime" content="PT<?php echo esc_attr( $recipe->prep_time() ); ?>M"><?php } ?>
     <?php if( strtolower( $recipe->cook_time_text() ) == __( 'minutes', 'wp-ultimate-recipe' ) ) { ?><meta itemprop="cookTime" content="PT<?php echo esc_attr( $recipe->cook_time() ); ?>M"><?php } ?>
 
-    <?php $this->output_children( $recipe ) ?>
+    <?php
+    // Ingredients metadata (done here to avoid doubles)
+    foreach( $recipe->ingredients() as $ingredient ) {
+        $meta = $ingredient['amount'] . ' ' . $ingredient['unit'] . ' ' . $ingredient['ingredient'] . ' (' . $ingredient['notes'] . ')';
+        echo '<meta itemprop="ingredients" content="' . esc_attr( $meta ). '">';
+    }
+
+    // Instructions metadata
+    foreach( $recipe->instructions() as $instruction ) {
+        echo '<meta itemprop="recipeInstructions" content="' . esc_attr( $instruction['description'] ) . '">';
+    }
+    ?>
+
+    <?php $this->output_children( $recipe, 0, 0, $args ) ?>
 </div>
 <?php
         $output .= ob_get_contents();

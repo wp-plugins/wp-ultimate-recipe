@@ -1,12 +1,11 @@
 <?php
 
-class WPURP_Template_Recipe_Image extends WPURP_Template_Block {
+class WPURP_Template_Recipe_Instruction_Image extends WPURP_Template_Block {
 
+    public $editorField = 'recipeInstructionImage';
     public $thumbnail;
 
-    public $editorField = 'recipeImage';
-
-    public function __construct( $type = 'recipe-image' )
+    public function __construct( $type = 'recipe-instruction-image' )
     {
         parent::__construct( $type );
     }
@@ -19,10 +18,10 @@ class WPURP_Template_Recipe_Image extends WPURP_Template_Block {
 
     public function output( $recipe, $args = array() )
     {
-        if( !$this->output_block( $recipe ) ) return '';
+        if( !$this->output_block( $recipe ) || !isset( $args['instruction_image'] ) || $args['instruction_image'] == '' ) return '';
         if( !isset( $this->thumbnail ) ) $this->thumbnail = 'full';
 
-        $thumb = wp_get_attachment_image_src( $recipe->image_ID(), $this->thumbnail );
+        $thumb = wp_get_attachment_image_src( $args['instruction_image'], $this->thumbnail );
 
         if(!$thumb) return ''; // No recipe image found
 
@@ -50,22 +49,19 @@ class WPURP_Template_Recipe_Image extends WPURP_Template_Block {
 
         $full_image_url = $recipe->image_url( 'full' );
 
+        $description = isset( $args['instruction_description'] ) ? $args['instruction_description'] : '';
+
+        if( WPUltimateRecipe::option( 'recipe_images_clickable', '0' ) == 1 ) {
+            $img = '<a href="' . $full_image_url . '" rel="lightbox" title="' . $description . '">';
+            $img .= '<img src="' . $image_url . '"' . $this->style() . '/>';
+            $img .= '</a>';
+        } else {
+            $img = '<img src="' . $image_url . '"' . $this->style() . '/>';
+        }
+
         $output = $this->before_output();
 
-        ob_start();
-?>
-<div>
-    <?php if( WPUltimateRecipe::option( 'recipe_images_clickable', '0' ) == 1 ) { ?>
-    <a href="<?php echo $full_image_url; ?>" rel="lightbox" title="<?php echo $recipe->title(); ?>">
-        <img src="<?php echo $image_url; ?>" title="<?php echo $recipe->title(); ?>"<?php echo $this->style(); ?> />
-    </a>
-    <?php } else { ?>
-    <img src="<?php echo $image_url; ?>" title="<?php echo $recipe->title(); ?>"<?php echo $this->style(); ?> />
-    <?php } ?>
-</div>
-<?php
-        $output .= ob_get_contents();
-        ob_end_clean();
+        $output .= '<div>' . $img . '</div>';
 
         return $this->after_output( $output, $recipe );
     }

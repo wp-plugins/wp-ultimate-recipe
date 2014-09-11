@@ -16,7 +16,7 @@ class WPURP_Template_Recipe_Sharing extends WPURP_Template_Block {
         $this->add_style( 'vertical-align', 'top', 'li');
     }
 
-    public function output( $recipe )
+    public function output( $recipe, $args = array() )
     {
         if( !$this->output_block( $recipe ) ) return '';
 
