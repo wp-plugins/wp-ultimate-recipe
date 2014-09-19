@@ -920,6 +920,13 @@ $admin_menu = array(
                     'description' => __( 'When enabled visitors will only be able to select from a list of existing ingredients.', 'wp-ultimate-recipe' ),
                     'default' => '0',
                 ),
+                array(
+                    'type' => 'toggle',
+                    'name' => 'user_submission_email_admin',
+                    'label' => __('Email administrator', 'wp-ultimate-recipe'),
+                    'description' => __( 'Send an email notification when a new recipe is submitted.', 'wp-ultimate-recipe' ),
+                    'default' => '0',
+                ),
             ),
         ),
 //=-=-=-=-=-=-= USER MENUS =-=-=-=-=-=-=

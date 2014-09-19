@@ -30,7 +30,11 @@ class WPURP_Recipe_Content {
 
                 if( strpos( $content, '[recipe]' ) !== false ) {
                     $content = str_replace( '[recipe]', $recipe_box, $content );
-                } else if( is_single() || !preg_match("/<!--\s*more.*-->/", $recipe->post_content(), $out ) ) { // Add recipe to end of post if there was no <!--more--> tag
+                } else if( preg_match("/<!--\s*nextpage.*-->/", $recipe->post_content(), $out ) ) {
+                    // Add metadata if there is a 'nextpage' tag and there wasn't a '[recipe]' tag on this specific page
+                    $content .= $recipe->output_string( 'metadata' );
+                } else if( is_single() || !preg_match("/<!--\s*more.*-->/", $recipe->post_content(), $out ) ) {
+                    // Add recipe box to the end of single pages or excerpts (unless there's a 'more' tag
                     $content .= $recipe_box;
                 }
             }
@@ -48,7 +52,8 @@ class WPURP_Recipe_Content {
 
     public function excerpt_filter( $content )
     {
-        if ( !in_the_loop () || !is_main_query () ) {
+        $ignore_query = !in_the_loop() || !is_main_query();
+        if ( apply_filters( 'wpurp_recipe_content_loop_check', $ignore_query ) ) {
             return $content;
         }
 
@@ -60,6 +65,8 @@ class WPURP_Recipe_Content {
 
             if( $recipe->post_content() == '' && empty( $excerpt ) ) {
                 $content = $recipe->description();
+            } else if( $content == '' ) {
+                $content = get_the_excerpt();
             }
 
             $content = apply_filters( 'wpurp_output_recipe_excerpt', $content, $recipe );

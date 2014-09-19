@@ -64,26 +64,31 @@
             // TODO Refactor
             function adjustServings()
             {
+                var old_servings = wpurp.servings_original;
+                var new_servings = wpurp.servings_new;
+                var old_system = wpurp.old_system;
+                var new_system = wpurp.new_system;
+
                 // Premium system
-                if(wpurp.new_system !== undefined && window.opener.RecipeUnitConversion !== undefined)
+                if(new_system != undefined && window.opener.RecipeUnitConversion != undefined)
                 {
                     var ingredientList = jQuery('.wpurp-recipe-ingredients');
-                    var old_system = wpurp.old_system;
-                    var new_system = wpurp.new_system;
 
-                    window.opener.RecipeUnitConversion.adjustServings(ingredientList, wpurp.servings_original, wpurp.servings_new)
-                    jQuery('.wpurp-recipe-servings').text(wpurp.servings_new);
+                    if(old_servings != new_servings) {
+                        window.opener.RecipeUnitConversion.adjustServings(ingredientList, old_servings, new_servings)
+                        jQuery('.wpurp-recipe-servings').text(new_servings);
+                    }
 
-                    if(old_system !== new_system) {
+                    if(old_system != new_system) {
                         window.opener.RecipeUnitConversion.updateIngredients(ingredientList, old_system, new_system);
                     }
                 }
                 // Free system
-                else if(wpurp.servings_original !== NaN && wpurp.servings_new !== NaN)
+                else if( !isNaN(old_servings) && !isNaN(new_servings) && old_servings != new_servings)
                 {
                     var amounts = jQuery('.wpurp-recipe-ingredient-quantity');
-                    window.opener.wpurp_adjustable_servings.updateAmounts(amounts, wpurp.servings_original, wpurp.servings_new);
-                    jQuery('.wpurp-recipe-servings').text(wpurp.servings_new);
+                    window.opener.wpurp_adjustable_servings.updateAmounts(amounts, old_servings, new_servings);
+                    jQuery('.wpurp-recipe-servings').text(new_servings);
                 }
 
             }

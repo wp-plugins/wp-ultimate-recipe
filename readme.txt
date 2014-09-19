@@ -92,6 +92,16 @@ Yes! We pride ourselves on offering awesome support and almost always answer sup
 
 == Changelog ==
 
+= 2.0.9 =
+* Fix: All dashes are now treated as ranges for calculations
+* Fix: Recipe box for multipage posts
+* Fix: Recipe_title metadata problem in some cases
+* Fix: Recipe excerpt on archive pages
+* Fix: Correct WPML language when using ajax calls
+* Fix: WPML adjacent posts fix
+* Fix: Instruction images lightbox link
+* Fix: Only hide thumbnails in the loop to not mess with widgets
+
 = 2.0.8 =
 * Fixed CSS and JS problem on settings page for some users
 * Fixed recipe metadata
@@ -289,6 +299,9 @@ Yes! We pride ourselves on offering awesome support and almost always answer sup
 * Very first version of this plugin
 
 == Upgrade notice ==
+
+= 2.0.9 =
+Fix release, no new features
 
 = 2.0.8 =
 Update to fix your recipe metadata

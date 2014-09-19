@@ -2,13 +2,21 @@
 # This file is distributed under the same license as the WP Ultimate Recipe package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2014-09-11 09:08:02+0000\n"
+"PO-Revision-Date: 2014-09-19 14:56:19+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: GlotPress/0.1\n"
 "Project-Id-Version: WP Ultimate Recipe\n"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:926
+msgid "Email administrator"
+msgstr "Email beheerder"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:927
+msgid "Send an email notification when a new recipe is submitted."
+msgstr "Stuur een email notificatie wanneer er een nieuw recept wordt ingestuurd."
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:182
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:391
@@ -302,7 +310,7 @@ msgid "Recipe Archive"
 msgstr "Recepten Archief"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:855
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:946
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:953
 msgid "Use the following shortcode to display the front-end form:"
 msgstr "Gebruik de volgende shortcode om het front-end formulier te tonen:"
 
@@ -314,23 +322,23 @@ msgstr "Kan enkel bestaande ingrediënten selecteren"
 msgid "When enabled visitors will only be able to select from a list of existing ingredients."
 msgstr "Indien actief kunnen bezoekers enkel kiezen uit een lijst van bestaande ingrediënten."
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1110
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1117
 msgid "Remove recipe slug"
 msgstr "Verwijder recepten slug"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1111
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1118
 msgid "Make sure your slugs are unique across posts, pages and recipes! Your archive page will still be available."
 msgstr "Let op dat je slugs uniek zijn overheen berichten, pagina's en recepten! Je archief pagina is nog steeds beschikbaar."
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1118
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1125
 msgid "Shortcode Editor"
 msgstr "Shortcode Editor"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1124
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1131
 msgid "Show shortcode editor for"
 msgstr "Toon shortcode editor voor"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1125
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1132
 msgid "Where do you want to be able to insert recipes with the shortcode editor?"
 msgstr "Waar wil je gebruik kunnen maken van de shortcode editor om recepten in te voegen?"
 
@@ -387,15 +395,15 @@ msgstr "Minimum # Stemmen"
 msgid "Minimum number of votes needed before sharing the rating as metadata used by Google and other search engines."
 msgstr "Het minimum aantal stemmen nodig voor de score als metadata getoond wordt aan Google en andere zoekmachines."
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1144
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1151
 msgid "Custom Code"
 msgstr "Eigen Code"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1151
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1158
 msgid "Public CSS"
 msgstr "Publieke CSS"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1158
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1165
 msgid "Print CSS"
 msgstr "Print CSS"
 
@@ -499,7 +507,7 @@ msgstr "Meervoud"
 msgid "Alias to convert to"
 msgstr "Alias om naar te converteren"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:979
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:986
 msgid "Enable user menus save function for"
 msgstr "Gebruikers menus opslaan functie activeren voor"
 
@@ -602,7 +610,7 @@ msgid "US Imperial"
 msgstr "US Imperial"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:190
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1002
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1009
 msgid "Default Servings"
 msgstr "Standaard Porties"
 
@@ -709,11 +717,11 @@ msgstr "Licentie Veranderen"
 msgid "Metric"
 msgstr "Metrisch"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1103
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1110
 msgid "Recipes in admin posts"
 msgstr "Recepten in admin berichten"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1104
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1111
 msgid "Show recipes in admin posts overview when acting as posts."
 msgstr "Toon recepten in admin berichten overzicht bij recepten zoals berichten"
 
@@ -738,11 +746,11 @@ msgstr "Auteur Beperken"
 msgid "Units"
 msgstr "Eenheden"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1096
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1103
 msgid "Recipes act as posts"
 msgstr "Recepten zoals berichten"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1097
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1104
 msgid "Recipes act like normal posts. For example: they show up on your front page."
 msgstr "Recepten gedragen zich als gewone berichten. Bijvoorbeeld: ze worden getoond op de voorpagina."
 
@@ -787,7 +795,7 @@ msgstr "Enkel ingelogde gebruikers kunnen recepten een score geven"
 msgid "Everyone can rate recipes"
 msgstr "Iedereen kan recepten een score geven"
 
-#: wp-ultimate-recipe-premium/core/helpers/recipe_save.php:100
+#: wp-ultimate-recipe-premium/core/helpers/recipe_save.php:105
 #: wp-ultimate-recipe-premium/premium/addons/recipe-grid/recipe-grid.php:266
 #: wp-ultimate-recipe-premium/premium/helpers/recipe_columns.php:73
 msgid "Categories"
@@ -910,7 +918,7 @@ msgstr "Toon recepten in de WP Categorieën en Tags archieven."
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:311
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:520
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:577
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1076
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1083
 msgid "Advanced"
 msgstr "Geavanceerd"
 
@@ -998,7 +1006,7 @@ msgstr "Voeg een instructie groep toe"
 msgid "Share this Recipe"
 msgstr "Deel dit Recept"
 
-#: wp-ultimate-recipe-premium/core/helpers/recipe_save.php:101
+#: wp-ultimate-recipe-premium/core/helpers/recipe_save.php:106
 #: wp-ultimate-recipe-premium/premium/addons/recipe-grid/recipe-grid.php:274
 #: wp-ultimate-recipe-premium/premium/helpers/recipe_columns.php:74
 msgid "Tags"
@@ -1084,7 +1092,7 @@ msgstr "Het recept archief kan gevonden worden op"
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:803
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:822
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:854
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:945
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:952
 msgid "Important"
 msgstr "Belangrijk"
 
@@ -1096,7 +1104,7 @@ msgstr "Gebruikersinzending"
 msgid "Recipe Tags"
 msgstr "Recept Tags"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:956
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:963
 msgid "Enable user menus for"
 msgstr "Gebruiker menus activeren voor"
 
@@ -1374,17 +1382,17 @@ msgid "Display Thumbnail"
 msgstr "Toon Thumbnail"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:413
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1026
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1033
 msgid "404 error/page not found?"
 msgstr "404 fout/pagina niet gevonden?"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:414
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1027
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1034
 msgid "Try"
 msgstr "Probeer"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:414
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1027
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1034
 msgid "flushing your permalinks"
 msgstr "je permalinks te flushen"
 
@@ -1401,14 +1409,14 @@ msgstr "Recept Sjabloon"
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:726
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:793
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:844
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:935
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1042
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:942
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1049
 msgid "These features are only available in "
 msgstr "Deze features zijn alleen beschikbaar in"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:804
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:855
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:946
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:953
 msgid "The shortcode can be added to any page or post."
 msgstr "De shortcode kan toegevoegd worden aan elke pagina of bericht."
 
@@ -1418,39 +1426,39 @@ msgstr "Laat inzendingen toe van"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:869
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:893
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:960
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:983
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:967
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:990
 msgid "Nobody"
 msgstr "Niemand"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:869
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:960
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:983
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:967
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:990
 msgid "disabled"
 msgstr "inactief"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1034
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1041
 msgid "Import Recipes"
 msgstr "Recepten Importeren"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1068
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1075
 msgid "Coming Soon"
 msgstr "Binnenkort Beschikbaar"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1069
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1076
 msgid "This feature is coming soon for "
 msgstr "Deze feature is binnenkort beschikbaar voor"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1061
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1068
 msgid "Export Recipes"
 msgstr "Recepten Exporteren"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1166
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1174
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1173
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1181
 msgid "FAQ & Support"
 msgstr "FAQ & Ondersteuning"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1173
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1180
 msgid "Need more help?"
 msgstr "Meer hulp nodig?"
 
@@ -1744,7 +1752,7 @@ msgstr "Naam (enkelvoud)"
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/templates/page_form.php:27
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/templates/page_list.php:18
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:398
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1011
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1018
 #: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/templates/page_form.php:27
 #: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/templates/page_list.php:18
 msgid "Slug"
@@ -1829,21 +1837,21 @@ msgstr "Menus"
 msgid "Menu"
 msgstr "Menu"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:927
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:934
 msgid "User Menus"
 msgstr "Gebruiker Menus"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:873
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:897
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:964
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:987
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:971
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:994
 msgid "Guests and registered users"
 msgstr "Gasten en geregistreerde gebruikers"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:877
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:901
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:968
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:991
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:975
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:998
 msgid "Registered users only"
 msgstr "Enkel geregistreerde gebruikers"
 
@@ -2080,7 +2088,7 @@ msgstr "Recepten"
 
 #: wp-ultimate-recipe-premium/core/helpers/recipe_meta_box.php:37
 #: wp-ultimate-recipe-premium/core/helpers/recipe_post_type.php:21
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1082
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1089
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:35
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:70
 msgid "Recipe"

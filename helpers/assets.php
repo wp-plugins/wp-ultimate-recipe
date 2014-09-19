@@ -31,7 +31,7 @@ class WPURP_Assets {
                 'priority' => 1,
             ),
             array(
-                'file' => admin_url('admin-ajax.php').'?action=wpurp_custom_css',
+                'file' => WPUltimateRecipe::get()->helper('ajax')->url() . '&action=wpurp_custom_css',
                 'type' => 'css',
                 'display' => 'public',
                 'setting_inverse' => array( 'custom_code_public_css', '' ),
@@ -58,7 +58,7 @@ class WPURP_Assets {
                 ),
                 'data' => array(
                     'name' => 'wpurp_print',
-                    'ajaxurl' => admin_url( 'admin-ajax.php' ),
+                    'ajaxurl' => WPUltimateRecipe::get()->helper('ajax')->url(),
                     'nonce' => wp_create_nonce( 'wpurp_print' ),
                     'custom_print_css' => WPUltimateRecipe::option( 'custom_code_print_css', '' ),
                     'coreUrl' => WPUltimateRecipe::get()->coreUrl,

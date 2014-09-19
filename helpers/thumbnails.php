@@ -16,7 +16,7 @@ class WPURP_Thumbnails {
 
     public function hide_theme_thumbnail( $html )
     {
-        if ( get_post_type() == 'recipe' )
+        if ( get_post_type() == 'recipe' && in_the_loop() )
         {
             $thumb = WPUltimateRecipe::option( 'recipe_theme_thumbnail', 'archive' );
 

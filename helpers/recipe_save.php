@@ -23,6 +23,11 @@ class WPURP_Recipe_Save {
 
             $fields = $recipe->fields();
 
+            // Make sure the recipe_title meta is present
+            if( !isset( $_POST['recipe_title'] ) || $_POST['recipe_title'] == '' ) {
+                $_POST['recipe_title'] = $recipe->title();
+            }
+
             // TODO Refactor saving of fields
             foreach ( $fields as $field )
             {
@@ -169,7 +174,15 @@ class WPURP_Recipe_Save {
             return 0;
         }
 
-        $amount = preg_replace( "/[^\d\.\/\,\s-]/", "", $amount ); // Only keep digits, comma, point and forward slash
+        // Treat " to " as a dash for ranges
+        $amount = str_ireplace( ' to ', '-', $amount );
+
+        $amount = preg_replace( "/[^\d\.\/\,\s-–—]/", "", $amount ); // Only keep digits, comma, point, forward slash, space and dashes
+
+        // Replace en and em dash with a normal dash
+        $amount = str_replace( '–', '-', $amount );
+        $amount = str_replace( '—', '-', $amount );
+
         // Only take first part if we have a dash (e.g. 1-2 cups)
         $parts = explode( '-', $amount );
         $amount = $parts[0];

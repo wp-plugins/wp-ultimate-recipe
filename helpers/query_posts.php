@@ -8,8 +8,10 @@ class WPURP_Query_Posts {
 
         add_filter( 'init', array( $this, 'edit_posts_page_fix' ));
         add_filter( 'getarchives_where' , array( $this, 'monthly_archives_fix' ), 10 , 2 );
-        add_filter( 'get_next_post_where', array( $this, 'adjacent_posts_fix' ) );
-        add_filter( 'get_previous_post_where', array( $this, 'adjacent_posts_fix' ) );
+        add_filter( 'get_previous_post_where', array( $this, 'adjacent_posts_where_fix' ) );
+        add_filter( 'get_next_post_where', array( $this, 'adjacent_posts_where_fix' ) );
+        add_filter( 'get_previous_post_join', array( $this, 'adjacent_posts_join_fix' ) );
+        add_filter( 'get_next_post_join', array( $this, 'adjacent_posts_join_fix' ) );
 
     }
 
@@ -120,12 +122,22 @@ class WPURP_Query_Posts {
         return $where;
     }
 
-    function adjacent_posts_fix($where) {
+    function adjacent_posts_where_fix( $where ) {
         if( WPUltimateRecipe::option( 'recipe_as_posts', '1' ) == '1' )
         {
             $where = str_replace( "post_type = 'post'" , "post_type IN ( 'post', 'recipe' )" , $where );
             $where = str_replace( "post_type = 'recipe'" , "post_type IN ( 'post', 'recipe' )" , $where );
         }
         return $where;
+    }
+
+    function adjacent_posts_join_fix( $join )
+    {
+        if( WPUltimateRecipe::option( 'recipe_as_posts', '1' ) == '1' )
+        {
+            // Needed when using WPML
+            $join = str_replace( "element_type = 'post_recipe'" , "element_type IN ( 'post_recipe', 'post_post' )" , $join );
+        }
+        return $join;
     }
 }
