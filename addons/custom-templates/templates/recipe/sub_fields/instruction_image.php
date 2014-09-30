@@ -104,11 +104,11 @@ class WPURP_Template_Recipe_Instruction_Image extends WPURP_Template_Block {
         $description = isset( $args['instruction_description'] ) ? $args['instruction_description'] : '';
 
         if( WPUltimateRecipe::option( 'recipe_images_clickable', '0' ) == 1 ) {
-            $img = '<a href="' . $full_image_url . '" rel="lightbox" title="' . $description . '">';
-            $img .= '<img src="' . $image_url . '"' . $this->style() . '/>';
+            $img = '<a href="' . $full_image_url . '" rel="lightbox" title="' . esc_attr( $description ) . '">';
+            $img .= '<img src="' . $image_url . '" title="' . esc_attr( $description ) . '"' . $this->style() . '/>';
             $img .= '</a>';
         } else {
-            $img = '<img src="' . $image_url . '"' . $this->style() . '/>';
+            $img = '<img src="' . $image_url . '" title="' . esc_attr( $description ) . '"' . $this->style() . '/>';
         }
 
         $output = $this->before_output();

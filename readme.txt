@@ -2,7 +2,7 @@
 Contributors: BrechtVds
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QG7KZMGFU325Y
 Tags: recipe, ingredients, food, cooking, seo, schema.org
-Requires at least: 3.3
+Requires at least: 3.5
 Tested up to: 4.0
 Stable tag: trunk
 License: GPLv2 or later
@@ -91,6 +91,10 @@ Yes! We pride ourselves on offering awesome support and almost always answer sup
 10. WP Ultimate Recipe automatically formats your data so it can be picked up by Google Recipe Search and others. Great for SEO!
 
 == Changelog ==
+
+= 2.0.10 =
+* Improvement: Show recipe rating in metadata
+* Fix: Title tag for recipe instruction images
 
 = 2.0.9 =
 * Fix: All dashes are now treated as ranges for calculations
@@ -299,6 +303,9 @@ Yes! We pride ourselves on offering awesome support and almost always answer sup
 * Very first version of this plugin
 
 == Upgrade notice ==
+
+= 2.0.10 =
+Tiny update. Improves recipe metadata with recipe rating
 
 = 2.0.9 =
 Fix release, no new features

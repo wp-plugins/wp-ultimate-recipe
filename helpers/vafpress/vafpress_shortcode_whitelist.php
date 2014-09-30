@@ -72,6 +72,42 @@ function wpurp_shortcodes_sort_by_label( $a, $b )
     return strcmp($a['label'], $b['label']);
 }
 
+function wpurp_shortcode_generator_menus_by_date()
+{
+    return wpurp_shortcode_generator_menus('date', 'DESC');
+}
+
+function wpurp_shortcode_generator_menus_by_title()
+{
+    return wpurp_shortcode_generator_menus('title', 'ASC');
+}
+
+function wpurp_shortcode_generator_menus( $orderby, $order )
+{
+    $recipe_list = array();
+
+    $args = array(
+        'post_type' => 'menu',
+        'post_status' => 'publish',
+        'orderby' => $orderby,
+        'order' => $order,
+        'no-paging' => true,
+        'posts_per_page' => -1,
+    );
+
+    $menus = get_posts( $args );
+    foreach ( $menus as $menu ) {
+
+        $recipe_list[] = array(
+            'value' => $menu->ID,
+            'label' => $menu->post_title,
+        );
+
+    }
+
+    return $recipe_list;
+}
+
 function wpurp_shortcode_generator_taxonomies()
 {
     $taxonomy_list = array();

@@ -9,6 +9,7 @@ class WPURP_Custom_Templates extends WPURP_Addon {
         $this->load( 'template' );
         $this->load( 'block' );
 
+        $this->load( 'general/code' );
         $this->load( 'general/date' );
         $this->load( 'general/image' );
         $this->load( 'general/link' );

@@ -3,12 +3,12 @@
 Plugin Name: WP Ultimate Recipe
 Plugin URI: http://www.wpultimaterecipe.com
 Description: WP Ultimate Recipe is a user friendly plugin for adding recipes to any of your posts and pages.
-Version: 2.0.9
+Version: 2.0.10
 Author: Bootstrapped Ventures
 Author URI: http://bootstrapped.ventures
 License: GPLv2
 */
-define( 'WPURP_VERSION', '2.0.9' );
+define( 'WPURP_VERSION', '2.0.10' );
 
 class WPUltimateRecipe {
 
@@ -121,6 +121,7 @@ class WPUltimateRecipe {
         $this->helper( 'ajax' );
         $this->helper( 'activate' );
         $this->helper( 'admin_tour' );
+        $this->helper( 'compatibility' );
         $this->helper( 'notices' );
         $this->helper( 'permalinks_flusher' );
         $this->helper( 'plugin_action_link' );

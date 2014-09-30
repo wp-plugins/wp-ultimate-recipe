@@ -185,6 +185,13 @@ $admin_menu = array(
                                     'default' => '1',
                                 ),
                                 array(
+                                    'type' => 'toggle',
+                                    'name' => 'recipe_adjustable_servings_fractions',
+                                    'label' => __('Use Fractions', 'wp-ultimate-recipe'),
+                                    'description' => __( "Use fractions after adjusting, even if the original quantity wasn't one.", 'wp-ultimate-recipe' ),
+                                    'default' => '0',
+                                ),
+                                array(
                                     'type' => 'slider',
                                     'name' => 'recipe_default_servings',
                                     'label' => __('Default Servings', 'wp-ultimate-recipe'),
@@ -700,6 +707,30 @@ $admin_menu = array(
                             'step' => '1',
                             'default' => '1',
                         ),
+                        array(
+                            'type' => 'select',
+                            'name' => 'user_ratings_rounding',
+                            'label' => __('Rounding Ratings', 'wp-ultimate-recipe'),
+                            'description' => __( 'Round the ratings presented in the metadata.', 'wp-ultimate-recipe' ),
+                            'items' => array(
+                                array(
+                                    'value' => 'disabled',
+                                    'label' => __('Disabled', 'wp-ultimate-recipe'),
+                                ),
+                                array(
+                                    'value' => 'half',
+                                    'label' => __('Round up to nearest half', 'wp-ultimate-recipe'),
+                                ),
+                                array(
+                                    'value' => 'integer',
+                                    'label' => __('Round up to nearest integer', 'wp-ultimate-recipe'),
+                                ),
+                            ),
+                            'default' => array(
+                                'disabled',
+                            ),
+                            'validation' => 'required',
+                        ),
                     ),
                 ),
             ),
@@ -926,6 +957,13 @@ $admin_menu = array(
                     'label' => __('Email administrator', 'wp-ultimate-recipe'),
                     'description' => __( 'Send an email notification when a new recipe is submitted.', 'wp-ultimate-recipe' ),
                     'default' => '0',
+                ),
+                array(
+                    'type' => 'toggle',
+                    'name' => 'user_submission_restrict_media_access',
+                    'label' => __('Restrict Media Library Access', 'wp-ultimate-recipe'),
+                    'description' => __( 'Only show media library for editors and up', 'wp-ultimate-recipe' ),
+                    'default' => '1',
                 ),
             ),
         ),

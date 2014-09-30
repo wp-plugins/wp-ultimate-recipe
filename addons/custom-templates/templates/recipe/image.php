@@ -106,11 +106,11 @@ class WPURP_Template_Recipe_Image extends WPURP_Template_Block {
 ?>
 <div<?php echo $this->style( 'outer' ); ?>>
     <?php if( WPUltimateRecipe::option( 'recipe_images_clickable', '0' ) == 1 ) { ?>
-    <a href="<?php echo $full_image_url; ?>" rel="lightbox" title="<?php echo $recipe->title(); ?>">
-        <img src="<?php echo $image_url; ?>" title="<?php echo $recipe->title(); ?>"<?php echo $this->style(); ?> />
+    <a href="<?php echo $full_image_url; ?>" rel="lightbox" title="<?php echo esc_attr( $recipe->title() ); ?>">
+        <img src="<?php echo $image_url; ?>" title="<?php echo esc_attr( $recipe->title() ); ?>"<?php echo $this->style(); ?> />
     </a>
     <?php } else { ?>
-    <img src="<?php echo $image_url; ?>" title="<?php echo $recipe->title(); ?>"<?php echo $this->style(); ?> />
+    <img src="<?php echo $image_url; ?>" title="<?php echo esc_attr( $recipe->title() ); ?>"<?php echo $this->style(); ?> />
     <?php } ?>
 </div>
 <?php

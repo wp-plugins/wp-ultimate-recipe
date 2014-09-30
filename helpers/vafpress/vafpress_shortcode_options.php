@@ -26,7 +26,7 @@ $shortcode_generator = array(
                 ),
             ),
             'by_date' => array(
-                'title'   => __('Select a recipe to display', 'wp-ultimate-recipe') . ' (' . __('Ordered by date added', 'wp-ultimate-recipe') . ')',
+                'title'   => __('Select a recipe to display', 'wp-ultimate-recipe') . ' - ' . __('Ordered by date added', 'wp-ultimate-recipe'),
                 'code'    => '[ultimate-recipe]',
                 'attributes' => array(
                     array(
@@ -61,7 +61,7 @@ $shortcode_generator = array(
                 ),
             ),
             'by_title' => array(
-                'title'   => __('Select a recipe to display', 'wp-ultimate-recipe') . ' (' . __('Ordered by title', 'wp-ultimate-recipe') . ')',
+                'title'   => __('Select a recipe to display', 'wp-ultimate-recipe') . ' - ' . __('Ordered by title', 'wp-ultimate-recipe'),
                 'code'    => '[ultimate-recipe]',
                 'attributes' => array(
                     array(
@@ -91,6 +91,53 @@ $shortcode_generator = array(
                         ),
                         'default' => array(
                             'default',
+                        ),
+                    ),
+                ),
+            ),
+        ),
+    ),
+//=-=-=-=-=-=-= DISPLAY USER MENU =-=-=-=-=-=-=
+    __( 'Menus', 'wp-ultimate-recipe' ) => array(
+        'elements' => array(
+            'random' => array(
+                'title'   => __('Display a random menu', 'wp-ultimate-recipe') . ' (' . __('WP Ultimate Recipe Premium only', 'wp-ultimate-recipe'). ')',
+                'code'    => '[ultimate-recipe-menu id="random"]'
+            ),
+            'by_date' => array(
+                'title'   => __('Select a menu to display', 'wp-ultimate-recipe') . ' - ' . __('Ordered by date added', 'wp-ultimate-recipe') . ' (' . __('WP Ultimate Recipe Premium only', 'wp-ultimate-recipe'). ')',
+                'code'    => '[ultimate-recipe-menu]',
+                'attributes' => array(
+                    array(
+                        'type' => 'select',
+                        'name' => 'id',
+                        'label' => __('Menu', 'wp-ultimate-recipe'),
+                        'items' => array(
+                            'data' => array(
+                                array(
+                                    'source' => 'function',
+                                    'value' => 'wpurp_shortcode_generator_menus_by_date',
+                                ),
+                            ),
+                        ),
+                    ),
+                ),
+            ),
+            'by_title' => array(
+                'title'   => __('Select a menu to display', 'wp-ultimate-recipe') . ' - ' . __('Ordered by title', 'wp-ultimate-recipe') . ' (' . __('WP Ultimate Recipe Premium only', 'wp-ultimate-recipe'). ')',
+                'code'    => '[ultimate-recipe-menu]',
+                'attributes' => array(
+                    array(
+                        'type' => 'select',
+                        'name' => 'id',
+                        'label' => __('Menu', 'wp-ultimate-recipe'),
+                        'items' => array(
+                            'data' => array(
+                                array(
+                                    'source' => 'function',
+                                    'value' => 'wpurp_shortcode_generator_menus_by_title',
+                                ),
+                            ),
                         ),
                     ),
                 ),

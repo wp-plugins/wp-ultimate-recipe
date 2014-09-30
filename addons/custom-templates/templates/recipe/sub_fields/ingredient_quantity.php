@@ -15,7 +15,9 @@ class WPURP_Template_Recipe_Ingredient_Quantity extends WPURP_Template_Block {
 
         $output = $this->before_output();
 
-        $fraction = strpos( $args['ingredient_quantity'], '/' ) === false ? false : true;
+        $fraction = WPUltimateRecipe::option('recipe_adjustable_servings_fractions', '0') == '1' ? true : false;
+        $fraction = strpos( $args['ingredient_quantity'], '/' ) === false ? $fraction : true;
+
         $output .= '<span data-normalized="' . $args['ingredient_quantity_normalized'] . '" data-fraction="' . $fraction . '" data-original="' . $args['ingredient_quantity'] . '"' . $this->style() . '>' . $args['ingredient_quantity'] . '</span>';
 
         return $this->after_output( $output, $recipe );

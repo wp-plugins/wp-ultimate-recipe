@@ -47,7 +47,46 @@ class WPURP_Template_Container extends WPURP_Template_Block {
     foreach( $recipe->instructions() as $instruction ) {
         echo '<meta itemprop="recipeInstructions" content="' . esc_attr( $instruction['description'] ) . '">';
     }
-    ?>
+
+    // Ratings metadata
+    $show_rating = false;
+    $count = null;
+    $rating = null;
+
+    // Check user ratings
+    if( WPUltimateRecipe::is_addon_active( 'user-ratings' ) && WPUltimateRecipe::option( 'user_ratings_enable', 'everyone' ) != 'disabled' ) {
+        $rating_data = WPURP_User_Ratings::get_recipe_rating( $recipe->ID() );
+
+        $count = $rating_data['votes'];
+        $rating = $rating_data['rating'];
+
+        // Optional rounding
+        $rounding = WPUltimateRecipe::option( 'user_ratings_rounding', 'disabled' );
+
+        if( $rounding == 'half' ) {
+            $rating = ceil( $rating * 2 ) / 2;
+        } else if ( $rounding == 'integer' ) {
+            $rating = ceil( $rating );
+        }
+
+        // Do we have the minimum # of votes?
+        $minimum_votes = intval( WPUltimateRecipe::option( 'user_ratings_minimum_votes', '1' ) );
+        $show_rating = $count >= $minimum_votes ? true : false;
+    }
+
+    // Use the author rating if we don't already have a rating to display
+    if( !$show_rating ) {
+        $count = 1;
+        $rating = $recipe->rating_author();
+        if( $rating != 0 ) $show_rating = true;
+    }
+
+    if( $show_rating ) { ?>
+    <div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+        <meta itemprop="ratingValue" content="<?php echo $rating; ?>">
+        <meta itemprop="reviewCount" content="<?php echo $count; ?>">
+    </div>
+    <?php } ?>
 
     <?php $this->output_children( $recipe, 0, 0, $args ) ?>
 </div>

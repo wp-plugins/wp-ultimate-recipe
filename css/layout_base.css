@@ -34,39 +34,39 @@ html body .wpurp-container {
     font-size: inherit;
     line-height: 1.4;
     font-weight: normal; }
-  html body .wpurp-container .wpurp-recipe-notes h1 {
+  html body .wpurp-container .wpurp-recipe-notes h1, html body .wpurp-container .wpurp-paragraph h1 {
     font-size: 2em;
     margin: 0.67em 0; }
-  html body .wpurp-container .wpurp-recipe-notes h2 {
+  html body .wpurp-container .wpurp-recipe-notes h2, html body .wpurp-container .wpurp-paragraph h2 {
     font-size: 1.5em;
     margin: 0.83em 0; }
-  html body .wpurp-container .wpurp-recipe-notes h3 {
+  html body .wpurp-container .wpurp-recipe-notes h3, html body .wpurp-container .wpurp-paragraph h3 {
     font-size: 1.17em;
     margin: 1em 0; }
-  html body .wpurp-container .wpurp-recipe-notes h4 {
+  html body .wpurp-container .wpurp-recipe-notes h4, html body .wpurp-container .wpurp-paragraph h4 {
     font-size: 1em;
     margin: 1.33em 0; }
-  html body .wpurp-container .wpurp-recipe-notes h5 {
+  html body .wpurp-container .wpurp-recipe-notes h5, html body .wpurp-container .wpurp-paragraph h5 {
     font-size: 0.83em;
     margin: 1.67em 0; }
-  html body .wpurp-container .wpurp-recipe-notes h6 {
+  html body .wpurp-container .wpurp-recipe-notes h6, html body .wpurp-container .wpurp-paragraph h6 {
     font-size: 0.75em;
     margin: 2.33em 0; }
-  html body .wpurp-container .wpurp-recipe-notes p, html body .wpurp-container .wpurp-recipe-notes pre {
+  html body .wpurp-container .wpurp-recipe-notes p, html body .wpurp-container .wpurp-recipe-notes pre, html body .wpurp-container .wpurp-paragraph p, html body .wpurp-container .wpurp-paragraph pre {
     margin: 1em 0; }
-  html body .wpurp-container .wpurp-recipe-notes code, html body .wpurp-container .wpurp-recipe-notes kbd, html body .wpurp-container .wpurp-recipe-notes pre, html body .wpurp-container .wpurp-recipe-notes samp {
+  html body .wpurp-container .wpurp-recipe-notes code, html body .wpurp-container .wpurp-recipe-notes kbd, html body .wpurp-container .wpurp-recipe-notes pre, html body .wpurp-container .wpurp-recipe-notes samp, html body .wpurp-container .wpurp-paragraph code, html body .wpurp-container .wpurp-paragraph kbd, html body .wpurp-container .wpurp-paragraph pre, html body .wpurp-container .wpurp-paragraph samp {
     font-family: monospace, serif;
     _font-family: 'courier new', monospace;
     font-size: 1em; }
-  html body .wpurp-container .wpurp-recipe-notes blockquote {
+  html body .wpurp-container .wpurp-recipe-notes blockquote, html body .wpurp-container .wpurp-paragraph blockquote {
     margin: 1em 40px; }
-  html body .wpurp-container .wpurp-recipe-notes b, html body .wpurp-container .wpurp-recipe-notes strong {
+  html body .wpurp-container .wpurp-recipe-notes b, html body .wpurp-container .wpurp-recipe-notes strong, html body .wpurp-container .wpurp-paragraph b, html body .wpurp-container .wpurp-paragraph strong {
     font-weight: bold; }
-  html body .wpurp-container .wpurp-recipe-notes dl, html body .wpurp-container .wpurp-recipe-notes menu, html body .wpurp-container .wpurp-recipe-notes ol, html body .wpurp-container .wpurp-recipe-notes ul {
+  html body .wpurp-container .wpurp-recipe-notes dl, html body .wpurp-container .wpurp-recipe-notes menu, html body .wpurp-container .wpurp-recipe-notes ol, html body .wpurp-container .wpurp-recipe-notes ul, html body .wpurp-container .wpurp-paragraph dl, html body .wpurp-container .wpurp-paragraph menu, html body .wpurp-container .wpurp-paragraph ol, html body .wpurp-container .wpurp-paragraph ul {
     margin: 1em 0; }
-  html body .wpurp-container .wpurp-recipe-notes dd {
+  html body .wpurp-container .wpurp-recipe-notes dd, html body .wpurp-container .wpurp-paragraph dd {
     margin: 0 0 0 40px; }
-  html body .wpurp-container .wpurp-recipe-notes menu, html body .wpurp-container .wpurp-recipe-notes ol, html body .wpurp-container .wpurp-recipe-notes ul {
+  html body .wpurp-container .wpurp-recipe-notes menu, html body .wpurp-container .wpurp-recipe-notes ol, html body .wpurp-container .wpurp-recipe-notes ul, html body .wpurp-container .wpurp-paragraph menu, html body .wpurp-container .wpurp-paragraph ol, html body .wpurp-container .wpurp-paragraph ul {
     padding: 0 0 0 40px; }
   html body .wpurp-container table {
     border-collapse: collapse;
