@@ -2,10 +2,13 @@
 
 class WPURP_Recipe_Meta_Box {
 
+    private $buttons_added = false;
+
     public function __construct()
     {
         add_action( 'admin_init', array( $this, 'add_recipe_meta_box' ));
         add_action( 'admin_menu', array( $this, 'remove_recipe_meta_boxes' ));
+        add_action( 'media_buttons_context',  array( $this, 'add_shortcode_button' ) );
 
         WPUltimateRecipe::get()->helper('assets')->add(
             array(
@@ -28,6 +31,22 @@ class WPURP_Recipe_Meta_Box {
                 )
             )
         );
+    }
+
+    public function add_shortcode_button( $context )
+    {
+        $screen = get_current_screen();
+
+        if( $screen->id == 'recipe' && !$this->buttons_added ) {
+            $context .= '<a href="#" id="insert-recipe-shortcode" class="button" data-editor="content" title="Add Recipe Box">';
+            $context .= __( 'Add Recipe Box', 'wp-ultimate-recipe' );
+            $context .= '</a>';
+
+            // Prevent adding buttons to other TinyMCE instances on the recipe edit page
+            $this->buttons_added = true;
+        }
+
+        return $context;
     }
 
     public function add_recipe_meta_box()

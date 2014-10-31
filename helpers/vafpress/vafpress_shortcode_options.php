@@ -97,6 +97,101 @@ $shortcode_generator = array(
             ),
         ),
     ),
+//=-=-=-=-=-=-= NUTRITION LABEL =-=-=-=-=-=-=
+    __( 'Nutrition Label', 'wp-ultimate-recipe' ) => array(
+        'elements' => array(
+            'by_date' => array(
+                'title'   => __('Select a recipe to display', 'wp-ultimate-recipe') . ' - ' . __('Ordered by date added', 'wp-ultimate-recipe'),
+                'code'    => '[ultimate-nutrition-label]',
+                'attributes' => array(
+                    array(
+                        'type' => 'select',
+                        'name' => 'id',
+                        'label' => __('Recipe', 'wp-ultimate-recipe'),
+                        'items' => array(
+                            'data' => array(
+                                array(
+                                    'source' => 'function',
+                                    'value' => 'wpurp_shortcode_generator_recipes_by_date',
+                                ),
+                            ),
+                        ),
+                    ),
+                    array(
+                        'type' => 'select',
+                        'name' => 'align',
+                        'label' => __('Alignment', 'wp-ultimate-recipe'),
+                        'items' => array(
+                            array(
+                                'value' => 'left',
+                                'label' => __('Left', 'wp-ultimate-recipe'),
+                            ),
+                            array(
+                                'value' => 'center',
+                                'label' => __('Center', 'wp-ultimate-recipe'),
+                            ),
+                            array(
+                                'value' => 'right',
+                                'label' => __('Right', 'wp-ultimate-recipe'),
+                            ),
+                            array(
+                                'value' => 'inline',
+                                'label' => __('Inline', 'wp-ultimate-recipe'),
+                            ),
+                        ),
+                        'default' => array(
+                            'left',
+                        ),
+                    ),
+                ),
+            ),
+            'by_title' => array(
+                'title'   => __('Select a recipe to display', 'wp-ultimate-recipe') . ' - ' . __('Ordered by title', 'wp-ultimate-recipe'),
+                'code'    => '[ultimate-nutrition-label]',
+                'attributes' => array(
+                    array(
+                        'type' => 'select',
+                        'name' => 'id',
+                        'label' => __('Recipe', 'wp-ultimate-recipe'),
+                        'items' => array(
+                            'data' => array(
+                                array(
+                                    'source' => 'function',
+                                    'value' => 'wpurp_shortcode_generator_recipes_by_title',
+                                ),
+                            ),
+                        ),
+                    ),
+                    array(
+                        'type' => 'select',
+                        'name' => 'align',
+                        'label' => __('Alignment', 'wp-ultimate-recipe'),
+                        'items' => array(
+                            array(
+                                'value' => 'left',
+                                'label' => __('Left', 'wp-ultimate-recipe'),
+                            ),
+                            array(
+                                'value' => 'center',
+                                'label' => __('Center', 'wp-ultimate-recipe'),
+                            ),
+                            array(
+                                'value' => 'right',
+                                'label' => __('Right', 'wp-ultimate-recipe'),
+                            ),
+                            array(
+                                'value' => 'inline',
+                                'label' => __('Inline', 'wp-ultimate-recipe'),
+                            ),
+                        ),
+                        'default' => array(
+                            'left',
+                        ),
+                    ),
+                ),
+            ),
+        ),
+    ),
 //=-=-=-=-=-=-= DISPLAY USER MENU =-=-=-=-=-=-=
     __( 'Menus', 'wp-ultimate-recipe' ) => array(
         'elements' => array(

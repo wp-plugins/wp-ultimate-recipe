@@ -1,0 +1,33 @@
+// Badge
+.wpurp-badge {
+    background: #ffffff url(../img/icon_128.png) no-repeat;
+    background-position: center 20px;
+    -webkit-background-size: 128px 128px;
+    background-size: 128px 128px;
+    color: #333;
+    font-size: 14px;
+    text-align: center;
+    font-weight: 600;
+    margin: 5px 0 0;
+    padding-top: 155px;
+    height: 25px;
+    display: inline-block;
+    width: 150px;
+    text-rendering: optimizeLegibility;
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.about-wrap .wpurp-badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+@media only screen and (max-width: 500px) {
+    .about-wrap .wpurp-badge {
+        position: relative;
+        margin-bottom: 1.5em;
+        width: 100%;
+    }
+}

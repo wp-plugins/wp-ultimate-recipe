@@ -1,5 +1,5 @@
-<div class="updated" id="wpurp_drip_form">
-    <div id="wpurp_drip_form_dismiss">
+<div class="updated wpurp_notice" id="wpurp_drip_form">
+    <div class="wpurp_notice_dismiss">
         <a href="<?php echo esc_url( add_query_arg( array('wpurp_hide_notice' => wp_create_nonce( 'wpurp_hide_notice' ) ) ) ); ?>" onclick="return confirm('<?php _e( 'Are you sure you want to dismiss this notice? (Make sure you have saved your changes first!)', 'wp-ultimate-recipe' ); ?>');"> <?php _e( 'Hide this message', 'wp-ultimate-recipe' ); ?></a>
     </div>
     <form action="https://www.getdrip.com/3837532/campaigns/1387761/subscribe" method="post" target="_blank" data-drip-embedded-form="359">

@@ -1,0 +1,21 @@
+<wpml-config>
+    <custom-types>
+        <custom-type translate="1">recipe</custom-type>
+    </custom-types>    
+    <taxonomies>
+        <taxonomy translate="1">ingredient</taxonomy>
+        <taxonomy translate="1">course</taxonomy>
+        <taxonomy translate="1">cuisine</taxonomy>
+        <taxonomy translate="0">rating</taxonomy>
+    </taxonomies>
+    <admin-texts>
+        <key name="wpurp_option">
+            <key name="print_template_title_text" />
+            <key name="unit_conversion_system_1" />
+            <key name="unit_conversion_system_2" />
+            <key name="unit_conversion_system_3" />
+            <key name="unit_conversion_system_4" />
+            <key name="unit_conversion_system_5" />
+        </key>
+    </admin-texts>
+</wpml-config>

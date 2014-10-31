@@ -148,10 +148,10 @@ class WPURP_Template_Recipe_Instructions extends WPURP_Template_Block {
 
                 if( WPUltimateRecipe::option( 'recipe_images_clickable', '0' ) == 1 ) {
                     $out .= '<a href="' . $full_img_url . '" rel="lightbox" title="' . esc_attr( $instruction['description'] ) . '">';
-                    $out .= '<img src="' . $thumb_url . '" title="' . esc_attr( $instruction['description'] ) . '"' . $this->style('img') . '/>';
+                    $out .= '<img src="' . $thumb_url . '" alt="' . esc_attr( get_post_meta( $instruction['image'], '_wp_attachment_image_alt', true) ) . '" title="' . esc_attr( get_the_title( $instruction['image'] ) ) . '"' . $this->style('img') . '/>';
                     $out .= '</a>';
                 } else {
-                    $out .= '<img src="' . $thumb_url . '" title="' . esc_attr( $instruction['description'] ) . '"' . $this->style('img') . '/>';
+                    $out .= '<img src="' . $thumb_url . '" alt="' . esc_attr( get_post_meta( $instruction['image'], '_wp_attachment_image_alt', true) ) . '" title="' . esc_attr( get_the_title( $instruction['image'] ) ) . '/>';
                 }
             }
 

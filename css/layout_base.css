@@ -34,6 +34,10 @@ html body .wpurp-container {
     font-size: inherit;
     line-height: 1.4;
     font-weight: normal; }
+  html body .wpurp-container b, html body .wpurp-container strong {
+    font-weight: bold; }
+  html body .wpurp-container hr {
+    background-color: #ccc !important; }
   html body .wpurp-container .wpurp-recipe-notes h1, html body .wpurp-container .wpurp-paragraph h1 {
     font-size: 2em;
     margin: 0.67em 0; }
@@ -68,6 +72,8 @@ html body .wpurp-container {
     margin: 0 0 0 40px; }
   html body .wpurp-container .wpurp-recipe-notes menu, html body .wpurp-container .wpurp-recipe-notes ol, html body .wpurp-container .wpurp-recipe-notes ul, html body .wpurp-container .wpurp-paragraph menu, html body .wpurp-container .wpurp-paragraph ol, html body .wpurp-container .wpurp-paragraph ul {
     padding: 0 0 0 40px; }
+  html body .wpurp-container .wpurp-recipe-notes .aligncenter, html body .wpurp-container .wpurp-paragraph .aligncenter {
+    margin: 0 auto; }
   html body .wpurp-container table {
     border-collapse: collapse;
     width: 100%; }

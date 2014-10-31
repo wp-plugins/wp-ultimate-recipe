@@ -32,6 +32,7 @@ class WPURP_Custom_Templates extends WPURP_Addon {
         $this->load( 'recipe/instructions' );
         $this->load( 'recipe/link' );
         $this->load( 'recipe/notes' );
+        $this->load( 'recipe/nutrition' );
         $this->load( 'recipe/passive_time' );
         $this->load( 'recipe/passive_time_text' );
         $this->load( 'recipe/prep_time' );
@@ -119,6 +120,9 @@ class WPURP_Custom_Templates extends WPURP_Addon {
                 case 'print':
                     $default_template = WPUltimateRecipe::option( 'recipe_template_print_template', 1 );
                     break;
+                case 'user_menus':
+                    $default_template = WPUltimateRecipe::option( 'user_menus_recipe_print_template', 1 );
+                    break;
                 case 'grid':
                     $default_template = WPUltimateRecipe::option( 'recipe_template_recipegrid_template', 2 );
                     break;
@@ -140,6 +144,7 @@ class WPURP_Custom_Templates extends WPURP_Addon {
 
     public function ajax_get_recipe_template()
     {
+        // Print Template
         if( check_ajax_referer( 'wpurp_print', 'security', false ) )
         {
             $recipe_id = intval( $_POST['recipe_id'] );
@@ -152,12 +157,51 @@ class WPURP_Custom_Templates extends WPURP_Addon {
                 $fonts = 'http://fonts.googleapis.com/css?family=' . implode( '|', $template->fonts );
             }
 
+            $template_string = do_shortcode( $template->output_string( $recipe ) );
+
             $data = array(
-                'output' => apply_filters( 'wpurp_output_recipe_print', $template->output_string( $recipe ), $recipe ),
+                'output' => apply_filters( 'wpurp_output_recipe_print', $template_string, $recipe ),
                 'fonts' => $fonts
             );
 
             echo json_encode( $data );
+        }
+
+        // User Menus Template
+        if( check_ajax_referer( 'wpurp_user_menus', 'security', false ) )
+        {
+            $recipe_ids = $_POST['recipe_ids'];
+
+            $templates = array();
+            $fonts = false;
+
+            foreach( $recipe_ids as $recipe_id ) {
+                $recipe_id = intval( $recipe_id );
+
+                $recipe = new WPURP_Recipe( $recipe_id );
+
+                $template = $this->get_template( 'user_menus', 'default' );
+
+                if( isset( $template->fonts ) && count( $template->fonts ) > 0 ) {
+                    if( !$fonts ) {
+                        $fonts = array();
+                    }
+
+                    $fonts = array_merge( $fonts, $template->fonts );
+                }
+
+                $templates[] = apply_filters( 'wpurp_output_recipe_print_user_menus', $template->output_string( $recipe ), $recipe );
+            }
+
+            if( $fonts ) {
+                $fonts = array_unique( $fonts );
+                $fonts = 'http://fonts.googleapis.com/css?family=' . implode( '|', $fonts );
+            }
+
+            echo json_encode( array(
+                'templates' => $templates,
+                'fonts' => $fonts,
+            ) );
         }
 
         die();

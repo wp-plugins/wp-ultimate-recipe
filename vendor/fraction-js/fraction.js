@@ -1,28 +1,28 @@
 /*
-fraction.js
-A Javascript fraction library.
+ fraction.js
+ A Javascript fraction library.
 
-Copyright (c) 2009  Erik Garrison <erik@hypervolu.me>
+ Copyright (c) 2009  Erik Garrison <erik@hypervolu.me>
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
 
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
+ The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ THE SOFTWARE.
 
-*/
+ */
 
 
 /* Fractions */
@@ -72,7 +72,7 @@ THE SOFTWARE.
 Fraction = function(numerator, denominator)
 {
     /* double argument invocation */
-    if (numerator && denominator) {
+    if (typeof numerator !== 'undefined' && denominator) {
         if (typeof(numerator) === 'number' && typeof(denominator) === 'number') {
             this.numerator = numerator;
             this.denominator = denominator;
@@ -83,19 +83,18 @@ Fraction = function(numerator, denominator)
             this.numerator = parseInt(numerator);
             this.denominator = parseInt(denominator);
         }
-    /* single-argument invocation */
-    } else if (!denominator) {
+        /* single-argument invocation */
+    } else if (typeof denominator === 'undefined') {
         num = numerator; // swap variable names for legibility
         if (typeof(num) === 'number') {  // just a straight number init
             this.numerator = num;
             this.denominator = 1;
         } else if (typeof(num) === 'string') {
             var a, b;  // hold the first and second part of the fraction, e.g. a = '1' and b = '2/3' in 1 2/3
-                       // or a = '2/3' and b = undefined if we are just passed a single-part number
-                       
-            var t = num.split(' ');
-            a = t[0], b = t[1];
-            
+            // or a = '2/3' and b = undefined if we are just passed a single-part number
+            var arr = num.split(' ')
+            if (arr[0]) a = arr[0]
+            if (arr[1]) b = arr[1]
             /* compound fraction e.g. 'A B/C' */
             //  if a is an integer ...
             if (a % 1 === 0 && b && b.match('/')) {
@@ -106,10 +105,10 @@ Fraction = function(numerator, denominator)
                     // it's not a whole number... it's actually a fraction without a whole part written
                     var f = a.split('/');
                     this.numerator = f[0]; this.denominator = f[1];
-                /* string floating point */
+                    /* string floating point */
                 } else if (typeof(a) === 'string' && a.match('\.')) {
                     return new Fraction(parseFloat(a));
-                /* whole number e.g. 'A' */
+                    /* whole number e.g. 'A' */
                 } else { // just passed a whole number as a string
                     this.numerator = parseInt(a);
                     this.denominator = 1;
@@ -132,14 +131,17 @@ Fraction.prototype.clone = function()
 /* pretty-printer, converts fractions into whole numbers and fractions */
 Fraction.prototype.toString = function()
 {
-    var wholepart = Math.floor(this.numerator / this.denominator);
-    var numerator = this.numerator % this.denominator 
+    if (this.denominator==='NaN') return 'NaN'
+    var wholepart = (this.numerator/this.denominator>0) ?
+        Math.floor(this.numerator / this.denominator) :
+        Math.ceil(this.numerator / this.denominator)
+    var numerator = this.numerator % this.denominator
     var denominator = this.denominator;
     var result = [];
-    if (wholepart != 0) 
+    if (wholepart != 0)
         result.push(wholepart);
-    if (numerator != 0)  
-        result.push(numerator + '/' + denominator);
+    if (numerator != 0)
+        result.push(((wholepart===0) ? numerator : Math.abs(numerator)) + '/' + denominator);
     return result.length > 0 ? result.join(' ') : 0;
 }
 
@@ -242,13 +244,13 @@ Fraction.prototype.normalize = (function()
 
     var isFloat = function(n)
     {
-        return (typeof(n) === 'number' && 
-                ((n > 0 && n % 1 > 0 && n % 1 < 1) || 
-                 (n < 0 && n % -1 < 0 && n % -1 > -1))
-               );
+        return (typeof(n) === 'number' &&
+            ((n > 0 && n % 1 > 0 && n % 1 < 1) ||
+                (n < 0 && n % -1 < 0 && n % -1 > -1))
+            );
     }
 
-    var roundToPlaces = function(n, places) 
+    var roundToPlaces = function(n, places)
     {
         if (!places) {
             return Math.round(n);
@@ -257,7 +259,7 @@ Fraction.prototype.normalize = (function()
             return Math.round(n*scalar)/scalar;
         }
     }
-        
+
     return (function() {
 
         // XXX hackish.  Is there a better way to address this issue?
@@ -273,10 +275,16 @@ Fraction.prototype.normalize = (function()
             this.denominator = Math.round(this.denominator * scaleup); // this !!! should be a whole number
             //this.numerator *= scaleup;
             this.numerator *= scaleup;
-        } 
+        }
         if (isFloat(this.numerator)) {
             var rounded = roundToPlaces(this.numerator, 9);
-            var scaleup = Math.pow(10, rounded.toString().split('.')[1].length);
+            var split = rounded.toString().split('.');
+
+            var scaleup = 0;
+            if(split[1] !== undefined) {
+                scaleup = Math.pow(10, split[1].length);
+            }
+
             this.numerator = Math.round(this.numerator * scaleup); // this !!! should be a whole number
             //this.numerator *= scaleup;
             this.denominator *= scaleup;
@@ -305,8 +313,8 @@ Fraction.gcf = function(a, b)
     // for each factor in fa
     // if it's also in fb
     // put it into the common factors
-    fa.forEach(function (factor) 
-    { 
+    fa.forEach(function (factor)
+    {
         var i = fb.indexOf(factor);
         if (i >= 0) {
             common_factors.push(factor);
@@ -334,7 +342,7 @@ Fraction.gcf = function(a, b)
 
 // Adapted from: 
 // http://www.btinternet.com/~se16/js/factor.htm
-Fraction.primeFactors = function(n) 
+Fraction.primeFactors = function(n)
 {
 
     var num = Math.abs(n);
@@ -342,9 +350,9 @@ Fraction.primeFactors = function(n)
     var _factor = 2;  // first potential prime factor
 
     while (_factor * _factor <= num)  // should we keep looking for factors?
-    {      
-      if (num % _factor === 0)  // this is a factor
-        { 
+    {
+        if (num % _factor === 0)  // this is a factor
+        {
             factors.push(_factor);  // so keep it
             num = num/_factor;  // and divide our search point by it
         }

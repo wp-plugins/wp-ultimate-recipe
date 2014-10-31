@@ -10,7 +10,6 @@ class WPURP_Vafpress_Menu {
             array(
                 'file' => WPUltimateRecipe::get()->coreUrl . '/css/admin_settings.css',
                 'display' => 'admin',
-                'page' => 'recipe_settings',
             )
         );
     }

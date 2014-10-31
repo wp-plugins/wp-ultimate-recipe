@@ -85,6 +85,11 @@ class WPURP_Recipe_Save {
                 if ( isset( $new ) && $new != $old )
                 {
                     update_post_meta( $recipe->ID(), $field, $new );
+
+                    if( $field == 'recipe_ingredients' && WPUltimateRecipe::is_addon_active( 'nutritional-information' ) ) {
+                        $notice = '<strong>' . $_POST['recipe_title'] . ':</strong> <a href="'.admin_url( 'edit.php?post_type=recipe&page=wpurp_nutritional_information&limit_by_recipe=' . $recipe->ID() ).'">'. __( 'Update the Nutritional Information', 'wp-ultimate-recipe') .'</a>';
+                        WPUltimateRecipe::get()->helper( 'notices' )->add_admin_notice( $notice );
+                    }
                 }
                 elseif ( $new == '' && $old )
                 {

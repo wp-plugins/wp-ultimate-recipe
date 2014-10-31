@@ -20,7 +20,7 @@ class WPURP_Recipe_Content {
 
             $recipe = new WPURP_Recipe( get_post() );
 
-            if ( is_single() || is_feed() || WPUltimateRecipe::option( 'recipe_archive_display', 'excerpt' ) == 'full' )
+            if ( is_single() || WPUltimateRecipe::option( 'recipe_archive_display', 'excerpt' ) == 'full' || ( is_feed() && WPUltimateRecipe::option( 'recipe_template_rss_feed_recipe_posts', 'excerpt' ) == 'full' ) )
             {
                 $taxonomies = WPUltimateRecipe::get()->tags();
                 unset($taxonomies['ingredient']);

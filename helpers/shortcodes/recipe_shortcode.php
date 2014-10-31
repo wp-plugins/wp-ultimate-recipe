@@ -28,7 +28,7 @@ class WPURP_Recipe_Shortcode {
             $recipe_post = get_post( intval( $options['id'] ) );
         }
 
-        if( !is_null( $recipe_post ) && $recipe_post->post_type == 'recipe' )
+        if( !is_null( $recipe_post ) && $recipe_post->post_type == 'recipe' && ( !is_feed() || WPUltimateRecipe::option( 'recipe_template_rss_feed_shortcode', '1' ) == '1' ) )
         {
             $recipe = new WPURP_Recipe( $recipe_post );
 

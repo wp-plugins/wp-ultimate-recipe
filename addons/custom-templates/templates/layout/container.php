@@ -23,7 +23,7 @@ class WPURP_Template_Container extends WPURP_Template_Block {
 
         ob_start();
 ?>
-<div itemscope itemtype="http://schema.org/Recipe" data-servings-original="<?php echo $recipe->servings_normalized(); ?>"<?php echo $this->style(); ?>>
+<div itemscope itemtype="http://schema.org/Recipe" id="wpurp-container-recipe-<?php echo $recipe->ID(); ?>" data-servings-original="<?php echo $recipe->servings_normalized(); ?>"<?php echo $this->style(); ?>>
     <meta itemprop="author" content="<?php echo esc_attr( $recipe->author() ); ?>">
     <meta itemprop="datePublished" content="<?php echo esc_attr( $recipe->date() ); ?>">
     <meta itemprop="image" content="<?php echo esc_attr( $recipe->image_url( 'full' ) ); ?>">
@@ -87,6 +87,48 @@ class WPURP_Template_Container extends WPURP_Template_Block {
         <meta itemprop="reviewCount" content="<?php echo $count; ?>">
     </div>
     <?php } ?>
+
+    <?php
+    // Nutritional Metadata
+    if( WPUltimateRecipe::is_addon_active( 'nutritional-information' ) ) {
+        echo '<div itemprop="nutrition" itemscope itemtype="http://schema.org/NutritionInformation">';
+
+        $nutritional = $recipe->nutritional();
+
+        $mapping = array(
+            'calories' => 'calories',
+            'fat' => 'fatContent',
+            'saturated_fat' => 'saturatedFatContent',
+            'unsaturated_fat' => 'unsaturatedFatContent',
+            'trans_fat' => 'transFatContent',
+            'carbohydrate' => 'carbohydrateContent',
+            'sugar' => 'sugarContent',
+            'fiber' => 'fiberContent',
+            'protein' => 'proteinContent',
+            'cholesterol' => 'cholesterolContent',
+            'sodium' => 'sodiumContent',
+        );
+
+        // Unsaturated Fat = mono + poly
+        if( isset( $nutritional['monounsaturated_fat'] ) && $nutritional['monounsaturated_fat'] !== '' ) {
+            $nutritional['unsaturated_fat'] = floatval( $nutritional['monounsaturated_fat'] );
+        }
+
+        if( isset( $nutritional['polyunsaturated_fat'] ) && $nutritional['polyunsaturated_fat'] !== '' ) {
+            $mono = isset( $nutritional['unsaturated_fat'] ) ? $nutritional['unsaturated_fat'] : 0;
+            $nutritional['unsaturated_fat'] = $mono + floatval( $nutritional['polyunsaturated_fat'] );
+        }
+
+        // Output metadata
+        foreach( $mapping as $field => $meta_field ) {
+            if( isset( $nutritional[$field] ) && $nutritional[$field] !== '' ) {
+                echo '<meta itemprop="' . $meta_field . '" content="' . floatval( $nutritional[$field] ). '">';
+            }
+        }
+
+        echo '</div>';
+    }
+    ?>
 
     <?php $this->output_children( $recipe, 0, 0, $args ) ?>
 </div>

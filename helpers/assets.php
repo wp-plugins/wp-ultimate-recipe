@@ -40,7 +40,7 @@ class WPURP_Assets {
             array(
                 'file' => WPUltimateRecipe::get()->coreUrl . '/vendor/fraction-js/fraction.js',
                 'name' => 'fraction',
-                'display' => 'public',
+                'display' => 'all',
             ),
             array(
                 'file' => WPUltimateRecipe::get()->coreUrl . '/js/adjustable_servings.js',

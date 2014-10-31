@@ -2,6 +2,27 @@
 jQuery(document).ready(function() {
 
     /*
+     * Add shortcode buttons
+     */
+    jQuery('#insert-recipe-shortcode').on('click', function(){
+        wpurp_add_to_editor('[recipe]');
+    });
+
+    jQuery('#insert-nutrition-shortcode').on('click', function(){
+        wpurp_add_to_editor('[nutrition-label]');
+    });
+
+    function wpurp_add_to_editor(text) {
+        if( !tinyMCE.activeEditor || tinyMCE.activeEditor.isHidden()) {
+            var current = jQuery('textarea#content').val();
+            jQuery('textarea#content').val(current + text);
+        } else {
+            tinyMCE.execCommand('mceInsertContent', false, text);
+        }
+    }
+
+
+    /*
      * Do not allow removal of first ingredient/instruction
      */
     jQuery('#recipe-ingredients tr.ingredient:first').find('span.ingredients-delete').hide();

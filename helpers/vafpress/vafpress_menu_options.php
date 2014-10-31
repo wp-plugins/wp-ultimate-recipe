@@ -4,36 +4,16 @@ $unit_helper = WPUltimateRecipe::get()->helper('ingredient_units');
 $conversion_units_admin = $unit_helper->get_unit_admin_settings();
 $unit_systems_admin = $unit_helper->get_unit_system_admin_settings();
 
-$template_editor_button = WPUltimateRecipe::is_addon_active( 'template-editor' ) ? 'recipe_template_open_template_editor_active' : 'recipe_template_open_template_editor_disabled';
-$custom_fields_button = WPUltimateRecipe::is_addon_active( 'custom-fields' ) ? 'recipe_fields_manage_custom_active' : 'recipe_fields_manage_custom_disabled';
+// Include site URL hash in HTML settings to update when site URL changes
+$sitehash = base64_encode( admin_url() );
+
+$template_editor_button = WPUltimateRecipe::is_addon_active( 'template-editor' ) ? 'recipe_template_open_template_editor_active' . $sitehash : 'recipe_template_open_template_editor_disabled';
+$custom_fields_button = WPUltimateRecipe::is_addon_active( 'custom-fields' ) ? 'recipe_fields_manage_custom_active' . $sitehash : 'recipe_fields_manage_custom_disabled';
 
 $admin_menu = array(
     'title' => 'WP Ultimate Recipe ' . __('Settings', 'wp-ultimate-recipe'),
-    'logo'  => WPUltimateRecipe::get()->coreUrl . '/img/logo.png',
+    'logo'  => WPUltimateRecipe::get()->coreUrl . '/img/icon_100.png',
     'menus' => array(
-//=-=-=-=-=-=-= LATEST NEWS =-=-=-=-=-=-=
-        array(
-            'title' => __('Latest News', 'wp-ultimate-recipe'),
-            'name' => 'latest_news',
-            'icon' => 'font-awesome:fa-comments-o',
-            'controls' => array(
-                array(
-                    'type' => 'section',
-                    'title' => __('Changelog', 'wp-ultimate-recipe'),
-                    'name' => 'section_changelog',
-                    'fields' => array(
-                        array(
-                            'type' => 'html',
-                            'name' => 'latest_news_changelog_' . get_option( 'wp-ultimate-recipe' . '_version' ),
-                            'binding' => array(
-                                'field'    => '',
-                                'function' => 'wpurp_admin_latest_news_changelog',
-                            ),
-                        ),
-                    ),
-                ),
-            ),
-        ),
 //=-=-=-=-=-=-= RECIPE TEMPLATE =-=-=-=-=-=-=
         array(
             'title' => __('Recipe Template', 'wp-ultimate-recipe'),
@@ -310,6 +290,52 @@ $admin_menu = array(
                     ),
                 ),
                 array(
+                    'title' => __('RSS Feed', 'wp-ultimate-recipe'),
+                    'name' => 'recipe_template_rss_feed_menu',
+                    'controls' => array(
+                        array(
+                            'type' => 'section',
+                            'title' => __('Recipe Posts', 'wp-ultimate-recipe'),
+                            'name' => 'recipe_template_rss_feed_recipe_posts',
+                            'fields' => array(
+                                array(
+                                    'type' => 'select',
+                                    'name' => 'recipe_rss_feed_display',
+                                    'label' => __('Display', 'wp-ultimate-recipe'),
+                                    'items' => array(
+                                        array(
+                                            'value' => 'excerpt',
+                                            'label' => __('Only the excerpt', 'wp-ultimate-recipe'),
+                                        ),
+                                        array(
+                                            'value' => 'full',
+                                            'label' => __('The entire recipe', 'wp-ultimate-recipe'),
+                                        ),
+                                    ),
+                                    'default' => array(
+                                        'excerpt',
+                                    ),
+                                    'validation' => 'required',
+                                ),
+                            ),
+                        ),
+                        array(
+                            'type' => 'section',
+                            'title' => __('Recipe Shortcode', 'wp-ultimate-recipe'),
+                            'name' => 'recipe_template_rss_feed_shortcode',
+                            'fields' => array(
+                                array(
+                                    'type' => 'toggle',
+                                    'name' => 'recipe_rss_feed_shortcode',
+                                    'label' => __('Display', 'wp-ultimate-recipe'),
+                                    'description' => __( 'Output the recipe shortcode in RSS feeds?', 'wp-ultimate-recipe' ),
+                                    'default' => '1',
+                                ),
+                            ),
+                        ),
+                    ),
+                ),
+                array(
                     'title' => __('Advanced', 'wp-ultimate-recipe'),
                     'name' => 'recipe_template_advanced_menu',
                     'controls' => array(
@@ -408,7 +434,7 @@ $admin_menu = array(
                         ),
                         array(
                             'type' => 'html',
-                            'name' => 'recipe_slug_preview',
+                            'name' => 'recipe_slug_preview' . $sitehash,
                             'binding' => array(
                                 'field'    => 'recipe_slug',
                                 'function' => 'wpurp_admin_recipe_slug_preview',
@@ -550,10 +576,24 @@ $admin_menu = array(
                     'fields' => array(
                         array(
                             'type' => 'html',
-                            'name' => 'recipe_tags_manage_custom',
+                            'name' => 'recipe_tags_manage_custom' . $sitehash,
                             'binding' => array(
                                 'field'    => '',
                                 'function' => 'wpurp_admin_manage_tags',
+                            ),
+                        ),
+                        array(
+                            'type' => 'multiselect',
+                            'name' => 'recipe_tags_hide_in_recipe',
+                            'label' => __('Hide Custom Tags', 'wp-ultimate-recipe'),
+                            'description' => __( 'Do not show these tags in the Recipe Box.', 'wp-ultimate-recipe' ),
+                            'items' => array(
+                                'data' => array(
+                                    array(
+                                        'source' => 'function',
+                                        'value' => 'wpurp_admin_recipe_tags',
+                                    ),
+                                ),
                             ),
                         ),
                     ),
@@ -611,20 +651,6 @@ $admin_menu = array(
                             'name' => 'recipe_tags_show_in_recipe',
                             'label' => __('Show Categories in Recipe', 'wp-ultimate-recipe'),
                             'description' => __( 'Use WP categories as if they are tags for their parent category.', 'wp-ultimate-recipe' ),
-                            'default' => '0',
-                        ),
-                        array(
-                            'type' => 'toggle',
-                            'name' => 'recipe_tags_user_submissions_categories',
-                            'label' => __('User Submitted Categories', 'wp-ultimate-recipe'),
-                            'description' => __( 'Allow users to assign categories when submitting recipes.', 'wp-ultimate-recipe' ),
-                            'default' => '0',
-                        ),
-                        array(
-                            'type' => 'toggle',
-                            'name' => 'recipe_tags_user_submissions_tags',
-                            'label' => __('User Submitted Tags', 'wp-ultimate-recipe'),
-                            'description' => __( 'Allow users to assign tags when submitting recipes.', 'wp-ultimate-recipe' ),
                             'default' => '0',
                         ),
                         array(
@@ -841,7 +867,7 @@ $admin_menu = array(
                         ),
                         array(
                             'type' => 'html',
-                            'name' => 'recipe_grid_reset_terms',
+                            'name' => 'recipe_grid_reset_terms' . $sitehash,
                             'binding' => array(
                                 'field'    => '',
                                 'function' => 'wpurp_reset_recipe_grid_terms',
@@ -869,101 +895,150 @@ $admin_menu = array(
             'icon' => 'font-awesome:fa-user',
             'controls' => array(
                 array(
-                    'type' => 'notebox',
-                    'name' => 'user_submission_premium_not_installed',
-                    'label' => 'WP Ultimate Recipe Premium',
-                    'description' => __('These features are only available in ', 'wp-ultimate-recipe') . ' <a href="http://www.wpultimaterecipeplugin.com/premium/" target="_blank">WP Ultimate Recipe Premium</a></strong>.',
-                    'status' => 'warning',
-                    'dependency' => array(
-                        'field' => '',
-                        'function' => 'wpurp_admin_premium_not_installed',
+                    'type' => 'section',
+                    'title' => __('General', 'wp-ultimate-recipe'),
+                    'name' => 'section_user_submission_general',
+                    'fields' => array(
+                        array(
+                            'type' => 'notebox',
+                            'name' => 'user_submission_premium_not_installed',
+                            'label' => 'WP Ultimate Recipe Premium',
+                            'description' => __('These features are only available in ', 'wp-ultimate-recipe') . ' <a href="http://www.wpultimaterecipeplugin.com/premium/" target="_blank">WP Ultimate Recipe Premium</a></strong>.',
+                            'status' => 'warning',
+                            'dependency' => array(
+                                'field' => '',
+                                'function' => 'wpurp_admin_premium_not_installed',
+                            ),
+                        ),
+                        array(
+                            'type' => 'notebox',
+                            'name' => 'user_submission_shortcode',
+                            'label' => __('Important', 'wp-ultimate-recipe'),
+                            'description' => __('Use the following shortcode to display the front-end form:', 'wp-ultimate-recipe') . ' [ultimate-recipe-submissions]. '. __('The shortcode can be added to any page or post.', 'wp-ultimate-recipe'),
+                            'status' => 'info',
+                            'dependency' => array(
+                                'field' => '',
+                                'function' => 'wpurp_admin_premium_installed',
+                            ),
+                        ),
+                        array(
+                            'type' => 'select',
+                            'name' => 'user_submission_enable',
+                            'label' => __('Allow submissions from', 'wp-ultimate-recipe'),
+                            'items' => array(
+                                array(
+                                    'value' => 'off',
+                                    'label' => __('Nobody', 'wp-ultimate-recipe') . ' (' . __('disabled', 'wp-ultimate-recipe') . ')',
+                                ),
+                                array(
+                                    'value' => 'guests',
+                                    'label' => __('Guests and registered users', 'wp-ultimate-recipe'),
+                                ),
+                                array(
+                                    'value' => 'registered',
+                                    'label' => __('Registered users only', 'wp-ultimate-recipe'),
+                                ),
+                            ),
+                            'default' => array(
+                                'guests',
+                            ),
+                            'validation' => 'required',
+                        ),
+                        array(
+                            'type' => 'select',
+                            'name' => 'user_submission_approve',
+                            'label' => __('Auto approve submissions from', 'wp-ultimate-recipe'),
+                            'description' => __('Publish recipe immediately on submission.', 'wp-ultimate-recipe'),
+                            'items' => array(
+                                array(
+                                    'value' => 'off',
+                                    'label' => __('Nobody', 'wp-ultimate-recipe'),
+                                ),
+                                array(
+                                    'value' => 'guests',
+                                    'label' => __('Guests and registered users', 'wp-ultimate-recipe'),
+                                ),
+                                array(
+                                    'value' => 'registered',
+                                    'label' => __('Registered users only', 'wp-ultimate-recipe'),
+                                ),
+                            ),
+                            'default' => array(
+                                'off',
+                            ),
+                            'validation' => 'required',
+                        ),
                     ),
                 ),
                 array(
-                    'type' => 'notebox',
-                    'name' => 'user_submission_shortcode',
-                    'label' => __('Important', 'wp-ultimate-recipe'),
-                    'description' => __('Use the following shortcode to display the front-end form:', 'wp-ultimate-recipe') . ' [ultimate-recipe-submissions]. '. __('The shortcode can be added to any page or post.', 'wp-ultimate-recipe'),
-                    'status' => 'info',
-                    'dependency' => array(
-                        'field' => '',
-                        'function' => 'wpurp_admin_premium_installed',
-                    ),
-                ),
-                array(
-                    'type' => 'select',
-                    'name' => 'user_submission_enable',
-                    'label' => __('Allow submissions from', 'wp-ultimate-recipe'),
-                    'items' => array(
+                    'type' => 'section',
+                    'title' => __('Recipe Tags', 'wp-ultimate-recipe'),
+                    'name' => 'section_user_submission_recipe_tags',
+                    'fields' => array(
                         array(
-                            'value' => 'off',
-                            'label' => __('Nobody', 'wp-ultimate-recipe') . ' (' . __('disabled', 'wp-ultimate-recipe') . ')',
+                            'type' => 'toggle',
+                            'name' => 'recipe_tags_user_submissions_categories',
+                            'label' => __('User Submitted Categories', 'wp-ultimate-recipe'),
+                            'description' => __( 'Allow users to assign categories when submitting recipes.', 'wp-ultimate-recipe' ),
+                            'default' => '0',
                         ),
                         array(
-                            'value' => 'guests',
-                            'label' => __('Guests and registered users', 'wp-ultimate-recipe'),
+                            'type' => 'toggle',
+                            'name' => 'recipe_tags_user_submissions_tags',
+                            'label' => __('User Submitted Tags', 'wp-ultimate-recipe'),
+                            'description' => __( 'Allow users to assign tags when submitting recipes.', 'wp-ultimate-recipe' ),
+                            'default' => '0',
                         ),
                         array(
-                            'value' => 'registered',
-                            'label' => __('Registered users only', 'wp-ultimate-recipe'),
-                        ),
-                    ),
-                    'default' => array(
-                        'guests',
-                    ),
-                    'validation' => 'required',
-                ),
-                array(
-                    'type' => 'select',
-                    'name' => 'user_submission_approve',
-                    'label' => __('Auto approve submissions from', 'wp-ultimate-recipe'),
-                    'description' => __('Publish recipe immediately on submission.', 'wp-ultimate-recipe'),
-                    'items' => array(
-                        array(
-                            'value' => 'off',
-                            'label' => __('Nobody', 'wp-ultimate-recipe'),
-                        ),
-                        array(
-                            'value' => 'guests',
-                            'label' => __('Guests and registered users', 'wp-ultimate-recipe'),
-                        ),
-                        array(
-                            'value' => 'registered',
-                            'label' => __('Registered users only', 'wp-ultimate-recipe'),
+                            'type' => 'multiselect',
+                            'name' => 'user_submission_hide_tags',
+                            'label' => __('Hide Custom Tags', 'wp-ultimate-recipe'),
+                            'description' => __( 'Hide these tags on the user submission page.', 'wp-ultimate-recipe' ),
+                            'items' => array(
+                                'data' => array(
+                                    array(
+                                        'source' => 'function',
+                                        'value' => 'wpurp_admin_recipe_tags',
+                                    ),
+                                ),
+                            ),
                         ),
                     ),
-                    'default' => array(
-                        'off',
+                ),
+                array(
+                    'type' => 'section',
+                    'title' => __('Advanced', 'wp-ultimate-recipe'),
+                    'name' => 'section_user_submission_advanced',
+                    'fields' => array(
+                        array(
+                            'type' => 'toggle',
+                            'name' => 'user_submission_css',
+                            'label' => __('Submission form CSS', 'wp-ultimate-recipe'),
+                            'description' => __( 'Add basic CSS styles to the frontend form.', 'wp-ultimate-recipe' ),
+                            'default' => '1',
+                        ),
+                        array(
+                            'type' => 'toggle',
+                            'name' => 'user_submission_ingredient_list',
+                            'label' => __('Can only select existing ingredients', 'wp-ultimate-recipe'),
+                            'description' => __( 'When enabled visitors will only be able to select from a list of existing ingredients.', 'wp-ultimate-recipe' ),
+                            'default' => '0',
+                        ),
+                        array(
+                            'type' => 'toggle',
+                            'name' => 'user_submission_email_admin',
+                            'label' => __('Email administrator', 'wp-ultimate-recipe'),
+                            'description' => __( 'Send an email notification when a new recipe is submitted.', 'wp-ultimate-recipe' ),
+                            'default' => '0',
+                        ),
+                        array(
+                            'type' => 'toggle',
+                            'name' => 'user_submission_restrict_media_access',
+                            'label' => __('Restrict Media Library Access', 'wp-ultimate-recipe'),
+                            'description' => __( 'Only show media library for editors and up', 'wp-ultimate-recipe' ),
+                            'default' => '1',
+                        ),
                     ),
-                    'validation' => 'required',
-                ),
-                array(
-                    'type' => 'toggle',
-                    'name' => 'user_submission_css',
-                    'label' => __('Submission form CSS', 'wp-ultimate-recipe'),
-                    'description' => __( 'Add basic CSS styles to the frontend form.', 'wp-ultimate-recipe' ),
-                    'default' => '1',
-                ),
-                array(
-                    'type' => 'toggle',
-                    'name' => 'user_submission_ingredient_list',
-                    'label' => __('Can only select existing ingredients', 'wp-ultimate-recipe'),
-                    'description' => __( 'When enabled visitors will only be able to select from a list of existing ingredients.', 'wp-ultimate-recipe' ),
-                    'default' => '0',
-                ),
-                array(
-                    'type' => 'toggle',
-                    'name' => 'user_submission_email_admin',
-                    'label' => __('Email administrator', 'wp-ultimate-recipe'),
-                    'description' => __( 'Send an email notification when a new recipe is submitted.', 'wp-ultimate-recipe' ),
-                    'default' => '0',
-                ),
-                array(
-                    'type' => 'toggle',
-                    'name' => 'user_submission_restrict_media_access',
-                    'label' => __('Restrict Media Library Access', 'wp-ultimate-recipe'),
-                    'description' => __( 'Only show media library for editors and up', 'wp-ultimate-recipe' ),
-                    'default' => '1',
                 ),
             ),
         ),
@@ -974,103 +1049,156 @@ $admin_menu = array(
             'icon' => 'font-awesome:fa-list-alt',
             'controls' => array(
                 array(
-                    'type' => 'notebox',
-                    'name' => 'user_menus_premium_not_installed',
-                    'label' => 'WP Ultimate Recipe Premium',
-                    'description' => __('These features are only available in ', 'wp-ultimate-recipe') . ' <a href="http://www.wpultimaterecipeplugin.com/premium/" target="_blank">WP Ultimate Recipe Premium</a></strong>.',
-                    'status' => 'warning',
-                    'dependency' => array(
-                        'field' => '',
-                        'function' => 'wpurp_admin_premium_not_installed',
-                    ),
-                ),
-                array(
-                    'type' => 'notebox',
-                    'name' => 'user_menus_shortcode',
-                    'label' => __('Important', 'wp-ultimate-recipe'),
-                    'description' => __('Use the following shortcode to display the front-end form:', 'wp-ultimate-recipe') . ' [ultimate-recipe-user-menus]. '. __('The shortcode can be added to any page or post.', 'wp-ultimate-recipe'),
-                    'status' => 'info',
-                    'dependency' => array(
-                        'field' => '',
-                        'function' => 'wpurp_admin_premium_installed',
-                    ),
-                ),
-                array(
-                    'type' => 'select',
-                    'name' => 'user_menus_enable',
-                    'label' => __('Enable user menus for', 'wp-ultimate-recipe'),
-                    'items' => array(
+                    'type' => 'section',
+                    'title' => __('General', 'wp-ultimate-recipe'),
+                    'name' => 'section_user_menus_general',
+                    'fields' => array(
                         array(
-                            'value' => 'off',
-                            'label' => __('Nobody', 'wp-ultimate-recipe') . ' (' . __('disabled', 'wp-ultimate-recipe') . ')',
+                            'type' => 'notebox',
+                            'name' => 'user_menus_premium_not_installed',
+                            'label' => 'WP Ultimate Recipe Premium',
+                            'description' => __('These features are only available in ', 'wp-ultimate-recipe') . ' <a href="http://www.wpultimaterecipeplugin.com/premium/" target="_blank">WP Ultimate Recipe Premium</a></strong>.',
+                            'status' => 'warning',
+                            'dependency' => array(
+                                'field' => '',
+                                'function' => 'wpurp_admin_premium_not_installed',
+                            ),
                         ),
                         array(
-                            'value' => 'guests',
-                            'label' => __('Guests and registered users', 'wp-ultimate-recipe'),
+                            'type' => 'notebox',
+                            'name' => 'user_menus_shortcode',
+                            'label' => __('Important', 'wp-ultimate-recipe'),
+                            'description' => __('Use the following shortcode to display the front-end form:', 'wp-ultimate-recipe') . ' [ultimate-recipe-user-menus]. '. __('The shortcode can be added to any page or post.', 'wp-ultimate-recipe'),
+                            'status' => 'info',
+                            'dependency' => array(
+                                'field' => '',
+                                'function' => 'wpurp_admin_premium_installed',
+                            ),
                         ),
                         array(
-                            'value' => 'registered',
-                            'label' => __('Registered users only', 'wp-ultimate-recipe'),
+                            'type' => 'select',
+                            'name' => 'user_menus_enable',
+                            'label' => __('Enable user menus for', 'wp-ultimate-recipe'),
+                            'items' => array(
+                                array(
+                                    'value' => 'off',
+                                    'label' => __('Nobody', 'wp-ultimate-recipe') . ' (' . __('disabled', 'wp-ultimate-recipe') . ')',
+                                ),
+                                array(
+                                    'value' => 'guests',
+                                    'label' => __('Guests and registered users', 'wp-ultimate-recipe'),
+                                ),
+                                array(
+                                    'value' => 'registered',
+                                    'label' => __('Registered users only', 'wp-ultimate-recipe'),
+                                ),
+                            ),
+                            'default' => array(
+                                'guests',
+                            ),
+                            'validation' => 'required',
                         ),
-                    ),
-                    'default' => array(
-                        'guests',
-                    ),
-                    'validation' => 'required',
-                ),
-                array(
-                    'type' => 'select',
-                    'name' => 'user_menus_enable_save',
-                    'label' => __('Enable user menus save function for', 'wp-ultimate-recipe'),
-                    'items' => array(
                         array(
-                            'value' => 'off',
-                            'label' => __('Nobody', 'wp-ultimate-recipe') . ' (' . __('disabled', 'wp-ultimate-recipe') . ')',
+                            'type' => 'select',
+                            'name' => 'user_menus_enable_save',
+                            'label' => __('Enable user menus save function for', 'wp-ultimate-recipe'),
+                            'items' => array(
+                                array(
+                                    'value' => 'off',
+                                    'label' => __('Nobody', 'wp-ultimate-recipe') . ' (' . __('disabled', 'wp-ultimate-recipe') . ')',
+                                ),
+                                array(
+                                    'value' => 'guests',
+                                    'label' => __('Guests and registered users', 'wp-ultimate-recipe'),
+                                ),
+                                array(
+                                    'value' => 'registered',
+                                    'label' => __('Registered users only', 'wp-ultimate-recipe'),
+                                ),
+                            ),
+                            'default' => array(
+                                'guests',
+                            ),
+                            'validation' => 'required',
                         ),
                         array(
-                            'value' => 'guests',
-                            'label' => __('Guests and registered users', 'wp-ultimate-recipe'),
+                            'type' => 'slider',
+                            'name' => 'user_menus_default_servings',
+                            'label' => __('Default Servings', 'wp-ultimate-recipe'),
+                            'min' => '1',
+                            'max' => '10',
+                            'step' => '1',
+                            'default' => '4',
+                        ),
+                    ),
+                ),
+                array(
+                    'type' => 'section',
+                    'title' => __('Print Options', 'wp-ultimate-recipe'),
+                    'name' => 'section_user_menus_print',
+                    'fields' => array(
+                        array(
+                            'type' => 'toggle',
+                            'name' => 'user_menus_enable_print_list',
+                            'label' => __('Print Shopping List Button', 'wp-ultimate-recipe'),
+                            'description' => __( 'Show a button to print the shopping list.', 'wp-ultimate-recipe' ),
+                            'default' => '1',
                         ),
                         array(
-                            'value' => 'registered',
-                            'label' => __('Registered users only', 'wp-ultimate-recipe'),
+                            'type' => 'toggle',
+                            'name' => 'user_menus_enable_print_menu',
+                            'label' => __('Print Menu Button', 'wp-ultimate-recipe'),
+                            'description' => __( 'Show a button to print the entire menu (Shopping list and recipes).', 'wp-ultimate-recipe' ),
+                            'default' => '0',
+                        ),
+                        array(
+                            'type' => 'select',
+                            'name' => 'user_menus_recipe_print_template',
+                            'label' => __('Print Template', 'wp-ultimate-recipe'),
+                            'description' => __( 'The default template to use for printed recipes.', 'wp-ultimate-recipe' ),
+                            'items' => array(
+                                'data' => array(
+                                    array(
+                                        'source' => 'function',
+                                        'value' => 'wpurp_admin_templates',
+                                    ),
+                                ),
+                            ),
+                            'default' => array(
+                                '1',
+                            ),
+                            'validation' => 'required',
                         ),
                     ),
-                    'default' => array(
-                        'guests',
+                ),
+                array(
+                    'type' => 'section',
+                    'title' => __('Slug', 'wp-ultimate-recipe'),
+                    'name' => 'section_user_menus_slug',
+                    'fields' => array(
+                        array(
+                            'type' => 'textbox',
+                            'name' => 'user_menus_slug',
+                            'label' => __('Slug', 'wp-ultimate-recipe'),
+                            'default' => 'menu',
+                            'validation' => 'required',
+                        ),
+                        array(
+                            'type' => 'html',
+                            'name' => 'user_menus_slug_preview' . $sitehash,
+                            'binding' => array(
+                                'field'    => 'user_menus_slug',
+                                'function' => 'wpurp_admin_user_menus_slug_preview',
+                            ),
+                        ),
+                        array(
+                            'type' => 'notebox',
+                            'name' => 'user_menus_slug_notebox',
+                            'label' => __('404 error/page not found?', 'wp-ultimate-recipe'),
+                            'description' => __('Try', 'wp-ultimate-recipe') . ' <a href="http://www.wpultimaterecipe.com/docs/404-page-found/" target="_blank">'.__('flushing your permalinks', 'wp-ultimate-recipe').'</a>.',
+                            'status' => 'info',
+                        ),
                     ),
-                    'validation' => 'required',
-                ),
-                array(
-                    'type' => 'slider',
-                    'name' => 'user_menus_default_servings',
-                    'label' => __('Default Servings', 'wp-ultimate-recipe'),
-                    'min' => '1',
-                    'max' => '10',
-                    'step' => '1',
-                    'default' => '4',
-                ),
-                array(
-                    'type' => 'textbox',
-                    'name' => 'user_menus_slug',
-                    'label' => __('Slug', 'wp-ultimate-recipe'),
-                    'default' => 'menu',
-                    'validation' => 'required',
-                ),
-                array(
-                    'type' => 'html',
-                    'name' => 'user_menus_slug_preview',
-                    'binding' => array(
-                        'field'    => 'user_menus_slug',
-                        'function' => 'wpurp_admin_user_menus_slug_preview',
-                    ),
-                ),
-                array(
-                    'type' => 'notebox',
-                    'name' => 'user_menus_slug_notebox',
-                    'label' => __('404 error/page not found?', 'wp-ultimate-recipe'),
-                    'description' => __('Try', 'wp-ultimate-recipe') . ' <a href="http://www.wpultimaterecipe.com/docs/404-page-found/" target="_blank">'.__('flushing your permalinks', 'wp-ultimate-recipe').'</a>.',
-                    'status' => 'info',
                 ),
             ),
         ),
@@ -1093,7 +1221,7 @@ $admin_menu = array(
                 ),
                 array(
                     'type' => 'html',
-                    'name' => 'import_recipes_recipress',
+                    'name' => 'import_recipes_recipress' . $sitehash,
                     'binding' => array(
                         'field'    => '',
                         'function' => 'wpurp_admin_import_recipress',
@@ -1129,7 +1257,7 @@ $admin_menu = array(
                     'fields' => array(
                         array(
                             'type' => 'html',
-                            'name' => 'advanced_reset_demo_recipe',
+                            'name' => 'advanced_reset_demo_recipe' . $sitehash,
                             'binding' => array(
                                 'field'    => '',
                                 'function' => 'wpurp_reset_demo_recipe',
@@ -1203,21 +1331,6 @@ $admin_menu = array(
                     'label' => __('Print CSS', 'wp-ultimate-recipe'),
                     'theme' => 'github',
                     'mode' => 'css',
-                ),
-            ),
-        ),
-//=-=-=-=-=-=-= FAQ & SUPPORT =-=-=-=-=-=-=
-        array(
-            'title' => __('FAQ & Support', 'wp-ultimate-recipe'),
-            'name' => 'faq_support',
-            'icon' => 'font-awesome:fa-book',
-            'controls' => array(
-                array(
-                    'type' => 'notebox',
-                    'name' => 'faq_support_notebox',
-                    'label' => __('Need more help?', 'wp-ultimate-recipe'),
-                    'description' => '<a href="http://support.wpultimaterecipe.com" target="_blank">WP Ultimate Recipe ' .__('FAQ & Support', 'wp-ultimate-recipe') . '</a>',
-                    'status' => 'info',
                 ),
             ),
         ),

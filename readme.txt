@@ -8,7 +8,7 @@ Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-WP Ultimate Recipe is a user friendly plugin for adding recipes to any of your posts and pages.
+Everything a Food Blog needs. Beautiful SEO friendly recipes, print versions, visitor interaction, ...
 
 == Description ==
 
@@ -37,6 +37,7 @@ An overview of the WP Ultimate Recipe features:
 We also have a [WP Ultimate Recipe Premium version](http://www.wpultimaterecipe.com/get-the-plugin/) which offers the following features:
 
 *   Create your own unique recipe template with the **Template Editor**
+*   Automatically retrieve **Nutritional Information** for your recipes
 *   Add your own **custom fields** to your recipes
 *   Let your **users submit** recipes
 *   User menus with a **shopping list generator**
@@ -91,6 +92,18 @@ Yes! We pride ourselves on offering awesome support and almost always answer sup
 10. WP Ultimate Recipe automatically formats your data so it can be picked up by Google Recipe Search and others. Great for SEO!
 
 == Changelog ==
+
+= 2.1.0 =
+* Feature: New FAQ page with Getting Started information
+* Feature: WPML Configuration file for multilingual support
+* Setting: Output recipes in RSS Feed
+* Improvement: Use alt and title tags as defined by user for instruction and recipe images
+* Improvement: New icon for Shortcode Editor and settings
+* Fix: Issue with saving settings
+* Fix: Recipe Notes styling of hr tag and image alignment
+* Fix: Ability to use strong and italic text in instructions again
+* Fix: Apply shortcodes in print template
+* Fix: Problem with buttons in settings after changing websites
 
 = 2.0.10 =
 * Improvement: Show recipe rating in metadata
@@ -303,6 +316,9 @@ Yes! We pride ourselves on offering awesome support and almost always answer sup
 * Very first version of this plugin
 
 == Upgrade notice ==
+
+= 2.1.0 =
+A few fixes and improvements for the free version. Major update for WP Ultimate Recipe Premium.
 
 = 2.0.10 =
 Tiny update. Improves recipe metadata with recipe rating

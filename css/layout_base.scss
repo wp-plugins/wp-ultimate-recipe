@@ -48,6 +48,14 @@ html body .wpurp-container {
         font-weight: normal;
     }
 
+    b, strong {
+        font-weight: bold;
+    }
+
+    hr {
+        background-color: #ccc !important;
+    }
+
     // Reset CSS as best as possible (based on normalize.css)
     .wpurp-recipe-notes, .wpurp-paragraph {
         h1 {
@@ -108,6 +116,10 @@ html body .wpurp-container {
 
         menu, ol, ul {
             padding: 0 0 0 40px;
+        }
+
+        .aligncenter {
+            margin: 0 auto;
         }
     }
 

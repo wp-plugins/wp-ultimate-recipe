@@ -88,10 +88,12 @@ class WPURP_Template_Recipe_Tags extends WPURP_Template_Block {
         unset( $taxonomies['ingredient'] );
 
         foreach( $taxonomies as $taxonomy => $options ) {
-            $terms = get_the_term_list( $recipe->ID(), $taxonomy, '', ', ' );
-            if( !is_wp_error( $terms ) && $terms != '' )
-            {
-                $tags[$options['labels']['singular_name']] = $terms;
+            if( !in_array( $taxonomy, WPUltimateRecipe::option('recipe_tags_hide_in_recipe', array() ) ) ) {
+                $terms = get_the_term_list( $recipe->ID(), $taxonomy, '', ', ' );
+                if( !is_wp_error( $terms ) && $terms != '' )
+                {
+                    $tags[$options['labels']['singular_name']] = $terms;
+                }
             }
         }
 

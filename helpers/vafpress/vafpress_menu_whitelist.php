@@ -1,13 +1,4 @@
 <?php
-function wpurp_admin_latest_news_changelog()
-{
-    ob_start();
-    include( WPUltimateRecipe::get()->coreDir . '/static/changelog.html' );
-    $out = ob_get_contents();
-    ob_end_clean();
-
-    return $out;
-}
 
 function wpurp_admin_recipe_slug_preview( $slug )
 {
@@ -222,6 +213,29 @@ function wpurp_reset_recipe_grid_terms()
     return '<a href="'.admin_url( 'edit.php?post_type=recipe&wpurp_reset_recipe_grid_terms=true' ).'" class="button button-primary" target="_blank">'.__('Recalculate Recipe Grid Terms', 'wp-ultimate-recipe').'</a>';
 }
 
+function wpurp_admin_recipe_tags()
+{
+    $taxonomy_list = array();
+
+    $args = array(
+        'object_type' => array( 'recipe' )
+    );
+
+    $taxonomies = get_taxonomies( $args, 'objects' );
+
+    foreach ( $taxonomies  as $taxonomy ) {
+
+        if( !in_array( $taxonomy->name, array( 'rating', 'ingredient' ) ) ) {
+            $taxonomy_list[] = array(
+                'value' => $taxonomy->name,
+                'label' => $taxonomy->labels->name,
+            );
+        }
+    }
+
+    return $taxonomy_list;
+}
+
 function wpurp_admin_post_types()
 {
     $post_types = get_post_types( '', 'names' );
@@ -238,7 +252,6 @@ function wpurp_admin_post_types()
 }
 
 
-VP_Security::instance()->whitelist_function('wpurp_admin_latest_news_changelog');
 VP_Security::instance()->whitelist_function('wpurp_admin_recipe_slug_preview');
 VP_Security::instance()->whitelist_function('wpurp_admin_user_menus_slug_preview');
 VP_Security::instance()->whitelist_function('wpurp_admin_premium_not_installed');
@@ -260,4 +273,5 @@ VP_Security::instance()->whitelist_function('vp_dep_boolean_inverse');
 VP_Security::instance()->whitelist_function('wpurp_font_preview');
 VP_Security::instance()->whitelist_function('wpurp_font_preview_with_text');
 VP_Security::instance()->whitelist_function('wpurp_reset_demo_recipe');
+VP_Security::instance()->whitelist_function('wpurp_admin_recipe_tags');
 VP_Security::instance()->whitelist_function('wpurp_admin_post_types');

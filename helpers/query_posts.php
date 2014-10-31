@@ -21,7 +21,7 @@ class WPURP_Query_Posts {
         if( WPUltimateRecipe::option( 'recipe_as_posts', '1' ) == '1' )
         {
             // Hide recipes in admin posts overview when enabled
-            if( WPUltimateRecipe::option( 'show_recipes_in_posts', '1' ) != '1' )
+            if( WPUltimateRecipe::option( 'show_recipes_in_posts', '0' ) != '1' )
             {
                 global $pagenow;
 

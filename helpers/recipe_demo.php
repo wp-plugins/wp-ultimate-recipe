@@ -120,10 +120,18 @@ class WPURP_Recipe_Demo {
                 'recipe_notes' => __( 'Use this section for whatever you like.', 'wp-ultimate-recipe' ),
             );
 
+            $post_content = '<p>' . __( 'Use this like normal post content. The recipe will automatically be included at the end of the post, or wherever you place the shortcode:', 'wp-ultimate-recipe' ) . '</p>[recipe]<br/><p>' . __( 'This text will appear below your recipe.', 'wp-ultimate-recipe');
+
+            if( WPUltimateRecipe::is_addon_active('nutritional-information') ) {
+                $post_content .= ' ' . __( 'Followed by the nutrition label:', 'wp-ultimate-recipe' ) . '</p>[nutrition-label]<br/>';
+            } else {
+                $post_content .= '</p>';
+            }
+
             // Insert post
             $post = array(
                 'post_title' => __( 'Demo Recipe', 'wp-ultimate-recipe' ),
-                'post_content' => '<p>' . __( 'Use this like normal post content. The recipe will automatically be included at the end of the post, or wherever you place the shortcode:', 'wp-ultimate-recipe' ) . '</p>[recipe]<br/><p>' . __( 'This text will appear below your recipe.') . '</p>',
+                'post_content' => $post_content,
                 'post_type'	=> 'recipe',
                 'post_status' => 'private',
                 'post_author' => get_current_user_id(),
@@ -175,6 +183,29 @@ class WPURP_Recipe_Demo {
             if( sizeof( $attachments ) > 0 ) {
                 set_post_thumbnail( $post_id, $attachments[0]->ID );
             }
+
+            // Nutritional Information
+            $nutritional = array(
+                'calories' => '1866',
+                'carbohydrate' => '31',
+                'protein' => '28',
+                'fat' => '183',
+                'saturated_fat' => '30',
+                'polyunsaturated_fat' => '20',
+                'monounsaturated_fat' => '123',
+                'trans_fat' => '',
+                'cholesterol' => '116',
+                'sodium' => '1289',
+                'potassium' => '308',
+                'fiber' => '1.7',
+                'sugar' => '1.7',
+                'vitamin_a' => '0.9',
+                'vitamin_c' => '0.5',
+                'calcium' => '8.7',
+                'iron' => '105'
+            );
+
+            update_post_meta( $post_id, 'recipe_nutritional', $nutritional );
 
             // Update recipe content
             WPUltimateRecipe::get()->helper( 'recipe_save' )->save( $post_id, get_post( $post_id ) );

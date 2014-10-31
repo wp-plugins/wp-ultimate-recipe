@@ -310,6 +310,7 @@ class VP_ShortcodeGenerator
 
 	public static function register_buttons($buttons)
 	{
+        $vp_buttons = array();
 		foreach (self::$pool as $sg)
 		{
 			if( $sg->can_output() )

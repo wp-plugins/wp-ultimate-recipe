@@ -52,6 +52,12 @@ class WPURP_Recipe {
 
     public function is_present( $field )
     {
+        $nutrition_field = '';
+        if( substr( $field, 0, 16 ) == 'recipe_nutrition' ) {
+            $nutrition_field = substr( $field, 17 );
+            $field = 'recipe_nutrition';
+        }
+        
         switch( $field ) {
             case 'recipe_image':
                 return get_post_thumbnail_id( $this->ID() ) != '';
@@ -61,6 +67,20 @@ class WPURP_Recipe {
 
             case 'recipe_instructions':
                 return $this->has_instructions();
+
+            case 'recipe_rating':
+                if( WPUltimateRecipe::is_addon_active( 'user-ratings' ) && WPUltimateRecipe::option( 'user_ratings_enable', 'everyone' ) != 'disabled' ) {
+                    // Recipe rating is always present when user ratings are enabled
+                    return true;
+                } else {
+                    // Not present if rating = 0 (not displayed)
+                    $val = $this->meta($field);
+                    return isset( $val ) && trim( $val ) != '' && $val != '0';
+                }
+
+            case 'recipe_nutrition':
+                $val = $this->nutritional( $nutrition_field );
+                return isset( $val ) && trim( $val ) != '';
 
             default:
                 $val = $this->meta($field);
@@ -186,6 +206,17 @@ class WPURP_Recipe {
     public function notes()
     {
         return $this->meta( 'recipe_notes' );
+    }
+
+    public function nutritional( $field = false )
+    {
+        $nutritional = apply_filters( 'wpurp_recipe_field_nutritional', unserialize( $this->meta( 'recipe_nutritional' ) ), $this );
+
+        if( $field ) {
+            $nutritional = isset( $nutritional[$field] ) ? $nutritional[$field] : '';
+        }
+
+        return $nutritional;
     }
 
     public function passive_time()

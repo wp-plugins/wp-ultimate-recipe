@@ -51,7 +51,7 @@ class WPURP_Template_Recipe_Instruction_Image extends WPURP_Template_Block {
             }
 
             // Don't distort the image
-            $undistored_height = $new_width * ( $height / $width );
+            $undistored_height = floor( $new_width * ( $height / $width ) );
             $this->add_style( 'height', $undistored_height.'px' );
 
             // Get correct thumbnail size
@@ -105,10 +105,10 @@ class WPURP_Template_Recipe_Instruction_Image extends WPURP_Template_Block {
 
         if( WPUltimateRecipe::option( 'recipe_images_clickable', '0' ) == 1 ) {
             $img = '<a href="' . $full_image_url . '" rel="lightbox" title="' . esc_attr( $description ) . '">';
-            $img .= '<img src="' . $image_url . '" title="' . esc_attr( $description ) . '"' . $this->style() . '/>';
+            $img .= '<img src="' . $image_url . '" alt="' . esc_attr( get_post_meta( $args['instruction_image'], '_wp_attachment_image_alt', true) ) . '" title="' . esc_attr( get_the_title( $args['instruction_image'] ) ) . '"' . $this->style() . '/>';
             $img .= '</a>';
         } else {
-            $img = '<img src="' . $image_url . '" title="' . esc_attr( $description ) . '"' . $this->style() . '/>';
+            $img = '<img src="' . $image_url . '" alt="' . esc_attr( get_post_meta( $args['instruction_image'], '_wp_attachment_image_alt', true) ) . '" title="' . esc_attr( get_the_title( $args['instruction_image'] ) ) . '"' . $this->style() . '/>';
         }
 
         $output = $this->before_output();
