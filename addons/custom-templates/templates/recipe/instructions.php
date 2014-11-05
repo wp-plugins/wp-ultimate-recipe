@@ -151,7 +151,7 @@ class WPURP_Template_Recipe_Instructions extends WPURP_Template_Block {
                     $out .= '<img src="' . $thumb_url . '" alt="' . esc_attr( get_post_meta( $instruction['image'], '_wp_attachment_image_alt', true) ) . '" title="' . esc_attr( get_the_title( $instruction['image'] ) ) . '"' . $this->style('img') . '/>';
                     $out .= '</a>';
                 } else {
-                    $out .= '<img src="' . $thumb_url . '" alt="' . esc_attr( get_post_meta( $instruction['image'], '_wp_attachment_image_alt', true) ) . '" title="' . esc_attr( get_the_title( $instruction['image'] ) ) . '/>';
+                    $out .= '<img src="' . $thumb_url . '" alt="' . esc_attr( get_post_meta( $instruction['image'], '_wp_attachment_image_alt', true) ) . '" title="' . esc_attr( get_the_title( $instruction['image'] ) ) . '"' . $this->style('img') . '/>';
                 }
             }
 

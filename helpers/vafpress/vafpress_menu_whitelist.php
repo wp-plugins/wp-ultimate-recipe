@@ -118,6 +118,11 @@ function wpurp_admin_import_recipress()
     return '<a href="'.admin_url( 'edit.php?post_type=recipe&page=wpurp_import_recipress' ).'" class="button button-primary" target="_blank">'.__('Import ReciPress recipes', 'wp-ultimate-recipe').'</a>';
 }
 
+function wpurp_admin_import_ziplist()
+{
+    return '<a href="'.admin_url( 'edit.php?post_type=recipe&page=wpurp_import_ziplist' ).'" class="button button-primary" target="_blank">'.__('Import Ziplist recipes', 'wp-ultimate-recipe').'</a>';
+}
+
 function wpurp_admin_system_3( $nbr )
 {
     return $nbr >= 3 ? true : false;
@@ -263,6 +268,7 @@ VP_Security::instance()->whitelist_function('wpurp_admin_template_editor_recipe'
 VP_Security::instance()->whitelist_function('wpurp_admin_template_editor');
 VP_Security::instance()->whitelist_function('wpurp_admin_templates');
 VP_Security::instance()->whitelist_function('wpurp_admin_import_recipress');
+VP_Security::instance()->whitelist_function('wpurp_admin_import_ziplist');
 VP_Security::instance()->whitelist_function('wpurp_admin_system_3');
 VP_Security::instance()->whitelist_function('wpurp_admin_system_4');
 VP_Security::instance()->whitelist_function('wpurp_admin_system_5');

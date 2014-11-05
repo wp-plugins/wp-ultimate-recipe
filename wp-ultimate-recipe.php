@@ -3,12 +3,12 @@
 Plugin Name: WP Ultimate Recipe
 Plugin URI: http://www.wpultimaterecipe.com
 Description: Everything a Food Blog needs. Beautiful SEO friendly recipes, print versions, visitor interaction, ...
-Version: 2.1.0
+Version: 2.1.1
 Author: Bootstrapped Ventures
 Author URI: http://bootstrapped.ventures
 License: GPLv2
 */
-define( 'WPURP_VERSION', '2.1.0' );
+define( 'WPURP_VERSION', '2.1.1' );
 
 class WPUltimateRecipe {
 
@@ -72,6 +72,10 @@ class WPUltimateRecipe {
     public static function option( $name, $default = null )
     {
         $option = vp_option( 'wpurp_option.' . $name );
+
+        if( is_null( $default ) ) {
+            $default = self::get()->helper( 'vafpress_menu' )->defaults( $name );
+        }
 
         return is_null( $option ) ? $default : $option;
     }

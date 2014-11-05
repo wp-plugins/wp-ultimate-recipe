@@ -167,6 +167,10 @@ class WPURP_Assets {
                         if( $hook != 'recipe_page_wpurp_admin' ) continue 2;
                         break;
 
+                    case 'recipe_page_wpurp_import_text':
+                        if( substr( $hook, 0, 25 ) !== 'recipe_page_wpurp_import_' ) continue 2;
+                        break;
+
                     default:
                         if( $hook != strtolower( $asset['page'] ) ) continue 2;
                         break;

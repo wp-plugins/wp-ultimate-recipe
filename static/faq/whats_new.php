@@ -7,46 +7,24 @@
 
     <div class="feature-section col two-col">
         <div class="col-1">
-            <h3>WP Ultimate Recipe 2.1.0</h3>
-            <strong>New</strong>
-            <ul>
-                <li>Feature: New FAQ page with Getting Started information</li>
-                <li>Feature: WPML Configuration file for multilingual support</li>
-                <li>Setting: Output recipes in RSS Feed</li>
-            </ul>
+            <h3>WP Ultimate Recipe 2.1.1</h3>
             <strong>Update</strong>
             <ul>
-                <li>Improvement: Use alt and title tags as defined by user for instruction and recipe images</li>
-                <li>Improvement: New icon for Shortcode Editor and settings</li>
-                <li>Fix: Issue with saving settings</li>
-                <li>Fix: Recipe Notes styling of hr tag and image alignment</li>
-                <li>Fix: Ability to use strong and italic text in instructions again</li>
-                <li>Fix: Apply shortcodes in print template</li>
-                <li>Fix: Problem with buttons in settings after changing websites</li>
+                <li>Improvement: Serving size doesn't need to be a number anymore (but still recommended!)</li>
+                <li>Fix: Recipe images title tag problem</li>
+                <li>Fix: Compatibility problem with some front-end templating tools</li>
             </ul>
         </div>
         <div class="col-2 last-feature">
-            <h3>WP Ultimate Recipe Premium 2.1.0</h3>
-            <strong>Nutritional Information</strong>
-            <ul>
-                <li>Automatically get nutritional data for ingredients</li>
-                <li>Calculate recipe nutritional values from ingredients</li>
-                <li>Show Nutrition Label in recipe</li>
-                <li>Nutrition Label shortcode</li>
-                <li>Nutrition Label widget</li>
-                <li>Nutritional metadata</li>
-            </ul>
+            <h3>WP Ultimate Recipe Premium 2.1.1</h3>
             <strong>New</strong>
             <ul>
-                <li>Feature: Possibility to print the entire User Menu</li>
-                <li>Setting: Hide custom tags from the Recipe Box</li>
-                <li>Setting: Hide custom tags from User Submission</li>
-                <li>Hook: wpurp_output_recipe_print_user_menus</li>
+                <li>Feature: Import Ziplist recipes</li>
             </ul>
             <strong>Update</strong>
             <ul>
-                <li>Update: New version of EDD plugin updater</li>
-                <li>Fix: JS errors in Template Editor</li>
+                <li>Improvement: Posibility to add content to saved User Menus</li>
+                <li>Fix: Saved User Menus not displaying on some themes</li>
                 <li>Fix: Shopping List title in User Menus shortcode</li>
                 <li>Fix: Check for recipe rating in Template Editor condition</li>
             </ul>
@@ -57,6 +35,32 @@
 
     <div>
         <h3>Previous Versions</h3>
+        <h4>Premium Plugin 2.1.0</h4>
+        <ul>
+            <li>Feature: Nutritional Information</li>
+            <li>Feature: Possibility to print the entire User Menu</li>
+            <li>Setting: Hide custom tags from the Recipe Box</li>
+            <li>Setting: Hide custom tags from User Submission</li>
+            <li>Hook: wpurp_output_recipe_print_user_menus</li>
+            <li>Update: New version of EDD plugin updater</li>
+            <li>Fix: JS errors in Template Editor</li>
+            <li>Fix: Shopping List title in User Menus shortcode</li>
+            <li>Fix: Check for recipe rating in Template Editor condition</li>
+        </ul>
+        <h4>Core Plugin 2.1.0</h4>
+        <ul>
+            <li>Feature: New FAQ page with Getting Started information</li>
+            <li>Feature: WPML Configuration file for multilingual support</li>
+            <li>Setting: Output recipes in RSS Feed</li>
+            <li>Improvement: Use alt and title tags as defined by user for instruction and recipe images</li>
+            <li>Improvement: New icon for Shortcode Editor and settings</li>
+            <li>Fix: Issue with saving settings</li>
+            <li>Fix: Recipe Notes styling of hr tag and image alignment</li>
+            <li>Fix: Ability to use strong and italic text in instructions again</li>
+            <li>Fix: Apply shortcodes in print template</li>
+            <li>Fix: Problem with buttons in settings after changing websites</li>
+        </ul>
+
         <h4>Premium Plugin 2.0.10</h4>
         <ul>
             <li>Feature: New HTML & Shortcodes block in the Template Editor</li>

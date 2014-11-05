@@ -8,7 +8,11 @@ class WPURP_Recipe_Meta_Box {
     {
         add_action( 'admin_init', array( $this, 'add_recipe_meta_box' ));
         add_action( 'admin_menu', array( $this, 'remove_recipe_meta_boxes' ));
-        add_action( 'media_buttons_context',  array( $this, 'add_shortcode_button' ) );
+
+        if( is_admin() ) {
+            add_action( 'media_buttons_context',  array( $this, 'add_shortcode_button' ) );
+        }
+
 
         WPUltimateRecipe::get()->helper('assets')->add(
             array(

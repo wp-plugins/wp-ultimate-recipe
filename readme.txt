@@ -45,6 +45,7 @@ We also have a [WP Ultimate Recipe Premium version](http://www.wpultimaterecipe.
 *   Advanced **recipe index** features
 *   Nice **recipe grid** to show and filter your recipes
 *   **Import ReciPress** recipes
+*   **Import Ziplist** recipes
 *   Custom **ingredient links** (great for affiliate marketing)
 *   Let your **users rate your recipes**
 *   Advanced usage of **WP categories and tags**
@@ -92,6 +93,11 @@ Yes! We pride ourselves on offering awesome support and almost always answer sup
 10. WP Ultimate Recipe automatically formats your data so it can be picked up by Google Recipe Search and others. Great for SEO!
 
 == Changelog ==
+
+= 2.1.1 =
+* Improvement: Serving size doesn't need to be a number anymore (but still recommended!)
+* Fix: Recipe images alt tag problem
+* Fix: Compatibility problem with some front-end templating tools
 
 = 2.1.0 =
 * Feature: New FAQ page with Getting Started information
@@ -316,6 +322,9 @@ Yes! We pride ourselves on offering awesome support and almost always answer sup
 * Very first version of this plugin
 
 == Upgrade notice ==
+
+= 2.1.1 =
+Update if you're experiencing problems with the current version. New feature for Premium: import Ziplist recipes.
 
 = 2.1.0 =
 A few fixes and improvements for the free version. Major update for WP Ultimate Recipe Premium.

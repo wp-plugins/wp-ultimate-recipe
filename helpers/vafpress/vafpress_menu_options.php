@@ -1209,22 +1209,51 @@ $admin_menu = array(
             'icon' => 'font-awesome:fa-upload',
             'controls' => array(
                 array(
-                    'type' => 'notebox',
-                    'name' => 'import_recipes_premium_not_installed',
-                    'label' => 'WP Ultimate Recipe Premium',
-                    'description' => __('These features are only available in ', 'wp-ultimate-recipe') . ' <a href="http://www.wpultimaterecipeplugin.com/premium/" target="_blank">WP Ultimate Recipe Premium</a></strong>.',
-                    'status' => 'warning',
-                    'dependency' => array(
-                        'field' => '',
-                        'function' => 'wpurp_admin_premium_not_installed',
+                    'type' => 'section',
+                    'title' => __('Import Options', 'wp-ultimate-recipe'),
+                    'name' => 'secion_import_recipes_options',
+                    'fields' => array(
+                        array(
+                            'type' => 'textarea',
+                            'name' => 'import_recipes_generic_units',
+                            'label' => __('Generic ingredient units', 'wp-ultimate-recipe'),
+                            'description' => __('Generic ingredient units to recognize while importing. Separate with a ;', 'wp-ultimate-recipe'),
+                            'default' => $defaults['import_recipes_generic_units'],
+                        ),
                     ),
                 ),
                 array(
-                    'type' => 'html',
-                    'name' => 'import_recipes_recipress' . $sitehash,
-                    'binding' => array(
-                        'field'    => '',
-                        'function' => 'wpurp_admin_import_recipress',
+                    'type' => 'section',
+                    'title' => __('Import From', 'wp-ultimate-recipe'),
+                    'name' => 'secion_import_recipes_plugins',
+                    'fields' => array(
+                        array(
+                            'type' => 'notebox',
+                            'name' => 'import_recipes_premium_not_installed',
+                            'label' => 'WP Ultimate Recipe Premium',
+                            'description' => __('These features are only available in ', 'wp-ultimate-recipe') . ' <a href="http://www.wpultimaterecipeplugin.com/premium/" target="_blank">WP Ultimate Recipe Premium</a></strong>.',
+                            'status' => 'warning',
+                            'dependency' => array(
+                                'field' => '',
+                                'function' => 'wpurp_admin_premium_not_installed',
+                            ),
+                        ),
+                        array(
+                            'type' => 'html',
+                            'name' => 'import_recipes_recipress' . $sitehash,
+                            'binding' => array(
+                                'field'    => '',
+                                'function' => 'wpurp_admin_import_recipress',
+                            ),
+                        ),
+                        array(
+                            'type' => 'html',
+                            'name' => 'import_recipes_ziplist' . $sitehash,
+                            'binding' => array(
+                                'field'    => '',
+                                'function' => 'wpurp_admin_import_ziplist',
+                            ),
+                        ),
                     ),
                 ),
             ),
