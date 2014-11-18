@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WP Ultimate Recipe package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2014-11-05 17:07:46+0000\n"
+"PO-Revision-Date: 2014-11-18 09:20:38+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -10,61 +10,111 @@ msgstr ""
 "X-Generator: GlotPress/0.1\n"
 "Project-Id-Version: WP Ultimate Recipe\n"
 
+#: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/import-easyrecipe.php:40
+#: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/import-easyrecipe.php:52
+#: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/before_importing.php:4
+#: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/before_importing.php:84
+#: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/manual_import.php:6
+msgid "Import EasyRecipe"
+msgstr ""
+
+#: wp-ultimate-recipe-premium/core/helpers/cache.php:72
+msgid "Private"
+msgstr ""
+
+#: wp-ultimate-recipe-premium/core/helpers/cache.php:86
+msgid "n/a"
+msgstr ""
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:83
+msgid "Import EasyRecipe recipes"
+msgstr ""
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:193
+msgid "Reset Cache"
+msgstr ""
+
+#: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/import-easyrecipe.php:451
+msgid "Nutritional Serving Size"
+msgstr ""
+
+#: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/before_importing.php:92
+#: wp-ultimate-recipe-premium/premium/addons/import-ziplist/templates/before_importing.php:52
+msgid "Unable to import"
+msgstr ""
+
+#: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/before_importing.php:93
+#: wp-ultimate-recipe-premium/premium/addons/import-ziplist/templates/before_importing.php:53
+msgid "We are unable to import these posts or pages automatically:"
+msgstr ""
+
+#: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/manual_import.php:23
+msgid "You should select two distinct tags"
+msgstr ""
+
+#: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/manual_import.php:46
+msgid "Featured Image"
+msgstr ""
+
+#: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/manual_import.php:79
+msgid "No featured image"
+msgstr ""
+
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1219
 msgid "Generic ingredient units"
-msgstr ""
+msgstr "Obecné jednotky surovin"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1220
 msgid "Generic ingredient units to recognize while importing. Separate with a ;"
-msgstr ""
+msgstr "Obecné jednotky surovin pro rozpoznání během importu. Oddělte je pomocí ;"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1227
 msgid "Import From"
-msgstr ""
+msgstr "Importovat z"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:123
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:93
 msgid "Import Ziplist recipes"
-msgstr ""
+msgstr "Importovat recepty Ziplistu"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress_menu.php:14
 msgid "clove"
-msgstr ""
+msgstr "stroužek"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress_menu.php:15
 msgid "cloves"
-msgstr ""
+msgstr "stroužky"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress_menu.php:16
 msgid "leave"
-msgstr ""
+msgstr "list"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress_menu.php:17
 msgid "leaves"
-msgstr ""
+msgstr "listy"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress_menu.php:18
 msgid "slice"
-msgstr ""
+msgstr "plátek"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress_menu.php:19
 msgid "slices"
-msgstr ""
+msgstr "plátky"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress_menu.php:20
 msgid "piece"
-msgstr ""
+msgstr "kus"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress_menu.php:21
 msgid "pieces"
-msgstr ""
+msgstr "kusy"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress_menu.php:22
 msgid "pinch"
-msgstr ""
+msgstr "špetka"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress_menu.php:23
 msgid "pinches"
-msgstr ""
+msgstr "špetky"
 
 #: wp-ultimate-recipe-premium/premium/addons/import-ziplist/import-ziplist.php:25
 #: wp-ultimate-recipe-premium/premium/addons/import-ziplist/import-ziplist.php:37
@@ -72,31 +122,37 @@ msgstr ""
 #: wp-ultimate-recipe-premium/premium/addons/import-ziplist/templates/before_importing.php:44
 #: wp-ultimate-recipe-premium/premium/addons/import-ziplist/templates/manual_import.php:6
 msgid "Import Ziplist"
-msgstr ""
+msgstr "Importovat Ziplist"
 
 #: wp-ultimate-recipe-premium/premium/addons/import-ziplist/import-ziplist.php:319
 msgid "Yield"
-msgstr ""
+msgstr "Zisk"
 
+#: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/before_importing.php:5
+#: wp-ultimate-recipe-premium/premium/addons/import-recipress/templates/import_recipress.php:5
 #: wp-ultimate-recipe-premium/premium/addons/import-ziplist/templates/before_importing.php:5
 msgid "Before importing"
-msgstr ""
+msgstr "Před importem"
 
+#: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/manual_import.php:31
 #: wp-ultimate-recipe-premium/premium/addons/import-ziplist/templates/manual_import.php:12
 msgid "There are no recipes left to import"
-msgstr ""
+msgstr "Nezbývají žádné recepty k importu"
 
+#: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/manual_import.php:33
 #: wp-ultimate-recipe-premium/premium/addons/import-ziplist/templates/manual_import.php:14
 msgid "Number of recipes left to import:"
-msgstr ""
+msgstr "Počet zbývajících receptů k importu"
 
+#: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/manual_import.php:134
 #: wp-ultimate-recipe-premium/premium/addons/import-ziplist/templates/manual_import.php:58
 msgid "Import this Recipe"
-msgstr ""
+msgstr "Importovat tento recept"
 
+#: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/manual_import.php:135
 #: wp-ultimate-recipe-premium/premium/addons/import-ziplist/templates/manual_import.php:59
 msgid "Feel free to stop at anytime and come back later for the rest of the recipes."
-msgstr ""
+msgstr "Klidně kdykoliv přestaňte a vraťte se zpět později pro zbytek receptů."
 
 #: wp-ultimate-recipe-premium/core/helpers/faq.php:24
 msgid "FAQ"
@@ -110,7 +166,7 @@ msgstr "Následované nutriční tabulkou:"
 msgid "Add Recipe Box"
 msgstr "Přidat pole receptu"
 
-#: wp-ultimate-recipe-premium/core/helpers/recipe_save.php:90
+#: wp-ultimate-recipe-premium/core/helpers/recipe_save.php:92
 msgid "Update the Nutritional Information"
 msgstr "Aktualizovat nutriční informace"
 
@@ -193,14 +249,14 @@ msgstr "Vpravo"
 msgid "Inline"
 msgstr "V řádku"
 
-#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/nutritional-information.php:101
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/nutritional-information.php:102
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:2
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:67
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:187
 msgid "Nutritional Information"
 msgstr "Nutriční informace"
 
-#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/nutritional-information.php:122
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/nutritional-information.php:123
 msgid "Add Nutrition Label"
 msgstr "Přidat nutriční tabulku"
 
@@ -536,7 +592,7 @@ msgid "Number of recipes to show"
 msgstr "Počet zobrazených receptů"
 
 #: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:354
-#: wp-ultimate-recipe-premium/premium/addons/custom-fields/custom-fields.php:16
+#: wp-ultimate-recipe-premium/premium/addons/custom-fields/custom-fields.php:18
 #: wp-ultimate-recipe-premium/premium/addons/custom-fields/templates/page.php:4
 msgid "Custom Fields"
 msgstr "Vlastní pole"
@@ -566,11 +622,11 @@ msgstr "Zobrazit vlastní pole ve formuláři odeslání uživatelem"
 msgid "Manage custom recipe fields"
 msgstr "Spravovat vlastní pole receptů"
 
-#: wp-ultimate-recipe-premium/premium/addons/custom-fields/custom-fields.php:28
+#: wp-ultimate-recipe-premium/premium/addons/custom-fields/custom-fields.php:30
 msgid "Current Custom Fields"
 msgstr "Aktuální vlastní pole"
 
-#: wp-ultimate-recipe-premium/premium/addons/custom-fields/custom-fields.php:29
+#: wp-ultimate-recipe-premium/premium/addons/custom-fields/custom-fields.php:31
 msgid "Add new Custom Field"
 msgstr "Přidat nové vlastní pole"
 
@@ -619,7 +675,7 @@ msgstr "Vícenásobný výběr, Porovnat vše a Nadřazené odpovídají podří
 msgid "Limit recipes at start"
 msgstr "Omezit recepty při spuštění"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:218
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:188
 msgid "Recalculate Recipe Grid Terms"
 msgstr "Přepočítat podmínky mřížky receptů"
 
@@ -774,32 +830,32 @@ msgstr "Může vybrat pouze existující suroviny"
 msgid "When enabled visitors will only be able to select from a list of existing ingredients."
 msgstr "Pokud je povoleno, návštěvníci budou moci vybírat pouze ze seznamu existujících surovin."
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1312
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1320
 msgid "Remove recipe slug"
 msgstr "Odebrat zkrácený název receptu"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1313
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1321
 msgid "Make sure your slugs are unique across posts, pages and recipes! Your archive page will still be available."
 msgstr "Ujistěte se, že jsou vaše zkrácené názvy unikátní napříč příspěvky, stránkami a recepty! Vaše stránka archivu bude stále dostupná."
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1320
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1328
 msgid "Shortcode Editor"
 msgstr "Editor krátkých kódů"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1326
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1342
 msgid "Show shortcode editor for"
 msgstr "Zobrazit editor krátkých kódů pro"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1327
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1343
 msgid "Where do you want to be able to insert recipes with the shortcode editor?"
 msgstr "Kam chcete být schopní vkládat recepty pomocí editoru krátkého kódu?"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:91
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:93
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:56
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:58
 msgid "Open the Template Editor"
 msgstr "Otevřít editor šablony"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:213
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:183
 msgid "Reset Demo Recipe"
 msgstr "Obnovit ukázkový recept"
 
@@ -848,19 +904,21 @@ msgstr "Minimální počet hlasů"
 msgid "Minimum number of votes needed before sharing the rating as metadata used by Google and other search engines."
 msgstr "Minimální počet hlasů potřebných před sdílením hodnocení jako metadat, která používá Google a ostatní vyhledávače."
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1346
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1362
 msgid "Custom Code"
 msgstr "Vlastní kód"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1353
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1369
 msgid "Public CSS"
 msgstr "Veřejné CSS"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1360
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1376
 msgid "Print CSS"
 msgstr "CSS tisku"
 
-#: wp-ultimate-recipe-premium/premium/addons/import-recipress/import-recipress.php:14
+#: wp-ultimate-recipe-premium/premium/addons/import-recipress/import-recipress.php:25
+#: wp-ultimate-recipe-premium/premium/addons/import-recipress/templates/import_recipress.php:4
+#: wp-ultimate-recipe-premium/premium/addons/import-recipress/templates/import_recipress.php:73
 msgid "Import ReciPress"
 msgstr "Importovat z ReciPressu"
 
@@ -897,6 +955,7 @@ msgid "Highlight a section in your recipe and click the corresponding button to 
 msgstr "Zvýrazněte část svého receptu a klikněte na odpovídající tlačítko, abyste ji definovali."
 
 #: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:108
+#: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/manual_import.php:127
 #: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:19
 #: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:49
 #: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:80
@@ -917,6 +976,7 @@ msgid "Only unit aliases defined in the settings will be recognized."
 msgstr "Budou rozpoznány pouze aliasy jednotek zadané v nastavení."
 
 #: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:106
+#: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/manual_import.php:125
 #: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:78
 #: wp-ultimate-recipe-premium/premium/addons/import-ziplist/templates/manual_import.php:49
 msgid "Unit"
@@ -1172,11 +1232,11 @@ msgstr "Změnit licenci"
 msgid "Metric"
 msgstr "Metrická"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1305
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1313
 msgid "Recipes in admin posts"
 msgstr "Recepty v administrátorských příspěvcích"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1306
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1314
 msgid "Show recipes in admin posts overview when acting as posts."
 msgstr "Zobrazit recepty v přehledu administrátorských příspěvků, když se chovají jako příspěvky."
 
@@ -1201,11 +1261,11 @@ msgstr "Omezit autora"
 msgid "Units"
 msgstr "Jednotky"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1298
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1306
 msgid "Recipes act as posts"
 msgstr "Recepty se chovají jako příspěvky"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1299
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1307
 msgid "Recipes act like normal posts. For example: they show up on your front page."
 msgstr "Recepty se chovají jako normální příspěvky. Například: zobrazují se na hlavní stránce."
 
@@ -1251,7 +1311,7 @@ msgstr "Pouze přihlášení uživatelé mohou hodnotit recepty"
 msgid "Everyone can rate recipes"
 msgstr "Recepty může hodnotit každý"
 
-#: wp-ultimate-recipe-premium/core/helpers/recipe_save.php:110
+#: wp-ultimate-recipe-premium/core/helpers/recipe_save.php:112
 #: wp-ultimate-recipe-premium/premium/addons/recipe-grid/recipe-grid.php:266
 #: wp-ultimate-recipe-premium/premium/helpers/recipe_columns.php:81
 msgid "Categories"
@@ -1375,7 +1435,7 @@ msgstr "Zobrazit recepty v archivech rubrik a štítků WP."
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:553
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:624
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1010
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1278
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1286
 msgid "Advanced"
 msgstr "Rozšířené"
 
@@ -1463,7 +1523,7 @@ msgstr "Přidat skupinu pokynů"
 msgid "Share this Recipe"
 msgstr "Sdílet tento recept"
 
-#: wp-ultimate-recipe-premium/core/helpers/recipe_save.php:111
+#: wp-ultimate-recipe-premium/core/helpers/recipe_save.php:113
 #: wp-ultimate-recipe-premium/premium/addons/recipe-grid/recipe-grid.php:274
 #: wp-ultimate-recipe-premium/premium/helpers/recipe_columns.php:82
 msgid "Tags"
@@ -1483,7 +1543,7 @@ msgstr "Rubrika"
 msgid "Votes"
 msgstr "Hlasů"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:118
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:88
 msgid "Import ReciPress recipes"
 msgstr "Importovat recepty z ReciPressu"
 
@@ -1500,36 +1560,34 @@ msgstr "Používat výchozí rubriky a štítky WP pro uspořádání vašich re
 msgid "Passive Time"
 msgstr "Doba nečinnosti"
 
-#: wp-ultimate-recipe-premium/premium/addons/import-recipress/templates/import_recipress.php:17
+#: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/before_importing.php:7
+#: wp-ultimate-recipe-premium/premium/addons/import-recipress/templates/import_recipress.php:7
 #: wp-ultimate-recipe-premium/premium/addons/import-ziplist/templates/before_importing.php:7
 msgid "It's a good idea to backup your WP database before using the import feature."
 msgstr "Je dobré zazálohovat svou databázi WP, než použijte funkci importu."
 
-#: wp-ultimate-recipe-premium/premium/addons/import-recipress/templates/import_recipress.php:18
+#: wp-ultimate-recipe-premium/premium/addons/import-recipress/templates/import_recipress.php:19
 msgid "recipes are about to be imported to"
 msgstr "recepty budou importovány do"
 
-#: wp-ultimate-recipe-premium/premium/addons/import-recipress/templates/import_recipress.php:18
+#: wp-ultimate-recipe-premium/premium/addons/import-recipress/templates/import_recipress.php:19
 msgid "Are you sure you want to do this?"
 msgstr "Opravdu to chcete udělat?"
 
-#: wp-ultimate-recipe-premium/premium/addons/import-recipress/templates/import_recipress.php:24
-#: wp-ultimate-recipe-premium/premium/addons/import-recipress/templates/import_recipress.php:33
-#: wp-ultimate-recipe-premium/premium/addons/import-recipress/templates/import_recipress.php:42
-msgid "New tag for"
-msgstr "Nový štítek pro"
-
-#: wp-ultimate-recipe-premium/premium/addons/import-recipress/templates/import_recipress.php:27
-#: wp-ultimate-recipe-premium/premium/addons/import-recipress/templates/import_recipress.php:36
-#: wp-ultimate-recipe-premium/premium/addons/import-recipress/templates/import_recipress.php:45
+#: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/before_importing.php:54
+#: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/before_importing.php:69
+#: wp-ultimate-recipe-premium/premium/addons/import-recipress/templates/import_recipress.php:28
+#: wp-ultimate-recipe-premium/premium/addons/import-recipress/templates/import_recipress.php:43
+#: wp-ultimate-recipe-premium/premium/addons/import-recipress/templates/import_recipress.php:58
 msgid "Select a recipe tag"
 msgstr "Vyberte štítek receptu"
 
-#: wp-ultimate-recipe-premium/premium/addons/import-recipress/import-recipress.php:33
+#: wp-ultimate-recipe-premium/premium/addons/import-recipress/import-recipress.php:44
 msgid "You should activate this plugin:"
 msgstr "Měli byste aktivovat tento plugin:"
 
-#: wp-ultimate-recipe-premium/premium/addons/import-recipress/import-recipress.php:47
+#: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/manual_import.php:18
+#: wp-ultimate-recipe-premium/premium/addons/import-recipress/import-recipress.php:58
 msgid "You should select a new tag for the imported recipes"
 msgstr "Měli byste vybrat nový štítek pro importované recepty"
 
@@ -1764,8 +1822,6 @@ msgstr "Vyberte soubor"
 
 #: wp-ultimate-recipe-premium/core/vendor/vafpress/views/option/impexp.php:4
 #: wp-ultimate-recipe-premium/core/vendor/vafpress/views/option/impexp.php:14
-#: wp-ultimate-recipe-premium/premium/addons/import-recipress/templates/import_recipress.php:16
-#: wp-ultimate-recipe-premium/premium/addons/import-recipress/templates/import_recipress.php:52
 msgid "Import"
 msgstr "Importovat"
 
@@ -1898,15 +1954,15 @@ msgstr "zakázáno"
 msgid "Import Recipes"
 msgstr "Importovat recepty"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1270
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1278
 msgid "Coming Soon"
 msgstr "Již brzy"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1271
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1279
 msgid "This feature is coming soon for "
 msgstr "Tato funkce bude již brzy dostupná pro "
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1263
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1271
 msgid "Export Recipes"
 msgstr "Exportovat recepty"
 
@@ -2049,6 +2105,7 @@ msgstr "Obnovit na výchozí hodnoty"
 msgid "No recipes found."
 msgstr "Nebyly nalezeny žádné recepty."
 
+#: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/manual_import.php:124
 #: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:77
 #: wp-ultimate-recipe-premium/premium/addons/import-ziplist/templates/manual_import.php:48
 #: wp-ultimate-recipe-premium/premium/addons/user-menus/templates/user-menus.php:141
@@ -2057,8 +2114,8 @@ msgstr "Množství"
 
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/basic-custom-taxonomies.php:114
 #: wp-ultimate-recipe-premium/core/helpers/recipe_post_type.php:37
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:103
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:145
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:115
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:157
 #: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/custom-taxonomies.php:156
 #: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:143
 msgid "New"
@@ -2066,8 +2123,8 @@ msgstr "Nový"
 
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/basic-custom-taxonomies.php:108
 #: wp-ultimate-recipe-premium/core/helpers/recipe_post_type.php:40
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:97
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:139
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:109
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:151
 #: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/custom-taxonomies.php:150
 #: wp-ultimate-recipe-premium/premium/addons/recipe-search/widgets/recipe_search_widget.php:52
 #: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:146
@@ -2077,8 +2134,8 @@ msgstr "Hledat"
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/basic-custom-taxonomies.php:118
 #: wp-ultimate-recipe-premium/core/helpers/recipe_post_type.php:41
 #: wp-ultimate-recipe-premium/core/helpers/recipe_post_type.php:42
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:107
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:149
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:119
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:161
 #: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/custom-taxonomies.php:160
 #: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:147
 #: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:148
@@ -2087,8 +2144,8 @@ msgstr "Žádné"
 
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/basic-custom-taxonomies.php:118
 #: wp-ultimate-recipe-premium/core/helpers/recipe_post_type.php:41
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:107
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:149
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:119
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:161
 #: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/custom-taxonomies.php:160
 #: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:147
 msgid "found."
@@ -2105,22 +2162,22 @@ msgid "Parent"
 msgstr "Nadřazený"
 
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/basic-custom-taxonomies.php:109
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:98
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:140
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:110
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:152
 #: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/custom-taxonomies.php:151
 msgid "Popular"
 msgstr "Oblíbené"
 
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/basic-custom-taxonomies.php:110
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:99
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:141
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:111
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:153
 #: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/custom-taxonomies.php:152
 msgid "All"
 msgstr "Všechny"
 
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/basic-custom-taxonomies.php:112
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:101
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:143
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:113
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:155
 #: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/custom-taxonomies.php:154
 msgid "Update"
 msgstr "Aktualizovat"
@@ -2128,8 +2185,8 @@ msgstr "Aktualizovat"
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/basic-custom-taxonomies.php:114
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/templates/page_form.php:13
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/templates/page_list.php:15
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:103
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:145
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:115
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:157
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:273
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:402
 #: wp-ultimate-recipe-premium/premium/addons/custom-fields/templates/page_form.php:16
@@ -2141,29 +2198,29 @@ msgid "Name"
 msgstr "Název"
 
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/basic-custom-taxonomies.php:115
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:104
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:146
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:116
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:158
 #: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/custom-taxonomies.php:157
 msgid "Separate"
 msgstr "Oddělit"
 
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/basic-custom-taxonomies.php:115
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:104
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:146
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:116
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:158
 #: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/custom-taxonomies.php:157
 msgid "with commas"
 msgstr "čárkami"
 
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/basic-custom-taxonomies.php:116
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:105
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:147
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:117
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:159
 #: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/custom-taxonomies.php:158
 msgid "Add or remove"
 msgstr "Přidat nebo odebrat"
 
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/basic-custom-taxonomies.php:117
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:106
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:148
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:118
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:160
 #: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/custom-taxonomies.php:159
 msgid "Choose from the most used"
 msgstr "Vyberte z nejpoužívanějších"
@@ -2392,6 +2449,7 @@ msgstr "Anonymní"
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:277
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:337
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:546
+#: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/import-easyrecipe.php:437
 #: wp-ultimate-recipe-premium/premium/helpers/recipe_columns.php:19
 #: wp-ultimate-recipe-premium/premium/helpers/recipe_columns.php:70
 msgid "Author"
@@ -2459,9 +2517,12 @@ msgstr "(např. 2 osoby, 3 kopečky, ...)"
 #: wp-ultimate-recipe-premium/core/helpers/migration/1_0_9_free_text_times.php:20
 #: wp-ultimate-recipe-premium/core/helpers/recipe_demo.php:26
 #: wp-ultimate-recipe-premium/core/helpers/recipe_demo.php:28
-#: wp-ultimate-recipe-premium/premium/addons/import-recipress/import-recipress.php:160
-#: wp-ultimate-recipe-premium/premium/addons/import-recipress/import-recipress.php:161
-#: wp-ultimate-recipe-premium/premium/addons/import-recipress/import-recipress.php:162
+#: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/import-easyrecipe.php:219
+#: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/import-easyrecipe.php:224
+#: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/import-easyrecipe.php:232
+#: wp-ultimate-recipe-premium/premium/addons/import-recipress/import-recipress.php:171
+#: wp-ultimate-recipe-premium/premium/addons/import-recipress/import-recipress.php:172
+#: wp-ultimate-recipe-premium/premium/addons/import-recipress/import-recipress.php:173
 #: wp-ultimate-recipe-premium/premium/addons/import-ziplist/import-ziplist.php:203
 #: wp-ultimate-recipe-premium/premium/addons/import-ziplist/import-ziplist.php:208
 #: wp-ultimate-recipe-premium/premium/addons/import-ziplist/import-ziplist.php:216
@@ -2558,7 +2619,7 @@ msgstr "Recepty"
 
 #: wp-ultimate-recipe-premium/core/helpers/recipe_meta_box.php:60
 #: wp-ultimate-recipe-premium/core/helpers/recipe_post_type.php:21
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1284
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1292
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:35
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:70
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:110
@@ -2571,8 +2632,8 @@ msgstr "Recept"
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/basic-custom-taxonomies.php:113
 #: wp-ultimate-recipe-premium/core/helpers/recipe_post_type.php:33
 #: wp-ultimate-recipe-premium/core/helpers/recipe_post_type.php:34
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:102
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:144
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:114
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:156
 #: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/custom-taxonomies.php:155
 #: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:139
 #: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:140
@@ -2582,8 +2643,8 @@ msgstr "Přidat"
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/basic-custom-taxonomies.php:111
 #: wp-ultimate-recipe-premium/core/helpers/recipe_post_type.php:35
 #: wp-ultimate-recipe-premium/core/helpers/recipe_post_type.php:36
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:100
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:142
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:112
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:154
 #: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/custom-taxonomies.php:153
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:86
 #: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:141
@@ -2605,8 +2666,9 @@ msgstr "Nejdříve musíte vytvořit recept, podívejte se na nabídku 'Recepty'
 
 #: wp-ultimate-recipe-premium/core/addons/custom-templates/templates/general/title.php:47
 #: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:83
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:53
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:65
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:202
+#: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/manual_import.php:120
 #: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:17
 #: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:56
 #: wp-ultimate-recipe-premium/premium/addons/import-ziplist/templates/manual_import.php:38
@@ -2614,7 +2676,8 @@ msgid "Ingredients"
 msgstr "Suroviny"
 
 #: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:107
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:53
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:65
+#: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/manual_import.php:126
 #: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:79
 #: wp-ultimate-recipe-premium/premium/addons/import-ziplist/templates/manual_import.php:50
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:61
@@ -2622,88 +2685,88 @@ msgstr "Suroviny"
 msgid "Ingredient"
 msgstr "Surovina"
 
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:54
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:66
 msgid "Courses"
 msgstr "Chody"
 
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:54
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:66
 msgid "Course"
 msgstr "Chod"
 
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:60
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:72
 msgid "Breakfast"
 msgstr "Snídaně"
 
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:61
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:73
 msgid "Appetizer"
 msgstr "Předkrm"
 
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:62
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:74
 msgid "Soup"
 msgstr "Polévka"
 
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:63
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:75
 msgid "Main Course"
 msgstr "Hlavní chod"
 
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:64
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:76
 msgid "Side Dish"
 msgstr "Příloha"
 
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:65
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:77
 msgid "Salad"
 msgstr "Salát"
 
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:66
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:78
 msgid "Dessert"
 msgstr "Zákusek"
 
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:67
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:79
 msgid "Snack"
 msgstr "Svačina"
 
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:68
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:80
 msgid "Drinks"
 msgstr "Nápoje"
 
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:55
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:67
 msgid "Cuisines"
 msgstr "Kuchyně"
 
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:55
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:67
 msgid "Cuisine"
 msgstr "Kuchyň"
 
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:70
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:82
 msgid "French"
 msgstr "Francouzská"
 
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:71
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:83
 msgid "Italian"
 msgstr "Italská"
 
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:72
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:84
 msgid "Mediterranean"
 msgstr "Středomořská"
 
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:73
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:85
 msgid "Indian"
 msgstr "Indická"
 
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:74
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:86
 msgid "Chinese"
 msgstr "Čínská"
 
 #: wp-ultimate-recipe-premium/core/helpers/ingredient_units.php:394
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:75
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:87
 msgid "Japanese"
 msgstr "Japonská"
 
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:76
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:88
 msgid "American"
 msgstr "Americká"
 
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:77
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:89
 msgid "Mexican"
 msgstr "Mexická"
 

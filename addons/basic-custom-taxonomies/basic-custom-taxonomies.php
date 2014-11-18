@@ -127,8 +127,7 @@ if( !WPUltimateRecipe::is_premium_active() )
                         )
                     );
 
-                update_option( 'wpurp_taxonomies', $taxonomies );
-
+                WPUltimateRecipe::get()->helper( 'taxonomies' )->update( $taxonomies );
                 WPUltimateRecipe::get()->helper( 'taxonomies' )->check_recipe_taxonomies();
                 WPUltimateRecipe::get()->helper( 'permalinks_flusher' )->set_flush_needed();
             }

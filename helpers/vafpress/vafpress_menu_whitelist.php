@@ -46,42 +46,7 @@ function wpurp_admin_manage_tags()
 
 function wpurp_admin_template_editor_recipe()
 {
-    $recipe_list = array();
-
-    $args = array(
-        'post_type' => 'recipe',
-        'post_status' => array( 'publish', 'private' ),
-        'orderby' => 'title',
-        'order' => 'ASC',
-        'no-paging' => true,
-        'posts_per_page' => -1,
-    );
-
-    $recipes = get_posts( $args );
-    foreach ( $recipes as $recipe ) {
-
-        $meta = get_post_custom( $recipe->ID );
-
-        if ( isset( $meta['recipe_title'] ) && !is_null( $meta['recipe_title'][0] ) && $meta['recipe_title'][0] != '' ) {
-            $title = $meta['recipe_title'][0];
-        } else {
-            $title = $recipe->post_title;
-        }
-
-        $recipe_list[] = array(
-            'value' => $recipe->ID,
-            'label' => $title,
-        );
-
-    }
-    usort($recipe_list, 'wpurp_menu_sort_by_label' );
-
-    return $recipe_list;
-}
-
-function wpurp_menu_sort_by_label( $a, $b )
-{
-    return strcmp($a['label'], $b['label']);
+    return WPUltimateRecipe::get()->helper( 'cache' )->get( 'recipes_by_title' );
 }
 
 function wpurp_admin_template_editor()
@@ -99,7 +64,7 @@ function wpurp_admin_template_editor()
 function wpurp_admin_templates()
 {
     $template_list = array();
-    $templates = get_option( 'wpurp_custom_templates', array() );
+    $templates = WPUltimateRecipe::addon( 'custom-templates' )->get_templates();
 
     foreach ( $templates as $index => $template ) {
 
@@ -111,6 +76,11 @@ function wpurp_admin_templates()
     }
 
     return $template_list;
+}
+
+function wpurp_admin_import_easyrecipe()
+{
+    return '<a href="'.admin_url( 'edit.php?post_type=recipe&page=wpurp_import_easyrecipe' ).'" class="button button-primary" target="_blank">'.__('Import EasyRecipe recipes', 'wp-ultimate-recipe').'</a>';
 }
 
 function wpurp_admin_import_recipress()
@@ -218,6 +188,11 @@ function wpurp_reset_recipe_grid_terms()
     return '<a href="'.admin_url( 'edit.php?post_type=recipe&wpurp_reset_recipe_grid_terms=true' ).'" class="button button-primary" target="_blank">'.__('Recalculate Recipe Grid Terms', 'wp-ultimate-recipe').'</a>';
 }
 
+function wpurp_reset_cache()
+{
+    return '<a href="'.admin_url( 'edit.php?post_type=recipe&wpurp_reset_cache=true' ).'" class="button button-primary" target="_blank">'.__('Reset Cache', 'wp-ultimate-recipe').'</a>';
+}
+
 function wpurp_admin_recipe_tags()
 {
     $taxonomy_list = array();
@@ -267,6 +242,7 @@ VP_Security::instance()->whitelist_function('wpurp_admin_manage_tags');
 VP_Security::instance()->whitelist_function('wpurp_admin_template_editor_recipe');
 VP_Security::instance()->whitelist_function('wpurp_admin_template_editor');
 VP_Security::instance()->whitelist_function('wpurp_admin_templates');
+VP_Security::instance()->whitelist_function('wpurp_admin_import_easyrecipe');
 VP_Security::instance()->whitelist_function('wpurp_admin_import_recipress');
 VP_Security::instance()->whitelist_function('wpurp_admin_import_ziplist');
 VP_Security::instance()->whitelist_function('wpurp_admin_system_3');
@@ -279,5 +255,7 @@ VP_Security::instance()->whitelist_function('vp_dep_boolean_inverse');
 VP_Security::instance()->whitelist_function('wpurp_font_preview');
 VP_Security::instance()->whitelist_function('wpurp_font_preview_with_text');
 VP_Security::instance()->whitelist_function('wpurp_reset_demo_recipe');
+VP_Security::instance()->whitelist_function('wpurp_reset_recipe_grid_terms');
+VP_Security::instance()->whitelist_function('wpurp_reset_cache');
 VP_Security::instance()->whitelist_function('wpurp_admin_recipe_tags');
 VP_Security::instance()->whitelist_function('wpurp_admin_post_types');

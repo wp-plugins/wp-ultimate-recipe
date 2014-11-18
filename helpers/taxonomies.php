@@ -2,6 +2,8 @@
 
 class WPURP_Taxonomies {
 
+    private $taxonomies;
+
     public function __construct()
     {
         add_action( 'init', array( $this, 'register' ), 2 );
@@ -14,13 +16,23 @@ class WPURP_Taxonomies {
      */
     public function get()
     {
-        $taxonomies = get_option( 'wpurp_taxonomies', array() );
+        if( !$this->taxonomies ) {
+            $taxonomies = get_option( 'wpurp_taxonomies', array() );
 
-        if( !is_array( $taxonomies ) ) {
-            $taxonomies = array();
+            if( !is_array( $taxonomies ) ) {
+                $taxonomies = array();
+            }
+
+            $this->taxonomies = $taxonomies;
         }
 
-        return $taxonomies;
+        return $this->taxonomies;
+    }
+
+    public function update( $taxonomies )
+    {
+        $this->taxonomies = $taxonomies;
+        update_option( 'wpurp_taxonomies', $taxonomies );
     }
 
     /**
@@ -54,7 +66,7 @@ class WPURP_Taxonomies {
             $taxonomies = $this->add_taxonomy_to_array($taxonomies, 'course',       __( 'Courses', 'wp-ultimate-recipe' ),      __( 'Course', 'wp-ultimate-recipe' ));
             $taxonomies = $this->add_taxonomy_to_array($taxonomies, 'cuisine',      __( 'Cuisines', 'wp-ultimate-recipe' ),     __( 'Cuisine', 'wp-ultimate-recipe' ));
 
-            update_option('wpurp_taxonomies', $taxonomies);
+            $this->update( $taxonomies );
             update_option( 'wpurp_flush', '1' );
 
             wp_insert_term( __( 'Breakfast',    'wp-ultimate-recipe' ), 'course' );

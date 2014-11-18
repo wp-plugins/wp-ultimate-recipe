@@ -44,6 +44,7 @@ We also have a [WP Ultimate Recipe Premium version](http://www.wpultimaterecipe.
 *   Create **custom tags** for your recipes
 *   Advanced **recipe index** features
 *   Nice **recipe grid** to show and filter your recipes
+*   **Import EasyRecipe and EasyRecipe Plus** recipes
 *   **Import ReciPress** recipes
 *   **Import Ziplist** recipes
 *   Custom **ingredient links** (great for affiliate marketing)
@@ -93,6 +94,13 @@ Yes! We pride ourselves on offering awesome support and almost always answer sup
 10. WP Ultimate Recipe automatically formats your data so it can be picked up by Google Recipe Search and others. Great for SEO!
 
 == Changelog ==
+
+= 2.1.2 =
+* Feature: Compatibility with the Subscribe2 plugin
+* Feature: Compatibility with the Paid Memberships Pro plugin
+* Fix: Recipe Title will take over Post Title when intentionally left blank
+* Fix: Memory issue for shortcode editor when having a large amount of recipes
+* Fix: Improved CPU load should increase site speed
 
 = 2.1.1 =
 * Improvement: Serving size doesn't need to be a number anymore (but still recommended!)
@@ -322,6 +330,9 @@ Yes! We pride ourselves on offering awesome support and almost always answer sup
 * Very first version of this plugin
 
 == Upgrade notice ==
+
+= 2.1.2 =
+Update highly recommended. Improvements to CPU and memory load of the plugin.
 
 = 2.1.1 =
 Update if you're experiencing problems with the current version. New feature for Premium: import Ziplist recipes.

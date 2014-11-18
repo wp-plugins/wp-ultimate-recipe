@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WP Ultimate Recipe Plugin\n"
-"POT-Creation-Date: 2014-11-05 18:02+0100\n"
-"PO-Revision-Date: 2014-11-05 18:02+0100\n"
+"POT-Creation-Date: 2014-11-18 10:16+0100\n"
+"PO-Revision-Date: 2014-11-18 10:16+0100\n"
 "Last-Translator: Brecht Vandersmissen <brecht.vandersmissen@gmail.com>\n"
 "Language-Team: Bootstrapped Ventures\n"
 "Language: en_GB\n"
@@ -35,8 +35,8 @@ msgstr ""
 
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/basic-custom-taxonomies.php:108
 #: wp-ultimate-recipe-premium/core/helpers/recipe_post_type.php:40
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:97
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:139
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:109
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:151
 #: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/custom-taxonomies.php:150
 #: wp-ultimate-recipe-premium/premium/addons/recipe-search/widgets/recipe_search_widget.php:52
 #: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:146
@@ -44,15 +44,15 @@ msgid "Search"
 msgstr ""
 
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/basic-custom-taxonomies.php:109
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:98
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:140
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:110
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:152
 #: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/custom-taxonomies.php:151
 msgid "Popular"
 msgstr ""
 
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/basic-custom-taxonomies.php:110
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:99
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:141
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:111
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:153
 #: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/custom-taxonomies.php:152
 msgid "All"
 msgstr ""
@@ -60,8 +60,8 @@ msgstr ""
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/basic-custom-taxonomies.php:111
 #: wp-ultimate-recipe-premium/core/helpers/recipe_post_type.php:35
 #: wp-ultimate-recipe-premium/core/helpers/recipe_post_type.php:36
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:100
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:142
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:112
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:154
 #: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/custom-taxonomies.php:153
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:86
 #: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:141
@@ -70,8 +70,8 @@ msgid "Edit"
 msgstr ""
 
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/basic-custom-taxonomies.php:112
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:101
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:143
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:113
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:155
 #: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/custom-taxonomies.php:154
 msgid "Update"
 msgstr ""
@@ -79,8 +79,8 @@ msgstr ""
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/basic-custom-taxonomies.php:113
 #: wp-ultimate-recipe-premium/core/helpers/recipe_post_type.php:33
 #: wp-ultimate-recipe-premium/core/helpers/recipe_post_type.php:34
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:102
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:144
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:114
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:156
 #: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/custom-taxonomies.php:155
 #: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:139
 #: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:140
@@ -89,8 +89,8 @@ msgstr ""
 
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/basic-custom-taxonomies.php:114
 #: wp-ultimate-recipe-premium/core/helpers/recipe_post_type.php:37
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:103
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:145
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:115
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:157
 #: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/custom-taxonomies.php:156
 #: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:143
 msgid "New"
@@ -99,8 +99,8 @@ msgstr ""
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/basic-custom-taxonomies.php:114
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/templates/page_form.php:13
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/templates/page_list.php:15
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:103
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:145
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:115
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:157
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:273
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:402
 #: wp-ultimate-recipe-premium/premium/addons/custom-fields/templates/page_form.php:16
@@ -112,29 +112,29 @@ msgid "Name"
 msgstr ""
 
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/basic-custom-taxonomies.php:115
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:104
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:146
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:116
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:158
 #: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/custom-taxonomies.php:157
 msgid "Separate"
 msgstr ""
 
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/basic-custom-taxonomies.php:115
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:104
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:146
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:116
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:158
 #: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/custom-taxonomies.php:157
 msgid "with commas"
 msgstr ""
 
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/basic-custom-taxonomies.php:116
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:105
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:147
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:117
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:159
 #: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/custom-taxonomies.php:158
 msgid "Add or remove"
 msgstr ""
 
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/basic-custom-taxonomies.php:117
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:106
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:148
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:118
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:160
 #: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/custom-taxonomies.php:159
 msgid "Choose from the most used"
 msgstr ""
@@ -142,8 +142,8 @@ msgstr ""
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/basic-custom-taxonomies.php:118
 #: wp-ultimate-recipe-premium/core/helpers/recipe_post_type.php:41
 #: wp-ultimate-recipe-premium/core/helpers/recipe_post_type.php:42
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:107
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:149
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:119
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:161
 #: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/custom-taxonomies.php:160
 #: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:147
 #: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:148
@@ -152,8 +152,8 @@ msgstr ""
 
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/basic-custom-taxonomies.php:118
 #: wp-ultimate-recipe-premium/core/helpers/recipe_post_type.php:41
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:107
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:149
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:119
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:161
 #: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/custom-taxonomies.php:160
 #: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:147
 msgid "found."
@@ -280,8 +280,9 @@ msgstr ""
 
 #: wp-ultimate-recipe-premium/core/addons/custom-templates/templates/general/title.php:47
 #: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:83
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:53
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:65
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:202
+#: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/manual_import.php:120
 #: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:17
 #: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:56
 #: wp-ultimate-recipe-premium/premium/addons/import-ziplist/templates/manual_import.php:38
@@ -314,9 +315,12 @@ msgstr ""
 #: wp-ultimate-recipe-premium/core/helpers/migration/1_0_9_free_text_times.php:20
 #: wp-ultimate-recipe-premium/core/helpers/recipe_demo.php:26
 #: wp-ultimate-recipe-premium/core/helpers/recipe_demo.php:28
-#: wp-ultimate-recipe-premium/premium/addons/import-recipress/import-recipress.php:160
-#: wp-ultimate-recipe-premium/premium/addons/import-recipress/import-recipress.php:161
-#: wp-ultimate-recipe-premium/premium/addons/import-recipress/import-recipress.php:162
+#: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/import-easyrecipe.php:219
+#: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/import-easyrecipe.php:224
+#: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/import-easyrecipe.php:232
+#: wp-ultimate-recipe-premium/premium/addons/import-recipress/import-recipress.php:171
+#: wp-ultimate-recipe-premium/premium/addons/import-recipress/import-recipress.php:172
+#: wp-ultimate-recipe-premium/premium/addons/import-recipress/import-recipress.php:173
 #: wp-ultimate-recipe-premium/premium/addons/import-ziplist/import-ziplist.php:203
 #: wp-ultimate-recipe-premium/premium/addons/import-ziplist/import-ziplist.php:208
 #: wp-ultimate-recipe-premium/premium/addons/import-ziplist/import-ziplist.php:216
@@ -380,6 +384,14 @@ msgstr ""
 msgid ""
 "Click on the <strong>chef's hat</strong> in the visual editor toolbar to "
 "easily <strong>add recipes and functionality</strong> to any post or page."
+msgstr ""
+
+#: wp-ultimate-recipe-premium/core/helpers/cache.php:72
+msgid "Private"
+msgstr ""
+
+#: wp-ultimate-recipe-premium/core/helpers/cache.php:86
+msgid "n/a"
 msgstr ""
 
 #: wp-ultimate-recipe-premium/core/helpers/faq.php:24
@@ -479,7 +491,7 @@ msgid "US Legal"
 msgstr ""
 
 #: wp-ultimate-recipe-premium/core/helpers/ingredient_units.php:394
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:75
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:87
 msgid "Japanese"
 msgstr ""
 
@@ -621,13 +633,15 @@ msgid "Quantity"
 msgstr ""
 
 #: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:106
+#: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/manual_import.php:125
 #: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:78
 #: wp-ultimate-recipe-premium/premium/addons/import-ziplist/templates/manual_import.php:49
 msgid "Unit"
 msgstr ""
 
 #: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:107
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:53
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:65
+#: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/manual_import.php:126
 #: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:79
 #: wp-ultimate-recipe-premium/premium/addons/import-ziplist/templates/manual_import.php:50
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:61
@@ -640,6 +654,7 @@ msgid "required"
 msgstr ""
 
 #: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:108
+#: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/manual_import.php:127
 #: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:19
 #: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:49
 #: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:80
@@ -713,7 +728,7 @@ msgid "Recipe notes"
 msgstr ""
 
 #: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:354
-#: wp-ultimate-recipe-premium/premium/addons/custom-fields/custom-fields.php:16
+#: wp-ultimate-recipe-premium/premium/addons/custom-fields/custom-fields.php:18
 #: wp-ultimate-recipe-premium/premium/addons/custom-fields/templates/page.php:4
 msgid "Custom Fields"
 msgstr ""
@@ -724,7 +739,7 @@ msgstr ""
 
 #: wp-ultimate-recipe-premium/core/helpers/recipe_meta_box.php:60
 #: wp-ultimate-recipe-premium/core/helpers/recipe_post_type.php:21
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1284
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1292
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:35
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:70
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:110
@@ -756,17 +771,17 @@ msgstr ""
 msgid "Parent"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/recipe_save.php:90
+#: wp-ultimate-recipe-premium/core/helpers/recipe_save.php:92
 msgid "Update the Nutritional Information"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/recipe_save.php:110
+#: wp-ultimate-recipe-premium/core/helpers/recipe_save.php:112
 #: wp-ultimate-recipe-premium/premium/addons/recipe-grid/recipe-grid.php:266
 #: wp-ultimate-recipe-premium/premium/helpers/recipe_columns.php:81
 msgid "Categories"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/recipe_save.php:111
+#: wp-ultimate-recipe-premium/core/helpers/recipe_save.php:113
 #: wp-ultimate-recipe-premium/premium/addons/recipe-grid/recipe-grid.php:274
 #: wp-ultimate-recipe-premium/premium/helpers/recipe_columns.php:82
 msgid "Tags"
@@ -778,83 +793,83 @@ msgid ""
 "You have to create a recipe first, check the 'Recipes' menu on the left."
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:54
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:66
 msgid "Courses"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:54
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:66
 msgid "Course"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:55
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:67
 msgid "Cuisines"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:55
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:67
 msgid "Cuisine"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:60
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:72
 msgid "Breakfast"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:61
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:73
 msgid "Appetizer"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:62
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:74
 msgid "Soup"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:63
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:75
 msgid "Main Course"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:64
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:76
 msgid "Side Dish"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:65
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:77
 msgid "Salad"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:66
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:78
 msgid "Dessert"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:67
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:79
 msgid "Snack"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:68
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:80
 msgid "Drinks"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:70
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:82
 msgid "French"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:71
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:83
 msgid "Italian"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:72
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:84
 msgid "Mediterranean"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:73
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:85
 msgid "Indian"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:74
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:86
 msgid "Chinese"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:76
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:88
 msgid "American"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:77
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:89
 msgid "Mexican"
 msgstr ""
 
@@ -1071,7 +1086,7 @@ msgstr ""
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:553
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:624
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1010
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1278
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1286
 msgid "Advanced"
 msgstr ""
 
@@ -1516,67 +1531,67 @@ msgstr ""
 msgid "Import From"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1263
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1271
 msgid "Export Recipes"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1270
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1278
 msgid "Coming Soon"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1271
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1279
 msgid "This feature is coming soon for "
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1298
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1306
 msgid "Recipes act as posts"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1299
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1307
 msgid ""
 "Recipes act like normal posts. For example: they show up on your front page."
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1305
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1313
 msgid "Recipes in admin posts"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1306
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1314
 msgid "Show recipes in admin posts overview when acting as posts."
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1312
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1320
 msgid "Remove recipe slug"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1313
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1321
 msgid ""
 "Make sure your slugs are unique across posts, pages and recipes! Your "
 "archive page will still be available."
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1320
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1328
 msgid "Shortcode Editor"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1326
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1342
 msgid "Show shortcode editor for"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1327
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1343
 msgid ""
 "Where do you want to be able to insert recipes with the shortcode editor?"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1346
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1362
 msgid "Custom Code"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1353
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1369
 msgid "Public CSS"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1360
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1376
 msgid "Print CSS"
 msgstr ""
 
@@ -1597,25 +1612,33 @@ msgstr ""
 msgid "Manage custom recipe tags"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:91
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:93
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:56
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:58
 msgid "Open the Template Editor"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:118
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:83
+msgid "Import EasyRecipe recipes"
+msgstr ""
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:88
 msgid "Import ReciPress recipes"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:123
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:93
 msgid "Import Ziplist recipes"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:213
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:183
 msgid "Reset Demo Recipe"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:218
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:188
 msgid "Recalculate Recipe Grid Terms"
+msgstr ""
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:193
+msgid "Reset Cache"
 msgstr ""
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:7
@@ -1733,6 +1756,7 @@ msgstr ""
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:277
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:337
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:546
+#: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/import-easyrecipe.php:437
 #: wp-ultimate-recipe-premium/premium/helpers/recipe_columns.php:19
 #: wp-ultimate-recipe-premium/premium/helpers/recipe_columns.php:70
 msgid "Author"
@@ -2082,8 +2106,6 @@ msgstr ""
 
 #: wp-ultimate-recipe-premium/core/vendor/vafpress/views/option/impexp.php:4
 #: wp-ultimate-recipe-premium/core/vendor/vafpress/views/option/impexp.php:14
-#: wp-ultimate-recipe-premium/premium/addons/import-recipress/templates/import_recipress.php:16
-#: wp-ultimate-recipe-premium/premium/addons/import-recipress/templates/import_recipress.php:52
 msgid "Import"
 msgstr ""
 
@@ -2128,11 +2150,11 @@ msgid ""
 "com\">Vafpress</a>"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/premium/addons/custom-fields/custom-fields.php:28
+#: wp-ultimate-recipe-premium/premium/addons/custom-fields/custom-fields.php:30
 msgid "Current Custom Fields"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/premium/addons/custom-fields/custom-fields.php:29
+#: wp-ultimate-recipe-premium/premium/addons/custom-fields/custom-fields.php:31
 msgid "Add new Custom Field"
 msgstr ""
 
@@ -2179,42 +2201,110 @@ msgstr ""
 msgid "Reset to defaults"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/premium/addons/import-recipress/import-recipress.php:14
-msgid "Import ReciPress"
+#: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/import-easyrecipe.php:40
+#: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/import-easyrecipe.php:52
+#: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/before_importing.php:4
+#: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/before_importing.php:84
+#: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/manual_import.php:6
+msgid "Import EasyRecipe"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/premium/addons/import-recipress/import-recipress.php:33
-msgid "You should activate this plugin:"
+#: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/import-easyrecipe.php:451
+msgid "Nutritional Serving Size"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/premium/addons/import-recipress/import-recipress.php:47
-msgid "You should select a new tag for the imported recipes"
+#: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/before_importing.php:5
+#: wp-ultimate-recipe-premium/premium/addons/import-recipress/templates/import_recipress.php:5
+#: wp-ultimate-recipe-premium/premium/addons/import-ziplist/templates/before_importing.php:5
+msgid "Before importing"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/premium/addons/import-recipress/templates/import_recipress.php:17
+#: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/before_importing.php:7
+#: wp-ultimate-recipe-premium/premium/addons/import-recipress/templates/import_recipress.php:7
 #: wp-ultimate-recipe-premium/premium/addons/import-ziplist/templates/before_importing.php:7
 msgid ""
 "It's a good idea to backup your WP database before using the import feature."
 msgstr ""
 
-#: wp-ultimate-recipe-premium/premium/addons/import-recipress/templates/import_recipress.php:18
+#: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/before_importing.php:54
+#: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/before_importing.php:69
+#: wp-ultimate-recipe-premium/premium/addons/import-recipress/templates/import_recipress.php:28
+#: wp-ultimate-recipe-premium/premium/addons/import-recipress/templates/import_recipress.php:43
+#: wp-ultimate-recipe-premium/premium/addons/import-recipress/templates/import_recipress.php:58
+msgid "Select a recipe tag"
+msgstr ""
+
+#: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/before_importing.php:92
+#: wp-ultimate-recipe-premium/premium/addons/import-ziplist/templates/before_importing.php:52
+msgid "Unable to import"
+msgstr ""
+
+#: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/before_importing.php:93
+#: wp-ultimate-recipe-premium/premium/addons/import-ziplist/templates/before_importing.php:53
+msgid "We are unable to import these posts or pages automatically:"
+msgstr ""
+
+#: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/manual_import.php:18
+#: wp-ultimate-recipe-premium/premium/addons/import-recipress/import-recipress.php:58
+msgid "You should select a new tag for the imported recipes"
+msgstr ""
+
+#: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/manual_import.php:23
+msgid "You should select two distinct tags"
+msgstr ""
+
+#: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/manual_import.php:31
+#: wp-ultimate-recipe-premium/premium/addons/import-ziplist/templates/manual_import.php:12
+msgid "There are no recipes left to import"
+msgstr ""
+
+#: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/manual_import.php:33
+#: wp-ultimate-recipe-premium/premium/addons/import-ziplist/templates/manual_import.php:14
+msgid "Number of recipes left to import:"
+msgstr ""
+
+#: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/manual_import.php:46
+msgid "Featured Image"
+msgstr ""
+
+#: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/manual_import.php:79
+msgid "No featured image"
+msgstr ""
+
+#: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/manual_import.php:124
+#: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:77
+#: wp-ultimate-recipe-premium/premium/addons/import-ziplist/templates/manual_import.php:48
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/templates/user-menus.php:141
+msgid "Amount"
+msgstr ""
+
+#: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/manual_import.php:134
+#: wp-ultimate-recipe-premium/premium/addons/import-ziplist/templates/manual_import.php:58
+msgid "Import this Recipe"
+msgstr ""
+
+#: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/manual_import.php:135
+#: wp-ultimate-recipe-premium/premium/addons/import-ziplist/templates/manual_import.php:59
+msgid ""
+"Feel free to stop at anytime and come back later for the rest of the recipes."
+msgstr ""
+
+#: wp-ultimate-recipe-premium/premium/addons/import-recipress/import-recipress.php:25
+#: wp-ultimate-recipe-premium/premium/addons/import-recipress/templates/import_recipress.php:4
+#: wp-ultimate-recipe-premium/premium/addons/import-recipress/templates/import_recipress.php:73
+msgid "Import ReciPress"
+msgstr ""
+
+#: wp-ultimate-recipe-premium/premium/addons/import-recipress/import-recipress.php:44
+msgid "You should activate this plugin:"
+msgstr ""
+
+#: wp-ultimate-recipe-premium/premium/addons/import-recipress/templates/import_recipress.php:19
 msgid "recipes are about to be imported to"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/premium/addons/import-recipress/templates/import_recipress.php:18
+#: wp-ultimate-recipe-premium/premium/addons/import-recipress/templates/import_recipress.php:19
 msgid "Are you sure you want to do this?"
-msgstr ""
-
-#: wp-ultimate-recipe-premium/premium/addons/import-recipress/templates/import_recipress.php:24
-#: wp-ultimate-recipe-premium/premium/addons/import-recipress/templates/import_recipress.php:33
-#: wp-ultimate-recipe-premium/premium/addons/import-recipress/templates/import_recipress.php:42
-msgid "New tag for"
-msgstr ""
-
-#: wp-ultimate-recipe-premium/premium/addons/import-recipress/templates/import_recipress.php:27
-#: wp-ultimate-recipe-premium/premium/addons/import-recipress/templates/import_recipress.php:36
-#: wp-ultimate-recipe-premium/premium/addons/import-recipress/templates/import_recipress.php:45
-msgid "Select a recipe tag"
 msgstr ""
 
 #: wp-ultimate-recipe-premium/premium/addons/import-text/import-text.php:105
@@ -2263,12 +2353,6 @@ msgstr ""
 msgid "Only unit aliases defined in the settings will be recognized."
 msgstr ""
 
-#: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:77
-#: wp-ultimate-recipe-premium/premium/addons/import-ziplist/templates/manual_import.php:48
-#: wp-ultimate-recipe-premium/premium/addons/user-menus/templates/user-menus.php:141
-msgid "Amount"
-msgstr ""
-
 #: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:89
 msgid "Separate instructions with an empty line"
 msgstr ""
@@ -2293,35 +2377,14 @@ msgstr ""
 msgid "Yield"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/premium/addons/import-ziplist/templates/before_importing.php:5
-msgid "Before importing"
-msgstr ""
-
-#: wp-ultimate-recipe-premium/premium/addons/import-ziplist/templates/manual_import.php:12
-msgid "There are no recipes left to import"
-msgstr ""
-
-#: wp-ultimate-recipe-premium/premium/addons/import-ziplist/templates/manual_import.php:14
-msgid "Number of recipes left to import:"
-msgstr ""
-
-#: wp-ultimate-recipe-premium/premium/addons/import-ziplist/templates/manual_import.php:58
-msgid "Import this Recipe"
-msgstr ""
-
-#: wp-ultimate-recipe-premium/premium/addons/import-ziplist/templates/manual_import.php:59
-msgid ""
-"Feel free to stop at anytime and come back later for the rest of the recipes."
-msgstr ""
-
-#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/nutritional-information.php:101
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/nutritional-information.php:102
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:2
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:67
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:187
 msgid "Nutritional Information"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/nutritional-information.php:122
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/nutritional-information.php:123
 msgid "Add Nutrition Label"
 msgstr ""
 

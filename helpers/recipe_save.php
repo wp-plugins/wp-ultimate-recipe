@@ -24,8 +24,10 @@ class WPURP_Recipe_Save {
             $fields = $recipe->fields();
 
             // Make sure the recipe_title meta is present
-            if( !isset( $_POST['recipe_title'] ) || $_POST['recipe_title'] == '' ) {
+            if( !isset( $_POST['recipe_title'] ) ) {
                 $_POST['recipe_title'] = $recipe->title();
+            } else if( $_POST['recipe_title'] == '' ) {
+                $_POST['recipe_title'] = $post->post_title;
             }
 
             // TODO Refactor saving of fields

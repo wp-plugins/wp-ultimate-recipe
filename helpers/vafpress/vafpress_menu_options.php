@@ -1240,6 +1240,14 @@ $admin_menu = array(
                         ),
                         array(
                             'type' => 'html',
+                            'name' => 'import_recipes_easyrecipe' . $sitehash,
+                            'binding' => array(
+                                'field'    => '',
+                                'function' => 'wpurp_admin_import_easyrecipe',
+                            ),
+                        ),
+                        array(
+                            'type' => 'html',
                             'name' => 'import_recipes_recipress' . $sitehash,
                             'binding' => array(
                                 'field'    => '',
@@ -1320,6 +1328,14 @@ $admin_menu = array(
                     'title' => __('Shortcode Editor', 'wp-ultimate-recipe'),
                     'name' => 'advanced_section_shortcode',
                     'fields' => array(
+                        array(
+                            'type' => 'html',
+                            'name' => 'advanced_reset_cache' . $sitehash,
+                            'binding' => array(
+                                'field'    => '',
+                                'function' => 'wpurp_reset_cache',
+                            ),
+                        ),
                         array(
                             'type' => 'multiselect',
                             'name' => 'shortcode_editor_post_types',

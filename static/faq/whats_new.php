@@ -7,26 +7,31 @@
 
     <div class="feature-section col two-col">
         <div class="col-1">
-            <h3>WP Ultimate Recipe 2.1.1</h3>
+            <h3>WP Ultimate Recipe 2.1.2</h3>
+            <strong>New</strong>
+            <ul>
+                <li>Feature: Compatibility with the Subscribe2 plugin</li>
+                <li>Feature: Compatibility with the Paid Memberships Pro plugin</li>
+            </ul>
             <strong>Update</strong>
             <ul>
-                <li>Improvement: Serving size doesn't need to be a number anymore (but still recommended!)</li>
-                <li>Fix: Recipe images title tag problem</li>
-                <li>Fix: Compatibility problem with some front-end templating tools</li>
+                <li>Fix: Recipe Title will take over Post Title when intentionally left blank</li>
+                <li>Fix: Memory issue for shortcode editor when having a large amount of recipes</li>
+                <li>Fix: Improved CPU load should increase site speed</li>
             </ul>
         </div>
         <div class="col-2 last-feature">
-            <h3>WP Ultimate Recipe Premium 2.1.1</h3>
+            <h3>WP Ultimate Recipe Premium 2.1.2</h3>
             <strong>New</strong>
             <ul>
-                <li>Feature: Import Ziplist recipes</li>
+                <li>Feature: Import from EasyRecipe and EasyRecipe Plus</li>
+                <li>Improvement: List ZipList recipes that couldn’t be imported automatically</li>
             </ul>
             <strong>Update</strong>
             <ul>
-                <li>Improvement: Posibility to add content to saved User Menus</li>
-                <li>Fix: Saved User Menus not displaying on some themes</li>
-                <li>Fix: Shopping List title in User Menus shortcode</li>
-                <li>Fix: Check for recipe rating in Template Editor condition</li>
+                <li>Fix: NaN issue when calculating recipe nutritional information</li>
+                <li>Fix: Recipe Search Widget when having a different site and home URL</li>
+                <li>Fix: Recipe Grid CSS issue with some themes</li>
             </ul>
         </div>
     </div>
@@ -35,6 +40,21 @@
 
     <div>
         <h3>Previous Versions</h3>
+        <h4>Premium Plugin 2.1.1</h4>
+        <ul>
+            <li>Feature: Import Ziplist recipes</li>
+            <li>Improvement: Posibility to add content to saved User Menus</li>
+            <li>Fix: Saved User Menus not displaying on some themes</li>
+            <li>Fix: Shopping List title in User Menus shortcode</li>
+            <li>Fix: Check for recipe rating in Template Editor condition</li>
+        </ul>
+        <h4>Core Plugin 2.1.1</h4>
+        <ul>
+            <li>Improvement: Serving size doesn't need to be a number anymore (but still recommended!)</li>
+            <li>Fix: Recipe images title tag problem</li>
+            <li>Fix: Compatibility problem with some front-end templating tools</li>
+        </ul>
+
         <h4>Premium Plugin 2.1.0</h4>
         <ul>
             <li>Feature: Nutritional Information</li>
