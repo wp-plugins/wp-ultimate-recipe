@@ -1,9 +1,9 @@
 === WP Ultimate Recipe ===
 Contributors: BrechtVds
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QG7KZMGFU325Y
-Tags: recipe, ingredients, food, cooking, seo, schema.org
+Tags: recipe, ingredients, food, nutrition, nutritional, cooking, seo, schema.org
 Requires at least: 3.5
-Tested up to: 4.0
+Tested up to: 4.0.1
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -94,6 +94,14 @@ Yes! We pride ourselves on offering awesome support and almost always answer sup
 10. WP Ultimate Recipe automatically formats your data so it can be picked up by Google Recipe Search and others. Great for SEO!
 
 == Changelog ==
+
+= 2.1.3 =
+* Feature: Minified JS and CSS assets for improved page load speed
+* Improvement: Better page load speed when using the Custom CSS setting
+* Improvement: New default recipe and print template optimised for RTL languages
+* Improvement: Ability to change sharing buttons language in the settings
+* Improvement: Setting to disable the Recipe Archive page
+* Fix: Issue when using decimal values as the serving size
 
 = 2.1.2 =
 * Feature: Compatibility with the Subscribe2 plugin
@@ -330,6 +338,9 @@ Yes! We pride ourselves on offering awesome support and almost always answer sup
 * Very first version of this plugin
 
 == Upgrade notice ==
+
+= 2.1.3 =
+WP Ultimate Recipe has improved page load speeds after this update.
 
 = 2.1.2 =
 Update highly recommended. Improvements to CPU and memory load of the plugin.

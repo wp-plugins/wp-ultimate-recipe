@@ -16,7 +16,7 @@ class WPURP_Notices {
         }
 
         // New to WP Ultimate Recipe
-        if( get_user_meta( get_current_user_id(), '_wpurp_hide_new_notice', true ) == '' ) {
+        if( current_user_can( 'edit_posts' ) && get_user_meta( get_current_user_id(), '_wpurp_hide_new_notice', true ) == '' ) {
             include(WPUltimateRecipe::get()->coreDir . '/static/getting_started_notice.php');
         }
 

@@ -29,8 +29,8 @@ class WPURP_Vafpress_Menu {
     {
         WPUltimateRecipe::get()->helper('assets')->add(
             array(
-                'file' => WPUltimateRecipe::get()->coreUrl . '/css/admin_settings.css',
-                'display' => 'admin',
+                'file' => '/css/admin_settings.css',
+                'admin' => true,
             )
         );
     }

@@ -158,15 +158,18 @@ class WPURP_Recipe_Save {
      */
     public function normalize_servings( $servings )
     {
-        preg_match("/^\d+/", ltrim( $servings ), $out);
+        preg_match("/^\d[\d.,]+/", ltrim( $servings ), $out);
 
         if( isset( $out[0] ) ) {
-            $amount = $out[0];
+            $amount = floatval( $out[0] );
+            if( $amount == 0 ) {
+                $amount = floatval( WPUltimateRecipe::option( 'recipe_default_servings', 4 ) );
+            }
         } else {
-            $amount = WPUltimateRecipe::option( 'recipe_default_servings', 4 );
+            $amount = floatval( WPUltimateRecipe::option( 'recipe_default_servings', 4 ) );
         }
 
-        return intval( $amount );
+        return $amount;
     }
 
     /**

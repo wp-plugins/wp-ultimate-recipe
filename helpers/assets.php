@@ -10,49 +10,29 @@ class WPURP_Assets {
 
         add_action( 'wp_enqueue_scripts', array( $this, 'enqueue' ) );
         add_action( 'admin_enqueue_scripts', array( $this, 'enqueue' ) );
-
-        add_action( 'wp_ajax_wpurp_custom_css', array( $this, 'wpurp_custom_css' ) );
-        add_action( 'wp_ajax_nopriv_wpurp_custom_css', array( $this, 'wpurp_custom_css' ) );
     }
 
     public function add_defaults()
     {
-        if( WPUltimateRecipe::option( 'recipe_template_force_style', '1' ) == '1' ) {
-            $base_layout = 'layout_base_forced.css';
-        } else {
-            $base_layout = 'layout_base.css';
-        }
-
         // Load core assets TODO Refactor this.
         $this->add(
             array(
-                'file' => WPUltimateRecipe::get()->coreUrl . '/css/' . $base_layout,
-                'display' => 'public',
-                'priority' => 1,
-            ),
-            array(
-                'file' => WPUltimateRecipe::get()->helper('ajax')->url() . '&action=wpurp_custom_css',
-                'type' => 'css',
-                'display' => 'public',
-                'setting_inverse' => array( 'custom_code_public_css', '' ),
-                'priority' => 99,
-            ),
-            array(
-                'file' => WPUltimateRecipe::get()->coreUrl . '/vendor/fraction-js/fraction.js',
                 'name' => 'fraction',
-                'display' => 'all',
+                'file' => '/vendor/fraction-js/fraction.js',
+                'public' => true,
+                'admin' => true,
             ),
             array(
-                'file' => WPUltimateRecipe::get()->coreUrl . '/js/adjustable_servings.js',
-                'display' => 'public',
+                'file' => '/js/adjustable_servings.js',
+                'public' => true,
                 'deps' => array(
                     'jquery',
                     'fraction',
                 ),
             ),
             array(
-                'file' => WPUltimateRecipe::get()->coreUrl . '/js/print_button.js',
-                'display' => 'public',
+                'file' => '/js/print_button.js',
+                'public' => true,
                 'deps' => array(
                     'jquery',
                 ),
@@ -67,8 +47,8 @@ class WPURP_Assets {
                 ),
             ),
             array(
-                'file' => WPUltimateRecipe::get()->coreUrl . '/js/responsive.js',
-                'display' => 'public',
+                'file' => '/js/responsive.js',
+                'public' => true,
                 'deps' => array(
                     'jquery',
                 ),
@@ -78,34 +58,34 @@ class WPURP_Assets {
                 ),
             ),
             array(
-                'file' => WPUltimateRecipe::get()->coreUrl . '/vendor/socialite/socialite.min.js',
                 'name' => 'socialite',
-                'display' => 'public',
                 'setting' => array( 'recipe_sharing_enable', '1' ),
+                'file' => '/vendor/socialite/socialite.min.js',
+                'public' => true,
             ),
             array(
-                'file' => WPUltimateRecipe::get()->coreUrl . '/vendor/socialite/extensions/socialite.pinterest.js',
-                'display' => 'public',
                 'setting' => array( 'recipe_sharing_enable', '1' ),
+                'file' => '/vendor/socialite/extensions/socialite.pinterest.js',
+                'public' => true,
                 'deps' => array(
                     'socialite',
                 ),
             ),
             array(
-                'file' => WPUltimateRecipe::get()->coreUrl . '/js/sharing_buttons.js',
-                'display' => 'public',
                 'setting' => array( 'recipe_sharing_enable', '1' ),
+                'file' => '/js/sharing_buttons.js',
+                'public' => true,
                 'deps' => array(
                     'jquery',
                 ),
+                'data' => array(
+                    'name' => 'wpurp_sharing_buttons',
+                    'facebook_lang' => WPUltimateRecipe::option( 'recipe_sharing_language_facebook', 'en_US' ),
+                    'twitter_lang' => WPUltimateRecipe::option( 'recipe_sharing_language_twitter', 'en' ),
+                    'google_lang' => WPUltimateRecipe::option( 'recipe_sharing_language_google', 'en-US' ),
+                ),
             )
         );
-    }
-
-    public function wpurp_custom_css()
-    {
-        include( WPUltimateRecipe::get()->coreDir . '/helpers/css.php' );
-        exit;
     }
 
     public function add()
@@ -124,108 +104,168 @@ class WPURP_Assets {
                     $asset['priority'] = 10;
                 }
 
+                // Set a URL and DIR variable
+                if( isset( $asset['direct'] ) && $asset['direct'] ) {
+                    $asset['url'] = $asset['file'];
+                    $asset['dir'] = $asset['file'];
+                } else {
+                    $base_url = WPUltimateRecipe::get()->coreUrl;
+                    $base_dir = WPUltimateRecipe::get()->coreDir;
+
+                    if( isset( $asset['premium'] ) && $asset['premium'] ) {
+                        $base_url = WPUltimateRecipePremium::get()->premiumUrl;
+                        $base_dir = WPUltimateRecipePremium::get()->premiumDir;
+                    }
+
+                    $asset['url'] = $base_url . $asset['file'];
+                    $asset['dir'] = $base_dir . $asset['file'];
+                }
+
                 $this->assets[] = $asset;
             }
         }
     }
 
-    public function sortByPriority( $a, $b )
-    {
-        return $a['priority'] - $b['priority'];
-    }
-
     public function enqueue( $hook = '' )
     {
+        $assets = $this->assets;
+
+        // Check if we're generating assets on the fly
+        $dir = WPUltimateRecipe::option( 'assets_generate_minified_dir', '' );
+        if( WPUltimateRecipe::option( 'assets_generate_minified', '0' ) == '1' && $dir != '' && is_writable( $dir ) ) {
+            $this->minify( $assets, $dir );
+        }
+
+        // Check which assets to enqueue
         $css_to_enqueue = array();
         $js_to_enqueue = array();
-
-        $assets = $this->assets;
-        usort( $assets, array( $this, 'sortByPriority' ) );
+        $js_to_enqueue_data_only = array();
+        $js_names = array();
+        $js_dependencies = array();
+        $use_minify = WPUltimateRecipe::option( 'assets_use_minified', '1' ) == '1' && !is_admin() ? true : false;
 
         foreach( $assets as $asset )
         {
-            // Check if this asset should be displayed on the current page
-            $display = isset( $asset['display'] ) ? $asset['display'] : 'public';
+            if( $use_minify && ( !isset( $asset['direct'] ) || !$asset['direct'] ) ) {
+                // These assets are minified so we don't need them again, except for JS files with data
+                if( strtolower( $asset['type'] ) == 'js' ) {
+                    if( isset( $asset['data'] ) && isset( $asset['data']['name'] ) ) $js_to_enqueue_data_only[] = $asset;
+                    if( isset( $asset['name'] ) ) $js_names[] = $asset['name'];
+                    if( isset( $asset['deps'] ) ) $js_dependencies = array_merge( $js_dependencies, $asset['deps'] );
+                }
 
-            // Check if asset is intended for admin or public side
-            if( !is_admin() && $display == 'admin' ) continue;
-            if( is_admin() && $display == 'public' ) continue;
+            } else {
+                // Check if asset is intended for admin or public side
+                if( !is_admin() && ( !isset( $asset['public'] ) || !$asset['public'] ) ) continue;
+                if( is_admin() && ( !isset( $asset['admin'] ) || !$asset['admin'] ) ) continue;
 
-            // Check if we're on a certain page
-            if( isset( $asset['page'] ) ) {
-                switch ( strtolower( $asset['page'] ) ) {
+                // Check if we're on a certain page
+                if( isset( $asset['page'] ) ) {
+                    switch ( strtolower( $asset['page'] ) ) {
 
-                    case 'recipe_posts':
-                        if( $hook != 'edit.php' || ( isset( $_GET['post_type'] ) && $_GET['post_type'] != 'recipe' ) ) continue 2; // Switch is consider a loop statement for continue
+                        case 'recipe_posts':
+                            if( $hook != 'edit.php' || ( isset( $_GET['post_type'] ) && $_GET['post_type'] != 'recipe' ) ) continue 2; // Switch is consider a loop statement for continue
+                            break;
+
+                        case 'recipe_form':
+                            if( !in_array( $hook, array( 'post.php', 'post-new.php' ) ) || ( isset( $_GET['post_type'] ) && $_GET['post_type'] != 'recipe' ) ) continue 2; // Switch is consider a loop statement for continue
+                            break;
+
+                        case 'recipe_settings':
+                            if( $hook != 'recipe_page_wpurp_admin' ) continue 2;
+                            break;
+
+                        case 'recipe_page_wpurp_import_text':
+                            if( substr( $hook, 0, 25 ) !== 'recipe_page_wpurp_import_' ) continue 2;
+                            break;
+
+                        default:
+                            if( $hook != strtolower( $asset['page'] ) ) continue 2;
+                            break;
+                    }
+                }
+
+                // Check for shortcode
+                if( isset( $asset['shortcode'] ) ) {
+                    if( !$this->check_for_shortcode( $asset['shortcode'] ) ) continue;
+                }
+
+                // Check if setting equals value
+                if( isset( $asset['setting'] ) && count( $asset['setting'] ) == 2 ) {
+                    if( WPUltimateRecipe::option( $asset['setting'][0], $asset['setting'][1] ) != $asset['setting'][1] ) continue;
+                }
+
+                // Check if setting does not equal value
+                if( isset( $asset['setting_inverse'] ) && count( $asset['setting_inverse'] ) == 2 ) {
+                    if( WPUltimateRecipe::option( $asset['setting_inverse'][0], $asset['setting_inverse'][1] ) == $asset['setting_inverse'][1] ) continue;
+                }
+
+                // If we've made it here, this asset should be included
+                switch( strtolower( $asset['type'] ) ) {
+
+                    case 'css':
+                        $css_to_enqueue[] = $asset;
                         break;
-
-                    case 'recipe_form':
-                        if( !in_array( $hook, array( 'post.php', 'post-new.php' ) ) || ( isset( $_GET['post_type'] ) && $_GET['post_type'] != 'recipe' ) ) continue 2; // Switch is consider a loop statement for continue
-                        break;
-
-                    case 'recipe_settings':
-                        if( $hook != 'recipe_page_wpurp_admin' ) continue 2;
-                        break;
-
-                    case 'recipe_page_wpurp_import_text':
-                        if( substr( $hook, 0, 25 ) !== 'recipe_page_wpurp_import_' ) continue 2;
-                        break;
-
-                    default:
-                        if( $hook != strtolower( $asset['page'] ) ) continue 2;
+                    case 'js':
+                        $js_to_enqueue[] = $asset;
                         break;
                 }
-            }
-
-            // Check for shortcode
-            if( isset( $asset['shortcode'] ) ) {
-                if( !$this->check_for_shortcode( $asset['shortcode'] ) ) continue;
-            }
-
-            // Check if setting equals value
-            if( isset( $asset['setting'] ) && count( $asset['setting'] ) == 2 ) {
-                if( WPUltimateRecipe::option( $asset['setting'][0], $asset['setting'][1] ) != $asset['setting'][1] ) continue;
-            }
-
-            // Check if setting does not equal value
-            if( isset( $asset['setting_inverse'] ) && count( $asset['setting_inverse'] ) == 2 ) {
-                if( WPUltimateRecipe::option( $asset['setting_inverse'][0], $asset['setting_inverse'][1] ) == $asset['setting_inverse'][1] ) continue;
-            }
-
-            // If we've made it here, this asset should be included
-            switch( strtolower( $asset['type'] ) ) {
-
-                case 'css':
-                    $css_to_enqueue[] = $asset;
-                    break;
-                case 'js':
-                    $js_to_enqueue[] = $asset;
-                    break;
             }
         }
 
         // We've got the assets we need, enqueue them
-        if( count( $css_to_enqueue ) > 0)   $this->enqueue_css( $css_to_enqueue );
-        if( count( $js_to_enqueue ) > 0)    $this->enqueue_js( $js_to_enqueue );
+        if( count( $css_to_enqueue ) > 0 || $use_minify )   $this->enqueue_css( $css_to_enqueue, $use_minify );
+        if( count( $js_to_enqueue ) > 0 || $use_minify )    $this->enqueue_js( $js_to_enqueue, $use_minify, $js_to_enqueue_data_only, $js_names, $js_dependencies );
     }
 
-    private function enqueue_css( $assets )
+    private function enqueue_css( $assets, $use_minify )
     {
+        if( !$use_minify ) {
+            // Include Base CSS
+            if( WPUltimateRecipe::option( 'recipe_template_base_css', '1' ) == '1' ) {
+                $base_layout = WPUltimateRecipe::option( 'recipe_template_force_style', '1' ) == '1' ? 'layout_base_forced.css' : 'layout_base.css';
+
+                array_unshift( $assets, array( 'url' => WPUltimateRecipe::get()->coreUrl . '/css/' . $base_layout ) );
+            }
+        } else {
+            // Add correct minified file
+            $minified_css = 'wpurp-public-without-base';
+            if( WPUltimateRecipe::option( 'recipe_template_base_css', '1' ) == '1' ) {
+                $minified_css = WPUltimateRecipe::option( 'recipe_template_force_style', '1' ) == '1' ? 'wpurp-public-forced' : 'wpurp-public';
+            }
+
+            $minified_url = WPUltimateRecipe::get()->coreUrl . '/assets/' . $minified_css . '.css.php';
+
+            wp_enqueue_style( 'wpurp_style_minified', $minified_url, false, WPURP_VERSION, 'all' );
+        }
+
         $i = 1;
         foreach( $assets as $asset ) {
-            wp_enqueue_style( 'wpurp_style' . $i, $asset['file'], false, WPURP_VERSION, 'all' );
+            wp_enqueue_style( 'wpurp_style' . $i, $asset['url'], false, WPURP_VERSION, 'all' );
             $i++;
         }
     }
 
-    private function enqueue_js( $assets )
+    private function enqueue_js( $assets, $use_minify, $js_to_enqueue_data_only, $js_names, $js_dependencies )
     {
+        if( $use_minify ) {
+            $external_deps = array_unique( array_diff( $js_dependencies, $js_names ) );
+            wp_enqueue_script( 'wpurp_script_minified', WPUltimateRecipe::get()->coreUrl . '/assets/wpurp-public.js.php', $external_deps, WPURP_VERSION, true );
+
+            foreach( $js_to_enqueue_data_only as $asset ) {
+                $data_name = $asset['data']['name'];
+                unset( $asset['data']['name'] );
+
+                wp_localize_script( 'wpurp_script_minified', $data_name, $asset['data'] );
+            }
+        }
+
         $i = 1;
         foreach( $assets as $asset ) {
             $name = isset( $asset['name'] ) ? $asset['name'] : 'wpurp_script' . $i;
             $deps = isset( $asset['deps'] ) ? $asset['deps'] : '';
 
-            wp_enqueue_script( $name, $asset['file'], $deps, WPURP_VERSION, true );
+            wp_enqueue_script( $name, $asset['url'], $deps, WPURP_VERSION, true );
 
             if( isset( $asset['data'] ) && isset( $asset['data']['name'] ) ) {
                 $data_name = $asset['data']['name'];
@@ -235,6 +275,119 @@ class WPURP_Assets {
             }
 
             $i++;
+        }
+    }
+
+    private function minify( $assets, $dir )
+    {
+        $css_to_minify = array();
+        $js_to_minify = array();
+
+        foreach( $assets as $asset ) {
+            // Don't minify direct assets
+            if( isset( $asset['direct'] ) && $asset['direct'] ) continue;
+
+            // Only minify public assets
+            if( !isset( $asset['public'] ) || !$asset['public'] ) continue;
+
+            switch( strtolower( $asset['type'] ) ) {
+                case 'css':
+                    $css_to_minify[] = $asset['dir'];
+                    break;
+                case 'js':
+                    $js_to_minify[] = $asset;
+                    break;
+            }
+        }
+
+        $minify_files = array();
+
+        /**
+         * CSS minification
+         */
+        // CSS without base
+        $minify_files[] = array(
+            'name' => 'wpurp-public-without-base.css',
+            'files' => array_unique( $css_to_minify ),
+        );
+
+        // CSS with normal base
+        array_unshift( $css_to_minify, WPUltimateRecipe::get()->coreDir . '/css/layout_base.css' );
+        $minify_files[] = array(
+            'name' => 'wpurp-public.css',
+            'files' => array_unique( $css_to_minify ),
+        );
+
+        // CSS with forced base
+        $css_to_minify[0] = WPUltimateRecipe::get()->coreDir . '/css/layout_base_forced.css';
+        $minify_files[] = array(
+            'name' => 'wpurp-public-forced.css',
+            'files' => array_unique( $css_to_minify ),
+        );
+
+        /**
+         * JS minification
+         */
+        // Get all the named JS files
+        $js_names = array();
+
+        foreach( $js_to_minify as $js ) {
+            if( isset( $js['name'] ) ) {
+                $js_names[] = $js['name'];
+            }
+        }
+
+        // Order JS files (max 20 loops)
+        $js_minify_order = array();
+        $js_ordered_names = array();
+
+        for( $i = 0; $i < 20; $i++ ) {
+            foreach( $js_to_minify as $index => $js ) {
+                // Check which dependencies we need to actually resolve right now
+                $actual_deps = array();
+                if( isset( $js['deps'] ) ) {
+                    foreach( $js['deps'] as $dep ) {
+                        if( in_array( $dep, $js_names ) && !in_array( $dep, $js_ordered_names ) ) {
+                            $actual_deps[] = $dep;
+                        }
+                    }
+                }
+
+                if( count( $actual_deps ) == 0 ) {
+                    $js_minify_order[] = $js['dir'];
+                    if( isset( $js['name'] ) ) {
+                        $js_ordered_names[] = $js['name'];
+                    }
+                    unset( $js_to_minify[$index] );
+                }
+            }
+        }
+
+        if( count( $js_to_minify ) > 0 ) {
+            var_dump( 'WP Ultimate Recipe: JS minification problem' );
+        }
+
+        $minify_files[] = array(
+            'name' => 'wpurp-public.js',
+            'files' => array_unique( $js_minify_order ),
+        );
+
+        /**
+         * Performing the minification
+         */
+        require_once( WPUltimateRecipe::get()->coreDir . '/vendor/magic-min/class.magic-min.php' );
+
+        $minified = new Minifier( array(
+            'echo' => false,
+            'gzip' => true,
+        ) );
+
+        foreach( $minify_files as $minify_file ) {
+            // Remove current file (easier while developing)
+            if( is_file( $dir . $minify_file['name'] . '.php' ) ) unlink( $dir . $minify_file['name'] . '.php' );
+
+            // Minify
+            $minified->merge( $dir . $minify_file['name'], '', $minify_file['files'] );
         }
     }
 

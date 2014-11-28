@@ -227,10 +227,13 @@ class WPURP_Template_Block {
         $style = '';
         $class = '';
 
-        foreach( $names as $name )
-        {
-            if( isset( $this->style[$name] ) ) {
-                $style .= $this->get_style_string( $name );
+        // Only add inline style if setting is enabled
+        if( WPUltimateRecipe::option( 'recipe_template_inline_css', '1' ) == '1' ) {
+            foreach( $names as $name )
+            {
+                if( isset( $this->style[$name] ) ) {
+                    $style .= $this->get_style_string( $name );
+                }
             }
         }
 

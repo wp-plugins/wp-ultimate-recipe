@@ -29,12 +29,14 @@ class WPURP_Template_Recipe_Ingredient_Name extends WPURP_Template_Block {
                 $custom_link = false;
             }
 
-            if( $custom_link !== false && $custom_link !== '' ) {
-                $output .= '<a href="'.$custom_link.'" class="custom-ingredient-link" target="'.WPUltimateRecipe::option( 'recipe_ingredient_custom_links_target', '_blank' ).'">';
-                $closing_tag = '</a>';
-            } else if( $ingredient_links != 'custom' ) {
-                $output .= '<a href="'.get_term_link( $taxonomy->slug, 'ingredient' ).'">';
-                $closing_tag = '</a>';
+            if( WPURP_Taxonomy_MetaData::get( 'ingredient', $taxonomy->slug, 'hide_link' ) !== '1' ) {
+                if( $custom_link !== false && $custom_link !== '' ) {
+                    $output .= '<a href="'.$custom_link.'" class="custom-ingredient-link" target="'.WPUltimateRecipe::option( 'recipe_ingredient_custom_links_target', '_blank' ).'">';
+                    $closing_tag = '</a>';
+                } else if( $ingredient_links != 'custom' ) {
+                    $output .= '<a href="'.get_term_link( $taxonomy->slug, 'ingredient' ).'">';
+                    $closing_tag = '</a>';
+                }
             }
         }
 

@@ -25,6 +25,8 @@ class WPURP_Recipe_Post_Type {
             $taxonomies = array( 'category', 'post_tag' );
         }
 
+        $has_archive = WPUltimateRecipe::option( 'recipe_archive_disabled', '0' ) == '1' ? false : true;
+
         $args = apply_filters( 'wpurp_register_post_type',
             array(
                 'labels' => array(
@@ -47,7 +49,7 @@ class WPURP_Recipe_Post_Type {
                 'supports' => array( 'title', 'editor', 'thumbnail', 'comments', 'excerpt', 'author', 'publicize', 'shortlinks' ),
                 'taxonomies' => $taxonomies,
                 'menu_icon' =>  WPUltimateRecipe::get()->coreUrl . '/img/icon_16.png',
-                'has_archive' => true,
+                'has_archive' => $has_archive,
                 'rewrite' => array(
                     'slug' => $slug
                 )

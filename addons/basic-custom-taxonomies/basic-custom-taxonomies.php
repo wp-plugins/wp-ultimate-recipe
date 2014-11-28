@@ -23,13 +23,13 @@ if( !WPUltimateRecipe::is_premium_active() )
         {
             WPUltimateRecipe::get()->helper('assets')->add(
                 array(
-                    'file' => $this->addonUrl . '/css/custom-taxonomies.css',
-                    'display' => 'admin',
+                    'file' => $this->addonPath . '/css/custom-taxonomies.css',
+                    'admin' => true,
                     'page' => 'recipe_page_wpurp_taxonomies',
                 ),
                 array(
-                    'file' => $this->addonUrl . '/js/custom-taxonomies.js',
-                    'display' => 'admin',
+                    'file' => $this->addonPath . '/js/custom-taxonomies.js',
+                    'admin' => true,
                     'page' => 'recipe_page_wpurp_taxonomies',
                     'deps' => array(
                         'jquery',

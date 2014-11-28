@@ -7,31 +7,31 @@
 
     <div class="feature-section col two-col">
         <div class="col-1">
-            <h3>WP Ultimate Recipe 2.1.2</h3>
+            <h3>WP Ultimate Recipe 2.1.3</h3>
             <strong>New</strong>
             <ul>
-                <li>Feature: Compatibility with the Subscribe2 plugin</li>
-                <li>Feature: Compatibility with the Paid Memberships Pro plugin</li>
+                <li>Feature: Minified JS and CSS assets for improved page load speed</li>
+                <li>Improvement: Better page load speed when using the Custom CSS setting</li>
+                <li>Improvement: New default recipe and print template optimised for RTL languages</li>
+                <li>Improvement: Ability to change sharing buttons language in the settings</li>
+                <li>Improvement: Setting to disable the Recipe Archive page</li>
             </ul>
             <strong>Update</strong>
             <ul>
-                <li>Fix: Recipe Title will take over Post Title when intentionally left blank</li>
-                <li>Fix: Memory issue for shortcode editor when having a large amount of recipes</li>
-                <li>Fix: Improved CPU load should increase site speed</li>
+                <li>Fix: Issue when using decimal values as the serving size</li>
             </ul>
         </div>
         <div class="col-2 last-feature">
-            <h3>WP Ultimate Recipe Premium 2.1.2</h3>
+            <h3>WP Ultimate Recipe Premium 2.1.3</h3>
             <strong>New</strong>
             <ul>
-                <li>Feature: Import from EasyRecipe and EasyRecipe Plus</li>
-                <li>Improvement: List ZipList recipes that couldn’t be imported automatically</li>
+                <li>Feature: Ability to not show an ingredient link for specific ingredients</li>
+                <li>Feature: Checkboxes in the shopping list</li>
+                <li>Improvement: New “Space” block in the Template Editor</li>
             </ul>
             <strong>Update</strong>
             <ul>
-                <li>Fix: NaN issue when calculating recipe nutritional information</li>
-                <li>Fix: Recipe Search Widget when having a different site and home URL</li>
-                <li>Fix: Recipe Grid CSS issue with some themes</li>
+                <li>Fix: “Include List Tags” checkbox persistence in Template Editor</li>
             </ul>
         </div>
     </div>
@@ -40,6 +40,23 @@
 
     <div>
         <h3>Previous Versions</h3>
+        <h4>Premium Plugin 2.1.2</h4>
+        <ul>
+            <li>Feature: Import from EasyRecipe and EasyRecipe Plus</li>
+            <li>Improvement: List ZipList recipes that couldn’t be imported automatically</li>
+            <li>Fix: NaN issue when calculating recipe nutritional information</li>
+            <li>Fix: Recipe Search Widget when having a different site and home URL</li>
+            <li>Fix: Recipe Grid CSS issue with some themes</li>
+        </ul>
+        <h4>Core Plugin 2.1.2</h4>
+        <ul>
+            <li>Feature: Compatibility with the Subscribe2 plugin</li>
+            <li>Feature: Compatibility with the Paid Memberships Pro plugin</li>
+            <li>Fix: Recipe Title will take over Post Title when intentionally left blank</li>
+            <li>Fix: Memory issue for shortcode editor when having a large amount of recipes</li>
+            <li>Fix: Improved CPU load should increase site speed</li>
+        </ul>
+
         <h4>Premium Plugin 2.1.1</h4>
         <ul>
             <li>Feature: Import Ziplist recipes</li>

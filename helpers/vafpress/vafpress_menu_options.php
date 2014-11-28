@@ -313,7 +313,7 @@ $admin_menu = array(
                                         ),
                                     ),
                                     'default' => array(
-                                        'excerpt',
+                                        'full',
                                     ),
                                     'validation' => 'required',
                                 ),
@@ -341,16 +341,9 @@ $admin_menu = array(
                     'controls' => array(
                         array(
                             'type' => 'section',
-                            'title' => __('Advanced', 'wp-ultimate-recipe'),
+                            'title' => __('Mobile', 'wp-ultimate-recipe'),
                             'name' => 'recipe_template_advanced',
                             'fields' => array(
-                                array(
-                                    'type' => 'toggle',
-                                    'name' => 'recipe_template_force_style',
-                                    'label' => __('Force CSS style', 'wp-ultimate-recipe'),
-                                    'description' => __( 'This ensures maximum compatibility with most themes. Can be disabled for advanced usage.', 'wp-ultimate-recipe' ),
-                                    'default' => '1',
-                                ),
                                 array(
                                     'type' => 'slider',
                                     'name' => 'recipe_template_responsive_breakpoint',
@@ -360,6 +353,34 @@ $admin_menu = array(
                                     'max' => '1000',
                                     'step' => '1',
                                     'default' => '550',
+                                ),
+                            ),
+                        ),
+                        array(
+                            'type' => 'section',
+                            'title' => 'CSS',
+                            'name' => 'recipe_template_advanced_styling',
+                            'fields' => array(
+                                array(
+                                    'type' => 'toggle',
+                                    'name' => 'recipe_template_force_style',
+                                    'label' => __('Force CSS style', 'wp-ultimate-recipe'),
+                                    'description' => __( 'This ensures maximum compatibility with most themes. Can be disabled for advanced usage.', 'wp-ultimate-recipe' ),
+                                    'default' => '1',
+                                ),
+                                array(
+                                    'type' => 'toggle',
+                                    'name' => 'recipe_template_inline_css',
+                                    'label' => __('Output Inline CSS', 'wp-ultimate-recipe'),
+                                    'description' => __( 'When disabled the Template Editor will not output any inline CSS.', 'wp-ultimate-recipe' ),
+                                    'default' => '1',
+                                ),
+                                array(
+                                    'type' => 'toggle',
+                                    'name' => 'recipe_template_base_css',
+                                    'label' => __('Use base CSS', 'wp-ultimate-recipe'),
+                                    'description' => __( 'When disabled the base CSS file will not be included.', 'wp-ultimate-recipe' ),
+                                    'default' => '1',
                                 ),
                             ),
                         ),
@@ -393,7 +414,7 @@ $admin_menu = array(
                                 ),
                             ),
                             'default' => array(
-                                'excerpt',
+                                'full',
                             ),
                             'validation' => 'required',
                         ),
@@ -449,6 +470,20 @@ $admin_menu = array(
                         ),
                     ),
                 ),
+                array(
+                    'type' => 'section',
+                    'title' => __('Advanced', 'wp-ultimate-recipe'),
+                    'name' => 'section_recipe_archive_advanced',
+                    'fields' => array(
+                        array(
+                            'type' => 'toggle',
+                            'name' => 'recipe_archive_disabled',
+                            'label' => __('Disable Recipe Archive', 'wp-ultimate-recipe'),
+                            'description' => __( 'Make sure to flush your permalinks after changing this setting.', 'wp-ultimate-recipe' ),
+                            'default' => '0',
+                        ),
+                    ),
+                ),
             ),
         ),
 //=-=-=-=-=-=-= RECIPE SHARING =-=-=-=-=-=-=
@@ -473,8 +508,42 @@ $admin_menu = array(
                 ),
                 array(
                     'type' => 'section',
+                    'title' => __('Language', 'wp-ultimate-recipe'),
+                    'name' => 'section_recipe_sharing_language',
+                    'fields' => array(
+                        array(
+                            'type' => 'notebox',
+                            'name' => 'recipe_sharing_language_options',
+                            'description' => __('Available languages can be found over here:', 'wp-ultimate-recipe') . ' <a href="https://developers.facebook.com/docs/internationalization/" target="_blank">Facebook</a>, <a href="https://dev.twitter.com/overview/general/adding-international-support-to-your-apps" target="_blank">Twitter</a>, <a href="https://developers.google.com/+/web/+1button/#available-languages" target="_blank">Google+</a>',
+                            'status' => 'info',
+                        ),
+                        array(
+                            'type' => 'textbox',
+                            'name' => 'recipe_sharing_language_facebook',
+                            'label' => 'Facebook',
+                            'default' => 'en_US',
+                            'validation' => 'required',
+                        ),
+                        array(
+                            'type' => 'textbox',
+                            'name' => 'recipe_sharing_language_twitter',
+                            'label' => 'Twitter',
+                            'default' => 'en',
+                            'validation' => 'required',
+                        ),
+                        array(
+                            'type' => 'textbox',
+                            'name' => 'recipe_sharing_language_google',
+                            'label' => 'Google+',
+                            'default' => 'en-US',
+                            'validation' => 'required',
+                        ),
+                    ),
+                ),
+                array(
+                    'type' => 'section',
                     'title' => __('Default text to share', 'wp-ultimate-recipe'),
-                    'name' => 'section_recipe_archive_pages',
+                    'name' => 'section_recipe_sharing_default_text',
                     'fields' => array(
                         array(
                             'type' => 'notebox',
@@ -501,14 +570,14 @@ $admin_menu = array(
                         array(
                             'type' => 'textbox',
                             'name' => 'recipe_sharing_twitter',
-                            'label' => __('Twitter', 'wp-ultimate-recipe'),
+                            'label' => 'Twitter',
                             'default' => '%title% - Powered by @WPUltimRecipe',
                             'validation' => 'required',
                         ),
                         array(
                             'type' => 'textbox',
                             'name' => 'recipe_sharing_pinterest',
-                            'label' => __('Pinterest', 'wp-ultimate-recipe'),
+                            'label' => 'Pinterest',
                             'default' => '%title% - Powered by @ultimaterecipe',
                             'validation' => 'required',
                         ),
@@ -1010,13 +1079,13 @@ $admin_menu = array(
                     'title' => __('Advanced', 'wp-ultimate-recipe'),
                     'name' => 'section_user_submission_advanced',
                     'fields' => array(
-                        array(
-                            'type' => 'toggle',
-                            'name' => 'user_submission_css',
-                            'label' => __('Submission form CSS', 'wp-ultimate-recipe'),
-                            'description' => __( 'Add basic CSS styles to the frontend form.', 'wp-ultimate-recipe' ),
-                            'default' => '1',
-                        ),
+//                        array(
+//                            'type' => 'toggle',
+//                            'name' => 'user_submission_css',
+//                            'label' => __('Submission form CSS', 'wp-ultimate-recipe'),
+//                            'description' => __( 'Add basic CSS styles to the frontend form.', 'wp-ultimate-recipe' ),
+//                            'default' => '1',
+//                        ),
                         array(
                             'type' => 'toggle',
                             'name' => 'user_submission_ingredient_list',
@@ -1129,6 +1198,13 @@ $admin_menu = array(
                             'max' => '10',
                             'step' => '1',
                             'default' => '4',
+                        ),
+                        array(
+                            'type' => 'toggle',
+                            'name' => 'user_menus_checkboxes',
+                            'label' => __('Show Checkboxes', 'wp-ultimate-recipe'),
+                            'description' => __( 'Show checkboxes in the shopping list to cross items of the list.', 'wp-ultimate-recipe' ),
+                            'default' => '1',
                         ),
                     ),
                 ),
@@ -1351,6 +1427,38 @@ $admin_menu = array(
                             ),
                             'default' => array(
                                 '{{all}}',
+                            ),
+                        ),
+                    ),
+                ),
+                array(
+                    'type' => 'section',
+                    'title' => __('Assets', 'wp-ultimate-recipe'),
+                    'name' => 'advanced_section_assets',
+                    'fields' => array(
+                        array(
+                            'type' => 'toggle',
+                            'name' => 'assets_use_minified',
+                            'label' => __('Use minified assets', 'wp-ultimate-recipe'),
+                            'description' => __( 'Use minified assets to improve page load speed.', 'wp-ultimate-recipe' ),
+                            'default' => '1',
+                        ),
+                        array(
+                            'type' => 'toggle',
+                            'name' => 'assets_generate_minified',
+                            'label' => __('Generate minified assets', 'wp-ultimate-recipe'),
+                            'description' => __( 'Generate minified assets on the fly.', 'wp-ultimate-recipe' ),
+                            'default' => '0',
+                        ),
+                        array(
+                            'type' => 'textbox',
+                            'name' => 'assets_generate_minified_dir',
+                            'label' => __('Minified assets directory', 'wp-ultimate-recipe'),
+                            'description' => __('Directory to generate the minified assets to. Should be writable.', 'wp-ultimate-recipe'),
+                            'default' => '',
+                            'dependency' => array(
+                                'field' => 'assets_generate_minified',
+                                'function' => 'vp_dep_boolean',
                             ),
                         ),
                     ),

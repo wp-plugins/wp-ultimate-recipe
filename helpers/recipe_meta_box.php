@@ -16,13 +16,13 @@ class WPURP_Recipe_Meta_Box {
 
         WPUltimateRecipe::get()->helper('assets')->add(
             array(
-                'file' => WPUltimateRecipe::get()->coreUrl . '/css/admin_recipe_form.css',
-                'display' => 'admin',
+                'file' => '/css/admin_recipe_form.css',
+                'admin' => true,
                 'page' => 'recipe_form',
             ),
             array(
-                'file' => WPUltimateRecipe::get()->coreUrl . '/js/recipe_form.js',
-                'display' => 'admin',
+                'file' => '/js/recipe_form.js',
+                'admin' => true,
                 'page' => 'recipe_form',
                 'deps' => array(
                     'jquery',

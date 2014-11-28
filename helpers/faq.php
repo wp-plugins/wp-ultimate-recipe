@@ -13,8 +13,8 @@ class WPURP_Faq {
     {
         WPUltimateRecipe::get()->helper( 'assets' )->add(
             array(
-                'file' => WPUltimateRecipe::get()->coreUrl . '/css/faq.css',
-                'display' => 'admin',
+                'file' => '/css/faq.css',
+                'admin' => true,
                 'page' => 'recipe_page_wpurp_faq',
             )
         );
@@ -25,7 +25,7 @@ class WPURP_Faq {
     }
 
     public function faq_page() {
-        if ( !current_user_can('edit_posts') ) {
+        if ( !current_user_can( 'edit_posts' ) ) {
             wp_die( 'You do not have sufficient permissions to access this page.' );
         }
 
