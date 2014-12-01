@@ -158,7 +158,7 @@ class WPURP_Recipe_Save {
      */
     public function normalize_servings( $servings )
     {
-        preg_match("/^\d[\d.,]+/", ltrim( $servings ), $out);
+        preg_match("/^\d[\d.,]*/", ltrim( $servings ), $out);
 
         if( isset( $out[0] ) ) {
             $amount = floatval( $out[0] );

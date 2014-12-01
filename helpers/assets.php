@@ -234,7 +234,7 @@ class WPURP_Assets {
                 $minified_css = WPUltimateRecipe::option( 'recipe_template_force_style', '1' ) == '1' ? 'wpurp-public-forced' : 'wpurp-public';
             }
 
-            $minified_url = WPUltimateRecipe::get()->coreUrl . '/assets/' . $minified_css . '.css.php';
+            $minified_url = WPUltimateRecipe::get()->coreUrl . '/assets/' . $minified_css . '.css';
 
             wp_enqueue_style( 'wpurp_style_minified', $minified_url, false, WPURP_VERSION, 'all' );
         }
@@ -250,7 +250,7 @@ class WPURP_Assets {
     {
         if( $use_minify ) {
             $external_deps = array_unique( array_diff( $js_dependencies, $js_names ) );
-            wp_enqueue_script( 'wpurp_script_minified', WPUltimateRecipe::get()->coreUrl . '/assets/wpurp-public.js.php', $external_deps, WPURP_VERSION, true );
+            wp_enqueue_script( 'wpurp_script_minified', WPUltimateRecipe::get()->coreUrl . '/assets/wpurp-public.js', $external_deps, WPURP_VERSION, true );
 
             foreach( $js_to_enqueue_data_only as $asset ) {
                 $data_name = $asset['data']['name'];
@@ -379,12 +379,12 @@ class WPURP_Assets {
 
         $minified = new Minifier( array(
             'echo' => false,
-            'gzip' => true,
+            'gzip' => false,
         ) );
 
         foreach( $minify_files as $minify_file ) {
             // Remove current file (easier while developing)
-            if( is_file( $dir . $minify_file['name'] . '.php' ) ) unlink( $dir . $minify_file['name'] . '.php' );
+            if( is_file( $dir . $minify_file['name'] ) ) unlink( $dir . $minify_file['name'] );
 
             // Minify
             $minified->merge( $dir . $minify_file['name'], '', $minify_file['files'] );

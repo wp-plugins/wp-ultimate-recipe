@@ -30,6 +30,7 @@ class WPURP_Migration {
         if( $migrate_version < '2.0.0' ) require_once( WPUltimateRecipe::get()->coreDir . '/helpers/migration/2_0_0_recipe_terms.php');
         if( $migrate_version < '2.0.5' ) require_once( WPUltimateRecipe::get()->coreDir . '/helpers/migration/2_0_5_recipe_grid_settings.php');
         if( $migrate_version < '2.0.8' ) require_once( WPUltimateRecipe::get()->coreDir . '/helpers/migration/2_0_8_recipe_titles.php');
+        if( $migrate_version < '2.1.4' ) require_once( WPUltimateRecipe::get()->coreDir . '/helpers/migration/2_1_4_servings_problem.php');
 
         if( $migrate_special == 'RecipesToPosts' ) require_once( WPUltimateRecipe::get()->coreDir . '/helpers/migration/special_recipes_to_posts.php');
         if( $migrate_special == 'WooCommerceIngredients' ) require_once( WPUltimateRecipe::get()->coreDir . '/helpers/migration/special_woocommerce_ingredients.php');

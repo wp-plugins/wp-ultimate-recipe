@@ -863,28 +863,6 @@ $admin_menu = array(
                                     'description' => __( 'Allow your visitors to switch between Imperial and Metric units.', 'wp-ultimate-recipe' ),
                                     'default' => '1',
                                 ),
-                                array(
-                                    'type' => 'select',
-                                    'name' => 'user_menus_default_unit_system',
-                                    'label' => __('User Menus unit system', 'wp-ultimate-recipe'),
-                                    'description' => __( 'Unit system to use for the shopping list feature.', 'wp-ultimate-recipe' ),
-                                    'items' => array(
-                                        'data' => array(
-                                            array(
-                                                'source' => 'function',
-                                                'value' => 'wpurp_get_unit_systems',
-                                            ),
-                                        ),
-                                    ),
-                                    'default' => array(
-                                        '0',
-                                    ),
-                                    'validation' => 'required',
-                                    'dependency' => array(
-                                        'field' => 'recipe_adjustable_units',
-                                        'function' => 'vp_dep_boolean_inverse',
-                                    ),
-                                ),
                             ),
                         ),
                     ),
@@ -1200,6 +1178,24 @@ $admin_menu = array(
                             'default' => '4',
                         ),
                         array(
+                            'type' => 'select',
+                            'name' => 'user_menus_default_unit_system',
+                            'label' => __('Default Unit System', 'wp-ultimate-recipe'),
+                            'description' => __( 'Unit system to use for the shopping list feature.', 'wp-ultimate-recipe' ),
+                            'items' => array(
+                                'data' => array(
+                                    array(
+                                        'source' => 'function',
+                                        'value' => 'wpurp_get_unit_systems',
+                                    ),
+                                ),
+                            ),
+                            'default' => array(
+                                '0',
+                            ),
+                            'validation' => 'required',
+                        ),
+                        array(
                             'type' => 'toggle',
                             'name' => 'user_menus_checkboxes',
                             'label' => __('Show Checkboxes', 'wp-ultimate-recipe'),
@@ -1481,7 +1477,14 @@ $admin_menu = array(
                 array(
                     'type' => 'codeeditor',
                     'name' => 'custom_code_print_css',
-                    'label' => __('Print CSS', 'wp-ultimate-recipe'),
+                    'label' => __('Print Recipe CSS', 'wp-ultimate-recipe'),
+                    'theme' => 'github',
+                    'mode' => 'css',
+                ),
+                array(
+                    'type' => 'codeeditor',
+                    'name' => 'custom_code_print_shoppinglist_css',
+                    'label' => __('Print Shopping List CSS', 'wp-ultimate-recipe'),
                     'theme' => 'github',
                     'mode' => 'css',
                 ),

@@ -95,6 +95,13 @@ Yes! We pride ourselves on offering awesome support and almost always answer sup
 
 == Changelog ==
 
+= 2.1.4 =
+* Fix: Problem with adjustable servings
+* Fix: Use of non-gzipped minified assets to avoid PHP problems
+
+= 2.1.3b =
+* Fix: Bug in minified JS file
+
 = 2.1.3 =
 * Feature: Minified JS and CSS assets for improved page load speed
 * Improvement: Better page load speed when using the Custom CSS setting
@@ -338,6 +345,12 @@ Yes! We pride ourselves on offering awesome support and almost always answer sup
 * Very first version of this plugin
 
 == Upgrade notice ==
+
+= 2.1.4 =
+Update recommended. A few bug fixes
+
+= 2.1.3b =
+Update required when using the minified assets
 
 = 2.1.3 =
 WP Ultimate Recipe has improved page load speeds after this update.
