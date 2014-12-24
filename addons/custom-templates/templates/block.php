@@ -175,6 +175,8 @@ class WPURP_Template_Block {
             foreach( $block->conditions as $condition ) {
                 if( ( $condition->condition_type == 'field' || $condition->condition_type == 'custom_field' ) && $this->present( $condition, 'field' ) ) {
                     $this->add_condition( array( 'type' => 'hide', 'condition_type' => 'field', 'field' => $condition->field, 'when' => $condition->when ), $condition->target );
+                } else if( $condition->condition_type == 'sub_field' && $this->present( $condition, 'field' ) ) {
+                    $this->add_condition( array( 'type' => 'hide', 'condition_type' => 'sub_field', 'field' => $condition->field, 'when' => $condition->when ), $condition->target );
                 } else if( $condition->condition_type == 'setting' && $this->present( $condition, 'setting' ) ) {
                     $this->add_condition( array( 'type' => 'hide', 'condition_type' => 'setting', 'setting' => $condition->setting, 'when' => $condition->when ), $condition->target );
                 } else if( $condition->condition_type == 'responsive' ) {
@@ -301,7 +303,7 @@ class WPURP_Template_Block {
         $this->conditions[$target][] = $condition;
     }
 
-    private function condition( $recipe, $condition )
+    private function condition( $recipe, $condition, $args = array() )
     {
         $show = true;
 
@@ -313,8 +315,31 @@ class WPURP_Template_Block {
             } else {
                 $show = $show && $present; // Hide when missing
             }
+        } else if( $condition['condition_type'] == 'sub_field' && isset( $args[$condition['field']] ) ) {
+            $present = $args[$condition['field']] == '' ? false : true;
+
+            if( isset( $condition['when'] ) && $condition['when'] == 'present' ) {
+                $show = $show && !$present; // Hide when present
+            } else {
+                $show = $show && $present; // Hide when missing
+            }
         } else if( $condition['condition_type'] == 'setting' ) {
-            $val = WPUltimateRecipe::option( $condition['setting'], '1' ); // TODO Only works for default 1 options at the moment
+
+            if( $contition['setting'] = 'user_menus_add_to_shopping_list' ) {
+                if( !WPUltimateRecipe::is_premium_active() ) {
+                    $val = false;
+                } else {
+                    $setting = WPUltimateRecipe::option( 'user_menus_add_to_shopping_list', 'off' );
+
+                    if( $setting == 'guests' || ( $setting == 'registered' && is_user_logged_in() ) ) {
+                        $val = true;
+                    } else {
+                        $val = false;
+                    }
+                }
+            } else {
+                $val = WPUltimateRecipe::option( $condition['setting'], '1' ); // TODO Only works for default 1 options at the moment
+            }
 
             if( $condition['setting'] == 'recipe_adjustable_units' && !WPUltimateRecipe::is_premium_active() ) {
                 return false; // Hide unit conversion block if we're not Premium
@@ -330,11 +355,11 @@ class WPURP_Template_Block {
         return $show;
     }
 
-    protected function show( $recipe, $target = 'block' )
+    protected function show( $recipe, $target = 'block', $args = array() )
     {
         if( isset( $this->conditions[$target] ) ) {
             foreach( $this->conditions[$target] as $condition ) {
-                if( !$this->condition( $recipe, $condition ) ) {
+                if( !$this->condition( $recipe, $condition, $args ) ) {
                     return false;
                 }
             }
@@ -347,9 +372,9 @@ class WPURP_Template_Block {
      * Output block, called before output of child.
      * Return false to not output the child.
      */
-    protected function output_block( $recipe )
+    protected function output_block( $recipe, $args )
     {
-        return $this->show( $recipe );
+        return $this->show( $recipe, 'block', $args );
     }
 
     protected function before_output()

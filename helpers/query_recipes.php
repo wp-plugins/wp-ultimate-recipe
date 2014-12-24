@@ -12,6 +12,7 @@ class WPURP_Query_Recipes {
     private $term;
     private $ids;
     private $ids_only;
+	private $images_only;
 
     public function __construct()
     {
@@ -30,6 +31,7 @@ class WPURP_Query_Recipes {
         $this->term = '';
         $this->ids = false;
         $this->ids_only = false;
+        $this->images_only = false;
     }
 
     public function get()
@@ -90,6 +92,17 @@ class WPURP_Query_Recipes {
                 $args['meta_key'] = 'recipe_rating';
             }
         }
+
+	    // Images only
+	    if( $this->images_only ) {
+		    $args['meta_query'] = array(
+			    array(
+				    'key' => '_thumbnail_id',
+				    'value' => '0',
+				    'compare' => '>'
+			    ),
+		    );
+	    }
 
         $query = new WP_Query( $args );
         $recipes = array();
@@ -174,6 +187,12 @@ class WPURP_Query_Recipes {
         $this->ids_only = true;
         return $this;
     }
+
+	public function images_only()
+	{
+		$this->images_only = true;
+		return $this;
+	}
 
     /*
      * Quick access queries

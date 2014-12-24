@@ -17,7 +17,7 @@ class WPURP_Template_Recipe_Servings_Changer extends WPURP_Template_Block {
     //TODO Refactor this.
     public function output( $recipe, $args = array() )
     {
-        if( !$this->output_block( $recipe ) ) return '';
+        if( !$this->output_block( $recipe, $args ) ) return '';
 
         $output = $this->before_output();
 

@@ -60,7 +60,7 @@ class WPURP_Assets {
             array(
                 'name' => 'socialite',
                 'setting' => array( 'recipe_sharing_enable', '1' ),
-                'file' => '/vendor/socialite/socialite.min.js',
+                'file' => '/vendor/socialite/socialite.js',
                 'public' => true,
             ),
             array(
@@ -84,6 +84,12 @@ class WPURP_Assets {
                     'twitter_lang' => WPUltimateRecipe::option( 'recipe_sharing_language_twitter', 'en' ),
                     'google_lang' => WPUltimateRecipe::option( 'recipe_sharing_language_google', 'en-US' ),
                 ),
+            ),
+            array(
+                'setting' => array( 'recipe_template_font_awesome', '1' ),
+                'file' => WPUltimateRecipe::get()->coreUrl . '/vendor/font-awesome/css/font-awesome.min.css',
+                'direct' => true,
+                'public' => true,
             )
         );
     }
@@ -147,8 +153,8 @@ class WPURP_Assets {
         foreach( $assets as $asset )
         {
             if( $use_minify && ( !isset( $asset['direct'] ) || !$asset['direct'] ) ) {
-                // These assets are minified so we don't need them again, except for JS files with data
-                if( strtolower( $asset['type'] ) == 'js' ) {
+                // These assets are minified so we don't need them again, except for public JS files with data
+                if( strtolower( $asset['type'] ) == 'js' && isset( $asset['public'] ) && $asset['public'] ) {
                     if( isset( $asset['data'] ) && isset( $asset['data']['name'] ) ) $js_to_enqueue_data_only[] = $asset;
                     if( isset( $asset['name'] ) ) $js_names[] = $asset['name'];
                     if( isset( $asset['deps'] ) ) $js_dependencies = array_merge( $js_dependencies, $asset['deps'] );

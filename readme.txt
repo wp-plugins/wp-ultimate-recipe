@@ -95,6 +95,10 @@ Yes! We pride ourselves on offering awesome support and almost always answer sup
 
 == Changelog ==
 
+= 2.1.6 =
+* Feature: Ability to chat with us from your Settings or FAQ page
+* Fix: Issue in minified JS file causing problems on some websites
+
 = 2.1.4 =
 * Fix: Problem with adjustable servings
 * Fix: Use of non-gzipped minified assets to avoid PHP problems
@@ -345,6 +349,9 @@ Yes! We pride ourselves on offering awesome support and almost always answer sup
 * Very first version of this plugin
 
 == Upgrade notice ==
+
+= 2.1.6 =
+Be sure to update if you're experiencing JavaScript issues
 
 = 2.1.4 =
 Update recommended. A few bug fixes

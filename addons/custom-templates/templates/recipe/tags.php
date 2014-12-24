@@ -25,7 +25,7 @@ class WPURP_Template_Recipe_Tags extends WPURP_Template_Block {
 
     public function output( $recipe, $args = array() )
     {
-        if( !$this->output_block( $recipe ) ) return '';
+        if( !$this->output_block( $recipe, $args ) ) return '';
 
         // Backwards compatibility
         if( empty( $this->children ) ) {

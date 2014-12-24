@@ -33,7 +33,7 @@ class WPURP_Template_Recipe_Instructions extends WPURP_Template_Block {
 
     public function output( $recipe, $args = array() )
     {
-        if( !$this->output_block( $recipe ) ) return '';
+        if( !$this->output_block( $recipe, $args ) ) return '';
 
         // Backwards compatibility
         if( empty( $this->children ) ) {
@@ -136,7 +136,7 @@ class WPURP_Template_Recipe_Instructions extends WPURP_Template_Block {
 
             $style = !isset( $instructions[$i+1] ) || $instruction['group'] != $instructions[$i+1]['group'] ? array('li','li-last') : 'li';
 
-            $out .= '<li itemprop="recipeInstructions" class="wpurp-recipe-instruction"' . $this->style($style) . '>';
+            $out .= '<li class="wpurp-recipe-instruction"' . $this->style($style) . '>';
             $out .= '<span' . $this->style('instruction') . '>'.$instruction['description'].'</span>';
 
             if( $this->show_images && $instruction['image'] != '' ) {

@@ -216,6 +216,35 @@ function wpurp_admin_recipe_tags()
     return $taxonomy_list;
 }
 
+function wpurp_admin_category_terms()
+{
+    return wpurp_admin_get_terms( 'category' );
+}
+
+function wpurp_admin_tag_terms()
+{
+    return wpurp_admin_get_terms( 'post_tag' );
+}
+
+function wpurp_admin_get_terms( $taxonomy )
+{
+    $args = array(
+        'hide_empty' => false
+    );
+
+    $terms = get_terms( $taxonomy, $args );
+
+    $result = array();
+    foreach( $terms as $term ) {
+        $result[] = array(
+            'value' => $term->term_id,
+            'label' => $term->name,
+        );
+    }
+
+    return $result;
+}
+
 function wpurp_admin_post_types()
 {
     $post_types = get_post_types( '', 'names' );
@@ -258,4 +287,6 @@ VP_Security::instance()->whitelist_function('wpurp_reset_demo_recipe');
 VP_Security::instance()->whitelist_function('wpurp_reset_recipe_grid_terms');
 VP_Security::instance()->whitelist_function('wpurp_reset_cache');
 VP_Security::instance()->whitelist_function('wpurp_admin_recipe_tags');
+VP_Security::instance()->whitelist_function('wpurp_admin_category_terms');
+VP_Security::instance()->whitelist_function('wpurp_admin_tag_terms');
 VP_Security::instance()->whitelist_function('wpurp_admin_post_types');
