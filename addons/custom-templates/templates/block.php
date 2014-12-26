@@ -325,7 +325,7 @@ class WPURP_Template_Block {
             }
         } else if( $condition['condition_type'] == 'setting' ) {
 
-            if( $contition['setting'] = 'user_menus_add_to_shopping_list' ) {
+            if( $condition['setting'] == 'user_menus_add_to_shopping_list' ) {
                 if( !WPUltimateRecipe::is_premium_active() ) {
                     $val = false;
                 } else {
