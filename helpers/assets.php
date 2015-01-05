@@ -255,7 +255,13 @@ class WPURP_Assets {
     private function enqueue_js( $assets, $use_minify, $js_to_enqueue_data_only, $js_names, $js_dependencies )
     {
         if( $use_minify ) {
-            $external_deps = array_unique( array_diff( $js_dependencies, $js_names ) );
+            if( WPUltimateRecipe::is_premium_active() ) {
+                $external_deps = array_unique( array_diff( $js_dependencies, $js_names ) );
+                //var_dump( $external_deps );
+            } else {
+                $external_deps = array( 'jquery', 'jquery-ui-sortable', 'jquery-ui-droppable', 'suggest' );
+            }
+
             wp_enqueue_script( 'wpurp_script_minified', WPUltimateRecipe::get()->coreUrl . '/assets/wpurp-public.js', $external_deps, WPURP_VERSION, true );
 
             foreach( $js_to_enqueue_data_only as $asset ) {

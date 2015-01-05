@@ -188,9 +188,9 @@ class WPURP_Query_Recipes {
         return $this;
     }
 
-	public function images_only()
+	public function images_only( $images_only )
 	{
-		$this->images_only = true;
+		$this->images_only = $images_only;
 		return $this;
 	}
 
