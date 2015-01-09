@@ -337,8 +337,14 @@ class WPURP_Template_Block {
                         $val = false;
                     }
                 }
+            } else if ( in_array( $condition['setting'], array(
+                'partners_integrations_foodfanatic_enable',
+                'partners_integrations_bigoven_enable' ) ) ) {
+                // Default 0
+                $val = WPUltimateRecipe::option( $condition['setting'], '0' );
             } else {
-                $val = WPUltimateRecipe::option( $condition['setting'], '1' ); // TODO Only works for default 1 options at the moment
+                // Default 1
+                $val = WPUltimateRecipe::option( $condition['setting'], '1' );
             }
 
             if( $condition['setting'] == 'recipe_adjustable_units' && !WPUltimateRecipe::is_premium_active() ) {

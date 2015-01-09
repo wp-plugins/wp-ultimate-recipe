@@ -86,6 +86,10 @@ class WPURP_Assets {
                 ),
             ),
             array(
+                'file' => '/js/partners.js',
+                'public' => true,
+            ),
+            array(
                 'setting' => array( 'recipe_template_font_awesome', '1' ),
                 'file' => WPUltimateRecipe::get()->coreUrl . '/vendor/font-awesome/css/font-awesome.min.css',
                 'direct' => true,

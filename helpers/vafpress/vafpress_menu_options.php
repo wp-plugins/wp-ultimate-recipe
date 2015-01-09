@@ -493,6 +493,35 @@ $admin_menu = array(
                 ),
             ),
         ),
+//=-=-=-=-=-=-= PARTNER INTEGRATIONS =-=-=-=-=-=-=
+        array(
+            'title' => __('Partner Integrations', 'wp-ultimate-recipe'),
+            'name' => 'partners_integrations',
+            'icon' => 'font-awesome:fa-link',
+            'controls' => array(
+                array(
+                    'type' => 'section',
+                    'title' => __('General', 'wp-ultimate-recipe'),
+                    'name' => 'section_integrations_general',
+                    'fields' => array(
+                        array(
+                            'type' => 'toggle',
+                            'name' => 'partners_integrations_bigoven_enable',
+                            'label' => __('BigOven', 'wp-ultimate-recipe'),
+                            'description' => __( 'Show save recipe to BigOven button.', 'wp-ultimate-recipe' ),
+                            'default' => '0',
+                        ),
+                        array(
+                            'type' => 'toggle',
+                            'name' => 'partners_integrations_foodfanatic_enable',
+                            'label' => __('Food Fanatic', 'wp-ultimate-recipe'),
+                            'description' => __( 'Show save recipe to Food Fanatic button.', 'wp-ultimate-recipe' ),
+                            'default' => '0',
+                        ),
+                    ),
+                ),
+            ),
+        ),
 //=-=-=-=-=-=-= RECIPE SHARING =-=-=-=-=-=-=
         array(
             'title' => __('Recipe Sharing', 'wp-ultimate-recipe'),
@@ -1478,6 +1507,14 @@ $admin_menu = array(
                             'binding' => array(
                                 'field'    => '',
                                 'function' => 'wpurp_admin_import_easyrecipe',
+                            ),
+                        ),
+                        array(
+                            'type' => 'html',
+                            'name' => 'import_recipes_recipecard' . $sitehash,
+                            'binding' => array(
+                                'field'    => '',
+                                'function' => 'wpurp_admin_import_recipecard',
                             ),
                         ),
                         array(

@@ -36,20 +36,44 @@ class WPURP_Template_Container extends WPURP_Template_Block {
     <?php
     // Ingredients metadata (done here to avoid doubles)
     if( $recipe->has_ingredients() ) {
+        $previous_group = null;
         foreach( $recipe->ingredients() as $ingredient ) {
+            $group = isset( $ingredient['group'] ) ? $ingredient['group'] : '';
+
+            if( $group !== $previous_group ) {
+                if( !is_null( $previous_group ) ) {
+                    echo '</div>';
+                }
+                echo '<div class="wpurp-meta wpurp-meta-ingredient-group" content="' . esc_attr( $group ) . '">';
+                $previous_group = $group;
+            }
+
             $meta = $ingredient['amount'] . ' ' . $ingredient['unit'] . ' ' . $ingredient['ingredient'];
             if( trim( $ingredient['notes'] ) !== '' ) {
                 $meta .= ' (' . $ingredient['notes'] . ')';
             }
             echo '<meta itemprop="ingredients" content="' . esc_attr( $meta ). '">';
         }
+        echo '</div>';
     }
 
     // Instructions metadata
     if( $recipe->has_instructions() ) {
+        $previous_group = null;
         foreach( $recipe->instructions() as $instruction ) {
+            $group = isset( $instruction['group'] ) ? $instruction['group'] : '';
+
+            if( $group !== $previous_group ) {
+                if( !is_null( $previous_group ) ) {
+                    echo '</div>';
+                }
+                echo '<div class="wpurp-meta wpurp-meta-instruction-group" content="' . esc_attr( $group ) . '">';
+                $previous_group = $group;
+            }
+
             echo '<meta itemprop="recipeInstructions" content="' . esc_attr( $instruction['description'] ) . '">';
         }
+        echo '</div>';
     }
 
     // Ratings metadata
@@ -86,7 +110,7 @@ class WPURP_Template_Container extends WPURP_Template_Block {
     }
 
     if( $show_rating ) { ?>
-    <div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+    <div class="wpurp-meta" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
         <meta itemprop="ratingValue" content="<?php echo $rating; ?>">
         <meta itemprop="reviewCount" content="<?php echo $count; ?>">
     </div>
@@ -95,7 +119,7 @@ class WPURP_Template_Container extends WPURP_Template_Block {
     <?php
     // Nutritional Metadata
     if( WPUltimateRecipe::is_addon_active( 'nutritional-information' ) ) {
-        echo '<div itemprop="nutrition" itemscope itemtype="http://schema.org/NutritionInformation">';
+        echo '<div class="wpurp-meta" itemprop="nutrition" itemscope itemtype="http://schema.org/NutritionInformation">';
 
         $nutritional = $recipe->nutritional();
 
