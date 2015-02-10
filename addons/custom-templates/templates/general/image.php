@@ -26,7 +26,7 @@ class WPURP_Template_Image extends WPURP_Template_Block {
 
     public function output( $recipe, $args = array() )
     {
-        if( !$this->output_block( $recipe ) ) return '';
+        if( !$this->output_block( $recipe, $args ) ) return '';
 
         if( $this->preset ) {
             $this->url = WPUltimateRecipe::addon( 'template-editor' )->addonUrl . '/img/' . $this->preset . '.png';

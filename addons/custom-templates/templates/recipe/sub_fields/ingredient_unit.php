@@ -11,7 +11,7 @@ class WPURP_Template_Recipe_Ingredient_Unit extends WPURP_Template_Block {
 
     public function output( $recipe, $args = array() )
     {
-        if( !$this->output_block( $recipe ) || !isset( $args['ingredient_unit'] ) ) return '';
+        if( !$this->output_block( $recipe, $args ) || !isset( $args['ingredient_unit'] ) || !$args['ingredient_unit'] ) return '';
 
         $output = $this->before_output();
 

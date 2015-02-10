@@ -11,7 +11,7 @@ class WPURP_Template_Recipe_Ingredient_Group extends WPURP_Template_Block {
 
     public function output( $recipe, $args = array() )
     {
-        if( !$this->output_block( $recipe ) || !isset( $args['ingredient_group_name'] ) || $args['ingredient_group_name'] == '' ) return '';
+        if( !$this->output_block( $recipe, $args ) || !isset( $args['ingredient_group_name'] ) || !$args['ingredient_group_name'] ) return '';
 
         $output = $this->before_output();
 

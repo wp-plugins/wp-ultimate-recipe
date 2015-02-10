@@ -25,7 +25,7 @@ class WPURP_Template_Recipe_Ingredient_Container extends WPURP_Template_Block {
 
     public function output( $recipe, $args = array() )
     {
-        if( !$this->output_block( $recipe ) ) return '';
+        if( !$this->output_block( $recipe, $args ) ) return '';
 
         if( $this->is_list ) {
             if( in_array( $this->list_style, array( 'none', 'circle', 'disc', 'square' ) ) ) {

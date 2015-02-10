@@ -11,7 +11,7 @@ class WPURP_Template_Recipe_Instruction_Text extends WPURP_Template_Block {
 
     public function output( $recipe, $args = array() )
     {
-        if( !$this->output_block( $recipe ) || !isset( $args['instruction_description'] ) ) return '';
+        if( !$this->output_block( $recipe, $args ) || !isset( $args['instruction_description'] ) || !$args['instruction_description'] ) return '';
 
         $output = $this->before_output();
 

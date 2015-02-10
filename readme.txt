@@ -3,7 +3,7 @@ Contributors: BrechtVds
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QG7KZMGFU325Y
 Tags: recipe, ingredients, food, nutrition, nutritional, cooking, seo, schema.org
 Requires at least: 3.5
-Tested up to: 4.0.1
+Tested up to: 4.1
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -33,6 +33,7 @@ An overview of the WP Ultimate Recipe features:
 *   Add a **recipe index** to any post or page
 *   Structure your ingredients and instructions in **groups** (e.g. icing and cake batter)
 *   Visitors can **share your recipes**
+*   Integration with **BigOven** and **Food Fanatic** possible
 
 We also have a [WP Ultimate Recipe Premium version](http://www.wpultimaterecipe.com/get-the-plugin/) which offers the following features:
 
@@ -94,6 +95,22 @@ Yes! We pride ourselves on offering awesome support and almost always answer sup
 10. WP Ultimate Recipe automatically formats your data so it can be picked up by Google Recipe Search and others. Great for SEO!
 
 == Changelog ==
+
+= 2.1.8 =
+* Feature: BigOven integration
+* Feature: Food Fanatic integration
+* Feature: Support for YARPP
+* Fix: JS error when using the minified assets
+* Fix: PHP Warning on first time activation
+* Fix: White screen on first time activation
+* Fix: Template compatibility with new Twenty Fifteen theme
+
+= 2.1.7 =
+* Fix: Problem with template conditions
+
+= 2.1.6 =
+* Feature: Ability to chat with us from your Settings or FAQ page
+* Fix: Issue in minified JS file causing problems on some websites
 
 = 2.1.4 =
 * Fix: Problem with adjustable servings
@@ -345,6 +362,15 @@ Yes! We pride ourselves on offering awesome support and almost always answer sup
 * Very first version of this plugin
 
 == Upgrade notice ==
+
+= 2.1.8 =
+Update when experiencing JS issues
+
+= 2.1.7 =
+Update highly recommended
+
+= 2.1.6 =
+Be sure to update if you're experiencing JavaScript issues
 
 = 2.1.4 =
 Update recommended. A few bug fixes

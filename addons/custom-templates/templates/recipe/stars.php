@@ -12,7 +12,7 @@ class WPURP_Template_Recipe_Stars extends WPURP_Template_Block {
     // TODO Better integration with user ratings
     public function output( $recipe, $args = array() )
     {
-        if( !$this->output_block( $recipe ) ) return '';
+        if( !$this->output_block( $recipe, $args ) ) return '';
 
         if( WPUltimateRecipe::is_addon_active( 'user-ratings' ) && WPUltimateRecipe::option( 'user_ratings_enable', 'everyone' ) != 'disabled' ) {
             $stars =  WPUltimateRecipe::addon( 'user-ratings' )->output( $recipe );

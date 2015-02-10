@@ -25,7 +25,7 @@ class WPURP_Template_Recipe_Instruction_Image extends WPURP_Template_Block {
 
     public function output( $recipe, $args = array() )
     {
-        if( !$this->output_block( $recipe ) || !isset( $args['instruction_image'] ) || $args['instruction_image'] == '' ) return '';
+        if( !$this->output_block( $recipe, $args ) || !isset( $args['instruction_image'] ) || $args['instruction_image'] == '' ) return '';
         if( !isset( $this->thumbnail ) ) $this->thumbnail = 'full';
 
         $thumb = wp_get_attachment_image_src( $args['instruction_image'], $this->thumbnail );

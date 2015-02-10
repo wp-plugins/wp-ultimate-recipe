@@ -7,20 +7,31 @@
 
     <div class="feature-section col two-col">
         <div class="col-1">
-            <h3>WP Ultimate Recipe 2.1.4</h3>
+            <h3>WP Ultimate Recipe 2.1.8</h3>
             <strong>New</strong>
+            <ul>
+                <li>Feature: BigOven integration</li>
+                <li>Feature: Food Fanatic integration</li>
+                <li>Feature: Support for YARPP</li>
+
+            </ul>
             <strong>Update</strong>
             <ul>
-                <li>Fix: Problem with adjustable servings</li>
-                <li>Fix: Use of non-gzipped minified assets to avoid PHP problems</li>
+                <li>Fix: JS error when using the minified assets</li>
+                <li>Fix: PHP Warning on first time activation</li>
+                <li>Fix: White screen on first time activation</li>
+                <li>Fix: Template compatibility with new Twenty Fifteen theme</li>
             </ul>
         </div>
         <div class="col-2 last-feature">
-            <h3>WP Ultimate Recipe Premium 2.1.4</h3>
+            <h3>WP Ultimate Recipe Premium 2.1.8</h3>
             <strong>New</strong>
             <ul>
-                <li>Feature: Ability to add custom CSS for the shopping list print page</li>
-                <li>Feature: Ability to set the default unit system for User Menus</li>
+                <li>Feature: Import from RecipeCard by Yumprint</li>
+            </ul>
+            <strong>Update</strong>
+            <ul>
+                <li>Fix: Template Editor preview problem with default permalinks</li>
             </ul>
         </div>
     </div>
@@ -29,6 +40,45 @@
 
     <div>
         <h3>Previous Versions</h3>
+
+        <h4>Premium Plugin 2.1.6</h4>
+        <ul>
+            <li>Feature: Add to Shopping List from Recipe</li>
+            <li>Feature: Shopping List is persistent</li>
+            <li>Feature: Sub field conditions in the Template Editor</li>
+            <li>Feature: New “User Menus By” shortcode</li>
+            <li>Feature: Custom HTML to display after a user has submitted a recipe</li>
+            <li>Feature: Setting to hide specific category or tag terms on the User Submission page</li>
+            <li>New hook: wpurp_recipe_grid_recipe_ids</li>
+            <li>Fix: Number of recipes in Grid when not displaying those without image</li>
+            <li>Fix: Nutritional Widget memory problem</li>
+            <li>Fix: Don’t display ingredient and instruction subfields when empty</li>
+        </ul>
+        <h4>Core Plugin 2.1.6</h4>
+        <ul>
+            <li>Feature: Ability to chat with us from your Settings or FAQ page</li>
+            <li>Fix: Issue in minified JS file causing problems on some websites</li>
+        </ul>
+
+        <h4>Premium Plugin 2.1.5</h4>
+        <ul>
+            <li>Feature: Ability to show multiple unit systems as columns in the shopping list</li>
+            <li>Fix: Automatic updates should be working again for most users</li>
+            <li>Fix: Unit Conversion problem</li>
+            <li>Fix: User Ratings voting problem when using minified assets</li>
+        </ul>
+        <h4>Core Plugin 2.1.4</h4>
+        <ul>
+            <li>Fix: Problem with adjustable servings</li>
+            <li>Fix: Use of non-gzipped minified assets to avoid PHP problems</li>
+        </ul>
+
+        <h4>Premium Plugin 2.1.4</h4>
+        <ul>
+            <li>Feature: Ability to add custom CSS for the shopping list print page</li>
+            <li>Feature: Ability to set the default unit system for User Menus</li>
+        </ul>
+
         <h4>Premium Plugin 2.1.3</h4>
         <ul>
             <li>Feature: Ability to not show an ingredient link for specific ingredients</li>
@@ -46,7 +96,6 @@
             <li>Fix: Issue when using decimal values as the serving size</li>
         </ul>
 
-        <h3>Previous Versions</h3>
         <h4>Premium Plugin 2.1.2</h4>
         <ul>
             <li>Feature: Import from EasyRecipe and EasyRecipe Plus</li>
