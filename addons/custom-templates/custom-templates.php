@@ -36,6 +36,7 @@ class WPURP_Custom_Templates extends WPURP_Addon {
         $this->load( 'recipe/link' );
         $this->load( 'recipe/notes' );
         $this->load( 'recipe/nutrition' );
+        $this->load( 'recipe/nutrition_label' );
         $this->load( 'recipe/passive_time' );
         $this->load( 'recipe/passive_time_text' );
         $this->load( 'recipe/prep_time' );

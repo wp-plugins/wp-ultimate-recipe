@@ -47,6 +47,7 @@ class WPURP_Template_Recipe_Tags extends WPURP_Template_Block {
                 $sub_tag = 'div';
             }
 
+            $args['desktop'] = $args['desktop'] && $this->show_on_desktop;
             $output = $this->before_output();
 
             ob_start();
@@ -57,10 +58,10 @@ class WPURP_Template_Recipe_Tags extends WPURP_Template_Block {
         ?>
         <<?php echo $sub_tag . $this->style( 'li' ); ?>>
             <?php
-                $child_args = array(
+                $child_args = array_merge( $args, array(
                     'tag_name' => $tag_name,
                     'tag_terms' => $tag_terms,
-                );
+                ) );
 
                 $this->output_children( $recipe, 0, 0, $child_args );
             ?>

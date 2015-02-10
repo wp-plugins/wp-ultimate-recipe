@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WP Ultimate Recipe package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2015-01-02 14:20:25+0000\n"
+"PO-Revision-Date: 2015-02-09 14:03:47+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -10,33 +10,88 @@ msgstr ""
 "X-Generator: GlotPress/0.1\n"
 "Project-Id-Version: WP Ultimate Recipe\n"
 
+#: wp-ultimate-recipe-premium/premium/helpers/ingredient_metadata.php:10
+msgid "Optional plural version of this ingredient."
+msgstr ""
+
+#: wp-ultimate-recipe-premium/core/helpers/notices.php:30
+msgid "other notices ignored"
+msgstr ""
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:103
+#: wp-ultimate-recipe-premium/premium/addons/import-xml/import-xml.php:26
+#: wp-ultimate-recipe-premium/premium/addons/import-xml/import-xml.php:38
+#: wp-ultimate-recipe-premium/premium/addons/import-xml/templates/before_importing.php:4
+#: wp-ultimate-recipe-premium/premium/addons/import-xml/templates/before_importing.php:15
+msgid "Import XML"
+msgstr ""
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:108
+#: wp-ultimate-recipe-premium/premium/addons/export-xml/export-xml.php:35
+#: wp-ultimate-recipe-premium/premium/addons/export-xml/export-xml.php:47
+#: wp-ultimate-recipe-premium/premium/addons/export-xml/templates/before_importing.php:4
+#: wp-ultimate-recipe-premium/premium/addons/export-xml/templates/before_importing.php:18
+msgid "Export XML"
+msgstr ""
+
+#: wp-ultimate-recipe-premium/premium/addons/export-xml/export-xml.php:58
+msgid "You haven't selected any recipes to export."
+msgstr ""
+
+#: wp-ultimate-recipe-premium/premium/addons/export-xml/export-xml.php:78
+msgid "Download XML"
+msgstr ""
+
+#: wp-ultimate-recipe-premium/premium/addons/export-xml/templates/before_importing.php:5
+msgid "Select recipes"
+msgstr ""
+
+#: wp-ultimate-recipe-premium/premium/addons/export-xml/templates/before_importing.php:10
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/templates/ingredient-groups.php:48
+msgid "Select"
+msgstr ""
+
+#: wp-ultimate-recipe-premium/premium/addons/export-xml/templates/before_importing.php:10
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/templates/ingredient-groups.php:50
+msgid "None"
+msgstr ""
+
+#: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:57
+#: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:89
+msgid "Lines starting with a ! will be starting a new group."
+msgstr ""
+
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/templates/ingredient-groups.php:36
+msgid "Set group for selected ingredients"
+msgstr ""
+
 #: wp-ultimate-recipe-premium/core/addons/custom-templates/templates/partner/bigoven.php:16
 msgid "BigOven - Save recipe or add to grocery list"
-msgstr ""
+msgstr "BigOvenにレシピを保存、または買い物リストに追加します。"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:498
 msgid "Partner Integrations"
-msgstr ""
+msgstr "パートナーとの同期"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:510
 msgid "BigOven"
-msgstr ""
+msgstr "BigOven"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:511
 msgid "Show save recipe to BigOven button."
-msgstr ""
+msgstr "BigOvenに保存するボタンを表示 "
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:517
 msgid "Food Fanatic"
-msgstr ""
+msgstr "Food Fanatic"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:518
 msgid "Show save recipe to Food Fanatic button."
-msgstr ""
+msgstr "Food Fanaticに保存するボタンを表示"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:88
 msgid "Import RecipeCard recipes"
-msgstr ""
+msgstr "RecipeCardのレシピをインポート"
 
 #: wp-ultimate-recipe-premium/premium/addons/import-recipecard/import-recipecard.php:26
 #: wp-ultimate-recipe-premium/premium/addons/import-recipecard/import-recipecard.php:38
@@ -44,15 +99,15 @@ msgstr ""
 #: wp-ultimate-recipe-premium/premium/addons/import-recipecard/templates/before_importing.php:44
 #: wp-ultimate-recipe-premium/premium/addons/import-recipecard/templates/manual_import.php:6
 msgid "Import RecipeCard"
-msgstr ""
+msgstr "RecipeCardからインポート"
 
 #: wp-ultimate-recipe-premium/premium/addons/import-recipecard/import-recipecard.php:289
 msgid "Adapted"
-msgstr ""
+msgstr "取り込み済み"
 
 #: wp-ultimate-recipe-premium/premium/addons/import-recipecard/import-recipecard.php:290
 msgid "Adapted Link"
-msgstr ""
+msgstr "取り込んだリンク"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:374
 msgid "Include Font Awesome"
@@ -114,15 +169,15 @@ msgstr "デフォルトの単位表示"
 msgid "Number of unit systems displayed in the shopping list."
 msgstr "買い物リストで使用する単位表示の数"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1679
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1699
 msgid "Print Recipe CSS"
 msgstr "印刷用CSS"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1686
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1706
 msgid "Print Shopping List CSS"
 msgstr "買い物リスト印刷用CSS"
 
-#: wp-ultimate-recipe-premium/premium/vendor/EDD/EDD_SL_Plugin_Updater.php:301
+#: wp-ultimate-recipe-premium/premium/vendor/EDD/EDD_SL_Plugin_Updater.php:324
 msgid "Error"
 msgstr "エラー"
 
@@ -170,39 +225,39 @@ msgstr "チェックボックスを表示"
 msgid "Show checkboxes in the shopping list to cross items of the list."
 msgstr "買い物リストをチェックできるようチェックボックスを表示します。"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1631
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1651
 msgid "Assets"
 msgstr "資源"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1637
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1657
 msgid "Use minified assets"
 msgstr "最適化コードを使用"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1638
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1658
 msgid "Use minified assets to improve page load speed."
 msgstr "ページの読み込み速度を向上させるために最適化されたコードを使用します。"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1644
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1664
 msgid "Generate minified assets"
 msgstr "最適化コードの生成"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1645
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1665
 msgid "Generate minified assets on the fly."
 msgstr "実行時に最適化コードを生成します。"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1651
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1671
 msgid "Minified assets directory"
 msgstr "最適化コードディレクトリ"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1652
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1672
 msgid "Directory to generate the minified assets to. Should be writable."
 msgstr "最適化されたコードを保存するディレクトリ。書込み権限が必要です。"
 
-#: wp-ultimate-recipe-premium/premium/helpers/ingredient_metadata.php:14
+#: wp-ultimate-recipe-premium/premium/helpers/ingredient_metadata.php:19
 msgid "Hide link"
 msgstr "リンクなし"
 
-#: wp-ultimate-recipe-premium/premium/helpers/ingredient_metadata.php:15
+#: wp-ultimate-recipe-premium/premium/helpers/ingredient_metadata.php:20
 msgid "Don't use a link in the ingredients list for this ingredient."
 msgstr "材料リストでリンクを使用しません。"
 
@@ -227,7 +282,7 @@ msgstr "該当なし"
 msgid "Import EasyRecipe recipes"
 msgstr "EasyRecipeをインポート"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:198
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:208
 msgid "Reset Cache"
 msgstr "キャッシュを初期化"
 
@@ -331,6 +386,7 @@ msgstr "出来上がりの量"
 #: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/before_importing.php:5
 #: wp-ultimate-recipe-premium/premium/addons/import-recipecard/templates/before_importing.php:5
 #: wp-ultimate-recipe-premium/premium/addons/import-recipress/templates/import_recipress.php:5
+#: wp-ultimate-recipe-premium/premium/addons/import-xml/templates/before_importing.php:5
 #: wp-ultimate-recipe-premium/premium/addons/import-ziplist/templates/before_importing.php:5
 msgid "Before importing"
 msgstr "インポートの前に"
@@ -371,7 +427,7 @@ msgstr "栄養ラベルに続く："
 msgid "Add Recipe Box"
 msgstr "レシピボックスを追加"
 
-#: wp-ultimate-recipe-premium/core/helpers/recipe_save.php:92
+#: wp-ultimate-recipe-premium/core/helpers/recipe_save.php:100
 msgid "Update the Nutritional Information"
 msgstr "栄養情報を更新"
 
@@ -668,15 +724,15 @@ msgstr "レシピページに表示されるレシピ"
 msgid "Print Menu"
 msgstr "メニュー印刷"
 
-#: wp-ultimate-recipe-premium/premium/vendor/EDD/EDD_SL_Plugin_Updater.php:154
+#: wp-ultimate-recipe-premium/premium/vendor/EDD/EDD_SL_Plugin_Updater.php:177
 msgid "There is a new version of %1$s available. <a target=\"_blank\" class=\"thickbox\" href=\"%2$s\">View version %3$s details</a>."
 msgstr "%1$s の新しいバージョンがあります。<a target=\"_blank\" class=\"thickbox\" href=\"%2$s\">バージョン %3$s の詳細はこちら。</a>"
 
-#: wp-ultimate-recipe-premium/premium/vendor/EDD/EDD_SL_Plugin_Updater.php:161
+#: wp-ultimate-recipe-premium/premium/vendor/EDD/EDD_SL_Plugin_Updater.php:184
 msgid "There is a new version of %1$s available. <a target=\"_blank\" class=\"thickbox\" href=\"%2$s\">View version %3$s details</a> or <a href=\"%4$s\">update now</a>."
 msgstr "%1$s の新しいバージョンがあります。<a target=\"_blank\" class=\"thickbox\" href=\"%2$s\">バージョン %3$s の詳細はこちら</a>。<a href=\"%4$s\">更新はこちら</a>。"
 
-#: wp-ultimate-recipe-premium/premium/vendor/EDD/EDD_SL_Plugin_Updater.php:301
+#: wp-ultimate-recipe-premium/premium/vendor/EDD/EDD_SL_Plugin_Updater.php:324
 msgid "You do not have permission to install plugin updates"
 msgstr "プラグインの更新をインストールする権限がありません。"
 
@@ -880,7 +936,7 @@ msgstr "複数選択、すべて選択、親に対応する子も選択する設
 msgid "Limit recipes at start"
 msgstr "開始時にレシピを制限"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:193
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:203
 msgid "Recalculate Recipe Grid Terms"
 msgstr "レシピのグリッド表示を再計算"
 
@@ -1035,23 +1091,23 @@ msgstr "既存の材料からのみ選択可"
 msgid "When enabled visitors will only be able to select from a list of existing ingredients."
 msgstr "有効に設定すると、ユーザは既存の材料の中から選択したもののみ使用できるようになります。"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1591
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1611
 msgid "Remove recipe slug"
 msgstr "レシピスラッグを削除"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1592
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1612
 msgid "Make sure your slugs are unique across posts, pages and recipes! Your archive page will still be available."
 msgstr "スラッグは投稿、ページ、レシピの間でユニークとなるよう設定してください。アーカイブページで使われる可能性があります。"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1599
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1619
 msgid "Shortcode Editor"
 msgstr "ショートコードエディタ"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1613
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1633
 msgid "Show shortcode editor for"
 msgstr "ショートコードエディタの表示"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1614
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1634
 msgid "Where do you want to be able to insert recipes with the shortcode editor?"
 msgstr "ショートコードエディタを使ってレシピを挿入したい場所を選択してください。"
 
@@ -1060,7 +1116,7 @@ msgstr "ショートコードエディタを使ってレシピを挿入したい
 msgid "Open the Template Editor"
 msgstr "テンプレートエディタを開く"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:188
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:198
 msgid "Reset Demo Recipe"
 msgstr "サンプルレシピをリセット"
 
@@ -1109,11 +1165,11 @@ msgstr "最低投票数"
 msgid "Minimum number of votes needed before sharing the rating as metadata used by Google and other search engines."
 msgstr "何人以上の評価があればGoogleなどの検索エンジンにメタデータとして評価値を提供するかを指定します"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1665
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1685
 msgid "Custom Code"
 msgstr "カスタムコード"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1672
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1692
 msgid "Public CSS"
 msgstr "表示用CSS"
 
@@ -1128,6 +1184,7 @@ msgid "Add New from Text"
 msgstr "テキストから新規登録"
 
 #: wp-ultimate-recipe-premium/premium/addons/import-text/import-text.php:134
+#: wp-ultimate-recipe-premium/premium/addons/import-xml/import-xml.php:64
 msgid "Untitled"
 msgstr "タイトルなし"
 
@@ -1160,40 +1217,42 @@ msgstr "レシピのセクションを選択して、対応するボタンをク
 #: wp-ultimate-recipe-premium/premium/addons/import-recipecard/templates/manual_import.php:47
 #: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:19
 #: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:49
-#: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:80
+#: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:81
 #: wp-ultimate-recipe-premium/premium/addons/import-ziplist/templates/manual_import.php:51
 msgid "Notes"
 msgstr "メモ"
 
-#: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:72
+#: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:73
 msgid "Ingredient Details"
 msgstr "材料の説明"
 
-#: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:73
+#: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:57
+#: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:74
+#: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:89
 msgid "Tip"
 msgstr "コツ"
 
-#: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:73
+#: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:74
 msgid "Only unit aliases defined in the settings will be recognized."
 msgstr "認識できるのは設定で定義した単位のみです。"
 
 #: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:106
 #: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/manual_import.php:125
 #: wp-ultimate-recipe-premium/premium/addons/import-recipecard/templates/manual_import.php:45
-#: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:78
+#: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:79
 #: wp-ultimate-recipe-premium/premium/addons/import-ziplist/templates/manual_import.php:49
 msgid "Unit"
 msgstr "単位"
 
-#: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:89
+#: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:91
 msgid "Separate instructions with an empty line"
 msgstr "手順を空行で区切る"
 
-#: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:90
+#: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:92
 msgid "Every line is a separate instruction"
 msgstr "1行を1手順とする"
 
-#: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:106
+#: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:108
 msgid "Add Recipe"
 msgstr "レシピを追加"
 
@@ -1218,6 +1277,8 @@ msgid "Singular"
 msgstr "単数形"
 
 #: wp-ultimate-recipe-premium/core/helpers/ingredient_units.php:214
+#: wp-ultimate-recipe-premium/premium/helpers/ingredient_metadata.php:9
+#: wp-ultimate-recipe-premium/premium/helpers/ingredient_metadata.php:36
 msgid "Plural"
 msgstr "複数形"
 
@@ -1241,7 +1302,7 @@ msgstr "（例：20分、1-2時間など）"
 msgid "Allow filtering by"
 msgstr "フィルタ可能です"
 
-#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:258
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:256
 msgid "The menu can be edited from the front end:"
 msgstr "メニューはフロントエンドから編集できます："
 
@@ -1257,12 +1318,12 @@ msgstr "ヤードポンド法"
 msgid "US Legal"
 msgstr "アメリカ式"
 
-#: wp-ultimate-recipe-premium/premium/helpers/ingredient_metadata.php:20
+#: wp-ultimate-recipe-premium/premium/helpers/ingredient_metadata.php:25
 msgid "Use this to group ingredients in the shopping list."
 msgstr "買い物リストで材料をグループ化するのに使用します。"
 
-#: wp-ultimate-recipe-premium/premium/addons/user-menus/templates/ingredient-groups.php:7
-#: wp-ultimate-recipe-premium/premium/helpers/ingredient_metadata.php:21
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/templates/ingredient-groups.php:35
+#: wp-ultimate-recipe-premium/premium/helpers/ingredient_metadata.php:26
 msgid "Vegetables"
 msgstr "野菜"
 
@@ -1370,16 +1431,11 @@ msgstr "買い物リストを印刷"
 msgid "Ingredient Groups"
 msgstr "材料グループ"
 
-#: wp-ultimate-recipe-premium/premium/addons/user-menus/templates/ingredient-groups.php:8
-msgid "Add Group"
-msgstr "グループを追加"
-
-#: wp-ultimate-recipe-premium/premium/addons/user-menus/templates/ingredient-groups.php:19
-#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:144
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/templates/ingredient-groups.php:51
 msgid "Ungrouped"
 msgstr "グループ解除"
 
-#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:365
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:363
 msgid "Other"
 msgstr "その他"
 
@@ -1436,11 +1492,11 @@ msgstr "ライセンス変更"
 msgid "Metric"
 msgstr "メートル法"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1584
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1604
 msgid "Recipes in admin posts"
 msgstr "投稿管理にレシピ表示"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1585
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1605
 msgid "Show recipes in admin posts overview when acting as posts."
 msgstr "レシピを投稿として扱うとき、管理画面の投稿一覧にレシピを表示します。"
 
@@ -1466,11 +1522,11 @@ msgstr "作者を制限"
 msgid "Units"
 msgstr "単位"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1577
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1597
 msgid "Recipes act as posts"
 msgstr "レシピを投稿として扱う"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1578
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1598
 msgid "Recipes act like normal posts. For example: they show up on your front page."
 msgstr "レシピを通常の投稿として扱います。例えばフロントページに表示します。"
 
@@ -1516,18 +1572,18 @@ msgstr "ログインユーザのみレシピを評価可"
 msgid "Everyone can rate recipes"
 msgstr "誰でもレシピを評価可"
 
-#: wp-ultimate-recipe-premium/core/helpers/recipe_save.php:112
+#: wp-ultimate-recipe-premium/core/helpers/recipe_save.php:120
 #: wp-ultimate-recipe-premium/premium/addons/recipe-grid/recipe-grid.php:273
 #: wp-ultimate-recipe-premium/premium/helpers/recipe_columns.php:81
 msgid "Categories"
 msgstr "カテゴリ"
 
-#: wp-ultimate-recipe-premium/premium/helpers/ingredient_metadata.php:9
-#: wp-ultimate-recipe-premium/premium/helpers/ingredient_metadata.php:31
+#: wp-ultimate-recipe-premium/premium/helpers/ingredient_metadata.php:14
+#: wp-ultimate-recipe-premium/premium/helpers/ingredient_metadata.php:37
 msgid "Link"
 msgstr "リンクあり"
 
-#: wp-ultimate-recipe-premium/premium/helpers/ingredient_metadata.php:10
+#: wp-ultimate-recipe-premium/premium/helpers/ingredient_metadata.php:15
 msgid "Send your visitors to a specific link when clicking on an ingredient."
 msgstr "材料をクリックするとリンク先へ飛べるようにします。"
 
@@ -1632,7 +1688,7 @@ msgstr "WPのカテゴリアーカイブとタグアーカイブにレシピを�
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:658
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:729
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1128
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1557
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1577
 msgid "Advanced"
 msgstr "詳細設定"
 
@@ -1691,7 +1747,7 @@ msgstr "ユーザによる評価"
 #: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:216
 #: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:233
 #: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:253
-#: wp-ultimate-recipe-premium/premium/helpers/ingredient_metadata.php:19
+#: wp-ultimate-recipe-premium/premium/helpers/ingredient_metadata.php:24
 msgid "Group"
 msgstr "グループ"
 
@@ -1720,7 +1776,7 @@ msgstr "手順グループを追加"
 msgid "Share this Recipe"
 msgstr "このレシピを共有する"
 
-#: wp-ultimate-recipe-premium/core/helpers/recipe_save.php:113
+#: wp-ultimate-recipe-premium/core/helpers/recipe_save.php:121
 #: wp-ultimate-recipe-premium/premium/addons/recipe-grid/recipe-grid.php:281
 #: wp-ultimate-recipe-premium/premium/helpers/recipe_columns.php:82
 msgid "Tags"
@@ -1760,6 +1816,7 @@ msgstr "所用時間"
 #: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/before_importing.php:7
 #: wp-ultimate-recipe-premium/premium/addons/import-recipecard/templates/before_importing.php:7
 #: wp-ultimate-recipe-premium/premium/addons/import-recipress/templates/import_recipress.php:7
+#: wp-ultimate-recipe-premium/premium/addons/import-xml/templates/before_importing.php:7
 #: wp-ultimate-recipe-premium/premium/addons/import-ziplist/templates/before_importing.php:7
 msgid "It's a good idea to backup your WP database before using the import feature."
 msgstr "インポート機能を使う前にWPデータベースのバックアップを取っておくことをお薦めします。"
@@ -1919,11 +1976,11 @@ msgstr "初期状態に戻す"
 msgid "Export/Import"
 msgstr "エクスポート/インポート"
 
-#: wp-ultimate-recipe-premium/core/vendor/vafpress/classes/shortcodegenerator.php:260
+#: wp-ultimate-recipe-premium/core/vendor/vafpress/classes/shortcodegenerator.php:263
 msgid "Insert"
 msgstr "挿入"
 
-#: wp-ultimate-recipe-premium/core/vendor/vafpress/classes/shortcodegenerator.php:261
+#: wp-ultimate-recipe-premium/core/vendor/vafpress/classes/shortcodegenerator.php:264
 msgid "Cancel"
 msgstr "キャンセル"
 
@@ -2123,6 +2180,7 @@ msgstr "レシピテンプレート"
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:989
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1178
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1497
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1558
 msgid "These features are only available in "
 msgstr "有料版限定の機能です："
 
@@ -2155,15 +2213,7 @@ msgstr "無効"
 msgid "Import Recipes"
 msgstr "レシピのインポート"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1549
-msgid "Coming Soon"
-msgstr "近日公開"
-
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1550
-msgid "This feature is coming soon for "
-msgstr "この機能は近日公開予定です"
-
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1542
 msgid "Export Recipes"
 msgstr "レシピのエクスポート"
 
@@ -2302,7 +2352,7 @@ msgstr "レシピが見つかりませんでした。"
 
 #: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/manual_import.php:124
 #: wp-ultimate-recipe-premium/premium/addons/import-recipecard/templates/manual_import.php:44
-#: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:77
+#: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:78
 #: wp-ultimate-recipe-premium/premium/addons/import-ziplist/templates/manual_import.php:48
 #: wp-ultimate-recipe-premium/premium/addons/user-menus/templates/user-menus.php:145
 msgid "Amount"
@@ -2310,70 +2360,71 @@ msgstr "量"
 
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/basic-custom-taxonomies.php:114
 #: wp-ultimate-recipe-premium/core/helpers/recipe_post_type.php:39
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:115
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:157
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:117
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:159
 #: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/custom-taxonomies.php:158
-#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:221
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:219
 msgid "New"
 msgstr "新規"
 
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/basic-custom-taxonomies.php:108
 #: wp-ultimate-recipe-premium/core/helpers/recipe_post_type.php:42
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:109
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:151
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:111
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:153
 #: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/custom-taxonomies.php:152
 #: wp-ultimate-recipe-premium/premium/addons/recipe-search/widgets/recipe_search_widget.php:53
-#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:224
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:222
 msgid "Search"
 msgstr "検索"
 
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/basic-custom-taxonomies.php:118
 #: wp-ultimate-recipe-premium/core/helpers/recipe_post_type.php:43
 #: wp-ultimate-recipe-premium/core/helpers/recipe_post_type.php:44
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:119
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:161
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:121
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:163
 #: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/custom-taxonomies.php:162
-#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:225
-#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:226
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:223
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:224
 msgid "No"
 msgstr "なし"
 
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/basic-custom-taxonomies.php:118
 #: wp-ultimate-recipe-premium/core/helpers/recipe_post_type.php:43
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:119
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:161
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:121
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:163
 #: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/custom-taxonomies.php:162
-#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:225
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:223
 msgid "found."
 msgstr "見つかりました。"
 
 #: wp-ultimate-recipe-premium/core/helpers/recipe_post_type.php:44
-#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:226
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:224
 msgid "found in trash."
 msgstr "ゴミ箱に見つかりました。"
 
 #: wp-ultimate-recipe-premium/core/helpers/recipe_post_type.php:45
-#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:227
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:225
 msgid "Parent"
 msgstr "親"
 
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/basic-custom-taxonomies.php:109
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:110
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:152
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:112
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:154
 #: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/custom-taxonomies.php:153
 msgid "Popular"
 msgstr "人気"
 
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/basic-custom-taxonomies.php:110
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:111
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:153
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:113
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:155
 #: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/custom-taxonomies.php:154
+#: wp-ultimate-recipe-premium/premium/addons/export-xml/templates/before_importing.php:10
 msgid "All"
 msgstr "すべて"
 
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/basic-custom-taxonomies.php:112
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:113
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:155
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:115
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:157
 #: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/custom-taxonomies.php:156
 msgid "Update"
 msgstr "更新"
@@ -2381,8 +2432,8 @@ msgstr "更新"
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/basic-custom-taxonomies.php:114
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/templates/page_form.php:13
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/templates/page_list.php:15
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:115
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:157
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:117
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:159
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:131
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:474
 #: wp-ultimate-recipe-premium/premium/addons/custom-fields/templates/page_form.php:16
@@ -2394,29 +2445,29 @@ msgid "Name"
 msgstr "名前"
 
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/basic-custom-taxonomies.php:115
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:116
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:158
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:118
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:160
 #: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/custom-taxonomies.php:159
 msgid "Separate"
 msgstr "カンマで"
 
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/basic-custom-taxonomies.php:115
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:116
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:158
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:118
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:160
 #: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/custom-taxonomies.php:159
 msgid "with commas"
 msgstr "区切る"
 
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/basic-custom-taxonomies.php:116
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:117
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:159
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:119
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:161
 #: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/custom-taxonomies.php:160
 msgid "Add or remove"
 msgstr "追加/削除"
 
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/basic-custom-taxonomies.php:117
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:118
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:160
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:120
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:162
 #: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/custom-taxonomies.php:161
 msgid "Choose from the most used"
 msgstr "よく利用するものから選択"
@@ -2541,14 +2592,14 @@ msgstr "エクストラバージン"
 msgid "Custom"
 msgstr "カスタム"
 
-#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:209
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:207
 msgid "Menus"
 msgstr "メニュー"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:431
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:450
-#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:210
-#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:248
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:208
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:246
 msgid "Menu"
 msgstr "メニュー"
 
@@ -2577,11 +2628,11 @@ msgstr "ゲストと登録ユーザ"
 msgid "Registered users only"
 msgstr "登録ユーザのみ"
 
-#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:474
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:472
 msgid "Sorry, the site administrator has disabled user menus."
 msgstr "ユーザメニューは無効に設定されています。"
 
-#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:479
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:477
 msgid "Sorry, only registered users may create menus."
 msgstr "メニューの作成は登録ユーザ限定の機能です。"
 
@@ -2706,8 +2757,10 @@ msgstr "分量"
 msgid "(e.g. 2 people, 3 loafs, ...)"
 msgstr "（例：2人分、3個分など）"
 
-#: wp-ultimate-recipe-premium/core/addons/custom-templates/templates/layout/container.php:33
-#: wp-ultimate-recipe-premium/core/addons/custom-templates/templates/layout/container.php:34
+#: wp-ultimate-recipe-premium/core/addons/custom-templates/templates/layout/container.php:131
+#: wp-ultimate-recipe-premium/core/addons/custom-templates/templates/layout/container.php:132
+#: wp-ultimate-recipe-premium/core/addons/custom-templates/templates/recipe/cook_time.php:17
+#: wp-ultimate-recipe-premium/core/addons/custom-templates/templates/recipe/prep_time.php:17
 #: wp-ultimate-recipe-premium/core/helpers/migration/1_0_9_free_text_times.php:14
 #: wp-ultimate-recipe-premium/core/helpers/migration/1_0_9_free_text_times.php:17
 #: wp-ultimate-recipe-premium/core/helpers/migration/1_0_9_free_text_times.php:20
@@ -2743,7 +2796,7 @@ msgstr "材料の入力中に<strong>TABキー</strong>を使うと新しいフ�
 #: wp-ultimate-recipe-premium/core/addons/custom-templates/templates/general/title.php:49
 #: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:209
 #: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:18
-#: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:87
+#: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:88
 msgid "Instructions"
 msgstr "作り方"
 
@@ -2818,7 +2871,7 @@ msgstr "レシピ"
 
 #: wp-ultimate-recipe-premium/core/helpers/recipe_meta_box.php:60
 #: wp-ultimate-recipe-premium/core/helpers/recipe_post_type.php:21
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1563
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1583
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:35
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:70
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:252
@@ -2831,11 +2884,11 @@ msgstr "レシピ"
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/basic-custom-taxonomies.php:113
 #: wp-ultimate-recipe-premium/core/helpers/recipe_post_type.php:35
 #: wp-ultimate-recipe-premium/core/helpers/recipe_post_type.php:36
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:114
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:156
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:116
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:158
 #: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/custom-taxonomies.php:157
-#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:217
-#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:218
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:215
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:216
 msgid "Add New"
 msgstr "新規追加"
 
@@ -2843,20 +2896,20 @@ msgstr "新規追加"
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/templates/page_list.php:42
 #: wp-ultimate-recipe-premium/core/helpers/recipe_post_type.php:37
 #: wp-ultimate-recipe-premium/core/helpers/recipe_post_type.php:38
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:112
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:154
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:114
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:156
 #: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/custom-taxonomies.php:155
 #: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/templates/page_list.php:42
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:86
-#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:219
-#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:220
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:217
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:218
 msgid "Edit"
 msgstr "編集"
 
 #: wp-ultimate-recipe-premium/core/helpers/recipe_post_type.php:40
 #: wp-ultimate-recipe-premium/core/helpers/recipe_post_type.php:41
-#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:222
-#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:223
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:220
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:221
 msgid "View"
 msgstr "見る"
 
@@ -2867,7 +2920,7 @@ msgstr "まずレシピを作成してから左側の「レシピ」メニュー
 
 #: wp-ultimate-recipe-premium/core/addons/custom-templates/templates/general/title.php:47
 #: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:83
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:65
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:67
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:202
 #: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/manual_import.php:120
 #: wp-ultimate-recipe-premium/premium/addons/import-recipecard/templates/manual_import.php:34
@@ -2878,10 +2931,10 @@ msgid "Ingredients"
 msgstr "材料"
 
 #: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:107
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:65
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:67
 #: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/manual_import.php:126
 #: wp-ultimate-recipe-premium/premium/addons/import-recipecard/templates/manual_import.php:46
-#: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:79
+#: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:80
 #: wp-ultimate-recipe-premium/premium/addons/import-ziplist/templates/manual_import.php:50
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:61
 #: wp-ultimate-recipe-premium/premium/addons/user-menus/templates/user-menus.php:144
@@ -2889,88 +2942,88 @@ msgstr "材料"
 msgid "Ingredient"
 msgstr "材料"
 
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:66
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:68
 msgid "Courses"
 msgstr "コース"
 
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:66
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:68
 msgid "Course"
 msgstr "コース"
 
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:72
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:74
 msgid "Breakfast"
 msgstr "朝食"
 
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:73
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:75
 msgid "Appetizer"
 msgstr "前菜"
 
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:74
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:76
 msgid "Soup"
 msgstr "スープ"
 
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:75
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:77
 msgid "Main Course"
 msgstr "主菜"
 
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:76
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:78
 msgid "Side Dish"
 msgstr "副菜"
 
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:77
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:79
 msgid "Salad"
 msgstr "サラダ"
 
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:78
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:80
 msgid "Dessert"
 msgstr "デザート"
 
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:79
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:81
 msgid "Snack"
 msgstr "軽食"
 
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:80
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:82
 msgid "Drinks"
 msgstr "飲み物"
 
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:67
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:69
 msgid "Cuisines"
 msgstr "料理"
 
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:67
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:69
 msgid "Cuisine"
 msgstr "料理"
 
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:82
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:84
 msgid "French"
 msgstr "フランス料理"
 
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:83
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:85
 msgid "Italian"
 msgstr "イタリア料理"
 
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:84
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:86
 msgid "Mediterranean"
 msgstr "地中海料理"
 
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:85
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:87
 msgid "Indian"
 msgstr "インド料理"
 
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:86
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:88
 msgid "Chinese"
 msgstr "中華料理"
 
 #: wp-ultimate-recipe-premium/core/helpers/ingredient_units.php:394
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:87
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:89
 msgid "Japanese"
 msgstr "日本式"
 
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:88
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:90
 msgid "American"
 msgstr "アメリカ料理"
 
-#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:89
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:91
 msgid "Mexican"
 msgstr "メキシコ料理"
 

@@ -18,7 +18,7 @@ class WPURP_Assets {
         $this->add(
             array(
                 'name' => 'fraction',
-                'file' => '/vendor/fraction-js/fraction.js',
+                'file' => '/vendor/fraction-js/index.js',
                 'public' => true,
                 'admin' => true,
             ),
@@ -42,7 +42,7 @@ class WPURP_Assets {
                     'nonce' => wp_create_nonce( 'wpurp_print' ),
                     'custom_print_css' => WPUltimateRecipe::option( 'custom_code_print_css', '' ),
                     'coreUrl' => WPUltimateRecipe::get()->coreUrl,
-                    'addonUrl' => WPUltimateRecipe::is_addon_active( 'user-ratings' ) ? WPUltimateRecipe::addon( 'user-ratings' )->addonUrl : false,
+                    'premiumUrl' => WPUltimateRecipe::is_premium_active() ? WPUltimateRecipePremium::get()->premiumUrl : false,
                     'title' => WPUltimateRecipe::option( 'print_template_title_text', get_bloginfo('name') ),
                 ),
             ),

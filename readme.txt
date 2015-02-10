@@ -48,6 +48,7 @@ We also have a [WP Ultimate Recipe Premium version](http://www.wpultimaterecipe.
 *   **Import EasyRecipe and EasyRecipe Plus** recipes
 *   **Import ReciPress** recipes
 *   **Import Ziplist** recipes
+*   **Import from and to XML**
 *   Custom **ingredient links** (great for affiliate marketing)
 *   Let your **users rate your recipes**
 *   Advanced usage of **WP categories and tags**
@@ -95,6 +96,11 @@ Yes! We pride ourselves on offering awesome support and almost always answer sup
 10. WP Ultimate Recipe automatically formats your data so it can be picked up by Google Recipe Search and others. Great for SEO!
 
 == Changelog ==
+
+= 2.2 =
+* Improvement: Better handling of fractions in ingredient quantities
+* Improvement: Compatibility with Term Management Tool
+* Fix: Better schema.org compliance for metadata
 
 = 2.1.8 =
 * Feature: BigOven integration
@@ -362,6 +368,9 @@ Yes! We pride ourselves on offering awesome support and almost always answer sup
 * Very first version of this plugin
 
 == Upgrade notice ==
+
+= 2.2 =
+Update recommended to keep up with the best recipe plugin
 
 = 2.1.8 =
 Update when experiencing JS issues

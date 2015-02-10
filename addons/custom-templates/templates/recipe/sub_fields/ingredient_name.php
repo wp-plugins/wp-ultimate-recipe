@@ -18,7 +18,10 @@ class WPURP_Template_Recipe_Ingredient_Name extends WPURP_Template_Block {
 
         $output = $this->before_output();
 
-        $output .= '<span' . $this->style() . '>';
+        $plural = WPURP_Taxonomy_MetaData::get( 'ingredient', $taxonomy->slug, 'plural' );
+        $plural_data = $plural ? ' data-singular="' . esc_attr( $args['ingredient_name'] ) . '" data-plural="' . esc_attr( $plural ) . '"' : '';
+
+        $output .= '<span' . $this->style() . $plural_data . '>';
 
         $closing_tag = '';
         if ( !empty( $taxonomy ) && $ingredient_links != 'disabled' ) {
@@ -40,7 +43,7 @@ class WPURP_Template_Recipe_Ingredient_Name extends WPURP_Template_Block {
             }
         }
 
-        $output .= $args['ingredient_name'];
+        $output .= $plural && $args['ingredient_quantity_normalized'] != 1 ? $plural : $args['ingredient_name'];
         $output .= $closing_tag;
         $output .= '</span>';
 

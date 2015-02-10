@@ -42,6 +42,8 @@ class WPURP_Template_Recipe_Ingredient_Container extends WPURP_Template_Block {
             $sub_tag = 'div';
         }
 
+        $args['desktop'] = $args['desktop'] && $this->show_on_desktop;
+        $meta = $args['template_type'] == 'recipe' && $args['desktop'] ? ' itemprop="ingredients"' : '';
         $output = $this->before_output();
 
         ob_start();
@@ -83,14 +85,14 @@ class WPURP_Template_Recipe_Ingredient_Container extends WPURP_Template_Block {
                 }
             }
 
-            echo '<' . $sub_tag . ' class="wpurp-recipe-ingredient"' . $this->style( $styles ) . '>';
-            $child_args = array(
+            echo '<' . $sub_tag . ' class="wpurp-recipe-ingredient"' . $this->style( $styles ) . $meta . '>';
+            $child_args = array_merge( $args, array(
                 'ingredient_quantity' => $ingredient['amount'],
                 'ingredient_quantity_normalized' => $ingredient['amount_normalized'],
                 'ingredient_unit' => $ingredient['unit'],
                 'ingredient_name' => $ingredient['ingredient'],
                 'ingredient_notes' => $ingredient['notes'],
-            );
+            ) );
 
             $this->output_children( $recipe, 0, 0, $child_args );
             echo '</' . $sub_tag . '>';

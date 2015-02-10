@@ -21,10 +21,13 @@ class WPURP_Template_Recipe_Title extends WPURP_Template_Block {
     {
         if( !$this->output_block( $recipe, $args ) ) return '';
 
+        $args['desktop'] = $args['desktop'] && $this->show_on_desktop;
+        $meta = $args['template_type'] == 'recipe' && $args['desktop'] ? ' itemprop="name"' : '';
+
         $output = $this->before_output();
 
         $tag = isset( $this->tag ) ? $this->tag : 'span';
-        $output .= '<' . $tag . $this->style() . '>' . $recipe->title() . '</' . $tag . '>';
+        $output .= '<' . $tag . $this->style() . $meta .'>' . $recipe->title() . '</' . $tag . '>';
 
         return $this->after_output( $output, $recipe );
     }

@@ -28,9 +28,11 @@ class WPURP_Template_Recipe_Ingredients extends WPURP_Template_Block {
     {
         if( !$this->output_block( $recipe, $args ) ) return '';
 
+        $args['desktop'] = $args['desktop'] && $this->show_on_desktop;
+
         // Backwards compatibility
         if( empty( $this->children ) ) {
-            $output = $this->default_output( $recipe );
+            $output = $this->default_output( $recipe, $args );
         } else {
 
             $output = $this->before_output();
@@ -56,10 +58,10 @@ class WPURP_Template_Recipe_Ingredients extends WPURP_Template_Block {
         if( isset( $this->include_groups ) && !in_array( $group, $this->include_groups ) ) continue;
 
         echo '<div>';
-        $child_args = array(
+        $child_args = array_merge( $args, array(
             'ingredient_group' => $index,
             'ingredient_group_name' => $group,
-        );
+        ) );
 
         $this->output_children( $recipe, 0, 0, $child_args );
         echo '</div>';
@@ -74,7 +76,7 @@ class WPURP_Template_Recipe_Ingredients extends WPURP_Template_Block {
         return $this->after_output( $output, $recipe );
     }
 
-    private function default_output( $recipe )
+    private function default_output( $recipe, $args )
     {
         $this->add_style( 'margin', '0 23px 5px 23px' );
 
@@ -102,7 +104,7 @@ class WPURP_Template_Recipe_Ingredients extends WPURP_Template_Block {
         ob_start();
 ?>
 <ul data-servings="<?php echo $recipe->servings_normalized(); ?>"<?php echo $this->style(); ?>>
-    <?php echo $this->ingredients_list( $recipe ); ?>
+    <?php echo $this->ingredients_list( $recipe, $args ); ?>
 </ul>
 <?php
         $output .= ob_get_contents();
@@ -111,7 +113,7 @@ class WPURP_Template_Recipe_Ingredients extends WPURP_Template_Block {
         return $output;
     }
 
-    private function ingredients_list( $recipe )
+    private function ingredients_list( $recipe, $args )
     {
         $out = '';
         $previous_group = '';
@@ -132,12 +134,17 @@ class WPURP_Template_Recipe_Ingredients extends WPURP_Template_Block {
             $fraction = WPUltimateRecipe::option('recipe_adjustable_servings_fractions', '0') == '1' ? true : false;
             $fraction = strpos($ingredient['amount'], '/') === false ? $fraction : true;
 
-            $out .= '<li class="wpurp-recipe-ingredient"' . $this->style(array('li','li-ingredient')) . '>';
+            $meta = $args['template_type'] == 'recipe' && $args['desktop'] ? ' itemprop="ingredients"' : '';
+
+            $out .= '<li class="wpurp-recipe-ingredient"' . $this->style(array('li','li-ingredient')) . $meta . '>';
             $out .= '<span class="recipe-ingredient-quantity-unit"' . $this->style('quantity-unit') . '><span class="wpurp-recipe-ingredient-quantity recipe-ingredient-quantity" data-normalized="'.$ingredient['amount_normalized'].'" data-fraction="'.$fraction.'" data-original="'.$ingredient['amount'].'"' . $this->style('quantity') . '>'.$ingredient['amount'].'</span> <span class="wpurp-recipe-ingredient-unit recipe-ingredient-unit" data-original="'.$ingredient['unit'].'"' . $this->style('unit') . '>'.$ingredient['unit'].'</span></span>';
 
             $taxonomy = get_term_by('name', $ingredient['ingredient'], 'ingredient');
 
-            $out .= ' <span class="wpurp-recipe-ingredient-name recipe-ingredient-name"' . $this->style('name') . '>';
+            $plural = WPURP_Taxonomy_MetaData::get( 'ingredient', $taxonomy->slug, 'plural' );
+            $plural_data = $plural ? ' data-singular="' . esc_attr( $ingredient['ingredient'] ) . '" data-plural="' . esc_attr( $plural ) . '"' : '';
+
+            $out .= ' <span class="wpurp-recipe-ingredient-name recipe-ingredient-name"' . $this->style('name') . $plural_data . '>';
 
             $ingredient_links = WPUltimateRecipe::option('recipe_ingredient_links', 'archive_custom');
 
@@ -161,7 +168,7 @@ class WPURP_Template_Recipe_Ingredients extends WPURP_Template_Block {
                 }
             }
 
-            $out .= $ingredient['ingredient'];
+            $out .= $plural && $ingredient['amount_normalized'] != 1 ? $plural : $ingredient['ingredient'];
             $out .= $closing_tag;
             $out .= '</span>';
 

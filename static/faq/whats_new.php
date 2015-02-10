@@ -7,31 +7,34 @@
 
     <div class="feature-section col two-col">
         <div class="col-1">
-            <h3>WP Ultimate Recipe 2.1.8</h3>
+            <h3>WP Ultimate Recipe 2.2</h3>
             <strong>New</strong>
             <ul>
-                <li>Feature: BigOven integration</li>
-                <li>Feature: Food Fanatic integration</li>
-                <li>Feature: Support for YARPP</li>
-
+                <li>Improvement: Better handling of fractions in ingredient quantities</li>
+                <li>Improvement: Compatibility with Term Management Tool</li>
             </ul>
             <strong>Update</strong>
             <ul>
-                <li>Fix: JS error when using the minified assets</li>
-                <li>Fix: PHP Warning on first time activation</li>
-                <li>Fix: White screen on first time activation</li>
-                <li>Fix: Template compatibility with new Twenty Fifteen theme</li>
+                <li>Better schema.org compliance for metadata</li>
             </ul>
         </div>
         <div class="col-2 last-feature">
-            <h3>WP Ultimate Recipe Premium 2.1.8</h3>
+            <h3>WP Ultimate Recipe Premium 2.2</h3>
             <strong>New</strong>
             <ul>
-                <li>Feature: Import from RecipeCard by Yumprint</li>
+                <li>Feature: Define plural form of ingredients</li>
+                <li>Feature: Export your recipes to XML</li>
+                <li>Feature: Import recipes from XML</li>
+                <li>Improvement: Nutrition Label block in Template Editor</li>
+                <li>Improvement: Nutrition values as percentage of daily value available in Template Editor</li>
+                <li>Improvement: Add instruction and ingredient groups in “Add new from text"</li>
             </ul>
             <strong>Update</strong>
             <ul>
-                <li>Fix: Template Editor preview problem with default permalinks</li>
+                <li>Fix: Show delete button in User Menus on mobile devices</li>
+                <li>Fix: Problem with unchecking “Hide ingredient link” option</li>
+                <li>Fix: Metadata not shown in Recipe Grid or print version</li>
+                <li>Fix: Don’t show nutritional metadata group when empty</li>
             </ul>
         </div>
     </div>
@@ -40,6 +43,22 @@
 
     <div>
         <h3>Previous Versions</h3>
+
+        <h4>Premium Plugin 2.1.8</h4>
+        <ul>
+            <li>Feature: Import from RecipeCard by Yumprint</li>
+            <li>Fix: Template Editor preview problem with default permalinks</li>
+        </ul>
+        <h4>Core Plugin 2.1.8</h4>
+        <ul>
+            <li>Feature: BigOven integration</li>
+            <li>Feature: Food Fanatic integration</li>
+            <li>Feature: Support for YARPP</li>
+            <li>Fix: JS error when using the minified assets</li>
+            <li>Fix: PHP Warning on first time activation</li>
+            <li>Fix: White screen on first time activation</li>
+            <li>Fix: Template compatibility with new Twenty Fifteen theme</li>
+        </ul>
 
         <h4>Premium Plugin 2.1.6</h4>
         <ul>

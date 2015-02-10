@@ -1533,6 +1533,14 @@ $admin_menu = array(
                                 'function' => 'wpurp_admin_import_ziplist',
                             ),
                         ),
+                        array(
+                            'type' => 'html',
+                            'name' => 'import_recipes_xml' . $sitehash,
+                            'binding' => array(
+                                'field'    => '',
+                                'function' => 'wpurp_admin_import_xml',
+                            ),
+                        ),
                     ),
                 ),
             ),
@@ -1545,10 +1553,22 @@ $admin_menu = array(
             'controls' => array(
                 array(
                     'type' => 'notebox',
-                    'name' => 'export_coming_soon',
-                    'label' => __('Coming Soon', 'wp-ultimate-recipe'),
-                    'description' => __('This feature is coming soon for ', 'wp-ultimate-recipe') . ' <a href="http://www.wpultimaterecipeplugin.com/premium/" target="_blank">WP Ultimate Recipe Premium</a></strong>.',
-                    'status' => 'info',
+                    'name' => 'export_recipes_premium_not_installed',
+                    'label' => 'WP Ultimate Recipe Premium',
+                    'description' => __('These features are only available in ', 'wp-ultimate-recipe') . ' <a href="http://www.wpultimaterecipeplugin.com/premium/" target="_blank">WP Ultimate Recipe Premium</a></strong>.',
+                    'status' => 'warning',
+                    'dependency' => array(
+                        'field' => '',
+                        'function' => 'wpurp_admin_premium_not_installed',
+                    ),
+                ),
+                array(
+                    'type' => 'html',
+                    'name' => 'export_recipes_xml' . $sitehash,
+                    'binding' => array(
+                        'field'    => '',
+                        'function' => 'wpurp_admin_export_xml',
+                    ),
                 ),
             ),
         ),

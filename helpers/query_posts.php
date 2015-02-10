@@ -32,7 +32,7 @@ class WPURP_Query_Posts {
 
             // Querying specific page (not set as home/posts page) or attachment
             if( !$query->is_home() ) {
-                if( is_page() || is_attachment() ) {
+                if( $query->is_page() || $query->is_attachment() ) {
                     return;
                 }
             }

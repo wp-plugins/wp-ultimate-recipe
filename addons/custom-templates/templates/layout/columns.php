@@ -48,11 +48,13 @@ class WPURP_Template_Columns extends WPURP_Template_Block {
     {
         if( !$this->output_block( $recipe, $args ) ) return '';
 
+
+        $show_on_desktop = $args['desktop'] && $this->show_on_desktop;
         $output = $this->before_output();
 
         ob_start();
 ?>
-<?php if( $this->responsive ) { ?>
+<?php if( $this->responsive ) { $args['desktop'] = false; ?>
 <div class="wpurp-responsive-mobile">
     <div<?php echo $this->style(); ?>>
         <?php if( $this->mobile_reverse ) { ?>
@@ -76,6 +78,7 @@ class WPURP_Template_Columns extends WPURP_Template_Block {
 </div>
 <div class="wpurp-responsive-desktop">
 <?php } ?>
+<?php $args['desktop'] = $show_on_desktop; ?>
 <table<?php echo $this->style(); ?>>
     <tbody>
     <tr>

@@ -21,8 +21,15 @@ class WPURP_Notices {
         }
 
         if( $notices = get_option( 'wpurp_deferred_admin_notices' ) ) {
+            $i = 0;
             foreach( $notices as $notice ) {
                 echo '<div class="updated"><p>'.$notice.'</p></div>';
+                $i++;
+
+                if( $i > 3 ) {
+                    echo '<div class="updated"><p>' . (count( $notices ) - 4) . ' ' .  __( 'other notices ignored', 'wp-ultimate-recipe' ) .'</p></div>';
+                    break;
+                }
             }
 
             delete_option('wpurp_deferred_admin_notices');
