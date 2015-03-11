@@ -1,19 +1,15 @@
 <?php
-
+// Block needed for backwards compatibility
 class WPURP_Template_Recipe_Sharing extends WPURP_Template_Block {
 
     public $editorField = 'recipeSharing';
 
+    public $columns;
+    public $widths;
+
     public function __construct( $type = 'recipe-sharing' )
     {
         parent::__construct( $type );
-
-        $this->add_style( 'list-style', 'none' );
-
-        $this->add_style( 'display', 'inline-block', 'li');
-        $this->add_style( 'width', '25%', 'li');
-        $this->add_style( 'text-align', 'center', 'li');
-        $this->add_style( 'vertical-align', 'top', 'li');
     }
 
     public function output( $recipe, $args = array() )
@@ -21,6 +17,21 @@ class WPURP_Template_Recipe_Sharing extends WPURP_Template_Block {
         if( !$this->output_block( $recipe, $args ) ) return '';
 
         $output = $this->before_output();
+
+        // Backwards compatibility
+        $this->add_style( 'text-align', 'center' );
+        $this->add_style( 'text-align', 'center', 'td' );
+
+        $this->add_style( 'vertical-align', 'top', 'td' );
+
+        $this->columns = 4;
+        $widths = array( '25%', '25%', '25%', 'auto' );
+
+        $this->widths = $widths;
+        foreach( $widths as $column => $width )
+        {
+            $this->add_style( 'width', $width, 'col-' . $column );
+        }
 
         if( WPUltimateRecipe::is_premium_active() ) {
             $twitter_text = WPUltimateRecipe::option('recipe_sharing_twitter', '%title% - Powered by @WPUltimRecipe');
@@ -35,20 +46,25 @@ class WPURP_Template_Recipe_Sharing extends WPURP_Template_Block {
 
         ob_start();
 ?>
-<ul<?php echo $this->style(); ?>>
-    <li<?php echo $this->style('li'); ?>>
-        <a href="http://twitter.com/share" class="socialite twitter-share" data-text="<?php echo $twitter_text; ?>" data-url="<?php echo $recipe->link(); ?>" data-count="vertical" rel="nofollow" target="_blank"><span class="vhidden">Twitter</span></a>
-    </li><li<?php echo $this->style('li'); ?>>
-        <a href="http://www.facebook.com/sharer.php?u=<?php echo $recipe->link(); ?>&t=Socialite.js" class="socialite facebook-like" data-href="<?php echo $recipe->link(); ?>" data-send="false" data-layout="box_count" data-width="60" data-show-faces="false" rel="nofollow" target="_blank"><span class="vhidden">Facebook</span></a>
-    </li><li<?php echo $this->style('li'); ?>>
-        <a href="https://plus.google.com/share?url=<?php echo $recipe->link(); ?>" class="socialite googleplus-one" data-size="tall" data-href="<?php echo $recipe->link(); ?>" rel="nofollow" target="_blank"><span class="vhidden">Google+</span></a>
-    </li><?php
-    if( !is_null( $recipe->image_url( 'full' ) ) ) {
-        ?><li<?php echo $this->style('li'); ?>>
-        <a href="//www.pinterest.com/pin/create/button/?url=<?php echo $recipe->link(); ?>&media=<?php echo $recipe->image_url( 'full' ); ?>&description=<?php echo $pinterest_text; ?>" class="socialite pinterest-pinit" data-pin-log="button_pinit_bookmarklet" data-pin-do="buttonPin" data-pin-config="above" data-pin-height="28" rel="nofollow" target="_blank"><span class="vhidden">Pinterest</span></a>
-        </li>
-    <?php } ?>
-</ul>
+<table<?php echo $this->style(); ?>>
+    <tbody>
+    <tr>
+        <td<?php echo $this->style( array( 'td', 'col-0' ) ); ?>>
+            <div data-url="<?php echo $recipe->link(); ?>" data-text="<?php echo esc_attr( $twitter_text ); ?>" data-layout="vertical" class="wpurp-twitter"></div>
+        </td>
+        <td<?php echo $this->style( array( 'td', 'col-1' ) ); ?>>
+            <div data-url="<?php echo $recipe->link(); ?>" data-layout="box_count" class="wpurp-facebook"></div>
+        </td>
+        <td<?php echo $this->style( array( 'td', 'col-2' ) ); ?>>
+            <div data-url="<?php echo $recipe->link(); ?>" data-layout="tall" data-annotation="bubble" class="wpurp-google"></div>
+        </td>
+        <td<?php echo $this->style( array( 'td', 'col-3' ) ); ?>><?php
+        if( !is_null( $recipe->image_url( 'full' ) ) ) { ?>
+            <div data-url="<?php echo $recipe->link(); ?>" data-media="<?php echo $recipe->image_url( 'full' ); ?>" data-description="<?php echo esc_attr( $pinterest_text ); ?>" data-layout="above" class="wpurp-pinterest"></div>
+        <?php } else { ?>&nbsp;<?php } ?></td>
+    </tr>
+    </tbody>
+</table>
 <?php
         $output .= ob_get_contents();
         ob_end_clean();

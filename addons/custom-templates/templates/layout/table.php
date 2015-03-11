@@ -58,6 +58,8 @@ class WPURP_Template_Table extends WPURP_Template_Block {
     {
         if( !$this->output_block( $recipe, $args ) ) return '';
 
+        $args['max_width'] = $this->max_width && $args['max_width'] > $this->max_width ? $this->max_width : $args['max_width'];
+        $args['max_height'] = $this->max_height && $args['max_height'] > $this->max_height ? $this->max_height : $args['max_height'];
         $args['desktop'] = $args['desktop'] && $this->show_on_desktop;
         $output = $this->before_output();
 

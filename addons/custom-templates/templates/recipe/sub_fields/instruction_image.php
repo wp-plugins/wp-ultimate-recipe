@@ -96,6 +96,15 @@ class WPURP_Template_Recipe_Instruction_Image extends WPURP_Template_Block {
 
                 }
             }
+        } else if( $this->thumbnail == 'full' ) {
+            // Get better thumbnail size based on max possible block size
+            $correct_thumb = array(
+                $args['max_width'],
+                $args['max_height']
+            );
+
+            $thumb = wp_get_attachment_image_src( $args['instruction_image'], $correct_thumb );
+            $image_url = $thumb[0];
         }
 
         $full_img = wp_get_attachment_image_src( $args['instruction_image'], 'full' );

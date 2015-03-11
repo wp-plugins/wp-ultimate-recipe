@@ -1069,6 +1069,13 @@ $admin_menu = array(
                     'fields' => array(
                         array(
                             'type' => 'toggle',
+                            'name' => 'recipe_tags_user_submissions_multiselect',
+                            'label' => __('Allow Multiselect', 'wp-ultimate-recipe'),
+                            'description' => __( 'Allow users to select multiple terms per category.', 'wp-ultimate-recipe' ),
+                            'default' => '1',
+                        ),
+                        array(
+                            'type' => 'toggle',
                             'name' => 'recipe_tags_user_submissions_categories',
                             'label' => __('User Submitted Categories', 'wp-ultimate-recipe'),
                             'description' => __( 'Allow users to assign categories when submitting recipes.', 'wp-ultimate-recipe' ),
@@ -1465,6 +1472,39 @@ $admin_menu = array(
                 ),
             ),
         ),
+//=-=-=-=-=-=-= NUTRITIONAL INFORMATION =-=-=-=-=-=-=
+        array(
+            'title' => __('Nutritional Information', 'wp-ultimate-recipe'),
+            'name' => 'nutritional_information',
+            'icon' => 'font-awesome:fa-tasks',
+            'controls' => array(
+                array(
+                    'type' => 'section',
+                    'title' => __('General', 'wp-ultimate-recipe'),
+                    'name' => 'section_nutritional_information_general',
+                    'fields' => array(
+                        array(
+                            'type' => 'notebox',
+                            'name' => 'nutritional_information_premium_not_installed',
+                            'label' => 'WP Ultimate Recipe Premium',
+                            'description' => __('These features are only available in ', 'wp-ultimate-recipe') . ' <a href="http://www.wpultimaterecipeplugin.com/premium/" target="_blank">WP Ultimate Recipe Premium</a></strong>.',
+                            'status' => 'warning',
+                            'dependency' => array(
+                                'field' => '',
+                                'function' => 'wpurp_admin_premium_not_installed',
+                            ),
+                        ),
+                        array(
+                            'type' => 'toggle',
+                            'name' => 'nutritional_information_notice',
+                            'label' => __('Show Notice', 'wp-ultimate-recipe'),
+                            'description' => __( 'Show notice to update Nutritional Information after updating a recipe.', 'wp-ultimate-recipe' ),
+                            'default' => '1',
+                        ),
+                    ),
+                ),
+            ),
+        ),
 //=-=-=-=-=-=-= IMPORT RECIPES =-=-=-=-=-=-=
         array(
             'title' => __('Import Recipes', 'wp-ultimate-recipe'),
@@ -1610,6 +1650,13 @@ $admin_menu = array(
                             'name' => 'remove_recipe_slug',
                             'label' => __('Remove recipe slug', 'wp-ultimate-recipe'),
                             'description' => __( 'Make sure your slugs are unique across posts, pages and recipes! Your archive page will still be available.', 'wp-ultimate-recipe' ),
+                            'default' => '0',
+                        ),
+                        array(
+                            'type' => 'toggle',
+                            'name' => 'output_yandex_metadata',
+                            'label' => __('Use Yandex metadata', 'wp-ultimate-recipe'),
+                            'description' => __( 'Add a resultPhoto meta field for Yandex.', 'wp-ultimate-recipe' ),
                             'default' => '0',
                         ),
                     ),

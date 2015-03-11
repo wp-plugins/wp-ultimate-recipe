@@ -3,12 +3,12 @@
 Plugin Name: WP Ultimate Recipe
 Plugin URI: http://www.wpultimaterecipe.com
 Description: Everything a Food Blog needs. Beautiful SEO friendly recipes, print versions, visitor interaction, ...
-Version: 2.2
+Version: 2.2.1
 Author: Bootstrapped Ventures
 Author URI: http://bootstrapped.ventures
 License: GPLv2
 */
-define( 'WPURP_VERSION', '2.2' );
+define( 'WPURP_VERSION', '2.2.1' );
 
 class WPUltimateRecipe {
 
@@ -29,6 +29,18 @@ class WPUltimateRecipe {
         }
 
         return self::$instance;
+    }
+
+    /**
+     * Should we load the entire plugin or not?
+     */
+    public static function minimal_mode()
+    {
+        // No minimal mode in backend
+        if( is_admin() ) return false;
+
+        $minimal_mode = apply_filters( 'wpurp_minimal_mode', false, $_SERVER['REQUEST_URI'] );
+        return $minimal_mode;
     }
 
     /**
@@ -152,11 +164,13 @@ class WPUltimateRecipe {
         $this->include_helper( 'addons/premium_addon' );
         $this->include_helper( 'models/recipe' );
 
-        // Load core addons
-        $this->helper( 'addon_loader' )->load_addons( $this->coreDir . '/addons' );
+        if( !WPUltimateRecipe::minimal_mode() ) {
+            // Load core addons
+            $this->helper( 'addon_loader' )->load_addons( $this->coreDir . '/addons' );
 
-        // Load default assets
-        $this->helper( 'assets' );
+            // Load default assets
+            $this->helper( 'assets' );
+        }
     }
 
     /**

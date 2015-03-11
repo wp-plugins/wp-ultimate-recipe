@@ -32,6 +32,7 @@ class WPURP_Migration {
         if( $migrate_version < '2.0.5' ) require_once( WPUltimateRecipe::get()->coreDir . '/helpers/migration/2_0_5_recipe_grid_settings.php');
         if( $migrate_version < '2.0.8' ) require_once( WPUltimateRecipe::get()->coreDir . '/helpers/migration/2_0_8_recipe_titles.php');
         if( $migrate_version < '2.1.4' ) require_once( WPUltimateRecipe::get()->coreDir . '/helpers/migration/2_1_4_servings_problem.php');
+        if( $migrate_version < '2.2.1' ) require_once( WPUltimateRecipe::get()->coreDir . '/helpers/migration/2_2_1_custom_templates.php');
 
         // Special migrations
         if( $migrate_special == 'RecipesToPosts' ) require_once( WPUltimateRecipe::get()->coreDir . '/helpers/migration/special_recipes_to_posts.php');
@@ -39,7 +40,6 @@ class WPURP_Migration {
 
         // Each version update once
         if( $migrate_version < WPURP_VERSION ) {
-            WPUltimateRecipe::addon( 'custom-templates' )->backup(); // Backup current templates
             WPUltimateRecipe::addon( 'custom-templates' )->default_templates( true ); // Reset default templates
 
             update_option( 'wpurp_migrate_version', WPURP_VERSION );

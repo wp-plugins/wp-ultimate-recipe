@@ -19,7 +19,14 @@ class WPURP_Template_Container extends WPURP_Template_Block {
     {
         if( !$this->output_block( $recipe, $args ) ) return '';
 
+        // Default arguments
         $args['desktop'] = true;
+        $args['max_width'] = 9999;
+        $args['max_height'] = 9999;
+
+        $args['max_width'] = $this->max_width && $args['max_width'] > $this->max_width ? $this->max_width : $args['max_width'];
+        $args['max_height'] = $this->max_height && $args['max_height'] > $this->max_height ? $this->max_height : $args['max_height'];
+
         $meta = $args['template_type'] == 'recipe' || $args['template_type'] == 'metadata' ? ' itemscope itemtype="http://schema.org/Recipe"' : '';
 
         $output = $this->before_output();
@@ -32,6 +39,10 @@ class WPURP_Template_Container extends WPURP_Template_Block {
     <meta itemprop="author" content="<?php echo esc_attr( $recipe->author() ); ?>">
     <meta itemprop="datePublished" content="<?php echo esc_attr( $recipe->date() ); ?>">
     <meta itemprop="recipeYield" content="<?php echo esc_attr( $recipe->servings() ) . ' ' . esc_attr( $recipe->servings_type() ); ?>">
+
+    <?php if( WPUltimateRecipe::option( 'output_yandex_metadata', '0' ) == '1' ) { ?>
+    <meta itemprop="resultPhoto" content="<?php echo esc_attr( $recipe->image_url( 'full' ) ); ?>">
+    <?php } ?>
 
     <?php
     // Ratings metadata

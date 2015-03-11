@@ -14,6 +14,10 @@ class WPURP_Template_Block {
     public $column;
     public $order;
 
+    // Max block size
+    public $max_width;
+    public $max_height;
+
     // Responsive condition
     protected $show_on_desktop = true;
     protected $show_on_mobile = true;
@@ -184,6 +188,14 @@ class WPURP_Template_Block {
                 }
             }
         }
+
+        /*
+         * Max block size
+         */
+        if( $this->present( $block, 'maxWidth' ) && $block->maxWidthType == 'px' )      $this->max_width = intval( $block->maxWidth );
+        if( $this->present( $block, 'maxHeight' ) && $block->maxHeightType == 'px' )    $this->max_height = intval( $block->maxHeight );
+        if( $this->present( $block, 'width' ) && $block->widthType == 'px' )            $this->max_width = intval( $block->width );
+        if( $this->present( $block, 'height' ) && $block->heightType == 'px' )          $this->max_height = intval( $block->height );
     }
 
     protected function present( $block, $field )

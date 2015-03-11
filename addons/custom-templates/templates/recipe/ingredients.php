@@ -28,6 +28,8 @@ class WPURP_Template_Recipe_Ingredients extends WPURP_Template_Block {
     {
         if( !$this->output_block( $recipe, $args ) ) return '';
 
+        $args['max_width'] = $this->max_width && $args['max_width'] > $this->max_width ? $this->max_width : $args['max_width'];
+        $args['max_height'] = $this->max_height && $args['max_height'] > $this->max_height ? $this->max_height : $args['max_height'];
         $args['desktop'] = $args['desktop'] && $this->show_on_desktop;
 
         // Backwards compatibility
@@ -142,6 +144,7 @@ class WPURP_Template_Recipe_Ingredients extends WPURP_Template_Block {
             $taxonomy = get_term_by('name', $ingredient['ingredient'], 'ingredient');
 
             $plural = WPURP_Taxonomy_MetaData::get( 'ingredient', $taxonomy->slug, 'plural' );
+            $plural = is_array( $plural ) ? false : $plural;
             $plural_data = $plural ? ' data-singular="' . esc_attr( $ingredient['ingredient'] ) . '" data-plural="' . esc_attr( $plural ) . '"' : '';
 
             $out .= ' <span class="wpurp-recipe-ingredient-name recipe-ingredient-name"' . $this->style('name') . $plural_data . '>';

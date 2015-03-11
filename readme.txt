@@ -3,7 +3,7 @@ Contributors: BrechtVds
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QG7KZMGFU325Y
 Tags: recipe, ingredients, food, nutrition, nutritional, cooking, seo, schema.org
 Requires at least: 3.5
-Tested up to: 4.1
+Tested up to: 4.1.1
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -54,6 +54,7 @@ We also have a [WP Ultimate Recipe Premium version](http://www.wpultimaterecipe.
 *   Advanced usage of **WP categories and tags**
 *   Dynamically switch between **Imperial and Metric units**
 *   A selection of **Premium Widgets**
+*   More **share buttons** available
 
 Feel free to contact us if any features are missing.
 You can find more information at [WPUltimateRecipe.com](http://www.wpultimaterecipe.com/)
@@ -96,6 +97,13 @@ Yes! We pride ourselves on offering awesome support and almost always answer sup
 10. WP Ultimate Recipe automatically formats your data so it can be picked up by Google Recipe Search and others. Great for SEO!
 
 == Changelog ==
+
+= 2.2.1 =
+* Feature: Advanced ability to use plugin in minimal mode on certain pages
+* Improvement: Better thumbnails for instruction images
+* Improvement: Possibility to add Yandex resultPhoto meta field
+* Improvement: Memory use of recipe templates
+* Fix: Load Google Fonts over https when necessary
 
 = 2.2 =
 * Improvement: Better handling of fractions in ingredient quantities
@@ -368,6 +376,9 @@ Yes! We pride ourselves on offering awesome support and almost always answer sup
 * Very first version of this plugin
 
 == Upgrade notice ==
+
+= 2.2.1 =
+Update to improve memory usage of recipe templates
 
 = 2.2 =
 Update recommended to keep up with the best recipe plugin

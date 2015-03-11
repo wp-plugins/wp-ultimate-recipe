@@ -19,6 +19,7 @@ class WPURP_Template_Recipe_Ingredient_Name extends WPURP_Template_Block {
         $output = $this->before_output();
 
         $plural = WPURP_Taxonomy_MetaData::get( 'ingredient', $taxonomy->slug, 'plural' );
+        $plural = is_array( $plural ) ? false : $plural;
         $plural_data = $plural ? ' data-singular="' . esc_attr( $args['ingredient_name'] ) . '" data-plural="' . esc_attr( $plural ) . '"' : '';
 
         $output .= '<span' . $this->style() . $plural_data . '>';

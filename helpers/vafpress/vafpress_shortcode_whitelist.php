@@ -2,12 +2,12 @@
 function wpurp_shortcode_generator_templates()
 {
     $template_list = array();
-    $templates = WPUltimateRecipe::addon( 'custom-templates' )->get_templates();
+    $templates = WPUltimateRecipe::addon( 'custom-templates' )->get_mapping();
 
     foreach ( $templates as $index => $template ) {
         $template_list[] = array(
             'value' => $index,
-            'label' => $template['name'],
+            'label' => $template,
         );
     }
 

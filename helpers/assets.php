@@ -58,17 +58,12 @@ class WPURP_Assets {
                 ),
             ),
             array(
-                'name' => 'socialite',
+                'name' => 'sharrre',
                 'setting' => array( 'recipe_sharing_enable', '1' ),
-                'file' => '/vendor/socialite/socialite.js',
-                'public' => true,
-            ),
-            array(
-                'setting' => array( 'recipe_sharing_enable', '1' ),
-                'file' => '/vendor/socialite/extensions/socialite.pinterest.js',
+                'file' => '/vendor/sharrre/jquery.sharrre.js',
                 'public' => true,
                 'deps' => array(
-                    'socialite',
+                    'jquery',
                 ),
             ),
             array(
@@ -77,6 +72,7 @@ class WPURP_Assets {
                 'public' => true,
                 'deps' => array(
                     'jquery',
+                    'sharrre',
                 ),
                 'data' => array(
                     'name' => 'wpurp_sharing_buttons',

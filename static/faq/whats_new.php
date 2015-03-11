@@ -7,34 +7,36 @@
 
     <div class="feature-section col two-col">
         <div class="col-1">
-            <h3>WP Ultimate Recipe 2.2</h3>
+            <h3>WP Ultimate Recipe 2.2.1</h3>
             <strong>New</strong>
             <ul>
-                <li>Improvement: Better handling of fractions in ingredient quantities</li>
-                <li>Improvement: Compatibility with Term Management Tool</li>
+                <li>Feature: Advanced ability to use plugin in minimal mode on certain pages</li>
+                <li>Improvement: Better thumbnails for instruction images</li>
+                <li>Improvement: Possibility to add Yandex resultPhoto meta field</li>
+                <li>Improvement: Memory use of recipe templates</li>
             </ul>
             <strong>Update</strong>
             <ul>
-                <li>Better schema.org compliance for metadata</li>
+                <li>Fix: Load Google Fonts over https when necessary</li>
             </ul>
         </div>
         <div class="col-2 last-feature">
-            <h3>WP Ultimate Recipe Premium 2.2</h3>
+            <h3>WP Ultimate Recipe Premium 2.2.1</h3>
             <strong>New</strong>
             <ul>
-                <li>Feature: Define plural form of ingredients</li>
-                <li>Feature: Export your recipes to XML</li>
-                <li>Feature: Import recipes from XML</li>
-                <li>Improvement: Nutrition Label block in Template Editor</li>
-                <li>Improvement: Nutrition values as percentage of daily value available in Template Editor</li>
-                <li>Improvement: Add instruction and ingredient groups in “Add new from text"</li>
+                <li>Feature: Separate share buttons in Template Editor</li>
+                <li>Feature: New share buttons: Facebook Share, StumbleUpon, LinkedIn</li>
+                <li>Feature: Multiselect terms in User Submission form</li>
+                <li>Improvement: Show ungrouped ingredients first on Ingredient Groups page</li>
+                <li>Improvement: Recipe Grid filters follow order used in shortcode</li>
+                <li>Improvement: Use "pending review" instead of "draft" for user submitted recipes</li>
+                <li>Improvement: New default User Menu name</li>
+                <li>Improvement: Setting to disable Nutritional Information notice</li>
+                <li>Improvement: Better way of saving custom recipe templates</li>
             </ul>
             <strong>Update</strong>
             <ul>
-                <li>Fix: Show delete button in User Menus on mobile devices</li>
-                <li>Fix: Problem with unchecking “Hide ingredient link” option</li>
-                <li>Fix: Metadata not shown in Recipe Grid or print version</li>
-                <li>Fix: Don’t show nutritional metadata group when empty</li>
+                <li>Fix: Order of terms in User Submission form</li>
             </ul>
         </div>
     </div>
@@ -43,6 +45,26 @@
 
     <div>
         <h3>Previous Versions</h3>
+
+        <h4>Premium Plugin 2.2</h4>
+        <ul>
+            <li>Feature: Define plural form of ingredients</li>
+            <li>Feature: Export your recipes to XML</li>
+            <li>Feature: Import recipes from XML</li>
+            <li>Improvement: Nutrition Label block in Template Editor</li>
+            <li>Improvement: Nutrition values as percentage of daily value available in Template Editor</li>
+            <li>Improvement: Add instruction and ingredient groups in “Add new from text"</li>
+            <li>Fix: Show delete button in User Menus on mobile devices</li>
+            <li>Fix: Problem with unchecking “Hide ingredient link” option</li>
+            <li>Fix: Metadata not shown in Recipe Grid or print version</li>
+            <li>Fix: Don’t show nutritional metadata group when empty</li>
+        </ul>
+        <h4>Core Plugin 2.2</h4>
+        <ul>
+            <li>Improvement: Better handling of fractions in ingredient quantities</li>
+            <li>Improvement: Compatibility with Term Management Tool</li>
+            <li>Better schema.org compliance for metadata</li>
+        </ul>
 
         <h4>Premium Plugin 2.1.8</h4>
         <ul>
