@@ -2,6 +2,7 @@ jQuery(document).ready(function() {
 
     jQuery(document).on('click', '.wpurp-recipe-print-button', function(e) {
         e.preventDefault();
+        e.stopPropagation();
 
         var recipeId = jQuery(this).data('recipe-id');
         var recipe = jQuery(this).parents('.wpurp-container');

@@ -78,6 +78,10 @@ class WPURP_Recipe {
                     return isset( $val ) && trim( $val ) != '' && $val != '0';
                 }
 
+            case 'recipe_rating_author':
+                $val = $this->meta( 'recipe_rating' );
+                return isset( $val ) && trim( $val ) != '' && $val != '0';
+
             case 'recipe_nutrition':
                 $val = $this->nutritional( $nutrition_field );
                 return isset( $val ) && trim( $val ) != '';
@@ -105,7 +109,7 @@ class WPURP_Recipe {
     public function output( $type = 'recipe', $template = 'default' )
     {
         $template = WPUltimateRecipe::get()->template( $type, $template );
-        $template->output( $this );
+        $template->output( $this, $type );
     }
 
     public function output_string( $type = 'recipe', $template = 'default' )

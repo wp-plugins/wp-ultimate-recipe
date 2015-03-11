@@ -191,14 +191,17 @@ class VP_ShortcodeGenerator
 					<?php endforeach; ?>
 					</ul>
 					<div class="vp-sc-main">
-						<?php foreach ($this->template as $title => $menu): ?>
+						<?php
+						$id_counter = 1;
+						foreach ($this->template as $title => $menu):
+						?>
 							<?php if (reset($this->template) == $menu) : ?>
 							<ul class="current vp-sc-sub-menu-list vp-sc-sub-menu-<?php echo str_replace(' ', '_', $title); ?>">
 							<?php else : ?>
 							<ul class="vp-hide vp-sc-sub-menu-list vp-sc-sub-menu-<?php echo str_replace(' ', '_', $title); ?>">
 							<?php endif; ?>
 							<?php foreach ($menu['elements'] as $name => $element): ?>
-								<li class="vp-sc-element postbox<?php if(isset($element['attributes'])) echo ' has-options'; ?><?php if(isset($element['active']) && $element['active'] == true) echo ' active'; ?>">
+								<li id="vafpress-element-<?php echo $id_counter; $id_counter++; ?>" class="vp-sc-element postbox<?php if(isset($element['attributes'])) echo ' has-options'; ?><?php if(isset($element['active']) && $element['active'] == true) echo ' active'; ?>">
 									<h3 class="hndle vp-sc-element-heading">
 										<a href="#">
 											<?php echo $element['title']; ?>

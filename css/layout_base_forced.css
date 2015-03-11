@@ -2,6 +2,9 @@
   float: none;
   clear: both; }
 
+.wpurp-meta {
+  display: none; }
+
 html body.rtl .wpurp-container {
   text-align: right; }
 
@@ -75,6 +78,7 @@ html body .wpurp-container {
   html body .wpurp-container .wpurp-recipe-notes .aligncenter, html body .wpurp-container .wpurp-paragraph .aligncenter {
     margin: 0 auto !important; }
   html body .wpurp-container table {
+    table-layout: auto !important;
     border-collapse: collapse !important;
     width: 100% !important; }
   html body .wpurp-container a {

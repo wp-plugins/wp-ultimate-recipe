@@ -33,11 +33,13 @@ class WPURP_Template_Recipe_Instructions extends WPURP_Template_Block {
 
     public function output( $recipe, $args = array() )
     {
-        if( !$this->output_block( $recipe ) ) return '';
+        if( !$this->output_block( $recipe, $args ) ) return '';
+
+        $args['desktop'] = $args['desktop'] && $this->show_on_desktop;
 
         // Backwards compatibility
         if( empty( $this->children ) ) {
-            $output = $this->default_output( $recipe );
+            $output = $this->default_output( $recipe, $args );
         } else {
 
             $output = $this->before_output();
@@ -63,10 +65,10 @@ class WPURP_Template_Recipe_Instructions extends WPURP_Template_Block {
         if( isset( $this->include_groups ) && !in_array( $group, $this->include_groups ) ) continue;
 
         echo '<div>';
-        $child_args = array(
+        $child_args = array_merge( $args, array(
             'instruction_group' => $index,
             'instruction_group_name' => $group,
-        );
+        ) );
 
         $this->output_children( $recipe, 0, 0, $child_args );
         echo '</div>';
@@ -81,7 +83,7 @@ class WPURP_Template_Recipe_Instructions extends WPURP_Template_Block {
         return $this->after_output( $output, $recipe );
     }
 
-    private function default_output( $recipe )
+    private function default_output( $recipe, $args )
     {
         $this->add_style( 'margin', '0 23px 5px 23px' );
 
@@ -109,7 +111,7 @@ class WPURP_Template_Recipe_Instructions extends WPURP_Template_Block {
         ob_start();
 ?>
 <ol<?php echo $this->style(); ?>>
-    <?php echo $this->instructions_list( $recipe ); ?>
+    <?php echo $this->instructions_list( $recipe, $args ); ?>
 </ol>
 <?php
         $output .= ob_get_contents();
@@ -118,7 +120,7 @@ class WPURP_Template_Recipe_Instructions extends WPURP_Template_Block {
         return $output;
     }
 
-    private function instructions_list( $recipe )
+    private function instructions_list( $recipe, $args )
     {
         $out = '';
         $previous_group = '';
@@ -136,8 +138,10 @@ class WPURP_Template_Recipe_Instructions extends WPURP_Template_Block {
 
             $style = !isset( $instructions[$i+1] ) || $instruction['group'] != $instructions[$i+1]['group'] ? array('li','li-last') : 'li';
 
-            $out .= '<li itemprop="recipeInstructions" class="wpurp-recipe-instruction"' . $this->style($style) . '>';
-            $out .= '<span' . $this->style('instruction') . '>'.$instruction['description'].'</span>';
+            $meta = $args['template_type'] == 'recipe' && $args['desktop'] ? ' itemprop="recipeInstructions"' : '';
+
+            $out .= '<li class="wpurp-recipe-instruction"' . $this->style($style) . '>';
+            $out .= '<span' . $this->style('instruction') . $meta . '>'.$instruction['description'].'</span>';
 
             if( $this->show_images && $instruction['image'] != '' ) {
                 $thumb = wp_get_attachment_image_src( $instruction['image'], 'large' );

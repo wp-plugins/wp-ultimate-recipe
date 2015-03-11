@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WP Ultimate Recipe package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2014-11-28 09:16:25+0000\n"
+"PO-Revision-Date: 2014-12-05 10:07:34+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -12,7 +12,7 @@ msgstr ""
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:344
 msgid "Mobile"
-msgstr ""
+msgstr "Mobile"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:374
 msgid "Output Inline CSS"
@@ -20,11 +20,11 @@ msgstr ""
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:375
 msgid "When disabled the Template Editor will not output any inline CSS."
-msgstr ""
+msgstr "L'éditeur de modèles n'écrira pas de CSS inline si cette option est désactivée"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:381
 msgid "Use base CSS"
-msgstr ""
+msgstr "Utiliser la CSS de base"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:382
 msgid "When disabled the base CSS file will not be included."
@@ -36,11 +36,11 @@ msgstr ""
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:482
 msgid "Make sure to flush your permalinks after changing this setting."
-msgstr ""
+msgstr "Veillez à rafraichir vos permaliens après changement de ce paramètre."
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:511
 msgid "Language"
-msgstr ""
+msgstr "Langue"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:517
 msgid "Available languages can be found over here:"
@@ -84,11 +84,11 @@ msgstr ""
 
 #: wp-ultimate-recipe-premium/premium/helpers/ingredient_metadata.php:14
 msgid "Hide link"
-msgstr ""
+msgstr "Cacher le lien"
 
 #: wp-ultimate-recipe-premium/premium/helpers/ingredient_metadata.php:15
 msgid "Don't use a link in the ingredients list for this ingredient."
-msgstr ""
+msgstr "Ne pas utiliser de lien dans la liste d'ingrédients pour cet ingrédient"
 
 #: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/import-easyrecipe.php:43
 #: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/import-easyrecipe.php:55
@@ -1124,7 +1124,7 @@ msgstr "Autoriser le filtrage par"
 
 #: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:186
 msgid "The menu can be edited from the front end:"
-msgstr "Le menue peut être édité à partir du front end"
+msgstr "Le menu peut être édité à partir du front end"
 
 #: wp-ultimate-recipe-premium/core/helpers/plugin_action_link.php:13
 msgid "More information"
@@ -1695,7 +1695,7 @@ msgstr "Étiquettes de Recette"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1150
 msgid "Enable user menus for"
-msgstr "Activer le ,enus utilisateur pour"
+msgstr "Activer les menus utilisateur pour"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1019
 msgid "Auto approve submissions from"
@@ -2175,7 +2175,7 @@ msgstr "Rétablir les paramètres par défaut"
 #: wp-ultimate-recipe-premium/premium/addons/recipe-grid/recipe-grid.php:171
 #: wp-ultimate-recipe-premium/premium/addons/recipe-grid/recipe-grid.php:351
 msgid "No recipes found."
-msgstr "Pas de recettes retrouvées."
+msgstr "Pas de recettes trouvées."
 
 #: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/manual_import.php:124
 #: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:77

@@ -51,7 +51,15 @@ class WPURP_Recipe_Save {
                                 $term = wp_insert_term( $ingredient['ingredient'], 'ingredient' );
                             }
 
-                            $term_id = intval( $term['term_id'] );
+                            if( is_wp_error( $term ) ) {
+                                if( isset( $term->error_data['term_exists'] ) ) {
+                                    $term_id = intval( $term->error_data['term_exists'] );
+                                } else {
+                                    var_dump( $term );
+                                }
+                            } else {
+                                $term_id = intval( $term['term_id'] );
+                            }
 
                             $ingredient['ingredient_id'] = $term_id;
                             $ingredients[] = $term_id;

@@ -56,8 +56,9 @@ class WPURP_Template_Table extends WPURP_Template_Block {
 
     public function output( $recipe, $args = array() )
     {
-        if( !$this->output_block( $recipe ) ) return '';
+        if( !$this->output_block( $recipe, $args ) ) return '';
 
+        $args['desktop'] = $args['desktop'] && $this->show_on_desktop;
         $output = $this->before_output();
 
         ob_start();

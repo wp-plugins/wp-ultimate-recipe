@@ -187,6 +187,14 @@ class WPURP_Taxonomy_MetaData {
 			return;
 		}
 
+		// Delete missing values
+		foreach( $opts[ $term->slug ] as $metakey => $val ) {
+			if( !isset( $_POST[ $this->id ][ $metakey ] ) ) {
+				unset( $opts[ $term->slug ][ $metakey ] );
+			}
+		}
+
+		// Update existing values
 		foreach ( $_POST[ $this->id ] as $metakey => $val ) {
 
 			// Sanitize value and add to our options array
