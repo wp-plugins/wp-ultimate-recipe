@@ -68,10 +68,10 @@ class WPURP_Template_Table extends WPURP_Template_Block {
 <table<?php echo $this->style(); ?>>
     <tbody>
     <?php for( $i = 0; $i < $this->rows; $i++ ) { ?>
-        <?php if( $this->show( $recipe, 'row-' . $i ) ) { ?>
+        <?php if( $this->show( $recipe, 'row-' . $i, $args ) ) { ?>
             <tr>
                 <?php for( $j = 0; $j < $this->columns; $j++ ) { ?>
-                    <?php if( $this->show( $recipe, 'col-' . $j ) ) { ?>
+                    <?php if( $this->show( $recipe, 'col-' . $j, $args ) ) { ?>
                         <td<?php echo $this->style( array( 'td', 'row-' . $i, 'col-' . $j ) ); ?>>
                             <?php $this->output_children( $recipe, $i, $j, $args ); ?>
                         </td>

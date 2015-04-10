@@ -60,7 +60,7 @@ class WPURP_Template_Columns extends WPURP_Template_Block {
     <div<?php echo $this->style(); ?>>
         <?php if( $this->mobile_reverse ) { ?>
             <?php for( $j = $this->columns-1; $j >= 0; $j-- ) { ?>
-                <?php if( $this->show( $recipe, 'col-' . $j ) ) { ?>
+                <?php if( $this->show( $recipe, 'col-' . $j, $args ) ) { ?>
                     <div class="wpurp-rows-row">
                         <?php $this->output_children( $recipe, 0, $j, $args ); ?>
                     </div>
@@ -68,7 +68,7 @@ class WPURP_Template_Columns extends WPURP_Template_Block {
             <?php } // end for cols ?>
         <?php } else { ?>
             <?php for( $j = 0; $j < $this->columns; $j++ ) { ?>
-                <?php if( $this->show( $recipe, 'col-' . $j ) ) { ?>
+                <?php if( $this->show( $recipe, 'col-' . $j, $args ) ) { ?>
                     <div class="wpurp-rows-row">
                         <?php $this->output_children( $recipe, 0, $j, $args ); ?>
                     </div>
@@ -84,7 +84,7 @@ class WPURP_Template_Columns extends WPURP_Template_Block {
     <tbody>
     <tr>
         <?php for( $j = 0; $j < $this->columns; $j++ ) { ?>
-        <?php if( $this->show( $recipe, 'col-' . $j ) ) { ?>
+        <?php if( $this->show( $recipe, 'col-' . $j, $args ) ) { ?>
         <td<?php echo $this->style( array( 'td', 'col-' . $j ) ); ?>>
             <?php $this->output_children( $recipe, 0, $j, $args ); ?>
         </td>

@@ -349,6 +349,12 @@ class WPURP_Template_Block {
                         $val = false;
                     }
                 }
+            } else if( $condition['setting'] == 'favorite_recipes_enabled' ) {
+                if( !WPUltimateRecipe::is_premium_active() ) {
+                    $val = false;
+                } else {
+                    $val = WPUltimateRecipe::option( 'favorite_recipes_enabled', '0' );
+                }
             } else if ( in_array( $condition['setting'], array(
                 'partners_integrations_foodfanatic_enable',
                 'partners_integrations_bigoven_enable' ) ) ) {

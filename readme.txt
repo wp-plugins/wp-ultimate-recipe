@@ -42,6 +42,7 @@ We also have a [WP Ultimate Recipe Premium version](http://www.wpultimaterecipe.
 *   Add your own **custom fields** to your recipes
 *   Let your **users submit** recipes
 *   User menus with a **shopping list generator**
+*   Have your visitors save their **Favorite Recipes**
 *   Create **custom tags** for your recipes
 *   Advanced **recipe index** features
 *   Nice **recipe grid** to show and filter your recipes
@@ -97,6 +98,9 @@ Yes! We pride ourselves on offering awesome support and almost always answer sup
 10. WP Ultimate Recipe automatically formats your data so it can be picked up by Google Recipe Search and others. Great for SEO!
 
 == Changelog ==
+
+= 2.2.2 =
+Improvement: Setting to choose the source for the instruction images title tag
 
 = 2.2.1 =
 * Feature: Advanced ability to use plugin in minimal mode on certain pages
@@ -376,6 +380,9 @@ Yes! We pride ourselves on offering awesome support and almost always answer sup
 * Very first version of this plugin
 
 == Upgrade notice ==
+
+= 2.2.2 =
+Tiny upgrade for the free version
 
 = 2.2.1 =
 Update to improve memory usage of recipe templates

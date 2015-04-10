@@ -414,6 +414,15 @@ $shortcode_generator = array(
             ),
         ),
     ),
+//=-=-=-=-=-=-= FAVORITE RECIPES =-=-=-=-=-=-=
+    __( 'Favorite Recipes', 'wp-ultimate-recipe' ) => array(
+        'elements' => array(
+            'menus' => array(
+                'title'   => __( "List logged in user's Favorite Recipes", 'wp-ultimate-recipe'),
+                'code'    => '[ultimate-recipe-favorites]',
+            ),
+        ),
+    ),
 //=-=-=-=-=-=-= SHOPPING LIST =-=-=-=-=-=-=
     __( 'Shopping List', 'wp-ultimate-recipe' ) => array(
         'elements' => array(

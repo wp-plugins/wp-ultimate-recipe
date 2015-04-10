@@ -4,8 +4,8 @@ $unit_helper = WPUltimateRecipe::get()->helper('ingredient_units');
 $conversion_units_admin = $unit_helper->get_unit_admin_settings();
 $unit_systems_admin = $unit_helper->get_unit_system_admin_settings();
 
-// Include site URL hash in HTML settings to update when site URL changes
-$sitehash = base64_encode( admin_url() );
+// Include part of site URL hash in HTML settings to update when site URL changes
+$sitehash = substr( base64_encode( site_url() ), 0, 8 );
 
 $template_editor_button = WPUltimateRecipe::is_addon_active( 'template-editor' ) ? 'recipe_template_open_template_editor_active' . $sitehash : 'recipe_template_open_template_editor_disabled';
 $custom_fields_button = WPUltimateRecipe::is_addon_active( 'custom-fields' ) ? 'recipe_fields_manage_custom_active' . $sitehash : 'recipe_fields_manage_custom_disabled';
@@ -183,17 +183,44 @@ $admin_menu = array(
                                 ),
                                 array(
                                     'type' => 'toggle',
+                                    'name' => 'recipe_linkback',
+                                    'label' => __('Link to plugin', 'wp-ultimate-recipe'),
+                                    'description' => __( 'Show a link to the plugin website as a little thank you.', 'wp-ultimate-recipe' ),
+                                    'default' => '1',
+                                ),
+                            ),
+                        ),
+                        array(
+                            'type' => 'section',
+                            'title' => __('Images', 'wp-ultimate-recipe'),
+                            'name' => 'section_recipe_images',
+                            'fields' => array(
+                                array(
+                                    'type' => 'toggle',
                                     'name' => 'recipe_images_clickable',
                                     'label' => __('Clickable Images', 'wp-ultimate-recipe'),
                                     'description' => __( 'Best used in combination with a lightbox plugin.', 'wp-ultimate-recipe' ),
                                     'default' => '',
                                 ),
                                 array(
-                                    'type' => 'toggle',
-                                    'name' => 'recipe_linkback',
-                                    'label' => __('Link to plugin', 'wp-ultimate-recipe'),
-                                    'description' => __( 'Show a link to the plugin website as a little thank you.', 'wp-ultimate-recipe' ),
-                                    'default' => '1',
+                                    'type' => 'select',
+                                    'name' => 'recipe_instruction_images_title',
+                                    'label' => __('Instruction Images Title', 'wp-ultimate-recipe'),
+                                    'description' => __( 'Title tag to be used for instruction images.', 'wp-ultimate-recipe' ),
+                                    'items' => array(
+                                        array(
+                                            'value' => 'attachment',
+                                            'label' => __('Use media attachment title', 'wp-ultimate-recipe'),
+                                        ),
+                                        array(
+                                            'value' => 'instruction',
+                                            'label' => __('Use instruction text', 'wp-ultimate-recipe'),
+                                        ),
+                                    ),
+                                    'default' => array(
+                                        'attachment',
+                                    ),
+                                    'validation' => 'required',
                                 ),
                             ),
                         ),
@@ -264,6 +291,13 @@ $admin_menu = array(
                                         'function' => 'wpurp_admin_premium_installed',
                                     ),
                                     'validation' => 'required',
+                                ),
+                                array(
+                                    'type' => 'toggle',
+                                    'name' => 'recipe_ingredient_custom_links_nofollow',
+                                    'label' => __('Use Nofollow', 'wp-ultimate-recipe'),
+                                    'description' => __( 'Add the nofollow attribute to custom ingredient links.', 'wp-ultimate-recipe' ),
+                                    'default' => '0',
                                 ),
                             ),
                         ),
@@ -1163,6 +1197,13 @@ $admin_menu = array(
                             'description' => __( 'Only show media library for editors and up', 'wp-ultimate-recipe' ),
                             'default' => '1',
                         ),
+                        array(
+                            'type' => 'toggle',
+                            'name' => 'user_submission_use_media_manager',
+                            'label' => __('Use Media Manager', 'wp-ultimate-recipe'),
+                            'description' => __( 'Let logged in users use the Media Manager to upload images', 'wp-ultimate-recipe' ),
+                            'default' => '1',
+                        ),
                     ),
                 ),
             ),
@@ -1467,6 +1508,49 @@ $admin_menu = array(
                             'label' => __('404 error/page not found?', 'wp-ultimate-recipe'),
                             'description' => __('Try', 'wp-ultimate-recipe') . ' <a href="http://www.wpultimaterecipe.com/docs/404-page-found/" target="_blank">'.__('flushing your permalinks', 'wp-ultimate-recipe').'</a>.',
                             'status' => 'info',
+                        ),
+                    ),
+                ),
+            ),
+        ),
+//=-=-=-=-=-=-= FAVORITE RECIPES =-=-=-=-=-=-=
+        array(
+            'title' => __('Favorite Recipes', 'wp-ultimate-recipe'),
+            'name' => 'favorite_recipes',
+            'icon' => 'font-awesome:fa-heart',
+            'controls' => array(
+                array(
+                    'type' => 'section',
+                    'title' => __('General', 'wp-ultimate-recipe'),
+                    'name' => 'section_favorite_recipes_general',
+                    'fields' => array(
+                        array(
+                            'type' => 'notebox',
+                            'name' => 'favorite_recipes_premium_not_installed',
+                            'label' => 'WP Ultimate Recipe Premium',
+                            'description' => __('These features are only available in ', 'wp-ultimate-recipe') . ' <a href="http://www.wpultimaterecipeplugin.com/premium/" target="_blank">WP Ultimate Recipe Premium</a></strong>.',
+                            'status' => 'warning',
+                            'dependency' => array(
+                                'field' => '',
+                                'function' => 'wpurp_admin_premium_not_installed',
+                            ),
+                        ),
+                        array(
+                            'type' => 'notebox',
+                            'name' => 'favorite_recipes_shortcode',
+                            'label' => __('Important', 'wp-ultimate-recipe'),
+                            'description' => __('Use the following shortcode to display the list of favorite recipes:', 'wp-ultimate-recipe') . ' [ultimate-recipe-favorites]. '. __('The shortcode can be added to any page or post.', 'wp-ultimate-recipe'),
+                            'status' => 'info',
+                            'dependency' => array(
+                                'field' => '',
+                                'function' => 'wpurp_admin_premium_installed',
+                            ),
+                        ),
+                        array(
+                            'type' => 'toggle',
+                            'name' => 'favorite_recipes_enabled',
+                            'label' => __('Enable Button', 'wp-ultimate-recipe'),
+                            'default' => '0',
                         ),
                     ),
                 ),

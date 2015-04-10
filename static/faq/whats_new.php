@@ -10,33 +10,23 @@
             <h3>WP Ultimate Recipe 2.2.1</h3>
             <strong>New</strong>
             <ul>
-                <li>Feature: Advanced ability to use plugin in minimal mode on certain pages</li>
-                <li>Improvement: Better thumbnails for instruction images</li>
-                <li>Improvement: Possibility to add Yandex resultPhoto meta field</li>
-                <li>Improvement: Memory use of recipe templates</li>
-            </ul>
-            <strong>Update</strong>
-            <ul>
-                <li>Fix: Load Google Fonts over https when necessary</li>
+                <li>Improvement: Setting to choose the source for the instruction images title tag</li>
             </ul>
         </div>
         <div class="col-2 last-feature">
             <h3>WP Ultimate Recipe Premium 2.2.1</h3>
             <strong>New</strong>
             <ul>
-                <li>Feature: Separate share buttons in Template Editor</li>
-                <li>Feature: New share buttons: Facebook Share, StumbleUpon, LinkedIn</li>
-                <li>Feature: Multiselect terms in User Submission form</li>
-                <li>Improvement: Show ungrouped ingredients first on Ingredient Groups page</li>
-                <li>Improvement: Recipe Grid filters follow order used in shortcode</li>
-                <li>Improvement: Use "pending review" instead of "draft" for user submitted recipes</li>
-                <li>Improvement: New default User Menu name</li>
-                <li>Improvement: Setting to disable Nutritional Information notice</li>
-                <li>Improvement: Better way of saving custom recipe templates</li>
+                <li>Feature: Favorite Recipes</li>
+                <li>Improvement: Better recipe dropdown for Nutritional Information page</li>
+                <li>Improvement: Setting to use rel=“nofollow” for custom links</li>
+                <li>Improvement: Setting to disable Media Manager for logged in users on User Submission page</li>
+                <li>Improvement: Import all recipes from other plugins, not just the published ones</li>
             </ul>
             <strong>Update</strong>
             <ul>
-                <li>Fix: Order of terms in User Submission form</li>
+                <li>Fix: Problem with sub field conditions in tables, rows and columns</li>
+                <li>Fix: XML import problem when importing multiple recipes with different fields</li>
             </ul>
         </div>
     </div>
@@ -45,6 +35,28 @@
 
     <div>
         <h3>Previous Versions</h3>
+
+        <h4>Premium Plugin 2.2.1</h4>
+        <ul>
+            <li>Feature: Separate share buttons in Template Editor</li>
+            <li>Feature: New share buttons: Facebook Share, StumbleUpon, LinkedIn</li>
+            <li>Feature: Multiselect terms in User Submission form</li>
+            <li>Improvement: Show ungrouped ingredients first on Ingredient Groups page</li>
+            <li>Improvement: Recipe Grid filters follow order used in shortcode</li>
+            <li>Improvement: Use "pending review" instead of "draft" for user submitted recipes</li>
+            <li>Improvement: New default User Menu name</li>
+            <li>Improvement: Setting to disable Nutritional Information notice</li>
+            <li>Improvement: Better way of saving custom recipe templates</li>
+            <li>Fix: Order of terms in User Submission form</li>
+        </ul>
+        <h4>Core Plugin 2.2.1</h4>
+        <ul>
+            <li>Feature: Advanced ability to use plugin in minimal mode on certain pages</li>
+            <li>Improvement: Better thumbnails for instruction images</li>
+            <li>Improvement: Possibility to add Yandex resultPhoto meta field</li>
+            <li>Improvement: Memory use of recipe templates</li>
+            <li>Fix: Load Google Fonts over https when necessary</li>
+        </ul>
 
         <h4>Premium Plugin 2.2</h4>
         <ul>

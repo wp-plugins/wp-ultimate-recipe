@@ -302,7 +302,7 @@ $image = WPUltimateRecipe::get()->coreUrl . '/img/image_placeholder.png';
             <td>
                 <textarea name="recipe_instructions[<?php echo $i; ?>][description]" rows="4" id="ingredient_description_<?php echo $i; ?>"></textarea>
                 <input type="hidden" name="recipe_instructions[<?php echo $i; ?>][group]"    class="instructions_group" id="instruction_group_<?php echo $i; ?>" value="" />
-                <?php if ( !current_user_can( 'upload_files' ) ) { ?>
+                <?php if ( !current_user_can( 'upload_files' ) || WPUltimateRecipe::option( 'user_submission_use_media_manager', '1' ) != '1' ) { ?>
                     <?php _e( 'Add Image', 'wp-ultimate-recipe' ); ?>:<br/>
                     <input class="recipe_instructions_image button" type="file" id="recipe_thumbnail" value="" size="50" name="recipe_thumbnail_<?php echo $i; ?>" />
                     </td>

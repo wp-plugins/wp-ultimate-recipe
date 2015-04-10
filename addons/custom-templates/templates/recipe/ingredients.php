@@ -162,7 +162,9 @@ class WPURP_Template_Recipe_Ingredients extends WPURP_Template_Block {
 
                 if( WPURP_Taxonomy_MetaData::get( 'ingredient', $taxonomy->slug, 'hide_link' ) !== '1' ) {
                     if( $custom_link !== false && $custom_link !== '' ) {
-                        $out .= '<a href="'.$custom_link.'" class="custom-ingredient-link" target="'.WPUltimateRecipe::option( 'recipe_ingredient_custom_links_target', '_blank' ).'"' . $this->style('link') . '>';
+                        $nofollow = WPUltimateRecipe::option( 'recipe_ingredient_custom_links_nofollow', '0' ) == '1' ? ' rel="nofollow"' : '';
+
+                        $out .= '<a href="'.$custom_link.'" class="custom-ingredient-link" target="'.WPUltimateRecipe::option( 'recipe_ingredient_custom_links_target', '_blank' ).'"' . $nofollow . $this->style('link') . '>';
                         $closing_tag = '</a>';
                     } else if( $ingredient_links != 'custom' ) {
                         $out .= '<a href="'.get_term_link( $taxonomy->slug, 'ingredient' ).'"' . $this->style('link') . '>';

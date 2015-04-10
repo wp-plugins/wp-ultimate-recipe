@@ -152,12 +152,14 @@ class WPURP_Template_Recipe_Instructions extends WPURP_Template_Block {
                 $full_img = wp_get_attachment_image_src( $instruction['image'], 'full' );
                 $full_img_url = $full_img['0'];
 
+                $title_tag = WPUltimateRecipe::option( 'recipe_instruction_images_title', 'attachment' ) == 'attachment' ? esc_attr( get_the_title( $instruction['image'] ) ) : esc_attr( $instruction['description'] );
+
                 if( WPUltimateRecipe::option( 'recipe_images_clickable', '0' ) == 1 ) {
-                    $out .= '<a href="' . $full_img_url . '" rel="lightbox" title="' . esc_attr( $instruction['description'] ) . '">';
-                    $out .= '<img src="' . $thumb_url . '" alt="' . esc_attr( get_post_meta( $instruction['image'], '_wp_attachment_image_alt', true) ) . '" title="' . esc_attr( get_the_title( $instruction['image'] ) ) . '"' . $this->style('img') . '/>';
+                    $out .= '<a href="' . $full_img_url . '" rel="lightbox" title="' . $title_tag . '">';
+                    $out .= '<img src="' . $thumb_url . '" alt="' . esc_attr( get_post_meta( $instruction['image'], '_wp_attachment_image_alt', true) ) . '" title="' . $title_tag . '"' . $this->style('img') . '/>';
                     $out .= '</a>';
                 } else {
-                    $out .= '<img src="' . $thumb_url . '" alt="' . esc_attr( get_post_meta( $instruction['image'], '_wp_attachment_image_alt', true) ) . '" title="' . esc_attr( get_the_title( $instruction['image'] ) ) . '"' . $this->style('img') . '/>';
+                    $out .= '<img src="' . $thumb_url . '" alt="' . esc_attr( get_post_meta( $instruction['image'], '_wp_attachment_image_alt', true) ) . '" title="' . $title_tag . '"' . $this->style('img') . '/>';
                 }
             }
 
