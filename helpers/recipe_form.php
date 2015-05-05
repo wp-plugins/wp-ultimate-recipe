@@ -12,7 +12,7 @@ if( is_null( $recipe ) ) $recipe = new WPURP_Recipe(0);
 <h4><?php _e( 'General', 'wp-ultimate-recipe' ); ?></h4>
 <table class="recipe-general-form">
 <?php if( !isset( $wpurp_user_submission ) ) { ?>
-    <tr>
+    <tr class="recipe-general-form-title">
         <td class="recipe-general-form-label"><label for="recipe_title"><?php _e( 'Title', 'wp-ultimate-recipe' ); ?></label></td>
         <td class="recipe-general-form-field">
             <input type="text" name="recipe_title" id="recipe_title" value="<?php echo esc_attr( $recipe->title() ); ?>" />
@@ -20,13 +20,13 @@ if( is_null( $recipe ) ) $recipe = new WPURP_Recipe(0);
         </td>
     </tr>
 <?php } ?>
-    <tr>
+    <tr class="recipe-general-form-description">
         <td class="recipe-general-form-label"><label for="recipe_description"><?php _e('Description', 'wp-ultimate-recipe' ); ?></label></td>
         <td class="recipe-general-form-field">
             <textarea name="recipe_description" id="recipe_description" rows="4"><?php echo $recipe->description(); ?></textarea>
         </td>
     </tr>
-    <tr>
+    <tr class="recipe-general-form-rating">
         <td class="recipe-general-form-label"><label for="recipe_rating"><?php _e( 'Rating', 'wp-ultimate-recipe' ); ?></label></td>
         <td class="recipe-general-form-field">
             <select name="recipe_rating" id="recipe_rating">
@@ -40,7 +40,7 @@ if( is_null( $recipe ) ) $recipe = new WPURP_Recipe(0);
             </select>
         </td>
     </tr>
-    <tr>
+    <tr class="recipe-general-form-servings">
         <td class="recipe-general-form-label"><label for="recipe_servings"><?php _e( 'Servings', 'wp-ultimate-recipe' ); ?></label></td>
         <td class="recipe-general-form-field">
             <input type="text" name="recipe_servings" id="recipe_servings" value="<?php echo esc_attr( $recipe->servings() ); ?>" />
@@ -48,7 +48,7 @@ if( is_null( $recipe ) ) $recipe = new WPURP_Recipe(0);
             <span class="recipe-general-form-notes"> <?php _e( '(e.g. 2 people, 3 loafs, ...)', 'wp-ultimate-recipe' ); ?></span>
         </td>
     </tr>
-    <tr>
+    <tr class="recipe-general-form-prep-time">
         <td class="recipe-general-form-label"><label for="recipe_prep_time"><?php _e( 'Prep Time', 'wp-ultimate-recipe' ); ?></label></td>
         <td class="recipe-general-form-field">
             <input type="text" name="recipe_prep_time" id="recipe_prep_time" value="<?php echo esc_attr( $recipe->prep_time() ); ?>" />
@@ -56,14 +56,14 @@ if( is_null( $recipe ) ) $recipe = new WPURP_Recipe(0);
             <span class="recipe-general-form-notes"> <?php _e( '(e.g. 20 minutes, 1-2 hours, ...)', 'wp-ultimate-recipe' ); ?></span>
         </td>
     </tr>
-    <tr>
+    <tr class="recipe-general-form-cook-time">
         <td class="recipe-general-form-label"><label for="recipe_cook_time"><?php _e( 'Cook Time', 'wp-ultimate-recipe' ); ?></label></td>
         <td class="recipe-general-form-field">
             <input type="text" name="recipe_cook_time" id="recipe_cook_time" value="<?php echo esc_attr( $recipe->cook_time() ); ?>" />
             <input type="text" name="recipe_cook_time_text" id="recipe_cook_time_text" value="<?php echo esc_attr( $recipe->cook_time_text() ); ?>" />
         </td>
     </tr>
-    <tr>
+    <tr class="recipe-general-form-passive-time">
         <td class="recipe-general-form-label"><label for="recipe_passive_time"><?php _e( 'Passive Time', 'wp-ultimate-recipe' ); ?></label></td>
         <td class="recipe-general-form-field">
             <input type="text" name="recipe_passive_time" id="recipe_passive_time" value="<?php echo esc_attr( $recipe->passive_time() ); ?>" />

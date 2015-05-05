@@ -5,7 +5,7 @@ $conversion_units_admin = $unit_helper->get_unit_admin_settings();
 $unit_systems_admin = $unit_helper->get_unit_system_admin_settings();
 
 // Include part of site URL hash in HTML settings to update when site URL changes
-$sitehash = substr( base64_encode( site_url() ), 0, 8 );
+$sitehash = substr( md5( WPUltimateRecipe::get()->coreUrl ), 0, 8 );
 
 $template_editor_button = WPUltimateRecipe::is_addon_active( 'template-editor' ) ? 'recipe_template_open_template_editor_active' . $sitehash : 'recipe_template_open_template_editor_disabled';
 $custom_fields_button = WPUltimateRecipe::is_addon_active( 'custom-fields' ) ? 'recipe_fields_manage_custom_active' . $sitehash : 'recipe_fields_manage_custom_disabled';
@@ -961,6 +961,21 @@ $admin_menu = array(
                     'name' => 'section_recipe_grid_general',
                     'fields' => array(
                         array(
+                            'type' => 'html',
+                            'name' => 'recipe_grid_manage' . $sitehash,
+                            'binding' => array(
+                                'field'    => '',
+                                'function' => 'wpurp_manage_recipe_grid',
+                            ),
+                        ),
+                    ),
+                ),
+                array(
+                    'type' => 'section',
+                    'title' => __('Backwards Compatibility', 'wp-ultimate-recipe'),
+                    'name' => 'section_recipe_grid_backwards_compatibility',
+                    'fields' => array(
+                        array(
                             'type' => 'notebox',
                             'name' => 'recipe_grid_premium_not_installed',
                             'label' => 'WP Ultimate Recipe Premium',
@@ -1333,6 +1348,13 @@ $admin_menu = array(
                     'title' => __('Unit Systems', 'wp-ultimate-recipe'),
                     'name' => 'section_user_menus_unit_systems',
                     'fields' => array(
+                        array(
+                            'type' => 'toggle',
+                            'name' => 'user_menus_consolidate_ingredients',
+                            'label' => __('Consolidate Ingredients', 'wp-ultimate-recipe'),
+                            'description' => __( 'Convert units to be able to consolidate ingredients into 1 line.', 'wp-ultimate-recipe' ),
+                            'default' => '1',
+                        ),
                         array(
                             'type' => 'toggle',
                             'name' => 'user_menus_dynamic_unit_system',

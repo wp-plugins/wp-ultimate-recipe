@@ -20,7 +20,7 @@
 
     <div class="feature-section col two-col">
         <div class="col-1">
-            <img src="<?php echo $img_dir; ?>easy-image-collage.png" alt="Easy Image Collage" class="about-overview-img" />
+            <img src="<?php echo $img_dir; ?>easy-image-collage.jpg" alt="Easy Image Collage" class="about-overview-img" />
         </div>
         <div class="col-2 last-feature">
             <h3>Easy Image Collage</h3>

@@ -99,6 +99,11 @@ Yes! We pride ourselves on offering awesome support and almost always answer sup
 
 == Changelog ==
 
+= 2.2.3 =
+Improvement: Plugin works in different directory names
+Fix: Shortcode Editor button in text editor
+Fix: Recipe Template compatibility with Twenty Fifteen theme
+
 = 2.2.2 =
 Improvement: Setting to choose the source for the instruction images title tag
 
@@ -380,6 +385,9 @@ Improvement: Setting to choose the source for the instruction images title tag
 * Very first version of this plugin
 
 == Upgrade notice ==
+
+= 2.2.3 =
+Update to fix the shortcode editor button in the text editor
 
 = 2.2.2 =
 Tiny upgrade for the free version

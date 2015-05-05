@@ -474,7 +474,7 @@ $shortcode_generator = array(
     __( 'Recipe Grid', 'wp-ultimate-recipe' ) => array(
         'elements' => array(
             'recipe_grid' => array(
-                'title'   => __('Recipe Grid', 'wp-ultimate-recipe'),
+                'title'   => __('Recipe Grid', 'wp-ultimate-recipe') . ' - ' . __('Old version, use Grid shortcode button instead', 'wp-ultimate-recipe'),
                 'code'    => '[ultimate-recipe-grid]',
                 'attributes' => array(
                     array(

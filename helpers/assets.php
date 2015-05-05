@@ -17,6 +17,10 @@ class WPURP_Assets {
         // Load core assets TODO Refactor this.
         $this->add(
             array(
+                'file' => '/css/admin.css',
+                'admin' => true,
+            ),
+            array(
                 'name' => 'fraction',
                 'file' => '/vendor/fraction-js/index.js',
                 'public' => true,
@@ -245,10 +249,14 @@ class WPURP_Assets {
             wp_enqueue_style( 'wpurp_style_minified', $minified_url, false, WPURP_VERSION, 'all' );
         }
 
+        $included_urls = array();
         $i = 1;
         foreach( $assets as $asset ) {
-            wp_enqueue_style( 'wpurp_style' . $i, $asset['url'], false, WPURP_VERSION, 'all' );
-            $i++;
+            if( !in_array( $asset['url'], $included_urls ) ) {
+                wp_enqueue_style( 'wpurp_style' . $i, $asset['url'], false, WPURP_VERSION, 'all' );
+                $included_urls[] = $asset['url'];
+                $i++;
+            }
         }
     }
 

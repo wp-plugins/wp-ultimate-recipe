@@ -27,13 +27,21 @@ class WPURP_Template_Container extends WPURP_Template_Block {
         $args['max_width'] = $this->max_width && $args['max_width'] > $this->max_width ? $this->max_width : $args['max_width'];
         $args['max_height'] = $this->max_height && $args['max_height'] > $this->max_height ? $this->max_height : $args['max_height'];
 
+        if( isset( $args['classes'] ) ) {
+            $this->classes = $args['classes'];
+        }
+
+        if( isset( $args['wp-ultimate-post-grid'] ) ) {
+            $this->add_style( 'position', 'absolute' );
+        }
+
         $meta = $args['template_type'] == 'recipe' || $args['template_type'] == 'metadata' ? ' itemscope itemtype="http://schema.org/Recipe"' : '';
 
         $output = $this->before_output();
 
         ob_start();
 ?>
-<div<?php echo $meta; ?> id="wpurp-container-recipe-<?php echo $recipe->ID(); ?>" data-servings-original="<?php echo $recipe->servings_normalized(); ?>"<?php echo $this->style(); ?>>
+<div<?php echo $meta; ?> id="wpurp-container-recipe-<?php echo $recipe->ID(); ?>" data-permalink="<?php echo $recipe->link(); ?>" data-servings-original="<?php echo $recipe->servings_normalized(); ?>"<?php echo $this->style(); ?>>
 
 <?php if( $args['template_type'] == 'recipe' || $args['template_type'] == 'metadata' ) { ?>
     <meta itemprop="author" content="<?php echo esc_attr( $recipe->author() ); ?>">

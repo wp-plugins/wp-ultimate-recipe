@@ -3,12 +3,12 @@
 Plugin Name: WP Ultimate Recipe
 Plugin URI: http://www.wpultimaterecipe.com
 Description: Everything a Food Blog needs. Beautiful SEO friendly recipes, print versions, visitor interaction, ...
-Version: 2.2.2
+Version: 2.2.3
 Author: Bootstrapped Ventures
 Author URI: http://bootstrapped.ventures
 License: GPLv2
 */
-define( 'WPURP_VERSION', '2.2.2' );
+define( 'WPURP_VERSION', '2.2.3' );
 
 class WPUltimateRecipe {
 
@@ -95,6 +95,7 @@ class WPUltimateRecipe {
 
     public $pluginName = 'wp-ultimate-recipe';
     public $coreDir;
+    public $corePath;
     public $coreUrl;
     public $pluginFile;
 
@@ -114,8 +115,9 @@ class WPUltimateRecipe {
         update_option( $this->pluginName . '_version', WPURP_VERSION );
 
         // Set core directory, URL and main plugin file
-        $this->coreDir = apply_filters( 'wpurp_core_dir', WP_PLUGIN_DIR . '/' . $this->pluginName );
-        $this->coreUrl = apply_filters( 'wpurp_core_url', plugins_url() . '/' . $this->pluginName );
+        $this->corePath = str_replace( '/wp-ultimate-recipe.php', '', plugin_basename( __FILE__ ) );
+        $this->coreDir = apply_filters( 'wpurp_core_dir', WP_PLUGIN_DIR . '/' . $this->corePath );
+        $this->coreUrl = apply_filters( 'wpurp_core_url', plugins_url() . '/' . $this->corePath );
         $this->pluginFile = apply_filters( 'wpurp_plugin_file', __FILE__ );
 
         // Load textdomain
@@ -124,7 +126,7 @@ class WPUltimateRecipe {
             $locale = apply_filters( 'plugin_locale', get_locale(), $domain );
 
             load_textdomain( $domain, WP_LANG_DIR.'/'.$domain.'/'.$domain.'-'.$locale.'.mo' );
-            load_plugin_textdomain( $domain, false, basename( dirname( __FILE__ ) ) . '/lang/' );
+            load_plugin_textdomain( $domain, false, $this->corePath . '/lang/' );
         }
 
         // Add core helper directory

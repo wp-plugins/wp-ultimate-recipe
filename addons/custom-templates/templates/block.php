@@ -7,6 +7,7 @@ class WPURP_Template_Block {
     public $settings = array();
     public $style = array();
     public $conditions = array();
+    public $classes = array();
 
     // Relative block position
     public $parent;
@@ -211,6 +212,11 @@ class WPURP_Template_Block {
      * Styling
      */
 
+    public function add_class( $class )
+    {
+        $this->classes[] = $class;
+    }
+
     public function add_style( $property, $value, $name = 'default' )
     {
         $this->style[$name][$property] = str_replace( '"', "'", $value );
@@ -277,15 +283,17 @@ class WPURP_Template_Block {
             }
 
             // Class name
-            $custom_class = '';
+            $classes = $this->classes;
+            $classes[] = 'wpurp-' . $this->type;
 
             if( $this->present( $this->settings, 'customClass' ) ) {
-                $custom_class = ' ' . esc_attr( $this->settings->customClass );
+                $classes[] = esc_attr( $this->settings->customClass );
             }
 
-            $class = ' class="wpurp-' . $this->type . $custom_class . '"';
-        }
+            $classes = implode( ' ', $classes );
 
+            $class = ' class="' . $classes . '"';
+        }
 
         if( $style == '' ) {
             return $class;
@@ -459,7 +467,7 @@ class WPURP_Template_Block {
             }
         }
 
-        return apply_filters( 'wpurp_output_recipe_block_' . $this->type, $output, $recipe );
+        return apply_filters( 'wpurp_output_recipe_block_' . $this->type, $output, $recipe, $this );
     }
 
     /*

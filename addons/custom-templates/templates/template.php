@@ -52,9 +52,13 @@ class WPURP_Template {
 
     public function output_string( $recipe, $type = 'recipe' )
     {
-        $args = array(
-            'template_type' => $type,
-        );
+        if( is_string( $type ) ) {
+            $args = array(
+                'template_type' => $type,
+            );
+        } else {
+            $args = $type;
+        }
 
         return $this->container->output( $recipe, $args );
     }

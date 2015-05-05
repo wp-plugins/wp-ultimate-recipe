@@ -54,9 +54,10 @@ class WPURP_Template_Recipe_Tags extends WPURP_Template_Block {
 ?>
 <<?php echo $tag . $this->style(); ?>>
     <?php
-    foreach( $this->tags_list( $recipe) as $tag_name => $tag_terms ) {
+    foreach( $this->tags_list( $recipe ) as $tag_name => $tag_terms ) {
+        $slug = strtolower( str_replace( ' ', '-', $tag_name ) );
         ?>
-        <<?php echo $sub_tag . $this->style( 'li' ); ?>>
+        <<?php echo $sub_tag . $this->style( 'li' ); ?> class="wpurp-recipe-tags-<?php echo $slug; ?>">
             <?php
                 $child_args = array_merge( $args, array(
                     'tag_name' => $tag_name,
@@ -148,8 +149,9 @@ class WPURP_Template_Recipe_Tags extends WPURP_Template_Block {
 <ul<?php echo $this->style(); ?>>
     <?php
     foreach( $this->tags_list( $recipe) as $tag => $terms ) {
+        $slug = strtolower( str_replace( ' ', '-', $tag ) );
         ?>
-        <li<?php echo $this->style('li'); ?>>
+        <li class="wpurp-recipe-tags-<?php echo $slug; ?>"<?php echo $this->style('li'); ?>>
             <span class="recipe-tag-name"<?php echo $this->style('name'); ?>><?php echo $tag; ?></span>
             <span class="recipe-tags"<?php echo $this->style('terms'); ?>>
                 <?php echo $terms; ?>

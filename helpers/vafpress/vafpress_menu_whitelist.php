@@ -198,6 +198,11 @@ function wpurp_reset_demo_recipe()
     return '<a href="'.admin_url( 'edit.php?post_type=recipe&wpurp_reset_demo_recipe=true' ).'" class="button button-primary" target="_blank">'.__('Reset Demo Recipe', 'wp-ultimate-recipe').'</a>';
 }
 
+function wpurp_manage_recipe_grid()
+{
+    return '<a href="'.admin_url( 'edit.php?post_type=' . WPUPG_POST_TYPE ).'" class="button button-primary" target="_blank">'.__('Manage Recipe Grids', 'wp-ultimate-recipe').'</a>';
+}
+
 function wpurp_reset_recipe_grid_terms()
 {
     return '<a href="'.admin_url( 'edit.php?post_type=recipe&wpurp_reset_recipe_grid_terms=true' ).'" class="button button-primary" target="_blank">'.__('Recalculate Recipe Grid Terms', 'wp-ultimate-recipe').'</a>';
@@ -302,6 +307,7 @@ VP_Security::instance()->whitelist_function('vp_dep_boolean_inverse');
 VP_Security::instance()->whitelist_function('wpurp_font_preview');
 VP_Security::instance()->whitelist_function('wpurp_font_preview_with_text');
 VP_Security::instance()->whitelist_function('wpurp_reset_demo_recipe');
+VP_Security::instance()->whitelist_function('wpurp_manage_recipe_grid');
 VP_Security::instance()->whitelist_function('wpurp_reset_recipe_grid_terms');
 VP_Security::instance()->whitelist_function('wpurp_reset_cache');
 VP_Security::instance()->whitelist_function('wpurp_admin_recipe_tags');

@@ -7,26 +7,30 @@
 
     <div class="feature-section col two-col">
         <div class="col-1">
-            <h3>WP Ultimate Recipe 2.2.1</h3>
+            <h3>WP Ultimate Recipe 2.2.3</h3>
             <strong>New</strong>
             <ul>
-                <li>Improvement: Setting to choose the source for the instruction images title tag</li>
-            </ul>
-        </div>
-        <div class="col-2 last-feature">
-            <h3>WP Ultimate Recipe Premium 2.2.1</h3>
-            <strong>New</strong>
-            <ul>
-                <li>Feature: Favorite Recipes</li>
-                <li>Improvement: Better recipe dropdown for Nutritional Information page</li>
-                <li>Improvement: Setting to use rel=“nofollow” for custom links</li>
-                <li>Improvement: Setting to disable Media Manager for logged in users on User Submission page</li>
-                <li>Improvement: Import all recipes from other plugins, not just the published ones</li>
+                <li>Improvement: Plugin works in different directory names</li>
             </ul>
             <strong>Update</strong>
             <ul>
-                <li>Fix: Problem with sub field conditions in tables, rows and columns</li>
-                <li>Fix: XML import problem when importing multiple recipes with different fields</li>
+                <li>Fix: Shortcode Editor button in text editor</li>
+                <li>Fix: Recipe Template compatibility with Twenty Fifteen theme</li>
+            </ul>
+        </div>
+        <div class="col-2 last-feature">
+            <h3>WP Ultimate Recipe Premium 2.2.3</h3>
+            <strong>New</strong>
+            <ul>
+                <li>Feature: Entire new Recipe Grid functionality</li>
+                <li>Improvement: Delete icon in User Menus</li>
+                <li>Improvement: Setting to not consolidate ingredients in User Menus</li>
+            </ul>
+            <strong>Update</strong>
+            <ul>
+                <li>Fix: Publish date bug in saved User Menus</li>
+                <li>Fix: Recipe Grid WordPress 4.2 compatibility</li>
+                <li>Fix: Unit Conversion problem when switching back to original unit system</li>
             </ul>
         </div>
     </div>
@@ -35,6 +39,21 @@
 
     <div>
         <h3>Previous Versions</h3>
+
+        <h4>Premium Plugin 2.2.2</h4>
+        <ul>
+            <li>Feature: Favorite Recipes</li>
+            <li>Improvement: Better recipe dropdown for Nutritional Information page</li>
+            <li>Improvement: Setting to use rel=“nofollow” for custom links</li>
+            <li>Improvement: Setting to disable Media Manager for logged in users on User Submission page</li>
+            <li>Improvement: Import all recipes from other plugins, not just the published ones</li>
+            <li>Fix: Problem with sub field conditions in tables, rows and columns</li>
+            <li>Fix: XML import problem when importing multiple recipes with different fields</li>
+        </ul>
+        <h4>Core Plugin 2.2.2</h4>
+        <ul>
+            <li>Improvement: Setting to choose the source for the instruction images title tag</li>
+        </ul>
 
         <h4>Premium Plugin 2.2.1</h4>
         <ul>
