@@ -2,7 +2,7 @@
   float: none;
   clear: both; }
 
-.wpurp-meta {
+.wpurp-meta, .wpurp-searchable-recipe {
   display: none; }
 
 .wpurp-errors {
