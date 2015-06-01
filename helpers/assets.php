@@ -17,8 +17,12 @@ class WPURP_Assets {
         // Load core assets TODO Refactor this.
         $this->add(
             array(
+                'file' => '/css/admin.css',
+                'admin' => true,
+            ),
+            array(
                 'name' => 'fraction',
-                'file' => '/vendor/fraction-js/fraction.js',
+                'file' => '/vendor/fraction-js/index.js',
                 'public' => true,
                 'admin' => true,
             ),
@@ -42,7 +46,7 @@ class WPURP_Assets {
                     'nonce' => wp_create_nonce( 'wpurp_print' ),
                     'custom_print_css' => WPUltimateRecipe::option( 'custom_code_print_css', '' ),
                     'coreUrl' => WPUltimateRecipe::get()->coreUrl,
-                    'addonUrl' => WPUltimateRecipe::is_addon_active( 'user-ratings' ) ? WPUltimateRecipe::addon( 'user-ratings' )->addonUrl : false,
+                    'premiumUrl' => WPUltimateRecipe::is_premium_active() ? WPUltimateRecipePremium::get()->premiumUrl : false,
                     'title' => WPUltimateRecipe::option( 'print_template_title_text', get_bloginfo('name') ),
                 ),
             ),
@@ -58,17 +62,12 @@ class WPURP_Assets {
                 ),
             ),
             array(
-                'name' => 'socialite',
+                'name' => 'sharrre',
                 'setting' => array( 'recipe_sharing_enable', '1' ),
-                'file' => '/vendor/socialite/socialite.min.js',
-                'public' => true,
-            ),
-            array(
-                'setting' => array( 'recipe_sharing_enable', '1' ),
-                'file' => '/vendor/socialite/extensions/socialite.pinterest.js',
+                'file' => '/vendor/sharrre/jquery.sharrre.js',
                 'public' => true,
                 'deps' => array(
-                    'socialite',
+                    'jquery',
                 ),
             ),
             array(
@@ -77,6 +76,7 @@ class WPURP_Assets {
                 'public' => true,
                 'deps' => array(
                     'jquery',
+                    'sharrre',
                 ),
                 'data' => array(
                     'name' => 'wpurp_sharing_buttons',
@@ -84,6 +84,16 @@ class WPURP_Assets {
                     'twitter_lang' => WPUltimateRecipe::option( 'recipe_sharing_language_twitter', 'en' ),
                     'google_lang' => WPUltimateRecipe::option( 'recipe_sharing_language_google', 'en-US' ),
                 ),
+            ),
+            array(
+                'file' => '/js/partners.js',
+                'public' => true,
+            ),
+            array(
+                'setting' => array( 'recipe_template_font_awesome', '1' ),
+                'file' => WPUltimateRecipe::get()->coreUrl . '/vendor/font-awesome/css/font-awesome.min.css',
+                'direct' => true,
+                'public' => true,
             )
         );
     }
@@ -147,8 +157,8 @@ class WPURP_Assets {
         foreach( $assets as $asset )
         {
             if( $use_minify && ( !isset( $asset['direct'] ) || !$asset['direct'] ) ) {
-                // These assets are minified so we don't need them again, except for JS files with data
-                if( strtolower( $asset['type'] ) == 'js' ) {
+                // These assets are minified so we don't need them again, except for public JS files with data
+                if( strtolower( $asset['type'] ) == 'js' && isset( $asset['public'] ) && $asset['public'] ) {
                     if( isset( $asset['data'] ) && isset( $asset['data']['name'] ) ) $js_to_enqueue_data_only[] = $asset;
                     if( isset( $asset['name'] ) ) $js_names[] = $asset['name'];
                     if( isset( $asset['deps'] ) ) $js_dependencies = array_merge( $js_dependencies, $asset['deps'] );
@@ -239,17 +249,27 @@ class WPURP_Assets {
             wp_enqueue_style( 'wpurp_style_minified', $minified_url, false, WPURP_VERSION, 'all' );
         }
 
+        $included_urls = array();
         $i = 1;
         foreach( $assets as $asset ) {
-            wp_enqueue_style( 'wpurp_style' . $i, $asset['url'], false, WPURP_VERSION, 'all' );
-            $i++;
+            if( !in_array( $asset['url'], $included_urls ) ) {
+                wp_enqueue_style( 'wpurp_style' . $i, $asset['url'], false, WPURP_VERSION, 'all' );
+                $included_urls[] = $asset['url'];
+                $i++;
+            }
         }
     }
 
     private function enqueue_js( $assets, $use_minify, $js_to_enqueue_data_only, $js_names, $js_dependencies )
     {
         if( $use_minify ) {
-            $external_deps = array_unique( array_diff( $js_dependencies, $js_names ) );
+            if( WPUltimateRecipe::is_premium_active() ) {
+                $external_deps = array_unique( array_diff( $js_dependencies, $js_names ) );
+                //var_dump( $external_deps );
+            } else {
+                $external_deps = array( 'jquery', 'jquery-ui-sortable', 'jquery-ui-droppable', 'suggest' );
+            }
+
             wp_enqueue_script( 'wpurp_script_minified', WPUltimateRecipe::get()->coreUrl . '/assets/wpurp-public.js', $external_deps, WPURP_VERSION, true );
 
             foreach( $js_to_enqueue_data_only as $asset ) {

@@ -24,6 +24,7 @@ class WPURP_Migration {
             $migrate_special = $_GET['wpurp_migrate'];
         }
 
+        // Specific version migrations
         if( $migrate_version < '1.0.4' ) require_once( WPUltimateRecipe::get()->coreDir . '/helpers/migration/1_0_4_ingredient_ids.php');
         if( $migrate_version < '1.0.8' ) require_once( WPUltimateRecipe::get()->coreDir . '/helpers/migration/1_0_8_amount_and_menus.php');
         if( $migrate_version < '1.0.9' ) require_once( WPUltimateRecipe::get()->coreDir . '/helpers/migration/1_0_9_free_text_times.php');
@@ -31,8 +32,17 @@ class WPURP_Migration {
         if( $migrate_version < '2.0.5' ) require_once( WPUltimateRecipe::get()->coreDir . '/helpers/migration/2_0_5_recipe_grid_settings.php');
         if( $migrate_version < '2.0.8' ) require_once( WPUltimateRecipe::get()->coreDir . '/helpers/migration/2_0_8_recipe_titles.php');
         if( $migrate_version < '2.1.4' ) require_once( WPUltimateRecipe::get()->coreDir . '/helpers/migration/2_1_4_servings_problem.php');
+        if( $migrate_version < '2.2.1' ) require_once( WPUltimateRecipe::get()->coreDir . '/helpers/migration/2_2_1_custom_templates.php');
 
+        // Special migrations
         if( $migrate_special == 'RecipesToPosts' ) require_once( WPUltimateRecipe::get()->coreDir . '/helpers/migration/special_recipes_to_posts.php');
         if( $migrate_special == 'WooCommerceIngredients' ) require_once( WPUltimateRecipe::get()->coreDir . '/helpers/migration/special_woocommerce_ingredients.php');
+
+        // Each version update once
+        if( $migrate_version < WPURP_VERSION ) {
+            WPUltimateRecipe::addon( 'custom-templates' )->default_templates( true ); // Reset default templates
+
+            update_option( 'wpurp_migrate_version', WPURP_VERSION );
+        }
     }
 }

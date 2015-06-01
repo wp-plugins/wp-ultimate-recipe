@@ -3,6 +3,10 @@
     clear: both;
 }
 
+.wpurp-meta {
+    display: none;
+}
+
 html body.rtl .wpurp-container {
     text-align: right;
 }
@@ -124,6 +128,7 @@ html body .wpurp-container {
     }
 
     table {
+        table-layout: auto !important;
         border-collapse: collapse !important;
         width: 100% !important;
     }
@@ -140,17 +145,19 @@ html body .wpurp-container {
         display: none;
     }
 
-    .wpurp-recipe-sharing {
+    .wpurp-recipe-sharing .button.pinterest {
+        margin-top: 32px !important;
+    }
+
+    .sharrre {
         iframe {
             margin: 0 !important;
             max-width: none !important;
         }
 
-        .pinterest-pinit {
-            margin-top: 32px !important;
-
+        .button.pinterest {
             a {
-                background-image: url(http://passets.pinterest.com/images/pidgets/pinit_bg_en_rect_gray_28_1.png) !important;
+                background-image: url(//passets.pinterest.com/images/pidgets/pinit_bg_en_rect_gray_28_1.png) !important;
             }
         }
     }

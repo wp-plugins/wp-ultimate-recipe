@@ -11,8 +11,9 @@
 
         // Include CSS files
         document.write('<link rel="stylesheet" type="text/css" href="' + wpurp.coreUrl + '/css/layout_base.css">');
-        if(wpurp.addonUrl) {
-            document.write('<link rel="stylesheet" type="text/css" href="' + wpurp.addonUrl + '/css/user-ratings.css">');
+        if(wpurp.premiumUrl) {
+            document.write('<link rel="stylesheet" type="text/css" href="' + wpurp.premiumUrl + '/addons/nutritional-information/css/nutrition-label.css">');
+            document.write('<link rel="stylesheet" type="text/css" href="' + wpurp.premiumUrl + '/addons/user-ratings/css/user-ratings.css">');
         }
         document.write('<style>' + wpurp.custom_print_css + '</style>');
 

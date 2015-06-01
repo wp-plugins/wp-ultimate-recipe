@@ -510,6 +510,8 @@ class WPURP_Ingredient_Units {
                     $aliases = $default_aliases;
                 }
 
+                $aliases[] = $unit;
+
                 foreach( $aliases as $alias ) {
                     $clean = preg_replace( "/[^a-z]/i", "", $alias );
                     $lower = strtolower( $clean );

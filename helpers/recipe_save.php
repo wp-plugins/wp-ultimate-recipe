@@ -51,7 +51,15 @@ class WPURP_Recipe_Save {
                                 $term = wp_insert_term( $ingredient['ingredient'], 'ingredient' );
                             }
 
-                            $term_id = intval( $term['term_id'] );
+                            if( is_wp_error( $term ) ) {
+                                if( isset( $term->error_data['term_exists'] ) ) {
+                                    $term_id = intval( $term->error_data['term_exists'] );
+                                } else {
+                                    var_dump( $term );
+                                }
+                            } else {
+                                $term_id = intval( $term['term_id'] );
+                            }
 
                             $ingredient['ingredient_id'] = $term_id;
                             $ingredients[] = $term_id;
@@ -88,7 +96,7 @@ class WPURP_Recipe_Save {
                 {
                     update_post_meta( $recipe->ID(), $field, $new );
 
-                    if( $field == 'recipe_ingredients' && WPUltimateRecipe::is_addon_active( 'nutritional-information' ) ) {
+                    if( $field == 'recipe_ingredients' && WPUltimateRecipe::is_addon_active( 'nutritional-information' ) && WPUltimateRecipe::option( 'nutritional_information_notice', '1' ) == '1' ) {
                         $notice = '<strong>' . $_POST['recipe_title'] . ':</strong> <a href="'.admin_url( 'edit.php?post_type=recipe&page=wpurp_nutritional_information&limit_by_recipe=' . $recipe->ID() ).'">'. __( 'Update the Nutritional Information', 'wp-ultimate-recipe') .'</a>';
                         WPUltimateRecipe::get()->helper( 'notices' )->add_admin_notice( $notice );
                     }

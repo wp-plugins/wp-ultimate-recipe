@@ -30,15 +30,18 @@ class WPURP_Template_Rows extends WPURP_Template_Block {
 
     public function output( $recipe, $args = array() )
     {
-        if( !$this->output_block( $recipe ) ) return '';
+        if( !$this->output_block( $recipe, $args ) ) return '';
 
+        $args['max_width'] = $this->max_width && $args['max_width'] > $this->max_width ? $this->max_width : $args['max_width'];
+        $args['max_height'] = $this->max_height && $args['max_height'] > $this->max_height ? $this->max_height : $args['max_height'];
+        $args['desktop'] = $args['desktop'] && $this->show_on_desktop;
         $output = $this->before_output();
 
         ob_start();
 ?>
 <div<?php echo $this->style(); ?>>
     <?php for( $i = 0; $i < $this->rows; $i++ ) { ?>
-    <?php if( $this->show( $recipe, 'row-' . $i ) ) { ?>
+    <?php if( $this->show( $recipe, 'row-' . $i, $args ) ) { ?>
     <div class="wpurp-rows-row"<?php echo $this->style( 'row-' . $i ); ?>>
         <?php $this->output_children( $recipe, $i, 0, $args ); ?>
     </div>

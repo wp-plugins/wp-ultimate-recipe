@@ -16,11 +16,11 @@
         </div>
         <div>
             <h4>Chat with us</h4>
-            <p>In the bottom-right of <a href="http://www.wpultimaterecipe.com/docs/demo/" target="_blank">our website</a> you can find a chat widget that allows you to contact us directly. If we're offline, we'll get back to you via email.</p>
+            <p>In the bottom-right of <a href="http://www.wpultimaterecipe.com/docs/demo/" target="_blank">our website</a>, this very page and your settings page you can find a chat widget that allows you to contact us directly.</p>
         </div>
         <div class="last-feature">
             <h4>Send us a message</h4>
-            <p>Use the red "Support" tab on the right of this page to send us a message. Make sure to get your email address right as our answers will go to your inbox.</p>
+            <p>If we're not available to chat you can use that very same widget to send us a message. Just make sure to enter your email address correctly.</p>
         </div>
     </div>
 

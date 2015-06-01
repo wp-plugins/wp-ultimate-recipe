@@ -7,7 +7,6 @@ class WPURP_Taxonomies {
     public function __construct()
     {
         add_action( 'init', array( $this, 'register' ), 2 );
-        add_action( 'init', array( $this, 'check_recipe_taxonomies' ) );
         add_action( 'init', array( $this, 'register_ratings_taxonomy' ) );
     }
 
@@ -39,6 +38,9 @@ class WPURP_Taxonomies {
      * Register a recipe taxonomy
      */
     public function register() {
+
+        // Check before registering
+        $this->check_recipe_taxonomies();
 
         $taxonomies = $this->get();
 

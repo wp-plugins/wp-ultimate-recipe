@@ -25,7 +25,7 @@ class WPURP_Template_Recipe_Instruction_Image extends WPURP_Template_Block {
 
     public function output( $recipe, $args = array() )
     {
-        if( !$this->output_block( $recipe ) || !isset( $args['instruction_image'] ) || $args['instruction_image'] == '' ) return '';
+        if( !$this->output_block( $recipe, $args ) || !isset( $args['instruction_image'] ) || $args['instruction_image'] == '' ) return '';
         if( !isset( $this->thumbnail ) ) $this->thumbnail = 'full';
 
         $thumb = wp_get_attachment_image_src( $args['instruction_image'], $this->thumbnail );
@@ -96,19 +96,29 @@ class WPURP_Template_Recipe_Instruction_Image extends WPURP_Template_Block {
 
                 }
             }
+        } else if( $this->thumbnail == 'full' ) {
+            // Get better thumbnail size based on max possible block size
+            $correct_thumb = array(
+                $args['max_width'],
+                $args['max_height']
+            );
+
+            $thumb = wp_get_attachment_image_src( $args['instruction_image'], $correct_thumb );
+            $image_url = $thumb[0];
         }
 
         $full_img = wp_get_attachment_image_src( $args['instruction_image'], 'full' );
         $full_image_url = $full_img['0'];
 
         $description = isset( $args['instruction_description'] ) ? $args['instruction_description'] : '';
+        $title_tag = WPUltimateRecipe::option( 'recipe_instruction_images_title', 'attachment' ) == 'attachment' ? esc_attr( get_the_title( $args['instruction_image'] ) ) : esc_attr( $description );
 
         if( WPUltimateRecipe::option( 'recipe_images_clickable', '0' ) == 1 ) {
-            $img = '<a href="' . $full_image_url . '" rel="lightbox" title="' . esc_attr( $description ) . '">';
-            $img .= '<img src="' . $image_url . '" alt="' . esc_attr( get_post_meta( $args['instruction_image'], '_wp_attachment_image_alt', true) ) . '" title="' . esc_attr( get_the_title( $args['instruction_image'] ) ) . '"' . $this->style() . '/>';
+            $img = '<a href="' . $full_image_url . '" rel="lightbox" title="' . $title_tag . '">';
+            $img .= '<img src="' . $image_url . '" alt="' . esc_attr( get_post_meta( $args['instruction_image'], '_wp_attachment_image_alt', true) ) . '" title="' . $title_tag . '"' . $this->style() . '/>';
             $img .= '</a>';
         } else {
-            $img = '<img src="' . $image_url . '" alt="' . esc_attr( get_post_meta( $args['instruction_image'], '_wp_attachment_image_alt', true) ) . '" title="' . esc_attr( get_the_title( $args['instruction_image'] ) ) . '"' . $this->style() . '/>';
+            $img = '<img src="' . $image_url . '" alt="' . esc_attr( get_post_meta( $args['instruction_image'], '_wp_attachment_image_alt', true) ) . '" title="' . $title_tag . '"' . $this->style() . '/>';
         }
 
         $output = $this->before_output();

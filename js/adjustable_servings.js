@@ -26,7 +26,7 @@ wpurp_adjustable_servings.updateAmounts = function(amounts, servings_original, s
 wpurp_adjustable_servings.toFixed = function(amount, fraction)
 {
     if(fraction) {
-        var fractioned_amount = Fraction(amount.toString());
+        var fractioned_amount = Fraction(amount.toString()).snap();
         if(fractioned_amount.denominator < 100) {
             return fractioned_amount;
         }

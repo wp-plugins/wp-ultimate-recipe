@@ -39,7 +39,7 @@ if ( $taxonomies ) {
                 <td class="slug"><?php echo $taxonomy->rewrite['slug']; ?></td>
                 <td>
                     <span class="wpurp_adding">
-                        <button type="button" class="button wpurp-edit-tag" data-tag="<?php echo $taxonomy->name; ?>">Edit</button>
+                        <button type="button" class="button wpurp-edit-tag" data-tag="<?php echo $taxonomy->name; ?>"><?php _e( 'Edit', 'wp-ultimate-recipe' ); ?></button>
                     </span>
                 </td>
             </tr>

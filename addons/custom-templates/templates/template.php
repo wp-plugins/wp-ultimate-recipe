@@ -50,13 +50,21 @@ class WPURP_Template {
         return base64_encode( $this->serialize() );
     }
 
-    public function output_string( $recipe )
+    public function output_string( $recipe, $type = 'recipe' )
     {
-        return $this->container->output( $recipe );
+        if( is_string( $type ) ) {
+            $args = array(
+                'template_type' => $type,
+            );
+        } else {
+            $args = $type;
+        }
+
+        return $this->container->output( $recipe, $args );
     }
 
-    public function output( $recipe )
+    public function output( $recipe, $type = 'recipe' )
     {
-        echo $this->output_string( $recipe );
+        echo $this->output_string( $recipe, $type );
     }
 }
