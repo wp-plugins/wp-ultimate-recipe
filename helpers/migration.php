@@ -5,6 +5,7 @@ class WPURP_Migration {
     public function __construct()
     {
         add_action( 'admin_init', array( $this, 'migrate_if_needed' ) );
+        add_action( 'wpurp_cron_migrations', array( $this, 'cron_migrations' ) );
     }
 
     public function migrate_if_needed()
@@ -38,11 +39,29 @@ class WPURP_Migration {
         if( $migrate_special == 'RecipesToPosts' ) require_once( WPUltimateRecipe::get()->coreDir . '/helpers/migration/special_recipes_to_posts.php');
         if( $migrate_special == 'WooCommerceIngredients' ) require_once( WPUltimateRecipe::get()->coreDir . '/helpers/migration/special_woocommerce_ingredients.php');
 
+        // Cron migrations
+        $timestamp = wp_next_scheduled( 'wpurp_cron_migrations' );
+        if( !$timestamp ) {
+            //Schedule the event for right now, then to repeat daily using the hook 'wi_create_daily_backup'
+            wp_schedule_event( time(), 'hourly', 'wpurp_cron_migrations' );
+        }
+
         // Each version update once
         if( $migrate_version < WPURP_VERSION ) {
             WPUltimateRecipe::addon( 'custom-templates' )->default_templates( true ); // Reset default templates
 
             update_option( 'wpurp_migrate_version', WPURP_VERSION );
+        }
+    }
+
+    public function cron_migrations()
+    {
+        $cron_migrate_version = get_option( 'wpurp_cron_migrate_version', '0.0.1' );
+
+        if( $cron_migrate_version < '2.3.0' ) {
+            require_once( WPUltimateRecipe::get()->coreDir . '/helpers/migration/cron_2_3_0_recipe_search.php');
+        } elseif( $cron_migrate_version < '2.4' ) {
+            // Example cron migration for 2.4
         }
     }
 }

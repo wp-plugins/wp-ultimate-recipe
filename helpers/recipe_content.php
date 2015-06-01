@@ -20,7 +20,7 @@ class WPURP_Recipe_Content {
 
             $recipe = new WPURP_Recipe( get_post() );
 
-            if ( is_single() || WPUltimateRecipe::option( 'recipe_archive_display', 'full' ) == 'full' || ( is_feed() && WPUltimateRecipe::option( 'recipe_rss_feed_display', 'full' ) == 'full' ) )
+            if ( !post_password_required() && ( is_single() || WPUltimateRecipe::option( 'recipe_archive_display', 'full' ) == 'full' || ( is_feed() && WPUltimateRecipe::option( 'recipe_rss_feed_display', 'full' ) == 'full' ) ) )
             {
                 $taxonomies = WPUltimateRecipe::get()->tags();
                 unset($taxonomies['ingredient']);

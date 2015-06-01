@@ -33,7 +33,8 @@ An overview of the WP Ultimate Recipe features:
 *   Add a **recipe index** to any post or page
 *   Structure your ingredients and instructions in **groups** (e.g. icing and cake batter)
 *   Visitors can **share your recipes**
-*   Integration with **BigOven** and **Food Fanatic** possible
+*   **Full text search** for your recipes
+*   Integration with **BigOven**, **Food Fanatic** and **Chicory** possible
 
 We also have a [WP Ultimate Recipe Premium version](http://www.wpultimaterecipe.com/get-the-plugin/) which offers the following features:
 
@@ -49,6 +50,7 @@ We also have a [WP Ultimate Recipe Premium version](http://www.wpultimaterecipe.
 *   **Import EasyRecipe and EasyRecipe Plus** recipes
 *   **Import ReciPress** recipes
 *   **Import Ziplist** recipes
+*   **Import FDX** recipes (Living Cookbook, ...)
 *   **Import from and to XML**
 *   Custom **ingredient links** (great for affiliate marketing)
 *   Let your **users rate your recipes**
@@ -99,13 +101,21 @@ Yes! We pride ourselves on offering awesome support and almost always answer sup
 
 == Changelog ==
 
+= 2.3 =
+* Feature: Full text search for recipes
+* Feature: New partner integration with Chicory
+* Setting: What to use for the recipe image title tag
+* Fix: Password Protection now hides the recipe box as well
+* Fix: Yandex resultPhoto metadata
+* Fix: Usage of Ratings taxonomy
+
 = 2.2.3 =
-Improvement: Plugin works in different directory names
-Fix: Shortcode Editor button in text editor
-Fix: Recipe Template compatibility with Twenty Fifteen theme
+* Improvement: Plugin works in different directory names
+* Fix: Shortcode Editor button in text editor
+* Fix: Recipe Template compatibility with Twenty Fifteen theme
 
 = 2.2.2 =
-Improvement: Setting to choose the source for the instruction images title tag
+* Improvement: Setting to choose the source for the instruction images title tag
 
 = 2.2.1 =
 * Feature: Advanced ability to use plugin in minimal mode on certain pages
@@ -385,6 +395,9 @@ Improvement: Setting to choose the source for the instruction images title tag
 * Very first version of this plugin
 
 == Upgrade notice ==
+
+= 2.3 =
+A few great new features for WP Ultimate Recipe
 
 = 2.2.3 =
 Update to fix the shortcode editor button in the text editor

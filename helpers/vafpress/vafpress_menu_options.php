@@ -204,6 +204,26 @@ $admin_menu = array(
                                 ),
                                 array(
                                     'type' => 'select',
+                                    'name' => 'recipe_image_title',
+                                    'label' => __('Recipe Image Title', 'wp-ultimate-recipe'),
+                                    'description' => __( 'Title tag to be used for the recipe image.', 'wp-ultimate-recipe' ),
+                                    'items' => array(
+                                        array(
+                                            'value' => 'attachment',
+                                            'label' => __('Use media attachment title', 'wp-ultimate-recipe'),
+                                        ),
+                                        array(
+                                            'value' => 'recipe_title',
+                                            'label' => __('Use recipe title', 'wp-ultimate-recipe'),
+                                        ),
+                                    ),
+                                    'default' => array(
+                                        'attachment',
+                                    ),
+                                    'validation' => 'required',
+                                ),
+                                array(
+                                    'type' => 'select',
                                     'name' => 'recipe_instruction_images_title',
                                     'label' => __('Instruction Images Title', 'wp-ultimate-recipe'),
                                     'description' => __( 'Title tag to be used for instruction images.', 'wp-ultimate-recipe' ),
@@ -535,20 +555,56 @@ $admin_menu = array(
             'controls' => array(
                 array(
                     'type' => 'section',
+                    'title' => 'Chicory',
+                    'name' => 'section_integrations_chicory',
+                    'fields' => array(
+                        array(
+                            'type' => 'toggle',
+                            'name' => 'partners_integrations_chicory_enable',
+                            'label' => 'Chicory',
+                            'description' => __( 'Connect your recipes to leading online grocers with the Chicory "get ingredients" button.', 'wp-ultimate-recipe' ),
+                            'default' => '0',
+                        ),
+                        array(
+                            'type' => 'checkbox',
+                            'name' => 'partners_integrations_chicory_terms',
+                            'label' => '',
+                            'items' => array(
+                                array(
+                                    'value' => '1',
+                                    'label' => __( "I agree to Chicory's", 'wp-ultimate-recipe') . '</label> <a href="http://chicoryapp.com/terms/" target="_blank">' . __( 'terms of use', 'wp-ultimate-recipe') . '</a><label>',
+                                ),
+                            ),
+                        ),
+                        array(
+                            'type' => 'notebox',
+                            'name' => 'partners_integrations_chicory_agree',
+                            'label' => 'Chicory',
+                            'description' => __( "You need to agree to Chicory's terms of use if you want the button to show up.", 'wp-ultimate-recipe'),
+                            'status' => 'warning',
+                            'dependency' => array(
+                                'field' => 'partners_integrations_chicory_enable,partners_integrations_chicory_terms',
+                                'function' => 'wpurp_admin_chicory_terms',
+                            ),
+                        ),
+                    ),
+                ),
+                array(
+                    'type' => 'section',
                     'title' => __('General', 'wp-ultimate-recipe'),
                     'name' => 'section_integrations_general',
                     'fields' => array(
                         array(
                             'type' => 'toggle',
                             'name' => 'partners_integrations_bigoven_enable',
-                            'label' => __('BigOven', 'wp-ultimate-recipe'),
+                            'label' => 'BigOven',
                             'description' => __( 'Show save recipe to BigOven button.', 'wp-ultimate-recipe' ),
                             'default' => '0',
                         ),
                         array(
                             'type' => 'toggle',
                             'name' => 'partners_integrations_foodfanatic_enable',
-                            'label' => __('Food Fanatic', 'wp-ultimate-recipe'),
+                            'label' => 'Food Fanatic',
                             'description' => __( 'Show save recipe to Food Fanatic button.', 'wp-ultimate-recipe' ),
                             'default' => '0',
                         ),
@@ -697,6 +753,27 @@ $admin_menu = array(
                             'name' => 'recipe_fields_in_user_submission',
                             'label' => __('Show Custom Fields in User Submission form', 'wp-ultimate-recipe'),
                             'default' => '1',
+                        ),
+                        array(
+                            'type' => 'multiselect',
+                            'name' => 'recipe_fields_user_submission',
+                            'label' => __( 'Fields', 'wp-ultimate-recipe' ),
+                            'description' => __( 'Fields to show in the User Submission form.', 'wp-ultimate-recipe' ),
+                            'items' => array(
+                                'data' => array(
+                                    array(
+                                        'source' => 'function',
+                                        'value' => 'wpurp_admin_custom_fields',
+                                    ),
+                                ),
+                            ),
+                            'default' => array(
+                                '{{all}}',
+                            ),
+                            'dependency' => array(
+                                'field' => 'recipe_fields_in_user_submission',
+                                'function' => 'vp_dep_boolean',
+                            ),
                         ),
                     ),
                 ),
@@ -1077,28 +1154,10 @@ $admin_menu = array(
                             'validation' => 'required',
                         ),
                         array(
-                            'type' => 'select',
-                            'name' => 'user_submission_approve',
-                            'label' => __('Auto approve submissions from', 'wp-ultimate-recipe'),
-                            'description' => __('Publish recipe immediately on submission.', 'wp-ultimate-recipe'),
-                            'items' => array(
-                                array(
-                                    'value' => 'off',
-                                    'label' => __('Nobody', 'wp-ultimate-recipe'),
-                                ),
-                                array(
-                                    'value' => 'guests',
-                                    'label' => __('Guests and registered users', 'wp-ultimate-recipe'),
-                                ),
-                                array(
-                                    'value' => 'registered',
-                                    'label' => __('Registered users only', 'wp-ultimate-recipe'),
-                                ),
-                            ),
-                            'default' => array(
-                                'off',
-                            ),
-                            'validation' => 'required',
+                            'type' => 'toggle',
+                            'name' => 'user_submission_preview_button',
+                            'label' => __('Allow visitors to preview their submission', 'wp-ultimate-recipe'),
+                            'default' => '1',
                         ),
                         array(
                             'type' => 'codeeditor',
@@ -1108,6 +1167,60 @@ $admin_menu = array(
                             'theme' => 'github',
                             'mode' => 'html',
                             'default' => __( 'Recipe submitted! Thank you, your recipe is now awaiting moderation.', 'wp-ultimate-recipe' ),
+                        ),
+                        array(
+                            'type' => 'multiselect',
+                            'name' => 'user_submission_required_fields',
+                            'label' => __('Required Fields', 'wp-ultimate-recipe'),
+                            'description' => __( 'Fields that are required to fill in.', 'wp-ultimate-recipe' ),
+                            'items' => array(
+                                'data' => array(
+                                    array(
+                                        'source' => 'function',
+                                        'value' => 'wpurp_admin_user_submission_required_fields',
+                                    ),
+                                ),
+                            ),
+                            'default' => array(
+                                'title',
+                                'recipe-author',
+                            ),
+                        ),
+                    ),
+                ),
+                array(
+                    'type' => 'section',
+                    'title' => __('Security Question', 'wp-ultimate-recipe'),
+                    'name' => 'section_user_submission_security_question',
+                    'fields' => array(
+                        array(
+                            'type' => 'toggle',
+                            'name' => 'user_submissions_use_security_question',
+                            'label' => __('Security Question', 'wp-ultimate-recipe'),
+                            'description' => __( 'Use a security question to prevent spam.', 'wp-ultimate-recipe' ),
+                            'default' => '',
+                        ),
+                        array(
+                            'type' => 'textbox',
+                            'name' => 'user_submissions_security_question',
+                            'label' => __('Question', 'wp-ultimate-recipe'),
+                            'description' => __( 'The question your visitors have to answer.', 'wp-ultimate-recipe' ),
+                            'default' => '4 + 7 =',
+                            'dependency' => array(
+                                'field' => 'user_submissions_use_security_question',
+                                'function' => 'vp_dep_boolean',
+                            ),
+                        ),
+                        array(
+                            'type' => 'textbox',
+                            'name' => 'user_submissions_security_answer',
+                            'label' => __('Answer', 'wp-ultimate-recipe'),
+                            'description' => __( 'The correct answer to that question.', 'wp-ultimate-recipe' ),
+                            'default' => '11',
+                            'dependency' => array(
+                                'field' => 'user_submissions_use_security_question',
+                                'function' => 'vp_dep_boolean',
+                            ),
                         ),
                     ),
                 ),
@@ -1176,6 +1289,58 @@ $admin_menu = array(
                                     ),
                                 ),
                             ),
+                        ),
+                    ),
+                ),
+                array(
+                    'type' => 'section',
+                    'title' => __('Approval Rules', 'wp-ultimate-recipe'),
+                    'name' => 'section_user_submission_approval_rules',
+                    'fields' => array(
+                        array(
+                            'type' => 'select',
+                            'name' => 'user_submission_approve',
+                            'label' => __('Auto approve', 'wp-ultimate-recipe'),
+                            'description' => __('Publish recipe immediately on submission.', 'wp-ultimate-recipe'),
+                            'items' => array(
+                                array(
+                                    'value' => 'off',
+                                    'label' => __('Nobody', 'wp-ultimate-recipe'),
+                                ),
+                                array(
+                                    'value' => 'guests',
+                                    'label' => __('Guests and registered users', 'wp-ultimate-recipe'),
+                                ),
+                                array(
+                                    'value' => 'registered',
+                                    'label' => __('Registered users only', 'wp-ultimate-recipe'),
+                                ),
+                            ),
+                            'default' => array(
+                                'off',
+                            ),
+                            'validation' => 'required',
+                        ),
+                        array(
+                            'type' => 'multiselect',
+                            'name' => 'user_submission_approve_users',
+                            'label' => __('Auto approve specific users', 'wp-ultimate-recipe'),
+                            'description' => __('Publish recipes from these users immediately on submission.', 'wp-ultimate-recipe'),
+                            'items' => array(
+                                'data' => array(
+                                    array(
+                                        'source' => 'function',
+                                        'value' => 'wpurp_admin_users',
+                                    ),
+                                ),
+                            ),
+                        ),
+                        array(
+                            'type' => 'textbox',
+                            'name' => 'user_submissions_approve_role',
+                            'label' => __('Auto approve users with role or capability', 'wp-ultimate-recipe'),
+                            'description' => __( 'Publish recipes from these users immediately on submission.', 'wp-ultimate-recipe' ),
+                            'default' => '',
                         ),
                     ),
                 ),
@@ -1629,6 +1794,25 @@ $admin_menu = array(
                             'description' => __('Generic ingredient units to recognize while importing. Separate with a ;', 'wp-ultimate-recipe'),
                             'default' => $defaults['import_recipes_generic_units'],
                         ),
+                        array(
+                            'type' => 'select',
+                            'name' => 'import_recipes_order',
+                            'label' => __('Import order', 'wp-ultimate-recipe'),
+                            'items' => array(
+                                array(
+                                    'value' => 'ASC',
+                                    'label' => __('Import oldest recipes first', 'wp-ultimate-recipe'),
+                                ),
+                                array(
+                                    'value' => 'DESC',
+                                    'label' => __('Import latest recipes first', 'wp-ultimate-recipe'),
+                                ),
+                            ),
+                            'default' => array(
+                                'ASC',
+                            ),
+                            'validation' => 'required',
+                        ),
                     ),
                 ),
                 array(
@@ -1685,6 +1869,14 @@ $admin_menu = array(
                             'binding' => array(
                                 'field'    => '',
                                 'function' => 'wpurp_admin_import_xml',
+                            ),
+                        ),
+                        array(
+                            'type' => 'html',
+                            'name' => 'import_recipes_fdx' . $sitehash,
+                            'binding' => array(
+                                'field'    => '',
+                                'function' => 'wpurp_admin_import_fdx',
                             ),
                         ),
                     ),

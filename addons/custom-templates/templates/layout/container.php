@@ -44,12 +44,13 @@ class WPURP_Template_Container extends WPURP_Template_Block {
 <div<?php echo $meta; ?> id="wpurp-container-recipe-<?php echo $recipe->ID(); ?>" data-permalink="<?php echo $recipe->link(); ?>" data-servings-original="<?php echo $recipe->servings_normalized(); ?>"<?php echo $this->style(); ?>>
 
 <?php if( $args['template_type'] == 'recipe' || $args['template_type'] == 'metadata' ) { ?>
+    <meta itemprop="url" content="<?php echo esc_attr( $recipe->link() ); ?>" />
     <meta itemprop="author" content="<?php echo esc_attr( $recipe->author() ); ?>">
     <meta itemprop="datePublished" content="<?php echo esc_attr( $recipe->date() ); ?>">
     <meta itemprop="recipeYield" content="<?php echo esc_attr( $recipe->servings() ) . ' ' . esc_attr( $recipe->servings_type() ); ?>">
 
     <?php if( WPUltimateRecipe::option( 'output_yandex_metadata', '0' ) == '1' ) { ?>
-    <meta itemprop="resultPhoto" content="<?php echo esc_attr( $recipe->image_url( 'full' ) ); ?>">
+    <link itemprop="resultPhoto" href="<?php echo esc_attr( $recipe->image_url( 'full' ) ); ?>">
     <?php } ?>
 
     <?php

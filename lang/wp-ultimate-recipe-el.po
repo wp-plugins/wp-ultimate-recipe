@@ -1,18 +1,19 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WP Ultimate Recipe Plugin\n"
-"POT-Creation-Date: 2015-06-01 10:20+0100\n"
-"PO-Revision-Date: 2015-06-01 10:20+0100\n"
+"POT-Creation-Date: 2015-05-05 11:48+0100\n"
+"PO-Revision-Date: 2015-05-26 10:29+0100\n"
 "Last-Translator: Brecht Vandersmissen <brecht.vandersmissen@gmail.com>\n"
 "Language-Team: Bootstrapped Ventures\n"
-"Language: en_GB\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.1\n"
+"X-Generator: Poedit 1.7.6\n"
 "X-Poedit-KeywordsList: __;_e;_x\n"
 "X-Poedit-Basepath: /Users/Brecht/Development/WordPress Plugins/\n"
 "X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: el\n"
 "X-Poedit-SearchPath-0: wp-ultimate-recipe-premium\n"
 "X-Poedit-SearchPathExcluded-0: wp-ultimate-recipe-premium/premium/vendor/wp-"
 "ultimate-post-grid-premium\n"
@@ -20,21 +21,21 @@ msgstr ""
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/basic-custom-taxonomies.php:45
 #: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/custom-taxonomies.php:48
 msgid "Custom Taxonomies"
-msgstr ""
+msgstr "Upload a custom logo."
 
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/basic-custom-taxonomies.php:45
 msgid "Manage Tags"
-msgstr ""
+msgstr "Ετικέτες"
 
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/basic-custom-taxonomies.php:57
 #: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/custom-taxonomies.php:60
 msgid "Current Recipe Tags"
-msgstr ""
+msgstr "Ετικέτες"
 
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/basic-custom-taxonomies.php:58
 #: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/custom-taxonomies.php:61
 msgid "Add new Recipe Tag"
-msgstr ""
+msgstr "Νέο Έργο"
 
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/basic-custom-taxonomies.php:108
 #: wp-ultimate-recipe-premium/core/helpers/recipe_post_type.php:42
@@ -44,14 +45,14 @@ msgstr ""
 #: wp-ultimate-recipe-premium/premium/addons/recipe-search/widgets/recipe_search_widget.php:53
 #: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:223
 msgid "Search"
-msgstr ""
+msgstr "Αναζήτηση"
 
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/basic-custom-taxonomies.php:109
 #: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:112
 #: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:154
 #: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/custom-taxonomies.php:153
 msgid "Popular"
-msgstr ""
+msgstr "Popular"
 
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/basic-custom-taxonomies.php:110
 #: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:113
@@ -60,7 +61,7 @@ msgstr ""
 #: wp-ultimate-recipe-premium/premium/addons/export-xml/templates/before_importing.php:10
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:28
 msgid "All"
-msgstr ""
+msgstr "All"
 
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/basic-custom-taxonomies.php:111
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/templates/page_list.php:42
@@ -74,14 +75,14 @@ msgstr ""
 #: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:218
 #: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:219
 msgid "Edit"
-msgstr ""
+msgstr "Edit"
 
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/basic-custom-taxonomies.php:112
 #: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:115
 #: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:157
 #: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/custom-taxonomies.php:156
 msgid "Update"
-msgstr ""
+msgstr "Update Cart"
 
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/basic-custom-taxonomies.php:113
 #: wp-ultimate-recipe-premium/core/helpers/recipe_post_type.php:35
@@ -92,7 +93,7 @@ msgstr ""
 #: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:216
 #: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:217
 msgid "Add New"
-msgstr ""
+msgstr "Add New"
 
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/basic-custom-taxonomies.php:114
 #: wp-ultimate-recipe-premium/core/helpers/recipe_post_type.php:39
@@ -101,7 +102,7 @@ msgstr ""
 #: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/custom-taxonomies.php:158
 #: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:220
 msgid "New"
-msgstr ""
+msgstr "Add New Skill"
 
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/basic-custom-taxonomies.php:114
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/templates/page_form.php:13
@@ -109,21 +110,21 @@ msgstr ""
 #: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:117
 #: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:159
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:131
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:487
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:483
 #: wp-ultimate-recipe-premium/premium/addons/custom-fields/templates/page_form.php:16
 #: wp-ultimate-recipe-premium/premium/addons/custom-fields/templates/page_list.php:12
 #: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/custom-taxonomies.php:158
 #: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/templates/page_form.php:13
 #: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/templates/page_list.php:15
 msgid "Name"
-msgstr ""
+msgstr "Όνομα"
 
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/basic-custom-taxonomies.php:115
 #: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:118
 #: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:160
 #: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/custom-taxonomies.php:159
 msgid "Separate"
-msgstr ""
+msgstr "Ξεχωριστό"
 
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/basic-custom-taxonomies.php:115
 #: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:118
@@ -131,20 +132,23 @@ msgstr ""
 #: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/custom-taxonomies.php:159
 msgid "with commas"
 msgstr ""
+"For use with the Portfolio page template. <br/><br/>Enter the names of the "
+"skills (separated by commas) you want shown on this page. If left blank, all "
+"skills will be used."
 
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/basic-custom-taxonomies.php:116
 #: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:119
 #: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:161
 #: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/custom-taxonomies.php:160
 msgid "Add or remove"
-msgstr ""
+msgstr "Remove this item"
 
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/basic-custom-taxonomies.php:117
 #: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:120
 #: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:162
 #: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/custom-taxonomies.php:161
 msgid "Choose from the most used"
-msgstr ""
+msgstr "Επιλέξτε από τις πιο συχνά χρησιμοποιούμενες"
 
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/basic-custom-taxonomies.php:118
 #: wp-ultimate-recipe-premium/core/helpers/recipe_post_type.php:43
@@ -155,7 +159,7 @@ msgstr ""
 #: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:224
 #: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:225
 msgid "No"
-msgstr ""
+msgstr "Όχι"
 
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/basic-custom-taxonomies.php:118
 #: wp-ultimate-recipe-premium/core/helpers/recipe_post_type.php:43
@@ -164,91 +168,90 @@ msgstr ""
 #: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/custom-taxonomies.php:162
 #: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:224
 msgid "found."
-msgstr ""
+msgstr "No projects found in Trash"
 
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/templates/page.php:4
 #: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/custom-taxonomies.php:48
 #: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/templates/page.php:4
 msgid "Custom Tags"
-msgstr ""
+msgstr "Ετικέτες"
 
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/templates/page_form.php:1
 #: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/templates/page_form.php:1
 msgid "Create custom tags for your recipes."
-msgstr ""
+msgstr "Δημιουργήστε προσαρμοσμένες ετικέτες για τις συνταγές σας."
 
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/templates/page_form.php:8
 #: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/templates/page_form.php:8
 msgid "Currently editing tag: "
-msgstr ""
+msgstr "Tag:"
 
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/templates/page_form.php:16
 #: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/templates/page_form.php:16
 msgid "(e.g. Courses)"
-msgstr ""
+msgstr "(π.χ. μαθήματα)"
 
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/templates/page_form.php:20
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/templates/page_list.php:12
 #: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/templates/page_form.php:20
 #: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/templates/page_list.php:12
 msgid "Singular Name"
-msgstr ""
+msgstr "Όνομα"
 
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/templates/page_form.php:23
 #: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/templates/page_form.php:23
 msgid "(e.g. Course)"
-msgstr ""
+msgstr "(π.χ. γκολφ)"
 
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/templates/page_form.php:27
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/templates/page_list.php:18
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:513
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1674
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1680
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:493
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1509
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1515
 #: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/templates/page_form.php:27
 #: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/templates/page_list.php:18
 msgid "Slug"
-msgstr ""
+msgstr "Σύντομο Όνομα"
 
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/templates/page_form.php:30
 #: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/templates/page_form.php:30
 msgid "(e.g. http://www.yourwebsite.com/course/)"
-msgstr ""
+msgstr "(π.χ. http://www.yourwebsite.com/course/)"
 
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/templates/page_form.php:37
 #: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/templates/page_form.php:36
 msgid "Add new tag"
-msgstr ""
+msgstr "Add New"
 
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/templates/page_form.php:38
 msgid "Adding new tags is only possible in"
-msgstr ""
+msgstr "Προσθήκη νέων ετικετών είναι δυνατή μόνο σε"
 
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/templates/page_form.php:41
 #: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/templates/page_form.php:38
 msgid "Edit tag"
-msgstr ""
+msgstr "Tag:"
 
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/templates/page_form.php:42
 #: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/templates/page_form.php:39
 msgid "Cancel Edit"
-msgstr ""
+msgstr "Cancel Reply"
 
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/templates/page_list.php:1
 #: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/templates/page_list.php:1
 msgid "Do you really want to delete this taxonomy?"
-msgstr ""
+msgstr "Θέλετε να διαγράψετε αυτή την ταξινόμηση;"
 
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/templates/page_list.php:9
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:143
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:527
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:618
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:523
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:614
 #: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/templates/page_list.php:9
 #: wp-ultimate-recipe-premium/premium/addons/recipe-search/widgets/recipe_search_widget.php:74
 #: wp-ultimate-recipe-premium/premium/addons/user-menus/templates/user-menus.php:12
-#: wp-ultimate-recipe-premium/premium/addons/user-submissions/templates/public_recipe_form.php:85
-#: wp-ultimate-recipe-premium/premium/addons/user-submissions/templates/public_recipe_form.php:93
+#: wp-ultimate-recipe-premium/premium/addons/user-submissions/templates/public_recipe_form.php:65
 msgid "Tag"
-msgstr ""
+msgstr "Ετικέτα"
 
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/templates/page_list.php:21
 #: wp-ultimate-recipe-premium/premium/addons/custom-fields/templates/page_list.php:15
@@ -257,72 +260,68 @@ msgstr ""
 #: wp-ultimate-recipe-premium/premium/helpers/recipe_columns.php:27
 #: wp-ultimate-recipe-premium/premium/helpers/recipe_columns.php:93
 msgid "Actions"
-msgstr ""
+msgstr "Δράσεις"
 
 #: wp-ultimate-recipe-premium/core/addons/custom-templates/templates/general/title.php:35
 #: wp-ultimate-recipe-premium/core/addons/custom-templates/templates/general/title.php:37
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:46
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:267
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:44
 #: wp-ultimate-recipe-premium/premium/addons/user-menus/templates/user-menus.php:84
 msgid "Servings"
-msgstr ""
+msgstr "Μερίδες"
 
 #: wp-ultimate-recipe-premium/core/addons/custom-templates/templates/general/title.php:39
 #: wp-ultimate-recipe-premium/premium/addons/user-menus/templates/user-menus.php:28
 msgid "Units"
-msgstr ""
+msgstr "Μονάδες"
 
 #: wp-ultimate-recipe-premium/core/addons/custom-templates/templates/general/title.php:41
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:54
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:268
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:52
 msgid "Prep Time"
-msgstr ""
+msgstr "Χρόνο προετοιμασίας"
 
 #: wp-ultimate-recipe-premium/core/addons/custom-templates/templates/general/title.php:43
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:62
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:269
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:60
 msgid "Cook Time"
-msgstr ""
+msgstr "Χρόνος μαγείρων"
 
 #: wp-ultimate-recipe-premium/core/addons/custom-templates/templates/general/title.php:45
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:69
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:270
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:67
 msgid "Passive Time"
-msgstr ""
+msgstr "Παθητική χρόνο"
 
 #: wp-ultimate-recipe-premium/core/addons/custom-templates/templates/general/title.php:47
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:87
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:83
 #: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:67
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:249
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:229
 #: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/manual_import.php:120
 #: wp-ultimate-recipe-premium/premium/addons/import-recipecard/templates/manual_import.php:34
 #: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:17
 #: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:56
 #: wp-ultimate-recipe-premium/premium/addons/import-ziplist/templates/manual_import.php:38
 msgid "Ingredients"
-msgstr ""
+msgstr "Συστατικά"
 
 #: wp-ultimate-recipe-premium/core/addons/custom-templates/templates/general/title.php:49
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:215
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:209
 #: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:18
 #: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:88
 msgid "Instructions"
-msgstr ""
+msgstr "οδηγίες"
 
 #: wp-ultimate-recipe-premium/core/addons/custom-templates/templates/general/title.php:51
 msgid "Recipe Notes"
-msgstr ""
+msgstr "Συνταγή σημειώσεις"
 
 #: wp-ultimate-recipe-premium/core/addons/custom-templates/templates/general/title.php:53
 msgid "Share this Recipe"
-msgstr ""
+msgstr "Share IT:"
 
 #: wp-ultimate-recipe-premium/core/addons/custom-templates/templates/general/title.php:55
 msgid "Powered by"
-msgstr ""
+msgstr "Με την υποστήριξη του %s"
 
+#: wp-ultimate-recipe-premium/core/addons/custom-templates/templates/layout/container.php:150
 #: wp-ultimate-recipe-premium/core/addons/custom-templates/templates/layout/container.php:151
-#: wp-ultimate-recipe-premium/core/addons/custom-templates/templates/layout/container.php:152
 #: wp-ultimate-recipe-premium/core/addons/custom-templates/templates/recipe/cook_time.php:17
 #: wp-ultimate-recipe-premium/core/addons/custom-templates/templates/recipe/prep_time.php:17
 #: wp-ultimate-recipe-premium/core/helpers/migration/1_0_9_free_text_times.php:14
@@ -333,9 +332,6 @@ msgstr ""
 #: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/import-easyrecipe.php:225
 #: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/import-easyrecipe.php:230
 #: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/import-easyrecipe.php:238
-#: wp-ultimate-recipe-premium/premium/addons/import-fdx/import-fdx.php:81
-#: wp-ultimate-recipe-premium/premium/addons/import-fdx/import-fdx.php:83
-#: wp-ultimate-recipe-premium/premium/addons/import-fdx/import-fdx.php:85
 #: wp-ultimate-recipe-premium/premium/addons/import-recipecard/import-recipecard.php:141
 #: wp-ultimate-recipe-premium/premium/addons/import-recipecard/import-recipecard.php:146
 #: wp-ultimate-recipe-premium/premium/addons/import-recipecard/import-recipecard.php:154
@@ -346,25 +342,29 @@ msgstr ""
 #: wp-ultimate-recipe-premium/premium/addons/import-ziplist/import-ziplist.php:209
 #: wp-ultimate-recipe-premium/premium/addons/import-ziplist/import-ziplist.php:217
 msgid "minutes"
-msgstr ""
+msgstr "Λεπτά"
 
 #: wp-ultimate-recipe-premium/core/addons/custom-templates/templates/partner/bigoven.php:16
 msgid "BigOven - Save recipe or add to grocery list"
 msgstr ""
+"BigOven - αποθηκεύσετε συνταγή ή να προσθέσετε στη λίστα των παντοπωλείων"
 
 #: wp-ultimate-recipe-premium/core/helpers/admin_tour.php:26
 msgid "Your recipes"
-msgstr ""
+msgstr "Βαθμολογία"
 
 #: wp-ultimate-recipe-premium/core/helpers/admin_tour.php:27
 msgid ""
 "Everything regarding your recipes can be handled over here. Just click on "
 "'Recipes' to create one, edit one or change your settings."
 msgstr ""
+"Τα πάντα σχετικά με τις συνταγές σας μπορεί να αντιμετωπιστεί εδώ. Απλά "
+"κάντε κλικ στο «Συνταγές» για να δημιουργήσετε ένα, να επεξεργαστείτε ένα ή "
+"να αλλάξετε τις ρυθμίσεις σας."
 
 #: wp-ultimate-recipe-premium/core/helpers/admin_tour.php:48
 msgid "Recipe Settings"
-msgstr ""
+msgstr "Συνταγή ρυθμίσεις"
 
 #: wp-ultimate-recipe-premium/core/helpers/admin_tour.php:49
 msgid ""
@@ -372,10 +372,14 @@ msgid ""
 "Recipe</strong>. But make sure to take a look at the <strong>settings page</"
 "strong> later. Plenty of things can be customized to your liking."
 msgstr ""
+"Αν είναι δικό σου πρώτη φορά εδώ, είναι μια καλή ιδέα να ελέγξετε έξω το "
+"<strong>Demo συνταγή</strong>. Αλλά σιγουρευτείτε για να ρίξετε μια ματιά "
+"στη <strong>σελίδα ρυθμίσεις</strong> αργότερα. Πολλά πράγματα μπορεί να "
+"προσαρμοστεί με τις προτιμήσεις σας."
 
 #: wp-ultimate-recipe-premium/core/helpers/admin_tour.php:70
 msgid "Important!"
-msgstr ""
+msgstr "ΣΗΜΑΝΤΙΚΟ!"
 
 #: wp-ultimate-recipe-premium/core/helpers/admin_tour.php:71
 msgid ""
@@ -383,16 +387,22 @@ msgid ""
 "field, unit in the second, the actual ingredient in the third and notes in "
 "the last."
 msgstr ""
+"Σιγουρευτείτε για να εισαγάγετε τα συστατικά σας όπως αναφέρεται: η ποσότητα "
+"σε αυτό το πρώτο πεδίο, μονάδα κατά το δεύτερο, το πραγματικό συστατικό στο "
+"τρίτο και σημειώσεις στην τελευταία."
 
 #: wp-ultimate-recipe-premium/core/helpers/admin_tour.php:72
 msgid ""
 "You want to name your ingredients consistently as this name will be used to "
 "link recipes, use the notes field to specify things about an ingredient."
 msgstr ""
+"Θέλετε να ονομάσετε τα συστατικά σας με συνέπεια, όπως αυτό το όνομα θα "
+"χρησιμοποιηθεί για να συνδέσει τις συνταγές, να χρησιμοποιήσετε το πεδίο "
+"σημειώσεις για τον καθορισμό πράγματα για ένα συστατικό."
 
 #: wp-ultimate-recipe-premium/core/helpers/admin_tour.php:93
 msgid "Need help?"
-msgstr ""
+msgstr "Χρειάζεστε βοήθεια;"
 
 #: wp-ultimate-recipe-premium/core/helpers/admin_tour.php:94
 msgid ""
@@ -400,78 +410,88 @@ msgid ""
 "questions or suggestions</strong>. Just click on the green 'Support' tab on "
 "the right side of the screen."
 msgstr ""
+"Μπορείτε να επικοινωνήσετε μαζί μας απευθείας από αυτό ρυθμίσεις σελίδας "
+"<strong>Εάν έχετε οποιεσδήποτε ερωτήσεις ή προτάσεις</strong>. Απλά κάντε "
+"κλικ στην καρτέλα 'Υποστήριξη' πράσινο στη δεξιά πλευρά της οθόνης."
 
 #: wp-ultimate-recipe-premium/core/helpers/admin_tour.php:115
 msgid "Easily add shortcodes"
-msgstr ""
+msgstr "Νέο Έργο"
 
 #: wp-ultimate-recipe-premium/core/helpers/admin_tour.php:116
 msgid ""
 "Click on the <strong>chef's hat</strong> in the visual editor toolbar to "
 "easily <strong>add recipes and functionality</strong> to any post or page."
 msgstr ""
+"Κάντε κλικ στο το <strong>καπέλο του σεφ</strong> οπτικός εκδότηs γραμμής "
+"εργαλείων για να εύκολα να <strong>προσθέσετε τις συνταγές και "
+"λειτουργικότητα</strong> σε οποιαδήποτε θέση ή σελίδα."
 
-#: wp-ultimate-recipe-premium/core/helpers/cache.php:82
+#: wp-ultimate-recipe-premium/core/helpers/cache.php:72
 msgid "Private"
-msgstr ""
+msgstr "Private Repository"
 
-#: wp-ultimate-recipe-premium/core/helpers/cache.php:96
+#: wp-ultimate-recipe-premium/core/helpers/cache.php:86
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_whitelist.php:129
 msgid "n/a"
-msgstr ""
+msgstr "Δ / Υ"
 
 #: wp-ultimate-recipe-premium/core/helpers/faq.php:24
 msgid "FAQ"
-msgstr ""
+msgstr "Συχνές ερωτήσεις"
 
 #: wp-ultimate-recipe-premium/core/helpers/ingredient_units.php:147
 #: wp-ultimate-recipe-premium/core/helpers/ingredient_units.php:179
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1023
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:946
 msgid "Unit Aliases"
-msgstr ""
+msgstr "Μονάδα ψευδώνυμα"
 
 #: wp-ultimate-recipe-premium/core/helpers/ingredient_units.php:148
 msgid "Use a semicolon to separate unit aliases. For example: "
 msgstr ""
+"Χτησιμοποιήστε το ελληνικό ερωτηματικό για να διαχωρίσετε μονάδα ψευδώνυμα. "
+"Για παράδειγμα:"
 
 #: wp-ultimate-recipe-premium/core/helpers/ingredient_units.php:169
 msgid " Units"
-msgstr ""
+msgstr "Μονάδες"
 
 #: wp-ultimate-recipe-premium/core/helpers/ingredient_units.php:180
 msgid ""
 "When converting to a unit the alias defined below will be shown. The "
 "singular form will be shown when the amount is 1, the plural otherwise."
 msgstr ""
+"Όταν τη μετατροπή σε μια μονάδα το ψευδώνυμο ορίζεται παρακάτω θα "
+"εμφανιστεί. Ενικό θα εμφανιστεί όταν το ποσό είναι 1, αλλιώς πληθυντικό."
 
 #: wp-ultimate-recipe-premium/core/helpers/ingredient_units.php:193
 msgid "Singular"
-msgstr ""
+msgstr "Ενικό"
 
 #: wp-ultimate-recipe-premium/core/helpers/ingredient_units.php:214
 #: wp-ultimate-recipe-premium/premium/helpers/ingredient_metadata.php:9
 #: wp-ultimate-recipe-premium/premium/helpers/ingredient_metadata.php:36
 msgid "Plural"
-msgstr ""
+msgstr "Πληθυντικός"
 
 #: wp-ultimate-recipe-premium/core/helpers/ingredient_units.php:234
 msgid "Alias to convert to"
-msgstr ""
+msgstr "Ψευδώνυμο για να μετατρέψετε σε"
 
 #: wp-ultimate-recipe-premium/core/helpers/ingredient_units.php:250
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1018
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1513
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:941
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1348
 msgid "Unit Systems"
-msgstr ""
+msgstr "Μονάδα συστήματα"
 
 #: wp-ultimate-recipe-premium/core/helpers/ingredient_units.php:256
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1557
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1392
 msgid "Number of Systems"
-msgstr ""
+msgstr "Number of tweets:"
 
 #: wp-ultimate-recipe-premium/core/helpers/ingredient_units.php:257
 msgid "Number of unit systems for your visitors to choose from."
-msgstr ""
+msgstr "Αριθμό συστημάτων μονάδας για τους επισκέπτες σας να διαλέξετε."
 
 #: wp-ultimate-recipe-premium/core/helpers/ingredient_units.php:266
 #: wp-ultimate-recipe-premium/core/helpers/ingredient_units.php:272
@@ -479,212 +499,220 @@ msgstr ""
 #: wp-ultimate-recipe-premium/core/helpers/ingredient_units.php:288
 #: wp-ultimate-recipe-premium/core/helpers/ingredient_units.php:298
 #: wp-ultimate-recipe-premium/core/helpers/ingredient_units.php:410
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1571
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1592
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1613
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1406
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1427
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1448
 msgid "Unit System"
-msgstr ""
+msgstr "Μονάδα σύστημα"
 
 #: wp-ultimate-recipe-premium/core/helpers/ingredient_units.php:279
 #: wp-ultimate-recipe-premium/core/helpers/ingredient_units.php:289
 #: wp-ultimate-recipe-premium/core/helpers/ingredient_units.php:299
 msgid "Custom"
-msgstr ""
+msgstr "Upload a custom logo."
 
 #: wp-ultimate-recipe-premium/core/helpers/ingredient_units.php:321
 #: wp-ultimate-recipe-premium/core/helpers/ingredient_units.php:327
 msgid "Universal Units"
-msgstr ""
+msgstr "Προϊόντα καθολικά"
 
 #: wp-ultimate-recipe-premium/core/helpers/ingredient_units.php:328
 msgid ""
 "These units are considered universal to all systems and will not be "
 "converted."
 msgstr ""
+"Οι μονάδες αυτές θεωρούνται καθολική σε όλα τα συστήματα και δεν θα "
+"μετατραπούν."
 
 #: wp-ultimate-recipe-premium/core/helpers/ingredient_units.php:367
 msgid " units"
-msgstr ""
+msgstr "μονάδες"
 
 #: wp-ultimate-recipe-premium/core/helpers/ingredient_units.php:378
 msgid "Cup Type"
-msgstr ""
+msgstr "Type"
 
 #: wp-ultimate-recipe-premium/core/helpers/ingredient_units.php:382
 #: wp-ultimate-recipe-premium/core/helpers/ingredient_units.php:429
 msgid "Metric"
-msgstr ""
+msgstr "Μετρικό"
 
 #: wp-ultimate-recipe-premium/core/helpers/ingredient_units.php:386
 msgid "US Customary"
-msgstr ""
+msgstr "ΜΑΣ συνήθη"
 
 #: wp-ultimate-recipe-premium/core/helpers/ingredient_units.php:390
 msgid "US Legal"
-msgstr ""
+msgstr "U. s. ΝΟΜΙΚΗ"
 
 #: wp-ultimate-recipe-premium/core/helpers/ingredient_units.php:394
 #: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:89
 msgid "Japanese"
-msgstr ""
+msgstr "Ιαπωνικά"
 
 #: wp-ultimate-recipe-premium/core/helpers/ingredient_units.php:431
 msgid "US Imperial"
-msgstr ""
+msgstr "ΗΠΑ Imperial"
 
 #: wp-ultimate-recipe-premium/core/helpers/notices.php:30
 msgid "other notices ignored"
-msgstr ""
+msgstr "άλλες ειδοποιήσεις που αγνοούνται"
 
 #: wp-ultimate-recipe-premium/core/helpers/plugin_action_link.php:12
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:14
 #: wp-ultimate-recipe-premium/core/helpers/vafpress_menu.php:55
 #: wp-ultimate-recipe-premium/core/helpers/vafpress_menu.php:56
 msgid "Settings"
-msgstr ""
+msgstr "Click OK to reset. Any theme settings will be lost!"
 
 #: wp-ultimate-recipe-premium/core/helpers/plugin_action_link.php:13
 msgid "More information"
-msgstr ""
+msgstr "Περισσότερα"
 
 #: wp-ultimate-recipe-premium/core/helpers/recipe_demo.php:21
 msgid ""
 "This must be the best demo recipe I have ever seen. I could eat this every "
 "single day."
 msgstr ""
+"Αυτό πρέπει να είναι η καλύτερη συνταγή demo που έχω δει ποτέ. Θα μπορούσα "
+"να φάω αυτό κάθε μέρα."
 
 #: wp-ultimate-recipe-premium/core/helpers/recipe_demo.php:24
 msgid "people"
-msgstr ""
+msgstr "Άνθρωποι."
 
 #: wp-ultimate-recipe-premium/core/helpers/recipe_demo.php:30
 msgid "hour"
-msgstr ""
+msgstr "ώρα"
 
 #: wp-ultimate-recipe-premium/core/helpers/recipe_demo.php:120
 msgid "Use this section for whatever you like."
-msgstr ""
+msgstr "Χρησιμοποιήστε αυτήν την ενότητα για ό, τι θες."
 
 #: wp-ultimate-recipe-premium/core/helpers/recipe_demo.php:123
 msgid ""
 "Use this like normal post content. The recipe will automatically be included "
 "at the end of the post, or wherever you place the shortcode:"
 msgstr ""
+"Χρησιμοποιήσετε αυτό όπως κανονική θέση περιεχόμενο. Η συνταγή θα "
+"περιληφθούν αυτόματα στο τέλος του post, ή όπου μπορείτε να τοποθετήσετε το "
+"shortcode:"
 
 #: wp-ultimate-recipe-premium/core/helpers/recipe_demo.php:123
 msgid "This text will appear below your recipe."
-msgstr ""
+msgstr "Αυτό το κείμενο θα εμφανιστεί κάτω από σας συνταγή."
 
 #: wp-ultimate-recipe-premium/core/helpers/recipe_demo.php:126
 msgid "Followed by the nutrition label:"
-msgstr ""
+msgstr "Enter a label for the URL."
 
 #: wp-ultimate-recipe-premium/core/helpers/recipe_demo.php:133
 msgid "Demo Recipe"
-msgstr ""
+msgstr "Demo συνταγή"
 
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:14
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:594
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:623
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:898
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:992
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1037
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1108
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1399
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1711
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1754
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:12
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:538
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:567
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:821
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:915
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:960
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1031
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1234
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1546
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1589
 #: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:33
 msgid "General"
-msgstr ""
+msgstr "General"
 
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:18
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:332
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:16
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:312
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:191
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:388
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:640
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:384
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:636
 #: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:15
 #: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:37
 #: wp-ultimate-recipe-premium/premium/helpers/recipe_columns.php:69
 msgid "Title"
-msgstr ""
+msgstr "Title:"
 
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:21
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:19
 msgid "(leave blank to use post title)"
-msgstr ""
+msgstr "(αφήστε κενό για να χρησιμοποιήσετε το μετα τίτλο)"
 
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:26
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:266
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:24
 #: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:16
 #: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:43
 msgid "Description"
-msgstr ""
+msgstr "Description"
 
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:32
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:652
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:30
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:648
 #: wp-ultimate-recipe-premium/premium/addons/user-ratings/templates/user_rating.php:34
 #: wp-ultimate-recipe-premium/premium/helpers/recipe_columns.php:23
 #: wp-ultimate-recipe-premium/premium/helpers/recipe_columns.php:56
 #: wp-ultimate-recipe-premium/premium/helpers/recipe_columns.php:75
 msgid "Rating"
-msgstr ""
+msgstr "Βαθμολογία"
 
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:39
-#: wp-ultimate-recipe-premium/core/helpers/recipe_save.php:95
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:37
 msgid "star"
-msgstr ""
+msgstr "Αστέρας"
 
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:39
-#: wp-ultimate-recipe-premium/core/helpers/recipe_save.php:95
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:37
 msgid "stars"
-msgstr ""
+msgstr "αστέρια"
 
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:50
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:48
 msgid "(e.g. 2 people, 3 loafs, ...)"
-msgstr ""
+msgstr "(π.χ. για 2 άτομα, 3 loafs,...)"
 
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:58
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:56
 msgid "(e.g. 20 minutes, 1-2 hours, ...)"
-msgstr ""
+msgstr "(π.χ. 20 λεπτά, 1-2 ώρες,...)"
 
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:79
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:77
 msgid ""
 "Don't forget that you can tag your recipe with <strong>Courses</strong> and "
 "<strong>Cuisines</strong> by using the boxes on the right. Use the "
 "<strong>featured image</strong> if you want a photo of the finished dish."
 msgstr ""
+"Μην ξεχνάτε ότι μπορείτε να ετικέτα σας συνταγή με <strong>μαθήματα</strong> "
+"και <strong>κουζίνες</strong> χρησιμοποιώντας τα πλαίσια στα δεξιά. "
+"Χρησιμοποιήστε το <strong>χαρακτήρισε εικόνα</strong> εάν θέλετε μια "
+"φωτογραφία του τελικού πιάτου."
 
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:93
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:118
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:143
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:222
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:239
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:259
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:89
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:114
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:139
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:216
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:233
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:253
 #: wp-ultimate-recipe-premium/premium/helpers/ingredient_metadata.php:24
 msgid "Group"
-msgstr ""
+msgstr "﻿﻿﻿Ομάδα"
 
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:95
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:91
 msgid "Main Ingredients"
-msgstr ""
+msgstr "Κύρια συστατικά"
 
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:95
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:223
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:91
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:217
 msgid "(this label is not shown)"
-msgstr ""
+msgstr "Enter a label for the URL."
 
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:109
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:105
 msgid "Quantity"
-msgstr ""
+msgstr "Quantity"
 
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:110
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:106
 #: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/manual_import.php:125
 #: wp-ultimate-recipe-premium/premium/addons/import-recipecard/templates/manual_import.php:45
 #: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:79
 #: wp-ultimate-recipe-premium/premium/addons/import-ziplist/templates/manual_import.php:49
 msgid "Unit"
-msgstr ""
+msgstr "Μονάδα"
 
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:111
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:107
 #: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:67
 #: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/manual_import.php:126
 #: wp-ultimate-recipe-premium/premium/addons/import-recipecard/templates/manual_import.php:46
@@ -694,13 +722,13 @@ msgstr ""
 #: wp-ultimate-recipe-premium/premium/addons/user-menus/templates/user-menus.php:153
 #: wp-ultimate-recipe-premium/premium/addons/user-menus/templates/user-menus.php:167
 msgid "Ingredient"
-msgstr ""
+msgstr "Συστατικό"
 
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:111
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:107
 msgid "required"
-msgstr ""
+msgstr "Απαιτείται"
 
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:112
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:108
 #: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/manual_import.php:127
 #: wp-ultimate-recipe-premium/premium/addons/import-recipecard/templates/manual_import.php:47
 #: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:19
@@ -708,91 +736,92 @@ msgstr ""
 #: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:81
 #: wp-ultimate-recipe-premium/premium/addons/import-ziplist/templates/manual_import.php:51
 msgid "Notes"
-msgstr ""
+msgstr "Σημειώσεις"
+
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:168
+msgid "tbsp"
+msgstr "κουταλιές της σούπας"
 
 #: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:172
-msgid "tbsp"
-msgstr ""
-
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:176
 msgid "Select an ingredient"
-msgstr ""
+msgstr "Select options"
+
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:188
+msgid "olive oil"
+msgstr "ελαιόλαδο"
 
 #: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:192
-msgid "olive oil"
-msgstr ""
-
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:196
 msgid "extra virgin"
-msgstr ""
+msgstr "εξαιρετικό παρθένο"
 
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:204
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:200
 msgid "Add an ingredient"
-msgstr ""
+msgstr "Νέο Έργο"
 
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:207
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:203
 msgid "Add an ingredient group"
-msgstr ""
+msgstr "Νέο Έργο"
 
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:210
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:206
 msgid ""
 "<strong>Use the TAB key</strong> while adding ingredients, it will "
 "automatically create new fields. <strong>Don't worry about empty lines</"
 "strong>, these will be ignored."
 msgstr ""
+"<strong>Χρησιμοποιήστε το πλήκτρο TAB</strong> προσθέτοντας συστατικά, θα "
+"δημιουργήσει αυτόματα νέα πεδία. <strong>Μην ανησυχείτε για κενές γραμμές</"
+"strong>, αυτές θα παραβλεφθούν."
 
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:223
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:217
 msgid "Main Instructions"
-msgstr ""
+msgstr "Κύριες οδηγίες"
 
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:290
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:322
-msgid "Instruction Step Image"
-msgstr ""
-
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:301
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:330
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:286
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:306
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:314
 msgid "Add Image"
-msgstr ""
+msgstr "Add to cart"
 
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:302
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:331
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:287
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:315
 msgid "Remove Image"
-msgstr ""
+msgstr "Remove this item"
 
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:341
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:325
 msgid "Add an instruction"
-msgstr ""
+msgstr "Νέο Έργο"
 
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:344
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:328
 msgid "Add an instruction group"
-msgstr ""
+msgstr "Νέο Έργο"
 
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:347
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:331
 msgid ""
 "<strong>Use the TAB key</strong> while adding instructions, it will "
 "automatically create new fields. <strong>Don't worry about empty lines</"
 "strong>, these will be ignored."
 msgstr ""
+"<strong>Χρησιμοποιήστε το πλήκτρο TAB</strong> προσθέτοντας οδηγίες, θα "
+"δημιουργήσει αυτόματα νέα πεδία. <strong>Μην ανησυχείτε για κενές γραμμές</"
+"strong>, αυτές θα παραβλεφθούν."
 
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:352
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:334
 msgid "Recipe notes"
-msgstr ""
+msgstr "Συνταγή σημειώσεις"
 
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:375
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:282
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:354
 #: wp-ultimate-recipe-premium/premium/addons/custom-fields/custom-fields.php:18
 #: wp-ultimate-recipe-premium/premium/addons/custom-fields/templates/page.php:4
 msgid "Custom Fields"
-msgstr ""
+msgstr "Custom CSS"
 
 #: wp-ultimate-recipe-premium/core/helpers/recipe_meta_box.php:46
 msgid "Add Recipe Box"
-msgstr ""
+msgstr "Add to cart"
 
 #: wp-ultimate-recipe-premium/core/helpers/recipe_meta_box.php:60
 #: wp-ultimate-recipe-premium/core/helpers/recipe_post_type.php:21
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1921
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1729
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:35
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:70
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:252
@@ -800,1794 +829,1752 @@ msgstr ""
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:11
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/widgets/nutrition_label_widget.php:54
 msgid "Recipe"
-msgstr ""
+msgstr "Συνταγή"
 
 #: wp-ultimate-recipe-premium/core/helpers/recipe_post_type.php:20
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:4
 msgid "Recipes"
-msgstr ""
+msgstr "Συνταγολόγιο"
 
 #: wp-ultimate-recipe-premium/core/helpers/recipe_post_type.php:40
 #: wp-ultimate-recipe-premium/core/helpers/recipe_post_type.php:41
 #: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:221
 #: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:222
 msgid "View"
-msgstr ""
+msgstr "View all Events at this %s"
 
 #: wp-ultimate-recipe-premium/core/helpers/recipe_post_type.php:44
 #: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:225
 msgid "found in trash."
-msgstr ""
+msgstr "No projects found in Trash"
 
 #: wp-ultimate-recipe-premium/core/helpers/recipe_post_type.php:45
 #: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:226
 msgid "Parent"
-msgstr ""
+msgstr "Parent Skill"
 
-#: wp-ultimate-recipe-premium/core/helpers/recipe_save.php:105
+#: wp-ultimate-recipe-premium/core/helpers/recipe_save.php:100
 msgid "Update the Nutritional Information"
-msgstr ""
+msgstr "Update Skill"
 
-#: wp-ultimate-recipe-premium/core/helpers/recipe_save.php:125
+#: wp-ultimate-recipe-premium/core/helpers/recipe_save.php:120
 #: wp-ultimate-recipe-premium/premium/addons/recipe-grid/recipe-grid.php:276
 #: wp-ultimate-recipe-premium/premium/helpers/recipe_columns.php:81
 msgid "Categories"
-msgstr ""
+msgstr "Κατηγορίες"
 
-#: wp-ultimate-recipe-premium/core/helpers/recipe_save.php:126
+#: wp-ultimate-recipe-premium/core/helpers/recipe_save.php:121
 #: wp-ultimate-recipe-premium/premium/addons/recipe-grid/recipe-grid.php:284
 #: wp-ultimate-recipe-premium/premium/helpers/recipe_columns.php:82
 msgid "Tags"
-msgstr ""
+msgstr "Ετικέτες"
 
 #: wp-ultimate-recipe-premium/core/helpers/shortcodes/index_shortcode.php:51
 #: wp-ultimate-recipe-premium/premium/helpers/shortcodes/extended_index_shortcode.php:155
 msgid ""
 "You have to create a recipe first, check the 'Recipes' menu on the left."
 msgstr ""
+"Θα πρέπει να δημιουργήσετε μια συνταγή πρώτα, ελέγξτε το μενού «Συνταγές» "
+"στα αριστερά."
 
 #: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:68
 msgid "Courses"
-msgstr ""
+msgstr "Προγράμματα"
 
 #: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:68
 msgid "Course"
-msgstr ""
+msgstr "Πρόγραμμα"
 
 #: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:69
 msgid "Cuisines"
-msgstr ""
+msgstr "Κουζίνες"
 
 #: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:69
 msgid "Cuisine"
-msgstr ""
+msgstr "Κουζίνα"
 
 #: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:74
 msgid "Breakfast"
-msgstr ""
+msgstr "Πρωινό"
 
 #: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:75
 msgid "Appetizer"
-msgstr ""
+msgstr "Ορεκτικό"
 
 #: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:76
 msgid "Soup"
-msgstr ""
+msgstr "Σούπα"
 
 #: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:77
 msgid "Main Course"
-msgstr ""
+msgstr "Κυρίως πιάτο"
 
 #: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:78
 msgid "Side Dish"
-msgstr ""
+msgstr "This will appear on the left side of the footer."
 
 #: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:79
 msgid "Salad"
-msgstr ""
+msgstr "Σαλάτα"
 
 #: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:80
 msgid "Dessert"
-msgstr ""
+msgstr "Επιδόρπιο"
 
 #: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:81
 msgid "Snack"
-msgstr ""
+msgstr "Σνακ"
 
 #: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:82
 msgid "Drinks"
-msgstr ""
+msgstr "Ποτά"
 
 #: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:84
 msgid "French"
-msgstr ""
+msgstr "Γαλλικά"
 
 #: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:85
 msgid "Italian"
-msgstr ""
+msgstr "Ιταλικά"
 
 #: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:86
 msgid "Mediterranean"
-msgstr ""
+msgstr "Μεσογείου"
 
 #: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:87
 msgid "Indian"
-msgstr ""
+msgstr "Ινδός"
 
 #: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:88
 msgid "Chinese"
-msgstr ""
+msgstr "Κινέζικα"
 
 #: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:90
 msgid "American"
-msgstr ""
+msgstr "Αμερικανός"
 
 #: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:91
 msgid "Mexican"
-msgstr ""
+msgstr "Μεξικού"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:19
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:78
 msgid "Recipe Template"
-msgstr ""
+msgstr "Πρότυπο συνταγή"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:24
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:40
 msgid "Template Editor"
-msgstr ""
+msgstr "Επεξεργαστής προτύπων"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:31
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:678
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:724
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:847
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:905
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:999
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1059
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1115
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1406
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1718
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1761
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1827
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1896
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:622
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:668
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:770
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:828
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:922
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:982
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1038
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1241
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1553
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1596
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1643
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1704
 msgid "These features are only available in "
-msgstr ""
+msgstr "Install package not available."
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:54
 msgid "Preview Recipe"
-msgstr ""
+msgstr "Προεπισκόπηση συνταγή"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:55
 msgid "This recipe will be used for the preview in the editor."
 msgstr ""
+"Αυτή η συνταγή που θα χρησιμοποιηθεί για την προεπισκόπηση στο πρόγραμμα "
+"επεξεργασίας."
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:72
 msgid "Default Templates"
-msgstr ""
+msgstr "Βασική ταξινόμηση"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:79
 msgid "The default template to use for recipes."
-msgstr ""
+msgstr "Το προεπιλεγμένο πρότυπο για να χρησιμοποιήσετε για συνταγές."
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:96
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1655
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1490
 msgid "Print Template"
-msgstr ""
+msgstr "Εκτύπωση πρότυπο"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:97
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1656
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1491
 msgid "The default template to use for printed recipes."
 msgstr ""
+"Το προεπιλεγμένο πρότυπο για να χρησιμοποιήσετε για τυπωμένες συνταγές."
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:114
 msgid "Recipe Grid Template"
-msgstr ""
+msgstr "Πλέγμα πρότυπο συνταγή"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:115
 msgid "The default template to use for recipes in the Recipe Grid."
 msgstr ""
+"Το προεπιλεγμένο πρότυπο για να χρησιμοποιήσετε για συνταγές στο πλέγμα "
+"συνταγή."
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:132
 msgid "RSS Feed Template"
-msgstr ""
+msgstr "RSS ζωοτροφών πρότυπο"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:133
 msgid "The default template to use for RSS feeds."
-msgstr ""
+msgstr "Το προεπιλεγμένο πρότυπο για να χρησιμοποιήσετε για RSS feeds."
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:152
 msgid "Recipe Box"
-msgstr ""
+msgstr "Font for Call to Action Box"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:157
 msgid "Functionality"
-msgstr ""
+msgstr "Λειτουργικότητα"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:163
 msgid "Adjustable Servings"
-msgstr ""
+msgstr "Ρυθμιζόμενο μερίδες"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:164
 msgid "Allow users to dynamically adjust the servings of recipes."
-msgstr ""
+msgstr "Επιτρέπουν στους χρήστες να ρυθμίσει δυναμικά το μερίδες συνταγές."
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:170
 msgid "Use Fractions"
-msgstr ""
+msgstr "Χρήση κλάσματα"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:171
 msgid ""
 "Use fractions after adjusting, even if the original quantity wasn't one."
 msgstr ""
+"Χρησιμοποιήστε κλάσματα μετά την προσαρμογή, ακόμη και αν η αρχική ποσότητα "
+"ήταν ένα."
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:177
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1496
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1331
 msgid "Default Servings"
-msgstr ""
+msgstr "Βασική ταξινόμηση"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:178
 msgid "Default number of servings to use when none specified."
 msgstr ""
+"Προεπιλεγμένο αριθμό των μερίδων να χρησιμοποιήσετε όταν δεν καθοριστεί."
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:187
 msgid "Link to plugin"
-msgstr ""
+msgstr "External Link"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:188
 msgid "Show a link to the plugin website as a little thank you."
-msgstr ""
+msgstr "Δείτε μια σύνδεση στην ιστοσελίδα plugin όπως λίγο να σας ευχαριστήσω."
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:195
 msgid "Images"
-msgstr ""
+msgstr "Check this box to disable the links of slideshow images."
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:201
 msgid "Clickable Images"
-msgstr ""
+msgstr "Μπορείτε να κάνετε κλικ εικόνες"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:202
 msgid "Best used in combination with a lightbox plugin."
-msgstr ""
+msgstr "Καλύτερα να χρησιμοποιείται σε συνδυασμό με ένα plugin lightbox."
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:208
-msgid "Recipe Image Title"
-msgstr ""
+msgid "Instruction Images Title"
+msgstr "Title:"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:209
-msgid "Title tag to be used for the recipe image."
-msgstr ""
+msgid "Title tag to be used for instruction images."
+msgstr "Τίτλος ετικέτα που θα χρησιμοποιηθεί για εικόνες της διδασκαλίας."
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:213
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:233
 msgid "Use media attachment title"
-msgstr ""
+msgstr "Χρήση μέσων συνημμένο τίτλου"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:217
-msgid "Use recipe title"
-msgstr ""
-
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:228
-msgid "Instruction Images Title"
-msgstr ""
-
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:229
-msgid "Title tag to be used for instruction images."
-msgstr ""
-
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:237
 msgid "Use instruction text"
-msgstr ""
+msgstr "Κείμενο οδηγιών χρήσης"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:256
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:236
 msgid "Custom links are only available in "
-msgstr ""
+msgstr "Προσαρμοσμένες συνδέσεις διατίθενται μόνο σε"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:266
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:246
 msgid "Ingredient Links"
-msgstr ""
+msgstr "Links"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:267
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:247
 msgid "Links to be used in the ingredient list."
-msgstr ""
+msgstr "Συνδέσεις για να χρησιμοποιηθούν στον κατάλογο των συστατικών."
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:271
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:251
 msgid "No ingredient links"
-msgstr ""
+msgstr "Links"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:255
+msgid "Only link to ingredient archive page"
+msgstr "Μόνο το σύνδεσμο προς τη σελίδα αρχείο συστατικό"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:259
+msgid "Custom link if provided, otherwise archive page"
+msgstr "Προσαρμοσμένο σύνδεσμο, εφόσον υπάρχει, διαφορετικά σελίδα αρχείο"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:263
+msgid "Custom links if provided, otherwise no link"
+msgstr "Προσαρμοσμένες συνδέσεις, εφόσον υπάρχει, ειδάλλως καμία σχέση"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:274
+msgid "Custom Links"
+msgstr "Links"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:275
-msgid "Only link to ingredient archive page"
-msgstr ""
+msgid "Custom links can be added on the "
+msgstr "Προσαρμοσμένες συνδέσεις μπορούν να προστεθούν με το"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:275
+msgid "ingredients page"
+msgstr "Η σελίδα δεν βρέθηκε"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:279
-msgid "Custom link if provided, otherwise archive page"
-msgstr ""
+msgid "Open in the current tab/window"
+msgstr "Άνοιγμα στο τρέχον παράθυρο/καρτέλα"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:283
-msgid "Custom links if provided, otherwise no link"
-msgstr ""
+msgid "Open in a new tab/window"
+msgstr "Άνοιγμα σε νέα καρτέλα/παράθυρο"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:294
-msgid "Custom Links"
-msgstr ""
-
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:295
-msgid "Custom links can be added on the "
-msgstr ""
-
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:295
-msgid "ingredients page"
-msgstr ""
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:298
+msgid "Use Nofollow"
+msgstr "Χρήση Nofollow"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:299
-msgid "Open in the current tab/window"
-msgstr ""
-
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:303
-msgid "Open in a new tab/window"
-msgstr ""
-
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:318
-msgid "Use Nofollow"
-msgstr ""
-
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:319
 msgid "Add the nofollow attribute to custom ingredient links."
 msgstr ""
+"Προσθέστε το χαρακτηριστικό nofollow συστατικό προσαρμοσμένες συνδέσεις."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:307
+msgid "Print Version"
+msgstr "Έντυπη έκδοση"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:318
+msgid "Title Text"
+msgstr "Title:"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:319
+msgid "Title of the new webpage that opens."
+msgstr "Τίτλος της Νέα ιστοσελίδας που ανοίγει."
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:327
-msgid "Print Version"
-msgstr ""
+msgid "RSS Feed"
+msgstr "Ροή RSS"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:332
+msgid "Recipe Posts"
+msgstr "Δημοσιεύσεις από"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:338
-msgid "Title Text"
-msgstr ""
-
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:339
-msgid "Title of the new webpage that opens."
-msgstr ""
-
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:347
-msgid "RSS Feed"
-msgstr ""
-
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:352
-msgid "Recipe Posts"
-msgstr ""
-
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:358
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:384
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:466
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:364
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:446
 #: wp-ultimate-recipe-premium/premium/addons/recipe-search/widgets/recipe_search_widget.php:87
 msgid "Display"
-msgstr ""
+msgstr "Display recent posts from any category."
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:362
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:470
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:342
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:450
 msgid "Only the excerpt"
-msgstr ""
+msgstr "Μόνο το απόσπασμα"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:366
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:474
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:346
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:454
 msgid "The entire recipe"
-msgstr ""
+msgstr "Η ολόκληρη την συνταγή"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:358
+msgid "Recipe Shortcode"
+msgstr "Συνταγή Shortcode"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:365
+msgid "Output the recipe shortcode in RSS feeds?"
+msgstr "Παραγωγή η συνταγή shortcode σε RSS feeds;"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:373
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:516
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:692
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:763
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1184
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1723
+msgid "Advanced"
+msgstr "Προχωρημένα"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:378
-msgid "Recipe Shortcode"
-msgstr ""
+msgid "Mobile"
+msgstr "Κινητό τηλέφωνο:"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:384
+msgid "Responsive Breakpoint"
+msgstr "Ανταποκρίνεται σημείο διακοπής"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:385
-msgid "Output the recipe shortcode in RSS feeds?"
-msgstr ""
-
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:393
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:536
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:748
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:840
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1349
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1915
-msgid "Advanced"
-msgstr ""
-
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:398
-msgid "Mobile"
-msgstr ""
-
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:404
-msgid "Responsive Breakpoint"
-msgstr ""
-
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:405
 msgid ""
 "The width of the recipe box at which will be switched to the mobile version."
 msgstr ""
+"Το πλάτος του πλαισίου συνταγή με την οποία θα συνδεθούν με την κινητή "
+"έκδοση."
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:421
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:401
 msgid "Force CSS style"
-msgstr ""
+msgstr "Enter custom CSS here."
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:422
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:402
 msgid ""
 "This ensures maximum compatibility with most themes. Can be disabled for "
 "advanced usage."
 msgstr ""
+"Αυτό εξασφαλίζει μέγιστη συμβατότητα με τα περισσότερα θέματα. Μπορεί να "
+"απενεργοποιηθεί για προχωρημένη χρήση."
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:428
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:408
 msgid "Include Font Awesome"
-msgstr ""
+msgstr "Font for Headings"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:429
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:409
 msgid "You can disable this if your theme already includes Font Awesome."
 msgstr ""
+"Μπορείτε να απενεργοποιήσετε αυτό αν το θέμα σας περιλαμβάνει ήδη φοβερό "
+"γραμματοσειρά."
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:435
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:415
 msgid "Output Inline CSS"
-msgstr ""
+msgstr "Enter custom CSS here."
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:436
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:416
 msgid "When disabled the Template Editor will not output any inline CSS."
 msgstr ""
+"Όταν άτομα με ειδικές ανάγκες το συντάκτη προτύπων δεν θα εμφανίσει "
+"οποιοδήποτε inline CSS."
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:442
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:422
 msgid "Use base CSS"
-msgstr ""
+msgstr "Custom CSS"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:443
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:423
 msgid "When disabled the base CSS file will not be included."
-msgstr ""
+msgstr "Όταν απενεργοποιηθεί η βάση CSS αρχείο δεν θα συμπεριληφθούν."
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:454
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:434
 msgid "Recipe Archive"
-msgstr ""
+msgstr "Συνταγή αρχείο"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:460
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:440
 msgid "Recipe Archive Pages"
-msgstr ""
+msgstr "Pages"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:485
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:465
 msgid "Display Thumbnail"
-msgstr ""
+msgstr "Display this in the home page slideshow."
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:486
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:466
 msgid "Thumbnail position depends on the theme you use"
-msgstr ""
+msgstr "Μικρογραφία θέση εξαρτάται από το θέμα που χρησιμοποιείτε"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:490
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:470
 msgid "Never"
-msgstr ""
+msgstr "Ποτέ δεν"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:494
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:474
 msgid "Only on archive pages"
-msgstr ""
+msgstr "Pages"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:498
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:478
 msgid "Only on recipe pages"
-msgstr ""
+msgstr "Pages"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:502
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:482
 msgid "Always"
-msgstr ""
+msgstr "Πάντοτε"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:528
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1695
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:508
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1530
 msgid "404 error/page not found?"
-msgstr ""
+msgstr "Η σελίδα δεν βρέθηκε"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:529
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1696
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:509
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1531
 msgid "Try"
 msgstr ""
+"We are sorry, no results were found. You can try to find some related posts "
+"using the search function."
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:529
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1696
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:509
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1531
 msgid "flushing your permalinks"
-msgstr ""
+msgstr "Η διεύθυνση email σας δεν θα δημοσιευθεί."
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:542
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:522
 msgid "Disable Recipe Archive"
-msgstr ""
+msgstr "Απενεργοποιήσετε το αρχείο συνταγή"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:543
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:523
 msgid "Make sure to flush your permalinks after changing this setting."
 msgstr ""
+"Σιγουρευτείτε για να ξεπλύνετε το permalinks σας μετά την αλλαγή αυτής της "
+"ρύθμισης."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:532
+msgid "Partner Integrations"
+msgstr "Ολοκληρώσεις συνεργάτη"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:544
+msgid "BigOven"
+msgstr "BigOven"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:545
+msgid "Show save recipe to BigOven button."
+msgstr "Εμφάνιση αποθηκεύσετε συνταγή να BigOven κουμπί."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:551
+msgid "Food Fanatic"
+msgstr "Φανατικός τροφίμων"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:552
-msgid "Partner Integrations"
-msgstr ""
-
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:565
-msgid ""
-"Connect your recipes to leading online grocers with the Chicory \"get "
-"ingredients\" button."
-msgstr ""
-
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:575
-msgid "I agree to Chicory's"
-msgstr ""
-
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:575
-msgid "terms of use"
-msgstr ""
-
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:583
-msgid ""
-"You need to agree to Chicory's terms of use if you want the button to show "
-"up."
-msgstr ""
-
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:601
-msgid "Show save recipe to BigOven button."
-msgstr ""
-
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:608
 msgid "Show save recipe to Food Fanatic button."
-msgstr ""
+msgstr "Εμφάνιση αποθηκεύσετε συνταγή τροφίμων φανατικός κουμπί."
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:617
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:561
 msgid "Recipe Sharing"
-msgstr ""
+msgstr "Κοινή χρήση συνταγή"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:629
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:573
 msgid "Enable Sharing"
-msgstr ""
+msgstr "Enable Slideshow"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:630
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:574
 msgid "Show sharing buttons."
-msgstr ""
+msgstr "Select a hover color for your buttons."
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:637
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:581
 msgid "Language"
-msgstr ""
+msgstr "Γλώσσα"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:643
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:587
 msgid "Available languages can be found over here:"
-msgstr ""
+msgstr "Διαθέσιμες γλώσσες μπορούν να βρεθούν εδώ:"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:671
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:615
 msgid "Default text to share"
-msgstr ""
+msgstr "Share IT:"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:688
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:857
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1069
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1088
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1125
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1416
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1728
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:632
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:780
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:992
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1011
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1048
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1251
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1563
 msgid "Important"
-msgstr ""
+msgstr "ΣΗΜΑΝΤΙΚΟ!"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:689
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:633
 msgid "Use %title% as a placeholder for the recipe title."
-msgstr ""
+msgstr "Χρήση τίτλο % ως σύμβολο κράτησης θέσης για τίτλο συνταγή."
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:716
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:660
 msgid "Recipe Fields"
-msgstr ""
+msgstr "Συνταγή πεδία"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:733
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:677
 msgid "Custom Recipe Fields"
-msgstr ""
+msgstr "Upload a custom logo."
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:754
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:698
 msgid "Show Custom Fields in User Submission form"
-msgstr ""
+msgstr "Εμφάνιση προσαρμοσμένων πεδίων στη φόρμα χρήστη υποβολής"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:760
-msgid "Fields"
-msgstr ""
-
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:761
-msgid "Fields to show in the User Submission form."
-msgstr ""
-
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:784
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1229
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:707
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1116
 msgid "Recipe Tags"
-msgstr ""
+msgstr "Ετικέτες"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:790
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:713
 msgid "Custom Recipe Tags"
-msgstr ""
+msgstr "Ετικέτες"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:804
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1256
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:727
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1143
 msgid "Hide Custom Tags"
-msgstr ""
+msgstr "Λεπτομέρειες"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:805
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:728
 msgid "Do not show these tags in the Recipe Box."
-msgstr ""
+msgstr "Δεν δείχνουν αυτές τις ετικέτες στο παράθυρο συνταγή."
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:819
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:742
 msgid "WordPress Categories & Tags"
-msgstr ""
+msgstr "WordPress Repository"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:825
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:748
 msgid "Use Categories and Tags"
-msgstr ""
+msgstr "Ετικέτες"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:826
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:749
 msgid "Use the default WP Categories and Tags to organize your recipes."
 msgstr ""
+"Χρησιμοποιήστε την προεπιλογή WP κατηγορίες και ετικέτες για να οργανώσετε "
+"τις συνταγές σας."
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:832
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:755
 msgid "Show Recipes in Archives"
-msgstr ""
+msgstr "Archives by Subject:"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:833
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:756
 msgid "Show recipes in the WP Categories and Tags archives."
-msgstr ""
+msgstr "Δείχνουν συνταγές στα αρχεία WP κατηγορίες και ετικέτες."
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:858
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:781
 msgid ""
 "Categories will only show up as tags in the recipe if they have a parent "
 "category. For example: a \"Courses\" parent category with \"Main Dish\" and "
 "\"Dessert\" as child categories assigned to your recipes."
 msgstr ""
+"Κατηγορίες θα εμφανίζεται μόνο ως Ετικέτες στη συνταγή αν έχουν μια "
+"κατηγορία μητρική. Για παράδειγμα: μια κατηγορία \\\"Μαθήματα\\\" μητρική με "
+"«Κύριο πιάτο» και «Επιδόρπιο» ως παιδί κατηγορίες που έχουν ανατεθεί στις "
+"συνταγές σας."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:791
+msgid "Show Categories in Recipe"
+msgstr "Number of Projects to Show"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:792
+msgid "Use WP categories as if they are tags for their parent category."
+msgstr "Χρήση WP κατηγορίες, σαν να είναι Ετικέτες για την κατηγορία μητρική."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:798
+msgid "Show Categories Filter"
+msgstr "Filter: "
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:799
+msgid "Users can see the categories when filtering."
+msgstr "Οι χρήστες να βλέπουν τις κατηγορίες κατά το φιλτράρισμα."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:805
+msgid "Show Tags Filter"
+msgstr "Ετικέτες"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:806
+msgid "Users can see the tags when filtering."
+msgstr "Οι χρήστες να βλέπουν τις ετικέτες κατά το φιλτράρισμα."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:815
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:838
+msgid "User Ratings"
+msgstr "Users Ratings"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:842
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:883
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:547
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:565
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:583
+msgid "Disabled"
+msgstr "Ανενεργό"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:846
+msgid "Only logged in users can rate recipes"
+msgstr "Μόνο συνδεδεμένοι σε χρήστες να χαρακτηρίσετε τις συνταγές"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:850
+msgid "Everyone can rate recipes"
+msgstr "Ο καθένας να χαρακτηρίσετε τις συνταγές"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:861
+msgid "Show indicator"
+msgstr "Show Category"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:862
+msgid "Attract attention to the possibility to vote."
+msgstr "Προσελκύσει την προσοχή στην πιθανότητα να ψηφίσουν."
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:868
-msgid "Show Categories in Recipe"
-msgstr ""
+msgid "Minimum # Votes"
+msgstr "votes"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:869
-msgid "Use WP categories as if they are tags for their parent category."
-msgstr ""
-
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:875
-msgid "Show Categories Filter"
-msgstr ""
-
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:876
-msgid "Users can see the categories when filtering."
-msgstr ""
-
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:882
-msgid "Show Tags Filter"
-msgstr ""
-
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:883
-msgid "Users can see the tags when filtering."
-msgstr ""
-
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:892
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:915
-msgid "User Ratings"
-msgstr ""
-
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:919
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:960
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:551
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:569
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:587
-msgid "Disabled"
-msgstr ""
-
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:923
-msgid "Only logged in users can rate recipes"
-msgstr ""
-
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:927
-msgid "Everyone can rate recipes"
-msgstr ""
-
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:938
-msgid "Show indicator"
-msgstr ""
-
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:939
-msgid "Attract attention to the possibility to vote."
-msgstr ""
-
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:945
-msgid "Minimum # Votes"
-msgstr ""
-
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:946
 msgid ""
 "Minimum number of votes needed before sharing the rating as metadata used by "
 "Google and other search engines."
 msgstr ""
+"Ελάχιστος αριθμός των ψήφων που απαιτούνται προτού μοιραστείτε την "
+"αξιολόγηση ως μετα-δεδομένα που χρησιμοποιούνται από το Google και άλλες "
+"μηχανές αναζήτησης."
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:955
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:878
 msgid "Rounding Ratings"
-msgstr ""
+msgstr "Users Ratings"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:956
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:879
 msgid "Round the ratings presented in the metadata."
-msgstr ""
+msgstr "Γύρω από τους χαρακτηρισμούς που παρουσιάζονται με τα μετα-δεδομένα."
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:964
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:887
 msgid "Round up to nearest half"
-msgstr ""
+msgstr "Στρογγυλοποίηση πλησιέστερο μισό"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:968
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:891
 msgid "Round up to nearest integer"
-msgstr ""
+msgstr "Στρογγυλοποίηση πλησιέστερο ακέραιο"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:982
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:905
 msgid "Unit Conversion"
-msgstr ""
+msgstr "Μετατροπή μονάδων"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:987
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:910
 msgid "General Settings"
-msgstr ""
+msgstr "General"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1009
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:932
 msgid "Allow Conversion"
-msgstr ""
+msgstr "Επιτρέπεται η μετατροπή"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1010
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:933
 msgid "Allow your visitors to switch between Imperial and Metric units."
 msgstr ""
+"Επιτρέπει στους επισκέπτες σας για εναλλαγή μεταξύ Imperial και μετρικές "
+"μονάδες."
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1031
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:478
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:481
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:954
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:474
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:477
 msgid "Recipe Grid"
-msgstr ""
+msgstr "Συνταγή πλέγμα"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1052
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:975
 msgid "Backwards Compatibility"
-msgstr ""
+msgstr "Προς τα πίσω συμβατότητα"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1070
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:993
 msgid "Use the [ultimate-recipe-grid] shortcode to display the Recipe Grid."
 msgstr ""
+"Χρησιμοποιήστε το shortcode [απόλυτη-συνταγή-πλέγμα] για να εμφανίσετε το "
+"πλέγμα συνταγή."
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1070
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1126
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1417
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1729
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:993
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1049
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1252
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1564
 msgid "The shortcode can be added to any page or post."
-msgstr ""
+msgstr "Το shortcode μπορεί να προστεθεί σε οποιαδήποτε σελίδα ή θέση."
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1089
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1012
 msgid ""
 "The Multi-Select, Match All and Parents match Children setting has been "
 "moved to the shortcode and can now be changed per Recipe Grid."
 msgstr ""
+"Η πολλαπλή επιλογή, όλα ταιριάζουν και γονείς ταιριάζει παιδιά ρύθμιση έχει "
+"μετακινηθεί προς την shortcode και τώρα μπορεί να αλλάξει ανά συνταγή πλέγμα."
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1102
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1025
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:338
 msgid "User Submission"
-msgstr ""
+msgstr "Όνομα"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1126
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1417
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1049
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1252
 msgid "Use the following shortcode to display the front-end form:"
-msgstr ""
+msgstr "Χρησιμοποιήστε το παρακάτω shortcode εμφανίζω front-end εντύπου:"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1136
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1059
 msgid "Allow submissions from"
-msgstr ""
+msgstr "Επιτρέπουν παρατηρήσεις από"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1140
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1308
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1431
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1454
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1477
-msgid "Nobody"
-msgstr ""
-
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1140
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1431
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1454
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1477
-msgid "disabled"
-msgstr ""
-
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1144
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1063
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1087
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1266
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1289
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1312
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1435
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1458
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1481
-msgid "Guests and registered users"
-msgstr ""
+msgid "Nobody"
+msgstr "Κανείς δεν"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1148
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1063
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1266
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1289
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1312
+msgid "disabled"
+msgstr "Ανενεργό"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1067
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1091
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1270
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1293
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1316
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1439
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1462
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1485
+msgid "Guests and registered users"
+msgstr "This email is already registered."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1071
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1095
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1274
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1297
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1320
 msgid "Registered users only"
-msgstr ""
+msgstr "This email is already registered."
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1159
-msgid "Allow visitors to preview their submission"
-msgstr ""
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1082
+msgid "Auto approve submissions from"
+msgstr "Auto εγκρίνει υποβολές από"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1165
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1083
+msgid "Publish recipe immediately on submission."
+msgstr "Δημοσιεύσει συνταγή αμέσως μετά την υποβολή."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1106
 msgid "After-submission text"
-msgstr ""
+msgstr "Home Slideshow Text"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1166
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1107
 msgid "Text to be shown after a user has submitted a recipe."
-msgstr ""
+msgstr "Κειμένου να εμφανίζεται μετά χρήστης υπέβαλε μια συνταγή."
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1166
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1107
 msgid "HTML can be used."
-msgstr ""
+msgstr "HTML μπορεί να χρησιμοποιηθεί."
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1169
-#: wp-ultimate-recipe-premium/premium/addons/user-submissions/user-submissions.php:348
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1110
+#: wp-ultimate-recipe-premium/premium/addons/user-submissions/user-submissions.php:178
 msgid "Recipe submitted! Thank you, your recipe is now awaiting moderation."
 msgstr ""
+"Συνταγή που υποβλήθηκε! Σας ευχαριστώ, σας συνταγή τώρα αναμένει τη "
+"μετριοπάθεια."
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1174
-msgid "Required Fields"
-msgstr ""
-
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1175
-msgid "Fields that are required to fill in."
-msgstr ""
-
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1193
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1199
-#: wp-ultimate-recipe-premium/premium/addons/user-submissions/templates/public_recipe_form.php:126
-#: wp-ultimate-recipe-premium/premium/addons/user-submissions/user-submissions.php:291
-msgid "Security Question"
-msgstr ""
-
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1200
-msgid "Use a security question to prevent spam."
-msgstr ""
-
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1206
-msgid "Question"
-msgstr ""
-
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1207
-msgid "The question your visitors have to answer."
-msgstr ""
-
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1217
-msgid "Answer"
-msgstr ""
-
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1218
-msgid "The correct answer to that question."
-msgstr ""
-
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1235
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1122
 msgid "Allow Multiselect"
-msgstr ""
+msgstr "Επιτρέψει Multiselect"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1236
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1123
 msgid "Allow users to select multiple terms per category."
-msgstr ""
+msgstr "Επιτρέπουν στους χρήστες να επιλέξετε πολλαπλούς όρους ανά κατηγορία."
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1242
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1129
 msgid "User Submitted Categories"
-msgstr ""
+msgstr "User name already exists."
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1243
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1130
 msgid "Allow users to assign categories when submitting recipes."
 msgstr ""
+"Επιτρέπουν στους χρήστες για να αντιστοιχίσετε κατηγορίες κατά την υποβολή "
+"συνταγές."
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1249
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1136
 msgid "User Submitted Tags"
-msgstr ""
+msgstr "Ετικέτες"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1250
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1137
 msgid "Allow users to assign tags when submitting recipes."
 msgstr ""
+"Επιτρέπουν στους χρήστες να εκχωρήσετε Ετικέτες κατά την υποβολή συνταγές."
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1257
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1144
 msgid "Hide these tags on the user submission page."
-msgstr ""
+msgstr "Απόκρυψη αυτές τις ετικέτες στη σελίδα υποβολή χρήστη."
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1270
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1157
 msgid "Hide Category Terms"
-msgstr ""
+msgstr "Λεπτομέρειες"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1283
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1170
 msgid "Hide Tag Terms"
-msgstr ""
+msgstr "Λεπτομέρειες"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1297
-msgid "Approval Rules"
-msgstr ""
-
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1303
-msgid "Auto approve"
-msgstr ""
-
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1304
-msgid "Publish recipe immediately on submission."
-msgstr ""
-
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1327
-msgid "Auto approve specific users"
-msgstr ""
-
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1328
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1342
-msgid "Publish recipes from these users immediately on submission."
-msgstr ""
-
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1341
-msgid "Auto approve users with role or capability"
-msgstr ""
-
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1362
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1197
 msgid "Can only select existing ingredients"
-msgstr ""
+msgstr "Να επιλέξετε μόνο τα υπάρχοντα συστατικά"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1363
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1198
 msgid ""
 "When enabled visitors will only be able to select from a list of existing "
 "ingredients."
 msgstr ""
+"Όταν ενεργοποιηθεί επισκέπτες μόνο θα είναι σε θέση να επιλέξετε από μια "
+"λίστα των σημερινών συστατικών."
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1369
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1204
 msgid "Email administrator"
-msgstr ""
+msgstr "Email:"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1370
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1205
 msgid "Send an email notification when a new recipe is submitted."
 msgstr ""
+"Στείλτε μια ειδοποίηση μέσω ηλεκτρονικού ταχυδρομείου όταν υποβάλλεται μια "
+"νέα συνταγή."
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1376
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1211
 msgid "Restrict Media Library Access"
-msgstr ""
+msgstr "Περιορίζουν την πρόσβαση στη βιβλιοθήκη πολυμέσων"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1377
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1212
 msgid "Only show media library for editors and up"
-msgstr ""
+msgstr "Εμφάνιση μόνο βιβλιοθήκη πολυμέσων για συντάκτες και ασφαλείας"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1383
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1218
 msgid "Use Media Manager"
-msgstr ""
+msgstr "Χρησιμοποιήστε τη διαχείριση Media"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1384
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1219
 msgid "Let logged in users use the Media Manager to upload images"
 msgstr ""
+"Ας συνδεμένους χρήστες να χρησιμοποιήσετε το Media Manager να ανεβάσετε "
+"εικόνες"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1393
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:351
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1228
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:347
 msgid "User Menus"
-msgstr ""
+msgstr "Όνομα"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1427
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1262
 msgid "Enable user menus for"
-msgstr ""
+msgstr "Όνομα"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1450
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1285
 msgid "Enable user menus save function for"
-msgstr ""
+msgstr "Επιτρέψει το χρήστη μενού λειτουργία αποθήκευσης για"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1473
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1308
 msgid "Show add to shopping list button for"
-msgstr ""
+msgstr "Εμφάνιση αυξάνω ψώνια λίστα κουμπί για"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1505
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1340
 msgid "Show Checkboxes"
-msgstr ""
+msgstr "Show Category"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1506
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1341
 msgid "Show checkboxes in the shopping list to cross items of the list."
 msgstr ""
+"Δείχνουν τα πλαίσια ελέγχου στη λίστα αγορών να διασχίσουν τα στοιχεία της "
+"λίστας."
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1519
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1354
 msgid "Consolidate Ingredients"
-msgstr ""
+msgstr "Εδραίωση συστατικά"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1520
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1355
 msgid "Convert units to be able to consolidate ingredients into 1 line."
-msgstr ""
+msgstr "Μετατροπή μονάδων να είναι σε θέση να εδραιωθεί συστατικά σε 1 γραμμή."
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1526
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1361
 msgid "Unit System Dropdown"
-msgstr ""
+msgstr "Μονάδα σύστημα αναπτυσσόμενο"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1527
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1362
 msgid "Users can use a dropdown to select the unit system they want."
 msgstr ""
+"Users μπορώ χρήση ένα αναπτυσσόμενο μενού επιλέξτε το σύστημα μονάδων που "
+"θέλουν."
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1534
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1369
 msgid "Default Unit System"
-msgstr ""
+msgstr "Βασική ταξινόμηση"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1535
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1370
 msgid "Unit system to use for the shopping list feature."
 msgstr ""
+"Μονάδα συστήματος που θα χρησιμοποιηθεί για τη εμπορική λειτουργία λίστα."
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1558
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1393
 msgid "Number of unit systems displayed in the shopping list."
-msgstr ""
+msgstr "Αριθμό συστημάτων μονάδα που εμφανίζεται στη λίστα αγορών."
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1635
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1470
 msgid "Print Options"
-msgstr ""
+msgstr "Theme Options"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1641
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1476
 msgid "Print Shopping List Button"
-msgstr ""
+msgstr "Εκτυπώσετε ψώνια λίστα κουμπί"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1642
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1477
 msgid "Show a button to print the shopping list."
-msgstr ""
+msgstr "Δείχνουν ένα κουμπί για να εκτυπώσετε τη λίστα αγορών."
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1648
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1483
 msgid "Print Menu Button"
-msgstr ""
+msgstr "Button Color"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1649
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1484
 msgid "Show a button to print the entire menu (Shopping list and recipes)."
 msgstr ""
+"Δείχνουν ένα κουμπί για να εκτυπώσετε ολόκληρο το μενού (εμπορικό κατάλογο "
+"και συνταγές)."
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1705
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:422
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1540
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:418
 msgid "Favorite Recipes"
-msgstr ""
+msgstr "Αγαπημένες συνταγές"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1729
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1564
 msgid "Use the following shortcode to display the list of favorite recipes:"
 msgstr ""
+"Χρησιμοποιήστε το παρακάτω shortcode να εμφανίσετε τη λίστα αγαπημένων σας "
+"συνταγών:"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1739
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1574
 msgid "Enable Button"
-msgstr ""
+msgstr "Button Color"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1748
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1583
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/nutritional-information.php:121
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:2
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:82
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:202
 msgid "Nutritional Information"
-msgstr ""
+msgstr "Διατροφικές πληροφορίες"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1771
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1606
 msgid "Show Notice"
-msgstr ""
+msgstr "Dismiss this notice"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1772
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1607
 msgid "Show notice to update Nutritional Information after updating a recipe."
 msgstr ""
+"Εμφάνιση ειδοποίηση για να ενημερώσει τις διατροφικές πληροφορίες μετά την "
+"ενημέρωση του μια συνταγή."
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1781
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1616
 msgid "Import Recipes"
-msgstr ""
+msgstr "Εισαγωγή συνταγές"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1787
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1622
 #: wp-ultimate-recipe-premium/core/vendor/vafpress/views/option/impexp.php:7
 msgid "Import Options"
-msgstr ""
+msgstr "Select options"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1793
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1628
 msgid "Generic ingredient units"
-msgstr ""
+msgstr "Γενική συστατικό μονάδες"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1794
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1629
 msgid ""
 "Generic ingredient units to recognize while importing. Separate with a ;"
 msgstr ""
+"Γενική συστατικό μονάδες να αναγνωρίσει κατά την εισαγωγή. Διαχωρίστε τα με "
+"ένα?"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1800
-msgid "Import order"
-msgstr ""
-
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1804
-msgid "Import oldest recipes first"
-msgstr ""
-
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1808
-msgid "Import latest recipes first"
-msgstr ""
-
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1820
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1636
 msgid "Import From"
-msgstr ""
+msgstr "Εισαγωγή από"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1888
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1696
 msgid "Export Recipes"
-msgstr ""
+msgstr "Εξαγωγή συνταγές"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1935
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1743
 msgid "Recipes act as posts"
-msgstr ""
+msgstr "Δημοσιεύσεις από"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1936
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1744
 msgid ""
 "Recipes act like normal posts. For example: they show up on your front page."
 msgstr ""
+"Συνταγές που ενεργούν σαν κανονικό θέσεις. Για παράδειγμα: εμφανίζονται στη "
+"σελίδα σας μπροστά."
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1942
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1750
 msgid "Recipes in admin posts"
-msgstr ""
+msgstr "Admin"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1943
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1751
 msgid "Show recipes in admin posts overview when acting as posts."
-msgstr ""
+msgstr "Δείχνουν συνταγές στο admin θέσεις επισκόπηση, όταν ενεργεί ως θέσεις."
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1949
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1757
 msgid "Remove recipe slug"
-msgstr ""
+msgstr "Remove this item"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1950
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1758
 msgid ""
 "Make sure your slugs are unique across posts, pages and recipes! Your "
 "archive page will still be available."
 msgstr ""
+"Βεβαιωθείτε ότι σας γυμνοσάλιαγκες είναι μοναδικά σε όλη την θέσεις, σελίδες "
+"και συνταγές! Σελίδα αρχείο σας θα είναι ακόμα διαθέσιμο."
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1956
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1764
 msgid "Use Yandex metadata"
-msgstr ""
+msgstr "Χρήση Yandex μεταδεδομένων"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1957
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1765
 msgid "Add a resultPhoto meta field for Yandex."
-msgstr ""
+msgstr "Προσθέστε ένα πεδίο μετα resultPhoto για Yandex."
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1964
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1772
 msgid "Shortcode Editor"
-msgstr ""
+msgstr "Shortcode Editor"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1978
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1786
 msgid "Show shortcode editor for"
-msgstr ""
+msgstr "Number of Projects to Show"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1979
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1787
 msgid ""
 "Where do you want to be able to insert recipes with the shortcode editor?"
 msgstr ""
+"Πού θέλετε να είναι σε θέση να παρεμβάλει συνταγές με τον επεξεργαστή "
+"shortcode;"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1996
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1804
 msgid "Assets"
-msgstr ""
+msgstr "Ενεργητικό"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:2002
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1810
 msgid "Use minified assets"
-msgstr ""
+msgstr "Χρήση minified περιουσιακών στοιχείων"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:2003
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1811
 msgid "Use minified assets to improve page load speed."
 msgstr ""
+"Χρησιμοποιήστε το minified περιουσιακά στοιχεία για να βελτιώσετε την σελίδα "
+"φορτίο ταχύτητα."
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:2009
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1817
 msgid "Generate minified assets"
-msgstr ""
+msgstr "Δημιουργεί minified περιουσιακών στοιχείων"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:2010
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1818
 msgid "Generate minified assets on the fly."
-msgstr ""
+msgstr "Δημιουργεί minified περιουσιακών στοιχείων σε ώρα πτήσης."
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:2016
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1824
 msgid "Minified assets directory"
-msgstr ""
+msgstr "Κατάλογος minified περιουσιακών στοιχείων"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:2017
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1825
 msgid "Directory to generate the minified assets to. Should be writable."
 msgstr ""
+"Κατάλογος για τη δημιουργία minified περιουσίας που πρέπει. Πρέπει να είναι "
+"εγγράψιμος."
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:2030
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1838
 msgid "Custom Code"
-msgstr ""
+msgstr "Enter your custom analytics code. (e.g. Google Analytics)."
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:2037
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1845
 msgid "Public CSS"
-msgstr ""
+msgstr "Custom CSS"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:2044
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1852
 msgid "Print Recipe CSS"
-msgstr ""
+msgstr "Enter custom CSS here."
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:2051
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1859
 msgid "Print Shopping List CSS"
-msgstr ""
+msgstr "Εκτυπώσετε ψώνια λίστα CSS"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:19
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:5
 msgid "The recipe archive can be found at"
-msgstr ""
+msgstr "Η συνταγή αρχείο μπορεί να βρεθεί σε"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:25
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:11
 msgid "The user menus archive can be found at"
-msgstr ""
+msgstr "Το αρχείο μενού χρήστη μπορούν να βρεθούν στο"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:53
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:55
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:34
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:36
 msgid "Manage custom recipe fields"
-msgstr ""
+msgstr "Διαχειριστείτε την προσαρμοσμένη συνταγή πεδία"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:82
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:44
 msgid "Manage custom recipe tags"
-msgstr ""
+msgstr "Διαχειριστείτε την προσαρμοσμένη συνταγή Ετικέτες"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:94
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:96
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:56
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:58
 msgid "Open the Template Editor"
-msgstr ""
+msgstr "Ανοίξτε τον επεξεργαστή πρότυπο"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:121
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:83
 msgid "Import EasyRecipe recipes"
-msgstr ""
+msgstr "Εισαγωγή EasyRecipe συνταγές"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:126
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:88
 msgid "Import RecipeCard recipes"
-msgstr ""
+msgstr "Εισαγωγή RecipeCard συνταγές"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:131
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:93
 msgid "Import ReciPress recipes"
-msgstr ""
+msgstr "Εισαγωγή ReciPress συνταγές"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:136
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:98
 msgid "Import Ziplist recipes"
-msgstr ""
+msgstr "Εισαγωγή Ziplist συνταγές"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:141
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:103
 #: wp-ultimate-recipe-premium/premium/addons/import-xml/import-xml.php:26
 #: wp-ultimate-recipe-premium/premium/addons/import-xml/import-xml.php:38
 #: wp-ultimate-recipe-premium/premium/addons/import-xml/templates/before_importing.php:4
 #: wp-ultimate-recipe-premium/premium/addons/import-xml/templates/before_importing.php:15
 msgid "Import XML"
-msgstr ""
+msgstr "Εισαγωγή XML"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:146
-#: wp-ultimate-recipe-premium/premium/addons/import-fdx/import-fdx.php:26
-#: wp-ultimate-recipe-premium/premium/addons/import-fdx/import-fdx.php:38
-#: wp-ultimate-recipe-premium/premium/addons/import-fdx/templates/before_importing.php:4
-#: wp-ultimate-recipe-premium/premium/addons/import-fdx/templates/before_importing.php:15
-msgid "Import FDX"
-msgstr ""
-
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:151
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:108
 #: wp-ultimate-recipe-premium/premium/addons/export-xml/export-xml.php:35
 #: wp-ultimate-recipe-premium/premium/addons/export-xml/export-xml.php:47
 #: wp-ultimate-recipe-premium/premium/addons/export-xml/templates/before_importing.php:4
 #: wp-ultimate-recipe-premium/premium/addons/export-xml/templates/before_importing.php:18
 msgid "Export XML"
-msgstr ""
+msgstr "Εξαγωγή XML"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:241
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:198
 msgid "Reset Demo Recipe"
-msgstr ""
+msgstr "Επαναφορά Demo συνταγή"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:246
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:203
 msgid "Manage Recipe Grids"
-msgstr ""
+msgstr "Διαχείριση δικτύων συνταγή"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:251
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:208
 msgid "Recalculate Recipe Grid Terms"
-msgstr ""
+msgstr "Επαν/σμός συνταγή πλέγμα όρους"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:256
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:213
 msgid "Reset Cache"
-msgstr ""
-
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:264
-#: wp-ultimate-recipe-premium/premium/addons/user-submissions/templates/public_recipe_form.php:7
-msgid "Recipe title"
-msgstr ""
-
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:265
-#: wp-ultimate-recipe-premium/premium/addons/user-submissions/templates/public_recipe_form.php:15
-msgid "Your name"
-msgstr ""
-
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:265
-msgid "guests"
-msgstr ""
+msgstr "Επαναφορά της μνήμης Cache"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:7
 msgid "Display a random recipe"
-msgstr ""
+msgstr "Display this in the home page slideshow."
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:13
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:48
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:83
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:492
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:488
 msgid "Template"
 msgstr ""
+"For use with the Portfolio page template. <br/><br/>Enter the names of the "
+"skills (separated by commas) you want shown on this page. If left blank, all "
+"skills will be used."
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:29
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:64
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:246
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:291
 msgid "Select a recipe to display"
-msgstr ""
+msgstr "Select options"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:29
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:246
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:438
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:434
 msgid "Ordered by date added"
-msgstr ""
+msgstr "Εμφάνιση ημερομηνίας"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:64
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:291
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:457
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:453
 msgid "Ordered by title"
-msgstr ""
+msgstr "Title:"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:101
 msgid "Recipe Index"
-msgstr ""
+msgstr "ΔΕΙΚΤΗΣ ΣΥΝΤΑΓΗ"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:104
 msgid "Basic Recipe Index"
-msgstr ""
+msgstr "Βασική συνταγή δείκτης"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:110
 msgid "Show headers"
-msgstr ""
+msgstr "Λεπτομέρειες"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:121
 msgid "Extended Recipe Index"
-msgstr ""
+msgstr "Επεκταθεί ΔΕΙΚΤΗΣ ΣΥΝΤΑΓΗ"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:121
 msgid "WP Ultimate Recipe Premium only"
-msgstr ""
+msgstr "WP απόλυτη συνταγή Premium μόνο"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:127
 #: wp-ultimate-recipe-premium/premium/addons/user-menus/templates/user-menus.php:89
 msgid "Group by"
-msgstr ""
+msgstr "Ομαδοποίηση κατά"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:135
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:195
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:364
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:644
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:360
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:640
 #: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/import-easyrecipe.php:444
 #: wp-ultimate-recipe-premium/premium/addons/import-recipecard/import-recipecard.php:288
 #: wp-ultimate-recipe-premium/premium/helpers/recipe_columns.php:19
 #: wp-ultimate-recipe-premium/premium/helpers/recipe_columns.php:70
 msgid "Author"
-msgstr ""
+msgstr "Author:"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:139
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:523
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:614
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:519
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:610
 #: wp-ultimate-recipe-premium/premium/addons/recipe-search/widgets/recipe_search_widget.php:75
 #: wp-ultimate-recipe-premium/premium/addons/user-menus/templates/user-menus.php:8
-#: wp-ultimate-recipe-premium/premium/addons/user-submissions/templates/public_recipe_form.php:71
-#: wp-ultimate-recipe-premium/premium/addons/user-submissions/templates/public_recipe_form.php:79
+#: wp-ultimate-recipe-premium/premium/addons/user-submissions/templates/public_recipe_form.php:54
 msgid "Category"
-msgstr ""
+msgstr "Κατηγορία:"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:156
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:597
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:593
 msgid "Limit Author"
-msgstr ""
+msgstr "Author:"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:169
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:610
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:606
 msgid "Limit by"
-msgstr ""
+msgstr "Περιορίσει από"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:182
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:631
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:627
 msgid "Limit by values"
-msgstr ""
+msgstr "Περιορίσει από τιμές"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:182
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:631
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:627
 msgid "(separate slugs with ;)"
-msgstr ""
+msgstr "(ξεχωριστή γυμνοσάλιαγκες με ;)"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:187
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:384
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:636
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:380
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:632
 msgid "Sort by"
-msgstr ""
+msgstr "Ταξινόμηση"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:199
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:392
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:648
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:388
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:644
 msgid "Date Added"
-msgstr ""
+msgstr "Date"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:203
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:656
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:652
 msgid "Random"
-msgstr ""
+msgstr "Τυχαίες"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:213
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:402
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:666
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:398
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:662
 msgid "Sort order"
-msgstr ""
+msgstr "Ταξινόμηση"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:217
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:406
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:670
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:402
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:666
 msgid "Ascending"
-msgstr ""
+msgstr "Αύξουσα"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:221
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:410
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:674
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:406
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:670
 msgid "Descending"
-msgstr ""
+msgstr "Φθίνουσα"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:231
 msgid "Max number of recipes"
-msgstr ""
+msgstr "Number of posts:"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:238
 msgid "Premium only"
-msgstr ""
+msgstr "Πριμοδότηση μόνο"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:243
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/widgets/nutrition_label_widget.php:42
 msgid "Nutrition Label"
-msgstr ""
+msgstr "Enter a label for the URL."
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:265
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:310
 msgid "Alignment"
-msgstr ""
+msgstr "Ευθυγραμμία"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:269
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:314
 msgid "Left"
-msgstr ""
+msgstr "Left Footer Text"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:273
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:318
 msgid "Center"
-msgstr ""
+msgstr "Κέντρο"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:277
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:322
 msgid "Right"
-msgstr ""
+msgstr "Right Footer Text"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:281
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:326
 msgid "Inline"
-msgstr ""
+msgstr "Inline"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:341
 msgid "User Submissions form"
-msgstr ""
+msgstr "Όνομα"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:345
-msgid "List of submissions by currently logged in user with edit ability"
-msgstr ""
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:350
+msgid "User Menus form"
+msgstr "Όνομα"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:354
-msgid "User Menus form"
-msgstr ""
-
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:358
 msgid "List Menus by user"
-msgstr ""
+msgstr "Όνομα"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:368
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:364
 msgid "Currently logged in user"
-msgstr ""
+msgstr "Logged in as"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:425
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:421
 msgid "List logged in user's Favorite Recipes"
-msgstr ""
+msgstr "Λίστα συνδεθείς αγαπημένες συνταγές του χρήστη"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:431
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:427
 msgid "Shopping List"
-msgstr ""
+msgstr "Shopping cart"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:430
+msgid "Display a random menu"
+msgstr "Menu Color"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:434
-msgid "Display a random menu"
-msgstr ""
-
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:438
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:457
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:453
 msgid "Select a menu to display"
-msgstr ""
+msgstr "Select a color for your menu links."
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:444
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:463
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:440
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:459
 #: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:209
 #: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:247
 msgid "Menu"
-msgstr ""
+msgstr "My Account Menu"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:481
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:477
 msgid "Old version, use Grid shortcode button instead"
-msgstr ""
+msgstr "Παλιά έκδοση, χρησιμοποιήστε το κουμπί shortcode πλέγμα αντί"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:508
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:504
 msgid "Exclude recipes without a photo"
-msgstr ""
+msgstr "Αποκλείει της συνταγές χωρίς μια φωτογραφία"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:519
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:515
 msgid "Allow filtering by"
-msgstr ""
+msgstr "Επιτρέπει το φιλτράρισμα από"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:539
+msgid "Multi-Select"
+msgstr "Select options"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:543
-msgid "Multi-Select"
-msgstr ""
-
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:547
 msgid "Allow visitors to select multiple values for a tag or category."
 msgstr ""
+"Επιτρέπει στους επισκέπτες να επιλέξετε πολλές τιμές για μια ετικέτα ή την "
+"κατηγορία."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:557
+msgid "Match All"
+msgstr "All"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:561
-msgid "Match All"
-msgstr ""
-
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:565
 msgid "Recipes will only match if they match all selections."
-msgstr ""
+msgstr "Συνταγές θα ελεγχθεί μόνο αν ταιριάζουν όλες τις επιλογές."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:575
+msgid "Parents match Children"
+msgstr "Γονείς ταιριάζει παιδιά"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:579
-msgid "Parents match Children"
-msgstr ""
-
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:583
 msgid ""
 "Selecting a parent will also match recipes with a child category or tag of "
 "that parent."
 msgstr ""
+"Επιλογή ενός γονέα θα ταιριάζει επίσης συνταγές με ένα παιδί κατηγορία ή μια "
+"ετικέττα της εν λόγω μητρική."
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:684
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:680
 msgid "Limit recipes at start"
-msgstr ""
+msgstr "Όριο συνταγές ΕΝΑΡΞΗΣ"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress_menu.php:14
 msgid "clove"
-msgstr ""
+msgstr "γαρύφαλλο"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress_menu.php:15
 msgid "cloves"
-msgstr ""
+msgstr "γαρίφαλο"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress_menu.php:16
 msgid "leave"
-msgstr ""
+msgstr "Leave a Reply to %s"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress_menu.php:17
 msgid "leaves"
-msgstr ""
+msgstr "φύλλα"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress_menu.php:18
 msgid "slice"
-msgstr ""
+msgstr "φέτα"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress_menu.php:19
 msgid "slices"
-msgstr ""
+msgstr "φέτες"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress_menu.php:20
 msgid "piece"
-msgstr ""
+msgstr "κομμάτι"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress_menu.php:21
 msgid "pieces"
-msgstr ""
+msgstr "κομμάτια"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress_menu.php:22
 msgid "pinch"
-msgstr ""
+msgstr "τσίμπημα"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress_menu.php:23
 msgid "pinches"
-msgstr ""
+msgstr "τσιμπήματα"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress_shortcode.php:18
 msgid "Shortcodes"
-msgstr ""
+msgstr "ΣΥΝΤΟΜΟΙ"
 
 #: wp-ultimate-recipe-premium/core/static/drip_form.php:3
 msgid ""
 "Are you sure you want to dismiss this notice? (Make sure you have saved your "
 "changes first!)"
 msgstr ""
+"Είστε βέβαιοι ότι θέλετε να απορρίψετε αυτή η ειδοποίηση; (Βεβαιωθείτε ότι "
+"έχετε αποθηκεύσει τις αλλαγές σας πρώτα!)"
 
 #: wp-ultimate-recipe-premium/core/static/drip_form.php:3
 #: wp-ultimate-recipe-premium/core/static/getting_started_notice.php:3
 msgid "Hide this message"
-msgstr ""
+msgstr "Λεπτομέρειες"
 
 #: wp-ultimate-recipe-premium/core/vendor/vafpress/bootstrap.php:88
 #: wp-ultimate-recipe-premium/core/vendor/vafpress/classes/option.php:364
 #: wp-ultimate-recipe-premium/core/vendor/vafpress/classes/option.php:389
 msgid "Successful"
-msgstr ""
+msgstr "Επιτυχής"
 
 #: wp-ultimate-recipe-premium/core/vendor/vafpress/bootstrap.php:99
 msgid "Unauthorized function"
-msgstr ""
+msgstr "Παράνομη λειτουργία"
 
 #: wp-ultimate-recipe-premium/core/vendor/vafpress/classes/metabox.php:35
 msgid "[Development Mode] "
-msgstr ""
+msgstr "[Λειτουργία ανάπτυξη]"
 
 #: wp-ultimate-recipe-premium/core/vendor/vafpress/classes/metabox.php:566
 #: wp-ultimate-recipe-premium/core/vendor/vafpress/classes/metabox/alchemy.php:493
 msgid "Remove"
-msgstr ""
+msgstr "Remove this item"
 
 #: wp-ultimate-recipe-premium/core/vendor/vafpress/classes/metabox.php:588
 #: wp-ultimate-recipe-premium/core/vendor/vafpress/classes/metabox/alchemy.php:515
 msgid "Add More"
-msgstr ""
+msgstr "Περισσότερα"
 
 #: wp-ultimate-recipe-premium/core/vendor/vafpress/classes/option.php:47
 #: wp-ultimate-recipe-premium/core/vendor/vafpress/classes/option.php:48
 msgid "Vafpress Options"
-msgstr ""
+msgstr "Portfolio Options"
 
 #: wp-ultimate-recipe-premium/core/vendor/vafpress/classes/option.php:61
 msgid "Option Key is required"
-msgstr ""
+msgstr "Απαιτείται"
 
 #: wp-ultimate-recipe-premium/core/vendor/vafpress/classes/option.php:63
 msgid "Template Array/File is required"
-msgstr ""
+msgstr "Απαιτείται σειρά/αρχείο προτύπου"
 
 #: wp-ultimate-recipe-premium/core/vendor/vafpress/classes/option.php:65
 msgid "Page Slug is required"
-msgstr ""
+msgstr " (required)"
 
 #: wp-ultimate-recipe-premium/core/vendor/vafpress/classes/option.php:167
 msgid ""
 "Development Mode is Active, options' values won't be saved into database."
 msgstr ""
+"Τρόπος ανάπτυξης είναι ενεργό, τιμές επιλογές δεν θα αποθηκευτούν στη βάση "
+"δεδομένων."
 
 #: wp-ultimate-recipe-premium/core/vendor/vafpress/classes/option.php:306
 msgid "Can not be empty"
-msgstr ""
+msgstr "Δεν μπορεί να είναι άδειο"
 
 #: wp-ultimate-recipe-premium/core/vendor/vafpress/classes/option.php:331
 msgid "Invalid data"
-msgstr ""
+msgstr "Invalid e-mail."
 
 #: wp-ultimate-recipe-premium/core/vendor/vafpress/classes/option.php:394
 msgid "Unverified Access"
-msgstr ""
+msgstr "Πρόσβαση χωρίς επαλήθευση"
 
 #: wp-ultimate-recipe-premium/core/vendor/vafpress/classes/option.php:460
 msgid "Invalid template supplied"
-msgstr ""
+msgstr "Όνομα"
 
 #: wp-ultimate-recipe-premium/core/vendor/vafpress/classes/option.php:473
 msgid "Utility"
-msgstr ""
+msgstr "Χρησιμότητα"
 
 #: wp-ultimate-recipe-premium/core/vendor/vafpress/classes/option.php:479
 #: wp-ultimate-recipe-premium/core/vendor/vafpress/views/option/restore.php:13
 msgid "Restore Default"
-msgstr ""
+msgstr "Βασική ταξινόμηση"
 
 #: wp-ultimate-recipe-premium/core/vendor/vafpress/classes/option.php:488
 msgid "Export/Import"
-msgstr ""
+msgstr "Εξαγωγή/εισαγωγή"
 
 #: wp-ultimate-recipe-premium/core/vendor/vafpress/classes/option/control/set.php:359
 msgid "Saving successful"
-msgstr ""
+msgstr "Εξοικονόμησης επιτυχείς"
 
 #: wp-ultimate-recipe-premium/core/vendor/vafpress/classes/option/control/set.php:370
 msgid "Saving failed"
-msgstr ""
+msgstr "Registration failed"
 
 #: wp-ultimate-recipe-premium/core/vendor/vafpress/classes/option/control/set.php:376
 msgid "No changes made"
-msgstr ""
+msgstr "Δεν έχουν γίνει αλλαγές"
 
 #: wp-ultimate-recipe-premium/core/vendor/vafpress/classes/shortcodegenerator.php:263
 msgid "Insert"
-msgstr ""
+msgstr "Εισαγωγή"
 
 #: wp-ultimate-recipe-premium/core/vendor/vafpress/classes/shortcodegenerator.php:264
 msgid "Cancel"
-msgstr ""
+msgstr "Cancel Reply"
 
 #: wp-ultimate-recipe-premium/core/vendor/vafpress/config/messages.php:13
 msgid "Value needs to be Alphabet"
-msgstr ""
+msgstr "Τιμή πρέπει να είναι το αλφάβητο"
 
 #: wp-ultimate-recipe-premium/core/vendor/vafpress/config/messages.php:14
 msgid "Value needs to be Alphanumeric"
-msgstr ""
+msgstr "Τιμή πρέπει να είναι αλφαριθμητικός"
 
 #: wp-ultimate-recipe-premium/core/vendor/vafpress/config/messages.php:15
 msgid "Value needs to be Numeric"
-msgstr ""
+msgstr "Τιμή πρέπει να είναι αριθμητικό"
 
 #: wp-ultimate-recipe-premium/core/vendor/vafpress/config/messages.php:16
 msgid "Value needs to be Valid Email"
-msgstr ""
+msgstr "Τιμή πρέπει να είναι έγκυρο Email"
 
 #: wp-ultimate-recipe-premium/core/vendor/vafpress/config/messages.php:17
 msgid "Value needs to be Valid URL"
-msgstr ""
+msgstr "Τιμή πρέπει να είναι έγκυρη διεύθυνση URL"
 
 #: wp-ultimate-recipe-premium/core/vendor/vafpress/config/messages.php:18
 msgid "Length needs to be less than {0} characters"
-msgstr ""
+msgstr "Μήκος πρέπει να είναι μικρότερη από {0} χαρακτήρες"
 
 #: wp-ultimate-recipe-premium/core/vendor/vafpress/config/messages.php:19
 msgid "Length needs to be more than {0} characters"
-msgstr ""
+msgstr "Μήκος πρέπει να είναι περισσότερο από {0} χαρακτήρες"
 
 #: wp-ultimate-recipe-premium/core/vendor/vafpress/config/messages.php:20
 msgid "Select no more than {0} items"
-msgstr ""
+msgstr "Επιλέξτε δεν υπερβαίνει τα {0} στοιχείων"
 
 #: wp-ultimate-recipe-premium/core/vendor/vafpress/config/messages.php:21
 msgid "Select at least {0} items"
-msgstr ""
+msgstr "Επιλέξτε τουλάχιστον {0} στοιχεία"
 
 #: wp-ultimate-recipe-premium/core/vendor/vafpress/config/messages.php:22
 msgid "This is required"
-msgstr ""
+msgstr " (required)"
 
 #: wp-ultimate-recipe-premium/core/vendor/vafpress/config/messages.php:29
 msgid "Import succeed, option page will be refreshed.."
-msgstr ""
+msgstr "Επιτυχία εισαγωγής, θα ανανεωθούν προαίρεση σελίδα..."
 
 #: wp-ultimate-recipe-premium/core/vendor/vafpress/config/messages.php:30
 msgid "Import failed"
-msgstr ""
+msgstr "Registration failed"
 
 #: wp-ultimate-recipe-premium/core/vendor/vafpress/config/messages.php:31
 msgid "Export succeed, copy the JSON formatted options"
-msgstr ""
+msgstr "Πετύχει εξαγωγής, αντίγραφο το JSON μορφοποιηθεί επιλογές"
 
 #: wp-ultimate-recipe-premium/core/vendor/vafpress/config/messages.php:32
 msgid "Export failed"
-msgstr ""
+msgstr "Registration failed"
 
 #: wp-ultimate-recipe-premium/core/vendor/vafpress/config/messages.php:33
 msgid "Restoration succeed, option page will be refreshed.."
-msgstr ""
+msgstr "Πετύχει αποκατάστασης, προαίρεση σελίδα θα ανανεωθούν..."
 
 #: wp-ultimate-recipe-premium/core/vendor/vafpress/config/messages.php:34
 msgid "Options identical to default"
-msgstr ""
+msgstr "Default options restored."
 
 #: wp-ultimate-recipe-premium/core/vendor/vafpress/config/messages.php:35
 msgid "Restoration failed"
-msgstr ""
+msgstr "Registration failed"
 
 #: wp-ultimate-recipe-premium/core/vendor/vafpress/config/messages.php:43
 msgid "Select option(s)"
-msgstr ""
+msgstr "Choose an option"
 
 #: wp-ultimate-recipe-premium/core/vendor/vafpress/config/messages.php:45
 msgid "Select an Icon"
-msgstr ""
+msgstr "Select options"
 
 #: wp-ultimate-recipe-premium/core/vendor/vafpress/views/control/upload.php:5
 msgid "Choose File"
-msgstr ""
+msgstr "Δεν βρέθηκαν προϊόντα"
 
 #: wp-ultimate-recipe-premium/core/vendor/vafpress/views/option/impexp.php:4
 #: wp-ultimate-recipe-premium/core/vendor/vafpress/views/option/impexp.php:14
 msgid "Import"
-msgstr ""
+msgstr "Εισαγωγή"
 
 #: wp-ultimate-recipe-premium/core/vendor/vafpress/views/option/impexp.php:27
 #: wp-ultimate-recipe-premium/core/vendor/vafpress/views/option/impexp.php:37
 msgid "Export"
-msgstr ""
+msgstr "Εξαγωγή"
 
 #: wp-ultimate-recipe-premium/core/vendor/vafpress/views/option/impexp.php:30
 msgid "Export Options"
-msgstr ""
+msgstr "Select options"
 
 #: wp-ultimate-recipe-premium/core/vendor/vafpress/views/option/restore.php:4
 msgid "Restore Default Options"
-msgstr ""
+msgstr "Default options restored."
 
 #: wp-ultimate-recipe-premium/core/vendor/vafpress/views/option/restore.php:7
 msgid "Restore options to initial default values."
-msgstr ""
+msgstr "Επαναφέρετε επιλογές στις αρχικές προεπιλεγμένες τιμές."
 
 #: wp-ultimate-recipe-premium/core/vendor/vafpress/views/option/restore.php:14
 msgid ""
 "** Please make sure you have already make a backup data of your current "
 "settings. Once you click this button, your current settings will be gone."
 msgstr ""
+"** Παρακαλώ βεβαιωθείτε ότι έχετε κάνει ήδη μια δεδομένα αντιγράφων "
+"ασφαλείας από τις τρέχουσες ρυθμίσεις. Μόλις κάνετε κλικ σε αυτό το κουμπί, "
+"οι τρέχουσες ρυθμίσεις σας θα φύγει."
 
 #: wp-ultimate-recipe-premium/core/vendor/vafpress/views/option/set.php:69
 #: wp-ultimate-recipe-premium/core/vendor/vafpress/views/option/set.php:84
 msgid "Save Changes"
-msgstr ""
+msgstr "Κερδίζεις"
 
 #: wp-ultimate-recipe-premium/core/vendor/vafpress/views/option/set.php:70
 #: wp-ultimate-recipe-premium/core/vendor/vafpress/views/option/set.php:85
 msgid "Saving Now"
-msgstr ""
+msgstr "Εάν τις αποθηκεύσετε τώρα"
 
 #: wp-ultimate-recipe-premium/core/vendor/vafpress/views/option/set.php:93
 #, php-format
@@ -2596,83 +2583,88 @@ msgid ""
 "framework\">Vafpress Framework %s</a> powered by <a href=\"http://vafpress."
 "com\">Vafpress</a>"
 msgstr ""
+"Αυτή η ομάδα επιλογή είναι χτισμένο με <a href=\\\"http://vafpress.com/"
+"vafpress-framework\\\">Vafpress πλαίσιο %s</a> που τροφοδοτείται από <a href="
+"\\\"http://vafpress.com\\\">Vafpress</a>"
 
 #: wp-ultimate-recipe-premium/premium/addons/custom-fields/custom-fields.php:30
 msgid "Current Custom Fields"
-msgstr ""
+msgstr "Upload a custom logo."
 
 #: wp-ultimate-recipe-premium/premium/addons/custom-fields/custom-fields.php:31
 msgid "Add new Custom Field"
-msgstr ""
+msgstr "Νέο Έργο"
 
 #: wp-ultimate-recipe-premium/premium/addons/custom-fields/templates/page_form.php:1
 msgid "Create custom fields for your recipes."
-msgstr ""
+msgstr "Δημιουργήστε προσαρμοσμένα πεδία για τις συνταγές σας."
 
 #: wp-ultimate-recipe-premium/premium/addons/custom-fields/templates/page_form.php:9
 #: wp-ultimate-recipe-premium/premium/addons/custom-fields/templates/page_list.php:9
 msgid "Key"
-msgstr ""
+msgstr "Κλειδί"
 
 #: wp-ultimate-recipe-premium/premium/addons/custom-fields/templates/page_form.php:12
 msgid "(e.g. recipe_chef)"
-msgstr ""
+msgstr "(π.χ. recipe_chef)"
 
 #: wp-ultimate-recipe-premium/premium/addons/custom-fields/templates/page_form.php:12
 msgid "Make sure this is unique!"
-msgstr ""
+msgstr "Βεβαιωθείτε ότι αυτό είναι μοναδικό!"
 
 #: wp-ultimate-recipe-premium/premium/addons/custom-fields/templates/page_form.php:19
 msgid "(e.g. Recipe Chef)"
-msgstr ""
+msgstr "(π.χ. συνταγή σεφ)"
 
 #: wp-ultimate-recipe-premium/premium/addons/custom-fields/templates/page_form.php:25
 msgid "Add new field"
-msgstr ""
+msgstr "Νέο Έργο"
 
 #: wp-ultimate-recipe-premium/premium/addons/custom-fields/templates/page_list.php:1
 msgid "Do you really want to delete this custom field?"
-msgstr ""
+msgstr "Θέλετε να διαγράψετε αυτό το προσαρμοσμένο πεδίο;"
 
 #: wp-ultimate-recipe-premium/premium/addons/custom-fields/templates/page_list.php:33
 #: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/templates/page_list.php:45
 msgid "Delete"
-msgstr ""
+msgstr "Διαγραφή"
 
 #: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/templates/page_list.php:59
 msgid ""
 "Do you really want to reset the taxonomies? All custom tags will be deleted."
 msgstr ""
+"Θέλετε πραγματικά να επαναφέρετε τις ταξινομήσεις; Θα διαγραφούν όλες οι "
+"προσαρμοσμένες ετικέτες."
 
 #: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/templates/page_list.php:62
 msgid "Reset to defaults"
-msgstr ""
+msgstr "asdadadsad"
 
 #: wp-ultimate-recipe-premium/premium/addons/export-xml/export-xml.php:58
 msgid "You haven't selected any recipes to export."
-msgstr ""
+msgstr "Εσείς δεν έχετε επιλέξει καμία συνταγές για την εξαγωγή."
 
 #: wp-ultimate-recipe-premium/premium/addons/export-xml/export-xml.php:78
 msgid "Download XML"
-msgstr ""
+msgstr "Κατεβάστε το XML"
 
 #: wp-ultimate-recipe-premium/premium/addons/export-xml/templates/before_importing.php:5
 msgid "Select recipes"
-msgstr ""
+msgstr "Select options"
 
 #: wp-ultimate-recipe-premium/premium/addons/export-xml/templates/before_importing.php:10
 #: wp-ultimate-recipe-premium/premium/addons/user-menus/templates/ingredient-groups.php:55
 msgid "Select"
-msgstr ""
+msgstr "Select a color for your buttons."
 
 #: wp-ultimate-recipe-premium/premium/addons/export-xml/templates/before_importing.php:10
 #: wp-ultimate-recipe-premium/premium/addons/user-menus/templates/ingredient-groups.php:57
 msgid "None"
-msgstr ""
+msgstr "Κανένα"
 
 #: wp-ultimate-recipe-premium/premium/addons/favorite-recipes/favorite-recipes.php:87
 msgid "You don't have any favorite recipes."
-msgstr ""
+msgstr "Δεν έχετε οποιαδήποτε αγαπημένες συνταγές."
 
 #: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/import-easyrecipe.php:46
 #: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/import-easyrecipe.php:58
@@ -2680,23 +2672,21 @@ msgstr ""
 #: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/before_importing.php:84
 #: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/manual_import.php:6
 msgid "Import EasyRecipe"
-msgstr ""
+msgstr "EasyRecipe εισαγωγής"
 
 #: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/import-easyrecipe.php:458
 msgid "Nutritional Serving Size"
-msgstr ""
+msgstr "Select the size of the post featured image."
 
 #: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/before_importing.php:5
-#: wp-ultimate-recipe-premium/premium/addons/import-fdx/templates/before_importing.php:5
 #: wp-ultimate-recipe-premium/premium/addons/import-recipecard/templates/before_importing.php:5
 #: wp-ultimate-recipe-premium/premium/addons/import-recipress/templates/import_recipress.php:5
 #: wp-ultimate-recipe-premium/premium/addons/import-xml/templates/before_importing.php:5
 #: wp-ultimate-recipe-premium/premium/addons/import-ziplist/templates/before_importing.php:5
 msgid "Before importing"
-msgstr ""
+msgstr "Πριν από την εισαγωγή"
 
 #: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/before_importing.php:7
-#: wp-ultimate-recipe-premium/premium/addons/import-fdx/templates/before_importing.php:7
 #: wp-ultimate-recipe-premium/premium/addons/import-recipecard/templates/before_importing.php:7
 #: wp-ultimate-recipe-premium/premium/addons/import-recipress/templates/import_recipress.php:7
 #: wp-ultimate-recipe-premium/premium/addons/import-xml/templates/before_importing.php:7
@@ -2704,6 +2694,8 @@ msgstr ""
 msgid ""
 "It's a good idea to backup your WP database before using the import feature."
 msgstr ""
+"Είναι μια καλή ιδέα να κάνετε backup της βάσης δεδομένων σας WP πριν από τη "
+"χρήση της δυνατότητας εισαγωγής."
 
 #: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/before_importing.php:54
 #: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/before_importing.php:69
@@ -2711,48 +2703,49 @@ msgstr ""
 #: wp-ultimate-recipe-premium/premium/addons/import-recipress/templates/import_recipress.php:43
 #: wp-ultimate-recipe-premium/premium/addons/import-recipress/templates/import_recipress.php:58
 msgid "Select a recipe tag"
-msgstr ""
+msgstr "Tag:"
 
 #: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/before_importing.php:92
 #: wp-ultimate-recipe-premium/premium/addons/import-recipecard/templates/before_importing.php:52
 #: wp-ultimate-recipe-premium/premium/addons/import-ziplist/templates/before_importing.php:52
 msgid "Unable to import"
-msgstr ""
+msgstr "Δεν είναι δυνατή η εισαγωγή"
 
 #: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/before_importing.php:93
 #: wp-ultimate-recipe-premium/premium/addons/import-recipecard/templates/before_importing.php:53
 #: wp-ultimate-recipe-premium/premium/addons/import-ziplist/templates/before_importing.php:53
 msgid "We are unable to import these posts or pages automatically:"
 msgstr ""
+"Δεν είμαστε σε θέση να εισαγάγετε αυτές τις θέσεις ή τις σελίδες αυτόματα:"
 
 #: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/manual_import.php:18
 #: wp-ultimate-recipe-premium/premium/addons/import-recipress/import-recipress.php:59
 msgid "You should select a new tag for the imported recipes"
-msgstr ""
+msgstr "Θα πρέπει να επιλέξετε μια νέα ετικέτα για τα εισαγόμενα συνταγές"
 
 #: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/manual_import.php:23
 msgid "You should select two distinct tags"
-msgstr ""
+msgstr "Θα πρέπει να επιλέξετε δύο διαφορετικές ετικέτες"
 
 #: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/manual_import.php:31
 #: wp-ultimate-recipe-premium/premium/addons/import-recipecard/templates/manual_import.php:12
 #: wp-ultimate-recipe-premium/premium/addons/import-ziplist/templates/manual_import.php:12
 msgid "There are no recipes left to import"
-msgstr ""
+msgstr "This will appear on the left side of the footer."
 
 #: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/manual_import.php:33
 #: wp-ultimate-recipe-premium/premium/addons/import-recipecard/templates/manual_import.php:14
 #: wp-ultimate-recipe-premium/premium/addons/import-ziplist/templates/manual_import.php:14
 msgid "Number of recipes left to import:"
-msgstr ""
+msgstr "Αριθμός συνταγές αριστερά για την εισαγωγή:"
 
 #: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/manual_import.php:46
 msgid "Featured Image"
-msgstr ""
+msgstr "Select the size of the post featured image."
 
 #: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/manual_import.php:79
 msgid "No featured image"
-msgstr ""
+msgstr "Featured Image Size"
 
 #: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/manual_import.php:124
 #: wp-ultimate-recipe-premium/premium/addons/import-recipecard/templates/manual_import.php:44
@@ -2760,13 +2753,13 @@ msgstr ""
 #: wp-ultimate-recipe-premium/premium/addons/import-ziplist/templates/manual_import.php:48
 #: wp-ultimate-recipe-premium/premium/addons/user-menus/templates/user-menus.php:154
 msgid "Amount"
-msgstr ""
+msgstr "Ποσό"
 
 #: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/manual_import.php:134
 #: wp-ultimate-recipe-premium/premium/addons/import-recipecard/templates/manual_import.php:54
 #: wp-ultimate-recipe-premium/premium/addons/import-ziplist/templates/manual_import.php:58
 msgid "Import this Recipe"
-msgstr ""
+msgstr "Εισαγωγή αυτή τη συνταγή"
 
 #: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/manual_import.php:135
 #: wp-ultimate-recipe-premium/premium/addons/import-recipecard/templates/manual_import.php:55
@@ -2774,13 +2767,8 @@ msgstr ""
 msgid ""
 "Feel free to stop at anytime and come back later for the rest of the recipes."
 msgstr ""
-
-#: wp-ultimate-recipe-premium/premium/addons/import-fdx/import-fdx.php:65
-#: wp-ultimate-recipe-premium/premium/addons/import-text/import-text.php:134
-#: wp-ultimate-recipe-premium/premium/addons/import-xml/import-xml.php:64
-#: wp-ultimate-recipe-premium/premium/addons/user-submissions/user-submissions.php:204
-msgid "Untitled"
-msgstr ""
+"Νιώστε ελεύθεροι να σταματήσετε τα χτυπήματα όποτε και να έρθουν πίσω "
+"αργότερα για το υπόλοιπο από τις συνταγές."
 
 #: wp-ultimate-recipe-premium/premium/addons/import-recipecard/import-recipecard.php:26
 #: wp-ultimate-recipe-premium/premium/addons/import-recipecard/import-recipecard.php:38
@@ -2788,99 +2776,108 @@ msgstr ""
 #: wp-ultimate-recipe-premium/premium/addons/import-recipecard/templates/before_importing.php:44
 #: wp-ultimate-recipe-premium/premium/addons/import-recipecard/templates/manual_import.php:6
 msgid "Import RecipeCard"
-msgstr ""
+msgstr "RecipeCard εισαγωγής"
 
 #: wp-ultimate-recipe-premium/premium/addons/import-recipecard/import-recipecard.php:289
 msgid "Adapted"
-msgstr ""
+msgstr "Προσαρμοσμένο"
 
 #: wp-ultimate-recipe-premium/premium/addons/import-recipecard/import-recipecard.php:290
 msgid "Adapted Link"
-msgstr ""
+msgstr "External Link"
 
 #: wp-ultimate-recipe-premium/premium/addons/import-recipecard/import-recipecard.php:291
 #: wp-ultimate-recipe-premium/premium/addons/import-ziplist/import-ziplist.php:320
 msgid "Yield"
-msgstr ""
+msgstr "Απόδοση"
 
 #: wp-ultimate-recipe-premium/premium/addons/import-recipress/import-recipress.php:26
 #: wp-ultimate-recipe-premium/premium/addons/import-recipress/templates/import_recipress.php:4
 #: wp-ultimate-recipe-premium/premium/addons/import-recipress/templates/import_recipress.php:73
 msgid "Import ReciPress"
-msgstr ""
+msgstr "ReciPress εισαγωγής"
 
 #: wp-ultimate-recipe-premium/premium/addons/import-recipress/import-recipress.php:45
 msgid "You should activate this plugin:"
-msgstr ""
+msgstr "Πρέπει να ενεργοποιήσετε αυτό το plugin:"
 
 #: wp-ultimate-recipe-premium/premium/addons/import-recipress/templates/import_recipress.php:19
 msgid "recipes are about to be imported to"
-msgstr ""
+msgstr "Enter a description about this page."
 
 #: wp-ultimate-recipe-premium/premium/addons/import-recipress/templates/import_recipress.php:19
 msgid "Are you sure you want to do this?"
-msgstr ""
+msgstr "Είστε σίγουροι ότι θέλετε να το κάνετε αυτό;"
 
 #: wp-ultimate-recipe-premium/premium/addons/import-text/import-text.php:109
 msgid "Add New from Text"
-msgstr ""
+msgstr "Νέο Έργο"
+
+#: wp-ultimate-recipe-premium/premium/addons/import-text/import-text.php:134
+#: wp-ultimate-recipe-premium/premium/addons/import-xml/import-xml.php:64
+msgid "Untitled"
+msgstr "Untitled"
 
 #: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:3
 msgid "Add New Recipe from text"
-msgstr ""
+msgstr "Προσθέστε νέα συνταγή από κείμενο"
 
 #: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:4
 msgid "This is function is still in beta version. Any feedback is welcome!"
 msgstr ""
+"Πρόκειται για λειτουργία είναι ακόμα σε beta έκδοση. Οποιαδήποτε "
+"ανατροφοδότηση είναι ευπρόσδεκτη!"
 
 #: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:5
 msgid "Plain Text Recipe Input"
-msgstr ""
+msgstr "Συνταγή εισαγωγής απλού κειμένου"
 
 #: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:6
 msgid "Paste your recipe in this input field."
-msgstr ""
+msgstr "Επικόλληση συνταγή σας σε αυτό το πεδίο εισόδου."
 
 #: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:8
 msgid "Define Recipe Regions"
-msgstr ""
+msgstr "Καθορίζουν μια περιοχή συνταγή"
 
 #: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:9
 msgid ""
 "Highlight a section in your recipe and click the corresponding button to "
 "define it."
 msgstr ""
+"Επισημάνετε ένα τμήμα στη συνταγή σας και κάντε κλικ στο αντίστοιχο κουμπί "
+"να την ορίσουμε."
 
 #: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:57
 #: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:74
 #: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:89
 msgid "Tip"
-msgstr ""
+msgstr "ΣΥΜΒΟΥΛΗ:"
 
 #: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:57
 #: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:89
 msgid "Lines starting with a ! will be starting a new group."
-msgstr ""
+msgstr "Γραμμών που ξεκινούν με ένα! θα ξεκινήσει μια νέα ομάδα."
 
 #: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:73
 msgid "Ingredient Details"
-msgstr ""
+msgstr "Λεπτομέρειες"
 
 #: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:74
 msgid "Only unit aliases defined in the settings will be recognized."
-msgstr ""
+msgstr "Θα αναγνωριστεί μόνο μονάδα ψευδώνυμα που ορίζονται στις ρυθμίσεις."
 
 #: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:91
 msgid "Separate instructions with an empty line"
-msgstr ""
+msgstr "Χωριστές οδηγίες με μια κενή γραμμή"
 
 #: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:92
 msgid "Every line is a separate instruction"
-msgstr ""
+msgstr "Κάθε γραμμή είναι μια ξεχωριστή οδηγία"
 
 #: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:108
 msgid "Add Recipe"
-msgstr ""
+msgstr "Add to cart"
 
 #: wp-ultimate-recipe-premium/premium/addons/import-ziplist/import-ziplist.php:26
 #: wp-ultimate-recipe-premium/premium/addons/import-ziplist/import-ziplist.php:38
@@ -2888,170 +2885,172 @@ msgstr ""
 #: wp-ultimate-recipe-premium/premium/addons/import-ziplist/templates/before_importing.php:44
 #: wp-ultimate-recipe-premium/premium/addons/import-ziplist/templates/manual_import.php:6
 msgid "Import Ziplist"
-msgstr ""
+msgstr "Ziplist εισαγωγής"
 
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/nutritional-information.php:142
 msgid "Add Nutrition Label"
-msgstr ""
+msgstr "Add to cart"
 
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/label.php:39
 msgid "Nutrition Facts"
-msgstr ""
+msgstr "Διατροφή τα πραγματικά περιστατικά"
 
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/label.php:42
 msgid "Amount Per Serving"
-msgstr ""
+msgstr "Ποσότητα ανά μερίδα"
 
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/label.php:44
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:144
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:260
 msgid "Calories"
-msgstr ""
+msgstr "Θερμίδες"
 
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/label.php:46
 msgid "Calories from Fat"
-msgstr ""
+msgstr "Θερμίδες από το λίπος"
 
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/label.php:52
 msgid "% Daily Value"
-msgstr ""
+msgstr "Ημερήσια τιμή %"
 
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/label.php:56
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:156
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:272
 msgid "Total Fat"
-msgstr ""
+msgstr "Total"
 
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/label.php:61
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:160
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:276
 msgid "Saturated Fat"
-msgstr ""
+msgstr "Κορεσμένα λιπαρά"
 
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/label.php:67
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:172
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:288
 msgid "Trans Fat"
-msgstr ""
+msgstr "Τα τρανς λιπαρά"
 
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/label.php:72
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:164
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:280
 msgid "Polyunsaturated Fat"
-msgstr ""
+msgstr "Πολυακόρεστα λιπαρά"
 
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/label.php:77
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:168
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:284
 msgid "Monounsaturated Fat"
-msgstr ""
+msgstr "Μονοακόρεστα λιπαρά"
 
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/label.php:83
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:145
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:261
 msgid "Cholesterol"
-msgstr ""
+msgstr "Χοληστερόλη"
 
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/label.php:89
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:149
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:265
 msgid "Sodium"
-msgstr ""
+msgstr "Νάτριο"
 
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/label.php:95
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:153
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:269
 msgid "Potassium"
-msgstr ""
+msgstr "Κάλιο"
 
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/label.php:101
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:148
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:264
 msgid "Total Carbohydrates"
-msgstr ""
+msgstr "Total"
 
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/label.php:106
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:157
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:273
 msgid "Dietary Fiber"
-msgstr ""
+msgstr "Φυτικές ίνες"
 
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/label.php:112
 msgid "Sugars"
-msgstr ""
+msgstr "Σάκχαρα"
 
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/label.php:118
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:152
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:268
 msgid "Protein"
-msgstr ""
+msgstr "Πρωτεΐνη"
 
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/label.php:127
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:165
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:281
 msgid "Vitamin A"
-msgstr ""
+msgstr "Βιταμίνη Α"
 
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/label.php:133
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:169
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:285
 msgid "Vitamin C"
-msgstr ""
+msgstr "Βιταμίνη C"
 
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/label.php:139
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:173
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:289
 msgid "Calcium"
-msgstr ""
+msgstr "Ασβέστιο"
 
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/label.php:145
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:181
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:297
 msgid "Iron"
-msgstr ""
+msgstr "Σίδηρος"
 
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/label.php:151
 msgid "Percent Daily Values are based on a 2000 calorie diet. "
-msgstr ""
+msgstr "Ποσοστό ημερήσιες τιμές βασίζονται σε μια δίαιτα 2000 θερμίδων."
 
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/label.php:156
 msgid "There is no Nutrition Label for this recipe yet."
-msgstr ""
+msgstr "Υπάρχει ακόμα καμία διατροφή ετικέτα για αυτήν την συνταγή."
 
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:29
 msgid "Without Nutritional Information"
-msgstr ""
+msgstr "Χωρίς διατροφικές πληροφορίες"
 
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:32
 msgid "With Nutritional Information"
-msgstr ""
+msgstr "Με τις διατροφικές πληροφορίες"
 
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:100
 msgid "Get Nutritional Data"
-msgstr ""
+msgstr "Πάρτε διατροφικά στοιχεία"
 
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:111
 msgid "Find"
 msgstr ""
+"We are sorry, no results were found. You can try to find some related posts "
+"using the search function."
 
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:112
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:178
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:237
 msgid "Close"
-msgstr ""
+msgstr "qweqweqwasdasd"
 
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:123
 msgid "Reference serving"
-msgstr ""
+msgstr "Μερίδα αναφοράς"
 
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:129
 msgid "Metric quantity"
-msgstr ""
+msgstr "Quantity"
 
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:161
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:277
 msgid "Sugar"
-msgstr ""
+msgstr "Ζάχαρη"
 
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:165
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:169
@@ -3062,301 +3061,309 @@ msgstr ""
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:289
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:297
 msgid "Daily Value"
-msgstr ""
+msgstr "Ημερήσια τιμή"
 
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:177
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:293
 msgid "Save"
-msgstr ""
+msgstr "Κερδίζεις"
 
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:209
 msgid "Calculate Recipe Nutritonal Information"
-msgstr ""
+msgstr "Υπολογισμός συνταγή Nutritonal πληροφορίες"
 
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:218
 msgid "Ingredient servings:"
-msgstr ""
+msgstr "Συστατικό μερίδες:"
 
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:236
 msgid "Calculate"
-msgstr ""
+msgstr "Υπολογίστε"
 
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:256
 msgid "Data for 1 serving:"
-msgstr ""
+msgstr "%1$s installed and activated successfully."
 
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:294
 msgid "Clear"
-msgstr ""
+msgstr "Clear selection"
 
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/widgets/nutrition_label_widget.php:9
 msgid "WPURP Nutrition Label"
-msgstr ""
+msgstr "Enter a label for the URL."
 
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/widgets/nutrition_label_widget.php:11
 msgid "Display the Nutrition Label of a recipe."
-msgstr ""
+msgstr "Εμφανίζει την ετικέτα διατροφή του μια συνταγή."
 
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/widgets/nutrition_label_widget.php:50
 #: wp-ultimate-recipe-premium/premium/addons/recipe-search/widgets/recipe_search_widget.php:79
 #: wp-ultimate-recipe-premium/premium/helpers/widgets/recipe_list_widget.php:65
 msgid "Title:"
-msgstr ""
+msgstr "Title:"
 
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/widgets/nutrition_label_widget.php:56
 msgid "Recipe shown on recipe page"
-msgstr ""
+msgstr "Συνταγή που εμφανίζονται στη σελίδα συνταγή"
 
 #: wp-ultimate-recipe-premium/premium/addons/recipe-grid/recipe-grid.php:171
 #: wp-ultimate-recipe-premium/premium/addons/recipe-grid/recipe-grid.php:356
 msgid "No recipes found."
-msgstr ""
+msgstr "Δεν βρέθηκαν προϊόντα"
 
 #: wp-ultimate-recipe-premium/premium/addons/recipe-search/widgets/recipe_search_widget.php:9
 msgid "WPURP Recipe Search"
-msgstr ""
+msgstr "Αναζήτηση"
 
 #: wp-ultimate-recipe-premium/premium/addons/recipe-search/widgets/recipe_search_widget.php:11
 msgid "A customizable Recipe Search widget."
-msgstr ""
+msgstr "Ένα προσαρμόσιμο συνταγή αναζήτησης widget."
 
 #: wp-ultimate-recipe-premium/premium/addons/recipe-search/widgets/recipe_search_widget.php:62
 msgid "Recipe Search"
-msgstr ""
+msgstr "Αναζήτηση"
 
 #: wp-ultimate-recipe-premium/premium/addons/recipe-search/widgets/recipe_search_widget.php:87
 msgid "filter"
-msgstr ""
+msgstr "Filter: "
 
 #: wp-ultimate-recipe-premium/premium/addons/template-editor/template-editor.php:87
 msgid "Image Manager"
-msgstr ""
+msgstr "Featured Image Size"
 
-#: wp-ultimate-recipe-premium/premium/addons/template-editor/templates/parser.php:493
+#: wp-ultimate-recipe-premium/premium/addons/template-editor/templates/parser.php:492
 msgid "Please set a Preview Recipe in the settings first."
-msgstr ""
+msgstr "Ορίστε μια συνταγή προεπισκόπηση στις ρυθμίσεις πρώτη."
 
 #: wp-ultimate-recipe-premium/premium/addons/user-menus/templates/ingredient-groups.php:2
 #: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:131
 msgid "Ingredient Groups"
-msgstr ""
+msgstr "Ομάδες συστατικό"
 
 #: wp-ultimate-recipe-premium/premium/addons/user-menus/templates/ingredient-groups.php:42
 #: wp-ultimate-recipe-premium/premium/helpers/ingredient_metadata.php:26
 msgid "Vegetables"
-msgstr ""
+msgstr "Λαχανικά"
 
 #: wp-ultimate-recipe-premium/premium/addons/user-menus/templates/ingredient-groups.php:43
 msgid "Set group for selected ingredients"
-msgstr ""
+msgstr "Ορισμός ομάδας για επιλεγμένα συστατικά"
 
 #: wp-ultimate-recipe-premium/premium/addons/user-menus/templates/ingredient-groups.php:58
 msgid "Ungrouped"
-msgstr ""
+msgstr "Κατάργηση ομαδοποίησης"
 
 #: wp-ultimate-recipe-premium/premium/addons/user-menus/templates/user-menus.php:59
 msgid "Visitor"
-msgstr ""
+msgstr "Επισκέπτης"
 
 #: wp-ultimate-recipe-premium/premium/addons/user-menus/templates/user-menus.php:67
 msgid "Add Recipes"
-msgstr ""
+msgstr "Add to cart"
 
 #: wp-ultimate-recipe-premium/premium/addons/user-menus/templates/user-menus.php:89
 msgid "alphabet"
-msgstr ""
+msgstr "Αλφάβητο"
 
 #: wp-ultimate-recipe-premium/premium/addons/user-menus/templates/user-menus.php:100
 msgid "No recipes in your menu yet"
-msgstr ""
+msgstr "Select a hover color for your menu links."
 
 #: wp-ultimate-recipe-premium/premium/addons/user-menus/templates/user-menus.php:135
 msgid "Save Menu"
-msgstr ""
+msgstr "Κερδίζεις"
 
 #: wp-ultimate-recipe-premium/premium/addons/user-menus/templates/user-menus.php:139
 msgid "Print Shopping List"
-msgstr ""
+msgstr "View your shopping cart"
 
 #: wp-ultimate-recipe-premium/premium/addons/user-menus/templates/user-menus.php:143
 msgid "Print Menu"
-msgstr ""
+msgstr "Menu Color"
 
 #: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:208
 msgid "Menus"
-msgstr ""
+msgstr "Μενού"
 
 #: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:257
 msgid "The menu can be edited from the front end:"
-msgstr ""
+msgstr "Το μενού μπορεί να επεξεργαστεί από το πρόσθιο άκρο:"
 
 #: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:373
 msgid "Other"
 msgstr ""
+"This is the default widget area for the footer. This will be displayed if "
+"the other footers have not been populated with widgets."
 
 #: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:483
 msgid "Sorry, the site administrator has disabled user menus."
-msgstr ""
+msgstr "Συγνώμη, τον διαχειριστή έχει απενεργοποιηθεί χρήστη μενού."
 
 #: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:488
 msgid "Sorry, only registered users may create menus."
-msgstr ""
+msgstr "Συγνώμη, μόνο συνδεδεμένοι χρήστες μπορούν να δημιουργήσουν μενού."
 
 #: wp-ultimate-recipe-premium/premium/addons/user-ratings/templates/user_rating.php:33
 #: wp-ultimate-recipe-premium/premium/helpers/recipe_columns.php:50
 msgid "Votes"
-msgstr ""
+msgstr "votes"
 
 #: wp-ultimate-recipe-premium/premium/addons/user-ratings/templates/user_rating.php:35
 msgid "You"
-msgstr ""
+msgstr "You may also like&hellip;"
 
 #: wp-ultimate-recipe-premium/premium/addons/user-ratings/templates/user_rating.php:38
 msgid "Rate this recipe!"
-msgstr ""
+msgstr "Βαθμολογήστε αυτή τη συνταγή!"
 
 #: wp-ultimate-recipe-premium/premium/addons/user-ratings/user-ratings.php:58
 msgid ""
 "Are you sure you want to reset the rating for this recipe? This will set the "
 "votes and rating to 0."
 msgstr ""
+"Είστε βέβαιοι ότι θέλετε να επαναφέρετε την βαθμολογία για αυτή τη συνταγή; "
+"Αυτό θα θέσει την ψήφους και βαθμολογία σε 0."
 
-#: wp-ultimate-recipe-premium/premium/addons/user-submissions/templates/public_recipe_form.php:24
+#: wp-ultimate-recipe-premium/premium/addons/user-submissions/templates/public_recipe_form.php:4
+msgid "Recipe title"
+msgstr "Title:"
+
+#: wp-ultimate-recipe-premium/premium/addons/user-submissions/templates/public_recipe_form.php:10
+msgid "Your name"
+msgstr "Όνομα"
+
+#: wp-ultimate-recipe-premium/premium/addons/user-submissions/templates/public_recipe_form.php:16
 #: wp-ultimate-recipe-premium/premium/helpers/recipe_columns.php:16
 #: wp-ultimate-recipe-premium/premium/helpers/recipe_columns.php:68
 msgid "Featured image"
-msgstr ""
+msgstr "Select the size of the post featured image."
 
-#: wp-ultimate-recipe-premium/premium/addons/user-submissions/templates/public_recipe_form.php:33
+#: wp-ultimate-recipe-premium/premium/addons/user-submissions/templates/public_recipe_form.php:21
 msgid "Add Featured Image"
-msgstr ""
+msgstr "Featured Image Size"
 
-#: wp-ultimate-recipe-premium/premium/addons/user-submissions/templates/public_recipe_form.php:34
+#: wp-ultimate-recipe-premium/premium/addons/user-submissions/templates/public_recipe_form.php:22
 msgid "Remove Featured Image"
-msgstr ""
+msgstr "Featured Image Size"
 
-#: wp-ultimate-recipe-premium/premium/addons/user-submissions/templates/public_recipe_form.php:134
-#: wp-ultimate-recipe-premium/premium/addons/user-submissions/user-submissions.php:310
-msgid "Preview"
-msgstr ""
-
-#: wp-ultimate-recipe-premium/premium/addons/user-submissions/templates/public_recipe_form.php:136
+#: wp-ultimate-recipe-premium/premium/addons/user-submissions/templates/public_recipe_form.php:97
 msgid "Submit"
-msgstr ""
+msgstr "Υποβολή σχολίου"
 
-#: wp-ultimate-recipe-premium/premium/addons/user-submissions/user-submissions.php:96
+#: wp-ultimate-recipe-premium/premium/addons/user-submissions/user-submissions.php:95
 msgid "Sorry, the site administrator has disabled recipe submissions."
-msgstr ""
+msgstr "Συγνώμη, τον διαχειριστή έχει απενεργοποιηθεί συνταγή υποβολές."
 
-#: wp-ultimate-recipe-premium/premium/addons/user-submissions/user-submissions.php:109
+#: wp-ultimate-recipe-premium/premium/addons/user-submissions/user-submissions.php:108
 msgid "Sorry, only registered users may submit recipes."
-msgstr ""
+msgstr "Συγνώμη, μόνο συνδεδεμένοι χρήστες μπορούν να υποβάλουν τις συνταγές."
 
-#: wp-ultimate-recipe-premium/premium/addons/user-submissions/user-submissions.php:249
+#: wp-ultimate-recipe-premium/premium/addons/user-submissions/user-submissions.php:206
 msgid "Anonymous"
-msgstr ""
-
-#: wp-ultimate-recipe-premium/premium/addons/user-submissions/user-submissions.php:300
-msgid "Please fill in these required fields:"
-msgstr ""
+msgstr "Ανώνυμος"
 
 #: wp-ultimate-recipe-premium/premium/helpers/ingredient_metadata.php:10
 msgid "Optional plural version of this ingredient."
-msgstr ""
+msgstr "Προαιρετική πληθυντικός έκδοση του αυτό το συστατικό."
 
 #: wp-ultimate-recipe-premium/premium/helpers/ingredient_metadata.php:14
 #: wp-ultimate-recipe-premium/premium/helpers/ingredient_metadata.php:37
 msgid "Link"
-msgstr ""
+msgstr "Link Hover Color"
 
 #: wp-ultimate-recipe-premium/premium/helpers/ingredient_metadata.php:15
 msgid "Send your visitors to a specific link when clicking on an ingredient."
 msgstr ""
+"Στείλετε τους επισκέπτες σας σε μια συγκεκριμένη σύνδεση, όταν κάνετε κλικ "
+"σε ένα συστατικό."
 
 #: wp-ultimate-recipe-premium/premium/helpers/ingredient_metadata.php:19
 msgid "Hide link"
-msgstr ""
+msgstr "Λεπτομέρειες"
 
 #: wp-ultimate-recipe-premium/premium/helpers/ingredient_metadata.php:20
 msgid "Don't use a link in the ingredients list for this ingredient."
 msgstr ""
+"Μην χρησιμοποιείτε μια σύνδεση στον κατάλογο συστατικών για αυτό το "
+"συστατικό."
 
 #: wp-ultimate-recipe-premium/premium/helpers/ingredient_metadata.php:25
 msgid "Use this to group ingredients in the shopping list."
-msgstr ""
+msgstr "Χρησιμοποιήστε αυτό στην ομάδα συστατικά στη λίστα αγορών."
 
 #: wp-ultimate-recipe-premium/premium/helpers/license_form.php:8
 msgid "License Key"
-msgstr ""
+msgstr "Κλειδί άδειας χρήσης"
 
 #: wp-ultimate-recipe-premium/premium/helpers/license_form.php:11
 msgid "Enter your license key"
-msgstr ""
+msgstr "Enter your password to view comments."
 
 #: wp-ultimate-recipe-premium/premium/helpers/license_form.php:13
 msgid "active"
-msgstr ""
+msgstr "Active"
 
 #: wp-ultimate-recipe-premium/premium/helpers/license_form.php:15
 msgid "invalid"
-msgstr ""
+msgstr "Invalid e-mail."
 
 #: wp-ultimate-recipe-premium/premium/helpers/license_form.php:19
 msgid "Change License"
-msgstr ""
+msgstr "Αλλαγή άδεια"
 
 #: wp-ultimate-recipe-premium/premium/helpers/recipe_columns.php:53
 msgid "reset"
-msgstr ""
+msgstr "Check your email to reset your password."
 
 #: wp-ultimate-recipe-premium/premium/helpers/recipe_columns.php:60
 msgid "Clone Recipe"
-msgstr ""
+msgstr "Συνταγή κλώνος"
 
 #: wp-ultimate-recipe-premium/premium/helpers/recipe_columns.php:88
 #: wp-ultimate-recipe-premium/premium/helpers/widgets/recipe_list_widget.php:55
 msgid "Date"
-msgstr ""
+msgstr "Date"
 
 #: wp-ultimate-recipe-premium/premium/helpers/widgets/recipe_list_widget.php:9
 msgid "WPURP Recipe List"
-msgstr ""
+msgstr "WPURP συνταγή λίστα"
 
 #: wp-ultimate-recipe-premium/premium/helpers/widgets/recipe_list_widget.php:11
 msgid "Make a list of your latest, highest rated, ... recipes."
 msgstr ""
+"Συντάξτε έναν κατάλογο τελευταία σας, την υψηλότερη βαθμολογία,... συνταγές."
 
 #: wp-ultimate-recipe-premium/premium/helpers/widgets/recipe_list_widget.php:48
 msgid "Our Recipes"
-msgstr ""
+msgstr "Οι συνταγές μας"
 
 #: wp-ultimate-recipe-premium/premium/helpers/widgets/recipe_list_widget.php:56
 msgid "Recipe Title"
-msgstr ""
+msgstr "Title:"
 
 #: wp-ultimate-recipe-premium/premium/helpers/widgets/recipe_list_widget.php:57
 msgid "Recipe Rating"
-msgstr ""
+msgstr "Βαθμολογία"
 
 #: wp-ultimate-recipe-premium/premium/helpers/widgets/recipe_list_widget.php:60
 msgid "ascending"
-msgstr ""
+msgstr "Αύξουσα"
 
 #: wp-ultimate-recipe-premium/premium/helpers/widgets/recipe_list_widget.php:61
 msgid "descending"
-msgstr ""
+msgstr "Φθίνουσα"
 
 #: wp-ultimate-recipe-premium/premium/helpers/widgets/recipe_list_widget.php:69
 msgid "Order By"
-msgstr ""
+msgstr "Ταξινόμηση κατά"
 
 #: wp-ultimate-recipe-premium/premium/helpers/widgets/recipe_list_widget.php:80
 msgid "Order"
-msgstr ""
+msgstr "Ταξινόμηση"
 
 #: wp-ultimate-recipe-premium/premium/helpers/widgets/recipe_list_widget.php:91
 msgid "Number of recipes to show"
-msgstr ""
+msgstr "Number of Projects to Show"
 
 #: wp-ultimate-recipe-premium/premium/vendor/EDD/EDD_SL_Plugin_Updater.php:177
 #, php-format
@@ -3364,6 +3371,8 @@ msgid ""
 "There is a new version of %1$s available. <a target=\"_blank\" class="
 "\"thickbox\" href=\"%2$s\">View version %3$s details</a>."
 msgstr ""
+"Υπάρχει μια νέα έκδοση του %1$s διαθέσιμη. <a target=\\\"_blank\\\" class=\\"
+"\"thickbox\\\" href=\\\"%2$s\\\">Δείτε έκδοση%3$s λεπτομέρειες</a> ."
 
 #: wp-ultimate-recipe-premium/premium/vendor/EDD/EDD_SL_Plugin_Updater.php:184
 #, php-format
@@ -3372,14 +3381,17 @@ msgid ""
 "\"thickbox\" href=\"%2$s\">View version %3$s details</a> or <a href=\"%4$s"
 "\">update now</a>."
 msgstr ""
+"There is a new version of %1$s available. <a target=\"_blank\" class="
+"\"thickbox\" href=\"%2$s\">View version %3$s details</a> or <a href=\"%4$s"
+"\">update now</a>."
 
 #: wp-ultimate-recipe-premium/premium/vendor/EDD/EDD_SL_Plugin_Updater.php:324
 msgid "You do not have permission to install plugin updates"
-msgstr ""
+msgstr "Δεν έχετε άδεια για να εγκαταστήσετε το plugin ενημερώσεις"
 
 #: wp-ultimate-recipe-premium/premium/vendor/EDD/EDD_SL_Plugin_Updater.php:324
 msgid "Error"
-msgstr ""
+msgstr "Error: "
 
 #: wp-ultimate-recipe-premium/wp-ultimate-recipe-premium.php:106
 msgid ""
@@ -3387,3 +3399,7 @@ msgid ""
 "the Premium version. WP Ultimate Recipe Premium is a stand-alone plugin "
 "since version 2. You won't lose any settings or recipes when deactivating."
 msgstr ""
+"Θα πρέπει να απενεργοποιήσετε το δωρεάν plugin WP απόλυτη συνταγή πριν την "
+"ενεργοποίηση του Premium έκδοση. WP απόλυτη συνταγή Premium είναι ένα "
+"αυτόνομο plugin από την έκδοση 2. Δεν θα χάσετε οποιεσδήποτε ρυθμίσεις ή "
+"συνταγές όταν απενεργοποίηση."

@@ -90,6 +90,11 @@ class WPURP_Recipe_Save {
                 {
                     update_post_meta( $recipe->ID(), 'recipe_servings_normalized', $this->normalize_servings( $new ) );
                 }
+                elseif( isset( $new ) && $field == 'recipe_rating' )
+                {
+                    $term_name = intval( $new ) == 1 ? $new .' '. __( 'star', 'wp-ultimate-recipe' ) : $new .' '. __( 'stars', 'wp-ultimate-recipe' );
+                    wp_set_post_terms( $recipe->ID(), $term_name, 'rating' );
+                }
 
                 // Update or delete meta data if changed
                 if ( isset( $new ) && $new != $old )

@@ -94,6 +94,14 @@ class WPURP_Assets {
                 'file' => WPUltimateRecipe::get()->coreUrl . '/vendor/font-awesome/css/font-awesome.min.css',
                 'direct' => true,
                 'public' => true,
+            ),
+            array(
+                'name' => 'chicory',
+                'setting_inverse' => array( 'partners_integrations_chicory_enable', '' ),
+                'file' => 'http://chicoryapp.com/widget_v2',
+                'type' => 'js',
+                'direct' => true,
+                'public' => true,
             )
         );
     }

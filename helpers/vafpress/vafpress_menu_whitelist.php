@@ -1,4 +1,18 @@
 <?php
+function wpurp_admin_users()
+{
+    $users = array();
+    $blogusers = get_users( array( 'fields' => array( 'ID', 'display_name' ) ) );
+
+    foreach( $blogusers as $bloguser ) {
+        $users[] = array(
+            'value' => $bloguser->ID,
+            'label' => $bloguser->ID . ' - ' . $bloguser->display_name,
+        );
+    }
+
+    return $users;
+}
 
 function wpurp_admin_recipe_slug_preview( $slug )
 {
@@ -28,6 +42,11 @@ function wpurp_admin_recipe_template_style($style)
     return $style == 'custom' ? true : false;
 }
 
+function wpurp_admin_chicory_terms( $button, $terms )
+{
+    return $button && !$terms;
+}
+
 function wpurp_admin_manage_fields()
 {
     if( WPUltimateRecipe::is_addon_active( 'template-editor' ) ) {
@@ -37,6 +56,25 @@ function wpurp_admin_manage_fields()
     }
 
     return $button;
+}
+function wpurp_admin_custom_fields()
+{
+    $fields = array();
+
+    $custom_fields_addon = WPUltimateRecipe::addon( 'custom-fields' );
+    if( $custom_fields_addon )
+    {
+        $custom_fields = $custom_fields_addon->get_custom_fields();
+
+        foreach( $custom_fields as $key => $custom_field ) {
+            $fields[] = array(
+                'value' => $key,
+                'label' => $custom_field['name'],
+            );
+        }
+    }
+
+    return $fields;
 }
 
 function wpurp_admin_manage_tags()
@@ -101,6 +139,11 @@ function wpurp_admin_import_ziplist()
 function wpurp_admin_import_xml()
 {
     return '<a href="'.admin_url( 'edit.php?post_type=recipe&page=wpurp_import_xml' ).'" class="button button-primary" target="_blank">'.__('Import XML', 'wp-ultimate-recipe').'</a>';
+}
+
+function wpurp_admin_import_fdx()
+{
+    return '<a href="'.admin_url( 'edit.php?post_type=recipe&page=wpurp_import_fdx' ).'" class="button button-primary" target="_blank">'.__('Import FDX', 'wp-ultimate-recipe').'</a>';
 }
 
 function wpurp_admin_export_xml()
@@ -213,6 +256,37 @@ function wpurp_reset_cache()
     return '<a href="'.admin_url( 'edit.php?post_type=recipe&wpurp_reset_cache=true' ).'" class="button button-primary" target="_blank">'.__('Reset Cache', 'wp-ultimate-recipe').'</a>';
 }
 
+function wpurp_admin_user_submission_required_fields()
+{
+    $fields = array();
+
+    $default_fields = array(
+        'title' => __( 'Recipe title', 'wp-ultimate-recipe' ),
+        'recipe-author' => __( 'Your name', 'wp-ultimate-recipe' ) . ' (' . __( 'guests', 'wp-ultimate-recipe' ) . ')',
+        'recipe_description' => __( 'Description', 'wp-ultimate-recipe' ),
+        'recipe_servings' => __( 'Servings', 'wp-ultimate-recipe' ),
+        'recipe_prep_time' => __( 'Prep Time', 'wp-ultimate-recipe' ),
+        'recipe_cook_time' => __( 'Cook Time', 'wp-ultimate-recipe' ),
+        'recipe_passive_time' => __( 'Passive Time', 'wp-ultimate-recipe' ),
+    );
+
+    foreach( $default_fields as $value => $label ) {
+        $fields[] = array(
+            'value' => $value,
+            'label' => $label,
+        );
+    }
+
+    if( WPUltimateRecipe::option( 'recipe_fields_in_user_submission', '1' ) == '1' ) {
+        foreach( wpurp_admin_custom_fields() as $custom_field ) {
+            $custom_field['label'] = __( 'Custom Fields', 'wp-ultimate-recipe' ) . ': ' . $custom_field['label'];
+            $fields[] = $custom_field;
+        }
+    }
+
+    return $fields;
+}
+
 function wpurp_admin_recipe_tags()
 {
     $taxonomy_list = array();
@@ -281,12 +355,15 @@ function wpurp_admin_post_types()
 }
 
 
+VP_Security::instance()->whitelist_function('wpurp_admin_users');
 VP_Security::instance()->whitelist_function('wpurp_admin_recipe_slug_preview');
 VP_Security::instance()->whitelist_function('wpurp_admin_user_menus_slug_preview');
 VP_Security::instance()->whitelist_function('wpurp_admin_premium_not_installed');
 VP_Security::instance()->whitelist_function('wpurp_admin_premium_installed');
 VP_Security::instance()->whitelist_function('wpurp_admin_recipe_template_style');
+VP_Security::instance()->whitelist_function('wpurp_admin_chicory_terms');
 VP_Security::instance()->whitelist_function('wpurp_admin_manage_fields');
+VP_Security::instance()->whitelist_function('wpurp_admin_custom_fields');
 VP_Security::instance()->whitelist_function('wpurp_admin_manage_tags');
 VP_Security::instance()->whitelist_function('wpurp_admin_template_editor_recipe');
 VP_Security::instance()->whitelist_function('wpurp_admin_template_editor');
@@ -296,6 +373,7 @@ VP_Security::instance()->whitelist_function('wpurp_admin_import_recipecard');
 VP_Security::instance()->whitelist_function('wpurp_admin_import_recipress');
 VP_Security::instance()->whitelist_function('wpurp_admin_import_ziplist');
 VP_Security::instance()->whitelist_function('wpurp_admin_import_xml');
+VP_Security::instance()->whitelist_function('wpurp_admin_import_fdx');
 VP_Security::instance()->whitelist_function('wpurp_admin_export_xml');
 VP_Security::instance()->whitelist_function('wpurp_admin_system_3');
 VP_Security::instance()->whitelist_function('wpurp_admin_system_4');
@@ -310,6 +388,7 @@ VP_Security::instance()->whitelist_function('wpurp_reset_demo_recipe');
 VP_Security::instance()->whitelist_function('wpurp_manage_recipe_grid');
 VP_Security::instance()->whitelist_function('wpurp_reset_recipe_grid_terms');
 VP_Security::instance()->whitelist_function('wpurp_reset_cache');
+VP_Security::instance()->whitelist_function('wpurp_admin_user_submission_required_fields');
 VP_Security::instance()->whitelist_function('wpurp_admin_recipe_tags');
 VP_Security::instance()->whitelist_function('wpurp_admin_category_terms');
 VP_Security::instance()->whitelist_function('wpurp_admin_tag_terms');

@@ -7,30 +7,36 @@
 
     <div class="feature-section col two-col">
         <div class="col-1">
-            <h3>WP Ultimate Recipe 2.2.3</h3>
+            <h3>WP Ultimate Recipe 2.3</h3>
             <strong>New</strong>
             <ul>
-                <li>Improvement: Plugin works in different directory names</li>
+                <li>Feature: Full text search for recipes</li>
+                <li>Feature: New partner integration with Chicory</li>
+                <li>Setting: What to use for the recipe image title tag</li>
             </ul>
             <strong>Update</strong>
             <ul>
-                <li>Fix: Shortcode Editor button in text editor</li>
-                <li>Fix: Recipe Template compatibility with Twenty Fifteen theme</li>
+                <li>Fix: Password Protection now hides the recipe box as well</li>
+                <li>Fix: Yandex resultPhoto metadata</li>
+                <li>Fix: Usage of Ratings taxonomy</li>
             </ul>
         </div>
         <div class="col-2 last-feature">
-            <h3>WP Ultimate Recipe Premium 2.2.3</h3>
+            <h3>WP Ultimate Recipe Premium 2.3</h3>
             <strong>New</strong>
             <ul>
-                <li>Feature: Entire new Recipe Grid functionality</li>
-                <li>Improvement: Delete icon in User Menus</li>
-                <li>Improvement: Setting to not consolidate ingredients in User Menus</li>
+                <li>Feature: Import .fdx files (Living Cookbook, …)</li>
+                <li>Feature: Allow logged in users to edit their own recipes from the front end with a new shortcode</li>
+                <li>Feature: Allow visitors to preview recipes in the User Submission form</li>
+                <li>Feature: Set required fields for User Submission form</li>
+                <li>Feature: Use security question in User Submission form</li>
+                <li>Improvement: More options for auto approval of User Submissions</li>
+                <li>Improvement: Select which custom fields should show up in the User Submission form</li>
+                <li>Improvement: User Submission form container classes</li>
             </ul>
             <strong>Update</strong>
             <ul>
-                <li>Fix: Publish date bug in saved User Menus</li>
-                <li>Fix: Recipe Grid WordPress 4.2 compatibility</li>
-                <li>Fix: Unit Conversion problem when switching back to original unit system</li>
+                <li>Fix: Dropping in certain blocks after loading/importing in the Template Editor</li>
             </ul>
         </div>
     </div>
@@ -39,6 +45,22 @@
 
     <div>
         <h3>Previous Versions</h3>
+
+        <h4>Premium Plugin 2.2.3</h4>
+        <ul>
+            <li>Feature: Entire new Recipe Grid functionality</li>
+            <li>Improvement: Delete icon in User Menus</li>
+            <li>Improvement: Setting to not consolidate ingredients in User Menus</li>
+            <li>Fix: Publish date bug in saved User Menus</li>
+            <li>Fix: Recipe Grid WordPress 4.2 compatibility</li>
+            <li>Fix: Unit Conversion problem when switching back to original unit system</li>
+        </ul>
+        <h4>Core Plugin 2.2.3</h4>
+        <ul>
+            <li>Improvement: Plugin works in different directory names</li>
+            <li>Fix: Shortcode Editor button in text editor</li>
+            <li>Fix: Recipe Template compatibility with Twenty Fifteen theme</li>
+        </ul>
 
         <h4>Premium Plugin 2.2.2</h4>
         <ul>

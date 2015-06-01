@@ -365,6 +365,7 @@ class WPURP_Template_Block {
                 }
             } else if ( in_array( $condition['setting'], array(
                 'partners_integrations_foodfanatic_enable',
+                'partners_integrations_chicory_enable',
                 'partners_integrations_bigoven_enable' ) ) ) {
                 // Default 0
                 $val = WPUltimateRecipe::option( $condition['setting'], '0' );

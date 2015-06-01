@@ -3,12 +3,12 @@
 Plugin Name: WP Ultimate Recipe
 Plugin URI: http://www.wpultimaterecipe.com
 Description: Everything a Food Blog needs. Beautiful SEO friendly recipes, print versions, visitor interaction, ...
-Version: 2.2.3
+Version: 2.3
 Author: Bootstrapped Ventures
 Author URI: http://bootstrapped.ventures
 License: GPLv2
 */
-define( 'WPURP_VERSION', '2.2.3' );
+define( 'WPURP_VERSION', '2.3' );
 
 class WPUltimateRecipe {
 
@@ -89,6 +89,16 @@ class WPUltimateRecipe {
             $default = self::get()->helper( 'vafpress_menu' )->defaults( $name );
         }
 
+        // Chicory specific check
+        if( 'partners_integrations_chicory_enable' == $name && '1' == $option ) {
+            $option = vp_option( 'wpurp_option.partners_integrations_chicory_terms' );
+            if( count( $option ) == 0 ) {
+                $option = '';
+            } else {
+                $option = '1';
+            }
+        }
+
         return is_null( $option ) ? $default : $option;
     }
 
@@ -152,6 +162,7 @@ class WPUltimateRecipe {
         $this->helper( 'recipe_meta_box' );
         $this->helper( 'recipe_post_type' );
         $this->helper( 'recipe_save' );
+        $this->helper( 'search' );
         $this->helper( 'support_tab' );
         $this->helper( 'taxonomies' );
         $this->helper( 'thumbnails' );

@@ -11,6 +11,9 @@ class WPURP_Cache {
 
         // Check if reset is needed
         add_action( 'save_post', array( $this, 'check_save_post' ), 11, 2 );
+
+        // Reset cron job
+        add_action( 'wpurp_cron_reset_cache', array( $this, 'reset' ) );
     }
 
     public function check_manual_reset()
@@ -26,14 +29,21 @@ class WPURP_Cache {
         $this->cache = get_option( 'wpurp_cache', false );
 
         if( !$this->cache ) {
-            $this->reset();
+            $this->trigger_reset();
         }
     }
 
     public function check_save_post( $id, $post )
     {
         if( $post->post_type == 'recipe' ) {
-            $this->reset();
+            $this->trigger_reset();
+        }
+    }
+
+    public function trigger_reset()
+    {
+        if( !wp_next_scheduled( 'wpurp_cron_reset_cache' ) ) {
+            wp_schedule_single_event( time(), 'wpurp_cron_reset_cache' );
         }
     }
 

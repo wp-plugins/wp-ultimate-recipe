@@ -4,7 +4,7 @@ class WPURP_Vafpress_Shortcode {
 
     public function __construct()
     {
-        add_action( 'after_setup_theme', array( $this, 'vafpress_shortcode_init' ) );
+        add_action( 'after_setup_theme', array( $this, 'vafpress_shortcode_init' ), 11 );
     }
 
     public function vafpress_shortcode_init()

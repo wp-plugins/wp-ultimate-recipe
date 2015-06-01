@@ -341,6 +341,10 @@ $shortcode_generator = array(
                 'title'   => __('User Submissions form', 'wp-ultimate-recipe'),
                 'code'    => '[ultimate-recipe-submissions]',
             ),
+            'submissions_current_user' => array(
+                'title'   => __('List of submissions by currently logged in user with edit ability', 'wp-ultimate-recipe'),
+                'code'    => '[ultimate-recipe-submissions-current-user-edit]',
+            ),
         ),
     ),
 //=-=-=-=-=-=-= USER MENUS =-=-=-=-=-=-=

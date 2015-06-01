@@ -17,3 +17,8 @@
     vertical-align: middle; }
   .wpurp_license .license_button {
     float: right; }
+
+#partners_integrations_chicory_terms label {
+  margin-right: 0; }
+#partners_integrations_chicory_terms a {
+  vertical-align: middle; }

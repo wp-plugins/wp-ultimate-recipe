@@ -7,6 +7,23 @@
     display: none;
 }
 
+.wpurp-errors {
+  border: 1px solid darkred;
+  padding: 10px;
+  margin-bottom: 20px;
+
+  ul {
+    margin: 0 !important;
+  }
+}
+
+.wpurp-required {
+  color: darkred;
+  margin-left: 2px;
+  vertical-align: top;
+  font-size: smaller;
+}
+
 html body.rtl .wpurp-container {
     text-align: right;
 }
@@ -16,6 +33,10 @@ html body .wpurp-container {
     clear: both !important;
     text-align: left; // Not !important to support RTL languages
     font-size: 14px !important;
+
+    &.wpupg-item {
+        position: absolute !important;
+    }
 
     span {
         display: inline-block !important;

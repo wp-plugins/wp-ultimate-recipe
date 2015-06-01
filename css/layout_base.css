@@ -5,6 +5,19 @@
 .wpurp-meta {
   display: none; }
 
+.wpurp-errors {
+  border: 1px solid darkred;
+  padding: 10px;
+  margin-bottom: 20px; }
+  .wpurp-errors ul {
+    margin: 0; }
+
+.wpurp-required {
+  color: darkred;
+  margin-left: 2px;
+  vertical-align: top;
+  font-size: smaller; }
+
 html body.rtl .wpurp-container {
   text-align: right; }
 
@@ -13,6 +26,8 @@ html body .wpurp-container {
   clear: both;
   text-align: left;
   font-size: 14px; }
+  html body .wpurp-container.wpupg-item {
+    position: absolute; }
   html body .wpurp-container span {
     display: inline-block; }
   html body .wpurp-container * {
