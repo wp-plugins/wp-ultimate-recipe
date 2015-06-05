@@ -69,7 +69,7 @@ class WPURP_Search {
             $searchable_recipe = str_replace( ']', ')', $searchable_recipe );
 
             $post_content = preg_replace("/<div class=\"wpurp-searchable-recipe\"[^<]*<\/div>/", "", $post->post_content); // Backwards compatibility
-            $post_content .= preg_replace("/\[wpurp-searchable-recipe\][^\[]*\[\/wpurp-searchable-recipe\]/", "", $post->post_content);
+            $post_content = preg_replace("/\[wpurp-searchable-recipe\][^\[]*\[\/wpurp-searchable-recipe\]/", "", $post_content);
             $post_content .= '[wpurp-searchable-recipe]';
             $post_content .= htmlentities( $searchable_recipe );
             $post_content .= '[/wpurp-searchable-recipe]';

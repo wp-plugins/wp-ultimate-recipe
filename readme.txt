@@ -101,6 +101,9 @@ Yes! We pride ourselves on offering awesome support and almost always answer sup
 
 == Changelog ==
 
+= 2.3.2 =
+* Fix: for the previous fix
+
 = 2.3.1 =
 * Fix: Better way of handling the full text search
 
@@ -398,6 +401,9 @@ Yes! We pride ourselves on offering awesome support and almost always answer sup
 * Very first version of this plugin
 
 == Upgrade notice ==
+
+= 2.3.2 =
+Update if you were using WP Ultimate Recipe 2.3.1
 
 = 2.3.1 =
 Update to fix the Full Text Search feature
