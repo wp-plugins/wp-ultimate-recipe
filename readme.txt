@@ -101,6 +101,9 @@ Yes! We pride ourselves on offering awesome support and almost always answer sup
 
 == Changelog ==
 
+= 2.3.1 =
+* Fix: Better way of handling the full text search
+
 = 2.3 =
 * Feature: Full text search for recipes
 * Feature: New partner integration with Chicory
@@ -395,6 +398,9 @@ Yes! We pride ourselves on offering awesome support and almost always answer sup
 * Very first version of this plugin
 
 == Upgrade notice ==
+
+= 2.3.1 =
+Update to fix the Full Text Search feature
 
 = 2.3 =
 A few great new features for WP Ultimate Recipe

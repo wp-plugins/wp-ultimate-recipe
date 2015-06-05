@@ -26,6 +26,7 @@ jQuery(document).ready(function() {
     if(text_editor.length > 0) {
         var content = text_editor.val();
         content = content.replace( /<div class="wpurp-searchable-recipe"[^<]*<\/div>/g, function( match ) { return ''; });
+        content = content.replace( /\[wpurp-searchable-recipe\][^\[]*\[\/wpurp-searchable-recipe\]/g, function( match ) { return ''; });
         text_editor.val(content);
     }
 

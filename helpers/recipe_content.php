@@ -44,6 +44,9 @@ class WPURP_Recipe_Content {
                 $content = $this->excerpt_filter( $content );
             }
 
+            // Remove searchable part
+            $content = preg_replace("/\[wpurp-searchable-recipe\][^\[]*\[\/wpurp-searchable-recipe\]/", "", $content);
+
             add_filter( 'the_content', array( $this, 'content_filter' ), 10 );
         }
 

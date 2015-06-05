@@ -5,6 +5,8 @@ class WPURP_Search {
     public function __construct()
     {
         add_action( 'save_post', array( $this, 'save' ), 15, 2 );
+
+        add_shortcode( 'wpurp-searchable-recipe', array( $this, 'shortcode' ) );
     }
 
     /**
@@ -66,10 +68,11 @@ class WPURP_Search {
             $searchable_recipe = str_replace( '[', '(', $searchable_recipe );
             $searchable_recipe = str_replace( ']', ')', $searchable_recipe );
 
-            $post_content = preg_replace("/<div class=\"wpurp-searchable-recipe\"[^<]*<\/div>/", "", $post->post_content);
-            $post_content .= '<div class="wpurp-searchable-recipe" style="display:none">';
+            $post_content = preg_replace("/<div class=\"wpurp-searchable-recipe\"[^<]*<\/div>/", "", $post->post_content); // Backwards compatibility
+            $post_content .= preg_replace("/\[wpurp-searchable-recipe\][^\[]*\[\/wpurp-searchable-recipe\]/", "", $post->post_content);
+            $post_content .= '[wpurp-searchable-recipe]';
             $post_content .= htmlentities( $searchable_recipe );
-            $post_content .= '</div>';
+            $post_content .= '[/wpurp-searchable-recipe]';
 
             remove_action( 'save_post', array( $this, 'save' ), 15, 2 );
             wp_update_post(
@@ -78,8 +81,13 @@ class WPURP_Search {
                     'post_content' => $post_content,
                 )
             );
-            update_post_meta( $recipe->ID(), 'wpurp_text_search', time() );
+            update_post_meta( $recipe->ID(), 'wpurp_text_search_2', time() );
             add_action( 'save_post', array( $this, 'save' ), 15, 2 );
         }
+    }
+
+    public function shortcode( $options )
+    {
+        // This is just to make sure the searchable part is not being output
     }
 }
