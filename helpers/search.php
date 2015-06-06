@@ -81,7 +81,7 @@ class WPURP_Search {
                     'post_content' => $post_content,
                 )
             );
-            update_post_meta( $recipe->ID(), 'wpurp_text_search_2', time() );
+            update_post_meta( $recipe->ID(), 'wpurp_text_search_3', time() );
             add_action( 'save_post', array( $this, 'save' ), 15, 2 );
         }
     }

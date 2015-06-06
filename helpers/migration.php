@@ -58,8 +58,8 @@ class WPURP_Migration {
     {
         $cron_migrate_version = get_option( 'wpurp_cron_migrate_version', '0.0.1' );
 
-        if( $cron_migrate_version < '2.3.1' ) {
-            require_once( WPUltimateRecipe::get()->coreDir . '/helpers/migration/cron_2_3_1_recipe_search.php');
+        if( $cron_migrate_version < '2.3.3' ) {
+            require_once( WPUltimateRecipe::get()->coreDir . '/helpers/migration/cron_2_3_3_recipe_search.php');
         } elseif( $cron_migrate_version < '2.4' ) {
             // Example cron migration for 2.4
         }

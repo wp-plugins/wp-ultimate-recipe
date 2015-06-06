@@ -102,6 +102,9 @@ Yes! We pride ourselves on offering awesome support and almost always answer sup
 == Changelog ==
 
 = 2.3.2 =
+* Fix: for the previous fix. Sorry for the inconvenience.
+
+= 2.3.2 =
 * Fix: for the previous fix
 
 = 2.3.1 =
@@ -401,6 +404,9 @@ Yes! We pride ourselves on offering awesome support and almost always answer sup
 * Very first version of this plugin
 
 == Upgrade notice ==
+
+= 2.3.2 =
+Update if you were using WP Ultimate Recipe 2.3.1 or 2.3.2
 
 = 2.3.2 =
 Update if you were using WP Ultimate Recipe 2.3.1
