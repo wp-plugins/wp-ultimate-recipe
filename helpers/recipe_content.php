@@ -20,7 +20,7 @@ class WPURP_Recipe_Content {
 
             $recipe = new WPURP_Recipe( get_post() );
 
-            if ( is_single() || WPUltimateRecipe::option( 'recipe_archive_display', 'full' ) == 'full' || ( is_feed() && WPUltimateRecipe::option( 'recipe_rss_feed_display', 'full' ) == 'full' ) )
+            if ( !post_password_required() && ( is_single() || WPUltimateRecipe::option( 'recipe_archive_display', 'full' ) == 'full' || ( is_feed() && WPUltimateRecipe::option( 'recipe_rss_feed_display', 'full' ) == 'full' ) ) )
             {
                 $taxonomies = WPUltimateRecipe::get()->tags();
                 unset($taxonomies['ingredient']);
@@ -43,6 +43,9 @@ class WPURP_Recipe_Content {
                 $content = str_replace( '[recipe]', '', $content ); // Remove shortcode from excerpt
                 $content = $this->excerpt_filter( $content );
             }
+
+            // Remove searchable part
+            $content = preg_replace("/\[wpurp-searchable-recipe\][^\[]*\[\/wpurp-searchable-recipe\]/", "", $content);
 
             add_filter( 'the_content', array( $this, 'content_filter' ), 10 );
         }

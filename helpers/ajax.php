@@ -8,7 +8,8 @@ class WPURP_Ajax {
 
     public function url()
     {
-        $ajaxurl = admin_url( 'admin-ajax.php' );
+        $scheme = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? 'https' : 'http';
+        $ajaxurl = admin_url( 'admin-ajax.php', $scheme );
         $ajaxurl .= '?wpurp_ajax=1';
 
         // WPML AJAX Localization Fix
