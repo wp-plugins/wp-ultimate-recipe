@@ -67,7 +67,7 @@ class WPURP_Recipe_Demo {
                     array(
                         'group' => 'Fresh Pesto',
                         'amount' => '6.25',
-                        'unit' => 'dl',
+                        'unit' => 'cl',
                         'ingredient' => 'olive oil',
                         'notes' => 'extra virgin',
                     ),
@@ -186,23 +186,23 @@ class WPURP_Recipe_Demo {
 
             // Nutritional Information
             $nutritional = array(
-                'calories' => '1866',
-                'carbohydrate' => '31',
-                'protein' => '28',
-                'fat' => '183',
-                'saturated_fat' => '30',
-                'polyunsaturated_fat' => '20',
-                'monounsaturated_fat' => '123',
+                'calories' => '1276',
+                'carbohydrate' => '71',
+                'protein' => '57',
+                'fat' => '85',
+                'saturated_fat' => '22',
+                'polyunsaturated_fat' => '10',
+                'monounsaturated_fat' => '44',
                 'trans_fat' => '',
-                'cholesterol' => '116',
-                'sodium' => '1289',
-                'potassium' => '308',
-                'fiber' => '1.7',
-                'sugar' => '1.7',
-                'vitamin_a' => '0.9',
-                'vitamin_c' => '0.5',
-                'calcium' => '8.7',
-                'iron' => '105'
+                'cholesterol' => '238',
+                'sodium' => '2548',
+                'potassium' => '620',
+                'fiber' => '4',
+                'sugar' => '4',
+                'vitamin_a' => '2',
+                'vitamin_c' => '0.1',
+                'calcium' => '16',
+                'iron' => '12'
             );
 
             update_post_meta( $post_id, 'recipe_nutritional', $nutritional );

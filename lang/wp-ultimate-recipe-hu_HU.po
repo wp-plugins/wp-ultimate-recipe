@@ -1,0 +1,3550 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Ultimate Recipe Plugin\n"
+"POT-Creation-Date: 2015-06-01 10:20+0100\n"
+"PO-Revision-Date: 2015-07-07 18:08+0200\n"
+"Last-Translator: Brecht Vandersmissen <brecht.vandersmissen@gmail.com>\n"
+"Language-Team: Bootstrapped Ventures\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.2\n"
+"X-Poedit-KeywordsList: __;_e;_x\n"
+"X-Poedit-Basepath: /Users/Brecht/Development/WordPress Plugins\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: hu_HU\n"
+"X-Poedit-SearchPath-0: wp-ultimate-recipe-premium\n"
+"X-Poedit-SearchPathExcluded-0: wp-ultimate-recipe-premium/premium/vendor/wp-"
+"ultimate-post-grid-premium\n"
+
+#: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/basic-custom-taxonomies.php:45
+#: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/custom-taxonomies.php:48
+msgid "Custom Taxonomies"
+msgstr "Egyedi taxonómiák"
+
+#: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/basic-custom-taxonomies.php:45
+msgid "Manage Tags"
+msgstr "Címkék kezelése"
+
+#: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/basic-custom-taxonomies.php:57
+#: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/custom-taxonomies.php:60
+msgid "Current Recipe Tags"
+msgstr "Meglévő receptcímkék"
+
+#: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/basic-custom-taxonomies.php:58
+#: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/custom-taxonomies.php:61
+msgid "Add new Recipe Tag"
+msgstr "Új receptcímke hozzáadása"
+
+#: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/basic-custom-taxonomies.php:108
+#: wp-ultimate-recipe-premium/core/helpers/recipe_post_type.php:42
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:111
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:153
+#: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/custom-taxonomies.php:152
+#: wp-ultimate-recipe-premium/premium/addons/recipe-search/widgets/recipe_search_widget.php:53
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:223
+msgid "Search"
+msgstr "Keresés"
+
+#: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/basic-custom-taxonomies.php:109
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:112
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:154
+#: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/custom-taxonomies.php:153
+msgid "Popular"
+msgstr "Népszerű"
+
+#: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/basic-custom-taxonomies.php:110
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:113
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:155
+#: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/custom-taxonomies.php:154
+#: wp-ultimate-recipe-premium/premium/addons/export-xml/templates/before_importing.php:10
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:28
+msgid "All"
+msgstr "Mind"
+
+#: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/basic-custom-taxonomies.php:111
+#: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/templates/page_list.php:42
+#: wp-ultimate-recipe-premium/core/helpers/recipe_post_type.php:37
+#: wp-ultimate-recipe-premium/core/helpers/recipe_post_type.php:38
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:114
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:156
+#: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/custom-taxonomies.php:155
+#: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/templates/page_list.php:42
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:101
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:218
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:219
+msgid "Edit"
+msgstr "Szerkesztés"
+
+#: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/basic-custom-taxonomies.php:112
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:115
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:157
+#: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/custom-taxonomies.php:156
+msgid "Update"
+msgstr "Frissítés"
+
+#: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/basic-custom-taxonomies.php:113
+#: wp-ultimate-recipe-premium/core/helpers/recipe_post_type.php:35
+#: wp-ultimate-recipe-premium/core/helpers/recipe_post_type.php:36
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:116
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:158
+#: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/custom-taxonomies.php:157
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:216
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:217
+msgid "Add New"
+msgstr "Új hozzáadása"
+
+#: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/basic-custom-taxonomies.php:114
+#: wp-ultimate-recipe-premium/core/helpers/recipe_post_type.php:39
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:117
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:159
+#: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/custom-taxonomies.php:158
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:220
+msgid "New"
+msgstr "Új"
+
+#: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/basic-custom-taxonomies.php:114
+#: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/templates/page_form.php:13
+#: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/templates/page_list.php:15
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:117
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:159
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:131
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:487
+#: wp-ultimate-recipe-premium/premium/addons/custom-fields/templates/page_form.php:16
+#: wp-ultimate-recipe-premium/premium/addons/custom-fields/templates/page_list.php:12
+#: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/custom-taxonomies.php:158
+#: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/templates/page_form.php:13
+#: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/templates/page_list.php:15
+msgid "Name"
+msgstr "Név"
+
+#: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/basic-custom-taxonomies.php:115
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:118
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:160
+#: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/custom-taxonomies.php:159
+msgid "Separate"
+msgstr "Elválasztás"
+
+#: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/basic-custom-taxonomies.php:115
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:118
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:160
+#: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/custom-taxonomies.php:159
+msgid "with commas"
+msgstr "vesszőkkel"
+
+#: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/basic-custom-taxonomies.php:116
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:119
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:161
+#: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/custom-taxonomies.php:160
+msgid "Add or remove"
+msgstr "Hozzáadás vagy eltávolítás"
+
+#: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/basic-custom-taxonomies.php:117
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:120
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:162
+#: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/custom-taxonomies.php:161
+msgid "Choose from the most used"
+msgstr "Legtöbbször használt"
+
+#: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/basic-custom-taxonomies.php:118
+#: wp-ultimate-recipe-premium/core/helpers/recipe_post_type.php:43
+#: wp-ultimate-recipe-premium/core/helpers/recipe_post_type.php:44
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:121
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:163
+#: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/custom-taxonomies.php:162
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:224
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:225
+msgid "No"
+msgstr "Nincs"
+
+#: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/basic-custom-taxonomies.php:118
+#: wp-ultimate-recipe-premium/core/helpers/recipe_post_type.php:43
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:121
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:163
+#: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/custom-taxonomies.php:162
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:224
+msgid "found."
+msgstr "találat."
+
+#: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/templates/page.php:4
+#: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/custom-taxonomies.php:48
+#: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/templates/page.php:4
+msgid "Custom Tags"
+msgstr "Egyedi címkék"
+
+#: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/templates/page_form.php:1
+#: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/templates/page_form.php:1
+msgid "Create custom tags for your recipes."
+msgstr "Egyedi címkék létrehozása a receptjeidhez."
+
+#: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/templates/page_form.php:8
+#: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/templates/page_form.php:8
+msgid "Currently editing tag: "
+msgstr "Most szerkesztett címke:"
+
+#: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/templates/page_form.php:16
+#: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/templates/page_form.php:16
+msgid "(e.g. Courses)"
+msgstr "(pl. Fogások)"
+
+#: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/templates/page_form.php:20
+#: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/templates/page_list.php:12
+#: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/templates/page_form.php:20
+#: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/templates/page_list.php:12
+msgid "Singular Name"
+msgstr "Név egyes számban"
+
+#: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/templates/page_form.php:23
+#: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/templates/page_form.php:23
+msgid "(e.g. Course)"
+msgstr "(pl. Fogás)"
+
+#: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/templates/page_form.php:27
+#: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/templates/page_list.php:18
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:513
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1674
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1680
+#: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/templates/page_form.php:27
+#: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/templates/page_list.php:18
+msgid "Slug"
+msgstr "Slug"
+
+#: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/templates/page_form.php:30
+#: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/templates/page_form.php:30
+msgid "(e.g. http://www.yourwebsite.com/course/)"
+msgstr ""
+"(keresőbarát név, ami tipikusan kisbetűket, számokat, kötőjelet és "
+"alulvonást tartalmaz: pl. fogas)"
+
+#: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/templates/page_form.php:37
+#: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/templates/page_form.php:36
+msgid "Add new tag"
+msgstr "Új címke hozzáadása"
+
+#: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/templates/page_form.php:38
+msgid "Adding new tags is only possible in"
+msgstr "Új címkék hozzáadása csak ebben a verzióban lehetséges:"
+
+#: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/templates/page_form.php:41
+#: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/templates/page_form.php:38
+msgid "Edit tag"
+msgstr "Címke szerkesztése"
+
+#: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/templates/page_form.php:42
+#: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/templates/page_form.php:39
+msgid "Cancel Edit"
+msgstr "Szerkesztés elvetése"
+
+#: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/templates/page_list.php:1
+#: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/templates/page_list.php:1
+msgid "Do you really want to delete this taxonomy?"
+msgstr "Biztosan törölni szeretnéd ezt a taxonómiát?"
+
+#: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/templates/page_list.php:9
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:143
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:527
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:618
+#: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/templates/page_list.php:9
+#: wp-ultimate-recipe-premium/premium/addons/recipe-search/widgets/recipe_search_widget.php:74
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/templates/user-menus.php:12
+#: wp-ultimate-recipe-premium/premium/addons/user-submissions/templates/public_recipe_form.php:85
+#: wp-ultimate-recipe-premium/premium/addons/user-submissions/templates/public_recipe_form.php:93
+msgid "Tag"
+msgstr "Címke"
+
+#: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/templates/page_list.php:21
+#: wp-ultimate-recipe-premium/premium/addons/custom-fields/templates/page_list.php:15
+#: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/templates/page_list.php:21
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:79
+#: wp-ultimate-recipe-premium/premium/helpers/recipe_columns.php:27
+#: wp-ultimate-recipe-premium/premium/helpers/recipe_columns.php:93
+msgid "Actions"
+msgstr "Műveletek"
+
+#: wp-ultimate-recipe-premium/core/addons/custom-templates/templates/general/title.php:35
+#: wp-ultimate-recipe-premium/core/addons/custom-templates/templates/general/title.php:37
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:46
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:267
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/templates/user-menus.php:84
+msgid "Servings"
+msgstr "Mennyiség"
+
+#: wp-ultimate-recipe-premium/core/addons/custom-templates/templates/general/title.php:39
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/templates/user-menus.php:28
+msgid "Units"
+msgstr "Mértékegységek"
+
+#: wp-ultimate-recipe-premium/core/addons/custom-templates/templates/general/title.php:41
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:54
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:268
+msgid "Prep Time"
+msgstr "Előkészítés"
+
+#: wp-ultimate-recipe-premium/core/addons/custom-templates/templates/general/title.php:43
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:62
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:269
+msgid "Cook Time"
+msgstr "Sütés/főzés"
+
+#: wp-ultimate-recipe-premium/core/addons/custom-templates/templates/general/title.php:45
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:69
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:270
+msgid "Passive Time"
+msgstr "Pihentetés"
+
+#: wp-ultimate-recipe-premium/core/addons/custom-templates/templates/general/title.php:47
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:87
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:67
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:249
+#: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/manual_import.php:120
+#: wp-ultimate-recipe-premium/premium/addons/import-recipecard/templates/manual_import.php:34
+#: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:17
+#: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:56
+#: wp-ultimate-recipe-premium/premium/addons/import-ziplist/templates/manual_import.php:38
+msgid "Ingredients"
+msgstr "Hozzávalók"
+
+#: wp-ultimate-recipe-premium/core/addons/custom-templates/templates/general/title.php:49
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:215
+#: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:18
+#: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:88
+msgid "Instructions"
+msgstr "Elkészítés"
+
+#: wp-ultimate-recipe-premium/core/addons/custom-templates/templates/general/title.php:51
+msgid "Recipe Notes"
+msgstr "Megjegyzés"
+
+#: wp-ultimate-recipe-premium/core/addons/custom-templates/templates/general/title.php:53
+msgid "Share this Recipe"
+msgstr "A recept megosztása"
+
+#: wp-ultimate-recipe-premium/core/addons/custom-templates/templates/general/title.php:55
+msgid "Powered by"
+msgstr "Powered by"
+
+#: wp-ultimate-recipe-premium/core/addons/custom-templates/templates/layout/container.php:151
+#: wp-ultimate-recipe-premium/core/addons/custom-templates/templates/layout/container.php:152
+#: wp-ultimate-recipe-premium/core/addons/custom-templates/templates/recipe/cook_time.php:17
+#: wp-ultimate-recipe-premium/core/addons/custom-templates/templates/recipe/prep_time.php:17
+#: wp-ultimate-recipe-premium/core/helpers/migration/1_0_9_free_text_times.php:14
+#: wp-ultimate-recipe-premium/core/helpers/migration/1_0_9_free_text_times.php:17
+#: wp-ultimate-recipe-premium/core/helpers/migration/1_0_9_free_text_times.php:20
+#: wp-ultimate-recipe-premium/core/helpers/recipe_demo.php:26
+#: wp-ultimate-recipe-premium/core/helpers/recipe_demo.php:28
+#: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/import-easyrecipe.php:225
+#: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/import-easyrecipe.php:230
+#: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/import-easyrecipe.php:238
+#: wp-ultimate-recipe-premium/premium/addons/import-fdx/import-fdx.php:81
+#: wp-ultimate-recipe-premium/premium/addons/import-fdx/import-fdx.php:83
+#: wp-ultimate-recipe-premium/premium/addons/import-fdx/import-fdx.php:85
+#: wp-ultimate-recipe-premium/premium/addons/import-recipecard/import-recipecard.php:141
+#: wp-ultimate-recipe-premium/premium/addons/import-recipecard/import-recipecard.php:146
+#: wp-ultimate-recipe-premium/premium/addons/import-recipecard/import-recipecard.php:154
+#: wp-ultimate-recipe-premium/premium/addons/import-recipress/import-recipress.php:173
+#: wp-ultimate-recipe-premium/premium/addons/import-recipress/import-recipress.php:174
+#: wp-ultimate-recipe-premium/premium/addons/import-recipress/import-recipress.php:175
+#: wp-ultimate-recipe-premium/premium/addons/import-ziplist/import-ziplist.php:204
+#: wp-ultimate-recipe-premium/premium/addons/import-ziplist/import-ziplist.php:209
+#: wp-ultimate-recipe-premium/premium/addons/import-ziplist/import-ziplist.php:217
+msgid "minutes"
+msgstr "perc"
+
+#: wp-ultimate-recipe-premium/core/addons/custom-templates/templates/partner/bigoven.php:16
+msgid "BigOven - Save recipe or add to grocery list"
+msgstr "BigOven - Recept mentése vagy hozzáadás a bevásárlólistához"
+
+#: wp-ultimate-recipe-premium/core/helpers/admin_tour.php:26
+msgid "Your recipes"
+msgstr "Receptjeid"
+
+#: wp-ultimate-recipe-premium/core/helpers/admin_tour.php:27
+msgid ""
+"Everything regarding your recipes can be handled over here. Just click on "
+"'Recipes' to create one, edit one or change your settings."
+msgstr ""
+"Itt kezelheted mindazt, ami a receptjeiddel kapcsolatos. Létrehozásukhoz, "
+"szerkesztésükhöz, vagy a beállítások módosításához egyszerűen csak klikkelj "
+"a 'Receptek' menüpontra."
+
+#: wp-ultimate-recipe-premium/core/helpers/admin_tour.php:48
+msgid "Recipe Settings"
+msgstr "Receptbeállítások"
+
+#: wp-ultimate-recipe-premium/core/helpers/admin_tour.php:49
+msgid ""
+"If it's your first time here, it's a good idea to check out the <strong>Demo "
+"Recipe</strong>. But make sure to take a look at the <strong>settings page</"
+"strong> later. Plenty of things can be customized to your liking."
+msgstr ""
+"Ha először látogatsz el ide, nem árt megnézned a <strong>Bemutató receptet</"
+"strong>. KÉsőbb érdemes visszatérni a <strong>Beállítások</strong> lapra; "
+"számos dolgot személyre szabhatsz - ahogy neked tetszik."
+
+#: wp-ultimate-recipe-premium/core/helpers/admin_tour.php:70
+msgid "Important!"
+msgstr "Fontos!"
+
+#: wp-ultimate-recipe-premium/core/helpers/admin_tour.php:71
+msgid ""
+"Make sure to enter your ingredients as indicated: the quantity in the first "
+"field, unit in the second, the actual ingredient in the third and notes in "
+"the last."
+msgstr ""
+"A hozzávalók mezőit a jelzett sorrendben töltsd ki: az elsőbe a mennyiség, a "
+"másodikba a mértékegység, a harmadikba az összetevő, míg az utolsóba a "
+"megjegyzés kerüljön."
+
+#: wp-ultimate-recipe-premium/core/helpers/admin_tour.php:72
+msgid ""
+"You want to name your ingredients consistently as this name will be used to "
+"link recipes, use the notes field to specify things about an ingredient."
+msgstr ""
+"A hozzávalókat lehetőleg következetesen nevezd el, hiszen ez biztosítja "
+"többek közt a receptek közötti kapcsolatot. A hozzávalók speciális "
+"tulajdonságainak megadására használd inkább a megjegyzés mezőt."
+
+#: wp-ultimate-recipe-premium/core/helpers/admin_tour.php:93
+msgid "Need help?"
+msgstr "Segítségre van szükséged?"
+
+#: wp-ultimate-recipe-premium/core/helpers/admin_tour.php:94
+msgid ""
+"You can contact us directly from this settings page <strong>if you have any "
+"questions or suggestions</strong>. Just click on the green 'Support' tab on "
+"the right side of the screen."
+msgstr ""
+"<strong>Ha bármilyen kérdésed vagy javaslatod van</strong>, közvetlenül "
+"felveheted velünk a kapcsolatot: csak klikkelj a piros 'Súgó' gombra alul, a "
+"képernyő jobb oldalán."
+
+#: wp-ultimate-recipe-premium/core/helpers/admin_tour.php:115
+msgid "Easily add shortcodes"
+msgstr "Shortcode-ok egyszerű hozzáadása"
+
+#: wp-ultimate-recipe-premium/core/helpers/admin_tour.php:116
+msgid ""
+"Click on the <strong>chef's hat</strong> in the visual editor toolbar to "
+"easily <strong>add recipes and functionality</strong> to any post or page."
+msgstr ""
+"Recept és funkciók hozzáadásához kattints a <strong>szakácssapkára</strong> "
+"a vizuális szerkesztő eszköztárán (bármely bejegyzésben vagy oldalon "
+"használható)."
+
+#: wp-ultimate-recipe-premium/core/helpers/cache.php:82
+msgid "Private"
+msgstr "Saját"
+
+#: wp-ultimate-recipe-premium/core/helpers/cache.php:96
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_whitelist.php:129
+msgid "n/a"
+msgstr "n/a"
+
+#: wp-ultimate-recipe-premium/core/helpers/faq.php:24
+msgid "FAQ"
+msgstr "GYIK"
+
+#: wp-ultimate-recipe-premium/core/helpers/ingredient_units.php:147
+#: wp-ultimate-recipe-premium/core/helpers/ingredient_units.php:179
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1023
+msgid "Unit Aliases"
+msgstr "Mértékegységnevek"
+
+#: wp-ultimate-recipe-premium/core/helpers/ingredient_units.php:148
+msgid "Use a semicolon to separate unit aliases. For example: "
+msgstr "A mértékegységek neveit (alias) pontosvesszővel válaszd el. Például:"
+
+#: wp-ultimate-recipe-premium/core/helpers/ingredient_units.php:169
+msgid " Units"
+msgstr " mértékegységek"
+
+#: wp-ultimate-recipe-premium/core/helpers/ingredient_units.php:180
+msgid ""
+"When converting to a unit the alias defined below will be shown. The "
+"singular form will be shown when the amount is 1, the plural otherwise."
+msgstr ""
+"Mértékegység konvertálásakor a lentebb beállított 'álnevek' jelennek meg.  "
+"(Magyarban nincs jelentősége, de ha az érték 1, akkor az egyes szám, más "
+"esetben a többes szám.)"
+
+#: wp-ultimate-recipe-premium/core/helpers/ingredient_units.php:193
+msgid "Singular"
+msgstr "Egyes szám"
+
+#: wp-ultimate-recipe-premium/core/helpers/ingredient_units.php:214
+#: wp-ultimate-recipe-premium/premium/helpers/ingredient_metadata.php:9
+#: wp-ultimate-recipe-premium/premium/helpers/ingredient_metadata.php:36
+msgid "Plural"
+msgstr "Többes szám"
+
+#: wp-ultimate-recipe-premium/core/helpers/ingredient_units.php:234
+msgid "Alias to convert to"
+msgstr "Nevek konvertálása a következőkre:"
+
+#: wp-ultimate-recipe-premium/core/helpers/ingredient_units.php:250
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1018
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1513
+msgid "Unit Systems"
+msgstr "Mértékegységrendszerek"
+
+#: wp-ultimate-recipe-premium/core/helpers/ingredient_units.php:256
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1557
+msgid "Number of Systems"
+msgstr "Rendszerek száma"
+
+#: wp-ultimate-recipe-premium/core/helpers/ingredient_units.php:257
+msgid "Number of unit systems for your visitors to choose from."
+msgstr "Látogatók által választható mértékegységrendszerek száma."
+
+#: wp-ultimate-recipe-premium/core/helpers/ingredient_units.php:266
+#: wp-ultimate-recipe-premium/core/helpers/ingredient_units.php:272
+#: wp-ultimate-recipe-premium/core/helpers/ingredient_units.php:278
+#: wp-ultimate-recipe-premium/core/helpers/ingredient_units.php:288
+#: wp-ultimate-recipe-premium/core/helpers/ingredient_units.php:298
+#: wp-ultimate-recipe-premium/core/helpers/ingredient_units.php:410
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1571
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1592
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1613
+msgid "Unit System"
+msgstr "Mértékegységrendszer"
+
+#: wp-ultimate-recipe-premium/core/helpers/ingredient_units.php:279
+#: wp-ultimate-recipe-premium/core/helpers/ingredient_units.php:289
+#: wp-ultimate-recipe-premium/core/helpers/ingredient_units.php:299
+msgid "Custom"
+msgstr "Egyedi"
+
+#: wp-ultimate-recipe-premium/core/helpers/ingredient_units.php:321
+#: wp-ultimate-recipe-premium/core/helpers/ingredient_units.php:327
+msgid "Universal Units"
+msgstr "Univezrális mértékegységek"
+
+#: wp-ultimate-recipe-premium/core/helpers/ingredient_units.php:328
+msgid ""
+"These units are considered universal to all systems and will not be "
+"converted."
+msgstr ""
+"Ezek a mértékegységek minden rendszerben egyaránt használatosak, így nem "
+"kerülnek konvertálásra."
+
+#: wp-ultimate-recipe-premium/core/helpers/ingredient_units.php:367
+msgid " units"
+msgstr " mértékegység"
+
+#: wp-ultimate-recipe-premium/core/helpers/ingredient_units.php:378
+msgid "Cup Type"
+msgstr "Csésze típusa"
+
+#: wp-ultimate-recipe-premium/core/helpers/ingredient_units.php:382
+#: wp-ultimate-recipe-premium/core/helpers/ingredient_units.php:429
+msgid "Metric"
+msgstr "Metrikus"
+
+#: wp-ultimate-recipe-premium/core/helpers/ingredient_units.php:386
+msgid "US Customary"
+msgstr "US (szokásos)"
+
+#: wp-ultimate-recipe-premium/core/helpers/ingredient_units.php:390
+msgid "US Legal"
+msgstr "US (jogszabályi)"
+
+#: wp-ultimate-recipe-premium/core/helpers/ingredient_units.php:394
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:89
+msgid "Japanese"
+msgstr "Japán"
+
+#: wp-ultimate-recipe-premium/core/helpers/ingredient_units.php:431
+msgid "US Imperial"
+msgstr "Angolszász"
+
+#: wp-ultimate-recipe-premium/core/helpers/notices.php:30
+msgid "other notices ignored"
+msgstr "egyéb megjegyzés mellőzve"
+
+#: wp-ultimate-recipe-premium/core/helpers/plugin_action_link.php:12
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:14
+#: wp-ultimate-recipe-premium/core/helpers/vafpress_menu.php:55
+#: wp-ultimate-recipe-premium/core/helpers/vafpress_menu.php:56
+msgid "Settings"
+msgstr "Beállítások"
+
+#: wp-ultimate-recipe-premium/core/helpers/plugin_action_link.php:13
+msgid "More information"
+msgstr "Bővebben"
+
+#: wp-ultimate-recipe-premium/core/helpers/recipe_demo.php:21
+msgid ""
+"This must be the best demo recipe I have ever seen. I could eat this every "
+"single day."
+msgstr ""
+"A legjobb recept, amit valaha láttam. Ezt a kaját minden áldott nap meg "
+"tudnám enni."
+
+#: wp-ultimate-recipe-premium/core/helpers/recipe_demo.php:24
+msgid "people"
+msgstr "személy"
+
+#: wp-ultimate-recipe-premium/core/helpers/recipe_demo.php:30
+msgid "hour"
+msgstr "óra"
+
+#: wp-ultimate-recipe-premium/core/helpers/recipe_demo.php:120
+msgid "Use this section for whatever you like."
+msgstr "Ezt a részt bármire használhatod."
+
+#: wp-ultimate-recipe-premium/core/helpers/recipe_demo.php:123
+msgid ""
+"Use this like normal post content. The recipe will automatically be included "
+"at the end of the post, or wherever you place the shortcode:"
+msgstr ""
+"Használat normál bejegyzésként. A recept automatikusan beágyazódik a "
+"bejegyzés végére, vagy oda, ahová a shortcode-ot elhelyezed."
+
+#: wp-ultimate-recipe-premium/core/helpers/recipe_demo.php:123
+msgid "This text will appear below your recipe."
+msgstr "Ez a szöveg a recepted alatt jelenik meg."
+
+#: wp-ultimate-recipe-premium/core/helpers/recipe_demo.php:126
+msgid "Followed by the nutrition label:"
+msgstr "A tápanyagtáblázatot követően:"
+
+#: wp-ultimate-recipe-premium/core/helpers/recipe_demo.php:133
+msgid "Demo Recipe"
+msgstr "Bemutató recept"
+
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:14
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:594
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:623
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:898
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:992
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1037
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1108
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1399
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1711
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1754
+#: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:33
+msgid "General"
+msgstr "Általános"
+
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:18
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:332
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:191
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:388
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:640
+#: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:15
+#: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:37
+#: wp-ultimate-recipe-premium/premium/helpers/recipe_columns.php:69
+msgid "Title"
+msgstr "Cím"
+
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:21
+msgid "(leave blank to use post title)"
+msgstr "(ha a bejegyzés címét akarod használni, hagyd üresen)"
+
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:26
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:266
+#: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:16
+#: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:43
+msgid "Description"
+msgstr "Leírás"
+
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:32
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:652
+#: wp-ultimate-recipe-premium/premium/addons/user-ratings/templates/user_rating.php:34
+#: wp-ultimate-recipe-premium/premium/helpers/recipe_columns.php:23
+#: wp-ultimate-recipe-premium/premium/helpers/recipe_columns.php:56
+#: wp-ultimate-recipe-premium/premium/helpers/recipe_columns.php:75
+msgid "Rating"
+msgstr "Értékelés"
+
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:39
+#: wp-ultimate-recipe-premium/core/helpers/recipe_save.php:95
+msgid "star"
+msgstr "csillag"
+
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:39
+#: wp-ultimate-recipe-premium/core/helpers/recipe_save.php:95
+msgid "stars"
+msgstr "csillag"
+
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:50
+msgid "(e.g. 2 people, 3 loafs, ...)"
+msgstr "(pl. 2 személy, 4 adag, stb.)"
+
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:58
+msgid "(e.g. 20 minutes, 1-2 hours, ...)"
+msgstr "(pl. 20 perc, 1-2 óra, stb.)"
+
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:79
+msgid ""
+"Don't forget that you can tag your recipe with <strong>Courses</strong> and "
+"<strong>Cuisines</strong> by using the boxes on the right. Use the "
+"<strong>featured image</strong> if you want a photo of the finished dish."
+msgstr ""
+"Ne feledd, receptjeidet megjelölheted a következő címkékkel: "
+"<strong>Fogások</strong> és <strong>Konyhák</strong>. Csak használd a jobb "
+"oldali mezőket. A <strong>Kiemelt kép</strong> szekcióban a kész ételről "
+"oszthatsz meg fotót."
+
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:93
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:118
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:143
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:222
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:239
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:259
+#: wp-ultimate-recipe-premium/premium/helpers/ingredient_metadata.php:24
+msgid "Group"
+msgstr "Csoport"
+
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:95
+msgid "Main Ingredients"
+msgstr "Fő összetevők"
+
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:95
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:223
+msgid "(this label is not shown)"
+msgstr "(ez a címke nem fog látszani)"
+
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:109
+msgid "Quantity"
+msgstr "Mennyiség"
+
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:110
+#: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/manual_import.php:125
+#: wp-ultimate-recipe-premium/premium/addons/import-recipecard/templates/manual_import.php:45
+#: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:79
+#: wp-ultimate-recipe-premium/premium/addons/import-ziplist/templates/manual_import.php:49
+msgid "Unit"
+msgstr "Mértékegység"
+
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:111
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:67
+#: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/manual_import.php:126
+#: wp-ultimate-recipe-premium/premium/addons/import-recipecard/templates/manual_import.php:46
+#: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:80
+#: wp-ultimate-recipe-premium/premium/addons/import-ziplist/templates/manual_import.php:50
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:76
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/templates/user-menus.php:153
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/templates/user-menus.php:167
+msgid "Ingredient"
+msgstr "Hozzávaló"
+
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:111
+msgid "required"
+msgstr "kötelező"
+
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:112
+#: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/manual_import.php:127
+#: wp-ultimate-recipe-premium/premium/addons/import-recipecard/templates/manual_import.php:47
+#: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:19
+#: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:49
+#: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:81
+#: wp-ultimate-recipe-premium/premium/addons/import-ziplist/templates/manual_import.php:51
+msgid "Notes"
+msgstr "Megjegyzések"
+
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:172
+msgid "tbsp"
+msgstr "evőkanál"
+
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:176
+msgid "Select an ingredient"
+msgstr "Válassz egy hozzávalót"
+
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:192
+msgid "olive oil"
+msgstr "olívaolaj"
+
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:196
+msgid "extra virgin"
+msgstr "extra szűz"
+
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:204
+msgid "Add an ingredient"
+msgstr "Összetevő hozzáadása"
+
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:207
+msgid "Add an ingredient group"
+msgstr "Csoport hozzáadása"
+
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:210
+msgid ""
+"<strong>Use the TAB key</strong> while adding ingredients, it will "
+"automatically create new fields. <strong>Don't worry about empty lines</"
+"strong>, these will be ignored."
+msgstr ""
+"Összetevők hozzáadásához <strong>használd a TAB billentyűt</strong> - "
+"ezáltal automatikusan új mezők jönnek létre. <strong>Az üres sorok miatt ne "
+"aggódj</strong>, ezek törlődni fognak (nem jelennek meg)."
+
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:223
+msgid "Main Instructions"
+msgstr "Instrukciók"
+
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:290
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:322
+msgid "Instruction Step Image"
+msgstr "Elkészítési fázis képe"
+
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:301
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:330
+msgid "Add Image"
+msgstr "Kép hozzáadása"
+
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:302
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:331
+msgid "Remove Image"
+msgstr "Kép eltávolítása"
+
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:341
+msgid "Add an instruction"
+msgstr "Instrukció hozzáadása"
+
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:344
+msgid "Add an instruction group"
+msgstr "Instrukció-csoport hozzáadása"
+
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:347
+msgid ""
+"<strong>Use the TAB key</strong> while adding instructions, it will "
+"automatically create new fields. <strong>Don't worry about empty lines</"
+"strong>, these will be ignored."
+msgstr ""
+"Instrukciók hozzáadásához <strong>használd a TAB billentyűt</strong> - "
+"ezáltal automatikusan új mezők jönnek létre. <strong>Az üres sorok miatt ne "
+"aggódj</strong>, ezek törlődni fognak (nem jelennek meg)."
+
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:352
+msgid "Recipe notes"
+msgstr "Megjegyzések"
+
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:375
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:282
+#: wp-ultimate-recipe-premium/premium/addons/custom-fields/custom-fields.php:18
+#: wp-ultimate-recipe-premium/premium/addons/custom-fields/templates/page.php:4
+msgid "Custom Fields"
+msgstr "Egyedi mezők"
+
+#: wp-ultimate-recipe-premium/core/helpers/recipe_meta_box.php:46
+msgid "Add Recipe Box"
+msgstr "Receptkártya hozzáadása"
+
+#: wp-ultimate-recipe-premium/core/helpers/recipe_meta_box.php:60
+#: wp-ultimate-recipe-premium/core/helpers/recipe_post_type.php:21
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1921
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:35
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:70
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:252
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:297
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:11
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/widgets/nutrition_label_widget.php:54
+msgid "Recipe"
+msgstr "Recept"
+
+#: wp-ultimate-recipe-premium/core/helpers/recipe_post_type.php:20
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:4
+msgid "Recipes"
+msgstr "Receptek"
+
+#: wp-ultimate-recipe-premium/core/helpers/recipe_post_type.php:40
+#: wp-ultimate-recipe-premium/core/helpers/recipe_post_type.php:41
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:221
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:222
+msgid "View"
+msgstr "Megtekintés"
+
+#: wp-ultimate-recipe-premium/core/helpers/recipe_post_type.php:44
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:225
+msgid "found in trash."
+msgstr "a kukában."
+
+#: wp-ultimate-recipe-premium/core/helpers/recipe_post_type.php:45
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:226
+msgid "Parent"
+msgstr "Szülő"
+
+#: wp-ultimate-recipe-premium/core/helpers/recipe_save.php:105
+msgid "Update the Nutritional Information"
+msgstr "Tápanyag-információk frissítése"
+
+#: wp-ultimate-recipe-premium/core/helpers/recipe_save.php:125
+#: wp-ultimate-recipe-premium/premium/addons/recipe-grid/recipe-grid.php:276
+#: wp-ultimate-recipe-premium/premium/helpers/recipe_columns.php:81
+msgid "Categories"
+msgstr "Kategóriák"
+
+#: wp-ultimate-recipe-premium/core/helpers/recipe_save.php:126
+#: wp-ultimate-recipe-premium/premium/addons/recipe-grid/recipe-grid.php:284
+#: wp-ultimate-recipe-premium/premium/helpers/recipe_columns.php:82
+msgid "Tags"
+msgstr "Címkék"
+
+#: wp-ultimate-recipe-premium/core/helpers/shortcodes/index_shortcode.php:51
+#: wp-ultimate-recipe-premium/premium/helpers/shortcodes/extended_index_shortcode.php:155
+msgid ""
+"You have to create a recipe first, check the 'Recipes' menu on the left."
+msgstr ""
+"Először egy receptet kell létrehoznod; használd a bal oldali 'Receptek' "
+"menüpontot!"
+
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:68
+msgid "Courses"
+msgstr "Fogások"
+
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:68
+msgid "Course"
+msgstr "Fogás"
+
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:69
+msgid "Cuisines"
+msgstr "Konyhák"
+
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:69
+msgid "Cuisine"
+msgstr "Konyha"
+
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:74
+msgid "Breakfast"
+msgstr "Reggelik"
+
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:75
+msgid "Appetizer"
+msgstr "Előételek"
+
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:76
+msgid "Soup"
+msgstr "Levesek"
+
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:77
+msgid "Main Course"
+msgstr "Főfogások"
+
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:78
+msgid "Side Dish"
+msgstr "Köretek"
+
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:79
+msgid "Salad"
+msgstr "Saláták"
+
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:80
+msgid "Dessert"
+msgstr "Desszertek"
+
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:81
+msgid "Snack"
+msgstr "Nassolnivalók"
+
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:82
+msgid "Drinks"
+msgstr "Italok"
+
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:84
+msgid "French"
+msgstr "francia"
+
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:85
+msgid "Italian"
+msgstr "olasz"
+
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:86
+msgid "Mediterranean"
+msgstr "mediterrán"
+
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:87
+msgid "Indian"
+msgstr "indiai"
+
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:88
+msgid "Chinese"
+msgstr "kínai"
+
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:90
+msgid "American"
+msgstr "amerikai"
+
+#: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:91
+msgid "Mexican"
+msgstr "mexikói"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:19
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:78
+msgid "Recipe Template"
+msgstr "Receptsablon"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:24
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:40
+msgid "Template Editor"
+msgstr "Sablonszerkesztő"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:31
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:678
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:724
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:847
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:905
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:999
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1059
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1115
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1406
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1718
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1761
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1827
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1896
+msgid "These features are only available in "
+msgstr "Ez(ek) az összetevő(k) nem választható(k), csak ebben a verzióban:"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:54
+msgid "Preview Recipe"
+msgstr "Előnézeti recept"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:55
+msgid "This recipe will be used for the preview in the editor."
+msgstr "Ez a recept lesz használatos a szerkesztő előnézetében."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:72
+msgid "Default Templates"
+msgstr "Alapértelmezett sablon"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:79
+msgid "The default template to use for recipes."
+msgstr "Alapértelmezett sablon a receptekhez."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:96
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1655
+msgid "Print Template"
+msgstr "Nyomtatási sablon"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:97
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1656
+msgid "The default template to use for printed recipes."
+msgstr "Alapértelmezett sablon a nyomtatott receptekhez."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:114
+msgid "Recipe Grid Template"
+msgstr "Rácsnézet sablonja"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:115
+msgid "The default template to use for recipes in the Recipe Grid."
+msgstr "Alapértelmezett sablon a receptek rácsszerű megjelenítéséhez."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:132
+msgid "RSS Feed Template"
+msgstr "RSS hírfolyam sablonja"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:133
+msgid "The default template to use for RSS feeds."
+msgstr "Alapértelmezett sablon az RSS hírfolyam használatához."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:152
+msgid "Recipe Box"
+msgstr "Receptkártya"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:157
+msgid "Functionality"
+msgstr "Funkciók"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:163
+msgid "Adjustable Servings"
+msgstr "Állítható adagok"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:164
+msgid "Allow users to dynamically adjust the servings of recipes."
+msgstr ""
+"Lehetővé teszi, hogy a felhasználók állíthassák a recepthez rendelt adagot - "
+"újraszámolva ezzel a hozzávalók mennyiségét."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:170
+msgid "Use Fractions"
+msgstr "Tizedesjegyek használata"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:171
+msgid ""
+"Use fractions after adjusting, even if the original quantity wasn't one."
+msgstr ""
+"Tizedesjegyek használata az adagok módosításakor (még akkor is, ha az "
+"eredeti mennyiség nem így van megadva)."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:177
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1496
+msgid "Default Servings"
+msgstr "Adagok alapbeállítása"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:178
+msgid "Default number of servings to use when none specified."
+msgstr "Az adagok számának alapbeállítása, ha az nem kerül megadásra."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:187
+msgid "Link to plugin"
+msgstr "Link a bővítményre"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:188
+msgid "Show a link to the plugin website as a little thank you."
+msgstr ""
+"A WP Ultimate Recipe bővítmény honlapjára mutató link megjelenítése - "
+"köszönetképp."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:195
+msgid "Images"
+msgstr "Képek"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:201
+msgid "Clickable Images"
+msgstr "Kattintható képek"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:202
+msgid "Best used in combination with a lightbox plugin."
+msgstr "Legcélszerűbb lightbox bővítménnyel együtt használni."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:208
+msgid "Recipe Image Title"
+msgstr "A recept képének címe"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:209
+msgid "Title tag to be used for the recipe image."
+msgstr "Ezt a címkét használja a recept képének elnevezéséhez."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:213
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:233
+msgid "Use media attachment title"
+msgstr "A médiafájl nevének használata"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:217
+msgid "Use recipe title"
+msgstr "A recept címének használata"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:228
+msgid "Instruction Images Title"
+msgstr "Elkészítési fázisok képének címe"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:229
+msgid "Title tag to be used for instruction images."
+msgstr "Ezt a címkét használja az instrukció képének elnevezéséhez."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:237
+msgid "Use instruction text"
+msgstr "Az instrukció szövege"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:256
+msgid "Custom links are only available in "
+msgstr "Egyedi linkek csak ebben a verzióban használhatók:"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:266
+msgid "Ingredient Links"
+msgstr "Hozzávalók linkjei"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:267
+msgid "Links to be used in the ingredient list."
+msgstr "Linkek használata a hozzávalók listájában."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:271
+msgid "No ingredient links"
+msgstr "Nincs link"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:275
+msgid "Only link to ingredient archive page"
+msgstr "Link csak a hozzávalók archív oldalára"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:279
+msgid "Custom link if provided, otherwise archive page"
+msgstr "Ha van, akkor egyedi link, egyebekben archív oldal"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:283
+msgid "Custom links if provided, otherwise no link"
+msgstr "Ha van, akkor egyedi link, egyebekben nincs linkelés"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:294
+msgid "Custom Links"
+msgstr "Egyedi link"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:295
+msgid "Custom links can be added on the "
+msgstr "Egyedi link itt adható hozzá:"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:295
+msgid "ingredients page"
+msgstr "hozzávalók oldala"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:299
+msgid "Open in the current tab/window"
+msgstr "Megnyitás a jelenlegi fülön/ablakban"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:303
+msgid "Open in a new tab/window"
+msgstr "Megnyitás új fülön/ablakban"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:318
+msgid "Use Nofollow"
+msgstr "Nofollow használata"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:319
+msgid "Add the nofollow attribute to custom ingredient links."
+msgstr ""
+"Nofollow attribútum hozzáadása a hozzávalókhoz rendelt egyedi linkeknél. "
+"<i>(Az attribútum használatával arra utasíthatjuk a keresőmotorokat, hogy ne "
+"kövessék az oldalainkon lévő linkeket.)</i>"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:327
+msgid "Print Version"
+msgstr "Nyomtatható változat"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:338
+msgid "Title Text"
+msgstr "A cím szövege"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:339
+msgid "Title of the new webpage that opens."
+msgstr "Az újonnan megnyíló lap címe."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:347
+msgid "RSS Feed"
+msgstr "RSS hírfolyam"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:352
+msgid "Recipe Posts"
+msgstr "Receptbejegyzés"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:358
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:384
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:466
+#: wp-ultimate-recipe-premium/premium/addons/recipe-search/widgets/recipe_search_widget.php:87
+msgid "Display"
+msgstr "Megjelenítés"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:362
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:470
+msgid "Only the excerpt"
+msgstr "Csak a kivonat"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:366
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:474
+msgid "The entire recipe"
+msgstr "A teljes recept"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:378
+msgid "Recipe Shortcode"
+msgstr "Recept shortcode-ok"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:385
+msgid "Output the recipe shortcode in RSS feeds?"
+msgstr "Kiadjuk a recept shortcode-ját az RSS hírcsatornában?"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:393
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:536
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:748
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:840
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1349
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1915
+msgid "Advanced"
+msgstr "Haladó"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:398
+msgid "Mobile"
+msgstr "Mobileszköz"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:404
+msgid "Responsive Breakpoint"
+msgstr "Responsive breakpoint"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:405
+msgid ""
+"The width of the recipe box at which will be switched to the mobile version."
+msgstr ""
+"A receptkártya szélessége, melynél automatikusan a mobil verzió kerül "
+"alkalmazásra."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:421
+msgid "Force CSS style"
+msgstr "Force CSS stíluslap"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:422
+msgid ""
+"This ensures maximum compatibility with most themes. Can be disabled for "
+"advanced usage."
+msgstr ""
+"A stíluslap használata a legtöbb sablonnal kompatibilitást biztosít. Haladók "
+"kikapcsolhatják."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:428
+msgid "Include Font Awesome"
+msgstr "Font Awesome bővítmény"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:429
+msgid "You can disable this if your theme already includes Font Awesome."
+msgstr ""
+"A plugin be- illetve kikapcsolása. Ezt a funkciót letilthatod, ha a sablonod "
+"már tartalmazza a Font Awesome bővítményt."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:435
+msgid "Output Inline CSS"
+msgstr "Inline CSS-ek kimenete"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:436
+msgid "When disabled the Template Editor will not output any inline CSS."
+msgstr ""
+"Elemekhez rendelt, sorokba ágyazott stílusok kimenete. Ha letiltod, a "
+"sablonszerkesztő semmilyen inline CSS-t nem ad vissza."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:442
+msgid "Use base CSS"
+msgstr "Alap CSS használata"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:443
+msgid "When disabled the base CSS file will not be included."
+msgstr ""
+"Kikapcsolása esetén az alapvető stíluselemeket tartalmazó 'Base CSS' nem "
+"kerül alkalmazásra."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:454
+msgid "Recipe Archive"
+msgstr "Receptarchívum"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:460
+msgid "Recipe Archive Pages"
+msgstr "Archív receptoldalak"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:485
+msgid "Display Thumbnail"
+msgstr "Miniatűrök megjelenítése"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:486
+msgid "Thumbnail position depends on the theme you use"
+msgstr "A miniatűrök elhelyezkedése az általad használt sablontól függ."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:490
+msgid "Never"
+msgstr "Soha"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:494
+msgid "Only on archive pages"
+msgstr "Csak az archív oldalakon"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:498
+msgid "Only on recipe pages"
+msgstr "Csak a recept oldalakon"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:502
+msgid "Always"
+msgstr "Mindig"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:528
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1695
+msgid "404 error/page not found?"
+msgstr "404-es hiba? Az oldal nem található?"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:529
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1696
+msgid "Try"
+msgstr "Próbáld meg"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:529
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1696
+msgid "flushing your permalinks"
+msgstr "kiüríteni a permalinkeket"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:542
+msgid "Disable Recipe Archive"
+msgstr "Receptarchívum letiltása"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:543
+msgid "Make sure to flush your permalinks after changing this setting."
+msgstr ""
+"Miután ezt a beállítást megváltoztattad, győződj meg róla, hogy üresek-e a "
+"permalinkek."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:552
+msgid "Partner Integrations"
+msgstr "Külső kapcsolatok"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:565
+msgid ""
+"Connect your recipes to leading online grocers with the Chicory \"get "
+"ingredients\" button."
+msgstr ""
+"Kapcsold össze receptjeidet a vezető online élelmiszerbolttal, a Chicory-val "
+"a 'get ingredients' gomb segítségével!"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:575
+msgid "I agree to Chicory's"
+msgstr "Egyetértek a Chicory"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:575
+msgid "terms of use"
+msgstr "felhasználási feltételeivel"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:583
+msgid ""
+"You need to agree to Chicory's terms of use if you want the button to show "
+"up."
+msgstr ""
+"(Ha a gombot meg szeretnéd jelentetni, egyet kell értened a Chicory "
+"felhasználási feltételeivel.)"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:601
+msgid "Show save recipe to BigOven button."
+msgstr "'Recept mentése ide: BigOven' gomb megjelenítése."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:608
+msgid "Show save recipe to Food Fanatic button."
+msgstr "'Recept mentése ide: Food Fanatic' gomb megjelenítése."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:617
+msgid "Recipe Sharing"
+msgstr "Recept megosztása"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:629
+msgid "Enable Sharing"
+msgstr "Megosztás engedélyezése"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:630
+msgid "Show sharing buttons."
+msgstr "Megosztási ikonok mutatása."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:637
+msgid "Language"
+msgstr "Nyelv"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:643
+msgid "Available languages can be found over here:"
+msgstr "Az elérhető nyelvek megtalálhatók itt:"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:671
+msgid "Default text to share"
+msgstr "Megosztandó szöveg alapértelmezése"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:688
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:857
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1069
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1088
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1125
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1416
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1728
+msgid "Important"
+msgstr "Fontos!"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:689
+msgid "Use %title% as a placeholder for the recipe title."
+msgstr "Recept címéhez a(z) %title% használata tippként a beviteli mezőben."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:716
+msgid "Recipe Fields"
+msgstr "Recept mezők"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:733
+msgid "Custom Recipe Fields"
+msgstr "Egyedi recept mezők"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:754
+msgid "Show Custom Fields in User Submission form"
+msgstr "Egyedi mezők mutatása a felhasználók számára a receptbeküldő lapon."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:760
+msgid "Fields"
+msgstr "Mezők"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:761
+msgid "Fields to show in the User Submission form."
+msgstr "Mezők mutatása a felhasználók számára a receptbeküldő lapon."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:784
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1229
+msgid "Recipe Tags"
+msgstr "Recept címkék"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:790
+msgid "Custom Recipe Tags"
+msgstr "Egyedi recept címkék"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:804
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1256
+msgid "Hide Custom Tags"
+msgstr "Egyedi címkék elrejtése"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:805
+msgid "Do not show these tags in the Recipe Box."
+msgstr "Ezeket a címkéket ne mutassa a receptkártyán."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:819
+msgid "WordPress Categories & Tags"
+msgstr "WordPress kategóriák és címkék"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:825
+msgid "Use Categories and Tags"
+msgstr "WP kategóriák és címkék használata"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:826
+msgid "Use the default WP Categories and Tags to organize your recipes."
+msgstr ""
+"WordPress beépített kategóriáinak és címkéinek használata a receptek "
+"rendszerezéséhez."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:832
+msgid "Show Recipes in Archives"
+msgstr "Receptek az archívumban"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:833
+msgid "Show recipes in the WP Categories and Tags archives."
+msgstr "Receptek megjelenítése a WordPress kategóriák és címkék archívumában."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:858
+msgid ""
+"Categories will only show up as tags in the recipe if they have a parent "
+"category. For example: a \"Courses\" parent category with \"Main Dish\" and "
+"\"Dessert\" as child categories assigned to your recipes."
+msgstr ""
+"Ha van szülő kategóriájuk, az alkategóriák csak címkékként tűnnek fel a "
+"receptben. Például: a 'Fogások' kategóriában lévő 'Főfogások' és "
+"'Desszertek', mint alkategóriák lesznek hozzárendelve a receptedhez."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:868
+msgid "Show Categories in Recipe"
+msgstr "Kategóriák mutatása a receptben"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:869
+msgid "Use WP categories as if they are tags for their parent category."
+msgstr ""
+"WP kategóriák használata úgy, mintha azok címkék lennének a szülő "
+"kategóriájukban."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:875
+msgid "Show Categories Filter"
+msgstr "Kategóriák mutatása szűréskor"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:876
+msgid "Users can see the categories when filtering."
+msgstr "A felhasználók számára szűréskor legyenek láthatók a kategóriák."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:882
+msgid "Show Tags Filter"
+msgstr "Címkék mutatása szűréskor"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:883
+msgid "Users can see the tags when filtering."
+msgstr "A felhasználók számára szűréskor legyenek láthatók a címkék."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:892
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:915
+msgid "User Ratings"
+msgstr "Felhasználói értékelés"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:919
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:960
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:551
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:569
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:587
+msgid "Disabled"
+msgstr "Letiltva"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:923
+msgid "Only logged in users can rate recipes"
+msgstr "Csak a bejelentkezett felhasználók értékelhetnek"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:927
+msgid "Everyone can rate recipes"
+msgstr "A recepteket mindenki értékelheti"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:938
+msgid "Show indicator"
+msgstr "Kijelző mutatása"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:939
+msgid "Attract attention to the possibility to vote."
+msgstr ""
+"A kijelző megjelenítése figyelemfelkeltő hatású a szavazás/értékelés "
+"lehetőségére."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:945
+msgid "Minimum # Votes"
+msgstr "Minimális szavazatszám"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:946
+msgid ""
+"Minimum number of votes needed before sharing the rating as metadata used by "
+"Google and other search engines."
+msgstr ""
+"Minimális szavazatszám beállítása, melynél az értékelés metaadatként "
+"megosztásra kerül a keresőmotorok számára."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:955
+msgid "Rounding Ratings"
+msgstr "Értékelések kerekítése"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:956
+msgid "Round the ratings presented in the metadata."
+msgstr "Az értékek kerekítve jelenjenek meg a metaadatokban."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:964
+msgid "Round up to nearest half"
+msgstr "Felfelé kerekítés a legközelebbi fél-értékig"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:968
+msgid "Round up to nearest integer"
+msgstr "Felfelé kerekítés a legközelebbi egész értékig"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:982
+msgid "Unit Conversion"
+msgstr "Mértékegységek"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:987
+msgid "General Settings"
+msgstr "Általános beállítások"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1009
+msgid "Allow Conversion"
+msgstr "Átváltás engedélyezése"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1010
+msgid "Allow your visitors to switch between Imperial and Metric units."
+msgstr ""
+"A felhasználók számára átváltást tesz lehetővé az angolszász és metrikus "
+"mértékegységek között."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1031
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:478
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:481
+msgid "Recipe Grid"
+msgstr "Rácsnézet"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1052
+msgid "Backwards Compatibility"
+msgstr "Visszamenőleges kompatibilitás"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1070
+msgid "Use the [ultimate-recipe-grid] shortcode to display the Recipe Grid."
+msgstr ""
+"Rácsszerű receptmegjelenítéshez használd az [ultimate-recipe-grid] shortcode-"
+"ot."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1070
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1126
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1417
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1729
+msgid "The shortcode can be added to any page or post."
+msgstr "A kód bármely bejegyzéshez vagy oldalhoz hozzáadható."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1089
+msgid ""
+"The Multi-Select, Match All and Parents match Children setting has been "
+"moved to the shortcode and can now be changed per Recipe Grid."
+msgstr ""
+"A MultiSelect, a MatchAll és a Parent/Child beállítások áthelyezésre "
+"kerültek a shortcode-ok közé, így most már receptrácsonként (RecipeGrid) "
+"külön módosíthatók."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1102
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:338
+msgid "User Submission"
+msgstr "Receptbeküldés"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1126
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1417
+msgid "Use the following shortcode to display the front-end form:"
+msgstr "A honlapon való megjelenítéshez használd a következő shortcode-ot:"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1136
+msgid "Allow submissions from"
+msgstr "Receptbeküldés engedélyezése:"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1140
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1308
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1431
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1454
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1477
+msgid "Nobody"
+msgstr "Senkinek"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1140
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1431
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1454
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1477
+msgid "disabled"
+msgstr "letiltás"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1144
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1312
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1435
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1458
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1481
+msgid "Guests and registered users"
+msgstr "Vendégeknek és regisztrált felhasználók számára"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1148
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1316
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1439
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1462
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1485
+msgid "Registered users only"
+msgstr "Csak regisztrált felhasználóknak"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1159
+msgid "Allow visitors to preview their submission"
+msgstr "Receptek előnézetének engedélyezése a látogatók számára"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1165
+msgid "After-submission text"
+msgstr "Beküldést követő szöveg"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1166
+msgid "Text to be shown after a user has submitted a recipe."
+msgstr "Megjelenítendő szöveg, miután a felhasználó beküldött egy receptet."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1166
+msgid "HTML can be used."
+msgstr "HTML-kódok használata engedélyezett."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1169
+#: wp-ultimate-recipe-premium/premium/addons/user-submissions/user-submissions.php:348
+msgid "Recipe submitted! Thank you, your recipe is now awaiting moderation."
+msgstr ""
+"Köszönjük, a recepted beküldésre került, s jelenleg moderálásra várakozik."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1174
+msgid "Required Fields"
+msgstr "Kötelező mezők"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1175
+msgid "Fields that are required to fill in."
+msgstr "Mezők, melyek kitöltése receptbeküldéskor kötelező."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1193
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1199
+#: wp-ultimate-recipe-premium/premium/addons/user-submissions/templates/public_recipe_form.php:126
+#: wp-ultimate-recipe-premium/premium/addons/user-submissions/user-submissions.php:291
+msgid "Security Question"
+msgstr "Biztonsági kérdés"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1200
+msgid "Use a security question to prevent spam."
+msgstr "Biztonsági kérdés használata a spam-ek megelőzése érdekében."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1206
+msgid "Question"
+msgstr "Kérdés"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1207
+msgid "The question your visitors have to answer."
+msgstr "A kérdés, amire a látógatóidnak válaszolnia kell."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1217
+msgid "Answer"
+msgstr "Válasz"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1218
+msgid "The correct answer to that question."
+msgstr "A kérdésre adandó helyes válasz."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1235
+msgid "Allow Multiselect"
+msgstr "Multiselect (többszörös kijelölés) engedélyezése"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1236
+msgid "Allow users to select multiple terms per category."
+msgstr ""
+"Kategóriánként több kifejezés kijelölésének engedélyezése a felhasználók "
+"számára."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1242
+msgid "User Submitted Categories"
+msgstr "Felhasználó általi kategóriák"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1243
+msgid "Allow users to assign categories when submitting recipes."
+msgstr ""
+"Új kategória hozzáadásának engedélyezése recept feltöltésekor a felhasználók "
+"számára."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1249
+msgid "User Submitted Tags"
+msgstr "Felhasználók általi címkék"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1250
+msgid "Allow users to assign tags when submitting recipes."
+msgstr ""
+"Új címke hozzáadásának engedélyezése recept feltöltésekor a felhasználók "
+"számára."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1257
+msgid "Hide these tags on the user submission page."
+msgstr "E címkék elrejtése a receptbeküldő oldalon."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1270
+msgid "Hide Category Terms"
+msgstr "WP kategóriák elrejtése"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1283
+msgid "Hide Tag Terms"
+msgstr "WP címkék elrejtése"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1297
+msgid "Approval Rules"
+msgstr "Jóváhagyási szabályok"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1303
+msgid "Auto approve"
+msgstr "Automatikus közzététel"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1304
+msgid "Publish recipe immediately on submission."
+msgstr "Recept közzététele közvetlenül a beküldés után."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1327
+msgid "Auto approve specific users"
+msgstr "Automatikus jóváhagyás kiemelt felhasználók számára"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1328
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1342
+msgid "Publish recipes from these users immediately on submission."
+msgstr ""
+"Az ezektől a felhasználóktól származó receptek közvetlenül a beküldést "
+"követően közzétételre kerülnek."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1341
+msgid "Auto approve users with role or capability"
+msgstr "Meghatározott jogokkal és képességekkel rendelkező felhasználók"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1362
+msgid "Can only select existing ingredients"
+msgstr "Választási lehetőség csak a meglévő hozzávalókból"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1363
+msgid ""
+"When enabled visitors will only be able to select from a list of existing "
+"ingredients."
+msgstr ""
+"Engedélyezés esetén a fehasználók csak a meglévő hozzávalók listájából "
+"választhatnak összetevőket."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1369
+msgid "Email administrator"
+msgstr "Admin értesítése email-ben"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1370
+msgid "Send an email notification when a new recipe is submitted."
+msgstr "Email értesítés küldése, ha új recept került benyújtásra."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1376
+msgid "Restrict Media Library Access"
+msgstr "Korlátozott médiakönyvtár hozzáférés"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1377
+msgid "Only show media library for editors and up"
+msgstr ""
+"Médiakönyvtár mutatása kizárólag szerkesztőknek, s az attól felfelé sorolt "
+"felhasználóknak."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1383
+msgid "Use Media Manager"
+msgstr "Media Manager használata"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1384
+msgid "Let logged in users use the Media Manager to upload images"
+msgstr ""
+"Képek feltöltését engedélyezi a bejelentkezett felhasználóknak a Media "
+"Manager-en keresztül."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1393
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:351
+msgid "User Menus"
+msgstr "Felhasználói menük"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1427
+msgid "Enable user menus for"
+msgstr "Felhasználói menük engedélyezése nekik:"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1450
+msgid "Enable user menus save function for"
+msgstr "'Felhasználói menük mentése' funkció engedélyezése nekik:"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1473
+msgid "Show add to shopping list button for"
+msgstr "'Hozzáadás a bevsárlólistához' gomb megjelenítése nekik:"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1505
+msgid "Show Checkboxes"
+msgstr "Jelölőnégyzetek mutatása"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1506
+msgid "Show checkboxes in the shopping list to cross items of the list."
+msgstr ""
+"Jelölőnégyzetek mutatása a bevásárlólistán a már meglévő tételek jelzésére."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1519
+msgid "Consolidate Ingredients"
+msgstr "Hozzávalók sorának összeállítása"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1520
+msgid "Convert units to be able to consolidate ingredients into 1 line."
+msgstr ""
+"Mértékegységek átváltása, hogy az egyes hozzávalók elférjenek egy sorban."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1526
+msgid "Unit System Dropdown"
+msgstr "Mértékegységrendszer-választó"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1527
+msgid "Users can use a dropdown to select the unit system they want."
+msgstr ""
+"A felhasználók legördülő listából választhatják ki a számukra megfelelő "
+"mértékegységrendszert."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1534
+msgid "Default Unit System"
+msgstr "Alapértelmezett mértékegységrendszer"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1535
+msgid "Unit system to use for the shopping list feature."
+msgstr ""
+"A bevásárlólista funkcióban használatos mértékegységrendszer meghatározása."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1558
+msgid "Number of unit systems displayed in the shopping list."
+msgstr "A bevásárlólistán megjelenítendő mértékegységrendszerek száma."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1635
+msgid "Print Options"
+msgstr "Nyomtatási beállítások"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1641
+msgid "Print Shopping List Button"
+msgstr "'Bevásárlólista nyomtatása' gomb"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1642
+msgid "Show a button to print the shopping list."
+msgstr "Gomb megjelenítése bevásárlólista nyomtatásához."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1648
+msgid "Print Menu Button"
+msgstr "'Menü nyomtatása' gomb"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1649
+msgid "Show a button to print the entire menu (Shopping list and recipes)."
+msgstr ""
+"Gomb megjelenítése a teljes menü nyomtatásához (bevásárlólista és recept)."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1705
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:422
+msgid "Favorite Recipes"
+msgstr "Kedvenc receptek"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1729
+msgid "Use the following shortcode to display the list of favorite recipes:"
+msgstr ""
+"Használd a következő shortcode-ot a kedvenc receptek listájának "
+"megjelenítéséhez:"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1739
+msgid "Enable Button"
+msgstr "Gomb megjelenítése"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1748
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/nutritional-information.php:121
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:2
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:82
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:202
+msgid "Nutritional Information"
+msgstr "Tápanyag-információ"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1771
+msgid "Show Notice"
+msgstr "Figyelmeztetés mutatása"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1772
+msgid "Show notice to update Nutritional Information after updating a recipe."
+msgstr ""
+"Tápanyag-információk frissítésére vonatkozó figyelmeztetés megjelenítése "
+"recept módosításakor."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1781
+msgid "Import Recipes"
+msgstr "Receptek importálása"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1787
+#: wp-ultimate-recipe-premium/core/vendor/vafpress/views/option/impexp.php:7
+msgid "Import Options"
+msgstr "Importálási  beállítások"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1793
+msgid "Generic ingredient units"
+msgstr "Általános mértékegységek"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1794
+msgid ""
+"Generic ingredient units to recognize while importing. Separate with a ;"
+msgstr ""
+"Importáláskor ismerje fel az itt felsorolt általános mértékegységeket. A "
+"felsorolást pontosvesszővel válaszd el. <i>(A magyartalan többes számokért "
+"elnézést; csupán az eredeti nyelv miatt szerepelnek itt - a fordító.)</i>"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1800
+msgid "Import order"
+msgstr "Importálás sorrendje"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1804
+msgid "Import oldest recipes first"
+msgstr "Legrégebbi receptek először"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1808
+msgid "Import latest recipes first"
+msgstr "Legutóbbi receptek először"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1820
+msgid "Import From"
+msgstr "Importálás a következő formátumokból"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1888
+msgid "Export Recipes"
+msgstr "Receptek exportálása"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1935
+msgid "Recipes act as posts"
+msgstr "Receptek, mint bejegyzések"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1936
+msgid ""
+"Recipes act like normal posts. For example: they show up on your front page."
+msgstr "Receptek normál bejegyzésként (például megjelennek a kezdőlapon)."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1942
+msgid "Recipes in admin posts"
+msgstr "Receptek az admin bejegyzésekben"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1943
+msgid "Show recipes in admin posts overview when acting as posts."
+msgstr ""
+"Mutassa a recepteket az admin bejegyzések áttekintésében, ha azok "
+"bejegyzésként szerepelnek."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1949
+msgid "Remove recipe slug"
+msgstr "Recept-slug-ok eltávolítása"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1950
+msgid ""
+"Make sure your slugs are unique across posts, pages and recipes! Your "
+"archive page will still be available."
+msgstr ""
+"Győződj meg róla, hogy a keresőbarát nevek (slug-ok) egyediek mind a "
+"bejegyzésekben, mind az oldalakon és a receptekben is. Az archív oldalad az "
+"eltávolítástól függetlenül továbbra is elérhető lesz."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1956
+msgid "Use Yandex metadata"
+msgstr "Yandex metaadatok használata"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1957
+msgid "Add a resultPhoto meta field for Yandex."
+msgstr "'resultPhoto' meta-mező hozzáadása a Yandex számára."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1964
+msgid "Shortcode Editor"
+msgstr "Shortcode-szerkesztő"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1978
+msgid "Show shortcode editor for"
+msgstr "Shortcode-szerkesztő társítása ezekkel:"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1979
+msgid ""
+"Where do you want to be able to insert recipes with the shortcode editor?"
+msgstr ""
+"Határozd meg, hogy hová lehessen receptet beszúrni a shortcode-szerkesztő "
+"segítségével."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1996
+msgid "Assets"
+msgstr "Eszközök"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:2002
+msgid "Use minified assets"
+msgstr "Csökkentett eszközök használata"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:2003
+msgid "Use minified assets to improve page load speed."
+msgstr ""
+"Csökkentett eszközök használata az oldalak gyorsabb betöltése érdekében."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:2009
+msgid "Generate minified assets"
+msgstr "Csökkentett eszközök generálása"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:2010
+msgid "Generate minified assets on the fly."
+msgstr "Csökkentet eszközök generálása menet közben."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:2016
+msgid "Minified assets directory"
+msgstr "A csökkentett eszközök könyvtára"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:2017
+msgid "Directory to generate the minified assets to. Should be writable."
+msgstr ""
+"Könyvtár, melybe a csökkentett eszközök kerülnek a generálás során. "
+"Írhatónak kell lennie!"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:2030
+msgid "Custom Code"
+msgstr "Egyedi kódok"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:2037
+msgid "Public CSS"
+msgstr "A publikus stíluslapba (wpurp-public.css)"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:2044
+msgid "Print Recipe CSS"
+msgstr "A nyomtatott recept stíluslapjába"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:2051
+msgid "Print Shopping List CSS"
+msgstr "A nyomtatott bevásárlólista stíluslapjába"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:19
+msgid "The recipe archive can be found at"
+msgstr "A receptek archívuma megtalálható itt:"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:25
+msgid "The user menus archive can be found at"
+msgstr "A felhasználói menük archívuma megtalálható itt:"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:53
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:55
+msgid "Manage custom recipe fields"
+msgstr "Egyedi recept mezők kezelése"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:82
+msgid "Manage custom recipe tags"
+msgstr "Egyedi recept címkék kezelése"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:94
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:96
+msgid "Open the Template Editor"
+msgstr "Sablonszerkesztő megnyitása"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:121
+msgid "Import EasyRecipe recipes"
+msgstr "EasyRecipe receptek importálása"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:126
+msgid "Import RecipeCard recipes"
+msgstr "RecipeCard receptek importálása"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:131
+msgid "Import ReciPress recipes"
+msgstr "ReciPress receptek importálása"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:136
+msgid "Import Ziplist recipes"
+msgstr "Ziplist receptek importálása"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:141
+#: wp-ultimate-recipe-premium/premium/addons/import-xml/import-xml.php:26
+#: wp-ultimate-recipe-premium/premium/addons/import-xml/import-xml.php:38
+#: wp-ultimate-recipe-premium/premium/addons/import-xml/templates/before_importing.php:4
+#: wp-ultimate-recipe-premium/premium/addons/import-xml/templates/before_importing.php:15
+msgid "Import XML"
+msgstr "XML-fájl importálása"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:146
+#: wp-ultimate-recipe-premium/premium/addons/import-fdx/import-fdx.php:26
+#: wp-ultimate-recipe-premium/premium/addons/import-fdx/import-fdx.php:38
+#: wp-ultimate-recipe-premium/premium/addons/import-fdx/templates/before_importing.php:4
+#: wp-ultimate-recipe-premium/premium/addons/import-fdx/templates/before_importing.php:15
+msgid "Import FDX"
+msgstr "FDX-fájl importálása"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:151
+#: wp-ultimate-recipe-premium/premium/addons/export-xml/export-xml.php:35
+#: wp-ultimate-recipe-premium/premium/addons/export-xml/export-xml.php:47
+#: wp-ultimate-recipe-premium/premium/addons/export-xml/templates/before_importing.php:4
+#: wp-ultimate-recipe-premium/premium/addons/export-xml/templates/before_importing.php:18
+msgid "Export XML"
+msgstr "XML-fájl exportálása"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:241
+msgid "Reset Demo Recipe"
+msgstr "Bemutató recept visszaállítása"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:246
+msgid "Manage Recipe Grids"
+msgstr "Receptek rácsnézetének kezelése"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:251
+msgid "Recalculate Recipe Grid Terms"
+msgstr "Rácsnézet-feltételek újraszámítása"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:256
+msgid "Reset Cache"
+msgstr "Gyorsítótár kiürítése"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:264
+#: wp-ultimate-recipe-premium/premium/addons/user-submissions/templates/public_recipe_form.php:7
+msgid "Recipe title"
+msgstr "A recept címe"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:265
+#: wp-ultimate-recipe-premium/premium/addons/user-submissions/templates/public_recipe_form.php:15
+msgid "Your name"
+msgstr "Név"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:265
+msgid "guests"
+msgstr "vendégként"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:7
+msgid "Display a random recipe"
+msgstr "Véletlebszerű recept megjelenítése"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:13
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:48
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:83
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:492
+msgid "Template"
+msgstr "Sablon"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:29
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:64
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:246
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:291
+msgid "Select a recipe to display"
+msgstr "Válassz egy megjeleníteni kívánt receptet"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:29
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:246
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:438
+msgid "Ordered by date added"
+msgstr "Hozzáadás dátuma szerinti rendezés"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:64
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:291
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:457
+msgid "Ordered by title"
+msgstr "Cím szerinti rendezés"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:101
+msgid "Recipe Index"
+msgstr "Receptmutató"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:104
+msgid "Basic Recipe Index"
+msgstr "Alapvető receptek listája"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:110
+msgid "Show headers"
+msgstr "Fejlécek megjelenítése"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:121
+msgid "Extended Recipe Index"
+msgstr "Bővített receptlista"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:121
+msgid "WP Ultimate Recipe Premium only"
+msgstr "Csak a WP Ultimate Recipe Premium verzióban"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:127
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/templates/user-menus.php:89
+msgid "Group by"
+msgstr "Csoportosítás"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:135
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:195
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:364
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:644
+#: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/import-easyrecipe.php:444
+#: wp-ultimate-recipe-premium/premium/addons/import-recipecard/import-recipecard.php:288
+#: wp-ultimate-recipe-premium/premium/helpers/recipe_columns.php:19
+#: wp-ultimate-recipe-premium/premium/helpers/recipe_columns.php:70
+msgid "Author"
+msgstr "Szerző"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:139
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:523
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:614
+#: wp-ultimate-recipe-premium/premium/addons/recipe-search/widgets/recipe_search_widget.php:75
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/templates/user-menus.php:8
+#: wp-ultimate-recipe-premium/premium/addons/user-submissions/templates/public_recipe_form.php:71
+#: wp-ultimate-recipe-premium/premium/addons/user-submissions/templates/public_recipe_form.php:79
+msgid "Category"
+msgstr "Kategória"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:156
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:597
+msgid "Limit Author"
+msgstr "Korlátozás szerzőre"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:169
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:610
+msgid "Limit by"
+msgstr "Korlátozás"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:182
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:631
+msgid "Limit by values"
+msgstr "Korlátozás értékre"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:182
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:631
+msgid "(separate slugs with ;)"
+msgstr "(a slug-okat pontosvesszővel válaszd el)"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:187
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:384
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:636
+msgid "Sort by"
+msgstr "Rendezés"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:199
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:392
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:648
+msgid "Date Added"
+msgstr "Hozzáadás dátuma"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:203
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:656
+msgid "Random"
+msgstr "Véletlenszerű"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:213
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:402
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:666
+msgid "Sort order"
+msgstr "Sorrend"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:217
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:406
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:670
+msgid "Ascending"
+msgstr "Növekvő"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:221
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:410
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:674
+msgid "Descending"
+msgstr "Csökkenő"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:231
+msgid "Max number of recipes"
+msgstr "Receptek maximális száma"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:238
+msgid "Premium only"
+msgstr "Csak Premium verzióban"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:243
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/widgets/nutrition_label_widget.php:42
+msgid "Nutrition Label"
+msgstr "Tápanyagtáblázat"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:265
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:310
+msgid "Alignment"
+msgstr "Igazítás"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:269
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:314
+msgid "Left"
+msgstr "Balra"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:273
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:318
+msgid "Center"
+msgstr "Középre"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:277
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:322
+msgid "Right"
+msgstr "Jobbra"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:281
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:326
+msgid "Inline"
+msgstr "Beágyazva"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:341
+msgid "User Submissions form"
+msgstr "Receptbeküldés formátuma"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:345
+msgid "List of submissions by currently logged in user with edit ability"
+msgstr ""
+"Beküldött receptek listája a szerkesztési jogosultsággal rendelkező online "
+"felhasználók szerint"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:354
+msgid "User Menus form"
+msgstr "Felhasználói menük formátuma"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:358
+msgid "List Menus by user"
+msgstr "Menük listázása felhasználónként"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:368
+msgid "Currently logged in user"
+msgstr "Online felhasználók"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:425
+msgid "List logged in user's Favorite Recipes"
+msgstr "Bejelentkezett felhasználók kedvenc receptjei"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:431
+msgid "Shopping List"
+msgstr "Bevásárlólista"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:434
+msgid "Display a random menu"
+msgstr "Véletlenszerű menü megjelenítése"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:438
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:457
+msgid "Select a menu to display"
+msgstr "Válassz egy megjelenítendő menüt"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:444
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:463
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:209
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:247
+msgid "Menu"
+msgstr "Menü"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:481
+msgid "Old version, use Grid shortcode button instead"
+msgstr "Régi verzió. Helyette használd ezt: Grid shortcode button."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:508
+msgid "Exclude recipes without a photo"
+msgstr "Fénykép nélküli receptek kivételével"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:519
+msgid "Allow filtering by"
+msgstr "Szűrés engedélyezése ez alapján:"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:543
+msgid "Multi-Select"
+msgstr "Többszörös kijelölés"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:547
+msgid "Allow visitors to select multiple values for a tag or category."
+msgstr ""
+"Több címke- vagy kategória-érték kijelölésének (multiselect) engedélyezése a "
+"látogatók számára."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:561
+msgid "Match All"
+msgstr "Összes egyezés"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:565
+msgid "Recipes will only match if they match all selections."
+msgstr ""
+"Egy recept csak akkor mondható egyezőnek, ha az összes kijelölésnek megfelel."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:579
+msgid "Parents match Children"
+msgstr "Parent/child társítás"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:583
+msgid ""
+"Selecting a parent will also match recipes with a child category or tag of "
+"that parent."
+msgstr ""
+"Egy fő (szülő) kategória/címke kiválasztásakor a recept társításra kerül "
+"azok alkategóriáival is (child)."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:684
+msgid "Limit recipes at start"
+msgstr "Korlátozott számú recept kezdetekkor"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress_menu.php:14
+msgid "clove"
+msgstr "gerezd"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress_menu.php:15
+msgid "cloves"
+msgstr "gerezdek"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress_menu.php:16
+msgid "leave"
+msgstr "levél"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress_menu.php:17
+msgid "leaves"
+msgstr "levelek"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress_menu.php:18
+msgid "slice"
+msgstr "szelet"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress_menu.php:19
+msgid "slices"
+msgstr "szeletek"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress_menu.php:20
+msgid "piece"
+msgstr "darab"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress_menu.php:21
+msgid "pieces"
+msgstr "darabok"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress_menu.php:22
+msgid "pinch"
+msgstr "csipet"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress_menu.php:23
+msgid "pinches"
+msgstr "csipetek"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress_shortcode.php:18
+msgid "Shortcodes"
+msgstr "Shortcode-ok"
+
+#: wp-ultimate-recipe-premium/core/static/drip_form.php:3
+msgid ""
+"Are you sure you want to dismiss this notice? (Make sure you have saved your "
+"changes first!)"
+msgstr ""
+"Biztos, hogy figyelmen kívül hagyod ezt a figyelmeztetést? Először győződj "
+"meg róla, hogy elmentetted-e a módosítsokat!"
+
+#: wp-ultimate-recipe-premium/core/static/drip_form.php:3
+#: wp-ultimate-recipe-premium/core/static/getting_started_notice.php:3
+msgid "Hide this message"
+msgstr "Üzenet elrejtése"
+
+#: wp-ultimate-recipe-premium/core/vendor/vafpress/bootstrap.php:88
+#: wp-ultimate-recipe-premium/core/vendor/vafpress/classes/option.php:364
+#: wp-ultimate-recipe-premium/core/vendor/vafpress/classes/option.php:389
+msgid "Successful"
+msgstr "Sikeres"
+
+#: wp-ultimate-recipe-premium/core/vendor/vafpress/bootstrap.php:99
+msgid "Unauthorized function"
+msgstr "Jogosulatlan funkció"
+
+#: wp-ultimate-recipe-premium/core/vendor/vafpress/classes/metabox.php:35
+msgid "[Development Mode] "
+msgstr "[Fejlesztői mód]"
+
+#: wp-ultimate-recipe-premium/core/vendor/vafpress/classes/metabox.php:566
+#: wp-ultimate-recipe-premium/core/vendor/vafpress/classes/metabox/alchemy.php:493
+msgid "Remove"
+msgstr "Eltávolítás"
+
+#: wp-ultimate-recipe-premium/core/vendor/vafpress/classes/metabox.php:588
+#: wp-ultimate-recipe-premium/core/vendor/vafpress/classes/metabox/alchemy.php:515
+msgid "Add More"
+msgstr "Még több hozzáadása"
+
+#: wp-ultimate-recipe-premium/core/vendor/vafpress/classes/option.php:47
+#: wp-ultimate-recipe-premium/core/vendor/vafpress/classes/option.php:48
+msgid "Vafpress Options"
+msgstr "Vafpress beállítások"
+
+#: wp-ultimate-recipe-premium/core/vendor/vafpress/classes/option.php:61
+msgid "Option Key is required"
+msgstr "Licenckulcs szükséges"
+
+#: wp-ultimate-recipe-premium/core/vendor/vafpress/classes/option.php:63
+msgid "Template Array/File is required"
+msgstr "Template Array/File megadása kötelező"
+
+#: wp-ultimate-recipe-premium/core/vendor/vafpress/classes/option.php:65
+msgid "Page Slug is required"
+msgstr "Az oldal keresőbarát nevének megadása kötelező"
+
+#: wp-ultimate-recipe-premium/core/vendor/vafpress/classes/option.php:167
+msgid ""
+"Development Mode is Active, options' values won't be saved into database."
+msgstr ""
+"Fejlesztői mód aktív. A beállítások értékei nem kerülnek elmentésre az "
+"adatbázisba."
+
+#: wp-ultimate-recipe-premium/core/vendor/vafpress/classes/option.php:306
+msgid "Can not be empty"
+msgstr "Nem maradhat üresen"
+
+#: wp-ultimate-recipe-premium/core/vendor/vafpress/classes/option.php:331
+msgid "Invalid data"
+msgstr "Érvénytelen adat"
+
+#: wp-ultimate-recipe-premium/core/vendor/vafpress/classes/option.php:394
+msgid "Unverified Access"
+msgstr "Nem ellenőrzött hozzáférés"
+
+#: wp-ultimate-recipe-premium/core/vendor/vafpress/classes/option.php:460
+msgid "Invalid template supplied"
+msgstr "Érvénytelen sablon mellékelve"
+
+#: wp-ultimate-recipe-premium/core/vendor/vafpress/classes/option.php:473
+msgid "Utility"
+msgstr "Egyebek"
+
+#: wp-ultimate-recipe-premium/core/vendor/vafpress/classes/option.php:479
+#: wp-ultimate-recipe-premium/core/vendor/vafpress/views/option/restore.php:13
+msgid "Restore Default"
+msgstr "Alapértelmezések visszaállítása"
+
+#: wp-ultimate-recipe-premium/core/vendor/vafpress/classes/option.php:488
+msgid "Export/Import"
+msgstr "Export/Import"
+
+#: wp-ultimate-recipe-premium/core/vendor/vafpress/classes/option/control/set.php:359
+msgid "Saving successful"
+msgstr "Sikeres mentés"
+
+#: wp-ultimate-recipe-premium/core/vendor/vafpress/classes/option/control/set.php:370
+msgid "Saving failed"
+msgstr "A mentés nem sikerült"
+
+#: wp-ultimate-recipe-premium/core/vendor/vafpress/classes/option/control/set.php:376
+msgid "No changes made"
+msgstr "Nem történt változás"
+
+#: wp-ultimate-recipe-premium/core/vendor/vafpress/classes/shortcodegenerator.php:263
+msgid "Insert"
+msgstr "Beillesztés"
+
+#: wp-ultimate-recipe-premium/core/vendor/vafpress/classes/shortcodegenerator.php:264
+msgid "Cancel"
+msgstr "Mégsem"
+
+#: wp-ultimate-recipe-premium/core/vendor/vafpress/config/messages.php:13
+msgid "Value needs to be Alphabet"
+msgstr "A mezőnek betűket kell tartalmaznia"
+
+#: wp-ultimate-recipe-premium/core/vendor/vafpress/config/messages.php:14
+msgid "Value needs to be Alphanumeric"
+msgstr "A mezőnek betűket és számokat kell tartalmaznia"
+
+#: wp-ultimate-recipe-premium/core/vendor/vafpress/config/messages.php:15
+msgid "Value needs to be Numeric"
+msgstr "A mezőnek számokat kell tartalmaznia"
+
+#: wp-ultimate-recipe-premium/core/vendor/vafpress/config/messages.php:16
+msgid "Value needs to be Valid Email"
+msgstr "A mezőnek érvényes email-címet kell tartalmaznia"
+
+#: wp-ultimate-recipe-premium/core/vendor/vafpress/config/messages.php:17
+msgid "Value needs to be Valid URL"
+msgstr "A mezőnek érvényes URL-t kell tartalmaznia"
+
+#: wp-ultimate-recipe-premium/core/vendor/vafpress/config/messages.php:18
+msgid "Length needs to be less than {0} characters"
+msgstr "A szöveg hosszának (0) karakternél kevesebbnek kell lennie"
+
+#: wp-ultimate-recipe-premium/core/vendor/vafpress/config/messages.php:19
+msgid "Length needs to be more than {0} characters"
+msgstr "A szöveg hosszának (0) karakternél többnek kell lennie"
+
+#: wp-ultimate-recipe-premium/core/vendor/vafpress/config/messages.php:20
+msgid "Select no more than {0} items"
+msgstr "Nem választhatsz több, mint (0) elemet"
+
+#: wp-ultimate-recipe-premium/core/vendor/vafpress/config/messages.php:21
+msgid "Select at least {0} items"
+msgstr "Válassz legalább (0) elemet"
+
+#: wp-ultimate-recipe-premium/core/vendor/vafpress/config/messages.php:22
+msgid "This is required"
+msgstr "Kötelező"
+
+#: wp-ultimate-recipe-premium/core/vendor/vafpress/config/messages.php:29
+msgid "Import succeed, option page will be refreshed.."
+msgstr "Az importálás sikerült, az oldal frissül..."
+
+#: wp-ultimate-recipe-premium/core/vendor/vafpress/config/messages.php:30
+msgid "Import failed"
+msgstr "Az importálás során hiba lépett fel"
+
+#: wp-ultimate-recipe-premium/core/vendor/vafpress/config/messages.php:31
+msgid "Export succeed, copy the JSON formatted options"
+msgstr "Az exportálás sikeres, másold a JSON formátumú beállításokat"
+
+#: wp-ultimate-recipe-premium/core/vendor/vafpress/config/messages.php:32
+msgid "Export failed"
+msgstr "Az exportálás során hiba lépett fel"
+
+#: wp-ultimate-recipe-premium/core/vendor/vafpress/config/messages.php:33
+msgid "Restoration succeed, option page will be refreshed.."
+msgstr "A helyreállítás sikeres, az oldal frissül..."
+
+#: wp-ultimate-recipe-premium/core/vendor/vafpress/config/messages.php:34
+msgid "Options identical to default"
+msgstr "A beállítások megegyeznek az alapértelmezettel"
+
+#: wp-ultimate-recipe-premium/core/vendor/vafpress/config/messages.php:35
+msgid "Restoration failed"
+msgstr "A helyreállítás során hiba lépett fel"
+
+#: wp-ultimate-recipe-premium/core/vendor/vafpress/config/messages.php:43
+msgid "Select option(s)"
+msgstr "Válassz lehetősége(ke)t"
+
+#: wp-ultimate-recipe-premium/core/vendor/vafpress/config/messages.php:45
+msgid "Select an Icon"
+msgstr "Válassz ikont"
+
+#: wp-ultimate-recipe-premium/core/vendor/vafpress/views/control/upload.php:5
+msgid "Choose File"
+msgstr "Válaszd ki a fájlt"
+
+#: wp-ultimate-recipe-premium/core/vendor/vafpress/views/option/impexp.php:4
+#: wp-ultimate-recipe-premium/core/vendor/vafpress/views/option/impexp.php:14
+msgid "Import"
+msgstr "Importálás"
+
+#: wp-ultimate-recipe-premium/core/vendor/vafpress/views/option/impexp.php:27
+#: wp-ultimate-recipe-premium/core/vendor/vafpress/views/option/impexp.php:37
+msgid "Export"
+msgstr "Exportálás"
+
+#: wp-ultimate-recipe-premium/core/vendor/vafpress/views/option/impexp.php:30
+msgid "Export Options"
+msgstr "Exportálási beállítások"
+
+#: wp-ultimate-recipe-premium/core/vendor/vafpress/views/option/restore.php:4
+msgid "Restore Default Options"
+msgstr "Alapértelmezett opciók visszaállítása"
+
+#: wp-ultimate-recipe-premium/core/vendor/vafpress/views/option/restore.php:7
+msgid "Restore options to initial default values."
+msgstr "Beállítások visszaállítása a kiindulási értékekre."
+
+#: wp-ultimate-recipe-premium/core/vendor/vafpress/views/option/restore.php:14
+msgid ""
+"** Please make sure you have already make a backup data of your current "
+"settings. Once you click this button, your current settings will be gone."
+msgstr ""
+"* Ellenőrizd, hogy készítettél-e biztonsági mentést a jelenlegi "
+"beállításaidról! Ha megnyomod ezt a gombot, a mostani beállításaid elvesznek."
+
+#: wp-ultimate-recipe-premium/core/vendor/vafpress/views/option/set.php:69
+#: wp-ultimate-recipe-premium/core/vendor/vafpress/views/option/set.php:84
+msgid "Save Changes"
+msgstr "Módosítások mentése"
+
+#: wp-ultimate-recipe-premium/core/vendor/vafpress/views/option/set.php:70
+#: wp-ultimate-recipe-premium/core/vendor/vafpress/views/option/set.php:85
+msgid "Saving Now"
+msgstr "Mentés most"
+
+#: wp-ultimate-recipe-premium/core/vendor/vafpress/views/option/set.php:93
+#, php-format
+msgid ""
+"This option panel is built using <a href=\"http://vafpress.com/vafpress-"
+"framework\">Vafpress Framework %s</a> powered by <a href=\"http://vafpress."
+"com\">Vafpress</a>"
+msgstr ""
+"Ez a panel a <a href=\"http://vafpress.com/vafpress-framework\">Vafpress "
+"Framework %s</a> segítségével készült. Powered by <a href=\"http://vafpress."
+"com\">Vafpress</a>"
+
+#: wp-ultimate-recipe-premium/premium/addons/custom-fields/custom-fields.php:30
+msgid "Current Custom Fields"
+msgstr "Meglévő egyedi mezők"
+
+#: wp-ultimate-recipe-premium/premium/addons/custom-fields/custom-fields.php:31
+msgid "Add new Custom Field"
+msgstr "Új egyedi mező hozzáadása"
+
+#: wp-ultimate-recipe-premium/premium/addons/custom-fields/templates/page_form.php:1
+msgid "Create custom fields for your recipes."
+msgstr "Egyedi mezők létrehozása a receptekhez."
+
+#: wp-ultimate-recipe-premium/premium/addons/custom-fields/templates/page_form.php:9
+#: wp-ultimate-recipe-premium/premium/addons/custom-fields/templates/page_list.php:9
+msgid "Key"
+msgstr "Kulcs"
+
+#: wp-ultimate-recipe-premium/premium/addons/custom-fields/templates/page_form.php:12
+msgid "(e.g. recipe_chef)"
+msgstr "(pl. recept_sef)"
+
+#: wp-ultimate-recipe-premium/premium/addons/custom-fields/templates/page_form.php:12
+msgid "Make sure this is unique!"
+msgstr "Győződj meg róla, hogy egyedi!"
+
+#: wp-ultimate-recipe-premium/premium/addons/custom-fields/templates/page_form.php:19
+msgid "(e.g. Recipe Chef)"
+msgstr "(pl. Recept séf)"
+
+#: wp-ultimate-recipe-premium/premium/addons/custom-fields/templates/page_form.php:25
+msgid "Add new field"
+msgstr "Új mező hozzáadása"
+
+#: wp-ultimate-recipe-premium/premium/addons/custom-fields/templates/page_list.php:1
+msgid "Do you really want to delete this custom field?"
+msgstr "Bizots, hogy törölni szeretnéd ezt az egyedi mezőt?"
+
+#: wp-ultimate-recipe-premium/premium/addons/custom-fields/templates/page_list.php:33
+#: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/templates/page_list.php:45
+msgid "Delete"
+msgstr "Törlés"
+
+#: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/templates/page_list.php:59
+msgid ""
+"Do you really want to reset the taxonomies? All custom tags will be deleted."
+msgstr ""
+"Biztos, hogy visszaállítod a taxonómiákat? MInden egyedi címke törlésre "
+"kerül..."
+
+#: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/templates/page_list.php:62
+msgid "Reset to defaults"
+msgstr "Alapértékek visszaállítása"
+
+#: wp-ultimate-recipe-premium/premium/addons/export-xml/export-xml.php:58
+msgid "You haven't selected any recipes to export."
+msgstr "Egy receptet sem választottál ki exportálásra."
+
+#: wp-ultimate-recipe-premium/premium/addons/export-xml/export-xml.php:78
+msgid "Download XML"
+msgstr "XML-fálj letöltése"
+
+#: wp-ultimate-recipe-premium/premium/addons/export-xml/templates/before_importing.php:5
+msgid "Select recipes"
+msgstr "Recept kiválasztása"
+
+#: wp-ultimate-recipe-premium/premium/addons/export-xml/templates/before_importing.php:10
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/templates/ingredient-groups.php:55
+msgid "Select"
+msgstr "Kiválasztás"
+
+#: wp-ultimate-recipe-premium/premium/addons/export-xml/templates/before_importing.php:10
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/templates/ingredient-groups.php:57
+msgid "None"
+msgstr "Egyik sem"
+
+#: wp-ultimate-recipe-premium/premium/addons/favorite-recipes/favorite-recipes.php:87
+msgid "You don't have any favorite recipes."
+msgstr "Nincs egy kedvenc recepted sem."
+
+#: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/import-easyrecipe.php:46
+#: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/import-easyrecipe.php:58
+#: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/before_importing.php:4
+#: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/before_importing.php:84
+#: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/manual_import.php:6
+msgid "Import EasyRecipe"
+msgstr "EasyRecipe receptek importálása"
+
+#: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/import-easyrecipe.php:458
+msgid "Nutritional Serving Size"
+msgstr "Tápanyagok adagmérete"
+
+#: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/before_importing.php:5
+#: wp-ultimate-recipe-premium/premium/addons/import-fdx/templates/before_importing.php:5
+#: wp-ultimate-recipe-premium/premium/addons/import-recipecard/templates/before_importing.php:5
+#: wp-ultimate-recipe-premium/premium/addons/import-recipress/templates/import_recipress.php:5
+#: wp-ultimate-recipe-premium/premium/addons/import-xml/templates/before_importing.php:5
+#: wp-ultimate-recipe-premium/premium/addons/import-ziplist/templates/before_importing.php:5
+msgid "Before importing"
+msgstr "Importálás előtt..."
+
+#: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/before_importing.php:7
+#: wp-ultimate-recipe-premium/premium/addons/import-fdx/templates/before_importing.php:7
+#: wp-ultimate-recipe-premium/premium/addons/import-recipecard/templates/before_importing.php:7
+#: wp-ultimate-recipe-premium/premium/addons/import-recipress/templates/import_recipress.php:7
+#: wp-ultimate-recipe-premium/premium/addons/import-xml/templates/before_importing.php:7
+#: wp-ultimate-recipe-premium/premium/addons/import-ziplist/templates/before_importing.php:7
+msgid ""
+"It's a good idea to backup your WP database before using the import feature."
+msgstr ""
+"Nem árt biztonsági mentést készíteni a WordPress adatbázisról a importáló "
+"eszköz használata előtt."
+
+#: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/before_importing.php:54
+#: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/before_importing.php:69
+#: wp-ultimate-recipe-premium/premium/addons/import-recipress/templates/import_recipress.php:28
+#: wp-ultimate-recipe-premium/premium/addons/import-recipress/templates/import_recipress.php:43
+#: wp-ultimate-recipe-premium/premium/addons/import-recipress/templates/import_recipress.php:58
+msgid "Select a recipe tag"
+msgstr "Válassz egy receptcímkét"
+
+#: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/before_importing.php:92
+#: wp-ultimate-recipe-premium/premium/addons/import-recipecard/templates/before_importing.php:52
+#: wp-ultimate-recipe-premium/premium/addons/import-ziplist/templates/before_importing.php:52
+msgid "Unable to import"
+msgstr "Nem lehet importálni"
+
+#: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/before_importing.php:93
+#: wp-ultimate-recipe-premium/premium/addons/import-recipecard/templates/before_importing.php:53
+#: wp-ultimate-recipe-premium/premium/addons/import-ziplist/templates/before_importing.php:53
+msgid "We are unable to import these posts or pages automatically:"
+msgstr "Ezt a bejegyzést vagy oldalt nem lehet automatikusan importálni:"
+
+#: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/manual_import.php:18
+#: wp-ultimate-recipe-premium/premium/addons/import-recipress/import-recipress.php:59
+msgid "You should select a new tag for the imported recipes"
+msgstr "Új címkét kell választanod az importált receptekhez"
+
+#: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/manual_import.php:23
+msgid "You should select two distinct tags"
+msgstr "Két eltérő címkét kell választanod"
+
+#: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/manual_import.php:31
+#: wp-ultimate-recipe-premium/premium/addons/import-recipecard/templates/manual_import.php:12
+#: wp-ultimate-recipe-premium/premium/addons/import-ziplist/templates/manual_import.php:12
+msgid "There are no recipes left to import"
+msgstr "Nem maradt importálandó recept"
+
+#: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/manual_import.php:33
+#: wp-ultimate-recipe-premium/premium/addons/import-recipecard/templates/manual_import.php:14
+#: wp-ultimate-recipe-premium/premium/addons/import-ziplist/templates/manual_import.php:14
+msgid "Number of recipes left to import:"
+msgstr "Hátralévő, importálni szánt receptek száma:"
+
+#: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/manual_import.php:46
+msgid "Featured Image"
+msgstr "Kiemelt kép"
+
+#: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/manual_import.php:79
+msgid "No featured image"
+msgstr "Nincs kiemelt kép"
+
+#: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/manual_import.php:124
+#: wp-ultimate-recipe-premium/premium/addons/import-recipecard/templates/manual_import.php:44
+#: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:78
+#: wp-ultimate-recipe-premium/premium/addons/import-ziplist/templates/manual_import.php:48
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/templates/user-menus.php:154
+msgid "Amount"
+msgstr "Mennyiség"
+
+#: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/manual_import.php:134
+#: wp-ultimate-recipe-premium/premium/addons/import-recipecard/templates/manual_import.php:54
+#: wp-ultimate-recipe-premium/premium/addons/import-ziplist/templates/manual_import.php:58
+msgid "Import this Recipe"
+msgstr "Ezen recept importálása"
+
+#: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/manual_import.php:135
+#: wp-ultimate-recipe-premium/premium/addons/import-recipecard/templates/manual_import.php:55
+#: wp-ultimate-recipe-premium/premium/addons/import-ziplist/templates/manual_import.php:59
+msgid ""
+"Feel free to stop at anytime and come back later for the rest of the recipes."
+msgstr ""
+"A folyamatot bármikor megszakíthatod; a hátralévő receptekért visszatérhetsz "
+"később."
+
+#: wp-ultimate-recipe-premium/premium/addons/import-fdx/import-fdx.php:65
+#: wp-ultimate-recipe-premium/premium/addons/import-text/import-text.php:134
+#: wp-ultimate-recipe-premium/premium/addons/import-xml/import-xml.php:64
+#: wp-ultimate-recipe-premium/premium/addons/user-submissions/user-submissions.php:204
+msgid "Untitled"
+msgstr "Névtelen"
+
+#: wp-ultimate-recipe-premium/premium/addons/import-recipecard/import-recipecard.php:26
+#: wp-ultimate-recipe-premium/premium/addons/import-recipecard/import-recipecard.php:38
+#: wp-ultimate-recipe-premium/premium/addons/import-recipecard/templates/before_importing.php:4
+#: wp-ultimate-recipe-premium/premium/addons/import-recipecard/templates/before_importing.php:44
+#: wp-ultimate-recipe-premium/premium/addons/import-recipecard/templates/manual_import.php:6
+msgid "Import RecipeCard"
+msgstr "RecipeCard receptek importálása"
+
+#: wp-ultimate-recipe-premium/premium/addons/import-recipecard/import-recipecard.php:289
+msgid "Adapted"
+msgstr "Forrás"
+
+#: wp-ultimate-recipe-premium/premium/addons/import-recipecard/import-recipecard.php:290
+msgid "Adapted Link"
+msgstr "Link a forrásra"
+
+#: wp-ultimate-recipe-premium/premium/addons/import-recipecard/import-recipecard.php:291
+#: wp-ultimate-recipe-premium/premium/addons/import-ziplist/import-ziplist.php:320
+msgid "Yield"
+msgstr "Mennyiség (pl. 12 szelet, 4 személyre, stb.)"
+
+#: wp-ultimate-recipe-premium/premium/addons/import-recipress/import-recipress.php:26
+#: wp-ultimate-recipe-premium/premium/addons/import-recipress/templates/import_recipress.php:4
+#: wp-ultimate-recipe-premium/premium/addons/import-recipress/templates/import_recipress.php:73
+msgid "Import ReciPress"
+msgstr "ReciPress receptek importálása"
+
+#: wp-ultimate-recipe-premium/premium/addons/import-recipress/import-recipress.php:45
+msgid "You should activate this plugin:"
+msgstr "Aktiválnod kell ezt a bővítményt:"
+
+#: wp-ultimate-recipe-premium/premium/addons/import-recipress/templates/import_recipress.php:19
+msgid "recipes are about to be imported to"
+msgstr "recept hamarosan importálásra kerül ide:"
+
+#: wp-ultimate-recipe-premium/premium/addons/import-recipress/templates/import_recipress.php:19
+msgid "Are you sure you want to do this?"
+msgstr "Biztos, hogy ezt szeretnéd tenni?"
+
+#: wp-ultimate-recipe-premium/premium/addons/import-text/import-text.php:109
+msgid "Add New from Text"
+msgstr "Új hozzáadása szövegből"
+
+#: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:3
+msgid "Add New Recipe from text"
+msgstr "Új recept hozzáadása szövegből."
+
+#: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:4
+msgid "This is function is still in beta version. Any feedback is welcome!"
+msgstr "Ez a funkció még tesztelés alatt áll. Minden visszajelzést köszönünk!"
+
+#: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:5
+msgid "Plain Text Recipe Input"
+msgstr "Egyszerű szöveges receptbevitel"
+
+#: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:6
+msgid "Paste your recipe in this input field."
+msgstr "Illeszd be a receptet ebbe a beviteli mezőbe."
+
+#: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:8
+msgid "Define Recipe Regions"
+msgstr "Recept-területek meghatározása"
+
+#: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:9
+msgid ""
+"Highlight a section in your recipe and click the corresponding button to "
+"define it."
+msgstr ""
+"Jelölj ki egy területet a receptben, majd kattints a megfelelő gombra a "
+"definiáláshoz."
+
+#: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:57
+#: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:74
+#: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:89
+msgid "Tip"
+msgstr "Tipp"
+
+#: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:57
+#: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:89
+msgid "Lines starting with a ! will be starting a new group."
+msgstr "A felkiáltójellel (!) kezdődő sorok új csoportot nyitnak."
+
+#: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:73
+msgid "Ingredient Details"
+msgstr "Hozzávalók részletei"
+
+#: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:74
+msgid "Only unit aliases defined in the settings will be recognized."
+msgstr ""
+"Csak a beállításban meghatározott mértékegységek kerülnek felismerésre."
+
+#: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:91
+msgid "Separate instructions with an empty line"
+msgstr "Az elkészítési fázisokat üres sorokkal válaszd el egymástól"
+
+#: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:92
+msgid "Every line is a separate instruction"
+msgstr "Minden sor különálló instrukció"
+
+#: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:108
+msgid "Add Recipe"
+msgstr "Recept hozzáadása"
+
+#: wp-ultimate-recipe-premium/premium/addons/import-ziplist/import-ziplist.php:26
+#: wp-ultimate-recipe-premium/premium/addons/import-ziplist/import-ziplist.php:38
+#: wp-ultimate-recipe-premium/premium/addons/import-ziplist/templates/before_importing.php:4
+#: wp-ultimate-recipe-premium/premium/addons/import-ziplist/templates/before_importing.php:44
+#: wp-ultimate-recipe-premium/premium/addons/import-ziplist/templates/manual_import.php:6
+msgid "Import Ziplist"
+msgstr "Ziplist receptek importálása"
+
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/nutritional-information.php:142
+msgid "Add Nutrition Label"
+msgstr "Tápanyagtáblázat hozzáadása"
+
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/label.php:39
+msgid "Nutrition Facts"
+msgstr "Tápanyagadatok"
+
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/label.php:42
+msgid "Amount Per Serving"
+msgstr "Mennyiség egy adagban"
+
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/label.php:44
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:144
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:260
+msgid "Calories"
+msgstr "Energiatartalom"
+
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/label.php:46
+msgid "Calories from Fat"
+msgstr "Zzírból származó energia"
+
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/label.php:52
+msgid "% Daily Value"
+msgstr "% DV (napi érték)"
+
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/label.php:56
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:156
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:272
+msgid "Total Fat"
+msgstr "Összes zsírtartalom"
+
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/label.php:61
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:160
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:276
+msgid "Saturated Fat"
+msgstr "Telített zsírok"
+
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/label.php:67
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:172
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:288
+msgid "Trans Fat"
+msgstr "Transzzsír"
+
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/label.php:72
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:164
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:280
+msgid "Polyunsaturated Fat"
+msgstr "Többszörösen telítetlen zsírok"
+
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/label.php:77
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:168
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:284
+msgid "Monounsaturated Fat"
+msgstr "Egyszeresen telítetlen zsírok"
+
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/label.php:83
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:145
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:261
+msgid "Cholesterol"
+msgstr "Koleszterin"
+
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/label.php:89
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:149
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:265
+msgid "Sodium"
+msgstr "Nátrium"
+
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/label.php:95
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:153
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:269
+msgid "Potassium"
+msgstr "Kálium"
+
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/label.php:101
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:148
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:264
+msgid "Total Carbohydrates"
+msgstr "Szénhidrát"
+
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/label.php:106
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:157
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:273
+msgid "Dietary Fiber"
+msgstr "Diétás (élelmi) rostok"
+
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/label.php:112
+msgid "Sugars"
+msgstr "Cukrok"
+
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/label.php:118
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:152
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:268
+msgid "Protein"
+msgstr "Fehérje"
+
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/label.php:127
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:165
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:281
+msgid "Vitamin A"
+msgstr "'A' vitamin"
+
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/label.php:133
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:169
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:285
+msgid "Vitamin C"
+msgstr "'C' vitamin"
+
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/label.php:139
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:173
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:289
+msgid "Calcium"
+msgstr "Kalcium"
+
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/label.php:145
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:181
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:297
+msgid "Iron"
+msgstr "Vas"
+
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/label.php:151
+msgid "Percent Daily Values are based on a 2000 calorie diet. "
+msgstr "A százalékos napi értékek kétezer kalóriás étrendre vonatkoznak."
+
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/label.php:156
+msgid "There is no Nutrition Label for this recipe yet."
+msgstr "Ehhez a recepthez még nem áll rendelkezésre tápanyagtáblázat."
+
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:29
+msgid "Without Nutritional Information"
+msgstr "Tápanyag-információ nélkül"
+
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:32
+msgid "With Nutritional Information"
+msgstr "Tápanyag-információval"
+
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:100
+msgid "Get Nutritional Data"
+msgstr "Tápanyagadatok kérése"
+
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:111
+msgid "Find"
+msgstr "Keresés"
+
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:112
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:178
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:237
+msgid "Close"
+msgstr "Bezár"
+
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:123
+msgid "Reference serving"
+msgstr "Referencia adag"
+
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:129
+msgid "Metric quantity"
+msgstr "Metrikus mennyiség"
+
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:161
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:277
+msgid "Sugar"
+msgstr "Cukor"
+
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:165
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:169
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:173
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:181
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:281
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:285
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:289
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:297
+msgid "Daily Value"
+msgstr "Napi érték"
+
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:177
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:293
+msgid "Save"
+msgstr "Mentés"
+
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:209
+msgid "Calculate Recipe Nutritonal Information"
+msgstr "A recept tápanyag-információinak kiszámítása"
+
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:218
+msgid "Ingredient servings:"
+msgstr "Hozzávalók mennyisége ennyi adagra:"
+
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:236
+msgid "Calculate"
+msgstr "Számítás"
+
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:256
+msgid "Data for 1 serving:"
+msgstr "Adatok egy adagra:"
+
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:294
+msgid "Clear"
+msgstr "Törlés"
+
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/widgets/nutrition_label_widget.php:9
+msgid "WPURP Nutrition Label"
+msgstr "WP Ultimate Recipe Premium tápanyagtáblázat"
+
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/widgets/nutrition_label_widget.php:11
+msgid "Display the Nutrition Label of a recipe."
+msgstr "Recept tápanyagtáblázatának megjelenítése."
+
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/widgets/nutrition_label_widget.php:50
+#: wp-ultimate-recipe-premium/premium/addons/recipe-search/widgets/recipe_search_widget.php:79
+#: wp-ultimate-recipe-premium/premium/helpers/widgets/recipe_list_widget.php:65
+msgid "Title:"
+msgstr "Cím:"
+
+#: wp-ultimate-recipe-premium/premium/addons/nutritional-information/widgets/nutrition_label_widget.php:56
+msgid "Recipe shown on recipe page"
+msgstr "Megjelentetett receptek a receptoldalon"
+
+#: wp-ultimate-recipe-premium/premium/addons/recipe-grid/recipe-grid.php:171
+#: wp-ultimate-recipe-premium/premium/addons/recipe-grid/recipe-grid.php:356
+msgid "No recipes found."
+msgstr "Nem található recept."
+
+#: wp-ultimate-recipe-premium/premium/addons/recipe-search/widgets/recipe_search_widget.php:9
+msgid "WPURP Recipe Search"
+msgstr "WP Ultimate Recipe Premium Recipe Search"
+
+#: wp-ultimate-recipe-premium/premium/addons/recipe-search/widgets/recipe_search_widget.php:11
+msgid "A customizable Recipe Search widget."
+msgstr "Testreszabható receptkereső widget."
+
+#: wp-ultimate-recipe-premium/premium/addons/recipe-search/widgets/recipe_search_widget.php:62
+msgid "Recipe Search"
+msgstr "Receptkereső"
+
+#: wp-ultimate-recipe-premium/premium/addons/recipe-search/widgets/recipe_search_widget.php:87
+msgid "filter"
+msgstr "szűrő"
+
+#: wp-ultimate-recipe-premium/premium/addons/template-editor/template-editor.php:87
+msgid "Image Manager"
+msgstr "Képkezelő"
+
+#: wp-ultimate-recipe-premium/premium/addons/template-editor/templates/parser.php:493
+msgid "Please set a Preview Recipe in the settings first."
+msgstr "Először adj meg egy előnézeti receptet a beállításoknál."
+
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/templates/ingredient-groups.php:2
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:131
+msgid "Ingredient Groups"
+msgstr "Összetevők csoportja"
+
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/templates/ingredient-groups.php:42
+#: wp-ultimate-recipe-premium/premium/helpers/ingredient_metadata.php:26
+msgid "Vegetables"
+msgstr "Zöldségek"
+
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/templates/ingredient-groups.php:43
+msgid "Set group for selected ingredients"
+msgstr "Csoport meghatározása a kiválasztott hozzávalókhoz"
+
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/templates/ingredient-groups.php:58
+msgid "Ungrouped"
+msgstr "Nem csoportosított"
+
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/templates/user-menus.php:59
+msgid "Visitor"
+msgstr "Látogató"
+
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/templates/user-menus.php:67
+msgid "Add Recipes"
+msgstr "Receptek hozzáadása"
+
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/templates/user-menus.php:89
+msgid "alphabet"
+msgstr "ábécé"
+
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/templates/user-menus.php:100
+msgid "No recipes in your menu yet"
+msgstr "Még nincs reept a menüdben."
+
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/templates/user-menus.php:135
+msgid "Save Menu"
+msgstr "Menü mentése"
+
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/templates/user-menus.php:139
+msgid "Print Shopping List"
+msgstr "Bevásárlólista mentése"
+
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/templates/user-menus.php:143
+msgid "Print Menu"
+msgstr "Menü nyomtatása"
+
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:208
+msgid "Menus"
+msgstr "Menük"
+
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:257
+msgid "The menu can be edited from the front end:"
+msgstr "Szerkeszthető menü hozzáférés a következőknek:"
+
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:373
+msgid "Other"
+msgstr "Egyéb"
+
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:483
+msgid "Sorry, the site administrator has disabled user menus."
+msgstr "Elnézést, a honlap adminisztrátora letiltotta a felhasználói menüket."
+
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:488
+msgid "Sorry, only registered users may create menus."
+msgstr "Elnézést, csak regisztrált felhasználók hozhatnak létre menüket."
+
+#: wp-ultimate-recipe-premium/premium/addons/user-ratings/templates/user_rating.php:33
+#: wp-ultimate-recipe-premium/premium/helpers/recipe_columns.php:50
+msgid "Votes"
+msgstr "Szavazatok"
+
+#: wp-ultimate-recipe-premium/premium/addons/user-ratings/templates/user_rating.php:35
+msgid "You"
+msgstr "Tiéd"
+
+#: wp-ultimate-recipe-premium/premium/addons/user-ratings/templates/user_rating.php:38
+msgid "Rate this recipe!"
+msgstr "Értékeld a receptet!"
+
+#: wp-ultimate-recipe-premium/premium/addons/user-ratings/user-ratings.php:58
+msgid ""
+"Are you sure you want to reset the rating for this recipe? This will set the "
+"votes and rating to 0."
+msgstr ""
+"Biztos, hogy lenullázod az erre a receptre érkezett szavazatokat és "
+"értékeléseket?"
+
+#: wp-ultimate-recipe-premium/premium/addons/user-submissions/templates/public_recipe_form.php:24
+#: wp-ultimate-recipe-premium/premium/helpers/recipe_columns.php:16
+#: wp-ultimate-recipe-premium/premium/helpers/recipe_columns.php:68
+msgid "Featured image"
+msgstr "Kiemelt kép"
+
+#: wp-ultimate-recipe-premium/premium/addons/user-submissions/templates/public_recipe_form.php:33
+msgid "Add Featured Image"
+msgstr "Kiemelt kép hozzáadása"
+
+#: wp-ultimate-recipe-premium/premium/addons/user-submissions/templates/public_recipe_form.php:34
+msgid "Remove Featured Image"
+msgstr "Kiemelt kép eltávolítása"
+
+#: wp-ultimate-recipe-premium/premium/addons/user-submissions/templates/public_recipe_form.php:134
+#: wp-ultimate-recipe-premium/premium/addons/user-submissions/user-submissions.php:310
+msgid "Preview"
+msgstr "Előnézet"
+
+#: wp-ultimate-recipe-premium/premium/addons/user-submissions/templates/public_recipe_form.php:136
+msgid "Submit"
+msgstr "Nyugtáz"
+
+#: wp-ultimate-recipe-premium/premium/addons/user-submissions/user-submissions.php:96
+msgid "Sorry, the site administrator has disabled recipe submissions."
+msgstr "Elnézést, az oldal adminisztrátora letiltotta a receptbeküldést."
+
+#: wp-ultimate-recipe-premium/premium/addons/user-submissions/user-submissions.php:109
+msgid "Sorry, only registered users may submit recipes."
+msgstr "Elnézést, csak regisztrált felhasználók küldhetnek be receptet."
+
+#: wp-ultimate-recipe-premium/premium/addons/user-submissions/user-submissions.php:249
+msgid "Anonymous"
+msgstr "Névtelenül"
+
+#: wp-ultimate-recipe-premium/premium/addons/user-submissions/user-submissions.php:300
+msgid "Please fill in these required fields:"
+msgstr "Kérlek, töltsd ki ezeket a kötelező mezőket:"
+
+#: wp-ultimate-recipe-premium/premium/helpers/ingredient_metadata.php:10
+msgid "Optional plural version of this ingredient."
+msgstr "Az összetevő többes számú változata (opcionális)."
+
+#: wp-ultimate-recipe-premium/premium/helpers/ingredient_metadata.php:14
+#: wp-ultimate-recipe-premium/premium/helpers/ingredient_metadata.php:37
+msgid "Link"
+msgstr "Link"
+
+#: wp-ultimate-recipe-premium/premium/helpers/ingredient_metadata.php:15
+msgid "Send your visitors to a specific link when clicking on an ingredient."
+msgstr ""
+"Látogatók átirányítása egy speciális link által meghatározott helyre, amikor "
+"egy hozzávalóra klikkelnek."
+
+#: wp-ultimate-recipe-premium/premium/helpers/ingredient_metadata.php:19
+msgid "Hide link"
+msgstr "Hivatkozás elrejtése"
+
+#: wp-ultimate-recipe-premium/premium/helpers/ingredient_metadata.php:20
+msgid "Don't use a link in the ingredients list for this ingredient."
+msgstr "Ne legyen hivatkozás ehhez az összetevőhöz a hozzávalók listáján."
+
+#: wp-ultimate-recipe-premium/premium/helpers/ingredient_metadata.php:25
+msgid "Use this to group ingredients in the shopping list."
+msgstr "Ezen hozzávalócsoport használata a bevásárlólistán."
+
+#: wp-ultimate-recipe-premium/premium/helpers/license_form.php:8
+msgid "License Key"
+msgstr "Licenckulcs"
+
+#: wp-ultimate-recipe-premium/premium/helpers/license_form.php:11
+msgid "Enter your license key"
+msgstr "Add meg a licenckulcsodat"
+
+#: wp-ultimate-recipe-premium/premium/helpers/license_form.php:13
+msgid "active"
+msgstr "aktív"
+
+#: wp-ultimate-recipe-premium/premium/helpers/license_form.php:15
+msgid "invalid"
+msgstr "érvénytelen"
+
+#: wp-ultimate-recipe-premium/premium/helpers/license_form.php:19
+msgid "Change License"
+msgstr "Licenc módosítása"
+
+#: wp-ultimate-recipe-premium/premium/helpers/recipe_columns.php:53
+msgid "reset"
+msgstr "alaphelyzet"
+
+#: wp-ultimate-recipe-premium/premium/helpers/recipe_columns.php:60
+msgid "Clone Recipe"
+msgstr "Recept klónozása"
+
+#: wp-ultimate-recipe-premium/premium/helpers/recipe_columns.php:88
+#: wp-ultimate-recipe-premium/premium/helpers/widgets/recipe_list_widget.php:55
+msgid "Date"
+msgstr "Dátum"
+
+#: wp-ultimate-recipe-premium/premium/helpers/widgets/recipe_list_widget.php:9
+msgid "WPURP Recipe List"
+msgstr "WPURP receptlista"
+
+#: wp-ultimate-recipe-premium/premium/helpers/widgets/recipe_list_widget.php:11
+msgid "Make a list of your latest, highest rated, ... recipes."
+msgstr "Készíts listát a legutóbbi, legnagyobb értékelésű, stb. receptjeidről."
+
+#: wp-ultimate-recipe-premium/premium/helpers/widgets/recipe_list_widget.php:48
+msgid "Our Recipes"
+msgstr "Receptjeink"
+
+#: wp-ultimate-recipe-premium/premium/helpers/widgets/recipe_list_widget.php:56
+msgid "Recipe Title"
+msgstr "Cím szerint"
+
+#: wp-ultimate-recipe-premium/premium/helpers/widgets/recipe_list_widget.php:57
+msgid "Recipe Rating"
+msgstr "Értékelés szerint"
+
+#: wp-ultimate-recipe-premium/premium/helpers/widgets/recipe_list_widget.php:60
+msgid "ascending"
+msgstr "növekvő"
+
+#: wp-ultimate-recipe-premium/premium/helpers/widgets/recipe_list_widget.php:61
+msgid "descending"
+msgstr "csökkenő"
+
+#: wp-ultimate-recipe-premium/premium/helpers/widgets/recipe_list_widget.php:69
+msgid "Order By"
+msgstr "Sorba rendezés"
+
+#: wp-ultimate-recipe-premium/premium/helpers/widgets/recipe_list_widget.php:80
+msgid "Order"
+msgstr "Sorrend"
+
+#: wp-ultimate-recipe-premium/premium/helpers/widgets/recipe_list_widget.php:91
+msgid "Number of recipes to show"
+msgstr "Megjelenítendő receptek száma"
+
+#: wp-ultimate-recipe-premium/premium/vendor/EDD/EDD_SL_Plugin_Updater.php:177
+#, php-format
+msgid ""
+"There is a new version of %1$s available. <a target=\"_blank\" class="
+"\"thickbox\" href=\"%2$s\">View version %3$s details</a>."
+msgstr ""
+"Elérhető a %1$s új verziója. <a target=\"_blank\" class=\"thickbox\" href="
+"\"%2$s\">Az új %3$s verzió részleteinek megtekintése</a>."
+
+#: wp-ultimate-recipe-premium/premium/vendor/EDD/EDD_SL_Plugin_Updater.php:184
+#, php-format
+msgid ""
+"There is a new version of %1$s available. <a target=\"_blank\" class="
+"\"thickbox\" href=\"%2$s\">View version %3$s details</a> or <a href=\"%4$s"
+"\">update now</a>."
+msgstr ""
+"Elérhető a %1$s új verziója. <a target=\"_blank\" class=\"thickbox\" href="
+"\"%2$s\">Az új %3$s részleteinek megtekintése</a> vagy <a href=\"%4$s"
+"\">frissítés most</a>."
+
+#: wp-ultimate-recipe-premium/premium/vendor/EDD/EDD_SL_Plugin_Updater.php:324
+msgid "You do not have permission to install plugin updates"
+msgstr "Nincs engedélyed bővítmény-frissítések telepítésére"
+
+#: wp-ultimate-recipe-premium/premium/vendor/EDD/EDD_SL_Plugin_Updater.php:324
+msgid "Error"
+msgstr "Hiba"
+
+#: wp-ultimate-recipe-premium/wp-ultimate-recipe-premium.php:106
+msgid ""
+"You need to deactivate the free WP Ultimate Recipe plugin before activating "
+"the Premium version. WP Ultimate Recipe Premium is a stand-alone plugin "
+"since version 2. You won't lose any settings or recipes when deactivating."
+msgstr ""
+"Mielőtt a Premium verziót aktiválod, ki kell kapcsolnod az ingyenes WP "
+"Ultimate Recipe bővítményt. A 2. verzió óta a Premium egy teljesen önálló "
+"bővítmény. A WP Ultimate Recipe kikapcsolásával természetesen minden "
+"beállításod és recepted megmarad."

@@ -47,6 +47,7 @@ class WPURP_Recipe_Post_Type {
                 'public' => true,
                 'menu_position' => 5,
                 'supports' => array( 'title', 'editor', 'thumbnail', 'comments', 'excerpt', 'author', 'publicize', 'shortlinks' ),
+                'yarpp_support' => true,
                 'taxonomies' => $taxonomies,
                 'menu_icon' =>  WPUltimateRecipe::get()->coreUrl . '/img/icon_16.png',
                 'has_archive' => $has_archive,

@@ -179,7 +179,7 @@ class WPURP_Taxonomy_MetaData {
 		if ( ! ( $term = get_term( $term_id, $_POST['taxonomy'] ) ) )
 			return;
 
-		$opts = get_option( $this->id );
+		$opts = get_option( $this->id, array() );
 
 		if ( ! isset( $_POST[ $this->id ] ) || ! is_array( $_POST[ $this->id ] ) ) {
 			unset( $opts[ $term->slug ] );
@@ -187,6 +187,16 @@ class WPURP_Taxonomy_MetaData {
 			return;
 		}
 
+		// Delete missing values
+        if( isset( $opts[$term->slug] ) && is_array( $opts[$term->slug] ) ) {
+            foreach ($opts[$term->slug] as $metakey => $val) {
+                if (!isset($_POST[$this->id][$metakey])) {
+                    unset($opts[$term->slug][$metakey]);
+                }
+            }
+        }
+
+		// Update existing values
 		foreach ( $_POST[ $this->id ] as $metakey => $val ) {
 
 			// Sanitize value and add to our options array

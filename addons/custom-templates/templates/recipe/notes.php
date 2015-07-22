@@ -11,7 +11,7 @@ class WPURP_Template_Recipe_Notes extends WPURP_Template_Block {
 
     public function output( $recipe, $args = array() )
     {
-        if( !$this->output_block( $recipe ) ) return '';
+        if( !$this->output_block( $recipe, $args ) ) return '';
 
         $output = $this->before_output();
 
@@ -29,7 +29,7 @@ class WPURP_Template_Recipe_Notes extends WPURP_Template_Block {
             }
         }
 
-        $output .= '<div' . $this->style() . '>' . $notes . '</div>';
+        $output .= '<div' . $this->style() . '>' . $this->cut_off( $notes ) . '</div>';
 
         return $this->after_output( $output, $recipe );
     }

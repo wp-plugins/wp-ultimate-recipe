@@ -11,7 +11,7 @@ class WPURP_Template_Recipe_Tag_Terms extends WPURP_Template_Block {
 
     public function output( $recipe, $args = array() )
     {
-        if( !$this->output_block( $recipe ) || !isset( $args['tag_terms'] ) ) return '';
+        if( !$this->output_block( $recipe, $args ) || !isset( $args['tag_terms'] ) ) return '';
 
         $output = $this->before_output();
 

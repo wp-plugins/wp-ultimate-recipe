@@ -7,20 +7,49 @@
 
     <div class="feature-section col two-col">
         <div class="col-1">
-            <h3>WP Ultimate Recipe 2.1.4</h3>
+            <h3>WP Ultimate Recipe 2.4</h3>
             <strong>New</strong>
+            <ul>
+                <li>Feature: Yummly partner integration, enable the Yum button in the settings</li>
+                <li>Feature: Tooltip for Print button</li>
+                <li>Improvement: Better metadata for the Recipe Image</li>
+                <li>Improvement: Better way of handling the searchable content</li>
+                <li>Improvement: Output cook and prep time meta when using hours</li>
+                <li>Improvement: New Food Fanatic button</li>
+            </ul>
             <strong>Update</strong>
             <ul>
-                <li>Fix: Problem with adjustable servings</li>
-                <li>Fix: Use of non-gzipped minified assets to avoid PHP problems</li>
+                <li>Fix: Excerpts on archive pages when there is no post content</li>
+                <li>Fix: Don’t output link color when “Output Inline CSS” is disabled</li>
+                <li>Fix: Shortcode Editor not working properly in some themes</li>
+                <li>Fix: Serve Pinterest button image statically to prevent HTTPS issues</li>
             </ul>
         </div>
         <div class="col-2 last-feature">
-            <h3>WP Ultimate Recipe Premium 2.1.4</h3>
+            <h3>WP Ultimate Recipe Premium 2.4</h3>
             <strong>New</strong>
             <ul>
-                <li>Feature: Ability to add custom CSS for the shopping list print page</li>
-                <li>Feature: Ability to set the default unit system for User Menus</li>
+                <li>Feature: Tooltip for Favorite Recipe button</li>
+                <li>Feature: Tooltip for Add to Shopping List button</li>
+                <li>Feature: Setting to show ingredient notes in shopping list</li>
+                <li>Feature: Ability to show images in Recipe List Widget</li>
+                <li>Feature: Setting to enable delete button for saved User Menus</li>
+                <li>Feature: Setting to include list of recipes in the printed shopping list</li>
+                <li>Feature: Custom Tag Conditions in the Template Editor</li>
+                <li>Feature: Ability to list recipes submitted by current user in the Extended Recipe Index shortcode</li>
+                <li>Feature: Recipe Date block in the Template Editor</li>
+                <li>Feature: Post Content block in the Template Editor</li>
+                <li>Feature: Cut off text after X characters or X words in the Template Editor</li>
+                <li>Improvement: Usage of fractions in User Menus if enabled for adjustable servings</li>
+                <li>Improvement: Add to Shopping List button will only add a recipe once and indicate if it’s already on the list</li>
+                <li>Improvement: Set the required capability to edit Nutritional Information in the settings</li>
+                <li>Improvement: User Submission form looks better on mobile</li>
+            </ul>
+            <strong>Update</strong>
+            <ul>
+                <li>Fix: Better cup unit conversions in User Menus</li>
+                <li>Fix: Template editor when using unconventional WP directory structures</li>
+                <li>Fix: Firefox letter spacing problem in User Submission dropdowns</li>
             </ul>
         </div>
     </div>
@@ -29,6 +58,156 @@
 
     <div>
         <h3>Previous Versions</h3>
+
+        <h4>Premium Plugin 2.3</h4>
+        <ul>
+            <li>Feature: Import .fdx files (Living Cookbook, …)</li>
+            <li>Feature: Allow logged in users to edit their own recipes from the front end with a new shortcode</li>
+            <li>Feature: Allow visitors to preview recipes in the User Submission form</li>
+            <li>Feature: Set required fields for User Submission form</li>
+            <li>Feature: Use security question in User Submission form</li>
+            <li>Improvement: More options for auto approval of User Submissions</li>
+            <li>Improvement: Select which custom fields should show up in the User Submission form</li>
+            <li>Improvement: User Submission form container classes</li>
+            <li>Fix: Dropping in certain blocks after loading/importing in the Template Editor</li>
+        </ul>
+        <h4>Core Plugin 2.3</h4>
+        <ul>
+            <li>Feature: Full text search for recipes</li>
+            <li>Feature: New partner integration with Chicory</li>
+            <li>Setting: What to use for the recipe image title tag</li>
+            <li>Fix: Password Protection now hides the recipe box as well</li>
+            <li>Fix: Yandex resultPhoto metadata</li>
+            <li>Fix: Usage of Ratings taxonomy</li>
+        </ul>
+
+        <h4>Premium Plugin 2.2.3</h4>
+        <ul>
+            <li>Feature: Entire new Recipe Grid functionality</li>
+            <li>Improvement: Delete icon in User Menus</li>
+            <li>Improvement: Setting to not consolidate ingredients in User Menus</li>
+            <li>Fix: Publish date bug in saved User Menus</li>
+            <li>Fix: Recipe Grid WordPress 4.2 compatibility</li>
+            <li>Fix: Unit Conversion problem when switching back to original unit system</li>
+        </ul>
+        <h4>Core Plugin 2.2.3</h4>
+        <ul>
+            <li>Improvement: Plugin works in different directory names</li>
+            <li>Fix: Shortcode Editor button in text editor</li>
+            <li>Fix: Recipe Template compatibility with Twenty Fifteen theme</li>
+        </ul>
+
+        <h4>Premium Plugin 2.2.2</h4>
+        <ul>
+            <li>Feature: Favorite Recipes</li>
+            <li>Improvement: Better recipe dropdown for Nutritional Information page</li>
+            <li>Improvement: Setting to use rel=“nofollow” for custom links</li>
+            <li>Improvement: Setting to disable Media Manager for logged in users on User Submission page</li>
+            <li>Improvement: Import all recipes from other plugins, not just the published ones</li>
+            <li>Fix: Problem with sub field conditions in tables, rows and columns</li>
+            <li>Fix: XML import problem when importing multiple recipes with different fields</li>
+        </ul>
+        <h4>Core Plugin 2.2.2</h4>
+        <ul>
+            <li>Improvement: Setting to choose the source for the instruction images title tag</li>
+        </ul>
+
+        <h4>Premium Plugin 2.2.1</h4>
+        <ul>
+            <li>Feature: Separate share buttons in Template Editor</li>
+            <li>Feature: New share buttons: Facebook Share, StumbleUpon, LinkedIn</li>
+            <li>Feature: Multiselect terms in User Submission form</li>
+            <li>Improvement: Show ungrouped ingredients first on Ingredient Groups page</li>
+            <li>Improvement: Recipe Grid filters follow order used in shortcode</li>
+            <li>Improvement: Use "pending review" instead of "draft" for user submitted recipes</li>
+            <li>Improvement: New default User Menu name</li>
+            <li>Improvement: Setting to disable Nutritional Information notice</li>
+            <li>Improvement: Better way of saving custom recipe templates</li>
+            <li>Fix: Order of terms in User Submission form</li>
+        </ul>
+        <h4>Core Plugin 2.2.1</h4>
+        <ul>
+            <li>Feature: Advanced ability to use plugin in minimal mode on certain pages</li>
+            <li>Improvement: Better thumbnails for instruction images</li>
+            <li>Improvement: Possibility to add Yandex resultPhoto meta field</li>
+            <li>Improvement: Memory use of recipe templates</li>
+            <li>Fix: Load Google Fonts over https when necessary</li>
+        </ul>
+
+        <h4>Premium Plugin 2.2</h4>
+        <ul>
+            <li>Feature: Define plural form of ingredients</li>
+            <li>Feature: Export your recipes to XML</li>
+            <li>Feature: Import recipes from XML</li>
+            <li>Improvement: Nutrition Label block in Template Editor</li>
+            <li>Improvement: Nutrition values as percentage of daily value available in Template Editor</li>
+            <li>Improvement: Add instruction and ingredient groups in “Add new from text"</li>
+            <li>Fix: Show delete button in User Menus on mobile devices</li>
+            <li>Fix: Problem with unchecking “Hide ingredient link” option</li>
+            <li>Fix: Metadata not shown in Recipe Grid or print version</li>
+            <li>Fix: Don’t show nutritional metadata group when empty</li>
+        </ul>
+        <h4>Core Plugin 2.2</h4>
+        <ul>
+            <li>Improvement: Better handling of fractions in ingredient quantities</li>
+            <li>Improvement: Compatibility with Term Management Tool</li>
+            <li>Better schema.org compliance for metadata</li>
+        </ul>
+
+        <h4>Premium Plugin 2.1.8</h4>
+        <ul>
+            <li>Feature: Import from RecipeCard by Yumprint</li>
+            <li>Fix: Template Editor preview problem with default permalinks</li>
+        </ul>
+        <h4>Core Plugin 2.1.8</h4>
+        <ul>
+            <li>Feature: BigOven integration</li>
+            <li>Feature: Food Fanatic integration</li>
+            <li>Feature: Support for YARPP</li>
+            <li>Fix: JS error when using the minified assets</li>
+            <li>Fix: PHP Warning on first time activation</li>
+            <li>Fix: White screen on first time activation</li>
+            <li>Fix: Template compatibility with new Twenty Fifteen theme</li>
+        </ul>
+
+        <h4>Premium Plugin 2.1.6</h4>
+        <ul>
+            <li>Feature: Add to Shopping List from Recipe</li>
+            <li>Feature: Shopping List is persistent</li>
+            <li>Feature: Sub field conditions in the Template Editor</li>
+            <li>Feature: New “User Menus By” shortcode</li>
+            <li>Feature: Custom HTML to display after a user has submitted a recipe</li>
+            <li>Feature: Setting to hide specific category or tag terms on the User Submission page</li>
+            <li>New hook: wpurp_recipe_grid_recipe_ids</li>
+            <li>Fix: Number of recipes in Grid when not displaying those without image</li>
+            <li>Fix: Nutritional Widget memory problem</li>
+            <li>Fix: Don’t display ingredient and instruction subfields when empty</li>
+        </ul>
+        <h4>Core Plugin 2.1.6</h4>
+        <ul>
+            <li>Feature: Ability to chat with us from your Settings or FAQ page</li>
+            <li>Fix: Issue in minified JS file causing problems on some websites</li>
+        </ul>
+
+        <h4>Premium Plugin 2.1.5</h4>
+        <ul>
+            <li>Feature: Ability to show multiple unit systems as columns in the shopping list</li>
+            <li>Fix: Automatic updates should be working again for most users</li>
+            <li>Fix: Unit Conversion problem</li>
+            <li>Fix: User Ratings voting problem when using minified assets</li>
+        </ul>
+        <h4>Core Plugin 2.1.4</h4>
+        <ul>
+            <li>Fix: Problem with adjustable servings</li>
+            <li>Fix: Use of non-gzipped minified assets to avoid PHP problems</li>
+        </ul>
+
+        <h4>Premium Plugin 2.1.4</h4>
+        <ul>
+            <li>Feature: Ability to add custom CSS for the shopping list print page</li>
+            <li>Feature: Ability to set the default unit system for User Menus</li>
+        </ul>
+
         <h4>Premium Plugin 2.1.3</h4>
         <ul>
             <li>Feature: Ability to not show an ingredient link for specific ingredients</li>
@@ -46,7 +225,6 @@
             <li>Fix: Issue when using decimal values as the serving size</li>
         </ul>
 
-        <h3>Previous Versions</h3>
         <h4>Premium Plugin 2.1.2</h4>
         <ul>
             <li>Feature: Import from EasyRecipe and EasyRecipe Plus</li>

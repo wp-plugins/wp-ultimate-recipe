@@ -3,6 +3,27 @@
     clear: both;
 }
 
+.wpurp-meta, .wpurp-searchable-recipe {
+    display: none;
+}
+
+.wpurp-errors {
+  border: 1px solid darkred;
+  padding: 10px;
+  margin-bottom: 20px;
+
+  ul {
+    margin: 0;
+  }
+}
+
+.wpurp-required {
+  color: darkred;
+  margin-left: 2px;
+  vertical-align: top;
+  font-size: smaller;
+}
+
 html body.rtl .wpurp-container {
     text-align: right;
 }
@@ -12,6 +33,10 @@ html body .wpurp-container {
     clear: both;
     text-align: left;
     font-size: 14px;
+
+    &.wpupg-item {
+        position: absolute;
+    }
 
     span {
         display: inline-block;
@@ -124,6 +149,7 @@ html body .wpurp-container {
     }
 
     table {
+        table-layout: auto;
         border-collapse: collapse;
         width: 100%;
     }
@@ -140,17 +166,19 @@ html body .wpurp-container {
         display: none;
     }
 
-    .wpurp-recipe-sharing {
+    .wpurp-recipe-sharing .button.pinterest {
+        margin-top: 32px;
+    }
+
+    .sharrre {
         iframe {
             margin: 0 !important;
             max-width: none !important;
         }
 
-        .pinterest-pinit {
-            margin-top: 32px;
-
+        .button.pinterest {
             a {
-                background-image: url(http://passets.pinterest.com/images/pidgets/pinit_bg_en_rect_gray_28_1.png) !important;
+                background-image: url(../img/pinit_bg_en_rect_gray_28_1.png) !important;
             }
         }
     }

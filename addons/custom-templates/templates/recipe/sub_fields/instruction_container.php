@@ -25,7 +25,7 @@ class WPURP_Template_Recipe_Instruction_Container extends WPURP_Template_Block {
 
     public function output( $recipe, $args = array() )
     {
-        if( !$this->output_block( $recipe ) ) return '';
+        if( !$this->output_block( $recipe, $args ) ) return '';
 
         if( $this->is_list ) {
             if( in_array( $this->list_style, array( 'none', 'circle', 'disc', 'square' ) ) ) {
@@ -42,6 +42,9 @@ class WPURP_Template_Recipe_Instruction_Container extends WPURP_Template_Block {
             $sub_tag = 'div';
         }
 
+        $args['max_width'] = $this->max_width && $args['max_width'] > $this->max_width ? $this->max_width : $args['max_width'];
+        $args['max_height'] = $this->max_height && $args['max_height'] > $this->max_height ? $this->max_height : $args['max_height'];
+        $args['desktop'] = $args['desktop'] && $this->show_on_desktop;
         $output = $this->before_output();
 
         ob_start();
@@ -76,10 +79,10 @@ class WPURP_Template_Recipe_Instruction_Container extends WPURP_Template_Block {
             if( $index % 2 == 0 ) $styles[] = 'li-even';
 
             echo '<' . $sub_tag . ' class="wpurp-recipe-instruction"' . $this->style( $styles ) . '>';
-            $child_args = array(
+            $child_args = array_merge( $args, array(
                 'instruction_description' => $instruction['description'],
                 'instruction_image' => $instruction['image']
-            );
+            ) );
 
             $this->output_children( $recipe, 0, 0, $child_args );
             echo '</' . $sub_tag . '>';

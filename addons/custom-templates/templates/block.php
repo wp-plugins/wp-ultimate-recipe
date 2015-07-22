@@ -7,12 +7,17 @@ class WPURP_Template_Block {
     public $settings = array();
     public $style = array();
     public $conditions = array();
+    public $classes = array();
 
     // Relative block position
     public $parent;
     public $row;
     public $column;
     public $order;
+
+    // Max block size
+    public $max_width;
+    public $max_height;
 
     // Responsive condition
     protected $show_on_desktop = true;
@@ -21,6 +26,7 @@ class WPURP_Template_Block {
     // Special cases
     protected $link_color = false;
     protected $background_preset = false;
+    protected $cut_off = false;
 
     public function __construct( $type )
     {
@@ -175,13 +181,36 @@ class WPURP_Template_Block {
             foreach( $block->conditions as $condition ) {
                 if( ( $condition->condition_type == 'field' || $condition->condition_type == 'custom_field' ) && $this->present( $condition, 'field' ) ) {
                     $this->add_condition( array( 'type' => 'hide', 'condition_type' => 'field', 'field' => $condition->field, 'when' => $condition->when ), $condition->target );
+                } else if( $condition->condition_type == 'sub_field' && $this->present( $condition, 'field' ) ) {
+                    $this->add_condition( array( 'type' => 'hide', 'condition_type' => 'sub_field', 'field' => $condition->field, 'when' => $condition->when ), $condition->target );
                 } else if( $condition->condition_type == 'setting' && $this->present( $condition, 'setting' ) ) {
                     $this->add_condition( array( 'type' => 'hide', 'condition_type' => 'setting', 'setting' => $condition->setting, 'when' => $condition->when ), $condition->target );
+                } else if( $condition->condition_type == 'tag' ) {
+                    $this->add_condition( array( 'type' => 'hide', 'condition_type' => 'tag', 'when' => $condition->when, 'term' => $condition->term, 'taxonomy' => $condition->taxonomy ), $condition->target );
                 } else if( $condition->condition_type == 'responsive' ) {
                     $this->add_condition( array( 'type' => 'hide', 'condition_type' => 'responsive', 'when' => $condition->when ), $condition->target );
                 }
             }
         }
+
+        /*
+         * Cut off
+         */
+        if( $this->present( $block, 'shortenText') && $block->shortenText != 'none' ) {
+            $this->cut_off = array(
+                'type' => $block->shortenText,
+                'number' => intval( $block->shortenTextNumber ),
+                'after_text' => $block->shortenTextAfter,
+            );
+        }
+
+        /*
+         * Max block size
+         */
+        if( $this->present( $block, 'maxWidth' ) && $block->maxWidthType == 'px' )      $this->max_width = intval( $block->maxWidth );
+        if( $this->present( $block, 'maxHeight' ) && $block->maxHeightType == 'px' )    $this->max_height = intval( $block->maxHeight );
+        if( $this->present( $block, 'width' ) && $block->widthType == 'px' )            $this->max_width = intval( $block->width );
+        if( $this->present( $block, 'height' ) && $block->heightType == 'px' )          $this->max_height = intval( $block->height );
     }
 
     protected function present( $block, $field )
@@ -196,6 +225,11 @@ class WPURP_Template_Block {
     /*
      * Styling
      */
+
+    public function add_class( $class )
+    {
+        $this->classes[] = $class;
+    }
 
     public function add_style( $property, $value, $name = 'default' )
     {
@@ -263,15 +297,17 @@ class WPURP_Template_Block {
             }
 
             // Class name
-            $custom_class = '';
+            $classes = $this->classes;
+            $classes[] = 'wpurp-' . $this->type;
 
             if( $this->present( $this->settings, 'customClass' ) ) {
-                $custom_class = ' ' . esc_attr( $this->settings->customClass );
+                $classes[] = esc_attr( $this->settings->customClass );
             }
 
-            $class = ' class="wpurp-' . $this->type . $custom_class . '"';
-        }
+            $classes = implode( ' ', $classes );
 
+            $class = ' class="' . $classes . '"';
+        }
 
         if( $style == '' ) {
             return $class;
@@ -301,7 +337,7 @@ class WPURP_Template_Block {
         $this->conditions[$target][] = $condition;
     }
 
-    private function condition( $recipe, $condition )
+    private function condition( $recipe, $condition, $args = array() )
     {
         $show = true;
 
@@ -313,8 +349,45 @@ class WPURP_Template_Block {
             } else {
                 $show = $show && $present; // Hide when missing
             }
+        } else if( $condition['condition_type'] == 'sub_field' && isset( $args[$condition['field']] ) ) {
+            $present = $args[$condition['field']] == '' ? false : true;
+
+            if( isset( $condition['when'] ) && $condition['when'] == 'present' ) {
+                $show = $show && !$present; // Hide when present
+            } else {
+                $show = $show && $present; // Hide when missing
+            }
         } else if( $condition['condition_type'] == 'setting' ) {
-            $val = WPUltimateRecipe::option( $condition['setting'], '1' ); // TODO Only works for default 1 options at the moment
+
+            if( $condition['setting'] == 'user_menus_add_to_shopping_list' ) {
+                if( !WPUltimateRecipe::is_premium_active() ) {
+                    $val = false;
+                } else {
+                    $setting = WPUltimateRecipe::option( 'user_menus_add_to_shopping_list', 'off' );
+
+                    if( $setting == 'guests' || ( $setting == 'registered' && is_user_logged_in() ) ) {
+                        $val = true;
+                    } else {
+                        $val = false;
+                    }
+                }
+            } else if( $condition['setting'] == 'favorite_recipes_enabled' ) {
+                if( !WPUltimateRecipe::is_premium_active() ) {
+                    $val = false;
+                } else {
+                    $val = WPUltimateRecipe::option( 'favorite_recipes_enabled', '0' );
+                }
+            } else if ( in_array( $condition['setting'], array(
+                'partners_integrations_yummly_enable',
+                'partners_integrations_foodfanatic_enable',
+                'partners_integrations_chicory_enable',
+                'partners_integrations_bigoven_enable' ) ) ) {
+                // Default 0
+                $val = WPUltimateRecipe::option( $condition['setting'], '0' );
+            } else {
+                // Default 1
+                $val = WPUltimateRecipe::option( $condition['setting'], '1' );
+            }
 
             if( $condition['setting'] == 'recipe_adjustable_units' && !WPUltimateRecipe::is_premium_active() ) {
                 return false; // Hide unit conversion block if we're not Premium
@@ -325,16 +398,22 @@ class WPURP_Template_Block {
             } else {
                 $show = $show && $val == '1';
             }
+        } else if( $condition['condition_type'] == 'tag' ) {
+            if( has_term( $condition['term'], $condition['taxonomy'], $recipe->ID() ) ) {
+                $show = $condition['when'] == 'in' ? false : true;
+            } else {
+                $show = $condition['when'] == 'in' ? true : false;
+            }
         }
 
         return $show;
     }
 
-    protected function show( $recipe, $target = 'block' )
+    protected function show( $recipe, $target = 'block', $args = array() )
     {
         if( isset( $this->conditions[$target] ) ) {
             foreach( $this->conditions[$target] as $condition ) {
-                if( !$this->condition( $recipe, $condition ) ) {
+                if( !$this->condition( $recipe, $condition, $args ) ) {
                     return false;
                 }
             }
@@ -344,12 +423,38 @@ class WPURP_Template_Block {
     }
 
     /*
+    * Cut off text
+    */
+    protected function cut_off( $text )
+    {
+        if( $this->cut_off ) {
+            $limit = $this->cut_off['number'];
+
+            if( $this->cut_off['type'] == 'words' && str_word_count( $text, 0 ) > $limit ) {
+                // Limit to X words
+                $words = str_word_count( $text, 2 );
+                $pos = array_keys( $words );
+                $text = substr( $text, 0, $pos[$limit] );
+
+                $text = rtrim( $text ) . $this->cut_off['after_text'];
+            } elseif( $this->cut_off['type'] == 'characters' && strlen( $text ) > $limit ) {
+                // Limit to X characters
+                $text = substr( $text, 0, $limit );
+
+                $text = rtrim( $text ) . $this->cut_off['after_text'];
+            }
+        }
+
+        return $text;
+    }
+
+    /*
      * Output block, called before output of child.
      * Return false to not output the child.
      */
-    protected function output_block( $recipe )
+    protected function output_block( $recipe, $args )
     {
-        return $this->show( $recipe );
+        return $this->show( $recipe, 'block', $args );
     }
 
     protected function before_output()
@@ -387,7 +492,7 @@ class WPURP_Template_Block {
         }
 
         // TODO Better way of doing this?
-        if( $this->link_color ) {
+        if( $this->link_color && WPUltimateRecipe::option( 'recipe_template_inline_css', '1' ) == '1' ) {
 
             if( WPUltimateRecipe::option( 'recipe_template_force_style', '1' ) == '1' ) {
                 $important = ' !important';
@@ -410,7 +515,7 @@ class WPURP_Template_Block {
             }
         }
 
-        return apply_filters( 'wpurp_output_recipe_block_' . $this->type, $output, $recipe );
+        return apply_filters( 'wpurp_output_recipe_block_' . $this->type, $output, $recipe, $this );
     }
 
     /*

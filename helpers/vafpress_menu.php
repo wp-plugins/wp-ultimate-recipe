@@ -6,7 +6,7 @@ class WPURP_Vafpress_Menu {
 
     public function __construct()
     {
-        add_action( 'after_setup_theme', array( $this, 'vafpress_menu_init' ) );
+        add_action( 'after_setup_theme', array( $this, 'vafpress_menu_init' ), 11 );
         add_action( 'admin_init', array( $this, 'assets' ) );
 
         $this->defaults = array(

@@ -12,13 +12,22 @@ jQuery(document).ready(function() {
         wpurp_add_to_editor('[nutrition-label]');
     });
 
+    var text_editor = jQuery('textarea#content');
     function wpurp_add_to_editor(text) {
         if( !tinyMCE.activeEditor || tinyMCE.activeEditor.isHidden()) {
-            var current = jQuery('textarea#content').val();
-            jQuery('textarea#content').val(current + text);
+            var current = text_editor.val();
+            text_editor.val(current + text);
         } else {
             tinyMCE.execCommand('mceInsertContent', false, text);
         }
+    }
+
+    // Remove searchable recipe div
+    if(text_editor.length > 0) {
+        var content = text_editor.val();
+        content = content.replace( /<div class="wpurp-searchable-recipe"[^<]*<\/div>/g, function( match ) { return ''; });
+        content = content.replace( /\[wpurp-searchable-recipe\][^\[]*\[\/wpurp-searchable-recipe\]/g, function( match ) { return ''; });
+        text_editor.val(content);
     }
 
 

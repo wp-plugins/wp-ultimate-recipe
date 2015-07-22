@@ -2,7 +2,7 @@
 // Subpage
 $sub = isset( $_GET['sub'] ) ? $_GET['sub'] : 'getting_started';
 
-if( !in_array( $sub, array( 'getting_started', 'whats_new', 'support' ) ) ) {
+if( !in_array( $sub, array( 'getting_started', 'whats_new', 'support', 'our_plugins' ) ) ) {
     $sub = 'getting_started';
 }
 
@@ -35,6 +35,8 @@ $img_dir = WPUltimateRecipe::get()->coreUrl . '/img/faq/';
             What&#8217;s New
         </a><a href="<?php echo admin_url('edit.php?post_type=recipe&page=wpurp_faq&sub=support'); ?>" class="nav-tab<?php if( $sub == 'support' ) echo ' nav-tab-active'; ?>">
             I need help!
+        </a><a href="<?php echo admin_url('edit.php?post_type=recipe&page=wpurp_faq&sub=our_plugins'); ?>" class="nav-tab<?php if( $sub == 'our_plugins' ) echo ' nav-tab-active'; ?>">
+            Our Plugins
         </a>
     </h2>
 
