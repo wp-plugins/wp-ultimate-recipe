@@ -68,6 +68,9 @@ class WPURP_Recipe {
             case 'recipe_instructions':
                 return $this->has_instructions();
 
+            case 'recipe_post_content':
+                return trim( $this->post_content() ) != '';
+
             case 'recipe_rating':
                 if( WPUltimateRecipe::is_addon_active( 'user-ratings' ) && WPUltimateRecipe::option( 'user_ratings_enable', 'everyone' ) != 'disabled' ) {
                     // Recipe rating is always present when user ratings are enabled
@@ -152,6 +155,22 @@ class WPURP_Recipe {
     public function cook_time()
     {
         return $this->meta( 'recipe_cook_time' );
+    }
+
+    public function cook_time_meta()
+    {
+        $meta = false;
+
+        $amount = esc_attr( $this->cook_time() );
+        $unit = strtolower( $this->cook_time_text() );
+
+        if( $unit == __( 'minute', 'wp-ultimate-recipe' ) || $unit == __( 'minutes', 'wp-ultimate-recipe' ) ) {
+            $meta = 'PT' . $amount . 'M';
+        } elseif( $unit == __( 'hour', 'wp-ultimate-recipe' ) || $unit == __( 'hours', 'wp-ultimate-recipe' ) ) {
+            $meta = 'PT' . $amount . 'H';
+        }
+
+        return $meta;
     }
 
     public function cook_time_text()
@@ -241,6 +260,22 @@ class WPURP_Recipe {
     public function prep_time()
     {
         return $this->meta( 'recipe_prep_time' );
+    }
+
+    public function prep_time_meta()
+    {
+        $meta = false;
+
+        $amount = esc_attr( $this->prep_time() );
+        $unit = strtolower( $this->prep_time_text() );
+
+        if( $unit == __( 'minute', 'wp-ultimate-recipe' ) || $unit == __( 'minutes', 'wp-ultimate-recipe' ) ) {
+            $meta = 'PT' . $amount . 'M';
+        } elseif( $unit == __( 'hour', 'wp-ultimate-recipe' ) || $unit == __( 'hours', 'wp-ultimate-recipe' ) ) {
+            $meta = 'PT' . $amount . 'H';
+        }
+
+        return $meta;
     }
 
     public function prep_time_text()

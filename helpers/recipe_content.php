@@ -66,7 +66,10 @@ class WPURP_Recipe_Content {
             $recipe = new WPURP_Recipe( get_post() );
             $excerpt = $recipe->excerpt();
 
-            if( $recipe->post_content() == '' && empty( $excerpt ) ) {
+	        $post_content = $recipe->post_content();
+	        $post_content = trim( preg_replace("/\[wpurp-searchable-recipe\][^\[]*\[\/wpurp-searchable-recipe\]/", "", $post_content) );
+
+            if( $post_content == '' && empty( $excerpt ) ) {
                 $content = $recipe->description();
             } else if( $content == '' ) {
                 $content = get_the_excerpt();

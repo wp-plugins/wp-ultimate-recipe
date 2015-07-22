@@ -155,6 +155,10 @@ $shortcode_generator = array(
                         'name' => 'limit_author',
                         'label' => __('Limit Author', 'wp-ultimate-recipe'),
                         'items' => array(
+                            array(
+                                'value' => 'current_user',
+                                'label' => __('Currently logged in user', 'wp-ultimate-recipe'),
+                            ),
                             'data' => array(
                                 array(
                                     'source' => 'function',

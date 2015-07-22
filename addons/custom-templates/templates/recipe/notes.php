@@ -29,7 +29,7 @@ class WPURP_Template_Recipe_Notes extends WPURP_Template_Block {
             }
         }
 
-        $output .= '<div' . $this->style() . '>' . $notes . '</div>';
+        $output .= '<div' . $this->style() . '>' . $this->cut_off( $notes ) . '</div>';
 
         return $this->after_output( $output, $recipe );
     }

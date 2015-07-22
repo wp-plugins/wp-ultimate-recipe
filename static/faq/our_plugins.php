@@ -7,6 +7,23 @@
 
     <div class="feature-section col two-col">
         <div class="col-1">
+            <img src="<?php echo $img_dir; ?>wp-ultimate-post-grid.jpg" alt="WP Ultimate Post Grid" class="about-overview-img" />
+        </div>
+        <div class="col-2 last-feature">
+            <h3>WP Ultimate Post Grid</h3>
+            <p>Easily create filterable responsive grids for your posts, pages or custom post types.</p>
+            <p>
+                Free & Premium plugin.
+                <br/><a href="https://wordpress.org/plugins/wp-ultimate-post-grid/" target="_blank">http://wordpress.org/plugins/wp-ultimate-post-grid</a>
+                <br/><a href="http://bootstrapped.ventures/wp-ultimate-post-grid/" target="_blank">http://bootstrapped.ventures/wp-ultimate-post-grid/</a>
+            </p>
+        </div>
+    </div>
+
+    <hr />
+
+    <div class="feature-section col two-col">
+        <div class="col-1">
             <h3>Easy Affiliate Links</h3>
             <p>Easily manage and cloak all your external links. Perfect for taking control of your affiliate links.</p>
             <p>Free plugin.<br/><a href="https://wordpress.org/plugins/easy-affiliate-links/" target="_blank">http://wordpress.org/plugins/easy-affiliate-links</a></p>
@@ -25,7 +42,11 @@
         <div class="col-2 last-feature">
             <h3>Easy Image Collage</h3>
             <p>Create beautiful responsive image collages for all your posts and pages.</p>
-            <p>Free plugin.<br/><a href="https://wordpress.org/plugins/easy-image-collage/" target="_blank">http://wordpress.org/plugins/easy-image-collage</a></p>
+            <p>
+                Free & Premium plugin.
+                <br/><a href="https://wordpress.org/plugins/easy-image-collage/" target="_blank">http://wordpress.org/plugins/easy-image-collage</a>
+                <br/><a href="http://bootstrapped.ventures/easy-image-collage/" target="_blank">http://bootstrapped.ventures/easy-image-collage/</a>
+            </p>
         </div>
     </div>
 

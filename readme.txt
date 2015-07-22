@@ -101,6 +101,18 @@ Yes! We pride ourselves on offering awesome support and almost always answer sup
 
 == Changelog ==
 
+= 2.4 =
+* Feature: Yummly partner integration, enable the Yum button in the settings
+* Feature: Tooltip for Print button
+* Improvement: Better metadata for the Recipe Image
+* Improvement: Better way of handling the searchable content
+* Improvement: Output cook and prep time meta when using hours
+* Improvement: New Food Fanatic button
+* Fix: Excerpts on archive pages when there is no post content
+* Fix: Don’t output link color when “Output Inline CSS” is disabled
+* Fix: Shortcode Editor not working properly in some themes
+* Fix: Serve Pinterest button image statically to prevent HTTPS issues
+
 = 2.3.2 =
 * Fix: for the previous fix. Sorry for the inconvenience.
 
@@ -404,6 +416,9 @@ Yes! We pride ourselves on offering awesome support and almost always answer sup
 * Very first version of this plugin
 
 == Upgrade notice ==
+
+= 2.4 =
+Some esssential improvements and bug fixes for the best recipe plugin
 
 = 2.3.2 =
 Update if you were using WP Ultimate Recipe 2.3.1 or 2.3.2

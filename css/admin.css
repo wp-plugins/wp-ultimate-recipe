@@ -1,2 +1,5 @@
 #qt_content_wpurp_shortcode_generator {
   width: 26px; }
+
+.reveal-modal {
+  z-index: 1000 !important; }

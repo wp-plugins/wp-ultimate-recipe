@@ -110,7 +110,7 @@ class WPURP_Template_Recipe_Image extends WPURP_Template_Block {
         $full_image_url = $recipe->image_url( 'full' );
 
         $args['desktop'] = $args['desktop'] && $this->show_on_desktop;
-        $meta = $args['template_type'] == 'recipe' && $args['desktop'] ? ' itemprop="image"' : '';
+        $meta = $args['template_type'] == 'recipe' && $args['desktop'] ? true : false;
 
         $title_tag = WPUltimateRecipe::option( 'recipe_image_title', 'attachment' ) == 'attachment' ? esc_attr( get_the_title( $recipe->image_ID() ) ) : esc_attr( $recipe->title() );
 
@@ -118,15 +118,28 @@ class WPURP_Template_Recipe_Image extends WPURP_Template_Block {
 
         ob_start();
 ?>
-<div<?php echo $this->style( 'outer' ); ?>>
-    <?php if( WPUltimateRecipe::option( 'recipe_images_clickable', '0' ) == 1 ) { ?>
-    <a href="<?php echo $full_image_url; ?>" rel="lightbox" title="<?php echo $title_tag; ?>">
-        <img src="<?php echo $image_url; ?>"<?php echo $meta; ?> alt="<?php echo esc_attr( get_post_meta( $recipe->image_ID(), '_wp_attachment_image_alt', true) ); ?>" title="<?php echo $title_tag; ?>"<?php echo $this->style(); ?> />
-    </a>
-    <?php } else { ?>
-    <img src="<?php echo $image_url; ?>"<?php echo $meta; ?> alt="<?php echo esc_attr( get_post_meta( $recipe->image_ID(), '_wp_attachment_image_alt', true) ); ?>" title="<?php echo $title_tag; ?>"<?php echo $this->style(); ?> />
-    <?php } ?>
-</div>
+<?php if( $meta ) { ?>
+    <div itemprop="image" itemscope itemtype="http://schema.org/ImageObject"<?php echo $this->style( 'outer' ); ?>>
+        <?php if( WPUltimateRecipe::option( 'recipe_images_clickable', '0' ) == 1 ) { ?>
+            <a href="<?php echo $full_image_url; ?>" itemprop="contentUrl" rel="lightbox" title="<?php echo $title_tag; ?>">
+                <img src="<?php echo $image_url; ?>" itemprop="thumbnailUrl" alt="<?php echo esc_attr( get_post_meta( $recipe->image_ID(), '_wp_attachment_image_alt', true) ); ?>" title="<?php echo $title_tag; ?>"<?php echo $this->style(); ?> />
+            </a>
+        <?php } else { ?>
+            <meta itemprop="contentUrl" content="<?php echo $full_image_url; ?>">
+            <img src="<?php echo $image_url; ?>" itemprop="thumbnailUrl" alt="<?php echo esc_attr( get_post_meta( $recipe->image_ID(), '_wp_attachment_image_alt', true) ); ?>" title="<?php echo $title_tag; ?>"<?php echo $this->style(); ?> />
+        <?php } ?>
+    </div>
+<?php } else { ?>
+    <div<?php echo $this->style( 'outer' ); ?>>
+        <?php if( WPUltimateRecipe::option( 'recipe_images_clickable', '0' ) == 1 ) { ?>
+        <a href="<?php echo $full_image_url; ?>" rel="lightbox" title="<?php echo $title_tag; ?>">
+            <img src="<?php echo $image_url; ?>" alt="<?php echo esc_attr( get_post_meta( $recipe->image_ID(), '_wp_attachment_image_alt', true) ); ?>" title="<?php echo $title_tag; ?>"<?php echo $this->style(); ?> />
+        </a>
+        <?php } else { ?>
+        <img src="<?php echo $image_url; ?>" alt="<?php echo esc_attr( get_post_meta( $recipe->image_ID(), '_wp_attachment_image_alt', true) ); ?>" title="<?php echo $title_tag; ?>"<?php echo $this->style(); ?> />
+        <?php } ?>
+    </div>
+<?php } ?>
 <?php
         $output .= ob_get_contents();
         ob_end_clean();

@@ -24,7 +24,7 @@ class WPURP_Template_Recipe_Custom_Field extends WPURP_Template_Block {
 
         if( !$this->key || !get_post_meta( $recipe->ID(), $this->key, true ) ) return '';
 
-        $output .= '<span' . $this->style() . '>' . $recipe->custom_field( $this->key ) . '</span>';
+        $output .= '<span' . $this->style() . '>' . $this->cut_off( $recipe->custom_field( $this->key ) ) . '</span>';
 
         return $this->after_output( $output, $recipe );
     }

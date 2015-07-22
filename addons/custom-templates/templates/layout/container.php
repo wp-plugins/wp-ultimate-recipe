@@ -148,8 +148,8 @@ class WPURP_Template_Container extends WPURP_Template_Block {
     <meta itemprop="image" content="<?php echo esc_attr( $recipe->image_url( 'full' ) ); ?>">
     <meta itemprop="name" content="<?php echo esc_attr( $recipe->title() ); ?>">
     <meta itemprop="description" content="<?php echo esc_attr( $recipe->description() ); ?>">
-    <?php if( strtolower( $recipe->prep_time_text() ) == __( 'minutes', 'wp-ultimate-recipe' ) ) { ?><meta itemprop="prepTime" content="PT<?php echo esc_attr( $recipe->prep_time() ); ?>M"><?php } ?>
-    <?php if( strtolower( $recipe->cook_time_text() ) == __( 'minutes', 'wp-ultimate-recipe' ) ) { ?><meta itemprop="cookTime" content="PT<?php echo esc_attr( $recipe->cook_time() ); ?>M"><?php } ?>
+    <?php if( $recipe->prep_time_meta() ) { ?><meta itemprop="prepTime" content="<?php echo $recipe->prep_time_meta(); ?>"><?php } ?>
+    <?php if( $recipe->cook_time_meta() ) { ?><meta itemprop="cookTime" content="<?php echo $recipe->cook_time_meta(); ?>"><?php } ?>
     <?php
     // Ingredients metadata (done here to avoid doubles)
     if( $recipe->has_ingredients() ) {

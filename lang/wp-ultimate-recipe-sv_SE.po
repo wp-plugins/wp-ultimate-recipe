@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WP Ultimate Recipe package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2015-05-05 09:55:04+0000\n"
+"PO-Revision-Date: 2015-07-22 11:37:19+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -10,82 +10,334 @@ msgstr ""
 "X-Generator: GlotPress/0.1\n"
 "Project-Id-Version: WP Ultimate Recipe\n"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:975
-msgid "Backwards Compatibility"
+#: wp-ultimate-recipe-premium/core/helpers/models/recipe.php:167
+#: wp-ultimate-recipe-premium/core/helpers/models/recipe.php:272
+msgid "minute"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1354
-msgid "Consolidate Ingredients"
+#: wp-ultimate-recipe-premium/core/addons/custom-templates/templates/functionality/add_to_shopping_list.php:43
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1549
+msgid "Add to Shopping List"
 msgstr ""
+
+#: wp-ultimate-recipe-premium/core/addons/custom-templates/templates/functionality/add_to_shopping_list.php:44
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1556
+msgid "This recipe is in your Shopping List"
+msgstr ""
+
+#: wp-ultimate-recipe-premium/core/addons/custom-templates/templates/functionality/favorite.php:36
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1809
+msgid "Add to your Favorite Recipes"
+msgstr ""
+
+#: wp-ultimate-recipe-premium/core/addons/custom-templates/templates/functionality/favorite.php:37
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1816
+msgid "This recipe is in your Favorite Recipes"
+msgstr ""
+
+#: wp-ultimate-recipe-premium/core/addons/custom-templates/templates/functionality/print_button.php:30
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:165
+msgid "Print Recipe"
+msgstr ""
+
+#: wp-ultimate-recipe-premium/core/helpers/models/recipe.php:169
+#: wp-ultimate-recipe-premium/core/helpers/models/recipe.php:274
+msgid "hours"
+msgstr ""
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:163
+msgid "Print Button Tooltip"
+msgstr ""
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:164
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1548
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1555
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1808
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1815
+msgid "Text to show when someone hovers over the button."
+msgstr ""
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:622
+msgid "Show the Yum button."
+msgstr ""
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1487
+msgid "Enable Delete Button"
+msgstr ""
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1488
+msgid "Users can delete their own saved menus."
+msgstr ""
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1503
+msgid "Show Ingredient Notes"
+msgstr ""
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1504
+msgid "Ingredients with different notes will be handled as different ingredients."
+msgstr ""
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1518
+msgid "Add to Shopping List Button"
+msgstr ""
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1547
+msgid "Add to Shopping List Button Tooltip"
+msgstr ""
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1554
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1814
+msgid "Tooltip after adding"
+msgstr ""
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1561
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1821
+msgid "You can use HTML to link to the relevant page in the tooltips:"
+msgstr ""
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1703
+msgid "Include Recipe List"
+msgstr ""
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1704
+msgid "Include of list of the recipes in the menu when printing the shopping list."
+msgstr ""
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1807
+msgid "Favorite Recipes Button Tooltip"
+msgstr ""
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1860
+msgid "Required role or capability"
+msgstr ""
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1861
+msgid "Only users with this role or capability can edit the Nutritional Information."
+msgstr ""
+
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/templates/user-menus.php:114
+msgid "Delete Menu"
+msgstr ""
+
+#: wp-ultimate-recipe-premium/premium/helpers/widgets/recipe_list_widget.php:106
+msgid "Show Images"
+msgstr ""
+
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:290
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:322
+msgid "Instruction Step Image"
+msgstr "Bild Instruktionssteg"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:215
+msgid "Recipe Image Title"
+msgstr "Titel Receptbild"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:216
+msgid "Title tag to be used for the recipe image."
+msgstr "Titeletikett att använda för receptbilden."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:224
+msgid "Use recipe title"
+msgstr "Använd recepttitel"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:572
+msgid "Connect your recipes to leading online grocers with the Chicory \"get ingredients\" button."
+msgstr "Koppla dina recept till ledande återförsäljare med \"skaffa ingredienser\"-knappen från Chicory."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:582
+msgid "I agree to Chicory's"
+msgstr "Jag accepterar Chicorys"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:582
+msgid "terms of use"
+msgstr "användaravtal"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:590
+msgid "You need to agree to Chicory's terms of use if you want the button to show up."
+msgstr "Du behöver acceptera Chicorys användaravtal om du vill att knappen skall dyka upp."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:774
+msgid "Fields"
+msgstr "Fält"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:775
+msgid "Fields to show in the User Submission form."
+msgstr "Fält att visa i formuläret där användare skickar in egna recept."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1173
+msgid "Allow visitors to preview their submission"
+msgstr "Tillåt besökare att förhandsvisa sina egna recept när de lägger in dem"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1188
+msgid "Required Fields"
+msgstr "Obligatoriska fält"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1189
+msgid "Fields that are required to fill in."
+msgstr "Fält som måste fyllas i."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1207
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1213
+#: wp-ultimate-recipe-premium/premium/addons/user-submissions/templates/public_recipe_form.php:126
+#: wp-ultimate-recipe-premium/premium/addons/user-submissions/user-submissions.php:291
+msgid "Security Question"
+msgstr "Säkerhetsfråga"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1214
+msgid "Use a security question to prevent spam."
+msgstr "Använd en säkerhetsfråga för att motverka spam."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1220
+msgid "Question"
+msgstr "Fråga"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1221
+msgid "The question your visitors have to answer."
+msgstr "Frågan dina besökare måste besvara."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1231
+msgid "Answer"
+msgstr "Svar"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1232
+msgid "The correct answer to that question."
+msgstr "Det korrekta svaret på frågan."
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1311
+msgid "Approval Rules"
+msgstr "Godkännanderegler"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1317
+msgid "Auto approve"
+msgstr "Godkänn automatiskt"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1341
+msgid "Auto approve specific users"
+msgstr "Godkänn automatiskt vissa användare"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1342
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1356
+msgid "Publish recipes from these users immediately on submission."
+msgstr "Publicera recept från följande användare direkt när det lämnas in."
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1355
+msgid "Auto approve users with role or capability"
+msgstr "Godkänn automatiskt användare med roll eller funktion"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1889
+msgid "Import order"
+msgstr "Importordning"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1893
+msgid "Import oldest recipes first"
+msgstr "Importera äldst recept först"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1897
+msgid "Import latest recipes first"
+msgstr "Import senaste recept först"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:147
+#: wp-ultimate-recipe-premium/premium/addons/import-fdx/import-fdx.php:26
+#: wp-ultimate-recipe-premium/premium/addons/import-fdx/import-fdx.php:38
+#: wp-ultimate-recipe-premium/premium/addons/import-fdx/templates/before_importing.php:4
+#: wp-ultimate-recipe-premium/premium/addons/import-fdx/templates/before_importing.php:15
+msgid "Import FDX"
+msgstr "Importera FDX"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:266
+msgid "guests"
+msgstr "gäster"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:349
+msgid "List of submissions by currently logged in user with edit ability"
+msgstr "Lista av bidrag av just nu inloggade användare som har redigeringsmöjlighet"
+
+#: wp-ultimate-recipe-premium/premium/addons/user-submissions/templates/public_recipe_form.php:134
+#: wp-ultimate-recipe-premium/premium/addons/user-submissions/user-submissions.php:310
+msgid "Preview"
+msgstr "Förhandsvisning"
+
+#: wp-ultimate-recipe-premium/premium/addons/user-submissions/user-submissions.php:300
+msgid "Please fill in these required fields:"
+msgstr "Fyll i dessa obligatoriska fält:"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1066
+msgid "Backwards Compatibility"
+msgstr "Bakåtkompatibilitet"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1574
+msgid "Consolidate Ingredients"
+msgstr "Slå ihop ingredienser"
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1575
 msgid "Convert units to be able to consolidate ingredients into 1 line."
-msgstr ""
+msgstr "Konvertera enheter för att kunna slå ihop ingredienser till 1 rad."
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:203
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:247
 msgid "Manage Recipe Grids"
-msgstr ""
+msgstr "Hantera receptrutnät"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:477
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:485
 msgid "Old version, use Grid shortcode button instead"
-msgstr ""
+msgstr "Gammal version, använd kortkommando för rutnät istället"
 
-#: wp-ultimate-recipe-premium/premium/addons/template-editor/templates/parser.php:492
+#: wp-ultimate-recipe-premium/premium/addons/template-editor/templates/parser.php:506
 msgid "Please set a Preview Recipe in the settings first."
-msgstr ""
+msgstr "Ställ in ett recept att förhandsvisa först."
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:195
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:202
 msgid "Images"
 msgstr "Bilder"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:208
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:235
 msgid "Instruction Images Title"
-msgstr ""
+msgstr "Titel instruktionsbilder"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:209
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:236
 msgid "Title tag to be used for instruction images."
-msgstr ""
+msgstr "Titeletikett att använda för instruktionsbilder."
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:213
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:220
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:240
 msgid "Use media attachment title"
 msgstr "Använd titel från bifogad media"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:217
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:244
 msgid "Use instruction text"
 msgstr "Använd instruktionstext"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:298
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:325
 msgid "Use Nofollow"
-msgstr ""
+msgstr "Använd Nofollow"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:299
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:326
 msgid "Add the nofollow attribute to custom ingredient links."
-msgstr ""
+msgstr "Lägg till nofollow-attributet till anpassade ingredienslänkar."
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1218
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1397
 msgid "Use Media Manager"
 msgstr "Använd Media Manager"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1219
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1398
 msgid "Let logged in users use the Media Manager to upload images"
 msgstr "Tillåt inloggade användare att ladda upp bilder med Media Manager."
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1540
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:418
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1767
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:426
 msgid "Favorite Recipes"
 msgstr "Favoritrecept"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1564
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1791
 msgid "Use the following shortcode to display the list of favorite recipes:"
 msgstr "Använd följande shortcode för att visa en lista av favoritrecept:"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1574
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1801
 msgid "Enable Button"
-msgstr ""
+msgstr "Aktivera knapp"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:421
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:429
 msgid "List logged in user's Favorite Recipes"
-msgstr ""
+msgstr "Lista inloggad användares favoritrecept"
 
 #: wp-ultimate-recipe-premium/premium/addons/favorite-recipes/favorite-recipes.php:87
 msgid "You don't have any favorite recipes."
@@ -99,27 +351,27 @@ msgstr "Utan näringsdeklaration"
 msgid "With Nutritional Information"
 msgstr "Med näringsdeklaration"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1122
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1249
 msgid "Allow Multiselect"
 msgstr "Tillåt flerval"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1123
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1250
 msgid "Allow users to select multiple terms per category."
-msgstr ""
+msgstr "Tillåt användare att välja flera alternativ per kategori."
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1606
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1853
 msgid "Show Notice"
-msgstr ""
+msgstr "Visa notis"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1607
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1854
 msgid "Show notice to update Nutritional Information after updating a recipe."
 msgstr "Visa uppmaning att uppdatera näringsdeklaration när ett recept har ändrats."
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1764
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:2045
 msgid "Use Yandex metadata"
 msgstr "Använd metadata från Yandex"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1765
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:2046
 msgid "Add a resultPhoto meta field for Yandex."
 msgstr "Lägg till Yandex resultPhoto metadatafält."
 
@@ -133,9 +385,9 @@ msgstr "Pluralversion av denna ingrediens (valfritt)"
 
 #: wp-ultimate-recipe-premium/core/helpers/notices.php:30
 msgid "other notices ignored"
-msgstr ""
+msgstr "andra notiser ignorerades"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:103
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:142
 #: wp-ultimate-recipe-premium/premium/addons/import-xml/import-xml.php:26
 #: wp-ultimate-recipe-premium/premium/addons/import-xml/import-xml.php:38
 #: wp-ultimate-recipe-premium/premium/addons/import-xml/templates/before_importing.php:4
@@ -143,7 +395,7 @@ msgstr ""
 msgid "Import XML"
 msgstr "Importera XML"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:108
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:152
 #: wp-ultimate-recipe-premium/premium/addons/export-xml/export-xml.php:35
 #: wp-ultimate-recipe-premium/premium/addons/export-xml/export-xml.php:47
 #: wp-ultimate-recipe-premium/premium/addons/export-xml/templates/before_importing.php:4
@@ -153,7 +405,7 @@ msgstr "Exportera XML"
 
 #: wp-ultimate-recipe-premium/premium/addons/export-xml/export-xml.php:58
 msgid "You haven't selected any recipes to export."
-msgstr ""
+msgstr "Du har inte valt några recept att exportera."
 
 #: wp-ultimate-recipe-premium/premium/addons/export-xml/export-xml.php:78
 msgid "Download XML"
@@ -161,22 +413,22 @@ msgstr "Spara XML"
 
 #: wp-ultimate-recipe-premium/premium/addons/export-xml/templates/before_importing.php:5
 msgid "Select recipes"
-msgstr ""
+msgstr "Markera recept"
 
 #: wp-ultimate-recipe-premium/premium/addons/export-xml/templates/before_importing.php:10
 #: wp-ultimate-recipe-premium/premium/addons/user-menus/templates/ingredient-groups.php:55
 msgid "Select"
-msgstr ""
+msgstr "Markera"
 
 #: wp-ultimate-recipe-premium/premium/addons/export-xml/templates/before_importing.php:10
 #: wp-ultimate-recipe-premium/premium/addons/user-menus/templates/ingredient-groups.php:57
 msgid "None"
-msgstr ""
+msgstr "Inga"
 
 #: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:57
 #: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:89
 msgid "Lines starting with a ! will be starting a new group."
-msgstr ""
+msgstr "Rader som inleds med ! kommer att skapa en ny grupp."
 
 #: wp-ultimate-recipe-premium/premium/addons/user-menus/templates/ingredient-groups.php:43
 msgid "Set group for selected ingredients"
@@ -186,27 +438,19 @@ msgstr "Ange grupp för valda ingredienser"
 msgid "BigOven - Save recipe or add to grocery list"
 msgstr "BigOven - Spara recept eller lägg till i inköpslista"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:532
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:559
 msgid "Partner Integrations"
-msgstr ""
+msgstr "Partner-integrering"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:544
-msgid "BigOven"
-msgstr ""
-
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:545
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:608
 msgid "Show save recipe to BigOven button."
 msgstr "Visa knapp att spara recept till BigOven."
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:551
-msgid "Food Fanatic"
-msgstr ""
-
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:552
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:615
 msgid "Show save recipe to Food Fanatic button."
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:88
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:127
 msgid "Import RecipeCard recipes"
 msgstr ""
 
@@ -226,147 +470,148 @@ msgstr ""
 msgid "Adapted Link"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:408
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:435
 msgid "Include Font Awesome"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:409
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:436
 msgid "You can disable this if your theme already includes Font Awesome."
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1106
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1179
 msgid "After-submission text"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1107
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1180
 msgid "Text to be shown after a user has submitted a recipe."
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1107
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1180
 msgid "HTML can be used."
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1157
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1284
 msgid "Hide Category Terms"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1170
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1297
 msgid "Hide Tag Terms"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1308
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1524
 msgid "Show add to shopping list button for"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:238
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:242
 msgid "Premium only"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:354
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:362
 msgid "List Menus by user"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:364
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:160
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:372
 msgid "Currently logged in user"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1361
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1581
 msgid "Unit System Dropdown"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1362
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1582
 msgid "Users can use a dropdown to select the unit system they want."
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1369
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1589
 msgid "Default Unit System"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1393
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1613
 msgid "Number of unit systems displayed in the shopping list."
 msgstr "Antal enhetssystem att visa i inköpslistan."
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1852
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:2133
 msgid "Print Recipe CSS"
 msgstr "Skriv ut CSS för recept"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1859
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:2140
 msgid "Print Shopping List CSS"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/premium/vendor/EDD/EDD_SL_Plugin_Updater.php:324
+#: wp-ultimate-recipe-premium/premium/vendor/EDD/EDD_SL_Plugin_Updater.php:323
 msgid "Error"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:378
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:405
 msgid "Mobile"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:415
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:442
 msgid "Output Inline CSS"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:416
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:443
 msgid "When disabled the Template Editor will not output any inline CSS."
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:422
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:449
 msgid "Use base CSS"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:423
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:450
 msgid "When disabled the base CSS file will not be included."
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:522
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:549
 msgid "Disable Recipe Archive"
 msgstr "Inaktivera receptarkiv"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:523
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:550
 msgid "Make sure to flush your permalinks after changing this setting."
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:581
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:651
 msgid "Language"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:587
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:657
 msgid "Available languages can be found over here:"
 msgstr "Tillgängliga översättningar kan hittas här:"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1340
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1510
 msgid "Show Checkboxes"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1341
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1511
 msgid "Show checkboxes in the shopping list to cross items of the list."
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1804
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:2085
 msgid "Assets"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1810
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:2091
 msgid "Use minified assets"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1811
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:2092
 msgid "Use minified assets to improve page load speed."
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1817
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:2098
 msgid "Generate minified assets"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1818
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:2099
 msgid "Generate minified assets on the fly."
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1824
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:2105
 msgid "Minified assets directory"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1825
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:2106
 msgid "Directory to generate the minified assets to. Should be writable."
 msgstr ""
 
@@ -386,20 +631,20 @@ msgstr ""
 msgid "Import EasyRecipe"
 msgstr "Importera EasyRecipe"
 
-#: wp-ultimate-recipe-premium/core/helpers/cache.php:72
+#: wp-ultimate-recipe-premium/core/helpers/cache.php:82
 msgid "Private"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/cache.php:86
+#: wp-ultimate-recipe-premium/core/helpers/cache.php:96
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_whitelist.php:129
 msgid "n/a"
 msgstr "n/a"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:83
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:122
 msgid "Import EasyRecipe recipes"
 msgstr "Imporera recept från EasyRecipe"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:213
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:257
 msgid "Reset Cache"
 msgstr ""
 
@@ -431,19 +676,19 @@ msgstr ""
 msgid "No featured image"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1628
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1882
 msgid "Generic ingredient units"
 msgstr "Genrella måttenheter"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1629
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1883
 msgid "Generic ingredient units to recognize while importing. Separate with a ;"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1636
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1909
 msgid "Import From"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:98
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:137
 msgid "Import Ziplist recipes"
 msgstr ""
 
@@ -501,6 +746,7 @@ msgid "Yield"
 msgstr ""
 
 #: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/before_importing.php:5
+#: wp-ultimate-recipe-premium/premium/addons/import-fdx/templates/before_importing.php:5
 #: wp-ultimate-recipe-premium/premium/addons/import-recipecard/templates/before_importing.php:5
 #: wp-ultimate-recipe-premium/premium/addons/import-recipress/templates/import_recipress.php:5
 #: wp-ultimate-recipe-premium/premium/addons/import-xml/templates/before_importing.php:5
@@ -544,90 +790,90 @@ msgstr ""
 msgid "Add Recipe Box"
 msgstr "Lägg till receptfält"
 
-#: wp-ultimate-recipe-premium/core/helpers/recipe_save.php:100
+#: wp-ultimate-recipe-premium/core/helpers/recipe_save.php:105
 msgid "Update the Nutritional Information"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:327
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:354
 msgid "RSS Feed"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:332
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:359
 msgid "Recipe Posts"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:358
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:385
 msgid "Recipe Shortcode"
 msgstr "Shortcode för recept"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:365
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:392
 msgid "Output the recipe shortcode in RSS feeds?"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:727
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1143
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:818
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1270
 msgid "Hide Custom Tags"
 msgstr "Dölj användargenererade taggar"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:728
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:819
 msgid "Do not show these tags in the Recipe Box."
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1144
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1271
 msgid "Hide these tags on the user submission page."
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1470
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1690
 msgid "Print Options"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1476
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1696
 msgid "Print Shopping List Button"
 msgstr "Knapp för utskrift av inköpslista"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1477
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1697
 msgid "Show a button to print the shopping list."
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1483
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1710
 msgid "Print Menu Button"
 msgstr "Utskriftsknapp"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1484
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1711
 msgid "Show a button to print the entire menu (Shopping list and recipes)."
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:243
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:247
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/widgets/nutrition_label_widget.php:42
 msgid "Nutrition Label"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:265
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:310
-msgid "Alignment"
-msgstr ""
-
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:269
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:314
-msgid "Left"
+msgid "Alignment"
 msgstr ""
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:273
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:318
-msgid "Center"
+msgid "Left"
 msgstr ""
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:277
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:322
-msgid "Right"
+msgid "Center"
 msgstr ""
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:281
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:326
+msgid "Right"
+msgstr ""
+
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:285
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:330
 msgid "Inline"
 msgstr "Inbäddad"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1583
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1830
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/nutritional-information.php:121
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:2
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:82
@@ -838,73 +1084,73 @@ msgstr "Visa näringsdeklaration i recepten."
 msgid "Recipe shown on recipe page"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/premium/addons/user-menus/templates/user-menus.php:143
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/templates/user-menus.php:149
 msgid "Print Menu"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/premium/vendor/EDD/EDD_SL_Plugin_Updater.php:177
+#: wp-ultimate-recipe-premium/premium/vendor/EDD/EDD_SL_Plugin_Updater.php:176
 msgid "There is a new version of %1$s available. <a target=\"_blank\" class=\"thickbox\" href=\"%2$s\">View version %3$s details</a>."
 msgstr ""
 
-#: wp-ultimate-recipe-premium/premium/vendor/EDD/EDD_SL_Plugin_Updater.php:184
+#: wp-ultimate-recipe-premium/premium/vendor/EDD/EDD_SL_Plugin_Updater.php:183
 msgid "There is a new version of %1$s available. <a target=\"_blank\" class=\"thickbox\" href=\"%2$s\">View version %3$s details</a> or <a href=\"%4$s\">update now</a>."
 msgstr ""
 
-#: wp-ultimate-recipe-premium/premium/vendor/EDD/EDD_SL_Plugin_Updater.php:324
+#: wp-ultimate-recipe-premium/premium/vendor/EDD/EDD_SL_Plugin_Updater.php:323
 msgid "You do not have permission to install plugin updates"
 msgstr "Du har inte rättighet att uppdatera tillägg"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:170
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:177
 msgid "Use Fractions"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:171
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:178
 msgid "Use fractions after adjusting, even if the original quantity wasn't one."
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:878
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:969
 msgid "Rounding Ratings"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:879
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:970
 msgid "Round the ratings presented in the metadata."
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:887
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:978
 msgid "Round up to nearest half"
 msgstr "Avrunda upp till närmaste halva"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:891
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:982
 msgid "Round up to nearest integer"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1211
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1390
 msgid "Restrict Media Library Access"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1212
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1391
 msgid "Only show media library for editors and up"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:430
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:438
 msgid "Display a random menu"
 msgstr "Visa slumpmässig meny"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:434
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:453
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:442
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:461
 msgid "Select a menu to display"
 msgstr "Välj meny att visa"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1204
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1383
 msgid "Email administrator"
 msgstr "Skicka mejl till administratör"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1205
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1384
 msgid "Send an email notification when a new recipe is submitted."
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:182
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:627
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:186
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:635
 msgid "(separate slugs with ;)"
 msgstr ""
 
@@ -922,7 +1168,7 @@ msgstr "Receptsök"
 
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/widgets/nutrition_label_widget.php:50
 #: wp-ultimate-recipe-premium/premium/addons/recipe-search/widgets/recipe_search_widget.php:79
-#: wp-ultimate-recipe-premium/premium/helpers/widgets/recipe_list_widget.php:65
+#: wp-ultimate-recipe-premium/premium/helpers/widgets/recipe_list_widget.php:75
 msgid "Title:"
 msgstr ""
 
@@ -938,39 +1184,40 @@ msgstr ""
 msgid "Make a list of your latest, highest rated, ... recipes."
 msgstr ""
 
-#: wp-ultimate-recipe-premium/premium/helpers/widgets/recipe_list_widget.php:48
+#: wp-ultimate-recipe-premium/premium/helpers/widgets/recipe_list_widget.php:57
 msgid "Our Recipes"
 msgstr "Våra recept"
 
-#: wp-ultimate-recipe-premium/premium/helpers/widgets/recipe_list_widget.php:56
+#: wp-ultimate-recipe-premium/premium/helpers/widgets/recipe_list_widget.php:66
 msgid "Recipe Title"
 msgstr "Receptrubrik"
 
-#: wp-ultimate-recipe-premium/premium/helpers/widgets/recipe_list_widget.php:57
+#: wp-ultimate-recipe-premium/premium/helpers/widgets/recipe_list_widget.php:67
 msgid "Recipe Rating"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/premium/helpers/widgets/recipe_list_widget.php:60
+#: wp-ultimate-recipe-premium/premium/helpers/widgets/recipe_list_widget.php:70
 msgid "ascending"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/premium/helpers/widgets/recipe_list_widget.php:61
+#: wp-ultimate-recipe-premium/premium/helpers/widgets/recipe_list_widget.php:71
 msgid "descending"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/premium/helpers/widgets/recipe_list_widget.php:69
+#: wp-ultimate-recipe-premium/premium/helpers/widgets/recipe_list_widget.php:79
 msgid "Order By"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/premium/helpers/widgets/recipe_list_widget.php:80
+#: wp-ultimate-recipe-premium/premium/helpers/widgets/recipe_list_widget.php:90
 msgid "Order"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/premium/helpers/widgets/recipe_list_widget.php:91
+#: wp-ultimate-recipe-premium/premium/helpers/widgets/recipe_list_widget.php:101
 msgid "Number of recipes to show"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:354
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:375
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:283
 #: wp-ultimate-recipe-premium/premium/addons/custom-fields/custom-fields.php:18
 #: wp-ultimate-recipe-premium/premium/addons/custom-fields/templates/page.php:4
 msgid "Custom Fields"
@@ -984,20 +1231,20 @@ msgstr ""
 msgid "The default template to use for RSS feeds."
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:660
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:730
 msgid "Recipe Fields"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:677
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:747
 msgid "Custom Recipe Fields"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:698
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:768
 msgid "Show Custom Fields in User Submission form"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:34
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:36
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:53
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:55
 msgid "Manage custom recipe fields"
 msgstr ""
 
@@ -1046,15 +1293,15 @@ msgstr ""
 msgid "Click on the <strong>chef's hat</strong> in the visual editor toolbar to easily <strong>add recipes and functionality</strong> to any post or page."
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1012
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1103
 msgid "The Multi-Select, Match All and Parents match Children setting has been moved to the shortcode and can now be changed per Recipe Grid."
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:680
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:688
 msgid "Limit recipes at start"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:208
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:252
 msgid "Recalculate Recipe Grid Terms"
 msgstr ""
 
@@ -1062,15 +1309,15 @@ msgstr ""
 msgid "Recipe Notes"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:107
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:111
 msgid "required"
 msgstr "obligatorisk"
 
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:172
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:176
 msgid "Select an ingredient"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:105
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:109
 msgid "Quantity"
 msgstr ""
 
@@ -1114,6 +1361,8 @@ msgstr ""
 msgid "people"
 msgstr ""
 
+#: wp-ultimate-recipe-premium/core/helpers/models/recipe.php:169
+#: wp-ultimate-recipe-premium/core/helpers/models/recipe.php:274
 #: wp-ultimate-recipe-premium/core/helpers/recipe_demo.php:30
 msgid "hour"
 msgstr ""
@@ -1156,7 +1405,7 @@ msgid "The default template to use for recipes."
 msgstr ""
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:97
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1491
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1718
 msgid "The default template to use for printed recipes."
 msgstr ""
 
@@ -1172,76 +1421,76 @@ msgstr ""
 msgid "Functionality"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:307
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:334
 msgid "Print Version"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:401
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:428
 msgid "Force CSS style"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:402
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:429
 msgid "This ensures maximum compatibility with most themes. Can be disabled for advanced usage."
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:384
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:411
 msgid "Responsive Breakpoint"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:385
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:412
 msgid "The width of the recipe box at which will be switched to the mobile version."
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:434
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:461
 msgid "Recipe Archive"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1049
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1252
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1140
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1431
 msgid "Use the following shortcode to display the front-end form:"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1197
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1376
 msgid "Can only select existing ingredients"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1198
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1377
 msgid "When enabled visitors will only be able to select from a list of existing ingredients."
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1757
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:2038
 msgid "Remove recipe slug"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1758
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:2039
 msgid "Make sure your slugs are unique across posts, pages and recipes! Your archive page will still be available."
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1772
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:2053
 msgid "Shortcode Editor"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1786
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:2067
 msgid "Show shortcode editor for"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1787
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:2068
 msgid "Where do you want to be able to insert recipes with the shortcode editor?"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:56
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:58
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:95
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:97
 msgid "Open the Template Editor"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:198
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:242
 msgid "Reset Demo Recipe"
 msgstr ""
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:13
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:48
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:83
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:488
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:496
 msgid "Template"
 msgstr ""
 
@@ -1263,31 +1512,31 @@ msgid "You need to deactivate the free WP Ultimate Recipe plugin before activati
 msgstr ""
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:96
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1490
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1717
 msgid "Print Template"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:318
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:345
 msgid "Title Text"
 msgstr "Rubriktext"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:319
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:346
 msgid "Title of the new webpage that opens."
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:868
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:959
 msgid "Minimum # Votes"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:869
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:960
 msgid "Minimum number of votes needed before sharing the rating as metadata used by Google and other search engines."
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1838
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:2119
 msgid "Custom Code"
 msgstr "Alternativ kod"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1845
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:2126
 msgid "Public CSS"
 msgstr "Publik CSS"
 
@@ -1301,8 +1550,10 @@ msgstr "Importera ReciPress"
 msgid "Add New from Text"
 msgstr ""
 
+#: wp-ultimate-recipe-premium/premium/addons/import-fdx/import-fdx.php:65
 #: wp-ultimate-recipe-premium/premium/addons/import-text/import-text.php:134
 #: wp-ultimate-recipe-premium/premium/addons/import-xml/import-xml.php:64
+#: wp-ultimate-recipe-premium/premium/addons/user-submissions/user-submissions.php:204
 msgid "Untitled"
 msgstr ""
 
@@ -1330,7 +1581,7 @@ msgstr ""
 msgid "Highlight a section in your recipe and click the corresponding button to define it."
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:108
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:112
 #: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/manual_import.php:127
 #: wp-ultimate-recipe-premium/premium/addons/import-recipecard/templates/manual_import.php:47
 #: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:19
@@ -1354,7 +1605,7 @@ msgstr "Tips"
 msgid "Only unit aliases defined in the settings will be recognized."
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:106
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:110
 #: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/manual_import.php:125
 #: wp-ultimate-recipe-premium/premium/addons/import-recipecard/templates/manual_import.php:45
 #: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:79
@@ -1378,7 +1629,7 @@ msgstr ""
 msgid "You"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/premium/addons/user-ratings/user-ratings.php:58
+#: wp-ultimate-recipe-premium/premium/addons/user-ratings/user-ratings.php:50
 msgid "Are you sure you want to reset the rating for this recipe? This will set the votes and rating to 0."
 msgstr ""
 
@@ -1404,23 +1655,23 @@ msgstr ""
 msgid "Alias to convert to"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1285
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1464
 msgid "Enable user menus save function for"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1370
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1590
 msgid "Unit system to use for the shopping list feature."
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:56
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:58
 msgid "(e.g. 20 minutes, 1-2 hours, ...)"
 msgstr "(t.ex. 20 minuter, 1-2 timmar...)"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:515
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:523
 msgid "Allow filtering by"
 msgstr "Tillåt följande filter"
 
-#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:257
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:263
 msgid "The menu can be edited from the front end:"
 msgstr ""
 
@@ -1447,7 +1698,7 @@ msgstr ""
 
 #: wp-ultimate-recipe-premium/core/helpers/ingredient_units.php:147
 #: wp-ultimate-recipe-premium/core/helpers/ingredient_units.php:179
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:946
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1037
 msgid "Unit Aliases"
 msgstr ""
 
@@ -1460,13 +1711,13 @@ msgid " Units"
 msgstr "Enheter"
 
 #: wp-ultimate-recipe-premium/core/helpers/ingredient_units.php:250
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:941
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1348
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1032
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1568
 msgid "Unit Systems"
 msgstr ""
 
 #: wp-ultimate-recipe-premium/core/helpers/ingredient_units.php:256
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1392
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1612
 msgid "Number of Systems"
 msgstr "Antal system"
 
@@ -1480,9 +1731,9 @@ msgstr ""
 #: wp-ultimate-recipe-premium/core/helpers/ingredient_units.php:288
 #: wp-ultimate-recipe-premium/core/helpers/ingredient_units.php:298
 #: wp-ultimate-recipe-premium/core/helpers/ingredient_units.php:410
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1406
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1427
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1448
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1626
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1647
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1668
 msgid "Unit System"
 msgstr ""
 
@@ -1507,12 +1758,12 @@ msgstr ""
 msgid "US Imperial"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:177
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1331
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:184
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1494
 msgid "Default Servings"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:178
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:185
 msgid "Default number of servings to use when none specified."
 msgstr ""
 
@@ -1528,16 +1779,16 @@ msgstr ""
 msgid "No recipes in your menu yet"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/premium/addons/user-menus/templates/user-menus.php:135
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/templates/user-menus.php:141
 msgid "Save Menu"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/premium/addons/user-menus/templates/user-menus.php:139
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/templates/user-menus.php:145
 msgid "Print Shopping List"
 msgstr ""
 
 #: wp-ultimate-recipe-premium/premium/addons/user-menus/templates/ingredient-groups.php:2
-#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:131
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:137
 msgid "Ingredient Groups"
 msgstr ""
 
@@ -1545,35 +1796,35 @@ msgstr ""
 msgid "Ungrouped"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:373
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:398
 msgid "Other"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:993
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1084
 msgid "Use the [ultimate-recipe-grid] shortcode to display the Recipe Grid."
 msgstr "Använd shortcode [ultimate-recipe-grid] för att visa receptmatrisen."
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:539
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:547
 msgid "Multi-Select"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:543
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:551
 msgid "Allow visitors to select multiple values for a tag or category."
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:557
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:565
 msgid "Match All"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:561
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:569
 msgid "Recipes will only match if they match all selections."
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:575
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:583
 msgid "Parents match Children"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:579
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:587
 msgid "Selecting a parent will also match recipes with a child category or tag of that parent."
 msgstr ""
 
@@ -1602,28 +1853,28 @@ msgstr ""
 msgid "Metric"
 msgstr "Metrisk"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1750
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:2031
 msgid "Recipes in admin posts"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1751
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:2032
 msgid "Show recipes in admin posts overview when acting as posts."
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:905
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:996
 msgid "Unit Conversion"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:932
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1023
 msgid "Allow Conversion"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:933
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1024
 msgid "Allow your visitors to switch between Imperial and Metric units."
 msgstr ""
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:156
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:593
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:601
 msgid "Limit Author"
 msgstr ""
 
@@ -1632,33 +1883,33 @@ msgstr ""
 msgid "Units"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1743
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:2024
 msgid "Recipes act as posts"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1744
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:2025
 msgid "Recipes act like normal posts. For example: they show up on your front page."
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:861
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:952
 msgid "Show indicator"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:862
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:953
 msgid "Attract attention to the possibility to vote."
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:19
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:21
 msgid "(leave blank to use post title)"
 msgstr "(lämna tomt för att använda titel från inlägg)"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:954
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:474
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:477
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1045
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:482
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:485
 msgid "Recipe Grid"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:504
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:512
 msgid "Exclude recipes without a photo"
 msgstr ""
 
@@ -1666,23 +1917,23 @@ msgstr ""
 msgid "Rate this recipe!"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:842
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:883
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:547
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:565
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:583
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:933
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:974
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:555
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:573
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:591
 msgid "Disabled"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:846
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:937
 msgid "Only logged in users can rate recipes"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:850
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:941
 msgid "Everyone can rate recipes"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/recipe_save.php:120
+#: wp-ultimate-recipe-premium/core/helpers/recipe_save.php:125
 #: wp-ultimate-recipe-premium/premium/addons/recipe-grid/recipe-grid.php:276
 #: wp-ultimate-recipe-premium/premium/helpers/recipe_columns.php:81
 msgid "Categories"
@@ -1697,188 +1948,188 @@ msgstr "Länk"
 msgid "Send your visitors to a specific link when clicking on an ingredient."
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:44
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:82
 msgid "Manage custom recipe tags"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:201
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:208
 msgid "Clickable Images"
 msgstr "Klickbara bilder"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:202
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:209
 msgid "Best used in combination with a lightbox plugin."
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:236
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:263
 msgid "Custom links are only available in "
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:246
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:273
 msgid "Ingredient Links"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:247
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:274
 msgid "Links to be used in the ingredient list."
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:251
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:278
 msgid "No ingredient links"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:255
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:282
 msgid "Only link to ingredient archive page"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:259
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:286
 msgid "Custom link if provided, otherwise archive page"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:263
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:290
 msgid "Custom links if provided, otherwise no link"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:274
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:301
 msgid "Custom Links"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:275
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:302
 msgid "Custom links can be added on the "
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:275
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:302
 msgid "ingredients page"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:279
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:306
 msgid "Open in the current tab/window"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:283
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:310
 msgid "Open in a new tab/window"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:561
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:631
 msgid "Recipe Sharing"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:573
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:643
 msgid "Enable Sharing"
 msgstr "Aktivera delning"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:574
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:644
 msgid "Show sharing buttons."
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:615
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:685
 msgid "Default text to share"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:633
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:703
 msgid "Use %title% as a placeholder for the recipe title."
 msgstr "Använd %title% för receptrubriken."
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:713
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:804
 msgid "Custom Recipe Tags"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:742
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:833
 msgid "WordPress Categories & Tags"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:755
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:846
 msgid "Show Recipes in Archives"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:756
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:847
 msgid "Show recipes in the WP Categories and Tags archives."
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:373
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:516
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:692
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:763
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1184
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1723
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:400
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:543
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:762
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:854
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1363
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:2004
 msgid "Advanced"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:781
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:872
 msgid "Categories will only show up as tags in the recipe if they have a parent category. For example: a \"Courses\" parent category with \"Main Dish\" and \"Dessert\" as child categories assigned to your recipes."
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:791
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:882
 msgid "Show Categories in Recipe"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:792
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:883
 msgid "Use WP categories as if they are tags for their parent category."
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1129
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1256
 msgid "User Submitted Categories"
 msgstr "Användarskapade kategorier"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1130
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1257
 msgid "Allow users to assign categories when submitting recipes."
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1136
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1263
 msgid "User Submitted Tags"
 msgstr "Taggar från användare"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1137
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1264
 msgid "Allow users to assign tags when submitting recipes."
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:798
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:889
 msgid "Show Categories Filter"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:799
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:890
 msgid "Users can see the categories when filtering."
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:805
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:896
 msgid "Show Tags Filter"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:806
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:897
 msgid "Users can see the tags when filtering."
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:815
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:838
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:906
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:929
 msgid "User Ratings"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:89
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:114
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:139
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:216
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:233
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:253
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:93
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:118
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:143
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:222
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:239
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:259
 #: wp-ultimate-recipe-premium/premium/helpers/ingredient_metadata.php:24
 msgid "Group"
 msgstr "Grupp"
 
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:91
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:95
 msgid "Main Ingredients"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:91
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:217
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:95
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:223
 msgid "(this label is not shown)"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:203
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:207
 msgid "Add an ingredient group"
 msgstr "Lägg till en ingrediensgrupp"
 
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:217
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:223
 msgid "Main Instructions"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:328
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:344
 msgid "Add an instruction group"
 msgstr ""
 
@@ -1886,18 +2137,19 @@ msgstr ""
 msgid "Share this Recipe"
 msgstr "Dela det här receptet"
 
-#: wp-ultimate-recipe-premium/core/helpers/recipe_save.php:121
+#: wp-ultimate-recipe-premium/core/helpers/recipe_save.php:126
 #: wp-ultimate-recipe-premium/premium/addons/recipe-grid/recipe-grid.php:284
 #: wp-ultimate-recipe-premium/premium/helpers/recipe_columns.php:82
 msgid "Tags"
 msgstr "Taggar"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:139
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:519
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:610
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:527
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:618
 #: wp-ultimate-recipe-premium/premium/addons/recipe-search/widgets/recipe_search_widget.php:75
 #: wp-ultimate-recipe-premium/premium/addons/user-menus/templates/user-menus.php:8
-#: wp-ultimate-recipe-premium/premium/addons/user-submissions/templates/public_recipe_form.php:54
+#: wp-ultimate-recipe-premium/premium/addons/user-submissions/templates/public_recipe_form.php:71
+#: wp-ultimate-recipe-premium/premium/addons/user-submissions/templates/public_recipe_form.php:79
 msgid "Category"
 msgstr ""
 
@@ -1906,24 +2158,26 @@ msgstr ""
 msgid "Votes"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:93
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:132
 msgid "Import ReciPress recipes"
 msgstr "Importera ReciPress recept"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:748
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:839
 msgid "Use Categories and Tags"
 msgstr "Använd Kategorier och Etiketter"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:749
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:840
 msgid "Use the default WP Categories and Tags to organize your recipes."
 msgstr "Använd de ordinarie WP kategorierna och etiketterna för att organisera dina recept."
 
 #: wp-ultimate-recipe-premium/core/addons/custom-templates/templates/general/title.php:45
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:67
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:69
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:271
 msgid "Passive Time"
 msgstr "Passiv tid"
 
 #: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/before_importing.php:7
+#: wp-ultimate-recipe-premium/premium/addons/import-fdx/templates/before_importing.php:7
 #: wp-ultimate-recipe-premium/premium/addons/import-recipecard/templates/before_importing.php:7
 #: wp-ultimate-recipe-premium/premium/addons/import-recipress/templates/import_recipress.php:7
 #: wp-ultimate-recipe-premium/premium/addons/import-xml/templates/before_importing.php:7
@@ -1960,40 +2214,36 @@ msgstr "Du bör välja en ny etikett för de importerade recepten"
 msgid "Display a random recipe"
 msgstr "Visa ett slumpmässigt utvalt recept"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:11
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:25
 msgid "The user menus archive can be found at"
 msgstr "Arkivet för användarmenyer kan hittas i"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:5
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:19
 msgid "The recipe archive can be found at"
 msgstr "Receptarkivet kan hittas i"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:632
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:780
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:992
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1011
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1048
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1251
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1563
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:702
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:871
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1083
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1102
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1139
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1430
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1790
 msgid "Important"
 msgstr "Viktigt"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1025
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:338
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1116
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:342
 msgid "User Submission"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:707
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1116
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:798
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1243
 msgid "Recipe Tags"
 msgstr "Receptetiketter"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1262
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1441
 msgid "Enable user menus for"
-msgstr ""
-
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1082
-msgid "Auto approve submissions from"
 msgstr ""
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress_shortcode.php:18
@@ -2192,7 +2442,7 @@ msgstr "Välj fil"
 msgid "Import"
 msgstr "Importera"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1622
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1876
 #: wp-ultimate-recipe-premium/core/vendor/vafpress/views/option/impexp.php:7
 msgid "Import Options"
 msgstr "Importalternativ"
@@ -2232,47 +2482,47 @@ msgstr "Sparar nu"
 msgid "This option panel is built using <a href=\"http://vafpress.com/vafpress-framework\">Vafpress Framework %s</a> powered by <a href=\"http://vafpress.com\">Vafpress</a>"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:910
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1001
 msgid "General Settings"
 msgstr "Allmänna inställningar"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:440
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:467
 msgid "Recipe Archive Pages"
 msgstr "Receptarkivsidor"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:338
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:364
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:446
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:365
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:391
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:473
 #: wp-ultimate-recipe-premium/premium/addons/recipe-search/widgets/recipe_search_widget.php:87
 msgid "Display"
 msgstr "Visa"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:342
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:450
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:369
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:477
 msgid "Only the excerpt"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:346
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:454
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:373
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:481
 msgid "The entire recipe"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:465
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:492
 msgid "Display Thumbnail"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:508
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1530
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:535
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1757
 msgid "404 error/page not found?"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:509
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1531
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:536
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1758
 msgid "Try"
 msgstr "Försök"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:509
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1531
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:536
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1758
 msgid "flushing your permalinks"
 msgstr ""
 
@@ -2282,71 +2532,71 @@ msgid "Recipe Template"
 msgstr ""
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:31
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:622
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:668
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:770
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:828
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:922
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:982
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1038
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1241
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1553
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1596
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1643
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1704
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:692
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:738
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:861
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:919
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1013
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1073
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1129
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1420
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1780
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1843
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1916
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1985
 msgid "These features are only available in "
 msgstr "Dessa alternativ är bara tillgängliga i"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:993
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1049
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1252
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1564
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1084
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1140
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1431
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1791
 msgid "The shortcode can be added to any page or post."
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1059
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1150
 msgid "Allow submissions from"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1063
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1087
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1266
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1289
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1312
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1154
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1322
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1445
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1468
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1528
 msgid "Nobody"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1063
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1266
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1289
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1312
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1154
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1445
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1468
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1528
 msgid "disabled"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1616
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1870
 msgid "Import Recipes"
 msgstr "Importera recept"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1696
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1977
 msgid "Export Recipes"
 msgstr "Exportera recept"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:29
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:64
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:246
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:291
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:250
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:295
 msgid "Select a recipe to display"
 msgstr "Välj ett recept att visa"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:29
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:246
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:434
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:250
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:442
 msgid "Ordered by date added"
 msgstr "Sortera efter skapandedatum"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:64
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:291
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:453
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:295
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:461
 msgid "Ordered by title"
 msgstr ""
 
@@ -2375,74 +2625,74 @@ msgstr ""
 msgid "Group by"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:169
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:606
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:173
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:614
 msgid "Limit by"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:182
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:627
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:186
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:635
 msgid "Limit by values"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:199
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:388
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:644
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:203
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:396
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:652
 msgid "Date Added"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:203
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:652
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:207
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:660
 msgid "Random"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:213
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:398
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:662
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:217
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:406
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:670
 msgid "Sort order"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:217
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:402
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:666
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:221
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:410
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:674
 msgid "Ascending"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:221
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:406
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:670
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:225
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:414
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:678
 msgid "Descending"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:231
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:235
 msgid "Max number of recipes"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:341
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:345
 msgid "User Submissions form"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:350
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:358
 msgid "User Menus form"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:466
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:493
 msgid "Thumbnail position depends on the theme you use"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:470
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:497
 msgid "Never"
 msgstr "Aldrig"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:474
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:501
 msgid "Only on archive pages"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:478
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:505
 msgid "Only on recipe pages"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:482
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:509
 msgid "Always"
 msgstr "Alltid"
 
@@ -2468,7 +2718,7 @@ msgstr "Inga recept hittades."
 #: wp-ultimate-recipe-premium/premium/addons/import-recipecard/templates/manual_import.php:44
 #: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:78
 #: wp-ultimate-recipe-premium/premium/addons/import-ziplist/templates/manual_import.php:48
-#: wp-ultimate-recipe-premium/premium/addons/user-menus/templates/user-menus.php:154
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/templates/user-menus.php:160
 msgid "Amount"
 msgstr "Antal/Mängd"
 
@@ -2477,7 +2727,7 @@ msgstr "Antal/Mängd"
 #: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:117
 #: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:159
 #: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/custom-taxonomies.php:158
-#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:220
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:226
 msgid "New"
 msgstr "Ny"
 
@@ -2487,7 +2737,7 @@ msgstr "Ny"
 #: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:153
 #: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/custom-taxonomies.php:152
 #: wp-ultimate-recipe-premium/premium/addons/recipe-search/widgets/recipe_search_widget.php:53
-#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:223
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:229
 msgid "Search"
 msgstr "Sök"
 
@@ -2497,8 +2747,8 @@ msgstr "Sök"
 #: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:121
 #: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:163
 #: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/custom-taxonomies.php:162
-#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:224
-#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:225
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:230
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:231
 msgid "No"
 msgstr "Nej"
 
@@ -2507,17 +2757,17 @@ msgstr "Nej"
 #: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:121
 #: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:163
 #: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/custom-taxonomies.php:162
-#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:224
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:230
 msgid "found."
 msgstr "hittad."
 
 #: wp-ultimate-recipe-premium/core/helpers/recipe_post_type.php:44
-#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:225
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:231
 msgid "found in trash."
 msgstr "hittad i papperskorgen."
 
 #: wp-ultimate-recipe-premium/core/helpers/recipe_post_type.php:45
-#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:226
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:232
 msgid "Parent"
 msgstr ""
 
@@ -2550,7 +2800,7 @@ msgstr "Uppdatera"
 #: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:117
 #: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:159
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:131
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:483
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:491
 #: wp-ultimate-recipe-premium/premium/addons/custom-fields/templates/page_form.php:16
 #: wp-ultimate-recipe-premium/premium/addons/custom-fields/templates/page_list.php:12
 #: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/custom-taxonomies.php:158
@@ -2610,12 +2860,13 @@ msgstr ""
 
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/templates/page_list.php:9
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:143
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:523
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:614
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:531
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:622
 #: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/templates/page_list.php:9
 #: wp-ultimate-recipe-premium/premium/addons/recipe-search/widgets/recipe_search_widget.php:74
 #: wp-ultimate-recipe-premium/premium/addons/user-menus/templates/user-menus.php:12
-#: wp-ultimate-recipe-premium/premium/addons/user-submissions/templates/public_recipe_form.php:65
+#: wp-ultimate-recipe-premium/premium/addons/user-submissions/templates/public_recipe_form.php:85
+#: wp-ultimate-recipe-premium/premium/addons/user-submissions/templates/public_recipe_form.php:93
 msgid "Tag"
 msgstr "Etikett"
 
@@ -2628,9 +2879,9 @@ msgstr "Entalsnamn"
 
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/templates/page_form.php:27
 #: wp-ultimate-recipe-premium/core/addons/basic-custom-taxonomies/templates/page_list.php:18
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:493
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1509
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1515
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:520
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1736
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1742
 #: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/templates/page_form.php:27
 #: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/templates/page_list.php:18
 msgid "Slug"
@@ -2689,15 +2940,15 @@ msgstr ""
 msgid "Cancel Edit"
 msgstr ""
 
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:168
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:172
 msgid "tbsp"
 msgstr "msk"
 
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:188
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:192
 msgid "olive oil"
 msgstr "olivolja"
 
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:192
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:196
 msgid "extra virgin"
 msgstr ""
 
@@ -2707,107 +2958,109 @@ msgstr ""
 msgid "Custom"
 msgstr "Egen"
 
-#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:208
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:214
 msgid "Menus"
 msgstr "Menyer"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:440
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:459
-#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:209
-#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:247
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:448
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:467
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:215
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:253
 msgid "Menu"
 msgstr "Meny"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:427
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:435
 msgid "Shopping List"
 msgstr "Inköpslista"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1228
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:347
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1407
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:355
 msgid "User Menus"
 msgstr "Användarens menyer"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1067
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1091
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1270
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1293
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1316
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1158
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1326
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1449
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1472
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1532
 msgid "Guests and registered users"
 msgstr "Gäster och registrerade användare"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1071
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1095
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1274
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1297
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1320
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1162
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1330
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1453
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1476
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1536
 msgid "Registered users only"
 msgstr "Endast registrerade användare"
 
-#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:483
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:508
 msgid "Sorry, the site administrator has disabled user menus."
 msgstr "Tyvärr, administratören har inaktiverad användarens menyer. "
 
-#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:488
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:513
 msgid "Sorry, only registered users may create menus."
 msgstr "Tyvärr, endast registrerade användare för skapa menyer. "
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:187
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:380
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:632
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:191
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:388
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:640
 msgid "Sort by"
 msgstr "Sortera efter"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1083
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1318
 msgid "Publish recipe immediately on submission."
 msgstr "Publicera recept automatiskt vid inlämning. "
 
-#: wp-ultimate-recipe-premium/premium/addons/user-submissions/user-submissions.php:95
+#: wp-ultimate-recipe-premium/premium/addons/user-submissions/user-submissions.php:96
 msgid "Sorry, the site administrator has disabled recipe submissions."
 msgstr "Tyvärr, administratören har inaktiverad inlämning av recept. "
 
-#: wp-ultimate-recipe-premium/premium/addons/user-submissions/user-submissions.php:108
+#: wp-ultimate-recipe-premium/premium/addons/user-submissions/user-submissions.php:109
 msgid "Sorry, only registered users may submit recipes."
 msgstr "Tyvärr, endast registrerade användare får skicka in recept. "
 
-#: wp-ultimate-recipe-premium/premium/addons/user-submissions/templates/public_recipe_form.php:4
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:265
+#: wp-ultimate-recipe-premium/premium/addons/user-submissions/templates/public_recipe_form.php:7
 msgid "Recipe title"
 msgstr "Recepttitel "
 
-#: wp-ultimate-recipe-premium/premium/addons/user-submissions/templates/public_recipe_form.php:10
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:266
+#: wp-ultimate-recipe-premium/premium/addons/user-submissions/templates/public_recipe_form.php:15
 msgid "Your name"
 msgstr "Ditt namn"
 
-#: wp-ultimate-recipe-premium/premium/addons/user-submissions/templates/public_recipe_form.php:16
+#: wp-ultimate-recipe-premium/premium/addons/user-submissions/templates/public_recipe_form.php:24
 #: wp-ultimate-recipe-premium/premium/helpers/recipe_columns.php:16
 #: wp-ultimate-recipe-premium/premium/helpers/recipe_columns.php:68
 msgid "Featured image"
 msgstr "Huvudbild"
 
-#: wp-ultimate-recipe-premium/premium/addons/user-submissions/templates/public_recipe_form.php:21
+#: wp-ultimate-recipe-premium/premium/addons/user-submissions/templates/public_recipe_form.php:33
 msgid "Add Featured Image"
 msgstr "Lägg till huvudbild"
 
-#: wp-ultimate-recipe-premium/premium/addons/user-submissions/templates/public_recipe_form.php:22
+#: wp-ultimate-recipe-premium/premium/addons/user-submissions/templates/public_recipe_form.php:34
 msgid "Remove Featured Image"
 msgstr "Ta bort huvudbild"
 
-#: wp-ultimate-recipe-premium/premium/addons/user-submissions/templates/public_recipe_form.php:97
+#: wp-ultimate-recipe-premium/premium/addons/user-submissions/templates/public_recipe_form.php:136
 msgid "Submit"
 msgstr "Skicka"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1110
-#: wp-ultimate-recipe-premium/premium/addons/user-submissions/user-submissions.php:178
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1183
+#: wp-ultimate-recipe-premium/premium/addons/user-submissions/user-submissions.php:348
 msgid "Recipe submitted! Thank you, your recipe is now awaiting moderation."
 msgstr "Receptet har skickats in! Tack, ditt recept väntar på godkännande. "
 
-#: wp-ultimate-recipe-premium/premium/addons/user-submissions/user-submissions.php:206
+#: wp-ultimate-recipe-premium/premium/addons/user-submissions/user-submissions.php:249
 msgid "Anonymous"
 msgstr "Anonym"
 
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:135
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:195
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:360
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:640
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:199
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:368
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:648
 #: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/import-easyrecipe.php:444
 #: wp-ultimate-recipe-premium/premium/addons/import-recipecard/import-recipecard.php:288
 #: wp-ultimate-recipe-premium/premium/helpers/recipe_columns.php:19
@@ -2815,11 +3068,11 @@ msgstr "Anonym"
 msgid "Author"
 msgstr "Författare"
 
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:16
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:312
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:191
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:384
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:636
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:18
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:339
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:195
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:392
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:644
 #: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:15
 #: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:37
 #: wp-ultimate-recipe-premium/premium/helpers/recipe_columns.php:69
@@ -2827,65 +3080,71 @@ msgid "Title"
 msgstr "Titel"
 
 #: wp-ultimate-recipe-premium/premium/helpers/recipe_columns.php:88
-#: wp-ultimate-recipe-premium/premium/helpers/widgets/recipe_list_widget.php:55
+#: wp-ultimate-recipe-premium/premium/helpers/widgets/recipe_list_widget.php:65
 msgid "Date"
 msgstr "Datum"
 
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:334
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:352
 msgid "Recipe notes"
 msgstr "Receptanteckningar"
 
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:12
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:538
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:567
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:821
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:915
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:960
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1031
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1234
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1546
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1589
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:14
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:601
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:637
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:912
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1006
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1051
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1122
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1413
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1773
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1836
 #: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:33
 msgid "General"
 msgstr "Allmän"
 
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:24
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:26
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:267
 #: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:16
 #: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:43
 msgid "Description"
 msgstr "Beskrivning"
 
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:37
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:39
+#: wp-ultimate-recipe-premium/core/helpers/recipe_save.php:95
 msgid "star"
 msgstr "stjärna"
 
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:37
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:39
+#: wp-ultimate-recipe-premium/core/helpers/recipe_save.php:95
 msgid "stars"
 msgstr "stjärnor"
 
 #: wp-ultimate-recipe-premium/core/addons/custom-templates/templates/general/title.php:35
 #: wp-ultimate-recipe-premium/core/addons/custom-templates/templates/general/title.php:37
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:44
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:46
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:268
 #: wp-ultimate-recipe-premium/premium/addons/user-menus/templates/user-menus.php:84
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:91
 msgid "Servings"
 msgstr "Portioner"
 
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:48
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:50
 msgid "(e.g. 2 people, 3 loafs, ...)"
 msgstr "(t.ex. 2 personer, 3 limpor, ...)"
 
-#: wp-ultimate-recipe-premium/core/addons/custom-templates/templates/layout/container.php:150
-#: wp-ultimate-recipe-premium/core/addons/custom-templates/templates/layout/container.php:151
-#: wp-ultimate-recipe-premium/core/addons/custom-templates/templates/recipe/cook_time.php:17
-#: wp-ultimate-recipe-premium/core/addons/custom-templates/templates/recipe/prep_time.php:17
 #: wp-ultimate-recipe-premium/core/helpers/migration/1_0_9_free_text_times.php:14
 #: wp-ultimate-recipe-premium/core/helpers/migration/1_0_9_free_text_times.php:17
 #: wp-ultimate-recipe-premium/core/helpers/migration/1_0_9_free_text_times.php:20
+#: wp-ultimate-recipe-premium/core/helpers/models/recipe.php:167
+#: wp-ultimate-recipe-premium/core/helpers/models/recipe.php:272
 #: wp-ultimate-recipe-premium/core/helpers/recipe_demo.php:26
 #: wp-ultimate-recipe-premium/core/helpers/recipe_demo.php:28
 #: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/import-easyrecipe.php:225
 #: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/import-easyrecipe.php:230
 #: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/import-easyrecipe.php:238
+#: wp-ultimate-recipe-premium/premium/addons/import-fdx/import-fdx.php:81
+#: wp-ultimate-recipe-premium/premium/addons/import-fdx/import-fdx.php:83
+#: wp-ultimate-recipe-premium/premium/addons/import-fdx/import-fdx.php:85
 #: wp-ultimate-recipe-premium/premium/addons/import-recipecard/import-recipecard.php:141
 #: wp-ultimate-recipe-premium/premium/addons/import-recipecard/import-recipecard.php:146
 #: wp-ultimate-recipe-premium/premium/addons/import-recipecard/import-recipecard.php:154
@@ -2898,51 +3157,52 @@ msgstr "(t.ex. 2 personer, 3 limpor, ...)"
 msgid "minutes"
 msgstr "minuter"
 
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:77
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:79
 msgid "Don't forget that you can tag your recipe with <strong>Courses</strong> and <strong>Cuisines</strong> by using the boxes on the right. Use the <strong>featured image</strong> if you want a photo of the finished dish."
 msgstr "Glöm inte att du kan ange både <strong>Maträtt</strong> och <strong>Kök</strong> genom att använda fälten till höger. Använd <strong>\"featured\" bild</strong> om du vill lägga till en bild på den färdiga rätten. "
 
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:200
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:204
 msgid "Add an ingredient"
 msgstr "Lägg till ingrediens"
 
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:206
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:210
 msgid "<strong>Use the TAB key</strong> while adding ingredients, it will automatically create new fields. <strong>Don't worry about empty lines</strong>, these will be ignored."
 msgstr "<strong>Använd TAB-knappen</strong> när du lägger till ingredienser. Det kommer automatiskt skapa nya fält. <strong>Tomma fält</strong> sparas inte. "
 
 #: wp-ultimate-recipe-premium/core/addons/custom-templates/templates/general/title.php:49
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:209
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:215
 #: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:18
 #: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:88
 msgid "Instructions"
 msgstr "Instruktioner"
 
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:286
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:306
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:314
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:301
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:330
 msgid "Add Image"
 msgstr "Lägg till bild"
 
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:287
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:315
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:302
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:331
 msgid "Remove Image"
 msgstr "Ta bort bild"
 
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:325
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:341
 msgid "Add an instruction"
 msgstr "Lägg till instruktioner"
 
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:331
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:347
 msgid "<strong>Use the TAB key</strong> while adding instructions, it will automatically create new fields. <strong>Don't worry about empty lines</strong>, these will be ignored."
 msgstr "<strong>Använd TAB-knappen</strong> när du lägger till instruktioner. Det kommer automatiskt skapa nya fält. <strong>Tomma fält</strong> sparas inte."
 
 #: wp-ultimate-recipe-premium/core/addons/custom-templates/templates/general/title.php:41
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:52
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:54
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:269
 msgid "Prep Time"
 msgstr "Förberedelsetid"
 
 #: wp-ultimate-recipe-premium/core/addons/custom-templates/templates/general/title.php:43
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:60
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:62
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_whitelist.php:270
 msgid "Cook Time"
 msgstr "Tillagningstid "
 
@@ -2965,19 +3225,19 @@ msgstr "Inställningar"
 msgid "Recipe Box"
 msgstr "Receptlåda"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:163
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:170
 msgid "Adjustable Servings"
 msgstr "Justerbara Portioner"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:164
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:171
 msgid "Allow users to dynamically adjust the servings of recipes."
 msgstr "Tillåt användare att dynamiskt justera antal portioner för recepten. "
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:187
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:194
 msgid "Link to plugin"
 msgstr "Länk till plugin"
 
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:188
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:195
 msgid "Show a link to the plugin website as a little thank you."
 msgstr "Visa länk till pluginens hemsida som ett litet tack. "
 
@@ -2988,13 +3248,14 @@ msgstr "Recept"
 
 #: wp-ultimate-recipe-premium/core/helpers/recipe_meta_box.php:60
 #: wp-ultimate-recipe-premium/core/helpers/recipe_post_type.php:21
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:1729
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:2010
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:35
 #: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:70
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:252
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:297
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:256
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:301
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:11
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/widgets/nutrition_label_widget.php:54
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:91
 msgid "Recipe"
 msgstr "Recept"
 
@@ -3004,8 +3265,8 @@ msgstr "Recept"
 #: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:116
 #: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:158
 #: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/custom-taxonomies.php:157
-#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:216
-#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:217
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:222
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:223
 msgid "Add New"
 msgstr "Lägg till ny"
 
@@ -3018,27 +3279,27 @@ msgstr "Lägg till ny"
 #: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/custom-taxonomies.php:155
 #: wp-ultimate-recipe-premium/premium/addons/custom-taxonomies/templates/page_list.php:42
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:101
-#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:218
-#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:219
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:224
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:225
 msgid "Edit"
 msgstr "Redigera"
 
 #: wp-ultimate-recipe-premium/core/helpers/recipe_post_type.php:40
 #: wp-ultimate-recipe-premium/core/helpers/recipe_post_type.php:41
-#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:221
-#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:222
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:227
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/user-menus.php:228
 msgid "View"
 msgstr "Visa"
 
 #: wp-ultimate-recipe-premium/core/helpers/shortcodes/index_shortcode.php:51
-#: wp-ultimate-recipe-premium/premium/helpers/shortcodes/extended_index_shortcode.php:155
+#: wp-ultimate-recipe-premium/premium/helpers/shortcodes/extended_index_shortcode.php:163
 msgid "You have to create a recipe first, check the 'Recipes' menu on the left."
 msgstr "Du måste skapa en recept först. Se 'Recept' i menyn till vänster. "
 
 #: wp-ultimate-recipe-premium/core/addons/custom-templates/templates/general/title.php:47
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:83
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:87
 #: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:67
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:229
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_menu_options.php:256
 #: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/manual_import.php:120
 #: wp-ultimate-recipe-premium/premium/addons/import-recipecard/templates/manual_import.php:34
 #: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:17
@@ -3047,15 +3308,15 @@ msgstr "Du måste skapa en recept först. Se 'Recept' i menyn till vänster. "
 msgid "Ingredients"
 msgstr "Ingredienser"
 
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:107
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:111
 #: wp-ultimate-recipe-premium/core/helpers/taxonomies.php:67
 #: wp-ultimate-recipe-premium/premium/addons/import-easyrecipe/templates/manual_import.php:126
 #: wp-ultimate-recipe-premium/premium/addons/import-recipecard/templates/manual_import.php:46
 #: wp-ultimate-recipe-premium/premium/addons/import-text/templates/import_text.php:80
 #: wp-ultimate-recipe-premium/premium/addons/import-ziplist/templates/manual_import.php:50
 #: wp-ultimate-recipe-premium/premium/addons/nutritional-information/templates/settings.php:76
-#: wp-ultimate-recipe-premium/premium/addons/user-menus/templates/user-menus.php:153
-#: wp-ultimate-recipe-premium/premium/addons/user-menus/templates/user-menus.php:167
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/templates/user-menus.php:159
+#: wp-ultimate-recipe-premium/premium/addons/user-menus/templates/user-menus.php:173
 msgid "Ingredient"
 msgstr "Ingrediens"
 
@@ -3144,8 +3405,8 @@ msgstr "Amerikansk"
 msgid "Mexican"
 msgstr "Mexikansk"
 
-#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:30
-#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:648
+#: wp-ultimate-recipe-premium/core/helpers/recipe_form.php:32
+#: wp-ultimate-recipe-premium/core/helpers/vafpress/vafpress_shortcode_options.php:656
 #: wp-ultimate-recipe-premium/premium/addons/user-ratings/templates/user_rating.php:34
 #: wp-ultimate-recipe-premium/premium/helpers/recipe_columns.php:23
 #: wp-ultimate-recipe-premium/premium/helpers/recipe_columns.php:56

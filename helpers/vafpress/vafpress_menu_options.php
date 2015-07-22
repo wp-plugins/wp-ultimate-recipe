@@ -7,7 +7,7 @@ $unit_systems_admin = $unit_helper->get_unit_system_admin_settings();
 // Include part of site URL hash in HTML settings to update when site URL changes
 $sitehash = substr( md5( WPUltimateRecipe::get()->coreUrl ), 0, 8 );
 
-$template_editor_button = WPUltimateRecipe::is_addon_active( 'template-editor' ) ? 'recipe_template_open_template_editor_active' . $sitehash : 'recipe_template_open_template_editor_disabled';
+$template_editor_button = WPUltimateRecipe::is_addon_active( 'template-editor' ) ? 'recipe_template_open_editor_active' . $sitehash : 'recipe_template_open_editor_disabled';
 $custom_fields_button = WPUltimateRecipe::is_addon_active( 'custom-fields' ) ? 'recipe_fields_manage_custom_active' . $sitehash : 'recipe_fields_manage_custom_disabled';
 
 $admin_menu = array(
@@ -157,6 +157,13 @@ $admin_menu = array(
                             'title' => __('Functionality', 'wp-ultimate-recipe'),
                             'name' => 'section_functionality',
                             'fields' => array(
+                                array(
+                                    'type' => 'textbox',
+                                    'name' => 'print_tooltip_text',
+                                    'label' => __('Print Button Tooltip', 'wp-ultimate-recipe'),
+                                    'description' => __('Text to show when someone hovers over the button.', 'wp-ultimate-recipe'),
+                                    'default' => __('Print Recipe', 'wp-ultimate-recipe'),
+                                ),
                                 array(
                                     'type' => 'toggle',
                                     'name' => 'recipe_adjustable_servings',
@@ -606,6 +613,13 @@ $admin_menu = array(
                             'name' => 'partners_integrations_foodfanatic_enable',
                             'label' => 'Food Fanatic',
                             'description' => __( 'Show save recipe to Food Fanatic button.', 'wp-ultimate-recipe' ),
+                            'default' => '0',
+                        ),
+                        array(
+                            'type' => 'toggle',
+                            'name' => 'partners_integrations_yummly_enable',
+                            'label' => 'Yummly',
+                            'description' => __( 'Show the Yum button.', 'wp-ultimate-recipe' ),
                             'default' => '0',
                         ),
                     ),
@@ -1468,6 +1482,43 @@ $admin_menu = array(
                             'validation' => 'required',
                         ),
                         array(
+                            'type' => 'toggle',
+                            'name' => 'user_menus_enable_delete',
+                            'label' => __('Enable Delete Button', 'wp-ultimate-recipe'),
+                            'description' => __( 'Users can delete their own saved menus.', 'wp-ultimate-recipe' ),
+                            'default' => '0',
+                        ),
+                        array(
+                            'type' => 'slider',
+                            'name' => 'user_menus_default_servings',
+                            'label' => __('Default Servings', 'wp-ultimate-recipe'),
+                            'min' => '1',
+                            'max' => '10',
+                            'step' => '1',
+                            'default' => '4',
+                        ),
+                        array(
+                            'type' => 'toggle',
+                            'name' => 'user_menus_ingredient_notes',
+                            'label' => __('Show Ingredient Notes', 'wp-ultimate-recipe'),
+                            'description' => __( 'Ingredients with different notes will be handled as different ingredients.', 'wp-ultimate-recipe' ),
+                            'default' => '0',
+                        ),
+                        array(
+                            'type' => 'toggle',
+                            'name' => 'user_menus_checkboxes',
+                            'label' => __('Show Checkboxes', 'wp-ultimate-recipe'),
+                            'description' => __( 'Show checkboxes in the shopping list to cross items of the list.', 'wp-ultimate-recipe' ),
+                            'default' => '1',
+                        ),
+                    ),
+                ),
+                array(
+                    'type' => 'section',
+                    'title' => __('Add to Shopping List Button', 'wp-ultimate-recipe'),
+                    'name' => 'section_user_menus_add_to_shopping_list',
+                    'fields' => array(
+                        array(
                             'type' => 'select',
                             'name' => 'user_menus_add_to_shopping_list',
                             'label' => __('Show add to shopping list button for', 'wp-ultimate-recipe'),
@@ -1491,20 +1542,24 @@ $admin_menu = array(
                             'validation' => 'required',
                         ),
                         array(
-                            'type' => 'slider',
-                            'name' => 'user_menus_default_servings',
-                            'label' => __('Default Servings', 'wp-ultimate-recipe'),
-                            'min' => '1',
-                            'max' => '10',
-                            'step' => '1',
-                            'default' => '4',
+                            'type' => 'textbox',
+                            'name' => 'add_to_shopping_list_tooltip_text',
+                            'label' => __('Add to Shopping List Button Tooltip', 'wp-ultimate-recipe'),
+                            'description' => __('Text to show when someone hovers over the button.', 'wp-ultimate-recipe'),
+                            'default' => __('Add to Shopping List', 'wp-ultimate-recipe'),
                         ),
                         array(
-                            'type' => 'toggle',
-                            'name' => 'user_menus_checkboxes',
-                            'label' => __('Show Checkboxes', 'wp-ultimate-recipe'),
-                            'description' => __( 'Show checkboxes in the shopping list to cross items of the list.', 'wp-ultimate-recipe' ),
-                            'default' => '1',
+                            'type' => 'textbox',
+                            'name' => 'added_to_shopping_list_tooltip_text',
+                            'label' => __('Tooltip after adding', 'wp-ultimate-recipe'),
+                            'description' => __('Text to show when someone hovers over the button.', 'wp-ultimate-recipe'),
+                            'default' => __('This recipe is in your Shopping List', 'wp-ultimate-recipe'),
+                        ),
+                        array(
+                            'type' => 'notebox',
+                            'name' => 'add_to_shopping_list_tooltip_html',
+                            'description' => __('You can use HTML to link to the relevant page in the tooltips:', 'wp-ultimate-recipe') . '<br/>' . htmlspecialchars( '<a href="/shopping-list/">Shopping List</a>' ),
+                            'status' => 'info',
                         ),
                     ),
                 ),
@@ -1644,6 +1699,13 @@ $admin_menu = array(
                         ),
                         array(
                             'type' => 'toggle',
+                            'name' => 'user_menus_print_with_menu',
+                            'label' => __('Include Recipe List', 'wp-ultimate-recipe'),
+                            'description' => __( 'Include of list of the recipes in the menu when printing the shopping list.', 'wp-ultimate-recipe' ),
+                            'default' => '0',
+                        ),
+                        array(
+                            'type' => 'toggle',
                             'name' => 'user_menus_enable_print_menu',
                             'label' => __('Print Menu Button', 'wp-ultimate-recipe'),
                             'description' => __( 'Show a button to print the entire menu (Shopping list and recipes).', 'wp-ultimate-recipe' ),
@@ -1739,6 +1801,26 @@ $admin_menu = array(
                             'label' => __('Enable Button', 'wp-ultimate-recipe'),
                             'default' => '0',
                         ),
+                        array(
+                            'type' => 'textbox',
+                            'name' => 'favorite_recipes_tooltip_text',
+                            'label' => __('Favorite Recipes Button Tooltip', 'wp-ultimate-recipe'),
+                            'description' => __('Text to show when someone hovers over the button.', 'wp-ultimate-recipe'),
+                            'default' => __('Add to your Favorite Recipes', 'wp-ultimate-recipe'),
+                        ),
+                        array(
+                            'type' => 'textbox',
+                            'name' => 'favorited_recipes_tooltip_text',
+                            'label' => __('Tooltip after adding', 'wp-ultimate-recipe'),
+                            'description' => __('Text to show when someone hovers over the button.', 'wp-ultimate-recipe'),
+                            'default' => __('This recipe is in your Favorite Recipes', 'wp-ultimate-recipe'),
+                        ),
+                        array(
+                            'type' => 'notebox',
+                            'name' => 'favorite_recipes_tooltip_html',
+                            'description' => __('You can use HTML to link to the relevant page in the tooltips:', 'wp-ultimate-recipe') . '<br/>' . htmlspecialchars( '<a href="/favorite-recipes/">Favorite Recipes</a>' ),
+                            'status' => 'info',
+                        ),
                     ),
                 ),
             ),
@@ -1771,6 +1853,13 @@ $admin_menu = array(
                             'label' => __('Show Notice', 'wp-ultimate-recipe'),
                             'description' => __( 'Show notice to update Nutritional Information after updating a recipe.', 'wp-ultimate-recipe' ),
                             'default' => '1',
+                        ),
+                        array(
+                            'type' => 'textbox',
+                            'name' => 'nutritional_information_capability',
+                            'label' => __('Required role or capability', 'wp-ultimate-recipe'),
+                            'description' => __( 'Only users with this role or capability can edit the Nutritional Information.', 'wp-ultimate-recipe' ),
+                            'default' => 'manage_options',
                         ),
                     ),
                 ),

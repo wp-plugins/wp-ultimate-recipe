@@ -17,7 +17,7 @@ class WPURP_Template_Recipe_Description extends WPURP_Template_Block {
         $meta = $args['template_type'] == 'recipe' && $args['desktop'] ? ' itemprop="description"' : '';
 
         $output = $this->before_output();
-        $output .= '<span' . $this->style() . $meta . '>' . $recipe->description() . '</span>';
+        $output .= '<span' . $this->style() . $meta . '>' . $this->cut_off( $recipe->description() ) . '</span>';
 
         return $this->after_output( $output, $recipe );
     }

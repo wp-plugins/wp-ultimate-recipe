@@ -7,36 +7,49 @@
 
     <div class="feature-section col two-col">
         <div class="col-1">
-            <h3>WP Ultimate Recipe 2.3</h3>
+            <h3>WP Ultimate Recipe 2.4</h3>
             <strong>New</strong>
             <ul>
-                <li>Feature: Full text search for recipes</li>
-                <li>Feature: New partner integration with Chicory</li>
-                <li>Setting: What to use for the recipe image title tag</li>
+                <li>Feature: Yummly partner integration, enable the Yum button in the settings</li>
+                <li>Feature: Tooltip for Print button</li>
+                <li>Improvement: Better metadata for the Recipe Image</li>
+                <li>Improvement: Better way of handling the searchable content</li>
+                <li>Improvement: Output cook and prep time meta when using hours</li>
+                <li>Improvement: New Food Fanatic button</li>
             </ul>
             <strong>Update</strong>
             <ul>
-                <li>Fix: Password Protection now hides the recipe box as well</li>
-                <li>Fix: Yandex resultPhoto metadata</li>
-                <li>Fix: Usage of Ratings taxonomy</li>
+                <li>Fix: Excerpts on archive pages when there is no post content</li>
+                <li>Fix: Don’t output link color when “Output Inline CSS” is disabled</li>
+                <li>Fix: Shortcode Editor not working properly in some themes</li>
+                <li>Fix: Serve Pinterest button image statically to prevent HTTPS issues</li>
             </ul>
         </div>
         <div class="col-2 last-feature">
-            <h3>WP Ultimate Recipe Premium 2.3</h3>
+            <h3>WP Ultimate Recipe Premium 2.4</h3>
             <strong>New</strong>
             <ul>
-                <li>Feature: Import .fdx files (Living Cookbook, …)</li>
-                <li>Feature: Allow logged in users to edit their own recipes from the front end with a new shortcode</li>
-                <li>Feature: Allow visitors to preview recipes in the User Submission form</li>
-                <li>Feature: Set required fields for User Submission form</li>
-                <li>Feature: Use security question in User Submission form</li>
-                <li>Improvement: More options for auto approval of User Submissions</li>
-                <li>Improvement: Select which custom fields should show up in the User Submission form</li>
-                <li>Improvement: User Submission form container classes</li>
+                <li>Feature: Tooltip for Favorite Recipe button</li>
+                <li>Feature: Tooltip for Add to Shopping List button</li>
+                <li>Feature: Setting to show ingredient notes in shopping list</li>
+                <li>Feature: Ability to show images in Recipe List Widget</li>
+                <li>Feature: Setting to enable delete button for saved User Menus</li>
+                <li>Feature: Setting to include list of recipes in the printed shopping list</li>
+                <li>Feature: Custom Tag Conditions in the Template Editor</li>
+                <li>Feature: Ability to list recipes submitted by current user in the Extended Recipe Index shortcode</li>
+                <li>Feature: Recipe Date block in the Template Editor</li>
+                <li>Feature: Post Content block in the Template Editor</li>
+                <li>Feature: Cut off text after X characters or X words in the Template Editor</li>
+                <li>Improvement: Usage of fractions in User Menus if enabled for adjustable servings</li>
+                <li>Improvement: Add to Shopping List button will only add a recipe once and indicate if it’s already on the list</li>
+                <li>Improvement: Set the required capability to edit Nutritional Information in the settings</li>
+                <li>Improvement: User Submission form looks better on mobile</li>
             </ul>
             <strong>Update</strong>
             <ul>
-                <li>Fix: Dropping in certain blocks after loading/importing in the Template Editor</li>
+                <li>Fix: Better cup unit conversions in User Menus</li>
+                <li>Fix: Template editor when using unconventional WP directory structures</li>
+                <li>Fix: Firefox letter spacing problem in User Submission dropdowns</li>
             </ul>
         </div>
     </div>
@@ -45,6 +58,28 @@
 
     <div>
         <h3>Previous Versions</h3>
+
+        <h4>Premium Plugin 2.3</h4>
+        <ul>
+            <li>Feature: Import .fdx files (Living Cookbook, …)</li>
+            <li>Feature: Allow logged in users to edit their own recipes from the front end with a new shortcode</li>
+            <li>Feature: Allow visitors to preview recipes in the User Submission form</li>
+            <li>Feature: Set required fields for User Submission form</li>
+            <li>Feature: Use security question in User Submission form</li>
+            <li>Improvement: More options for auto approval of User Submissions</li>
+            <li>Improvement: Select which custom fields should show up in the User Submission form</li>
+            <li>Improvement: User Submission form container classes</li>
+            <li>Fix: Dropping in certain blocks after loading/importing in the Template Editor</li>
+        </ul>
+        <h4>Core Plugin 2.3</h4>
+        <ul>
+            <li>Feature: Full text search for recipes</li>
+            <li>Feature: New partner integration with Chicory</li>
+            <li>Setting: What to use for the recipe image title tag</li>
+            <li>Fix: Password Protection now hides the recipe box as well</li>
+            <li>Fix: Yandex resultPhoto metadata</li>
+            <li>Fix: Usage of Ratings taxonomy</li>
+        </ul>
 
         <h4>Premium Plugin 2.2.3</h4>
         <ul>

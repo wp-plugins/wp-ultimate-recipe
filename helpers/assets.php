@@ -17,6 +17,10 @@ class WPURP_Assets {
         // Load core assets TODO Refactor this.
         $this->add(
             array(
+                'file' => '/css/public.css',
+                'public' => true,
+            ),
+            array(
                 'file' => '/css/admin.css',
                 'admin' => true,
             ),
@@ -35,6 +39,13 @@ class WPURP_Assets {
                 ),
             ),
             array(
+                'file' => '/vendor/jquery.tools.min.js',
+                'public' => true,
+                'deps' => array(
+                    'jquery',
+                ),
+            ),
+            array(
                 'file' => '/js/print_button.js',
                 'public' => true,
                 'deps' => array(
@@ -48,6 +59,13 @@ class WPURP_Assets {
                     'coreUrl' => WPUltimateRecipe::get()->coreUrl,
                     'premiumUrl' => WPUltimateRecipe::is_premium_active() ? WPUltimateRecipePremium::get()->premiumUrl : false,
                     'title' => WPUltimateRecipe::option( 'print_template_title_text', get_bloginfo('name') ),
+                ),
+            ),
+            array(
+                'file' => '/js/tooltips.js',
+                'public' => true,
+                'deps' => array(
+                    'jquery',
                 ),
             ),
             array(
@@ -97,8 +115,16 @@ class WPURP_Assets {
             ),
             array(
                 'name' => 'chicory',
-                'setting_inverse' => array( 'partners_integrations_chicory_enable', '' ),
+                'setting' => array( 'partners_integrations_chicory_enable', '1' ),
                 'file' => 'http://chicoryapp.com/widget_v2',
+                'type' => 'js',
+                'direct' => true,
+                'public' => true,
+            ),
+            array(
+                'name' => 'yummly',
+                'setting_inverse' => array( 'partners_integrations_yummly_enable', '' ),
+                'file' => 'https://www.yummly.com/js/widget.js?wordpress',
                 'type' => 'js',
                 'direct' => true,
                 'public' => true,

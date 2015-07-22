@@ -26,6 +26,7 @@ class WPURP_Template_Block {
     // Special cases
     protected $link_color = false;
     protected $background_preset = false;
+    protected $cut_off = false;
 
     public function __construct( $type )
     {
@@ -184,10 +185,23 @@ class WPURP_Template_Block {
                     $this->add_condition( array( 'type' => 'hide', 'condition_type' => 'sub_field', 'field' => $condition->field, 'when' => $condition->when ), $condition->target );
                 } else if( $condition->condition_type == 'setting' && $this->present( $condition, 'setting' ) ) {
                     $this->add_condition( array( 'type' => 'hide', 'condition_type' => 'setting', 'setting' => $condition->setting, 'when' => $condition->when ), $condition->target );
+                } else if( $condition->condition_type == 'tag' ) {
+                    $this->add_condition( array( 'type' => 'hide', 'condition_type' => 'tag', 'when' => $condition->when, 'term' => $condition->term, 'taxonomy' => $condition->taxonomy ), $condition->target );
                 } else if( $condition->condition_type == 'responsive' ) {
                     $this->add_condition( array( 'type' => 'hide', 'condition_type' => 'responsive', 'when' => $condition->when ), $condition->target );
                 }
             }
+        }
+
+        /*
+         * Cut off
+         */
+        if( $this->present( $block, 'shortenText') && $block->shortenText != 'none' ) {
+            $this->cut_off = array(
+                'type' => $block->shortenText,
+                'number' => intval( $block->shortenTextNumber ),
+                'after_text' => $block->shortenTextAfter,
+            );
         }
 
         /*
@@ -364,6 +378,7 @@ class WPURP_Template_Block {
                     $val = WPUltimateRecipe::option( 'favorite_recipes_enabled', '0' );
                 }
             } else if ( in_array( $condition['setting'], array(
+                'partners_integrations_yummly_enable',
                 'partners_integrations_foodfanatic_enable',
                 'partners_integrations_chicory_enable',
                 'partners_integrations_bigoven_enable' ) ) ) {
@@ -383,6 +398,12 @@ class WPURP_Template_Block {
             } else {
                 $show = $show && $val == '1';
             }
+        } else if( $condition['condition_type'] == 'tag' ) {
+            if( has_term( $condition['term'], $condition['taxonomy'], $recipe->ID() ) ) {
+                $show = $condition['when'] == 'in' ? false : true;
+            } else {
+                $show = $condition['when'] == 'in' ? true : false;
+            }
         }
 
         return $show;
@@ -399,6 +420,32 @@ class WPURP_Template_Block {
         }
 
         return true;
+    }
+
+    /*
+    * Cut off text
+    */
+    protected function cut_off( $text )
+    {
+        if( $this->cut_off ) {
+            $limit = $this->cut_off['number'];
+
+            if( $this->cut_off['type'] == 'words' && str_word_count( $text, 0 ) > $limit ) {
+                // Limit to X words
+                $words = str_word_count( $text, 2 );
+                $pos = array_keys( $words );
+                $text = substr( $text, 0, $pos[$limit] );
+
+                $text = rtrim( $text ) . $this->cut_off['after_text'];
+            } elseif( $this->cut_off['type'] == 'characters' && strlen( $text ) > $limit ) {
+                // Limit to X characters
+                $text = substr( $text, 0, $limit );
+
+                $text = rtrim( $text ) . $this->cut_off['after_text'];
+            }
+        }
+
+        return $text;
     }
 
     /*
@@ -445,7 +492,7 @@ class WPURP_Template_Block {
         }
 
         // TODO Better way of doing this?
-        if( $this->link_color ) {
+        if( $this->link_color && WPUltimateRecipe::option( 'recipe_template_inline_css', '1' ) == '1' ) {
 
             if( WPUltimateRecipe::option( 'recipe_template_force_style', '1' ) == '1' ) {
                 $important = ' !important';
