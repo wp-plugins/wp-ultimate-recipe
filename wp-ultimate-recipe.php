@@ -90,6 +90,9 @@ class WPUltimateRecipe {
         }
 
         // Chicory specific check
+        if( 'partners_integrations_chicory_enable' == $name && '0' == $option ) {
+            $option = '';
+        }
         if( 'partners_integrations_chicory_enable' == $name && '1' == $option ) {
             $option = vp_option( 'wpurp_option.partners_integrations_chicory_terms' );
             if( count( $option ) == 0 ) {

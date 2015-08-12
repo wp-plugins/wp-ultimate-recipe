@@ -115,7 +115,7 @@ class WPURP_Assets {
             ),
             array(
                 'name' => 'chicory',
-                'setting' => array( 'partners_integrations_chicory_enable', '1' ),
+                'setting_inverse' => array( 'partners_integrations_chicory_enable', '' ),
                 'file' => 'http://chicoryapp.com/widget_v2',
                 'type' => 'js',
                 'direct' => true,
